@@ -1,3 +1,177 @@
-<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Vibe Sparking | Blog</title><description/><link>https://www.vibesparking.com/</link><language>zh-CN</language><item><title>Journals - 2025-06-04</title><link>https://www.vibesparking.com/zh-cn/journals-2025-06-04/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/journals-2025-06-04/</guid><pubDate>Wed, 04 Jun 2025 00:00:00 GMT</pubDate><content:encoded/></item><item><title>Vocabulary Mnemonic</title><link>https://www.vibesparking.com/zh-cn/vocabulary-mnemonic/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/vocabulary-mnemonic/</guid><pubDate>Tue, 13 May 2025 00:00:00 GMT</pubDate><content:encoded>&lt;div&gt;&lt;h2 id=&quot;fix-explicitly-declare-primary-keys-for-wordmeaning-table-to-prevent-duplicate-ids&quot;&gt;Fix: Explicitly declare primary keys for WordMeaning table to prevent duplicate IDs&lt;/h2&gt;&lt;a href=&quot;#fix-explicitly-declare-primary-keys-for-wordmeaning-table-to-prevent-duplicate-ids&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Fix: Explicitly declare primary keys for WordMeaning table to prevent duplicate IDs”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Vibe Sparking | Blog</title><description/><link>https://www.vibesparking.com/</link><language>zh-CN</language><item><title>Claude Code 开发神器：`claude-trace` 全记录工具，让你的调试透明可见</title><link>https://www.vibesparking.com/zh-cn/blog/ai/claude-code/2025-07-12-claude-code-debugging-tool-claude-trace-transparent-logging/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/claude-code/2025-07-12-claude-code-debugging-tool-claude-trace-transparent-logging/</guid><pubDate>Sat, 12 Jul 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # Claude 开发神器：`claude-trace` 全记录工具，让你的调试透明可见 --&gt;
+&lt;p&gt;在使用 Claude Code 写代码时，你是否也好奇：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Claude 是怎么理解你的指令的？&lt;/li&gt;
+&lt;li&gt;系统提示（system prompt）到底写了啥？&lt;/li&gt;
+&lt;li&gt;Claude 用了什么工具？返回了哪些原始数据？&lt;/li&gt;
+&lt;li&gt;API 背后发生了什么？模型用了多少 token？&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;现在，有了开源工具 &lt;strong&gt;&lt;code dir=&quot;auto&quot;&gt;claude-trace&lt;/code&gt;&lt;/strong&gt;，这些“幕后”细节你都能一览无遗！&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;-安装方式&quot;&gt;📦 安装方式&lt;/h2&gt;&lt;a href=&quot;#-安装方式&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “📦 安装方式”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;只需一条命令即可安装：&lt;/p&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;npm&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;install&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;-g&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;@mariozechner/claude-trace&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;-一键启动日志记录&quot;&gt;🚀 一键启动日志记录&lt;/h2&gt;&lt;a href=&quot;#-一键启动日志记录&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “🚀 一键启动日志记录”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;启动 Claude Code 并记录全过程：&lt;/p&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;claude-trace&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;支持更多选项：&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;功能&lt;/th&gt;&lt;th&gt;命令&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;启动 Claude + 日志记录&lt;/td&gt;&lt;td&gt;&lt;code dir=&quot;auto&quot;&gt;claude-trace&lt;/code&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;包含所有请求（默认仅记录有效对话）&lt;/td&gt;&lt;td&gt;&lt;code dir=&quot;auto&quot;&gt;claude-trace --include-all-requests&lt;/code&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;使用特定参数运行 Claude&lt;/td&gt;&lt;td&gt;&lt;code dir=&quot;auto&quot;&gt;claude-trace --run-with chat --model sonnet-3.5&lt;/code&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;提取 OAuth token&lt;/td&gt;&lt;td&gt;&lt;code dir=&quot;auto&quot;&gt;claude-trace --extract-token&lt;/code&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;生成 HTML 会话报告&lt;/td&gt;&lt;td&gt;&lt;code dir=&quot;auto&quot;&gt;claude-trace --generate-html logs.jsonl report.html&lt;/code&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;自动生成索引 + 总结&lt;/td&gt;&lt;td&gt;&lt;code dir=&quot;auto&quot;&gt;claude-trace --index&lt;/code&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;-能看到什么&quot;&gt;🔍 能看到什么？&lt;/h2&gt;&lt;a href=&quot;#-能看到什么&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “🔍 能看到什么？”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;使用 claude-trace，你可以在生成的 HTML 页面中看到：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;✅ Claude 的 &lt;strong&gt;system prompt&lt;/strong&gt;（隐藏指令）&lt;/li&gt;
+&lt;li&gt;✅ 所有 &lt;strong&gt;API 请求与响应原始数据&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;✅ &lt;strong&gt;工具定义与输出&lt;/strong&gt;（如搜索/文件读取）&lt;/li&gt;
+&lt;li&gt;✅ Claude 的“思考过程”块&lt;/li&gt;
+&lt;li&gt;✅ Token 使用统计（含缓存命中情况）&lt;/li&gt;
+&lt;li&gt;✅ 可交互 HTML 视图 + 搜索索引&lt;/li&gt;
+&lt;li&gt;✅ JSONL 原始日志（保存在 &lt;code dir=&quot;auto&quot;&gt;.claude-trace/&lt;/code&gt; 文件夹）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;每次运行将生成自包含的 HTML 文件，&lt;strong&gt;无需服务器即可本地浏览&lt;/strong&gt;，非常适合团队回顾、调试与归档。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;-会话总结与索引功能ai-加持&quot;&gt;📊 会话总结与索引功能（AI 加持）&lt;/h2&gt;&lt;a href=&quot;#-会话总结与索引功能ai-加持&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “📊 会话总结与索引功能（AI 加持）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;通过 &lt;code dir=&quot;auto&quot;&gt;claude-trace --index&lt;/code&gt; 命令，你还能自动生成：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;所有日志的 AI 总结标题和概要&lt;/li&gt;
+&lt;li&gt;带索引的 &lt;code dir=&quot;auto&quot;&gt;index.html&lt;/code&gt; 文件&lt;/li&gt;
+&lt;li&gt;可点击跳转的历史会话列表&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;让你像管理 Notion 一样管理 Claude 的所有对话记录！&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;-适合谁&quot;&gt;🧑‍💻 适合谁？&lt;/h2&gt;&lt;a href=&quot;#-适合谁&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “🧑‍💻 适合谁？”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;如果你符合以下标签，那么你会爱上它：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;💡 Claude Code 的深度用户或插件开发者&lt;/li&gt;
+&lt;li&gt;🧪 需要调试 Claude 工具链、系统指令或日志结构&lt;/li&gt;
+&lt;li&gt;📁 希望归档所有 Claude 编程会话&lt;/li&gt;
+&lt;li&gt;🧠 想了解 Claude 背后真实的“思考”过程&lt;/li&gt;
+&lt;li&gt;⚙️ 需要构建自动化测试或生成会话回顾报告&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;-开源地址&quot;&gt;🌐 开源地址&lt;/h2&gt;&lt;a href=&quot;#-开源地址&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “🌐 开源地址”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;项目地址：&lt;a href=&quot;https://github.com/mariozechner/claude-trace&quot;&gt;https://github.com/mariozechner/claude-trace&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;总结一下：&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code dir=&quot;auto&quot;&gt;claude-trace&lt;/code&gt; 是 Claude Code 用户不可错过的一款调试神器，它让你看清 AI 背后的“黑盒”，无论是开发插件、分析模型响应，还是构建 Claude 工程日志系统，都能带来极大便利。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;如果你正在用 Claude 开发项目，不妨试试看，一键开启你的「Claude 可视化开发之旅」！&lt;/p&gt;</content:encoded><category>Claude Code</category><category>claude-trace</category></item><item><title>🎯 ccusage 分析 Claude Code 使用情况</title><link>https://www.vibesparking.com/zh-cn/blog/ai/claude-code/2025-07-10-ccusage-analyze-claude-code-usage/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/claude-code/2025-07-10-ccusage-analyze-claude-code-usage/</guid><pubDate>Thu, 10 Jul 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # 🎯 ccusage 分析 Claude Code 使用情况 --&gt;
+&lt;p&gt;&lt;a href=&quot;https://ccusage.com&quot;&gt;&lt;code dir=&quot;auto&quot;&gt;ccusage&lt;/code&gt;&lt;/a&gt; 是由开源开发者 &lt;strong&gt;ryoppippi&lt;/strong&gt; 创建的一款命令行工具，用于分析 Claude Code 本地生成的 JSONL 文件，通过可视化表格方式展示你的 token 使用情况及对应成本，帮助你更好地管理使用习惯和成本结构。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;功能简洁&lt;/strong&gt;：只需一行命令即可获得每日、每月、会话和账单区块（5 小时）级别的 token 使用及成本分布。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;实时监控&lt;/strong&gt;：支持 &lt;code dir=&quot;auto&quot;&gt;blocks --live&lt;/code&gt; 实时监控当前账单区块内的消耗速率和项目进度。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;轻量高效&lt;/strong&gt;：体积极小（npm 包 ~1 MB），无需依赖安装，适合快速分析。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;-使用场景&quot;&gt;🧩 使用场景&lt;/h2&gt;&lt;a href=&quot;#-使用场景&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “🧩 使用场景”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;成本意识&lt;/strong&gt;
+Claude Code 的 Max 版虽然可以无限使用，但当切换到按量付费计划时，ccusage 可以帮你预估每日和每月成本，思考“无痛阈值”。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;日常数据追踪&lt;/strong&gt;
+通过每日或月度报告，及时掌握长周期的 token 使用趋势、是否存在突然暴增等异常。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;会话/账单区块监控&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;会话级别：对应项目、主题分析单次对话的 token 使用分布与成本。&lt;/li&gt;
+&lt;li&gt;块级监控：跟踪五小时账单周期内的消耗趋势和速率（可添加 &lt;code dir=&quot;auto&quot;&gt;--live&lt;/code&gt; 实时观察）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;多终端同步分析&lt;/strong&gt;
+ccusage 默认读取 &lt;code dir=&quot;auto&quot;&gt;~/.config/claude/projects/&lt;/code&gt; 与旧路径 &lt;code dir=&quot;auto&quot;&gt;~/.claude/projects/&lt;/code&gt; 的 JSONL 文件，配合云盘可以实现多设备数据统一。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;二次可视化和工具集成&lt;/strong&gt;
+提供 JSON 输出，可接入如 Raycast、Neovim 插件、Go 或 Rust 版本的实时可视化工具（如ccusage.nvim、ccusage-monitor等）。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;️-安装与快速上手&quot;&gt;⚙️ 安装与快速上手&lt;/h2&gt;&lt;a href=&quot;#️-安装与快速上手&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “⚙️ 安装与快速上手”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;无需安装，推荐直接用执行环境方式调用：&lt;/p&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# 推荐 bunx（速度极快）&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;bunx&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;ccusage&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# 或 npx&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;npx&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;ccusage@latest&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# 或 Deno&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;deno&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;run&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;-E&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--1:#3B61B0&quot;&gt;&lt;span style=&quot;--0:#82AAFF&quot;&gt;-R=&lt;/span&gt;&lt;span style=&quot;--0:#C5E478&quot;&gt;$HOME&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF&quot;&gt;/.claude/projects/&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;-S=homedir&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;-N=&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&apos;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;raw.githubusercontent.com:443&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&apos;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;npm:ccusage@latest&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;p&gt;也可全局安装：&lt;/p&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;npm&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;install&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;-g&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;ccusage&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# 或&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;bun&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;install&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;-g&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;ccusage&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;-核心命令示例&quot;&gt;🚀 核心命令示例&lt;/h2&gt;&lt;a href=&quot;#-核心命令示例&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “🚀 核心命令示例”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# 显示默认的”daily“每日使用报告：&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;ccusage&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# 指定日报、月报、会话报告或账单区块报告：&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;ccusage&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;daily&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;ccusage&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;monthly&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;ccusage&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;session&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;ccusage&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;blocks&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# 实时监控当前账单区块状态：&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;ccusage&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;blocks&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;--live&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;p&gt;更多常用参数：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;--since&lt;/code&gt; / &lt;code dir=&quot;auto&quot;&gt;--until&lt;/code&gt;: 仅分析指定日期范围&lt;/li&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;--breakdown&lt;/code&gt;: 展示各模型（如 Opus、Sonnet）消耗的明细&lt;/li&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;--json&lt;/code&gt;: 输出结构化 JSON，便于集成其他工具&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;-实例解读&quot;&gt;📊 实例解读 &lt;span data-shb-badge=&quot;&quot; data-shb-badge-variant=&quot;default&quot;&gt;New&lt;/span&gt;&lt;/h2&gt;&lt;a href=&quot;#-实例解读&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “📊 实例解读 ”&lt;span data-shb-badge=&quot;&quot; data-shb-badge-variant=&quot;default&quot;&gt;New&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;执行 &lt;code dir=&quot;auto&quot;&gt;ccusage daily&lt;/code&gt;，输出类似：&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;可快速看到每日总 token、缓存命中次数及估算成本。&lt;/p&gt;
+&lt;p&gt;使用 &lt;code dir=&quot;auto&quot;&gt;ccusage blocks --live&lt;/code&gt;，控制台会实时刷新显示当前账单区块累计 token、烧速、剩余预算等，类似 CLI 版 “htop” 。&lt;/p&gt;
+&lt;h2 id=&quot;&quot;&gt;&lt;/h2&gt;
+&lt;div&gt;&lt;h2 id=&quot;️-注意事项--小贴士&quot;&gt;🛡️ 注意事项 &amp;#x26; 小贴士&lt;/h2&gt;&lt;a href=&quot;#️-注意事项--小贴士&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “🛡️ 注意事项 &amp;#x26; 小贴士”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;成本估算为模拟值&lt;/strong&gt;：ccusage 显示的是基于 token 数量和模型定价的预估成本，可能与实际账单略有出入。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;️-总结&quot;&gt;✍️ 总结&lt;/h2&gt;&lt;a href=&quot;#️-总结&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “✍️ 总结”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;code dir=&quot;auto&quot;&gt;ccusage&lt;/code&gt; 是一款小巧但功能强大的 CLI 工具，适合开发者与 Heavy user：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;快速获得每天/每会话/每账单段落的 token 消耗和成本分析；&lt;/li&gt;
+&lt;li&gt;实时监控当前账单区块进展；&lt;/li&gt;
+&lt;li&gt;与 Raycast、Neovim、Go/Rust 工具无缝对接；&lt;/li&gt;
+&lt;li&gt;跨设备分析只需同步 JSONL 文件。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;试一试 &lt;code dir=&quot;auto&quot;&gt;npx ccusage daily&lt;/code&gt;，你将会惊讶于自己在 Claude Code 使用上的“花费轨迹”，并在预算管理上更加有意识。欢迎关注公众号带你一起探索 Claude 生态中的效率奥秘！&lt;/p&gt;
+&lt;hr&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 最后，如果想了解更多 AI, Vibe Coding 和 Claude 使用技巧、整合插件推荐或进阶分析，欢迎在评论区留言交流，让我们一起打造更智慧的 AI 使用体验！&lt;/p&gt;
+&lt;/blockquote&gt;</content:encoded><category>Claude Code</category><category>ccusage</category></item><item><title>Vocabulary Mnemonic</title><link>https://www.vibesparking.com/zh-cn/2025-05-13/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/2025-05-13/</guid><pubDate>Tue, 13 May 2025 00:00:00 GMT</pubDate><content:encoded>&lt;div&gt;&lt;h2 id=&quot;fix-explicitly-declare-primary-keys-for-wordmeaning-table-to-prevent-duplicate-ids&quot;&gt;Fix: Explicitly declare primary keys for WordMeaning table to prevent duplicate IDs&lt;/h2&gt;&lt;a href=&quot;#fix-explicitly-declare-primary-keys-for-wordmeaning-table-to-prevent-duplicate-ids&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Fix: Explicitly declare primary keys for WordMeaning table to prevent duplicate IDs”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
 &lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;diff&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;class WordMeanings extends Table {&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;TextColumn get id =&gt; text()();&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
 &lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;   &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;@override&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;   &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;Set&amp;#x3C;Column&gt; get primaryKey =&gt; {id}; // Explicitly declare primary key&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;button title=&quot;Copy to clipboard&quot; data-copied=&quot;Copied!&quot; data-code=&quot;&quot;&gt; text()();   @override   Set&lt;/button&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;</content:encoded></item></channel></rss>
