@@ -1,4 +1,187 @@
-<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Vibe Sparking | Blog</title><description/><link>https://www.vibesparking.com/</link><language>zh-CN</language><item><title>Claude Code 开发神器：`claude-trace` 全记录工具，让你的调试透明可见</title><link>https://www.vibesparking.com/zh-cn/blog/ai/claude-code/2025-07-12-claude-code-debugging-tool-claude-trace-transparent-logging/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/claude-code/2025-07-12-claude-code-debugging-tool-claude-trace-transparent-logging/</guid><pubDate>Sat, 12 Jul 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # Claude 开发神器：`claude-trace` 全记录工具，让你的调试透明可见 --&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Vibe Sparking | Blog</title><description/><link>https://www.vibesparking.com/</link><language>zh-CN</language><item><title>Kiro：从一句 Prompt 到上线代码——Spec‑驱动 Agentic IDE 实战指南</title><link>https://www.vibesparking.com/zh-cn/blog/ai/kiro/2025-07-15-kiro-prompt-to-production-spec-driven-agentic-ide-guide/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/kiro/2025-07-15-kiro-prompt-to-production-spec-driven-agentic-ide-guide/</guid><pubDate>Tue, 15 Jul 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # Kiro：从一句 Prompt 到上线代码——Spec‑驱动 Agentic IDE 实战指南 --&gt;
+&lt;p&gt;在 AI 编码工具一片“卷到天际”的时代，AWS 推出的 &lt;strong&gt;Kiro&lt;/strong&gt; 给人一种耳目一新的感觉：它不只是“帮你写代码”，而是把 &lt;strong&gt;需求→设计→实现→自动化&lt;/strong&gt; 的完整软件工程流程塞进一款 IDE 里，让“Vibe Coding（凭感觉写 demo）”真正迈向 “Viable Code（能上线的产品）”。下面这篇文章将带你快速了解 Kiro 的核心特色、实际使用方法，以及它与其他 Agentic IDE 的差异。&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;1kiro-是什么&quot;&gt;1 | Kiro 是什么？&lt;/h2&gt;&lt;a href=&quot;#1kiro-是什么&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1 | Kiro 是什么？”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;定位&lt;/strong&gt;：一款基于 VS Code 内核的 Agentic IDE，从“单句 Prompt”自动拆分出需求规范、系统设计与任务清单，并驱动 LLM 完成实现。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;背景&lt;/strong&gt;：由 AWS 内部一个“意见很大的小团队”开发，但故意与 AWS 云服务弱耦合，GitHub / Google 账号即可登录。也支持 AWS Builder ID 登陆。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;使用的模型&lt;/strong&gt;：预览版内置 Claude Sonnet 3.7 和 4.0，可在设置中切换。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h2 id=&quot;2三大核心能力&quot;&gt;2 | 三大核心能力&lt;/h2&gt;&lt;a href=&quot;#2三大核心能力&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2 | 三大核心能力”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;笔者在日常工作实际项目使用实践下来，对 Kiro 核心功能进行分析和总结：&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;21specdrivendevelopment&quot;&gt;2.1 Spec‑driven Development&lt;/h3&gt;&lt;a href=&quot;#21specdrivendevelopment&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2.1 Spec‑driven Development”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;三份 Spec 自动生成&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;requirements.md&lt;/code&gt; —— 用 EARS 语法写用户故事与验收标准&lt;/li&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;design.md&lt;/code&gt; —— 架构、流程图、数据库设计&lt;/li&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;tasks.md&lt;/code&gt; —— 可执行的实现计划（含测试、可访问性等）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;EARS 简介&lt;/strong&gt;：EARS（Easy Approach to Requirements Syntax）由 Rolls‑Royce 工程团队在 2009 年提出，结构为 “While … when … the &lt;system&gt; shall …”，可减少需求歧义。&lt;/system&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;意义&lt;/strong&gt;：相比单纯 Chat‑pair 编码，Spec‑驱动让“AI 写的每一行代码”都有出处可循，便于团队协作和后期维护。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div&gt;&lt;h3 id=&quot;22agenthooks事件触发自动化&quot;&gt;2.2 Agent Hooks（事件触发自动化）&lt;/h3&gt;&lt;a href=&quot;#22agenthooks事件触发自动化&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2.2 Agent Hooks（事件触发自动化）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;工作方式&lt;/strong&gt;：监听“文件保存 / 创建 / 删除 / 手动触发”等事件，调用后端 LLM 执行预设任务。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;常见场景&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;保存 React 组件 → 自动更新测试文件&lt;/li&gt;
+&lt;li&gt;修改 API Endpoint → 同步 README.md 文档&lt;/li&gt;
+&lt;li&gt;Git 提交前 → 扫描敏感信息泄漏&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;收益&lt;/strong&gt;：把“我应该养成的好习惯”固化为 Hook 自动执行，团队共享，避免遗漏。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;23从-vibe-coding-到-viable-code&quot;&gt;2.3 从 Vibe Coding 到 Viable Code&lt;/h3&gt;&lt;a href=&quot;#23从-vibe-coding-到-viable-code&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2.3 从 Vibe Coding 到 Viable Code”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;双模式&lt;/strong&gt;：启动项目时可选“Prompt 模式”快速试验，或“Spec 模式”一步到位严谨实施。(&lt;a href=&quot;https://www.techtarget.com/searchsoftwarequality/news/366627715/AWS-Kiro-coding-agents-highlight-spec-driven-development&quot; title=&quot;AWS Kiro coding agents highlight spec-driven development | TechTarget&quot;&gt;TechTarget&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;IDE 内审阅&lt;/strong&gt;：所有 AI 改动以 diff 形式呈现，支持逐行批准或批量接受。(&lt;a href=&quot;https://kiro.dev/&quot; title=&quot;Kiro: The AI IDE for prototype to production&quot;&gt;Kiro&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;VS Code 生态兼容&lt;/strong&gt;：Open VSX 插件、主题、快捷键几乎原封不动迁移。(&lt;a href=&quot;https://devclass.com/2025/07/15/hands-on-with-kiro-the-aws-preview-of-an-agentic-ai-ide-driven-by-specifications/&quot; title=&quot;Hands on with Kiro, the AWS preview of an agentic AI IDE driven by specifications • DEVCLASS&quot;&gt;DEVCLASS&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h2 id=&quot;3快速上手指南&quot;&gt;3 | 快速上手指南&lt;/h2&gt;&lt;a href=&quot;#3快速上手指南&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3 | 快速上手指南”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3 id=&quot;step0安装&quot;&gt;Step 0：安装&lt;/h3&gt;&lt;a href=&quot;#step0安装&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Step 0：安装”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ol&gt;
+&lt;li&gt;访问 kiro.dev 下载对应平台客户端，登录 GitHub / Google / AWS Builder ID。(&lt;a href=&quot;https://kiro.dev/blog/introducing-kiro/&quot; title=&quot;Introducing Kiro - Kiro&quot;&gt;Kiro&lt;/a&gt;)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div&gt;&lt;h3 id=&quot;step1一句-prompt--生成-specs&quot;&gt;Step 1：一句 Prompt → 生成 Specs&lt;/h3&gt;&lt;a href=&quot;#step1一句-prompt--生成-specs&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Step 1：一句 Prompt → 生成 Specs”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;markdown&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;Add a comment system for my blog&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;p&gt;几分钟后即可在 &lt;code dir=&quot;auto&quot;&gt;.kiro/&lt;/code&gt; 目录看到三份 Spec；先审阅、微调后点击 “Approve”。(&lt;a href=&quot;https://kiro.dev/blog/introducing-kiro/&quot; title=&quot;Introducing Kiro - Kiro&quot;&gt;Kiro&lt;/a&gt;)&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;step2自动拆分任务并执行&quot;&gt;Step 2：自动拆分任务并执行&lt;/h3&gt;&lt;a href=&quot;#step2自动拆分任务并执行&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Step 2：自动拆分任务并执行”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;任务面板展示依赖关系、进度条，可选择 &lt;strong&gt;Autopilot Mode&lt;/strong&gt;（全自动）或 &lt;strong&gt;Supervised Mode&lt;/strong&gt;（人工批准）。(&lt;a href=&quot;https://devclass.com/2025/07/15/hands-on-with-kiro-the-aws-preview-of-an-agentic-ai-ide-driven-by-specifications/&quot; title=&quot;Hands on with Kiro, the AWS preview of an agentic AI IDE driven by specifications • DEVCLASS&quot;&gt;DEVCLASS&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;step3配置-agenthooks&quot;&gt;Step 3：配置 Agent Hooks&lt;/h3&gt;&lt;a href=&quot;#step3配置-agenthooks&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Step 3：配置 Agent Hooks”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;yaml&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#FF6A83;--1:#A24848&quot;&gt;on&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;save&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#111111&quot;&gt;when&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;files.match(&quot;src/**/*.tsx&quot;)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#111111&quot;&gt;do&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;Ensure the component follows Single Responsibility Principle&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;button title=&quot;Copy to clipboard&quot; data-copied=&quot;Copied!&quot; data-code=&quot;&quot;&gt;  Ensure the component follows Single Responsibility Principle&quot;&gt;&lt;div&gt;&lt;/div&gt;&lt;/button&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;p&gt;保存即生效，Kiro 会在后台补充测试或抛出警告。(&lt;a href=&quot;https://kiro.dev/blog/introducing-kiro/&quot; title=&quot;Introducing Kiro - Kiro&quot;&gt;Kiro&lt;/a&gt;)&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;step4审阅--合并&quot;&gt;Step 4：审阅 &amp;#x26; 合并&lt;/h3&gt;&lt;a href=&quot;#step4审阅--合并&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Step 4：审阅 &amp;#x26; 合并”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;使用 Diff 视图检查生成代码；通过后即可一键合并至本地仓库，再推送至远端。(&lt;a href=&quot;https://kiro.dev/&quot; title=&quot;Kiro: The AI IDE for prototype to production&quot;&gt;Kiro&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h2 id=&quot;4价格与试用&quot;&gt;4 | 价格与试用&lt;/h2&gt;&lt;a href=&quot;#4价格与试用&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “4 | 价格与试用”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;版本&lt;/th&gt;&lt;th&gt;交互次数/月&lt;/th&gt;&lt;th&gt;价格&lt;/th&gt;&lt;th&gt;上线时间&lt;/th&gt;&lt;th&gt;&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;Free&lt;/td&gt;&lt;td&gt;50&lt;/td&gt;&lt;td&gt;$0&lt;/td&gt;&lt;td&gt;Preview 结束后开放&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Pro&lt;/td&gt;&lt;td&gt;1 000&lt;/td&gt;&lt;td&gt;$19&lt;/td&gt;&lt;td&gt;Coming Soon&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Pro+&lt;/td&gt;&lt;td&gt;3 000&lt;/td&gt;&lt;td&gt;$39&lt;/td&gt;&lt;td&gt;Coming Soon&lt;/td&gt;&lt;td&gt;(&lt;a href=&quot;https://kiro.dev/pricing/&quot; title=&quot;Pricing - Kiro&quot;&gt;Kiro&lt;/a&gt;, &lt;a href=&quot;https://www.techtarget.com/searchsoftwarequality/news/366627715/AWS-Kiro-coding-agents-highlight-spec-driven-development&quot; title=&quot;AWS Kiro coding agents highlight spec-driven development | TechTarget&quot;&gt;TechTarget&lt;/a&gt;, &lt;a href=&quot;https://devclass.com/2025/07/15/hands-on-with-kiro-the-aws-preview-of-an-agentic-ai-ide-driven-by-specifications/&quot; title=&quot;Hands on with Kiro, the AWS preview of an agentic AI IDE driven by specifications • DEVCLASS&quot;&gt;DEVCLASS&lt;/a&gt;)&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;p&gt;&lt;em&gt;注：预览期内不限量免费试用，但官方提示“合理限额”。&lt;/em&gt;&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;5与同类工具对比&quot;&gt;5 | 与同类工具对比&lt;/h2&gt;&lt;a href=&quot;#5与同类工具对比&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “5 | 与同类工具对比”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;功能&lt;/th&gt;&lt;th&gt;Kiro&lt;/th&gt;&lt;th&gt;Cursor&lt;/th&gt;&lt;th&gt;Copilot&lt;/th&gt;&lt;th&gt;Claude Code&lt;/th&gt;&lt;th&gt;&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;Spec‑自动生成&lt;/td&gt;&lt;td&gt;✅&lt;/td&gt;&lt;td&gt;部分支持&lt;/td&gt;&lt;td&gt;❌&lt;/td&gt;&lt;td&gt;❌&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;EARS 需求格式&lt;/td&gt;&lt;td&gt;✅&lt;/td&gt;&lt;td&gt;❌&lt;/td&gt;&lt;td&gt;❌&lt;/td&gt;&lt;td&gt;❌&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Agent Hooks&lt;/td&gt;&lt;td&gt;✅&lt;/td&gt;&lt;td&gt;🚧&lt;/td&gt;&lt;td&gt;❌&lt;/td&gt;&lt;td&gt;🚧&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;多模态 Prompt&lt;/td&gt;&lt;td&gt;✅&lt;/td&gt;&lt;td&gt;✅&lt;/td&gt;&lt;td&gt;❌&lt;/td&gt;&lt;td&gt;✅&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;VS Code 插件兼容&lt;/td&gt;&lt;td&gt;✅ (Open VSX)&lt;/td&gt;&lt;td&gt;原生&lt;/td&gt;&lt;td&gt;VS Code&lt;/td&gt;&lt;td&gt;无 IDE&lt;/td&gt;&lt;td&gt;(&lt;a href=&quot;https://devclass.com/2025/07/15/hands-on-with-kiro-the-aws-preview-of-an-agentic-ai-ide-driven-by-specifications/&quot; title=&quot;Hands on with Kiro, the AWS preview of an agentic AI IDE driven by specifications • DEVCLASS&quot;&gt;DEVCLASS&lt;/a&gt;, &lt;a href=&quot;https://www.techtarget.com/searchsoftwarequality/news/366627715/AWS-Kiro-coding-agents-highlight-spec-driven-development&quot; title=&quot;AWS Kiro coding agents highlight spec-driven development | TechTarget&quot;&gt;TechTarget&lt;/a&gt;)&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;div&gt;&lt;h2 id=&quot;6机会与不足&quot;&gt;6 | 机会与不足&lt;/h2&gt;&lt;a href=&quot;#6机会与不足&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “6 | 机会与不足”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Strengths&lt;/strong&gt;：需求‑设计一体化、事件自动化&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Weaknesses&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;代码补全尚不如 Copilot / Cursor 顺滑；(&lt;a href=&quot;https://brianchambers.substack.com/p/chamber-of-tech-secrets-54-spec-driven?utm_source=chatgpt.com&quot; title=&quot;Chamber of Tech Secrets #54: Spec-driven Development&quot;&gt;brianchambers.substack.com&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;中文提问尚未深度优化，除英语外国际化已经在路上；(&lt;a href=&quot;https://devclass.com/2025/07/15/hands-on-with-kiro-the-aws-preview-of-an-agentic-ai-ide-driven-by-specifications/?utm_source=chatgpt.com&quot; title=&quot;Hands on with Kiro, the AWS preview of an agentic AI IDE driven by specifications&quot;&gt;DEVCLASS&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h2 id=&quot;7社区与活动&quot;&gt;7 | 社区与活动&lt;/h2&gt;&lt;a href=&quot;#7社区与活动&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “7 | 社区与活动”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Code with Kiro Hackathon&lt;/strong&gt;：线上举办，奖金 &lt;strong&gt;$100 000&lt;/strong&gt;，截至 2025‑08‑25。欢迎用 Kiro 做项目、写评论系统、玩 Agent Hooks！(&lt;a href=&quot;https://kiro.devpost.com/&quot; title=&quot;Code with Kiro Hackathon: A challenge for developers to explore Kiro, an AI IDE that works alongside you to turn ideas into production code with spec-driven development. - Devpost&quot;&gt;Code with Kiro Hackathon&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h3 id=&quot;写在最后&quot;&gt;写在最后&lt;/h3&gt;&lt;a href=&quot;#写在最后&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “写在最后”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;如果你已经体会过“让 LLM 帮我写 CRUD”的爽感，但又苦于“产物无法落地”，Kiro 可能正是你想要的那剂“工程化补丁”。先从一个小需求试水，体验 Spec‑driven Development 的流畅闭环，也许你会发现：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;“写代码的快乐，不该以上线的痛苦为代价。”&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;快去下载 Kiro，一起把“灵感”变成“可交付”吧！&lt;/p&gt;</content:encoded><category>Kiro</category><category>Agentic IDE</category><category>Spec-Driven Development</category><category>Vibe Coding</category><category>AWS</category><category>Software Engineering</category><category>EARS</category></item><item><title>日报 - 2025-07-14</title><link>https://www.vibesparking.com/zh-cn/blog/journals/2025-07-14/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/journals/2025-07-14/</guid><pubDate>Mon, 14 Jul 2025 00:00:00 GMT</pubDate><content:encoded/></item><item><title>Claude Code 开发神器：`claude-trace` 全记录工具，让你的调试透明可见</title><link>https://www.vibesparking.com/zh-cn/blog/ai/claude-code/2025-07-12-claude-code-debugging-tool-claude-trace-transparent-logging/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/claude-code/2025-07-12-claude-code-debugging-tool-claude-trace-transparent-logging/</guid><pubDate>Sat, 12 Jul 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # Claude 开发神器：`claude-trace` 全记录工具，让你的调试透明可见 --&gt;
 &lt;p&gt;在使用 Claude Code 写代码时，你是否也好奇：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Claude 是怎么理解你的指令的？&lt;/li&gt;
@@ -253,6 +436,6 @@ ccusage 默认读取 &lt;code dir=&quot;auto&quot;&gt;~/.config/claude/projects/
 &lt;hr&gt;
 &lt;blockquote&gt;
 &lt;p&gt;📌 最后，如果想了解更多 AI, Vibe Coding 和 Claude 使用技巧、整合插件推荐或进阶分析，欢迎在评论区留言交流，让我们一起打造更智慧的 AI 使用体验！&lt;/p&gt;
-&lt;/blockquote&gt;</content:encoded><category>Claude Code</category><category>ccusage</category></item><item><title>Vocabulary Mnemonic</title><link>https://www.vibesparking.com/zh-cn/2025-05-13/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/2025-05-13/</guid><pubDate>Tue, 13 May 2025 00:00:00 GMT</pubDate><content:encoded>&lt;div&gt;&lt;h2 id=&quot;fix-explicitly-declare-primary-keys-for-wordmeaning-table-to-prevent-duplicate-ids&quot;&gt;Fix: Explicitly declare primary keys for WordMeaning table to prevent duplicate IDs&lt;/h2&gt;&lt;a href=&quot;#fix-explicitly-declare-primary-keys-for-wordmeaning-table-to-prevent-duplicate-ids&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Fix: Explicitly declare primary keys for WordMeaning table to prevent duplicate IDs”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;/blockquote&gt;</content:encoded><category>Claude Code</category><category>ccusage</category></item><item><title>Journals - 2025-06-04</title><link>https://www.vibesparking.com/zh-cn/2025-06-04/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/2025-06-04/</guid><pubDate>Wed, 04 Jun 2025 00:00:00 GMT</pubDate><content:encoded/></item><item><title>Journals - 2025-05-30</title><link>https://www.vibesparking.com/zh-cn/2025-05-30/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/2025-05-30/</guid><pubDate>Fri, 30 May 2025 00:00:00 GMT</pubDate><content:encoded/></item><item><title>Vocabulary Mnemonic</title><link>https://www.vibesparking.com/zh-cn/2025-05-13/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/2025-05-13/</guid><pubDate>Tue, 13 May 2025 00:00:00 GMT</pubDate><content:encoded>&lt;div&gt;&lt;h2 id=&quot;fix-explicitly-declare-primary-keys-for-wordmeaning-table-to-prevent-duplicate-ids&quot;&gt;Fix: Explicitly declare primary keys for WordMeaning table to prevent duplicate IDs&lt;/h2&gt;&lt;a href=&quot;#fix-explicitly-declare-primary-keys-for-wordmeaning-table-to-prevent-duplicate-ids&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Fix: Explicitly declare primary keys for WordMeaning table to prevent duplicate IDs”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
 &lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;diff&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;class WordMeanings extends Table {&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;TextColumn get id =&gt; text()();&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;   &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;@override&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;   &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;Set&amp;#x3C;Column&gt; get primaryKey =&gt; {id}; // Explicitly declare primary key&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;button title=&quot;Copy to clipboard&quot; data-copied=&quot;Copied!&quot; data-code=&quot;&quot;&gt; text()();   @override   Set&lt;/button&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;</content:encoded></item></channel></rss>
+&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;   &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;@override&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;   &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;Set&amp;#x3C;Column&gt; get primaryKey =&gt; {id}; // Explicitly declare primary key&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;button title=&quot;Copy to clipboard&quot; data-copied=&quot;Copied!&quot; data-code=&quot;&quot;&gt; text()();   @override   Set&lt;/button&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;</content:encoded></item><item><title>US Tariffs on China by Industry (2025-05-12)</title><link>https://www.vibesparking.com/zh-cn/2025-05-12-us-china-latest-import-tariffs/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/2025-05-12-us-china-latest-import-tariffs/</guid><pubDate>Mon, 12 May 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;This blog post contains charts showing US tariffs on Chinese goods by industry as of May 12, 2025.&lt;/p&gt;&lt;!-- For the Chinese version with detailed charts, please see the [Chinese version](/zh-cn/blog/2025-05-12-us-china-latest-import-tariffs/). --&gt;</content:encoded><category>tariffs</category><category>USA</category><category>China</category></item></channel></rss>
