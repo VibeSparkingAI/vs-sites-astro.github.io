@@ -1,4 +1,140 @@
-<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Vibe Sparking AI | Blog</title><description/><link>https://www.vibesparking.com/</link><language>zh-CN</language><item><title>Sniffly：用仪表盘洞察你的 Claude Code 使用模式</title><link>https://www.vibesparking.com/zh-cn/blog/ai/claude-code/2025-07-17-sniffly-visualize-claude-code-logs/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/claude-code/2025-07-17-sniffly-visualize-claude-code-logs/</guid><pubDate>Thu, 17 Jul 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- ## Sniffly 上手指南：用一张本地仪表盘洞察你的 Claude Code 使用模式 --&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Vibe Sparking AI | Blog</title><description/><link>https://www.vibesparking.com/</link><language>zh-CN</language><item><title>VibeTunnel：一键把浏览器变成 Mac 终端，随时随地 Vibe Coding</title><link>https://www.vibesparking.com/zh-cn/blog/ai/vibe-coding/2025-07-18-vibetunnel-browser-mac-terminal/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/vibe-coding/2025-07-18-vibetunnel-browser-mac-terminal/</guid><pubDate>Fri, 18 Jul 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # VibeTunnel：一键把浏览器变成 Mac 终端，随时随地 Vibe Coding --&gt;
+&lt;p&gt;在一台 Mac 上安装 VibeTunnel 后，你可以直接在PC、手机和Pad浏览器里打开 查看、输入、甚至同时开启多路终端，而无需本地安装 SSH、端口映射或其他繁琐配置——真正做到“电脑在家跑，手机也能敲”(&lt;a href=&quot;https://vibetunnel.sh/&quot; title=&quot;Vibetunnel: Your Mac Terminal in Any Browser | Secure &amp;#x26; Retro&quot;&gt;Vibetunnel&lt;/a&gt;)。&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;&lt;/th&gt;&lt;th&gt;&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;div&gt;&lt;h2 id=&quot;为什么需要-vibetunnel&quot;&gt;为什么需要 VibeTunnel？&lt;/h2&gt;&lt;a href=&quot;#为什么需要-vibetunnel&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “为什么需要 VibeTunnel？”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;远程盯盘 &amp;#x26; 运维&lt;/strong&gt;：出门在外也能随时查看 build 日志或监控 AI Agent 状态，不用再连 VPN 或开 VNC(&lt;a href=&quot;https://github.com/amantus-ai/vibetunnel&quot; title=&quot;GitHub - amantus-ai/vibetunnel: Turn any browser into your terminal &amp;#x26; command your agents on the go.&quot;&gt;GitHub&lt;/a&gt;)。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;团队协作&lt;/strong&gt;：通过浏览器把终端共享给同事，省去共用账户或复杂 SSH 隧道的安全隐患(&lt;a href=&quot;https://github.com/amantus-ai/vibetunnel&quot; title=&quot;GitHub - amantus-ai/vibetunnel: Turn any browser into your terminal &amp;#x26; command your agents on the go.&quot;&gt;GitHub&lt;/a&gt;)。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Vibe Coding&lt;/strong&gt;：Mac、iPad、甚至一部旧安卓机都能即时「接管」本地 shell，真正随走随编(&lt;a href=&quot;https://vibetunnel.sh/&quot; title=&quot;Vibetunnel: Your Mac Terminal in Any Browser | Secure &amp;#x26; Retro&quot;&gt;Vibetunnel&lt;/a&gt;)。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h2 id=&quot;核心亮点&quot;&gt;核心亮点&lt;/h2&gt;&lt;a href=&quot;#核心亮点&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “核心亮点”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;功能&lt;/th&gt;&lt;th&gt;说明&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;🖥 &lt;strong&gt;浏览器即终端&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;基于 xterm.js + Node 后端，实时渲染输出、支持 ANSI 颜色与滚动缓冲区，无需 SSH(&lt;a href=&quot;https://github.com/amantus-ai/vibetunnel&quot; title=&quot;GitHub - amantus-ai/vibetunnel: Turn any browser into your terminal &amp;#x26; command your agents on the go.&quot;&gt;GitHub&lt;/a&gt;)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;⚡ &lt;strong&gt;零配置&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;安装后点击菜单栏图标即启动，本地默认 &lt;code dir=&quot;auto&quot;&gt;localhost&lt;/code&gt; 只允许自己访问，安全又省事(&lt;a href=&quot;https://github.com/amantus-ai/vibetunnel&quot; title=&quot;GitHub - amantus-ai/vibetunnel: Turn any browser into your terminal &amp;#x26; command your agents on the go.&quot;&gt;GitHub&lt;/a&gt;)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;🤖 &lt;strong&gt;AI‑Agent 友好&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;动态标题会显示 Claude/Gemini 等命令的「Thinking / Crafting」状态，方便远程观察长任务(&lt;a href=&quot;https://github.com/amantus-ai/vibetunnel&quot; title=&quot;GitHub - amantus-ai/vibetunnel: Turn any browser into your terminal &amp;#x26; command your agents on the go.&quot;&gt;GitHub&lt;/a&gt;)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;🔒 &lt;strong&gt;多重认证&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;本地帐号、SSH Key、环境变量密码或 Token 等五种认证模式，亦可配合 Tailscale/ngrok 暴露到公网(&lt;a href=&quot;https://github.com/amantus-ai/vibetunnel&quot; title=&quot;GitHub - amantus-ai/vibetunnel: Turn any browser into your terminal &amp;#x26; command your agents on the go.&quot;&gt;GitHub&lt;/a&gt;)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;📱 &lt;strong&gt;跨端访问&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Web 界面自适应移动端；官方 iOS 客户端与 Tauri 桌面端也在路上(&lt;a href=&quot;https://github.com/amantus-ai/vibetunnel&quot; title=&quot;GitHub - amantus-ai/vibetunnel: Turn any browser into your terminal &amp;#x26; command your agents on the go.&quot;&gt;GitHub&lt;/a&gt;)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;🎥 &lt;strong&gt;会话录制&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;自动以 asciinema 格式保存，方便回放或生成 DemoGIF(&lt;a href=&quot;https://github.com/amantus-ai/vibetunnel&quot; title=&quot;GitHub - amantus-ai/vibetunnel: Turn any browser into your terminal &amp;#x26; command your agents on the go.&quot;&gt;GitHub&lt;/a&gt;)&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;div&gt;&lt;h2 id=&quot;快速上手&quot;&gt;快速上手&lt;/h2&gt;&lt;a href=&quot;#快速上手&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “快速上手”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3 id=&quot;1⃣-安装&quot;&gt;1⃣ 安装&lt;/h3&gt;&lt;a href=&quot;#1⃣-安装&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1⃣ 安装”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;macOS 原生 App&lt;/strong&gt;（推荐）&lt;/p&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;brew&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;install&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;--cask&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;vibetunnel&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;p&gt;仅支持 Apple Silicon，安装时会把 &lt;code dir=&quot;auto&quot;&gt;vt&lt;/code&gt; 命令软链到 &lt;code dir=&quot;auto&quot;&gt;/usr/local/bin&lt;/code&gt;(&lt;a href=&quot;https://github.com/amantus-ai/vibetunnel&quot; title=&quot;GitHub - amantus-ai/vibetunnel: Turn any browser into your terminal &amp;#x26; command your agents on the go.&quot;&gt;GitHub&lt;/a&gt;)。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;npm 全平台包&lt;/strong&gt;
+服务器、Docker 或 Intel Mac 可用：&lt;code dir=&quot;auto&quot;&gt;npm i -g vibetunnel&lt;/code&gt;，需 Node 20+(&lt;a href=&quot;https://github.com/amantus-ai/vibetunnel&quot; title=&quot;GitHub - amantus-ai/vibetunnel: Turn any browser into your terminal &amp;#x26; command your agents on the go.&quot;&gt;GitHub&lt;/a&gt;)。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;2⃣-启动&quot;&gt;2⃣ 启动&lt;/h3&gt;&lt;a href=&quot;#2⃣-启动&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2⃣ 启动”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;vt&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;--shell&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;       &lt;/span&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# 在浏览器里打开交互式 shell&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;vt&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;npm&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;test&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;      &lt;/span&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# 把任何命令实时转发&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;p&gt;&lt;code dir=&quot;auto&quot;&gt;vt&lt;/code&gt; 实际调用 &lt;code dir=&quot;auto&quot;&gt;vibetunnel fwd&lt;/code&gt;，还能解析你 .zshrc / .bashrc 中的 alias，让 &lt;code dir=&quot;auto&quot;&gt;gs=git status&lt;/code&gt; 等别名直接可用(&lt;a href=&quot;https://github.com/amantus-ai/vibetunnel&quot; title=&quot;GitHub - amantus-ai/vibetunnel: Turn any browser into your terminal &amp;#x26; command your agents on the go.&quot;&gt;GitHub&lt;/a&gt;)。&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;3⃣-远程访问三板斧&quot;&gt;3⃣ 远程访问三板斧&lt;/h3&gt;&lt;a href=&quot;#3⃣-远程访问三板斧&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3⃣ 远程访问三板斧”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Tailscale&lt;/strong&gt;：最推荐，创建端到端加密的私有 VPN，只要记住 &lt;code dir=&quot;auto&quot;&gt;my-mac.tailnet.ts.net:4020&lt;/code&gt; 即可随时连入(&lt;a href=&quot;https://github.com/amantus-ai/vibetunnel&quot; title=&quot;GitHub - amantus-ai/vibetunnel: Turn any browser into your terminal &amp;#x26; command your agents on the go.&quot;&gt;GitHub&lt;/a&gt;, &lt;a href=&quot;https://github.com/amantus-ai/vibetunnel?utm_source=chatgpt.com&quot; title=&quot;amantus-ai/vibetunnel: Turn any browser into your terminal ... - GitHub&quot;&gt;GitHub&lt;/a&gt;)。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;ngrok&lt;/strong&gt;：一键获得 HTTPS 公网地址，适合临时分享给外部伙伴(&lt;a href=&quot;https://github.com/amantus-ai/vibetunnel&quot; title=&quot;GitHub - amantus-ai/vibetunnel: Turn any browser into your terminal &amp;#x26; command your agents on the go.&quot;&gt;GitHub&lt;/a&gt;)。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;局域网 / Cloudflare Tunnel&lt;/strong&gt;：在可信网络内直接开放 &lt;code dir=&quot;auto&quot;&gt;0.0.0.0:4020&lt;/code&gt;，或用 cloudflared 生成临时域名(&lt;a href=&quot;https://github.com/amantus-ai/vibetunnel&quot; title=&quot;GitHub - amantus-ai/vibetunnel: Turn any browser into your terminal &amp;#x26; command your agents on the go.&quot;&gt;GitHub&lt;/a&gt;)。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div&gt;&lt;h2 id=&quot;场景示例&quot;&gt;场景示例&lt;/h2&gt;&lt;a href=&quot;#场景示例&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “场景示例”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;🚄 高铁上用 iPad 查看 CI 日志，任务完成即远程触发下一步构建。&lt;/li&gt;
+&lt;li&gt;🧑‍💻 远程 Pair Coding，让同事直接在浏览器里帮你定位线上 Bug。&lt;/li&gt;
+&lt;li&gt;📟 旧手机秒变「仪表盘」，实时盯着 Claude 或 Gemini 的输出流。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h2 id=&quot;最新进展&quot;&gt;最新进展&lt;/h2&gt;&lt;a href=&quot;#最新进展&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “最新进展”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;UI 大修&lt;/strong&gt;：Beta 11 起引入更现代的配色与可折叠侧边栏，手机上也能全屏敲命令(&lt;a href=&quot;https://github.com/amantus-ai/vibetunnel/releases&quot; title=&quot;Releases · amantus-ai/vibetunnel · GitHub&quot;&gt;GitHub&lt;/a&gt;)。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;性能与稳定性&lt;/strong&gt;：Beta 12 解决了 SSH Agent、Linux 安装及欢迎页卡顿等问题，体验更丝滑(&lt;a href=&quot;https://github.com/amantus-ai/vibetunnel/releases&quot; title=&quot;Releases · amantus-ai/vibetunnel · GitHub&quot;&gt;GitHub&lt;/a&gt;)。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;项目活跃度&lt;/strong&gt;：短短一个月已破 2.8 k commits、14 万行代码，迭代速度令人咋舌(&lt;a href=&quot;https://steipete.me/posts/2025/vibetunnel-first-anniversary&quot; title=&quot;VibeTunnel&amp;#x27;s first AI-anniversary | Peter Steinberger&quot;&gt;steipete.me&lt;/a&gt;)。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;幕后花絮&lt;/strong&gt;：它竟是在 24 小时黑客松里，用 Claude Code + 咖啡一把梭哈出来的！(&lt;a href=&quot;https://steipete.me/posts/2025/vibetunnel-turn-any-browser-into-your-mac-terminal&quot; title=&quot;VibeTunnel: Turn Any Browser into Your Mac&amp;#x27;s Terminal | Peter Steinberger&quot;&gt;steipete.me&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h2 id=&quot;与传统-webterminal-的对比&quot;&gt;与传统 web‑terminal 的对比&lt;/h2&gt;&lt;a href=&quot;#与传统-webterminal-的对比&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “与传统 web‑terminal 的对比”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;特性&lt;/th&gt;&lt;th&gt;VibeTunnel&lt;/th&gt;&lt;th&gt;ttyd / gotty&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;动态标题 / Agent 状态&lt;/td&gt;&lt;td&gt;✅&lt;/td&gt;&lt;td&gt;❌&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;原生 macOS 菜单栏&lt;/td&gt;&lt;td&gt;✅&lt;/td&gt;&lt;td&gt;❌&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;会话录制&lt;/td&gt;&lt;td&gt;✅ asciinema&lt;/td&gt;&lt;td&gt;❌&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;多重认证+Tailscale&lt;/td&gt;&lt;td&gt;✅&lt;/td&gt;&lt;td&gt;部分支持&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;iOS / Tauri 客户端&lt;/td&gt;&lt;td&gt;进行中&lt;/td&gt;&lt;td&gt;无官方方案&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;div&gt;&lt;h2 id=&quot;使用小贴士&quot;&gt;使用小贴士&lt;/h2&gt;&lt;a href=&quot;#使用小贴士&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “使用小贴士”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;安全第一&lt;/strong&gt;：在公网暴露时务必开启密码或 SSH Key，并限制只读 Session；Dev 环境可以 &lt;code dir=&quot;auto&quot;&gt;--no-auth&lt;/code&gt; 但切勿生产使用(&lt;a href=&quot;https://github.com/amantus-ai/vibetunnel&quot; title=&quot;GitHub - amantus-ai/vibetunnel: Turn any browser into your terminal &amp;#x26; command your agents on the go.&quot;&gt;GitHub&lt;/a&gt;)。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Title Hack&lt;/strong&gt;：在脚本里加 &lt;code dir=&quot;auto&quot;&gt;vt title &quot;Deploy 🚀&quot;&lt;/code&gt;，浏览器标签栏一眼就能看出哪条流水线在跑(&lt;a href=&quot;https://github.com/amantus-ai/vibetunnel&quot; title=&quot;GitHub - amantus-ai/vibetunnel: Turn any browser into your terminal &amp;#x26; command your agents on the go.&quot;&gt;GitHub&lt;/a&gt;)。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;配合 Tailscale Funnel&lt;/strong&gt;：需要给客户临时演示？用 Funnel 把 &lt;code dir=&quot;auto&quot;&gt;localhost:4020&lt;/code&gt; 映射成一次性 HTTPS 链接，演示完即关(&lt;a href=&quot;https://tailscale.com/kb/1223/funnel?utm_source=chatgpt.com&quot; title=&quot;Tailscale Funnel&quot;&gt;Tailscale&lt;/a&gt;)。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div&gt;&lt;h2 id=&quot;结语&quot;&gt;结语&lt;/h2&gt;&lt;a href=&quot;#结语&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “结语”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;如果你想要一个“随时随地，掏出手机就能操作 Mac 终端”的方案，VibeTunnel 基本覆盖了从快速安装、远程安全到 AI‑Agent 监控的全部需求。试着在周末装一把，然后拍张“我在海边也在 vim”的照片，朋友圈立刻多 10 个点赞😉。&lt;/p&gt;</content:encoded><category>VibeTunnel</category><category>macOS</category><category>Vibe Coding</category></item><item><title>Sniffly：用仪表盘洞察你的 Claude Code 使用模式</title><link>https://www.vibesparking.com/zh-cn/blog/ai/claude-code/2025-07-17-sniffly-visualize-claude-code-logs/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/claude-code/2025-07-17-sniffly-visualize-claude-code-logs/</guid><pubDate>Thu, 17 Jul 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- ## Sniffly 上手指南：用一张本地仪表盘洞察你的 Claude Code 使用模式 --&gt;
 &lt;blockquote&gt;
 &lt;p&gt;一行命令，即刻把枯燥 Claude Code 的 jsonl 日志变成可视化洞察。&lt;/p&gt;
 &lt;/blockquote&gt;
