@@ -1,4 +1,76 @@
-<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Vibe Sparking AI | Blog</title><description/><link>https://www.vibesparking.com/</link><language>zh-CN</language><item><title>Kiro 实战：用 Kiro 实现 Rails 测试数据环境隔离，让 Spec 更清晰、可控</title><link>https://www.vibesparking.com/zh-cn/blog/ai/practices/2025-07-25-kiro-rails-spec-fixtures-isolation/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/practices/2025-07-25-kiro-rails-spec-fixtures-isolation/</guid><pubDate>Fri, 25 Jul 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # **用 Kiro 实现 Rails 测试数据环境隔离，让 Spec 更清晰、可控** --&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Vibe Sparking AI | Blog</title><description/><link>https://www.vibesparking.com/</link><language>zh-CN</language><item><title>GitHub Copilot AI 帮你 Code Review 和写 Commit Message</title><link>https://www.vibesparking.com/zh-cn/blog/ai/github-copilot/2025-07-25-github-copilot-code-review-commit/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/github-copilot/2025-07-25-github-copilot-code-review-commit/</guid><pubDate>Fri, 25 Jul 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # GitHub Copilot AI 帮你审代码、写提交 --&gt;&lt;!-- --- --&gt;
+&lt;div&gt;&lt;h2 id=&quot;-引子代码多了问题也多了&quot;&gt;👀 引子：代码多了，问题也多了&lt;/h2&gt;&lt;a href=&quot;#-引子代码多了问题也多了&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “👀 引子：代码多了，问题也多了”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;做过测试、维护、重构的同学都懂，代码多起来后：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;一个改动牵一发而动全身&lt;/li&gt;
+&lt;li&gt;一个小错误可能埋雷全局&lt;/li&gt;
+&lt;li&gt;每次提交都要写 message，写不好还要被 Leader 提 Review&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;那有没有工具能帮你自动检查、自动总结？&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;有！&lt;/p&gt;
+&lt;p&gt;就是今天要介绍的——&lt;strong&gt;GitHub Copilot 的 Code Review 功能 + Commit Message 生成&lt;/strong&gt;。&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;-快速开始安装-github-copilot-插件&quot;&gt;🚀 快速开始：安装 GitHub Copilot 插件&lt;/h2&gt;&lt;a href=&quot;#-快速开始安装-github-copilot-插件&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “🚀 快速开始：安装 GitHub Copilot 插件”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;在 VSCode 插件市场中搜索：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;GitHub Copilot&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;点击安装即可，记得用 GitHub 账号登录，并订阅（目前需要 Copilot 订阅）。&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;安装后，在侧边栏会出现 &lt;code dir=&quot;auto&quot;&gt;Copilot&lt;/code&gt; 图标，点击即可打开。&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;-github-copilot-最新定价概览&quot;&gt;💰 GitHub Copilot 最新定价概览&lt;/h2&gt;&lt;a href=&quot;#-github-copilot-最新定价概览&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “💰 GitHub Copilot 最新定价概览”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;GitHub Copilot 提供三种个人版本：
+• &lt;strong&gt;Free&lt;/strong&gt;（免费）：每月可使用 &lt;strong&gt;2 000 次代码补全&lt;/strong&gt; + &lt;strong&gt;50 次 Chat/编辑请求&lt;/strong&gt;，适合初学者试用。
+• &lt;strong&gt;Pro&lt;/strong&gt;：每月 &lt;strong&gt;10 美元&lt;/strong&gt;（或年付 &lt;strong&gt;100 美元&lt;/strong&gt;），支持 &lt;strong&gt;无限补全与聊天使用&lt;/strong&gt;，并包含 &lt;strong&gt;300 次“高级模型请求”&lt;/strong&gt;（超额可按 &lt;strong&gt;$0.04/次&lt;/strong&gt; 付费）。
+• &lt;strong&gt;Pro+&lt;/strong&gt;：每月 &lt;strong&gt;39 美元&lt;/strong&gt;（或年付 &lt;strong&gt;390 美元&lt;/strong&gt;），在 Pro 的基础上提升至 &lt;strong&gt;1 500 次高级请求额度&lt;/strong&gt;，支持更多 AI 模型和优先访问权。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;此外，&lt;strong&gt;Copilot Business&lt;/strong&gt;（团队/企业版）售价为每用户 &lt;strong&gt;19 美元/月&lt;/strong&gt;，包含团队管理、安全策略和 300 次高级请求额度。&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;-一键-ai-代码审查&quot;&gt;🔍 一键 AI 代码审查&lt;/h2&gt;&lt;a href=&quot;#-一键-ai-代码审查&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “🔍 一键 AI 代码审查”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3 id=&quot;使用入口在哪&quot;&gt;使用入口在哪？&lt;/h3&gt;&lt;a href=&quot;#使用入口在哪&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “使用入口在哪？”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;在 VSCode 的 Source Control 面板（⌘+Shift+G）中，你能看到变更列表。&lt;/p&gt;
+&lt;p&gt;点击如下图红框中的按钮：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;💬 图标 = &lt;code dir=&quot;auto&quot;&gt;Code Review - Uncommitted Changes&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;Copilot 会自动分析你的变更，逐个文件、逐行代码给出建议。&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h3 id=&quot;copilot-会说什么&quot;&gt;Copilot 会说什么？&lt;/h3&gt;&lt;a href=&quot;#copilot-会说什么&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Copilot 会说什么？”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;来看一段真实截图（如下👇）：&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;ruby&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;User&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;new&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;(&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;FixturesSetting&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;[&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;ENV&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;[&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&apos;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;TARGET_ENV&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&apos;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;]] &lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;||&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&apos;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;sit&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&apos;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;][&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&apos;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;users&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&apos;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;][&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&apos;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;user_admin&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&apos;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;]&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;p&gt;Copilot 自动分析说：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;User.new 期望的是单独参数（username, password），你却传了个 hash，建议改成用 splat 操作符。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;而且给出修改建议：&lt;/p&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;diff&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;FixturesSetting[...]&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;**FixturesSetting[...]**&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;p&gt;是不是比一个个找错高效多了？&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;️-一键生成-commit-message&quot;&gt;✍️ 一键生成 Commit Message&lt;/h2&gt;&lt;a href=&quot;#️-一键生成-commit-message&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “✍️ 一键生成 Commit Message”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;每次提交是不是都想偷懒写个 “fix bug” 或 “update”? 🙃&lt;/p&gt;
+&lt;p&gt;GitHub Copilot 帮你自动生成有语义的 message：&lt;/p&gt;
+&lt;p&gt;只需要点一下这个按钮👇：&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;它会根据你的变更内容，自动生成一段合适的提交说明，比如：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;feat: Refactor specs to utilize FixturesSetting for user and patient data across multiple test files&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;准确、清晰、还符合语义化 commit 标准。&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;-总结一下你能获得的好处&quot;&gt;✅ 总结一下你能获得的好处：&lt;/h2&gt;&lt;a href=&quot;#-总结一下你能获得的好处&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “✅ 总结一下你能获得的好处：”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Code Review 自动化&lt;/strong&gt;：快速定位逻辑错误、不合理写法&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Commit Message 自动生成&lt;/strong&gt;：再也不怕提交“写不出名字”的变更&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;多文件多段落支持&lt;/strong&gt;：整个修改一气呵成&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;-留个问题&quot;&gt;🧠 留个问题：&lt;/h2&gt;&lt;a href=&quot;#-留个问题&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “🧠 留个问题：”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;你平时是怎么做代码审查的？你会愿意让 AI 来帮你审查和写 commit 吗？&lt;/p&gt;
+&lt;p&gt;欢迎在评论区聊聊你的经验～&lt;/p&gt;</content:encoded><category>AI</category><category>GitHub Copilot</category><category>VS Code</category><category>Code Review</category><category>Commit Message</category><category>Vibe Coding Practices</category></item><item><title>Kiro 实战：用 Kiro 实现 Rails 测试数据环境隔离，让 Spec 更清晰、可控</title><link>https://www.vibesparking.com/zh-cn/blog/ai/practices/2025-07-25-kiro-rails-spec-fixtures-isolation/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/practices/2025-07-25-kiro-rails-spec-fixtures-isolation/</guid><pubDate>Fri, 25 Jul 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # **用 Kiro 实现 Rails 测试数据环境隔离，让 Spec 更清晰、可控** --&gt;
 &lt;p&gt;&lt;strong&gt;“为什么我本地跑得过，CI 一直 fail？”&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;“同一个接口，在 SIT 和 TEST 环境下返回的数据不一样？”&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;在实际项目中，如果你也遇到过这种 &lt;strong&gt;测试数据混乱&lt;/strong&gt;、&lt;strong&gt;环境不一致导致测试不稳定&lt;/strong&gt;的问题，那本文一定能帮到你。&lt;/p&gt;
@@ -1654,101 +1726,4 @@ AI 可以写函数，写不出 &lt;strong&gt;文化与制度&lt;/strong&gt;。&l
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;“写代码的快乐，不该以上线的痛苦为代价。”&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;快去下载 Kiro，一起把“灵感”变成“可交付”吧！&lt;/p&gt;</content:encoded><category>Kiro</category><category>Agentic IDE</category><category>Spec-Driven Development</category><category>Vibe Coding</category><category>AWS</category><category>Software Engineering</category><category>EARS</category></item><item><title>日报 - 2025-07-14</title><link>https://www.vibesparking.com/zh-cn/blog/journals/2025-07-14/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/journals/2025-07-14/</guid><pubDate>Mon, 14 Jul 2025 00:00:00 GMT</pubDate><content:encoded/></item><item><title>Claude Code 开发神器：`claude-trace` 全记录工具，让你的调试透明可见</title><link>https://www.vibesparking.com/zh-cn/blog/ai/claude-code/2025-07-12-claude-code-debugging-tool-claude-trace-transparent-logging/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/claude-code/2025-07-12-claude-code-debugging-tool-claude-trace-transparent-logging/</guid><pubDate>Sat, 12 Jul 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # Claude 开发神器：`claude-trace` 全记录工具，让你的调试透明可见 --&gt;
-&lt;p&gt;在使用 Claude Code 写代码时，你是否也好奇：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Claude 是怎么理解你的指令的？&lt;/li&gt;
-&lt;li&gt;系统提示（system prompt）到底写了啥？&lt;/li&gt;
-&lt;li&gt;Claude 用了什么工具？返回了哪些原始数据？&lt;/li&gt;
-&lt;li&gt;API 背后发生了什么？模型用了多少 token？&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;现在，有了开源工具 &lt;strong&gt;&lt;code dir=&quot;auto&quot;&gt;claude-trace&lt;/code&gt;&lt;/strong&gt;，这些“幕后”细节你都能一览无遗！&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;-安装方式&quot;&gt;📦 安装方式&lt;/h2&gt;&lt;a href=&quot;#-安装方式&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “📦 安装方式”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;只需一条命令即可安装：&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;npm&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;install&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;-g&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;@mariozechner/claude-trace&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;-一键启动日志记录&quot;&gt;🚀 一键启动日志记录&lt;/h2&gt;&lt;a href=&quot;#-一键启动日志记录&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “🚀 一键启动日志记录”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;启动 Claude Code 并记录全过程：&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;claude-trace&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;p&gt;支持更多选项：&lt;/p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;功能&lt;/th&gt;&lt;th&gt;命令&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;启动 Claude + 日志记录&lt;/td&gt;&lt;td&gt;&lt;code dir=&quot;auto&quot;&gt;claude-trace&lt;/code&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;包含所有请求（默认仅记录有效对话）&lt;/td&gt;&lt;td&gt;&lt;code dir=&quot;auto&quot;&gt;claude-trace --include-all-requests&lt;/code&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;使用特定参数运行 Claude&lt;/td&gt;&lt;td&gt;&lt;code dir=&quot;auto&quot;&gt;claude-trace --run-with chat --model sonnet-3.5&lt;/code&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;提取 OAuth token&lt;/td&gt;&lt;td&gt;&lt;code dir=&quot;auto&quot;&gt;claude-trace --extract-token&lt;/code&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;生成 HTML 会话报告&lt;/td&gt;&lt;td&gt;&lt;code dir=&quot;auto&quot;&gt;claude-trace --generate-html logs.jsonl report.html&lt;/code&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;自动生成索引 + 总结&lt;/td&gt;&lt;td&gt;&lt;code dir=&quot;auto&quot;&gt;claude-trace --index&lt;/code&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;-能看到什么&quot;&gt;🔍 能看到什么？&lt;/h2&gt;&lt;a href=&quot;#-能看到什么&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “🔍 能看到什么？”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;使用 claude-trace，你可以在生成的 HTML 页面中看到：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;✅ Claude 的 &lt;strong&gt;system prompt&lt;/strong&gt;（隐藏指令）&lt;/li&gt;
-&lt;li&gt;✅ 所有 &lt;strong&gt;API 请求与响应原始数据&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;✅ &lt;strong&gt;工具定义与输出&lt;/strong&gt;（如搜索/文件读取）&lt;/li&gt;
-&lt;li&gt;✅ Claude 的“思考过程”块&lt;/li&gt;
-&lt;li&gt;✅ Token 使用统计（含缓存命中情况）&lt;/li&gt;
-&lt;li&gt;✅ 可交互 HTML 视图 + 搜索索引&lt;/li&gt;
-&lt;li&gt;✅ JSONL 原始日志（保存在 &lt;code dir=&quot;auto&quot;&gt;.claude-trace/&lt;/code&gt; 文件夹）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;每次运行将生成自包含的 HTML 文件，&lt;strong&gt;无需服务器即可本地浏览&lt;/strong&gt;，非常适合团队回顾、调试与归档。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;-会话总结与索引功能ai-加持&quot;&gt;📊 会话总结与索引功能（AI 加持）&lt;/h2&gt;&lt;a href=&quot;#-会话总结与索引功能ai-加持&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “📊 会话总结与索引功能（AI 加持）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;通过 &lt;code dir=&quot;auto&quot;&gt;claude-trace --index&lt;/code&gt; 命令，你还能自动生成：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;所有日志的 AI 总结标题和概要&lt;/li&gt;
-&lt;li&gt;带索引的 &lt;code dir=&quot;auto&quot;&gt;index.html&lt;/code&gt; 文件&lt;/li&gt;
-&lt;li&gt;可点击跳转的历史会话列表&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;p&gt;让你像管理 Notion 一样管理 Claude 的所有对话记录！&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;-适合谁&quot;&gt;🧑‍💻 适合谁？&lt;/h2&gt;&lt;a href=&quot;#-适合谁&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “🧑‍💻 适合谁？”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;如果你符合以下标签，那么你会爱上它：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;💡 Claude Code 的深度用户或插件开发者&lt;/li&gt;
-&lt;li&gt;🧪 需要调试 Claude 工具链、系统指令或日志结构&lt;/li&gt;
-&lt;li&gt;📁 希望归档所有 Claude 编程会话&lt;/li&gt;
-&lt;li&gt;🧠 想了解 Claude 背后真实的“思考”过程&lt;/li&gt;
-&lt;li&gt;⚙️ 需要构建自动化测试或生成会话回顾报告&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;-开源地址&quot;&gt;🌐 开源地址&lt;/h2&gt;&lt;a href=&quot;#-开源地址&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “🌐 开源地址”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;项目地址：&lt;a href=&quot;https://github.com/mariozechner/claude-trace&quot;&gt;https://github.com/mariozechner/claude-trace&lt;/a&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;strong&gt;总结一下：&lt;/strong&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;code dir=&quot;auto&quot;&gt;claude-trace&lt;/code&gt; 是 Claude Code 用户不可错过的一款调试神器，它让你看清 AI 背后的“黑盒”，无论是开发插件、分析模型响应，还是构建 Claude 工程日志系统，都能带来极大便利。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;如果你正在用 Claude 开发项目，不妨试试看，一键开启你的「Claude 可视化开发之旅」！&lt;/p&gt;</content:encoded><category>Claude Code</category><category>claude-trace</category></item></channel></rss>
+&lt;p&gt;快去下载 Kiro，一起把“灵感”变成“可交付”吧！&lt;/p&gt;</content:encoded><category>Kiro</category><category>Agentic IDE</category><category>Spec-Driven Development</category><category>Vibe Coding</category><category>AWS</category><category>Software Engineering</category><category>EARS</category></item><item><title>日报 - 2025-07-14</title><link>https://www.vibesparking.com/zh-cn/blog/journals/2025-07-14/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/journals/2025-07-14/</guid><pubDate>Mon, 14 Jul 2025 00:00:00 GMT</pubDate><content:encoded/></item></channel></rss>
