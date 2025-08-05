@@ -1,4 +1,217 @@
-<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Vibe Sparking AI | Blog</title><description/><link>https://www.vibesparking.com/</link><language>zh-CN</language><item><title>Claude Code 助你开发效率从 1× 到 100× 的蜕变</title><link>https://www.vibesparking.com/zh-cn/blog/ai/claude-code/2025-08-05-unlock-claude-code-1x-to-100x-engineer/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/claude-code/2025-08-05-unlock-claude-code-1x-to-100x-engineer/</guid><pubDate>Mon, 04 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # Claude Code 助你开发效率从 1× 到 100× 的蜕变 --&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Vibe Sparking AI | Blog</title><description/><link>https://www.vibesparking.com/</link><language>zh-CN</language><item><title>这套 Claude Code 命令，拯救了我每周 5 小时的编程时间</title><link>https://www.vibesparking.com/zh-cn/blog/ai/claude-code/ccplugins/2025-08-05-ccplugins-save-dev-hours/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/claude-code/ccplugins/2025-08-05-ccplugins-save-dev-hours/</guid><pubDate>Tue, 05 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # 这套 Claude Code 命令，拯救了我每周 5 小时的编程时间 --&gt;&lt;!-- **一分钟速览：** --&gt;
+&lt;p&gt;CCPlugins 是一套由社区开发者 &lt;strong&gt;brennercruvinel&lt;/strong&gt; 维护的 24 条「专业级」命令包，专门为 Claude Code CLI 打磨，主打&lt;strong&gt;省时、省心、省 bug&lt;/strong&gt;。它用“会话式”语法把安全检查、代码清理、特性脚手架、智能提交等繁琐活做成一条条 Slash-Command，安装脚本 30 秒就能跑完，实测每周可帮开发者节省 3～5 小时机械劳动时间。&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;-引言&quot;&gt;🧭 引言&lt;/h2&gt;&lt;a href=&quot;#-引言&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “🧭 引言”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“加个按钮”结果给你重写整套 UI？在 Claude Code 里，这事儿并不稀奇。CCPlugins 想做的，就是&lt;strong&gt;把 Claude 的『无穷想象力』关进笼子，让它只做你要的事&lt;/strong&gt;。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;-ccplugins-到底是什么&quot;&gt;🔍 CCPlugins 到底是什么？&lt;/h2&gt;&lt;a href=&quot;#-ccplugins-到底是什么&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “🔍 CCPlugins 到底是什么？”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3 id=&quot;1-官方定位&quot;&gt;1. 官方定位&lt;/h3&gt;&lt;a href=&quot;#1-官方定位&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1. 官方定位”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;“Enterprise-grade workflows”&lt;/strong&gt;：面向团队的流程化命令集，而不是单纯 prompt 宏。&lt;/li&gt;
+&lt;li&gt;针对 &lt;strong&gt;Opus 4 / Sonnet 4&lt;/strong&gt; 模型专门微调的上下文模板，保证输出稳定。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;2-痛点命中&quot;&gt;2. 痛点命中&lt;/h3&gt;&lt;a href=&quot;#2-痛点命中&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2. 痛点命中”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;传统做法&lt;/th&gt;&lt;th&gt;常见痛点&lt;/th&gt;&lt;th&gt;CCPlugins 解法&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;手打 prompt&lt;/td&gt;&lt;td&gt;过度工程 / 输出失控&lt;/td&gt;&lt;td&gt;固定脚本 + 校验阶段 &lt;code dir=&quot;auto&quot;&gt;/refactor validate&lt;/code&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;人工提交&lt;/td&gt;&lt;td&gt;信息缺失&lt;/td&gt;&lt;td&gt;&lt;code dir=&quot;auto&quot;&gt;/commit&lt;/code&gt; 自动生成 Conventional Commit&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;全量扫描&lt;/td&gt;&lt;td&gt;浪费时间&lt;/td&gt;&lt;td&gt;Grep / Glob 只扫关联文件，增量处理&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;-安装只需-30-秒&quot;&gt;🚀 安装只需 30 秒&lt;/h2&gt;&lt;a href=&quot;#-安装只需-30-秒&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “🚀 安装只需 30 秒”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# macOS / Linux&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;curl&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;-sSL&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;https://raw.githubusercontent.com/brennercruvinel/CCPlugins/main/install.sh&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;|&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;bash&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# Windows&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;python&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;install.py&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;p&gt;卸载同理：&lt;code dir=&quot;auto&quot;&gt;./uninstall.sh&lt;/code&gt; 或 &lt;code dir=&quot;auto&quot;&gt;python uninstall.py&lt;/code&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;提示&lt;/strong&gt;：脚本会把所有命令 md 文件放到 &lt;code dir=&quot;auto&quot;&gt;~/.claude/commands/&lt;/code&gt;，再次更新直接 &lt;code dir=&quot;auto&quot;&gt;git pull&lt;/code&gt;。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;️-核心命令-4-大类&quot;&gt;🛠️ 核心命令 4 大类&lt;/h2&gt;&lt;a href=&quot;#️-核心命令-4-大类&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “🛠️ 核心命令 4 大类”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3 id=&quot;-开发流水线&quot;&gt;### 开发流水线&lt;/h3&gt;&lt;a href=&quot;#-开发流水线&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “### 开发流水线”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;/cleanproject&lt;/code&gt; ：秒删调试垃圾，自动 Git checkpoint 备份。&lt;/li&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;/scaffold user-auth&lt;/code&gt; ：读取项目结构，一键生成完整功能骨架。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;-质量与安全&quot;&gt;### 质量与安全&lt;/h3&gt;&lt;a href=&quot;#-质量与安全&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “### 质量与安全”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;/review&lt;/code&gt; ：四重子 Agent 做安全、性能、架构、可维护性体检。&lt;/li&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;/security-scan&lt;/code&gt; ：链式漏洞扫描＋修复跟踪。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;-深度分析&quot;&gt;### 深度分析&lt;/h3&gt;&lt;a href=&quot;#-深度分析&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “### 深度分析”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;/understand&lt;/code&gt; ：自动输出架构图、设计模式清单。&lt;/li&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;/explain-like-senior&lt;/code&gt; ：一句话读懂复杂代码，支持多文件。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;-会话--项目管理&quot;&gt;### 会话 &amp;#x26; 项目管理&lt;/h3&gt;&lt;a href=&quot;#-会话--项目管理&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “### 会话 &amp;#x26; 项目管理”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;/session-start&lt;/code&gt; / &lt;code dir=&quot;auto&quot;&gt;/session-end&lt;/code&gt; ：生成 &lt;code dir=&quot;auto&quot;&gt;CLAUDE.md&lt;/code&gt;，完整记录迭代历程。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;-高效用法-3-连招&quot;&gt;✨ 高效用法 3 连招&lt;/h2&gt;&lt;a href=&quot;#-高效用法-3-连招&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “✨ 高效用法 3 连招”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;安全护航&lt;/strong&gt;&lt;/p&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;claude&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;/security-scan&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &amp;#x26;&amp;#x26; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;claude&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;/review&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &amp;#x26;&amp;#x26; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;claude&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;/test&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;p&gt;让 CI 在合并前跑一遍「扫描-审查-测试」流水线。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;晨间例行&lt;/strong&gt;&lt;/p&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;claude&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;/session-start&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;claude&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;/predict-issues&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;p&gt;上班先预测风险，再开工。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;收工一键收尾&lt;/strong&gt;&lt;/p&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;claude&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;/format&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &amp;#x26;&amp;#x26; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;claude&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;/commit&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &amp;#x26;&amp;#x26; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;claude&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;/session-end&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;p&gt;统一代码风格＋智能提交信息＋总结日志，优雅下班。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;-结语&quot;&gt;🏁 结语&lt;/h2&gt;&lt;a href=&quot;#-结语&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “🏁 结语”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;CCPlugins 把「一句话指挥 AI」升级成了&lt;strong&gt;模块化、可复用、可审计&lt;/strong&gt;的工作流，让我们真正把时间花在设计和决策上，而不是 debug 和手动搬砖。还不快装一个试试？&lt;/p&gt;&lt;!-- **思考题**：
+
+&gt; 你最想把哪条日常任务做成 Slash-Command？留言聊聊，也许下一个 PR 就是你！
+
+---
+
+（完）
+
+[1]: https://github.com/brennercruvinel/CCPlugins?utm_source=chatgpt.com &quot;brennercruvinel/CCPlugins: Best Claude Code framework ...&quot;
+[2]: https://medium.com/coding-nexus/automate-your-claude-code-cli-using-ccplugins-1d484e431bf1?utm_source=chatgpt.com &quot;Automate your Claude Code CLI using CCPlugins&quot;
+[3]: https://www.reddit.com/r/ClaudeAI/comments/1mb37uj/found_claude_code_plugins_that_actually_work/?utm_source=chatgpt.com &quot;found claude code plugins that actually work : r/ClaudeAI&quot;
+[4]: https://github.com/brennercruvinel/CCPlugins/actions?utm_source=chatgpt.com &quot;Workflow runs · brennercruvinel/CCPlugins&quot;
+[5]: https://zenn.dev/masato13/articles/3cf47f65afcc05?utm_source=chatgpt.com &quot;CursorでClaude Codeのカスタムスラッシュコマンドを瞬時に ...&quot; --&gt;</content:encoded><category>AI Agent</category><category>Claude Code</category></item><item><title>Claude Code 在你的本地浏览器中运行</title><link>https://www.vibesparking.com/zh-cn/blog/ai/claude-code/cui/2025-08-05-browser-to-claude-code-cui/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/claude-code/cui/2025-08-05-browser-to-claude-code-cui/</guid><pubDate>Tue, 05 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- [![Tech Flat Ui Job Stock Illustrations – 51 Tech Flat Ui Job Stock ...](https://tse2.mm.bing.net/th/id/OIP.Wt4abrlVhfIKTiCwdREZJgHaFa?r=0\&amp;pid=Api)](https://www.dreamstime.com/illustration/tech-flat-ui-job.html)
+
+**一段话速览：** --&gt;
+&lt;p&gt;Claude Code Web UI（简称 &lt;strong&gt;CUI&lt;/strong&gt;）把原本只在终端里跑的 Claude Code 搬进了浏览器，界面现代、支持并行多会话、还能推送通知和语音听写；只需一条 &lt;code dir=&quot;auto&quot;&gt;npx cui-server&lt;/code&gt; 命令即可启动，登录后就能在任何设备继续你的 AI 编程任务。&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;引言&quot;&gt;引言&lt;/h2&gt;&lt;a href=&quot;#引言&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “引言”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;还在命令行里和 Claude “黑屏对话” 吗？&lt;strong&gt;CUI 让 AI 编程体验直接升级成云端 IDE&lt;/strong&gt;，点开浏览器就能写 Prompt、跑 Agent、收通知，连手机也能随时接力。&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;亮点速读&quot;&gt;亮点速读&lt;/h2&gt;&lt;a href=&quot;#亮点速读&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “亮点速读”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3 id=&quot;-现代设计&quot;&gt;✨ 现代设计&lt;/h3&gt;&lt;a href=&quot;#-现代设计&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “✨ 现代设计”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;React + TypeScript 打造，界面自适应桌面与移动。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;自动补全&lt;/strong&gt; 与 CLI 保持一致，上手零学习成本。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;-并行背景代理&quot;&gt;🚀 并行背景代理&lt;/h3&gt;&lt;a href=&quot;#-并行背景代理&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “🚀 并行背景代理”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;支持 &lt;strong&gt;多任务同时流式输出&lt;/strong&gt;，复杂项目不再排队。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;-任务管理&quot;&gt;📂 任务管理&lt;/h3&gt;&lt;a href=&quot;#-任务管理&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “📂 任务管理”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;CUI 会扫描 &lt;code dir=&quot;auto&quot;&gt;~/.claude/&lt;/code&gt; 历史，集中展示并可一键 &lt;strong&gt;Resume / Fork / Archive&lt;/strong&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;-推送通知&quot;&gt;🔔 推送通知&lt;/h3&gt;&lt;a href=&quot;#-推送通知&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “🔔 推送通知”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;集成 &lt;strong&gt;ntfy&lt;/strong&gt;，任务跑完或等待授权时立即提醒。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;️-gemini-25-flash-听写&quot;&gt;🎙️ Gemini 2.5 Flash 听写&lt;/h3&gt;&lt;a href=&quot;#️-gemini-25-flash-听写&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “🎙️ Gemini 2.5 Flash 听写”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;连接 Google Gemini API，长句语音转文字又快又准。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;三步极速安装&quot;&gt;三步极速安装&lt;/h2&gt;&lt;a href=&quot;#三步极速安装&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “三步极速安装”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;环境准备&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Node.js ≥ 20.19.0。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;一键启动&lt;/strong&gt;&lt;/p&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;npx&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;cui-server&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# 或全局安装：npm i -g cui-server&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;p&gt;终端会输出一串 &lt;code dir=&quot;auto&quot;&gt;#token&lt;/code&gt;，复制备用。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;浏览器访问&lt;/strong&gt;
+打开 &lt;code dir=&quot;auto&quot;&gt;http://localhost:3001/#&amp;#x3C;token&gt;&lt;/code&gt; 即可登陆。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;TIP：&lt;/strong&gt;
+需要远程访问？在 &lt;code dir=&quot;auto&quot;&gt;~/.cui/config.json&lt;/code&gt; 把 &lt;code dir=&quot;auto&quot;&gt;server.host&lt;/code&gt; 设成 &lt;code dir=&quot;auto&quot;&gt;0.0.0.0&lt;/code&gt;，或用 &lt;code dir=&quot;auto&quot;&gt;--host / --port&lt;/code&gt; 参数，再配合 Caddy 反向代理升级 HTTPS。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;进阶玩法&quot;&gt;进阶玩法&lt;/h2&gt;&lt;a href=&quot;#进阶玩法&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “进阶玩法”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3 id=&quot;并行多任务&quot;&gt;并行多任务&lt;/h3&gt;&lt;a href=&quot;#并行多任务&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “并行多任务”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;在 &lt;strong&gt;Tasks&lt;/strong&gt; 标签页查看正在运行的会话；长任务可直接关页后台跑，不怕断线。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;聊天内快捷指令&quot;&gt;聊天内快捷指令&lt;/h3&gt;&lt;a href=&quot;#聊天内快捷指令&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “聊天内快捷指令”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;/&lt;/code&gt; 调命令、&lt;code dir=&quot;auto&quot;&gt;@&lt;/code&gt; 调文件，和 CLI 保持同一套肌肉记忆。&lt;/li&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;⌘/Ctrl + Enter&lt;/code&gt; 发送，空格换行，小技巧提高 10% 敲字效率。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;语音听写&quot;&gt;语音听写&lt;/h3&gt;&lt;a href=&quot;#语音听写&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “语音听写”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;先在系统里导出 &lt;code dir=&quot;auto&quot;&gt;GOOGLE_API_KEY&lt;/code&gt;，再重启服务器即可开启语音输入。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;实时推送&quot;&gt;实时推送&lt;/h3&gt;&lt;a href=&quot;#实时推送&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “实时推送”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;任意设备装好 ntfy 客户端，订阅同一 Topic，任务结束马上震动提醒，不再盯屏。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;结语&quot;&gt;结语&lt;/h2&gt;&lt;a href=&quot;#结语&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “结语”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;CUI 把 Claude Code 的能力做了“浏览器可视化外壳”，轻量安装＋远程访问＋推送生态&lt;/strong&gt;，让 AI 编程像刷网页一样丝滑。你最期待用它解决什么痛点？评论区聊聊！&lt;/p&gt;&lt;!-- 
+---
+
+## 🎯 思考题
+
+1. 如果让 CUI 与自家 CI/CD 打通，你会怎么设计工作流？
+2. 语音听写 + Prompt 写作能否提升需求沟通效率？
+
+---
+
+## 多语言标题 &amp; slug
+
+| # | 简体中文                                  | English                                                  | 繁體                              | 日本語                              | Français                                                        | Español                                                | Português                                               | slug                       |
+| - | ------------------------------------- | -------------------------------------------------------- | ------------------------------- | -------------------------------- | --------------------------------------------------------------- | ------------------------------------------------------ | ------------------------------------------------------- | -------------------------- |
+| 1 | **“浏览器秒变 Claude Code：CUI 全攻略”**       | “Turn Your Browser into Claude Code: The CUI Guide”      | 瀏覽器秒變 Claude Code：CUI 全攻略       | ブラウザで Claude Code！CUI 徹底ガイド      | Transformez votre navigateur en Claude Code : guide CUI         | Convierte tu navegador en Claude Code: guía de CUI     | Transforme seu navegador em Claude Code: guia do CUI    | browser-to-claude-code-cui |
+| 2 | **“用 CUI 打造多任务 AI 编程工作台”**            | “Build a Multi-Task AI Workbench with CUI”               | 用 CUI 打造多任務 AI 編程工作台            | CUI で作るマルチタスク AI 作業台             | Créez un poste AI multitâche avec CUI                           | Crea un banco de trabajo AI multitarea con CUI         | Monte uma bancada AI multitarefa com CUI                | cui-multitask-ai-workbench |
+| 3 | **“一条 npx 指令，解锁 Claude Code Web UI”** | “One npx to Rule Them All: Unlocking Claude Code Web UI” | 一條 npx 指令，解鎖 Claude Code Web UI | 1 行 npx で Claude Code Web UI を解放 | Un npx pour tout faire : déverrouiller le Web UI de Claude Code | Un npx y entra en juego: abre la Web UI de Claude Code | Um npx para tudo: desbloqueando a Web UI do Claude Code | unlock-claude-code-webui   |
+
+---
+
+## 朋友圈评论（任选发）
+
+1. **“刚用 CUI 把 Claude 搬进浏览器，任务跑后台还给我推送提醒，爽！”**
+2. **“一条 `npx cui-server`，手机也能写 Prompt，这波效率+++++！”**
+3. **“语音 dictation + 多会话并行，Claude 直接成了云端小助手，强烈安利～”**
+
+[1]: https://github.com/wbopan/cui?utm_source=chatgpt.com &quot;wbopan/cui: A web UI for Claude Code agents&quot;
+[2]: https://github.com/BMPixel/cui?utm_source=chatgpt.com &quot;BMPixel/cui: A web UI for Claude Code agents&quot;
+[3]: https://x.com/jeffjose/status/1949874216230408366?utm_source=chatgpt.com &quot;Jeffrey Jose - X&quot;
+[4]: https://www.anthropic.com/engineering/claude-code-best-practices?utm_source=chatgpt.com &quot;Claude Code: Best practices for agentic coding&quot;
+[5]: https://docs.ntfy.sh/subscribe/cli/?utm_source=chatgpt.com &quot;From the CLI - ntfy&quot;
+[6]: https://ntfy.sh/?utm_source=chatgpt.com &quot;ntfy.sh | Send push notifications to your phone via PUT/POST&quot;
+[7]: https://ai.google.dev/gemini-api/docs/models?utm_source=chatgpt.com &quot;Gemini models | Gemini API | Google AI for Developers&quot;
+[8]: https://cloud.google.com/vertex-ai/generative-ai/docs/models/gemini/2-5-flash?utm_source=chatgpt.com &quot;Gemini 2.5 Flash | Generative AI on Vertex AI&quot;
+[9]: https://github.com/siteboon/claudecodeui?utm_source=chatgpt.com &quot;siteboon/claudecodeui: Use Claude Code on mobile and ...&quot;
+[10]: https://stackoverflow.com/questions/51026532/json-server-cannot-access-via-local-ip?utm_source=chatgpt.com &quot;json-server cannot access via local IP&quot; --&gt;</content:encoded><category>AI Agent</category><category>Claude Code</category></item><item><title>Claude Code 助你开发效率从 1× 到 100× 的蜕变</title><link>https://www.vibesparking.com/zh-cn/blog/ai/claude-code/2025-08-05-unlock-claude-code-1x-to-100x-engineer/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/claude-code/2025-08-05-unlock-claude-code-1x-to-100x-engineer/</guid><pubDate>Mon, 04 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # Claude Code 助你开发效率从 1× 到 100× 的蜕变 --&gt;
 &lt;div&gt;&lt;h2 id=&quot;引言&quot;&gt;引言&lt;/h2&gt;&lt;a href=&quot;#引言&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “引言”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
 &lt;p&gt;你是不是也听过那句经典论调：「&lt;strong&gt;一个 1× 工程师用 AI 是 0.1×，但一个 10× 工程师用 AI 就是 100×&lt;/strong&gt;」。这不是夸张，而是真的 —— 前提是你具备 &lt;strong&gt;系统思考、沟通精准、架构设计&lt;/strong&gt; 等关键能力。本文逐条拆解，结合 &lt;strong&gt;Claude Code&lt;/strong&gt; 的真实能力，告诉你如何将 AI 效能暴涨 100 倍。&lt;/p&gt;
 &lt;p&gt;&lt;/p&gt;
@@ -283,117 +496,7 @@ HHS 在疫情期上线 &lt;strong&gt;Tiberius&lt;/strong&gt;（&lt;strong&gt;202
 [6]: https://www.barrons.com/articles/amazon-stock-earnings-cloud-ai-spending-38416183?utm_source=chatgpt.com &quot;The Mag 7&apos;s Strength Just Became a Weakness&quot;
 [7]: https://www.marketsandmarkets.com/Market-Reports/data-center-gpu-market-18997435.html?utm_source=chatgpt.com &quot;Data Center GPU Market Size, Share &amp; Trends, 2025 To ...&quot;
 [8]: https://iot-analytics.com/leading-generative-ai-companies/?utm_source=chatgpt.com &quot;The leading generative AI companies&quot;
-[9]: https://www.ft.com/content/2ba1d064-242d-4a2a-a381-374d9643e23a?utm_source=chatgpt.com &quot;Nvidia seeks to build its business beyond Big Tech&quot; --&gt;</content:encoded><category>Nvidia</category><category>Cloud Computing</category><category>AI Infrastructure</category><category>AWS</category><category>Google Cloud</category><category>Microsoft Azure</category><category>CoreWeave</category></item><item><title>Claude Code 在你的本地浏览器中运行</title><link>https://www.vibesparking.com/zh-cn/blog/ai/claude-code/cui/2025-08-05-browser-to-claude-code-cui/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/claude-code/cui/2025-08-05-browser-to-claude-code-cui/</guid><pubDate>Mon, 04 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- [![Tech Flat Ui Job Stock Illustrations – 51 Tech Flat Ui Job Stock ...](https://tse2.mm.bing.net/th/id/OIP.Wt4abrlVhfIKTiCwdREZJgHaFa?r=0\&amp;pid=Api)](https://www.dreamstime.com/illustration/tech-flat-ui-job.html)
-
-**一段话速览：** --&gt;
-&lt;p&gt;Claude Code Web UI（简称 &lt;strong&gt;CUI&lt;/strong&gt;）把原本只在终端里跑的 Claude Code 搬进了浏览器，界面现代、支持并行多会话、还能推送通知和语音听写；只需一条 &lt;code dir=&quot;auto&quot;&gt;npx cui-server&lt;/code&gt; 命令即可启动，登录后就能在任何设备继续你的 AI 编程任务。&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;引言&quot;&gt;引言&lt;/h2&gt;&lt;a href=&quot;#引言&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “引言”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;还在命令行里和 Claude “黑屏对话” 吗？&lt;strong&gt;CUI 让 AI 编程体验直接升级成云端 IDE&lt;/strong&gt;，点开浏览器就能写 Prompt、跑 Agent、收通知，连手机也能随时接力。&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;亮点速读&quot;&gt;亮点速读&lt;/h2&gt;&lt;a href=&quot;#亮点速读&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “亮点速读”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h3 id=&quot;-现代设计&quot;&gt;✨ 现代设计&lt;/h3&gt;&lt;a href=&quot;#-现代设计&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “✨ 现代设计”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;React + TypeScript 打造，界面自适应桌面与移动。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;自动补全&lt;/strong&gt; 与 CLI 保持一致，上手零学习成本。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h3 id=&quot;-并行背景代理&quot;&gt;🚀 并行背景代理&lt;/h3&gt;&lt;a href=&quot;#-并行背景代理&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “🚀 并行背景代理”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;支持 &lt;strong&gt;多任务同时流式输出&lt;/strong&gt;，复杂项目不再排队。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h3 id=&quot;-任务管理&quot;&gt;📂 任务管理&lt;/h3&gt;&lt;a href=&quot;#-任务管理&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “📂 任务管理”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;CUI 会扫描 &lt;code dir=&quot;auto&quot;&gt;~/.claude/&lt;/code&gt; 历史，集中展示并可一键 &lt;strong&gt;Resume / Fork / Archive&lt;/strong&gt;。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h3 id=&quot;-推送通知&quot;&gt;🔔 推送通知&lt;/h3&gt;&lt;a href=&quot;#-推送通知&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “🔔 推送通知”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;集成 &lt;strong&gt;ntfy&lt;/strong&gt;，任务跑完或等待授权时立即提醒。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h3 id=&quot;️-gemini-25-flash-听写&quot;&gt;🎙️ Gemini 2.5 Flash 听写&lt;/h3&gt;&lt;a href=&quot;#️-gemini-25-flash-听写&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “🎙️ Gemini 2.5 Flash 听写”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;连接 Google Gemini API，长句语音转文字又快又准。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;三步极速安装&quot;&gt;三步极速安装&lt;/h2&gt;&lt;a href=&quot;#三步极速安装&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “三步极速安装”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;环境准备&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Node.js ≥ 20.19.0。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;一键启动&lt;/strong&gt;&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;npx&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;cui-server&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# 或全局安装：npm i -g cui-server&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;p&gt;终端会输出一串 &lt;code dir=&quot;auto&quot;&gt;#token&lt;/code&gt;，复制备用。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;浏览器访问&lt;/strong&gt;
-打开 &lt;code dir=&quot;auto&quot;&gt;http://localhost:3001/#&amp;#x3C;token&gt;&lt;/code&gt; 即可登陆。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;TIP：&lt;/strong&gt;
-需要远程访问？在 &lt;code dir=&quot;auto&quot;&gt;~/.cui/config.json&lt;/code&gt; 把 &lt;code dir=&quot;auto&quot;&gt;server.host&lt;/code&gt; 设成 &lt;code dir=&quot;auto&quot;&gt;0.0.0.0&lt;/code&gt;，或用 &lt;code dir=&quot;auto&quot;&gt;--host / --port&lt;/code&gt; 参数，再配合 Caddy 反向代理升级 HTTPS。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;进阶玩法&quot;&gt;进阶玩法&lt;/h2&gt;&lt;a href=&quot;#进阶玩法&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “进阶玩法”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h3 id=&quot;并行多任务&quot;&gt;并行多任务&lt;/h3&gt;&lt;a href=&quot;#并行多任务&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “并行多任务”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;在 &lt;strong&gt;Tasks&lt;/strong&gt; 标签页查看正在运行的会话；长任务可直接关页后台跑，不怕断线。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h3 id=&quot;聊天内快捷指令&quot;&gt;聊天内快捷指令&lt;/h3&gt;&lt;a href=&quot;#聊天内快捷指令&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “聊天内快捷指令”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;/&lt;/code&gt; 调命令、&lt;code dir=&quot;auto&quot;&gt;@&lt;/code&gt; 调文件，和 CLI 保持同一套肌肉记忆。&lt;/li&gt;
-&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;⌘/Ctrl + Enter&lt;/code&gt; 发送，空格换行，小技巧提高 10% 敲字效率。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h3 id=&quot;语音听写&quot;&gt;语音听写&lt;/h3&gt;&lt;a href=&quot;#语音听写&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “语音听写”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;先在系统里导出 &lt;code dir=&quot;auto&quot;&gt;GOOGLE_API_KEY&lt;/code&gt;，再重启服务器即可开启语音输入。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h3 id=&quot;实时推送&quot;&gt;实时推送&lt;/h3&gt;&lt;a href=&quot;#实时推送&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “实时推送”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;任意设备装好 ntfy 客户端，订阅同一 Topic，任务结束马上震动提醒，不再盯屏。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;结语&quot;&gt;结语&lt;/h2&gt;&lt;a href=&quot;#结语&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “结语”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;CUI 把 Claude Code 的能力做了“浏览器可视化外壳”，轻量安装＋远程访问＋推送生态&lt;/strong&gt;，让 AI 编程像刷网页一样丝滑。你最期待用它解决什么痛点？评论区聊聊！&lt;/p&gt;&lt;!-- 
----
-
-## 🎯 思考题
-
-1. 如果让 CUI 与自家 CI/CD 打通，你会怎么设计工作流？
-2. 语音听写 + Prompt 写作能否提升需求沟通效率？
-
----
-
-## 多语言标题 &amp; slug
-
-| # | 简体中文                                  | English                                                  | 繁體                              | 日本語                              | Français                                                        | Español                                                | Português                                               | slug                       |
-| - | ------------------------------------- | -------------------------------------------------------- | ------------------------------- | -------------------------------- | --------------------------------------------------------------- | ------------------------------------------------------ | ------------------------------------------------------- | -------------------------- |
-| 1 | **“浏览器秒变 Claude Code：CUI 全攻略”**       | “Turn Your Browser into Claude Code: The CUI Guide”      | 瀏覽器秒變 Claude Code：CUI 全攻略       | ブラウザで Claude Code！CUI 徹底ガイド      | Transformez votre navigateur en Claude Code : guide CUI         | Convierte tu navegador en Claude Code: guía de CUI     | Transforme seu navegador em Claude Code: guia do CUI    | browser-to-claude-code-cui |
-| 2 | **“用 CUI 打造多任务 AI 编程工作台”**            | “Build a Multi-Task AI Workbench with CUI”               | 用 CUI 打造多任務 AI 編程工作台            | CUI で作るマルチタスク AI 作業台             | Créez un poste AI multitâche avec CUI                           | Crea un banco de trabajo AI multitarea con CUI         | Monte uma bancada AI multitarefa com CUI                | cui-multitask-ai-workbench |
-| 3 | **“一条 npx 指令，解锁 Claude Code Web UI”** | “One npx to Rule Them All: Unlocking Claude Code Web UI” | 一條 npx 指令，解鎖 Claude Code Web UI | 1 行 npx で Claude Code Web UI を解放 | Un npx pour tout faire : déverrouiller le Web UI de Claude Code | Un npx y entra en juego: abre la Web UI de Claude Code | Um npx para tudo: desbloqueando a Web UI do Claude Code | unlock-claude-code-webui   |
-
----
-
-## 朋友圈评论（任选发）
-
-1. **“刚用 CUI 把 Claude 搬进浏览器，任务跑后台还给我推送提醒，爽！”**
-2. **“一条 `npx cui-server`，手机也能写 Prompt，这波效率+++++！”**
-3. **“语音 dictation + 多会话并行，Claude 直接成了云端小助手，强烈安利～”**
-
-[1]: https://github.com/wbopan/cui?utm_source=chatgpt.com &quot;wbopan/cui: A web UI for Claude Code agents&quot;
-[2]: https://github.com/BMPixel/cui?utm_source=chatgpt.com &quot;BMPixel/cui: A web UI for Claude Code agents&quot;
-[3]: https://x.com/jeffjose/status/1949874216230408366?utm_source=chatgpt.com &quot;Jeffrey Jose - X&quot;
-[4]: https://www.anthropic.com/engineering/claude-code-best-practices?utm_source=chatgpt.com &quot;Claude Code: Best practices for agentic coding&quot;
-[5]: https://docs.ntfy.sh/subscribe/cli/?utm_source=chatgpt.com &quot;From the CLI - ntfy&quot;
-[6]: https://ntfy.sh/?utm_source=chatgpt.com &quot;ntfy.sh | Send push notifications to your phone via PUT/POST&quot;
-[7]: https://ai.google.dev/gemini-api/docs/models?utm_source=chatgpt.com &quot;Gemini models | Gemini API | Google AI for Developers&quot;
-[8]: https://cloud.google.com/vertex-ai/generative-ai/docs/models/gemini/2-5-flash?utm_source=chatgpt.com &quot;Gemini 2.5 Flash | Generative AI on Vertex AI&quot;
-[9]: https://github.com/siteboon/claudecodeui?utm_source=chatgpt.com &quot;siteboon/claudecodeui: Use Claude Code on mobile and ...&quot;
-[10]: https://stackoverflow.com/questions/51026532/json-server-cannot-access-via-local-ip?utm_source=chatgpt.com &quot;json-server cannot access via local IP&quot; --&gt;</content:encoded><category>AI Agent</category><category>Claude Code</category></item><item><title>编程、写作、图片和视频各领域推荐的海外 AI 产品服务</title><link>https://www.vibesparking.com/zh-cn/blog/ai/2025-08-03-overseas-ai-picks-by-domain/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/2025-08-03-overseas-ai-picks-by-domain/</guid><pubDate>Sun, 03 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # 海外各领域 AI 产品服务首选 --&gt;
+[9]: https://www.ft.com/content/2ba1d064-242d-4a2a-a381-374d9643e23a?utm_source=chatgpt.com &quot;Nvidia seeks to build its business beyond Big Tech&quot; --&gt;</content:encoded><category>Nvidia</category><category>Cloud Computing</category><category>AI Infrastructure</category><category>AWS</category><category>Google Cloud</category><category>Microsoft Azure</category><category>CoreWeave</category></item><item><title>编程、写作、图片和视频各领域推荐的海外 AI 产品服务</title><link>https://www.vibesparking.com/zh-cn/blog/ai/2025-08-03-overseas-ai-picks-by-domain/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/2025-08-03-overseas-ai-picks-by-domain/</guid><pubDate>Sun, 03 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # 海外各领域 AI 产品服务首选 --&gt;
 &lt;p&gt;如果要搞深度推理、多模态处理还有复杂代码，Gemini 2.5 Pro Deep Think 是最强的选手；
 要做全方位研究、自动整理信息产出报告，就选 ChatGPT Deep Research；
 想在终端里让 AI 帮你写、调试大项目代码，用 Claude Code 最稳；
@@ -1671,90 +1774,7 @@ Opal 立刻生成“上传纪要 → Gemini 摘要 → 生成 todo → 输出邮
 [3]: https://www.infoq.com/news/2025/07/google-opal-ai/ &quot;Google Labs Introduces Opal, a Visual Platform for Creating AI Mini-Apps - InfoQ&quot;
 [4]: https://sdtimes.com/ai/googles-new-opal-tool-allows-users-to-create-mini-ai-apps-with-no-coding-required/?utm_source=chatgpt.com &quot;Google&apos;s new Opal tool allows users to create mini AI apps with no ...&quot;
 [5]: https://apix-drive.com/en/blog/news/google-launches-opal?utm_source=chatgpt.com &quot;Google Launches Opal: AI-Powered No-Code App Builder - Apix-Drive&quot;
-[6]: https://medium.com/%40ferreradaniel/new-google-opal-automation-tool-build-ai-mini-apps-instantly-without-coding-6596ed53d0fe &quot;NEW! Google Opal Automation Tool: Build AI Mini-Apps Instantly Without Coding | by Daniel Ferrera | Jul, 2025 | Medium&quot; --&gt;</content:encoded><category>AI</category><category>Google Opal</category><category>n8n</category><category>Dify</category><category>Coze</category></item><item><title>Prompt Optimizer 提示词优化器：让 AI 指令一键“开挂”</title><link>https://www.vibesparking.com/zh-cn/blog/ai/prompt-engineering/2025-07-31-prompt-optimizer-review/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/prompt-engineering/2025-07-31-prompt-optimizer-review/</guid><pubDate>Thu, 31 Jul 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- **推荐标题**
-
-* **中文**：Prompt Optimizer 提示词优化器：让 AI 指令一键“开挂”
-* **English**: Prompt Optimizer – One-Click Boost for Better AI Prompts
-* **slug-uri**: prompt-optimizer-review --&gt;
-&lt;hr&gt;&lt;!-- ## 引言 --&gt;
-&lt;p&gt;写提示词就像写诗——灵感来了却难以落笔。&lt;strong&gt;Prompt Optimizer 把这种“玄学”变成“工程学”&lt;/strong&gt;：一句原始指令，点一下就拆解、补全、格式化，让大模型输出更稳、更准、更省钱。&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;核心亮点&quot;&gt;核心亮点&lt;/h2&gt;&lt;a href=&quot;#核心亮点&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “核心亮点”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;系统 / 用户双通道优化&lt;/strong&gt;：同时改写 &lt;em&gt;System Prompt&lt;/em&gt; 和 &lt;em&gt;User Prompt&lt;/em&gt;，提高上下文一致性。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;实时对比&lt;/strong&gt;：左右分屏查看优化前后效果，新手也能立刻感受差距。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;多模型集成&lt;/strong&gt;：内置 OpenAI、Gemini、DeepSeek、智谱等主流接口，想省 API 费可切小模型。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;纯前端 &amp;#x26; 本地存储&lt;/strong&gt;：数据不出浏览器，私活也能放心优化。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;MCP 服务器&lt;/strong&gt;：Docker 镜像自带 Model Context Protocol，可无缝连上 Claude Desktop 等工具。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;四种使用姿势&quot;&gt;四种使用姿势&lt;/h2&gt;&lt;a href=&quot;#四种使用姿势&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “四种使用姿势”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h3 id=&quot;1️⃣-在线即用&quot;&gt;1️⃣ 在线即用&lt;/h3&gt;&lt;a href=&quot;#1️⃣-在线即用&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1️⃣ 在线即用”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;打开 &lt;strong&gt;&lt;a href=&quot;https://prompt.always200.com/&quot;&gt;https://prompt.always200.com/&lt;/a&gt;&lt;/strong&gt;，输入提示词，点 &lt;em&gt;Optimize&lt;/em&gt;，立刻看到重写结果。零门槛、零配置。&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;2️⃣-桌面应用&quot;&gt;2️⃣ 桌面应用&lt;/h3&gt;&lt;a href=&quot;#2️⃣-桌面应用&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2️⃣ 桌面应用”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;Win / macOS / Linux 一键安装，自动更新、无跨域，让本地 Ollama 也能吃到优化后指令。&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;3️⃣-chrome-插件&quot;&gt;3️⃣ Chrome 插件&lt;/h3&gt;&lt;a href=&quot;#3️⃣-chrome-插件&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3️⃣ Chrome 插件”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;写文档时随手选中文本 → 右键 &lt;em&gt;Prompt Optimizer&lt;/em&gt;，灵感碎片直接升级为结构化指令。&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;4️⃣-docker--compose&quot;&gt;4️⃣ Docker &amp;#x26; Compose&lt;/h3&gt;&lt;a href=&quot;#4️⃣-docker--compose&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “4️⃣ Docker &amp;#x26; Compose”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;docker&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;run&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;-d&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;-p&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;8081:80&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;linshen/prompt-optimizer&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;p&gt;五秒起容器，内网部署、加密访问，团队一起用也安全。&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;场景示例&quot;&gt;场景示例&lt;/h2&gt;&lt;a href=&quot;#场景示例&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “场景示例”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;典型需求&lt;/th&gt;&lt;th&gt;优化前&lt;/th&gt;&lt;th&gt;优化后&lt;/th&gt;&lt;th&gt;结果&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;小模型角色扮演&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;“当侦探破案”&lt;/td&gt;&lt;td&gt;加入背景设定、输出格式&lt;/td&gt;&lt;td&gt;低成本 LLM 也能沉浸式对话&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;知识抽取&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;“帮我把文章变成三元组”&lt;/td&gt;&lt;td&gt;明确字段、示例、边界条件&lt;/td&gt;&lt;td&gt;输出 JSON 100% 可解析&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;诗歌创作&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;“写首春天的诗”&lt;/td&gt;&lt;td&gt;主题、情感、修辞、行数&lt;/td&gt;&lt;td&gt;AI 作品更贴合个人口味&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;快速上手三步走&quot;&gt;快速上手三步走&lt;/h2&gt;&lt;a href=&quot;#快速上手三步走&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “快速上手三步走”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;挑模型&lt;/strong&gt;：点右上 &lt;em&gt;⚙️Model Manager&lt;/em&gt;，填 API Key，选最便宜那一档先试。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;写原始提示&lt;/strong&gt;：别怕简陋，工具会帮你拆句、加细节。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;一键优化 &amp;#x26; 对比&lt;/strong&gt;：看左侧原句、右侧优化句，满意就复制粘贴给 LLM 生产。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;安全与隐私&quot;&gt;安全与隐私&lt;/h2&gt;&lt;a href=&quot;#安全与隐私&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “安全与隐私”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;代码 MIT 开源，11k⭐、1.4k Fork；数据只在本地或你自建的容器里流转，没有第三方云端。&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;未来路线图&quot;&gt;未来路线图&lt;/h2&gt;&lt;a href=&quot;#未来路线图&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “未来路线图”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;作者在 Roadmap 中透露：将引入 &lt;strong&gt;Prompt 市场&lt;/strong&gt;、&lt;strong&gt;团队协作&lt;/strong&gt;、&lt;strong&gt;一键 A/B 测试&lt;/strong&gt; 等功能，社区也在贡献更多模型适配。&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;结语&quot;&gt;结语&lt;/h2&gt;&lt;a href=&quot;#结语&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “结语”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;下一次卡在“怎么写提示词”时，别憋——&lt;strong&gt;丢给 Prompt Optimizer 试试&lt;/strong&gt;。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;你觉得这种“提示词自动润色”会彻底改变你的工作流吗？欢迎在评论区聊聊 🚀&lt;/p&gt;
-&lt;/blockquote&gt;&lt;!-- 需要我继续深挖某一部分，或者加上实战视频 / 部署脚本？告诉我，马上安排！ --&gt;&lt;!-- [1]: https://github.com/linshenkx/prompt-optimizer &quot;GitHub - linshenkx/prompt-optimizer: 一款提示词优化器，助力于编写高质量的提示词&quot;
-[2]: https://zhuanlan.zhihu.com/p/1893785705848742670?utm_source=chatgpt.com &quot;提升AI创作力：Prompt Optimizer提示词优化器，让你的指令更高效！&quot;
-[3]: https://prompt.always200.com/?utm_source=chatgpt.com &quot;提示词优化器&quot;
-[4]: https://prompt.always200.com/ &quot;提示词优化器&quot;
-[5]: https://github.com/linshenkx/prompt-optimizer?utm_source=chatgpt.com &quot;linshenkx/prompt-optimizer: 一款提示词优化器 - GitHub&quot;
-[6]: https://zhuanlan.zhihu.com/p/1892351710292332883?utm_source=chatgpt.com &quot;2025-04-06｜Prompt-Optimizer: AI 提示词优化神器全攻略 - 知乎专栏&quot; --&gt;</content:encoded><category>Prompt Engineering</category></item><item><title>对标 v0／Lovable／Bolt：本地跑 Dyad AI 开发应用</title><link>https://www.vibesparking.com/zh-cn/blog/ai/vibe-coding/2025-07-31-dyad-local-ai-builder/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/vibe-coding/2025-07-31-dyad-local-ai-builder/</guid><pubDate>Thu, 31 Jul 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- 
+[6]: https://medium.com/%40ferreradaniel/new-google-opal-automation-tool-build-ai-mini-apps-instantly-without-coding-6596ed53d0fe &quot;NEW! Google Opal Automation Tool: Build AI Mini-Apps Instantly Without Coding | by Daniel Ferrera | Jul, 2025 | Medium&quot; --&gt;</content:encoded><category>AI</category><category>Google Opal</category><category>n8n</category><category>Dify</category><category>Coze</category></item><item><title>对标 v0／Lovable／Bolt：本地跑 Dyad AI 开发应用</title><link>https://www.vibesparking.com/zh-cn/blog/ai/vibe-coding/2025-07-31-dyad-local-ai-builder/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/vibe-coding/2025-07-31-dyad-local-ai-builder/</guid><pubDate>Thu, 31 Jul 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- 
 ## 推荐标题
 
 * **中文**：
@@ -1888,7 +1908,90 @@ Opal 立刻生成“上传纪要 → Gemini 摘要 → 生成 todo → 输出邮
 &lt;p&gt;详细对比见官方 Comparison 文档，社区帖子也认可 “Dyad = 无锁定版 v0”。&lt;/p&gt;
 &lt;hr&gt;&lt;!-- ## 结语：把控制权拿回来 --&gt;
 &lt;p&gt;在 AI 生产力井喷的 2025，下一个爆款应用可能只差一条 prompt。&lt;strong&gt;Dyad 把大厂才有的端到端开发体验塞进桌面应用&lt;/strong&gt;，重新把速度、隐私、成本交还给个人开发者。
-如果你也想试试「一句话造产品」的爽感，现在就下载，实现你的灵感！&lt;/p&gt;</content:encoded><category>Dyad</category><category>AI Agent</category><category>Vibe Coding</category><category>V0</category><category>Lovable</category><category>Bolt</category></item><item><title>Claude Code 太贵用不起？自建账号拼车共享是趋势</title><link>https://www.vibesparking.com/zh-cn/blog/ai/claude-code/2025-07-30-beat-weekly-limits-with-claude-relay/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/claude-code/2025-07-30-beat-weekly-limits-with-claude-relay/</guid><pubDate>Wed, 30 Jul 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- Claude Code 太贵用不起？：自建账号拼车共享是趋势 --&gt;
+如果你也想试试「一句话造产品」的爽感，现在就下载，实现你的灵感！&lt;/p&gt;</content:encoded><category>Dyad</category><category>AI Agent</category><category>Vibe Coding</category><category>V0</category><category>Lovable</category><category>Bolt</category></item><item><title>Prompt Optimizer 提示词优化器：让 AI 指令一键“开挂”</title><link>https://www.vibesparking.com/zh-cn/blog/ai/prompt-engineering/2025-07-31-prompt-optimizer-review/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/prompt-engineering/2025-07-31-prompt-optimizer-review/</guid><pubDate>Thu, 31 Jul 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- **推荐标题**
+
+* **中文**：Prompt Optimizer 提示词优化器：让 AI 指令一键“开挂”
+* **English**: Prompt Optimizer – One-Click Boost for Better AI Prompts
+* **slug-uri**: prompt-optimizer-review --&gt;
+&lt;hr&gt;&lt;!-- ## 引言 --&gt;
+&lt;p&gt;写提示词就像写诗——灵感来了却难以落笔。&lt;strong&gt;Prompt Optimizer 把这种“玄学”变成“工程学”&lt;/strong&gt;：一句原始指令，点一下就拆解、补全、格式化，让大模型输出更稳、更准、更省钱。&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;核心亮点&quot;&gt;核心亮点&lt;/h2&gt;&lt;a href=&quot;#核心亮点&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “核心亮点”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;系统 / 用户双通道优化&lt;/strong&gt;：同时改写 &lt;em&gt;System Prompt&lt;/em&gt; 和 &lt;em&gt;User Prompt&lt;/em&gt;，提高上下文一致性。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;实时对比&lt;/strong&gt;：左右分屏查看优化前后效果，新手也能立刻感受差距。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;多模型集成&lt;/strong&gt;：内置 OpenAI、Gemini、DeepSeek、智谱等主流接口，想省 API 费可切小模型。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;纯前端 &amp;#x26; 本地存储&lt;/strong&gt;：数据不出浏览器，私活也能放心优化。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;MCP 服务器&lt;/strong&gt;：Docker 镜像自带 Model Context Protocol，可无缝连上 Claude Desktop 等工具。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;四种使用姿势&quot;&gt;四种使用姿势&lt;/h2&gt;&lt;a href=&quot;#四种使用姿势&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “四种使用姿势”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3 id=&quot;1️⃣-在线即用&quot;&gt;1️⃣ 在线即用&lt;/h3&gt;&lt;a href=&quot;#1️⃣-在线即用&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1️⃣ 在线即用”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;打开 &lt;strong&gt;&lt;a href=&quot;https://prompt.always200.com/&quot;&gt;https://prompt.always200.com/&lt;/a&gt;&lt;/strong&gt;，输入提示词，点 &lt;em&gt;Optimize&lt;/em&gt;，立刻看到重写结果。零门槛、零配置。&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;2️⃣-桌面应用&quot;&gt;2️⃣ 桌面应用&lt;/h3&gt;&lt;a href=&quot;#2️⃣-桌面应用&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2️⃣ 桌面应用”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Win / macOS / Linux 一键安装，自动更新、无跨域，让本地 Ollama 也能吃到优化后指令。&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;3️⃣-chrome-插件&quot;&gt;3️⃣ Chrome 插件&lt;/h3&gt;&lt;a href=&quot;#3️⃣-chrome-插件&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3️⃣ Chrome 插件”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;写文档时随手选中文本 → 右键 &lt;em&gt;Prompt Optimizer&lt;/em&gt;，灵感碎片直接升级为结构化指令。&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;4️⃣-docker--compose&quot;&gt;4️⃣ Docker &amp;#x26; Compose&lt;/h3&gt;&lt;a href=&quot;#4️⃣-docker--compose&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “4️⃣ Docker &amp;#x26; Compose”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;docker&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;run&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;-d&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;-p&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;8081:80&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;linshen/prompt-optimizer&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;p&gt;五秒起容器，内网部署、加密访问，团队一起用也安全。&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;场景示例&quot;&gt;场景示例&lt;/h2&gt;&lt;a href=&quot;#场景示例&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “场景示例”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;典型需求&lt;/th&gt;&lt;th&gt;优化前&lt;/th&gt;&lt;th&gt;优化后&lt;/th&gt;&lt;th&gt;结果&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;小模型角色扮演&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;“当侦探破案”&lt;/td&gt;&lt;td&gt;加入背景设定、输出格式&lt;/td&gt;&lt;td&gt;低成本 LLM 也能沉浸式对话&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;知识抽取&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;“帮我把文章变成三元组”&lt;/td&gt;&lt;td&gt;明确字段、示例、边界条件&lt;/td&gt;&lt;td&gt;输出 JSON 100% 可解析&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;诗歌创作&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;“写首春天的诗”&lt;/td&gt;&lt;td&gt;主题、情感、修辞、行数&lt;/td&gt;&lt;td&gt;AI 作品更贴合个人口味&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;快速上手三步走&quot;&gt;快速上手三步走&lt;/h2&gt;&lt;a href=&quot;#快速上手三步走&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “快速上手三步走”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;挑模型&lt;/strong&gt;：点右上 &lt;em&gt;⚙️Model Manager&lt;/em&gt;，填 API Key，选最便宜那一档先试。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;写原始提示&lt;/strong&gt;：别怕简陋，工具会帮你拆句、加细节。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;一键优化 &amp;#x26; 对比&lt;/strong&gt;：看左侧原句、右侧优化句，满意就复制粘贴给 LLM 生产。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;安全与隐私&quot;&gt;安全与隐私&lt;/h2&gt;&lt;a href=&quot;#安全与隐私&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “安全与隐私”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;代码 MIT 开源，11k⭐、1.4k Fork；数据只在本地或你自建的容器里流转，没有第三方云端。&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;未来路线图&quot;&gt;未来路线图&lt;/h2&gt;&lt;a href=&quot;#未来路线图&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “未来路线图”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;作者在 Roadmap 中透露：将引入 &lt;strong&gt;Prompt 市场&lt;/strong&gt;、&lt;strong&gt;团队协作&lt;/strong&gt;、&lt;strong&gt;一键 A/B 测试&lt;/strong&gt; 等功能，社区也在贡献更多模型适配。&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;结语&quot;&gt;结语&lt;/h2&gt;&lt;a href=&quot;#结语&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “结语”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;下一次卡在“怎么写提示词”时，别憋——&lt;strong&gt;丢给 Prompt Optimizer 试试&lt;/strong&gt;。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;你觉得这种“提示词自动润色”会彻底改变你的工作流吗？欢迎在评论区聊聊 🚀&lt;/p&gt;
+&lt;/blockquote&gt;&lt;!-- 需要我继续深挖某一部分，或者加上实战视频 / 部署脚本？告诉我，马上安排！ --&gt;&lt;!-- [1]: https://github.com/linshenkx/prompt-optimizer &quot;GitHub - linshenkx/prompt-optimizer: 一款提示词优化器，助力于编写高质量的提示词&quot;
+[2]: https://zhuanlan.zhihu.com/p/1893785705848742670?utm_source=chatgpt.com &quot;提升AI创作力：Prompt Optimizer提示词优化器，让你的指令更高效！&quot;
+[3]: https://prompt.always200.com/?utm_source=chatgpt.com &quot;提示词优化器&quot;
+[4]: https://prompt.always200.com/ &quot;提示词优化器&quot;
+[5]: https://github.com/linshenkx/prompt-optimizer?utm_source=chatgpt.com &quot;linshenkx/prompt-optimizer: 一款提示词优化器 - GitHub&quot;
+[6]: https://zhuanlan.zhihu.com/p/1892351710292332883?utm_source=chatgpt.com &quot;2025-04-06｜Prompt-Optimizer: AI 提示词优化神器全攻略 - 知乎专栏&quot; --&gt;</content:encoded><category>Prompt Engineering</category></item><item><title>Claude Code 太贵用不起？自建账号拼车共享是趋势</title><link>https://www.vibesparking.com/zh-cn/blog/ai/claude-code/2025-07-30-beat-weekly-limits-with-claude-relay/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/claude-code/2025-07-30-beat-weekly-limits-with-claude-relay/</guid><pubDate>Wed, 30 Jul 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- Claude Code 太贵用不起？：自建账号拼车共享是趋势 --&gt;
 &lt;div&gt;&lt;h2 id=&quot;省流版&quot;&gt;省流版&lt;/h2&gt;&lt;a href=&quot;#省流版&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “省流版”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
 &lt;div&gt;&lt;h2 id=&quot;anthropic-刚刚推出每周配额团队拼车账号-3-天就可能超限自建-claude-relay-service-中转站支持多账户池自动轮换无惧最新限额用-docker-compose-3-分钟上线一人一把-api-key照样跑满整周&quot;&gt;&lt;strong&gt;Anthropic 刚刚推出「每周配额」，团队拼车账号 3 天就可能超限；自建 &lt;strong&gt;claude-relay-service&lt;/strong&gt; 中转站，支持多账户池自动轮换，无惧最新限额。用 Docker-Compose 3 分钟上线，一人一把 API Key，照样跑满整周！&lt;/strong&gt;&lt;/h2&gt;&lt;a href=&quot;#anthropic-刚刚推出每周配额团队拼车账号-3-天就可能超限自建-claude-relay-service-中转站支持多账户池自动轮换无惧最新限额用-docker-compose-3-分钟上线一人一把-api-key照样跑满整周&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Anthropic 刚刚推出「每周配额」，团队拼车账号 3 天就可能超限；自建 claude-relay-service 中转站，支持多账户池自动轮换，无惧最新限额。用 Docker-Compose 3 分钟上线，一人一把 API Key，照样跑满整周！”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
 &lt;div&gt;&lt;h2 id=&quot;限额风暴羊毛党集体哀嚎&quot;&gt;限额风暴，羊毛党集体哀嚎&lt;/h2&gt;&lt;a href=&quot;#限额风暴羊毛党集体哀嚎&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “限额风暴，羊毛党集体哀嚎”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
@@ -2217,120 +2320,4 @@ slug-uri: stress-free-spelling-1-hour-daily-vocab-plan --&gt;
 &lt;p&gt;AI 员工已经在门口等活，你准备好让他们“打螺丝”了吗？
 &lt;strong&gt;你最想把哪项工作甩给代理？评论区聊聊！&lt;/strong&gt; 🗨️&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;需要补充更多示例或深挖定制技巧？留言告诉我！&lt;/p&gt;</content:encoded><category>Claude Code Subagents</category><category>Anthropic</category></item><item><title>羊毛党噩耗：Claude Code 发布新按周限额政策，打击账号共享和转售</title><link>https://www.vibesparking.com/zh-cn/blog/ai/claude-code/2025-07-29-claude-code-weekly-cap-account-sharing/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/claude-code/2025-07-29-claude-code-weekly-cap-account-sharing/</guid><pubDate>Tue, 29 Jul 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;strong&gt;摘要：&lt;/strong&gt;
-Anthropic 宣布 8 月 28 日起，将为 Claude Code 订阅用户叠加「&lt;strong&gt;按周限额&lt;/strong&gt;」，并单独对顶配 Opus 4 模型设周上限。官方直言：有人把 Claude 当“24×7 编码矿机”，甚至&lt;strong&gt;共享账号、倒卖配额&lt;/strong&gt;。新规旨在“仅影响不到 5 % 的用户”，却引爆开发者社区——不少“羊毛党”感叹薅不到 GPU 算力了。&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;引言&quot;&gt;引言&lt;/h2&gt;&lt;a href=&quot;#引言&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “引言”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;还记得之前靠“共享账号 + 自动脚本”无限刷 Claude Code 的日子吗？&lt;strong&gt;好日子到头了。&lt;/strong&gt; Anthropic 给订阅户发邮件，宣布一套更严的周限额体系，理由只有一句话：&lt;strong&gt;公平 + 稳定&lt;/strong&gt;。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;“部分高级用户把 Claude 挂后台 24 小时跑，甚至转卖访问权限，拖慢了所有人。”——官方邮件&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;政策要点&quot;&gt;政策要点&lt;/h2&gt;&lt;a href=&quot;#政策要点&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “政策要点”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;变动&lt;/th&gt;&lt;th&gt;旧规则&lt;/th&gt;&lt;th&gt;新规则（8 月 28 日起）&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;短时限额&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;每 5 小时刷新（不变）&lt;/td&gt;&lt;td&gt;保持不变&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;整体周限额&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;无&lt;/td&gt;&lt;td&gt;每 7 天刷新&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Opus 4 周限额&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;无&lt;/td&gt;&lt;td&gt;单独周上限&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;预计影响人群&lt;/strong&gt;：&amp;#x3C; 5 % 的高强度用户。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Max 5× 档位&lt;/strong&gt;：每周约 140–280 小时 Sonnet 4、15–35 小时 Opus 4。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;超额方案&lt;/strong&gt;：可按 API 标准费率“续命”。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;anthropic-为何出手&quot;&gt;Anthropic 为何出手？&lt;/h2&gt;&lt;a href=&quot;#anthropic-为何出手&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Anthropic 为何出手？”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h3 id=&quot;1-账号灰产横行&quot;&gt;1. &lt;strong&gt;账号灰产横行&lt;/strong&gt;&lt;/h3&gt;&lt;a href=&quot;#1-账号灰产横行&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1. 账号灰产横行”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;社区已出现“月卡代刷”“多人拼团”等灰色服务，严重违反 TOS。&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;2-gpu-资源告急&quot;&gt;2. &lt;strong&gt;GPU 资源告急&lt;/strong&gt;&lt;/h3&gt;&lt;a href=&quot;#2-gpu-资源告急&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2. GPU 资源告急”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;Claude Code 用户量激增，官方状态页一个月内 7 次故障。&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;3-运营成本飙升&quot;&gt;3. &lt;strong&gt;运营成本飙升&lt;/strong&gt;&lt;/h3&gt;&lt;a href=&quot;#3-运营成本飙升&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3. 运营成本飙升”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;TechCrunch 指出，类似 Cursor、Replit 6 月已被迫改价；Anthropic此举是“补课”。&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;对开发者的影响&quot;&gt;对开发者的影响&lt;/h2&gt;&lt;a href=&quot;#对开发者的影响&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “对开发者的影响”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h3 id=&quot;正常用户&quot;&gt;正常用户&lt;/h3&gt;&lt;a href=&quot;#正常用户&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “正常用户”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;基本无感&lt;/strong&gt;：日常提问、改 Bug、生成脚本，周配额够用。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h3 id=&quot;重度--团队用户&quot;&gt;重度 / 团队用户&lt;/h3&gt;&lt;a href=&quot;#重度--团队用户&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “重度 / 团队用户”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;长时间 Agent&lt;/strong&gt;、大型单仓库 refactor、并行多实例——触顶概率高。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;备用方案&lt;/strong&gt;：提前拆分任务，或切换本地 LLM/其他云模型兜底。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;羊毛党噩耗解析&quot;&gt;“羊毛党”噩耗解析&lt;/h2&gt;&lt;a href=&quot;#羊毛党噩耗解析&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled ““羊毛党”噩耗解析”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;玩法&lt;/th&gt;&lt;th&gt;旧收益&lt;/th&gt;&lt;th&gt;新风险&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;拼团共享&lt;/td&gt;&lt;td&gt;低成本薅 GPU&lt;/td&gt;&lt;td&gt;周限额一来，人多更易触顶&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;倒卖算力&lt;/td&gt;&lt;td&gt;高买低卖差价&lt;/td&gt;&lt;td&gt;账号易被风控，信誉归零&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;24×7 Agent&lt;/td&gt;&lt;td&gt;长时间刷积分/排行榜&lt;/td&gt;&lt;td&gt;周限额锁死，收益骤降&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
-&lt;blockquote&gt;
-&lt;p&gt;VentureBeat 揭露：有用户在 $200 套餐跑出“数万美元”内核时长。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;一句话：羊毛党不再有利可图。&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;应对策略&quot;&gt;应对策略&lt;/h2&gt;&lt;a href=&quot;#应对策略&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “应对策略”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;监控用量&lt;/strong&gt;：自建计量脚本，避免“周中锁号”。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;优化提示&lt;/strong&gt;：压缩上下文，采用流式链式思考，减少无效 token。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;多模组合&lt;/strong&gt;：常规任务用 Sonnet 4，高复杂度再启 Opus 4。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;私有化备份&lt;/strong&gt;：部署轻量模型（如 DeepSeek Coder、Phi3 mini）在本地应急。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;行业连锁反应&quot;&gt;行业连锁反应&lt;/h2&gt;&lt;a href=&quot;#行业连锁反应&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “行业连锁反应”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;定价趋严&lt;/strong&gt;：OpenAI 曾在 6 月调降 GPT-4 mini 限额；BigCode 平台也陆续设周封顶。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;资源竞赛&lt;/strong&gt;：AI 公司疯狂追加数据中心 CAPEX，以平衡日益膨胀的推理成本。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;结语&quot;&gt;结语&lt;/h2&gt;&lt;a href=&quot;#结语&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “结语”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;Anthropic 此举，表面针对“羊毛党”，本质是在&lt;strong&gt;算力稀缺时代&lt;/strong&gt;做一次资源再分配：让 95 % 正常用户享受稳定体验，让超高频玩家为占用付费。你会因此降低对 Claude Code 的依赖吗？欢迎在评论区聊聊你的看法！&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;互动&lt;/strong&gt;：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;你一周大概用 Claude 多久？&lt;/li&gt;
-&lt;li&gt;如果触顶，你会转向哪款工具？&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;</content:encoded><category>Claude Code</category><category>Anthropic</category></item></channel></rss>
+&lt;p&gt;需要补充更多示例或深挖定制技巧？留言告诉我！&lt;/p&gt;</content:encoded><category>Claude Code Subagents</category><category>Anthropic</category></item></channel></rss>
