@@ -832,7 +832,131 @@ HHS 在疫情期上线 &lt;strong&gt;Tiberius&lt;/strong&gt;（&lt;strong&gt;202
 [6]: https://www.barrons.com/articles/amazon-stock-earnings-cloud-ai-spending-38416183?utm_source=chatgpt.com &quot;The Mag 7&apos;s Strength Just Became a Weakness&quot;
 [7]: https://www.marketsandmarkets.com/Market-Reports/data-center-gpu-market-18997435.html?utm_source=chatgpt.com &quot;Data Center GPU Market Size, Share &amp; Trends, 2025 To ...&quot;
 [8]: https://iot-analytics.com/leading-generative-ai-companies/?utm_source=chatgpt.com &quot;The leading generative AI companies&quot;
-[9]: https://www.ft.com/content/2ba1d064-242d-4a2a-a381-374d9643e23a?utm_source=chatgpt.com &quot;Nvidia seeks to build its business beyond Big Tech&quot; --&gt;</content:encoded><category>Nvidia</category><category>Cloud Computing</category><category>AI Infrastructure</category><category>AWS</category><category>Google Cloud</category><category>Microsoft Azure</category><category>CoreWeave</category></item><item><title>编程、写作、图片和视频各领域推荐的海外 AI 产品服务</title><link>https://www.vibesparking.com/zh-cn/blog/ai/2025-08-03-overseas-ai-picks-by-domain/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/2025-08-03-overseas-ai-picks-by-domain/</guid><pubDate>Sun, 03 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # 海外各领域 AI 产品服务首选 --&gt;
+[9]: https://www.ft.com/content/2ba1d064-242d-4a2a-a381-374d9643e23a?utm_source=chatgpt.com &quot;Nvidia seeks to build its business beyond Big Tech&quot; --&gt;</content:encoded><category>Nvidia</category><category>Cloud Computing</category><category>AI Infrastructure</category><category>AWS</category><category>Google Cloud</category><category>Microsoft Azure</category><category>CoreWeave</category></item><item><title>Claude Code Security Review 帮你盯安全漏洞</title><link>https://www.vibesparking.com/zh-cn/blog/ai/claude-code/commands/2025-08-07-claude-code-security-review-intro/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/claude-code/commands/2025-08-07-claude-code-security-review-intro/</guid><pubDate>Mon, 04 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;strong&gt;Claude Code Security Review：让安全审计像写指令一样简单&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Claude Code 刚发布的 &lt;strong&gt;claude-code-security-review&lt;/strong&gt; 把 Anthropic Claude 的大模型推理力塞进 GitHub Actions 和终端指令里。它能在拉取请求（PR）阶段就解析 diff，找出 SQL 注入、XSS、授权绕过等高风险漏洞，并自动过滤低价值噪声，还能通过 &lt;code dir=&quot;auto&quot;&gt;/security-review&lt;/code&gt; 一键在本地扫描。你的代码还没合并，潜在漏洞就已经被 AI 点名。&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;一claude-code-security-review-是什么&quot;&gt;一、Claude Code Security Review 是什么？&lt;/h2&gt;&lt;a href=&quot;#一claude-code-security-review-是什么&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “一、Claude Code Security Review 是什么？”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;AI 驱动的安全审计&lt;/strong&gt;：调用 Claude 的深度语义理解，超越正则匹配，直接读懂代码意图。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;GitHub Action 集成&lt;/strong&gt;：在 PR 打开或同步时自动触发，漏扫结果回帖到具体代码行。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;终端 Slash 指令&lt;/strong&gt;：在 Claude Code 里输入 &lt;code dir=&quot;auto&quot;&gt;/security-review&lt;/code&gt;，同样的扫描能力即刻离线运行。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;二核心亮点&quot;&gt;二、核心亮点&lt;/h2&gt;&lt;a href=&quot;#二核心亮点&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “二、核心亮点”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3 id=&quot;1-高信噪比结果&quot;&gt;1. 高信噪比结果&lt;/h3&gt;&lt;a href=&quot;#1-高信噪比结果&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1. 高信噪比结果”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;内置 &lt;strong&gt;False Positive Filtering&lt;/strong&gt;，默认屏蔽 DOS、资源耗尽、无实际影响的输入校验等低危告警，只把真正要命的洞拉出来。&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;2-语义级漏洞检测&quot;&gt;2. 语义级漏洞检测&lt;/h3&gt;&lt;a href=&quot;#2-语义级漏洞检测&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2. 语义级漏洞检测”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;可识别注入攻击、鉴权缺陷、硬编码密钥、弱加密、业务逻辑竞态等 10 大类问题。&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;3-diff-aware--语言无关&quot;&gt;3. Diff-Aware &amp;#x26; 语言无关&lt;/h3&gt;&lt;a href=&quot;#3-diff-aware--语言无关&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3. Diff-Aware &amp;#x26; 语言无关”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;只分析改动文件，不挑语言，适合多语言微服务仓库。&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;4-cicd-零配置&quot;&gt;4. CI/CD 零配置&lt;/h3&gt;&lt;a href=&quot;#4-cicd-零配置&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “4. CI/CD 零配置”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;一段 YAML 就能跑：&lt;/p&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;yaml&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;- &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#111111&quot;&gt;uses&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;anthropics/claude-code-security-review@main&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#111111&quot;&gt;with&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;:&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#111111&quot;&gt;claude-api-key&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;${{ secrets.CLAUDE_API_KEY }}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#111111&quot;&gt;comment-pr&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#FF6A83;--1:#A24848&quot;&gt;true&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3 id=&quot;5-全景行业背书&quot;&gt;5. 全景行业背书&lt;/h3&gt;&lt;a href=&quot;#5-全景行业背书&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “5. 全景行业背书”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;VentureBeat、The New Stack 等媒体均指出，随着 AI 生成代码量激增，自动化安全审计已成刚需。这一 Action 正填补空缺。&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;三如何上手&quot;&gt;三、如何上手？&lt;/h2&gt;&lt;a href=&quot;#三如何上手&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “三、如何上手？”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3 id=&quot;1-github-actions-快速集成&quot;&gt;1. GitHub Actions 快速集成&lt;/h3&gt;&lt;a href=&quot;#1-github-actions-快速集成&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1. GitHub Actions 快速集成”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ol&gt;
+&lt;li&gt;在项目根目录新建 &lt;code dir=&quot;auto&quot;&gt;.github/workflows/security.yml&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;复制上方 YAML，并在仓库 Secrets 里添加 &lt;code dir=&quot;auto&quot;&gt;CLAUDE_API_KEY&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;提 PR 即可看到 Claude 自动评论漏洞详情 + 修复建议&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&amp;#x3C;空一行&gt;&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;2-本地-security-review-指令&quot;&gt;2. 本地 /security-review 指令&lt;/h3&gt;&lt;a href=&quot;#2-本地-security-review-指令&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2. 本地 /security-review 指令”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;在终端或 VS Code Claude Code 面板输入：&lt;/p&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;plaintext&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;/security-review&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;p&gt;即可对当前未提交改动执行同等级别审计，适合单人开发或离线场景。&lt;/p&gt;
+&lt;p&gt;&amp;#x3C;空一行&gt;&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;3-自定义规则&quot;&gt;3. 自定义规则&lt;/h3&gt;&lt;a href=&quot;#3-自定义规则&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3. 自定义规则”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;将仓库中的 &lt;code dir=&quot;auto&quot;&gt;security-review.md&lt;/code&gt; 复制到 &lt;code dir=&quot;auto&quot;&gt;.claude/commands/&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;编辑过滤规则或补充公司专属安全基线，比如禁止弱密码算法。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;四实战场景&quot;&gt;四、实战场景&lt;/h2&gt;&lt;a href=&quot;#四实战场景&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “四、实战场景”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;场景&lt;/th&gt;&lt;th&gt;触发方式&lt;/th&gt;&lt;th&gt;AI 发现的问题&lt;/th&gt;&lt;th&gt;结果&lt;/th&gt;&lt;th&gt;&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;内部工具新增本地 HTTP 服务&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;PR 合并前自动审计&lt;/td&gt;&lt;td&gt;DNS Rebinding → RCE&lt;/td&gt;&lt;td&gt;漏洞在合并前被修复&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;老项目重构&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;终端 &lt;code dir=&quot;auto&quot;&gt;/security-review&lt;/code&gt;&lt;/td&gt;&lt;td&gt;敏感日志泄露 + 弱加密 AES-ECB&lt;/td&gt;&lt;td&gt;一键生成加密/日志修复 Patch&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;多语言微服务仓库&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;每次 PR&lt;/td&gt;&lt;td&gt;Python 依赖投毒 + Node XSS&lt;/td&gt;&lt;td&gt;PR 评论列出漏洞 + npm audit fix 指令&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;五写在最后&quot;&gt;五、写在最后&lt;/h2&gt;&lt;a href=&quot;#五写在最后&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “五、写在最后”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;AI 写码快，&lt;strong&gt;AI 把关安全更要快&lt;/strong&gt;。把 claude-code-security-review 接入你的 DevSecOps 流水线，
+让每一行提交先过安全门，再进主干。下一个零日，也许就被你提前关在门外。&lt;/p&gt;&lt;!-- ---
+
+## 🚀 三组多语言标题 &amp; slug
+
+1. **写代码前先扫一遍！Claude Code Security Review，一键抓漏洞**
+
+   * EN: *Scan Before You Ship – Catch Bugs in One Click with Claude Code Security Review*
+   * 繁中: **寫程式前先掃！Claude Code Security Review 一鍵抓漏洞**
+   * 日: *コードを書く前にスキャン！Claude Code Security Review で脆弱性を一発検出*
+   * FR: *Scannez avant de publier : Claude Code Security Review traque les failles en un clic*
+   * ES: *¡Escanea antes de hacer merge! Claude Code Security Review detecta fallos al instante*
+   * PT: *Varra antes de subir – Claude Code Security Review acha brechas num clique*
+   * **slug**: `claude-code-security-review-intro`
+
+2. **自动安全审计上新：Claude 帮你盯漏洞**
+
+   * EN: *Auto Security Audit: Let Claude Watch Your Back*
+   * 其余语言同理
+   * **slug**: `auto-security-audit-claude`
+
+3. **DevSecOps 神器！在 PR 阶段消灭漏洞的正确姿势**
+
+   * EN: *DevSecOps Power Tool: Kill Bugs at PR Time*
+   * 其余语言同理
+   * **slug**: `devsecops-pr-vulnerability-killer`
+
+---
+
+## 💬 朋友圈评论（3 选 1）
+
+1. “合代码之前跑一遍 Claude，SQL 注入直接标红，真香！”
+2. “安全团队下班也不怕，Claude 帮我夜班审计 PR 😂”
+3. “CI 加一行 YAML，0 成本接入 AI 漏扫，老板都夸省钱”
+
+---
+
+觉得还不错吗？如果想了解更深或需要扩写细节，随时告诉我！
+
+[1]: https://github.com/anthropics/claude-code-security-review &quot;GitHub - anthropics/claude-code-security-review: An AI-powered security review GitHub Action using Claude to analyze code changes for security vulnerabilities.&quot;
+[2]: https://www.anthropic.com/news/automate-security-reviews-with-claude-code?utm_source=chatgpt.com &quot;Automate security reviews with Claude Code&quot;
+[3]: https://venturebeat.com/ai/anthropic-ships-automated-security-reviews-for-claude-code-as-ai-generated-vulnerabilities-surge/?utm_source=chatgpt.com &quot;Anthropic ships automated security reviews for Claude Code as AI-generated vulnerabilities surge&quot;
+[4]: https://www.reddit.com/r/ClaudeAI/comments/1mjc40q/claude_code_now_has_automated_security_reviews/?utm_source=chatgpt.com &quot;Claude Code now has Automated Security Reviews&quot;
+[5]: https://thenewstack.io/anthropic-adds-auto-security-reviews-to-claude-code/?utm_source=chatgpt.com &quot;Anthropic Adds Auto Security Reviews to Claude Code&quot;
+[6]: https://www.wired.com/story/ai-agents-are-getting-better-at-writing-code-and-hacking-it-as-well?utm_source=chatgpt.com &quot;AI Agents Are Getting Better at Writing Code-and Hacking It as Well&quot; --&gt;</content:encoded><category>AI Agent</category><category>Claude Code</category><category>security-review</category></item><item><title>编程、写作、图片和视频各领域推荐的海外 AI 产品服务</title><link>https://www.vibesparking.com/zh-cn/blog/ai/2025-08-03-overseas-ai-picks-by-domain/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/2025-08-03-overseas-ai-picks-by-domain/</guid><pubDate>Sun, 03 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # 海外各领域 AI 产品服务首选 --&gt;
 &lt;p&gt;如果要搞深度推理、多模态处理还有复杂代码，Gemini 2.5 Pro Deep Think 是最强的选手；
 要做全方位研究、自动整理信息产出报告，就选 ChatGPT Deep Research；
 想在终端里让 AI 帮你写、调试大项目代码，用 Claude Code 最稳；
@@ -1279,7 +1403,121 @@ HHS 在疫情期上线 &lt;strong&gt;Tiberius&lt;/strong&gt;（&lt;strong&gt;202
 [8]: https://developer.android.com/studio/gemini/overview?utm_source=chatgpt.com &quot;Gemini in Android Studio&quot;
 [9]: https://ai.google.dev/gemini-api/docs/pricing?utm_source=chatgpt.com &quot;Gemini Developer API Pricing | Gemini API | Google AI for ...&quot;
 [10]: https://developer.android.com/studio/releases?utm_source=chatgpt.com &quot;Android Studio Narwhal Feature Drop | 2025.1.2&quot;
-[11]: https://androidstudio.googleblog.com/2025/07/android-studio-narwhal-feature-drop_31.html?utm_source=chatgpt.com &quot;Android Studio Narwhal Feature Drop | 2025.1.2 now ...&quot; --&gt;</content:encoded><category>Android Studio</category><category>Gemini</category><category>AI Agent</category><category>Android</category><category>Google</category></item><item><title>Claude Code Cookbook 秘籍：自动化命令 + 多角色 + 智能 Hook</title><link>https://www.vibesparking.com/zh-cn/blog/ai/claude-code/2025-08-02-claude-code-cookbook-unlock-commands-roles-hooks/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/claude-code/2025-08-02-claude-code-cookbook-unlock-commands-roles-hooks/</guid><pubDate>Sat, 02 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # Claude Code Cookbook 带来一套系统化的开发工作流 --&gt;
+[11]: https://androidstudio.googleblog.com/2025/07/android-studio-narwhal-feature-drop_31.html?utm_source=chatgpt.com &quot;Android Studio Narwhal Feature Drop | 2025.1.2 now ...&quot; --&gt;</content:encoded><category>Android Studio</category><category>Gemini</category><category>AI Agent</category><category>Android</category><category>Google</category></item><item><title>从 Aider 到 Crush：开源 AI 代码助手</title><link>https://www.vibesparking.com/zh-cn/blog/ai/crush/2025-08-02-crush-open-source-coding-king/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/crush/2025-08-02-crush-open-source-coding-king/</guid><pubDate>Sat, 02 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # 从 Aider 到 Crush：开源 AI 代码助手 --&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Crush 是一款由 Charm 团队开源的 &lt;strong&gt;终端里「接好 LLM 就能陪你写代码」AI 代理&lt;/strong&gt;。它支持多家大模型、跨平台、会话记忆、LSP 语义补全、MCP 可扩展插件及细粒度安全控制；安装只需一个包管理器或 &lt;code dir=&quot;auto&quot;&gt;go install&lt;/code&gt; 即可；日常用法围绕「拿到 API-Key → 启动 → 写配置 → 一键切模型」。下面按公众号排版要求，带你 5 分钟摸透 Crush。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;p&gt;写代码的痛点不只是“写”，更多是 &lt;strong&gt;找文档、切上下文、调脚本&lt;/strong&gt;。
+Crush 宣称自己是“Your new coding bestie”——把这些碎活全包办，让你专注逻辑实现。
+不到一周就冲到 5k⭐，比肩 Aider、Cursor 的 CLI 竞争态势火热。&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;1-分钟知识卡片&quot;&gt;1 分钟知识卡片&lt;/h2&gt;&lt;a href=&quot;#1-分钟知识卡片&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1 分钟知识卡片”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;关键词&lt;/th&gt;&lt;th&gt;解释&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;LLM 热插拔&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;中途换模型，历史上下文不丢&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Session&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;项目级多会话，持久保存上下文&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;LSP&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;利用语言服务器拿到 AST，让回答更贴代码&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;MCP&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;自定义上下文源，HTTP/STDIO/SSE 三种插槽&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;.crushignore&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;类似 .gitignore，过滤不想暴露的文件&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;正文&quot;&gt;正文&lt;/h2&gt;&lt;a href=&quot;#正文&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “正文”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3 id=&quot;-核心亮点&quot;&gt;🚀 核心亮点&lt;/h3&gt;&lt;a href=&quot;#-核心亮点&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “🚀 核心亮点”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;1. 多模型一键切换&lt;/strong&gt;
+官方自带 Catwalk 模型库，涵盖 OpenAI、Anthropic、Gemini、Groq 等，还允许自定义 DeepSeek、Claude Sonnet 等配置。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2. 会话隔离 + 项目记忆&lt;/strong&gt;
+同一个项目可以开 N 个「聊天室」，测试脚本、重构和文档互不打扰，退出再进上下文仍在。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;3. LSP 语义上下文&lt;/strong&gt;
+Crush 会自动调用 &lt;code dir=&quot;auto&quot;&gt;gopls&lt;/code&gt;、&lt;code dir=&quot;auto&quot;&gt;typescript-language-server&lt;/code&gt; 等，给模型补充 AST 与类型信息，回答更走心。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;4. MCP 可插拔能力&lt;/strong&gt;
+想让模型读数据库、访问内网 API？写一个 MCP 服务丢进 &lt;code dir=&quot;auto&quot;&gt;mcp&lt;/code&gt; 字段，HTTP/STDIO/SSE 都行。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;5. Everywhere CLI&lt;/strong&gt;
+macOS、Linux、Windows/WSL 乃至 *BSD 一条命令就跑起来。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;6. 安全可控&lt;/strong&gt;
+默认任何 Shell 指令都会二次确认；也可在 &lt;code dir=&quot;auto&quot;&gt;permissions.allowed_tools&lt;/code&gt; 白名单放行，或暴力 &lt;code dir=&quot;auto&quot;&gt;--yolo&lt;/code&gt; 跳过提示（慎用）。&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;️-安装三板斧&quot;&gt;🛠️ 安装三板斧&lt;/h3&gt;&lt;a href=&quot;#️-安装三板斧&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “🛠️ 安装三板斧”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Homebrew&lt;/strong&gt;
+&lt;code dir=&quot;auto&quot;&gt;brew install charmbracelet/tap/crush&lt;/code&gt;
+&lt;strong&gt;npm&lt;/strong&gt;
+&lt;code dir=&quot;auto&quot;&gt;npm i -g @charmland/crush&lt;/code&gt;
+&lt;strong&gt;Go&lt;/strong&gt;
+&lt;code dir=&quot;auto&quot;&gt;go install github.com/charmbracelet/crush@latest&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;装完输入 &lt;code dir=&quot;auto&quot;&gt;crush&lt;/code&gt;，首次会提示粘贴 API-Key。支持 &lt;code dir=&quot;auto&quot;&gt;OPENAI_API_KEY&lt;/code&gt;、&lt;code dir=&quot;auto&quot;&gt;ANTHROPIC_API_KEY&lt;/code&gt; 等环境变量免输入。&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;️-快速上手步骤&quot;&gt;✏️ 快速上手步骤&lt;/h3&gt;&lt;a href=&quot;#️-快速上手步骤&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “✏️ 快速上手步骤”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;启动&lt;/strong&gt;&lt;/p&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;crush&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;p&gt;选择喜欢的模型，写句「Refactor this Go file」。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;项目配置&lt;/strong&gt;
+在仓库根中新建 &lt;code dir=&quot;auto&quot;&gt;.crush.json&lt;/code&gt;，示例：&lt;/p&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;json&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;{&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;$schema&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;https://charm.land/crush.json&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;lsp&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: { &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;go&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: { &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;command&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;gopls&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; } },&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;providers&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: { &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;deepseek&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: { &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;type&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;openai&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;, &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;base_url&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;...&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;, &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;api_key&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;$DEEPSEEK_API_KEY&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; } }&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;3. &lt;strong&gt;忽略杂物&lt;/strong&gt;
+&lt;code dir=&quot;auto&quot;&gt;.crushignore&lt;/code&gt; 里写 &lt;code dir=&quot;auto&quot;&gt;node_modules/&lt;/code&gt;，避免大模型扫无用文件。
+4. &lt;strong&gt;跟踪日志&lt;/strong&gt;
+&lt;code dir=&quot;auto&quot;&gt;crush logs --follow&lt;/code&gt; 实时看模型调用 &amp;#x26; 代价。&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;-进阶技巧&quot;&gt;🔮 进阶技巧&lt;/h3&gt;&lt;a href=&quot;#-进阶技巧&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “🔮 进阶技巧”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Session 魔法&lt;/strong&gt;：&lt;code dir=&quot;auto&quot;&gt;crush session new docs&lt;/code&gt; 专门写文档；&lt;code dir=&quot;auto&quot;&gt;crush session switch bugfix&lt;/code&gt; 回到调试现场。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;模型热插&lt;/strong&gt;：&lt;code dir=&quot;auto&quot;&gt;/model claude-3&lt;/code&gt;；回答风格立马切 Shakespeare。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;成本透明&lt;/strong&gt;：配置里可写 &lt;code dir=&quot;auto&quot;&gt;cost_per_1m_in/out&lt;/code&gt;，Crush 会估算每轮花费。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;开源社区活跃&lt;/strong&gt;：Issues 已有 100+ 讨论，PR 24h 内 merge，非常友好。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;对标 Aider/Cursor&lt;/strong&gt;：Det-Eng Weekly 点名它是 Windsurf/Cursor 的开源替代品，体验丝滑。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;结论&quot;&gt;结论&lt;/h2&gt;&lt;a href=&quot;#结论&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “结论”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Crush = &lt;strong&gt;终端 + LLM + 你的工具链&lt;/strong&gt; 的完美黏合剂。
+如果你习惯 tmux/vim 或 VS Code 内置终端，Crush 会让「写-跑-改」循环少敲无数命令。&lt;/p&gt;&lt;!-- **思考题**：
+
+&gt; 你最想用 Crush 接什么私有工具？在评论区聊聊！
+
+---
+
+## 朋友圈三连评
+
+1. “试了 Crush，终端秒变 Claude 贴身助理，写 Go 爽上天🚀”
+2. “Homebrew 安装 + 一行 API-Key，一杯咖啡读完文档就上手😎”
+3. “CLI 党狂喜：支持 LSP + 会话记忆，开源还能改源码，真香🔥”
+
+---
+
+*需要更细的配置示例或想看实战录像？在评论区告诉我！*
+
+[1]: https://github.com/charmbracelet/crush?utm_source=chatgpt.com &quot;charmbracelet/crush: The glamourous AI coding agent for ...&quot;
+[2]: https://www.detectionengineering.net/p/det-eng-weekly-122-i-stare-at-alerts?utm_source=chatgpt.com &quot;Det. Eng. Weekly #122 - I stare at alerts like an iPad kid&quot;
+[3]: https://github.com/charmbracelet/crush &quot;GitHub - charmbracelet/crush: The glamourous AI coding agent for your favourite terminal &quot;
+[4]: https://github.com/charmbracelet/catwalk?utm_source=chatgpt.com &quot;A collection of LLM inference providers and models - GitHub&quot;
+[5]: https://github.com/charmbracelet/crush/discussions?utm_source=chatgpt.com &quot;charmbracelet crush · Discussions - GitHub&quot; --&gt;</content:encoded><category>AI Agent</category><category>Crush</category><category>Aider</category></item><item><title>Claude Code Cookbook 秘籍：自动化命令 + 多角色 + 智能 Hook</title><link>https://www.vibesparking.com/zh-cn/blog/ai/claude-code/2025-08-02-claude-code-cookbook-unlock-commands-roles-hooks/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/claude-code/2025-08-02-claude-code-cookbook-unlock-commands-roles-hooks/</guid><pubDate>Sat, 02 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # Claude Code Cookbook 带来一套系统化的开发工作流 --&gt;
 &lt;p&gt;&lt;strong&gt;打造你专属的 Claude 编程操作系统&lt;/strong&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;div&gt;&lt;h2 id=&quot;引言&quot;&gt;💡引言&lt;/h2&gt;&lt;a href=&quot;#引言&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “💡引言”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
@@ -1394,121 +1632,7 @@ HHS 在疫情期上线 &lt;strong&gt;Tiberius&lt;/strong&gt;（&lt;strong&gt;202
 &lt;p&gt;📣 &lt;strong&gt;你最想定制什么命令给 Claude？&lt;/strong&gt;
 欢迎在评论区分享，一起打造更聪明的 Claude 助理！&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;如果你喜欢这类 AI 工具技巧，记得【在看 + 转发】给你搞技术的朋友！&lt;/p&gt;</content:encoded><category>AI Agent</category><category>Claude Code</category></item><item><title>从 Aider 到 Crush：开源 AI 代码助手</title><link>https://www.vibesparking.com/zh-cn/blog/ai/crush/2025-08-02-crush-open-source-coding-king/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/crush/2025-08-02-crush-open-source-coding-king/</guid><pubDate>Sat, 02 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # 从 Aider 到 Crush：开源 AI 代码助手 --&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Crush 是一款由 Charm 团队开源的 &lt;strong&gt;终端里「接好 LLM 就能陪你写代码」AI 代理&lt;/strong&gt;。它支持多家大模型、跨平台、会话记忆、LSP 语义补全、MCP 可扩展插件及细粒度安全控制；安装只需一个包管理器或 &lt;code dir=&quot;auto&quot;&gt;go install&lt;/code&gt; 即可；日常用法围绕「拿到 API-Key → 启动 → 写配置 → 一键切模型」。下面按公众号排版要求，带你 5 分钟摸透 Crush。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;p&gt;写代码的痛点不只是“写”，更多是 &lt;strong&gt;找文档、切上下文、调脚本&lt;/strong&gt;。
-Crush 宣称自己是“Your new coding bestie”——把这些碎活全包办，让你专注逻辑实现。
-不到一周就冲到 5k⭐，比肩 Aider、Cursor 的 CLI 竞争态势火热。&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;1-分钟知识卡片&quot;&gt;1 分钟知识卡片&lt;/h2&gt;&lt;a href=&quot;#1-分钟知识卡片&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1 分钟知识卡片”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;关键词&lt;/th&gt;&lt;th&gt;解释&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;LLM 热插拔&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;中途换模型，历史上下文不丢&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Session&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;项目级多会话，持久保存上下文&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;LSP&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;利用语言服务器拿到 AST，让回答更贴代码&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;MCP&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;自定义上下文源，HTTP/STDIO/SSE 三种插槽&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;.crushignore&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;类似 .gitignore，过滤不想暴露的文件&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;正文&quot;&gt;正文&lt;/h2&gt;&lt;a href=&quot;#正文&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “正文”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h3 id=&quot;-核心亮点&quot;&gt;🚀 核心亮点&lt;/h3&gt;&lt;a href=&quot;#-核心亮点&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “🚀 核心亮点”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;1. 多模型一键切换&lt;/strong&gt;
-官方自带 Catwalk 模型库，涵盖 OpenAI、Anthropic、Gemini、Groq 等，还允许自定义 DeepSeek、Claude Sonnet 等配置。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;2. 会话隔离 + 项目记忆&lt;/strong&gt;
-同一个项目可以开 N 个「聊天室」，测试脚本、重构和文档互不打扰，退出再进上下文仍在。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;3. LSP 语义上下文&lt;/strong&gt;
-Crush 会自动调用 &lt;code dir=&quot;auto&quot;&gt;gopls&lt;/code&gt;、&lt;code dir=&quot;auto&quot;&gt;typescript-language-server&lt;/code&gt; 等，给模型补充 AST 与类型信息，回答更走心。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;4. MCP 可插拔能力&lt;/strong&gt;
-想让模型读数据库、访问内网 API？写一个 MCP 服务丢进 &lt;code dir=&quot;auto&quot;&gt;mcp&lt;/code&gt; 字段，HTTP/STDIO/SSE 都行。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;5. Everywhere CLI&lt;/strong&gt;
-macOS、Linux、Windows/WSL 乃至 *BSD 一条命令就跑起来。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;6. 安全可控&lt;/strong&gt;
-默认任何 Shell 指令都会二次确认；也可在 &lt;code dir=&quot;auto&quot;&gt;permissions.allowed_tools&lt;/code&gt; 白名单放行，或暴力 &lt;code dir=&quot;auto&quot;&gt;--yolo&lt;/code&gt; 跳过提示（慎用）。&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;️-安装三板斧&quot;&gt;🛠️ 安装三板斧&lt;/h3&gt;&lt;a href=&quot;#️-安装三板斧&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “🛠️ 安装三板斧”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;Homebrew&lt;/strong&gt;
-&lt;code dir=&quot;auto&quot;&gt;brew install charmbracelet/tap/crush&lt;/code&gt;
-&lt;strong&gt;npm&lt;/strong&gt;
-&lt;code dir=&quot;auto&quot;&gt;npm i -g @charmland/crush&lt;/code&gt;
-&lt;strong&gt;Go&lt;/strong&gt;
-&lt;code dir=&quot;auto&quot;&gt;go install github.com/charmbracelet/crush@latest&lt;/code&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;装完输入 &lt;code dir=&quot;auto&quot;&gt;crush&lt;/code&gt;，首次会提示粘贴 API-Key。支持 &lt;code dir=&quot;auto&quot;&gt;OPENAI_API_KEY&lt;/code&gt;、&lt;code dir=&quot;auto&quot;&gt;ANTHROPIC_API_KEY&lt;/code&gt; 等环境变量免输入。&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;️-快速上手步骤&quot;&gt;✏️ 快速上手步骤&lt;/h3&gt;&lt;a href=&quot;#️-快速上手步骤&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “✏️ 快速上手步骤”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;启动&lt;/strong&gt;&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;crush&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;p&gt;选择喜欢的模型，写句「Refactor this Go file」。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;项目配置&lt;/strong&gt;
-在仓库根中新建 &lt;code dir=&quot;auto&quot;&gt;.crush.json&lt;/code&gt;，示例：&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;json&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;{&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;$schema&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;https://charm.land/crush.json&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;lsp&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: { &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;go&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: { &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;command&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;gopls&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; } },&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;providers&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: { &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;deepseek&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: { &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;type&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;openai&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;, &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;base_url&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;...&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;, &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;api_key&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;$DEEPSEEK_API_KEY&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; } }&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;3. &lt;strong&gt;忽略杂物&lt;/strong&gt;
-&lt;code dir=&quot;auto&quot;&gt;.crushignore&lt;/code&gt; 里写 &lt;code dir=&quot;auto&quot;&gt;node_modules/&lt;/code&gt;，避免大模型扫无用文件。
-4. &lt;strong&gt;跟踪日志&lt;/strong&gt;
-&lt;code dir=&quot;auto&quot;&gt;crush logs --follow&lt;/code&gt; 实时看模型调用 &amp;#x26; 代价。&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;-进阶技巧&quot;&gt;🔮 进阶技巧&lt;/h3&gt;&lt;a href=&quot;#-进阶技巧&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “🔮 进阶技巧”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Session 魔法&lt;/strong&gt;：&lt;code dir=&quot;auto&quot;&gt;crush session new docs&lt;/code&gt; 专门写文档；&lt;code dir=&quot;auto&quot;&gt;crush session switch bugfix&lt;/code&gt; 回到调试现场。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;模型热插&lt;/strong&gt;：&lt;code dir=&quot;auto&quot;&gt;/model claude-3&lt;/code&gt;；回答风格立马切 Shakespeare。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;成本透明&lt;/strong&gt;：配置里可写 &lt;code dir=&quot;auto&quot;&gt;cost_per_1m_in/out&lt;/code&gt;，Crush 会估算每轮花费。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;开源社区活跃&lt;/strong&gt;：Issues 已有 100+ 讨论，PR 24h 内 merge，非常友好。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;对标 Aider/Cursor&lt;/strong&gt;：Det-Eng Weekly 点名它是 Windsurf/Cursor 的开源替代品，体验丝滑。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;结论&quot;&gt;结论&lt;/h2&gt;&lt;a href=&quot;#结论&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “结论”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;Crush = &lt;strong&gt;终端 + LLM + 你的工具链&lt;/strong&gt; 的完美黏合剂。
-如果你习惯 tmux/vim 或 VS Code 内置终端，Crush 会让「写-跑-改」循环少敲无数命令。&lt;/p&gt;&lt;!-- **思考题**：
-
-&gt; 你最想用 Crush 接什么私有工具？在评论区聊聊！
-
----
-
-## 朋友圈三连评
-
-1. “试了 Crush，终端秒变 Claude 贴身助理，写 Go 爽上天🚀”
-2. “Homebrew 安装 + 一行 API-Key，一杯咖啡读完文档就上手😎”
-3. “CLI 党狂喜：支持 LSP + 会话记忆，开源还能改源码，真香🔥”
-
----
-
-*需要更细的配置示例或想看实战录像？在评论区告诉我！*
-
-[1]: https://github.com/charmbracelet/crush?utm_source=chatgpt.com &quot;charmbracelet/crush: The glamourous AI coding agent for ...&quot;
-[2]: https://www.detectionengineering.net/p/det-eng-weekly-122-i-stare-at-alerts?utm_source=chatgpt.com &quot;Det. Eng. Weekly #122 - I stare at alerts like an iPad kid&quot;
-[3]: https://github.com/charmbracelet/crush &quot;GitHub - charmbracelet/crush: The glamourous AI coding agent for your favourite terminal &quot;
-[4]: https://github.com/charmbracelet/catwalk?utm_source=chatgpt.com &quot;A collection of LLM inference providers and models - GitHub&quot;
-[5]: https://github.com/charmbracelet/crush/discussions?utm_source=chatgpt.com &quot;charmbracelet crush · Discussions - GitHub&quot; --&gt;</content:encoded><category>AI Agent</category><category>Crush</category><category>Aider</category></item><item><title>Claude Code 不写代码，用来管理我的日常生活</title><link>https://www.vibesparking.com/zh-cn/blog/ai/claude-code/2025-08-01-no-coding-needed-use-claude-code-to-run-your-daily-life/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/claude-code/2025-08-01-no-coding-needed-use-claude-code-to-run-your-daily-life/</guid><pubDate>Fri, 01 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # Claude Code 不写代码，用来管理我的日常生活 --&gt;
+&lt;p&gt;如果你喜欢这类 AI 工具技巧，记得【在看 + 转发】给你搞技术的朋友！&lt;/p&gt;</content:encoded><category>AI Agent</category><category>Claude Code</category></item><item><title>Claude Code 不写代码，用来管理我的日常生活</title><link>https://www.vibesparking.com/zh-cn/blog/ai/claude-code/2025-08-01-no-coding-needed-use-claude-code-to-run-your-daily-life/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/claude-code/2025-08-01-no-coding-needed-use-claude-code-to-run-your-daily-life/</guid><pubDate>Fri, 01 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # Claude Code 不写代码，用来管理我的日常生活 --&gt;
 &lt;p&gt;&lt;strong&gt;还在用 Claude Code 写代码？我已经用 Claude Code 管人生了。&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;这不是段子，我用 Claude Code 打造了一套“生活操作系统”，轻松管理日常、抓住灵感、追踪目标，连心理状态都照顾到了。&lt;/p&gt;
 &lt;p&gt;只要 10 分钟设置好，Claude 每天就能帮我完成很多琐碎但重要的事。&lt;/p&gt;
@@ -2110,141 +2234,7 @@ Opal 立刻生成“上传纪要 → Gemini 摘要 → 生成 todo → 输出邮
 [3]: https://www.infoq.com/news/2025/07/google-opal-ai/ &quot;Google Labs Introduces Opal, a Visual Platform for Creating AI Mini-Apps - InfoQ&quot;
 [4]: https://sdtimes.com/ai/googles-new-opal-tool-allows-users-to-create-mini-ai-apps-with-no-coding-required/?utm_source=chatgpt.com &quot;Google&apos;s new Opal tool allows users to create mini AI apps with no ...&quot;
 [5]: https://apix-drive.com/en/blog/news/google-launches-opal?utm_source=chatgpt.com &quot;Google Launches Opal: AI-Powered No-Code App Builder - Apix-Drive&quot;
-[6]: https://medium.com/%40ferreradaniel/new-google-opal-automation-tool-build-ai-mini-apps-instantly-without-coding-6596ed53d0fe &quot;NEW! Google Opal Automation Tool: Build AI Mini-Apps Instantly Without Coding | by Daniel Ferrera | Jul, 2025 | Medium&quot; --&gt;</content:encoded><category>AI</category><category>Google Opal</category><category>n8n</category><category>Dify</category><category>Coze</category></item><item><title>对标 v0／Lovable／Bolt：本地跑 Dyad AI 开发应用</title><link>https://www.vibesparking.com/zh-cn/blog/ai/vibe-coding/2025-07-31-dyad-local-ai-builder/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/vibe-coding/2025-07-31-dyad-local-ai-builder/</guid><pubDate>Thu, 31 Jul 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- 
-## 推荐标题
-
-* **中文**：
-  **《Dyad 上手指南：零成本、本地跑的 AI 全栈应用工厂》**
-* **英文**：
-  **“Build Anything Locally with Dyad – The Free Open-Source Alternative to v0 &amp; Replit”**
-* **Slug-URI**：`dyad-local-ai-builder` --&gt;
-&lt;hr&gt;&lt;!-- ## 引言：为什么又是「一行提示词造应用」？ --&gt;
-&lt;p&gt;还在为 v0／Lovable／Bolt 的额度、收费、网络延迟抓狂？&lt;strong&gt;Dyad 把同样的 AI 造 app 魔法直接搬到你电脑本地，免费、开源、无限制&lt;/strong&gt;。下载即用，不用注册账号，也没有云端锁定风险。今天这篇文章带你 10 分钟搞懂它的亮点、安装步骤与高阶玩法，让你的灵感马上落地。&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;一dyad-到底是什么&quot;&gt;一、Dyad 到底是什么？&lt;/h2&gt;&lt;a href=&quot;#一dyad-到底是什么&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “一、Dyad 到底是什么？”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;定位&lt;/strong&gt;：本地运行的 AI App Builder，与 v0、Lovable、Bolt 一样能「一句话生成前端 + 后端 + 数据库 + Auth」，但所有代码都存你机器里，私有、可控。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;社区热度&lt;/strong&gt;：GitHub 2.4k⭐、Product Hunt 4.9/5 评价，一周下载量破 10 万。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;目标用户&lt;/strong&gt;：想要快速验证点子、又对数据隐私和成本敏感的开发者 / 设计师 / 创业者。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;二核心卖点拆解&quot;&gt;二、核心卖点拆解&lt;/h2&gt;&lt;a href=&quot;#二核心卖点拆解&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “二、核心卖点拆解”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h3 id=&quot;1-100-本地&quot;&gt;1. 100% 本地&lt;/h3&gt;&lt;a href=&quot;#1-100-本地&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1. 100% 本地”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;运行在 macOS / Windows，可离线使用，避免云端延迟与合规担忧。&lt;/li&gt;
-&lt;li&gt;支持 &lt;strong&gt;Ollama 本地大模型&lt;/strong&gt;，CPU/GPU 跑得动就能完全离线生成代码。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h3 id=&quot;2-自带后端--数据库&quot;&gt;2. 自带后端 &amp;#x26; 数据库&lt;/h3&gt;&lt;a href=&quot;#2-自带后端--数据库&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2. 自带后端 &amp;#x26; 数据库”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;深度集成 &lt;strong&gt;Supabase&lt;/strong&gt;：一句「加登录」就生成 Auth、PostgreSQL 表和 Edge Functions。&lt;/li&gt;
-&lt;li&gt;RLS 默认开启，安全策略 AI 自动写好，你只需审核。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h3 id=&quot;3-任意-ai-模型自己带-key&quot;&gt;3. 任意 AI 模型，自己带 Key&lt;/h3&gt;&lt;a href=&quot;#3-任意-ai-模型自己带-key&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3. 任意 AI 模型，自己带 Key”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;内置 &lt;em&gt;Auto&lt;/em&gt; 智能调度，可按需切换 OpenAI、Gemini、Claude、OpenRouter 等模型；免费额度用完就换家供应商。&lt;/li&gt;
-&lt;li&gt;本地模型与云端模型无缝同屏对比，随时热切换。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h3 id=&quot;4-完整-devops-流程&quot;&gt;4. 完整 DevOps 流程&lt;/h3&gt;&lt;a href=&quot;#4-完整-devops-流程&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “4. 完整 DevOps 流程”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;一键推送 GitHub，Dyad 自动生成仓库并处理 Git 流程；进阶用户可继续用 Git CLI / Desktop)。&lt;/li&gt;
-&lt;li&gt;内置预览服务器，实时热更新，支持版本回滚、分支实验。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h3 id=&quot;5-永远免费--开源&quot;&gt;5. &lt;strong&gt;永远免费 + 开源&lt;/strong&gt;&lt;/h3&gt;&lt;a href=&quot;#5-永远免费--开源&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “5. 永远免费 + 开源”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;Apache-2.0 许可证，社区参与度高，问题响应快。&lt;/li&gt;
-&lt;li&gt;Pro / Max 付费仅加速 AI 调用，不限制核心功能。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;三5-步极速上手&quot;&gt;三、5 步极速上手&lt;/h2&gt;&lt;a href=&quot;#三5-步极速上手&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “三、5 步极速上手”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;步骤&lt;/th&gt;&lt;th&gt;操作&lt;/th&gt;&lt;th&gt;提示语示例&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;① 下载&lt;/td&gt;&lt;td&gt;官网选择 v0.14 稳定版，Mac/Win 双击即装&lt;/td&gt;&lt;td&gt;&lt;em&gt;[配图：下载按钮]&lt;/em&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;② 安装 Node.js&lt;/td&gt;&lt;td&gt;未安装会在首页 banner 提醒，点击跳转&lt;/td&gt;&lt;td&gt;n/a&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;③ 填 API Key&lt;/td&gt;&lt;td&gt;推荐先用 &lt;strong&gt;Gemini&lt;/strong&gt; 免费 250 条/天额度&lt;/td&gt;&lt;td&gt;在设置里粘贴 Key&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;④ 新建 App&lt;/td&gt;&lt;td&gt;聊天框输入「做一个待办清单支持拖拽排序」&lt;/td&gt;&lt;td&gt;“Build a Kanban todo app”&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;⑤ 审核 &amp;#x26; 预览&lt;/td&gt;&lt;td&gt;AI 生成代码 → 点击 &lt;em&gt;Approve&lt;/em&gt; → 右侧实时预览&lt;/td&gt;&lt;td&gt;&lt;em&gt;[配图：预览界面]&lt;/em&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;300 字配图&lt;/strong&gt;：可截屏安装界面 + 预览窗口&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;四高阶玩法把-mvp-直接做完&quot;&gt;四、高阶玩法：把 MVP 直接做完&lt;/h2&gt;&lt;a href=&quot;#四高阶玩法把-mvp-直接做完&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “四、高阶玩法：把 MVP 直接做完”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h3 id=&quot;1-连上-supabase后端无痛上线&quot;&gt;1. 连上 Supabase，后端无痛上线&lt;/h3&gt;&lt;a href=&quot;#1-连上-supabase后端无痛上线&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1. 连上 Supabase，后端无痛上线”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;只需在聊天窗口说「接 Supabase 并加邮箱登录」→ 浏览器弹窗授权 → 回到 Dyad 即完成链接。此时数据库表、Auth、Server Functions 都已就绪。&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;2-github-同步--cicd&quot;&gt;2. GitHub 同步 &amp;#x26; CI/CD&lt;/h3&gt;&lt;a href=&quot;#2-github-同步--cicd&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2. GitHub 同步 &amp;#x26; CI/CD”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;进入 &lt;em&gt;App Details → Sync to GitHub&lt;/em&gt;，Dyad 会自动 push 并生成 Public/Private Repo。发布到 Vercel 的教程在 &lt;em&gt;Publishing your App&lt;/em&gt; 页面里一步步跟着走即可)。&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;3-切换混用模型&quot;&gt;3. 切换/混用模型&lt;/h3&gt;&lt;a href=&quot;#3-切换混用模型&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3. 切换/混用模型”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;在右上角模型下拉中选择 &lt;em&gt;Claude-Sonnet&lt;/em&gt;、&lt;em&gt;GPT-4.1&lt;/em&gt; 或本地 &lt;em&gt;Ollama/Llama-3&lt;/em&gt;，观察 UI 与代码质量差异。不同模型互补，复杂项目常用双模型 AB 测试。&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;4-与-v0--bolt--replit-差异&quot;&gt;4. 与 v0 / Bolt / Replit 差异&lt;/h3&gt;&lt;a href=&quot;#4-与-v0--bolt--replit-差异&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “4. 与 v0 / Bolt / Replit 差异”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;维度&lt;/th&gt;&lt;th&gt;Dyad&lt;/th&gt;&lt;th&gt;v0 / Lovable / Bolt / Replit&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;部署&lt;/td&gt;&lt;td&gt;&lt;strong&gt;本地+可云&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;纯云端&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;私密性&lt;/td&gt;&lt;td&gt;代码不出机器&lt;/td&gt;&lt;td&gt;需上传&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;成本&lt;/td&gt;&lt;td&gt;免费不限流&lt;/td&gt;&lt;td&gt;额度或订阅费&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;后端&lt;/td&gt;&lt;td&gt;Supabase 一键整合&lt;/td&gt;&lt;td&gt;多数只管前端&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;模型&lt;/td&gt;&lt;td&gt;BYOK / Local&lt;/td&gt;&lt;td&gt;固定供应商&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
-&lt;p&gt;详细对比见官方 Comparison 文档，社区帖子也认可 “Dyad = 无锁定版 v0”。&lt;/p&gt;
-&lt;hr&gt;&lt;!-- ## 结语：把控制权拿回来 --&gt;
-&lt;p&gt;在 AI 生产力井喷的 2025，下一个爆款应用可能只差一条 prompt。&lt;strong&gt;Dyad 把大厂才有的端到端开发体验塞进桌面应用&lt;/strong&gt;，重新把速度、隐私、成本交还给个人开发者。
-如果你也想试试「一句话造产品」的爽感，现在就下载，实现你的灵感！&lt;/p&gt;</content:encoded><category>Dyad</category><category>AI Agent</category><category>Vibe Coding</category><category>V0</category><category>Lovable</category><category>Bolt</category></item><item><title>Prompt Optimizer 提示词优化器：让 AI 指令一键“开挂”</title><link>https://www.vibesparking.com/zh-cn/blog/ai/prompt-engineering/2025-07-31-prompt-optimizer-review/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/prompt-engineering/2025-07-31-prompt-optimizer-review/</guid><pubDate>Thu, 31 Jul 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- **推荐标题**
+[6]: https://medium.com/%40ferreradaniel/new-google-opal-automation-tool-build-ai-mini-apps-instantly-without-coding-6596ed53d0fe &quot;NEW! Google Opal Automation Tool: Build AI Mini-Apps Instantly Without Coding | by Daniel Ferrera | Jul, 2025 | Medium&quot; --&gt;</content:encoded><category>AI</category><category>Google Opal</category><category>n8n</category><category>Dify</category><category>Coze</category></item><item><title>Prompt Optimizer 提示词优化器：让 AI 指令一键“开挂”</title><link>https://www.vibesparking.com/zh-cn/blog/ai/prompt-engineering/2025-07-31-prompt-optimizer-review/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/prompt-engineering/2025-07-31-prompt-optimizer-review/</guid><pubDate>Thu, 31 Jul 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- **推荐标题**
 
 * **中文**：Prompt Optimizer 提示词优化器：让 AI 指令一键“开挂”
 * **English**: Prompt Optimizer – One-Click Boost for Better AI Prompts

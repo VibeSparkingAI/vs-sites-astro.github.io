@@ -835,7 +835,124 @@ Do you find my analysis clear? Are there other dimensions of analysis you&apos;d
 [6]: https://www.barrons.com/articles/amazon-stock-earnings-cloud-ai-spending-38416183?utm_source=chatgpt.com &quot;The Mag 7&apos;s Strength Just Became a Weakness&quot;
 [7]: https://www.marketsandmarkets.com/Market-Reports/data-center-gpu-market-18997435.html?utm_source=chatgpt.com &quot;Data Center GPU Market Size, Share &amp; Trends, 2025 To ...&quot;
 [8]: https://iot-analytics.com/leading-generative-ai-companies/?utm_source=chatgpt.com &quot;The leading generative AI companies&quot;
-[9]: https://www.ft.com/content/2ba1d064-242d-4a2a-a381-374d9643e23a?utm_source=chatgpt.com &quot;Nvidia seeks to build its business beyond Big Tech&quot; --&gt;</content:encoded><category>Nvidia</category><category>Cloud Computing</category><category>AI Infrastructure</category><category>AWS</category><category>Google Cloud</category><category>Microsoft Azure</category></item><item><title>Top International AI Products and Services by Domain</title><link>https://www.vibesparking.com/en/blog/ai/2025-08-03-overseas-ai-picks-by-domain/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/2025-08-03-overseas-ai-picks-by-domain/</guid><pubDate>Sun, 03 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- #Top International AI Products and Services by Domain --&gt;
+[9]: https://www.ft.com/content/2ba1d064-242d-4a2a-a381-374d9643e23a?utm_source=chatgpt.com &quot;Nvidia seeks to build its business beyond Big Tech&quot; --&gt;</content:encoded><category>Nvidia</category><category>Cloud Computing</category><category>AI Infrastructure</category><category>AWS</category><category>Google Cloud</category><category>Microsoft Azure</category></item><item><title>Claude Code Security Review: Your AI Security Watchdog</title><link>https://www.vibesparking.com/en/blog/ai/claude-code/commands/2025-08-07-claude-code-security-review-intro/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/claude-code/commands/2025-08-07-claude-code-security-review-intro/</guid><pubDate>Mon, 04 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;strong&gt;Claude Code Security Review: Making Security Audits as Easy as Writing Commands&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Claude Code’s newly released &lt;strong&gt;claude-code-security-review&lt;/strong&gt; integrates Anthropic Claude’s large language model reasoning capabilities directly into GitHub Actions and terminal commands. It can analyze diffs during pull request (PR) stages to identify high-risk vulnerabilities like SQL injection, XSS, and authorization bypasses, while automatically filtering out low-value noise. You can even scan locally with a simple &lt;code dir=&quot;auto&quot;&gt;/security-review&lt;/code&gt; command. Your code’s potential vulnerabilities are flagged by AI before it even gets merged.&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;1-what-is-claude-code-security-review&quot;&gt;1. What is Claude Code Security Review?&lt;/h2&gt;&lt;a href=&quot;#1-what-is-claude-code-security-review&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1. What is Claude Code Security Review?”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;AI-Powered Security Auditing&lt;/strong&gt;: Leverages Claude’s deep semantic understanding to go beyond regex matching and directly comprehend code intent.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;GitHub Action Integration&lt;/strong&gt;: Automatically triggers on PR opens or syncs, posting vulnerability findings directly to specific code lines.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Terminal Slash Commands&lt;/strong&gt;: Enter &lt;code dir=&quot;auto&quot;&gt;/security-review&lt;/code&gt; in Claude Code for the same scanning capabilities to run instantly offline.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;2-core-highlights&quot;&gt;2. Core Highlights&lt;/h2&gt;&lt;a href=&quot;#2-core-highlights&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2. Core Highlights”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3 id=&quot;1-high-signal-to-noise-results&quot;&gt;1. High Signal-to-Noise Results&lt;/h3&gt;&lt;a href=&quot;#1-high-signal-to-noise-results&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1. High Signal-to-Noise Results”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Built-in &lt;strong&gt;False Positive Filtering&lt;/strong&gt; automatically screens out low-risk alerts like DoS, resource exhaustion, and input validation with no actual impact, surfacing only the truly critical vulnerabilities.&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;2-semantic-level-vulnerability-detection&quot;&gt;2. Semantic-Level Vulnerability Detection&lt;/h3&gt;&lt;a href=&quot;#2-semantic-level-vulnerability-detection&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2. Semantic-Level Vulnerability Detection”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Identifies 10 major categories of issues including injection attacks, authentication flaws, hardcoded secrets, weak encryption, and business logic race conditions.&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;3-diff-aware--language-agnostic&quot;&gt;3. Diff-Aware &amp;#x26; Language Agnostic&lt;/h3&gt;&lt;a href=&quot;#3-diff-aware--language-agnostic&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3. Diff-Aware &amp;#x26; Language Agnostic”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Only analyzes changed files, supports any programming language, making it ideal for multi-language microservice repositories.&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;4-zero-configuration-cicd&quot;&gt;4. Zero-Configuration CI/CD&lt;/h3&gt;&lt;a href=&quot;#4-zero-configuration-cicd&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “4. Zero-Configuration CI/CD”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Just one YAML snippet gets you running:&lt;/p&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;yaml&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;- &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#111111&quot;&gt;uses&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;anthropics/claude-code-security-review@main&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#111111&quot;&gt;with&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;:&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#111111&quot;&gt;claude-api-key&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;${{ secrets.CLAUDE_API_KEY }}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#111111&quot;&gt;comment-pr&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#FF6A83;--1:#A24848&quot;&gt;true&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3 id=&quot;5-industry-wide-recognition&quot;&gt;5. Industry-Wide Recognition&lt;/h3&gt;&lt;a href=&quot;#5-industry-wide-recognition&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “5. Industry-Wide Recognition”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Publications like VentureBeat and The New Stack have noted that as AI-generated code volume surges, automated security auditing has become essential. This Action fills that critical gap.&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;3-getting-started&quot;&gt;3. Getting Started&lt;/h2&gt;&lt;a href=&quot;#3-getting-started&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3. Getting Started”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3 id=&quot;1-quick-github-actions-integration&quot;&gt;1. Quick GitHub Actions Integration&lt;/h3&gt;&lt;a href=&quot;#1-quick-github-actions-integration&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1. Quick GitHub Actions Integration”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ol&gt;
+&lt;li&gt;Create &lt;code dir=&quot;auto&quot;&gt;.github/workflows/security.yml&lt;/code&gt; in your project root&lt;/li&gt;
+&lt;li&gt;Copy the YAML above and add &lt;code dir=&quot;auto&quot;&gt;CLAUDE_API_KEY&lt;/code&gt; to your repository Secrets&lt;/li&gt;
+&lt;li&gt;Submit a PR to see Claude automatically comment with vulnerability details + fix suggestions&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div&gt;&lt;h3 id=&quot;2-local-security-review-command&quot;&gt;2. Local /security-review Command&lt;/h3&gt;&lt;a href=&quot;#2-local-security-review-command&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2. Local /security-review Command”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;In your terminal or VS Code Claude Code panel, enter:&lt;/p&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;plaintext&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;/security-review&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;p&gt;This executes the same level of auditing on your current uncommitted changes, perfect for solo development or offline scenarios.&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;3-custom-rules&quot;&gt;3. Custom Rules&lt;/h3&gt;&lt;a href=&quot;#3-custom-rules&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3. Custom Rules”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;Copy &lt;code dir=&quot;auto&quot;&gt;security-review.md&lt;/code&gt; from the repository to &lt;code dir=&quot;auto&quot;&gt;.claude/commands/&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Edit filtering rules or add company-specific security baselines, such as prohibiting weak password algorithms.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;4-real-world-scenarios&quot;&gt;4. Real-World Scenarios&lt;/h2&gt;&lt;a href=&quot;#4-real-world-scenarios&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “4. Real-World Scenarios”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Scenario&lt;/th&gt;&lt;th&gt;Trigger Method&lt;/th&gt;&lt;th&gt;AI-Discovered Issues&lt;/th&gt;&lt;th&gt;Outcome&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Internal Tool Adding Local HTTP Service&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Automated audit before PR merge&lt;/td&gt;&lt;td&gt;DNS Rebinding → RCE&lt;/td&gt;&lt;td&gt;Vulnerability fixed before merge&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Legacy Project Refactoring&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Terminal &lt;code dir=&quot;auto&quot;&gt;/security-review&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Sensitive log leakage + weak AES-ECB encryption&lt;/td&gt;&lt;td&gt;One-click generation of encryption/log fix patches&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Multi-Language Microservice Repo&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Every PR&lt;/td&gt;&lt;td&gt;Python dependency poisoning + Node XSS&lt;/td&gt;&lt;td&gt;PR comments list vulnerabilities + npm audit fix commands&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;5-final-thoughts&quot;&gt;5. Final Thoughts&lt;/h2&gt;&lt;a href=&quot;#5-final-thoughts&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “5. Final Thoughts”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;AI writes code fast, &lt;strong&gt;but AI must guard security even faster&lt;/strong&gt;. Integrate claude-code-security-review into your DevSecOps pipeline to ensure every line of code passes through security gates before entering the main branch. The next zero-day might just be the one you keep out.&lt;/p&gt;&lt;!-- ---
+
+## 🚀 Three Sets of Multi-Language Titles &amp; Slugs
+
+1. **Scan Before You Code! Claude Code Security Review Catches Bugs in One Click**
+
+   * EN: *Scan Before You Ship – Catch Bugs in One Click with Claude Code Security Review*
+   * 繁中: **寫程式前先掃！Claude Code Security Review 一鍵抓漏洞**
+   * 日: *コードを書く前にスキャン！Claude Code Security Review で脆弱性を一発検出*
+   * FR: *Scannez avant de publier : Claude Code Security Review traque les failles en un clic*
+   * ES: *¡Escanea antes de hacer merge! Claude Code Security Review detecta fallos al instante*
+   * PT: *Varra antes de subir – Claude Code Security Review acha brechas num clique*
+   * **slug**: `claude-code-security-review-intro`
+
+2. **Auto Security Audit Update: Claude Watches Your Back**
+
+   * EN: *Auto Security Audit: Let Claude Watch Your Back*
+   * Other languages follow similarly
+   * **slug**: `auto-security-audit-claude`
+
+3. **DevSecOps Power Tool! The Right Way to Kill Bugs at PR Time**
+
+   * EN: *DevSecOps Power Tool: Kill Bugs at PR Time*
+   * Other languages follow similarly
+   * **slug**: `devsecops-pr-vulnerability-killer`
+
+---
+
+## 💬 Social Media Comments (Pick 1 of 3)
+
+1. &quot;Run Claude before merging code, SQL injection gets flagged red immediately, so satisfying!&quot;
+2. &quot;Security team can go home without worry, Claude helps me audit PRs on night shift 😂&quot;
+3. &quot;Add one YAML line to CI, zero-cost AI vulnerability scanning integration, even the boss praises the cost savings&quot;
+
+---
+
+Think this looks good? If you want to learn more or need detailed expansions, just let me know!
+
+[1]: https://github.com/anthropics/claude-code-security-review &quot;GitHub - anthropics/claude-code-security-review: An AI-powered security review GitHub Action using Claude to analyze code changes for security vulnerabilities.&quot;
+[2]: https://www.anthropic.com/news/automate-security-reviews-with-claude-code?utm_source=chatgpt.com &quot;Automate security reviews with Claude Code&quot;
+[3]: https://venturebeat.com/ai/anthropic-ships-automated-security-reviews-for-claude-code-as-ai-generated-vulnerabilities-surge/?utm_source=chatgpt.com &quot;Anthropic ships automated security reviews for Claude Code as AI-generated vulnerabilities surge&quot;
+[4]: https://www.reddit.com/r/ClaudeAI/comments/1mjc40q/claude_code_now_has_automated_security_reviews/?utm_source=chatgpt.com &quot;Claude Code now has Automated Security Reviews&quot;
+[5]: https://thenewstack.io/anthropic-adds-auto-security-reviews-to-claude-code/?utm_source=chatgpt.com &quot;Anthropic Adds Auto Security Reviews to Claude Code&quot;
+[6]: https://www.wired.com/story/ai-agents-are-getting-better-at-writing-code-and-hacking-it-as-well?utm_source=chatgpt.com &quot;AI Agents Are Getting Better at Writing Code-and Hacking It as Well&quot; --&gt;</content:encoded><category>AI Agent</category><category>Claude Code</category><category>security-review</category></item><item><title>Top International AI Products and Services by Domain</title><link>https://www.vibesparking.com/en/blog/ai/2025-08-03-overseas-ai-picks-by-domain/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/2025-08-03-overseas-ai-picks-by-domain/</guid><pubDate>Sun, 03 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- #Top International AI Products and Services by Domain --&gt;
 &lt;p&gt;For deep reasoning, multimodal processing, and complex coding, Gemini 2.5 Pro Deep Think is the strongest contender;
 For comprehensive research and automated information synthesis into reports, choose ChatGPT Deep Research;
 For terminal-based AI assistance with writing and debugging large project codebases, Claude Code is your most reliable choice;
@@ -1270,122 +1387,7 @@ Open &lt;strong&gt;Prompt Library → Rules&lt;/strong&gt;, write down your proj
 &lt;div&gt;&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;&lt;a href=&quot;#conclusion&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Conclusion”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
 &lt;p&gt;&lt;strong&gt;Agent Mode isn’t just an “intelligent dialog box”—it’s a full-stack teammate that can modify code, run scripts, and write tests.&lt;/strong&gt;
 It transforms Android Studio into a truly AI-powered IDE.&lt;/p&gt;
-&lt;p&gt;👉 &lt;strong&gt;What will you have the Agent help you with first?&lt;/strong&gt; Writing unit tests? Refactoring legacy modules? Share your thoughts in the comments—maybe the next article will break down your use case!&lt;/p&gt;</content:encoded><category>Android Studio</category><category>Gemini</category><category>AI Agent</category><category>Android</category><category>Google</category></item><item><title>Claude Code Cookbook: Automated Commands + Multi-Role System + Intelligent Hooks</title><link>https://www.vibesparking.com/en/blog/ai/claude-code/2025-08-02-claude-code-cookbook-unlock-commands-roles-hooks/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/claude-code/2025-08-02-claude-code-cookbook-unlock-commands-roles-hooks/</guid><pubDate>Sat, 02 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # Claude Code Cookbook brings a systematic development workflow --&gt;
-&lt;p&gt;&lt;strong&gt;Build Your Personal Claude Programming Operating System&lt;/strong&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;-introduction&quot;&gt;💡 Introduction&lt;/h2&gt;&lt;a href=&quot;#-introduction&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “💡 Introduction”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;Many people use Claude Code for programming, but have you ever felt that:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Despite Claude being powerful, you always have to guide it step by step&lt;/li&gt;
-&lt;li&gt;Every time you need testing, documentation updates, or PR generation, you have to remind it manually&lt;/li&gt;
-&lt;li&gt;Role switching becomes chaotic and actually reduces efficiency instead of improving it&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Recently, Japanese engineer &lt;a href=&quot;https://github.com/wasabeef&quot;&gt;@wasabeef&lt;/a&gt; released an incredible project — &lt;a href=&quot;https://github.com/wasabeef/claude-code-cookbook&quot;&gt;claude-code-cookbook&lt;/a&gt;,
-&lt;strong&gt;transforming Claude Code into an “automated development assistant” that works fast, provides accurate feedback, and thinks clearly.&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;This isn’t just another prompt template collection, but Claude’s “extended operating system.”&lt;/p&gt;
-&lt;p&gt;👇 I’ve been testing it for several days and it’s absolutely impressive. Highly recommended for anyone using Claude for development projects!&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;-three-core-features-unlocking-claudes-hidden-capabilities&quot;&gt;🔧 Three Core Features: Unlocking Claude’s Hidden Capabilities&lt;/h2&gt;&lt;a href=&quot;#-three-core-features-unlocking-claudes-hidden-capabilities&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “🔧 Three Core Features: Unlocking Claude’s Hidden Capabilities”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h3 id=&quot;-1-commands-make-claude-follow-your-instructions&quot;&gt;🧾 1. Commands: Make Claude Follow Your Instructions&lt;/h3&gt;&lt;a href=&quot;#-1-commands-make-claude-follow-your-instructions&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “🧾 1. Commands: Make Claude Follow Your Instructions”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;Simply type &lt;code dir=&quot;auto&quot;&gt;/command-name&lt;/code&gt; and Claude will execute the corresponding task.&lt;/p&gt;
-&lt;p&gt;For example:&lt;/p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Command&lt;/th&gt;&lt;th&gt;Function&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;code dir=&quot;auto&quot;&gt;/explain-code&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Automatically explain code logic&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code dir=&quot;auto&quot;&gt;/fix-error&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Generate fixes based on errors&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code dir=&quot;auto&quot;&gt;/commit-message&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Auto-write Git commit messages&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code dir=&quot;auto&quot;&gt;/pr-create&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Auto-generate PR content&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code dir=&quot;auto&quot;&gt;/check-prompt&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Help optimize your prompts&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code dir=&quot;auto&quot;&gt;/semantic-commit&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Semantic commits for better version control&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
-&lt;p&gt;These commands alone can eliminate countless repetitive conversations.&lt;/p&gt;
-&lt;p&gt;💡 Each command is essentially a Markdown file that supports custom extensions—just place them in the &lt;code dir=&quot;auto&quot;&gt;commands/&lt;/code&gt; directory.&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h3 id=&quot;-2-roles-multi-role-switching-claude-as-professional-consultant&quot;&gt;🎭 2. Roles: Multi-Role Switching, Claude as Professional Consultant&lt;/h3&gt;&lt;a href=&quot;#-2-roles-multi-role-switching-claude-as-professional-consultant&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “🎭 2. Roles: Multi-Role Switching, Claude as Professional Consultant”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;Claude supports switching between different roles like “sub-personalities,” such as:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;/role qa&lt;/code&gt; Test Engineer&lt;/li&gt;
-&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;/role mobile&lt;/code&gt; Mobile Development Expert&lt;/li&gt;
-&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;/role security&lt;/code&gt; Security Consultant&lt;/li&gt;
-&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;/role architect&lt;/code&gt; System Architect&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;🌟 The highlight: supports concurrent execution!&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;/role&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;performance&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;--agent&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;/role&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;security&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;--agent&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;p&gt;Claude will simultaneously launch multiple roles for &lt;strong&gt;parallel analysis&lt;/strong&gt; and provide unified recommendations.
-This is incredibly useful for large project reviews and design assessments.&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h3 id=&quot;-3-hooks-automated-scripts-for-maximum-development-experience&quot;&gt;⛓ 3. Hooks: Automated Scripts for Maximum Development Experience&lt;/h3&gt;&lt;a href=&quot;#-3-hooks-automated-scripts-for-maximum-development-experience&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “⛓ 3. Hooks: Automated Scripts for Maximum Development Experience”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;You can set up script hooks that run automatically at specific moments.&lt;/p&gt;
-&lt;p&gt;For example:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;check-ai-commit.sh&lt;/code&gt;: Prevents AI signatures from appearing in Git commits&lt;/li&gt;
-&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;preserve-file-permissions.sh&lt;/code&gt;: Automatically saves/restores file permissions&lt;/li&gt;
-&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;auto-comment.sh&lt;/code&gt;: Prompts to add docstring comments&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Even thoughtful touches like “task completion notifications” are included:&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;osascript&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; (macOS &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;notification&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;script&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;p&gt;In short, &lt;strong&gt;Claude truly becomes a reliable partner that handles chores, provides reminders, and writes code.&lt;/strong&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;-complete-project-automation-workflow&quot;&gt;🧪 Complete Project Automation Workflow&lt;/h2&gt;&lt;a href=&quot;#-complete-project-automation-workflow&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “🧪 Complete Project Automation Workflow”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;👇 The project includes a comprehensive development workflow diagram, from task identification to CI status tracking, all seamlessly integrated:&lt;/p&gt;
-
-&lt;p&gt;You can even follow this logic to customize your team’s “Claude development pipeline.”&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;-how-to-use&quot;&gt;🚀 How to Use?&lt;/h2&gt;&lt;a href=&quot;#-how-to-use&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “🚀 How to Use?”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h3 id=&quot;installation-and-configuration-are-super-simple&quot;&gt;Installation and Configuration Are Super Simple:&lt;/h3&gt;&lt;a href=&quot;#installation-and-configuration-are-super-simple&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Installation and Configuration Are Super Simple:”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;Clone the repository:&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;git&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;clone&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;https://github.com/wasabeef/claude-code-cookbook.git&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;~/.claude&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Set the path in Claude client&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Modify &lt;code dir=&quot;auto&quot;&gt;settings.json&lt;/code&gt; to mount hooks and extend commands&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;🛠 Adding custom commands and roles simply requires writing &lt;code dir=&quot;auto&quot;&gt;.md&lt;/code&gt; files in the corresponding folders—very easy to get started.&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;-summary-transform-claude-into-your-engineering-co-pilot&quot;&gt;🧠 Summary: Transform Claude into Your Engineering Co-Pilot&lt;/h2&gt;&lt;a href=&quot;#-summary-transform-claude-into-your-engineering-co-pilot&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “🧠 Summary: Transform Claude into Your Engineering Co-Pilot”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;Claude Code Cookbook brings a &lt;strong&gt;systematic development workflow&lt;/strong&gt; that enables you to:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Efficiently organize&lt;/strong&gt; project tasks with Claude automatically following up&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Freely switch&lt;/strong&gt; between professional roles to handle different work scenarios&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Automate scripts&lt;/strong&gt; to completely free your hands&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;For everyone doing serious development with Claude, this is a game-changing tool for boosting efficiency and professionalism.&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;📣 &lt;strong&gt;What commands would you most like to customize for Claude?&lt;/strong&gt;
-Feel free to share in the comments and let’s build smarter Claude assistants together!&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;If you enjoy these AI tool tips, remember to share with your tech-savvy friends!&lt;/p&gt;</content:encoded><category>AI Agent</category><category>Claude Code</category></item><item><title>From Aider to Crush: Open Source AI Coding Assistants</title><link>https://www.vibesparking.com/en/blog/ai/crush/2025-08-02-crush-open-source-coding-king/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/crush/2025-08-02-crush-open-source-coding-king/</guid><pubDate>Sat, 02 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # From Aider to Crush: Open Source AI Coding Assistants --&gt;
+&lt;p&gt;👉 &lt;strong&gt;What will you have the Agent help you with first?&lt;/strong&gt; Writing unit tests? Refactoring legacy modules? Share your thoughts in the comments—maybe the next article will break down your use case!&lt;/p&gt;</content:encoded><category>Android Studio</category><category>Gemini</category><category>AI Agent</category><category>Android</category><category>Google</category></item><item><title>From Aider to Crush: Open Source AI Coding Assistants</title><link>https://www.vibesparking.com/en/blog/ai/crush/2025-08-02-crush-open-source-coding-king/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/crush/2025-08-02-crush-open-source-coding-king/</guid><pubDate>Sat, 02 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # From Aider to Crush: Open Source AI Coding Assistants --&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Crush is an open-source &lt;strong&gt;terminal-based “plug-in-LLM-and-code-with-you” AI agent&lt;/strong&gt; created by the Charm team. It supports multiple large language models, cross-platform compatibility, conversation memory, LSP semantic completion, extensible MCP plugins, and fine-grained security controls. Installation requires just one package manager command or &lt;code dir=&quot;auto&quot;&gt;go install&lt;/code&gt;. Daily usage revolves around “get API key → launch → write config → switch models with one click.” Following our publication format, here’s your 5-minute deep dive into Crush.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -1503,7 +1505,122 @@ If you’re used to tmux/vim or VS Code’s integrated terminal, Crush will save
 [2]: https://www.detectionengineering.net/p/det-eng-weekly-122-i-stare-at-alerts?utm_source=chatgpt.com &quot;Det. Eng. Weekly #122 - I stare at alerts like an iPad kid&quot;
 [3]: https://github.com/charmbracelet/crush &quot;GitHub - charmbracelet/crush: The glamourous AI coding agent for your favourite terminal &quot;
 [4]: https://github.com/charmbracelet/catwalk?utm_source=chatgpt.com &quot;A collection of LLM inference providers and models - GitHub&quot;
-[5]: https://github.com/charmbracelet/crush/discussions?utm_source=chatgpt.com &quot;charmbracelet crush · Discussions - GitHub&quot; --&gt;</content:encoded><category>AI Agent</category><category>Crush</category><category>Aider</category></item><item><title>Claude Code Beyond Coding: Running My Daily Life</title><link>https://www.vibesparking.com/en/blog/ai/claude-code/2025-08-01-no-coding-needed-use-claude-code-to-run-your-daily-life/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/claude-code/2025-08-01-no-coding-needed-use-claude-code-to-run-your-daily-life/</guid><pubDate>Fri, 01 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # Claude Code Beyond Coding: Running My Daily Life --&gt;
+[5]: https://github.com/charmbracelet/crush/discussions?utm_source=chatgpt.com &quot;charmbracelet crush · Discussions - GitHub&quot; --&gt;</content:encoded><category>AI Agent</category><category>Crush</category><category>Aider</category></item><item><title>Claude Code Cookbook: Automated Commands + Multi-Role System + Intelligent Hooks</title><link>https://www.vibesparking.com/en/blog/ai/claude-code/2025-08-02-claude-code-cookbook-unlock-commands-roles-hooks/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/claude-code/2025-08-02-claude-code-cookbook-unlock-commands-roles-hooks/</guid><pubDate>Sat, 02 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # Claude Code Cookbook brings a systematic development workflow --&gt;
+&lt;p&gt;&lt;strong&gt;Build Your Personal Claude Programming Operating System&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;-introduction&quot;&gt;💡 Introduction&lt;/h2&gt;&lt;a href=&quot;#-introduction&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “💡 Introduction”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Many people use Claude Code for programming, but have you ever felt that:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Despite Claude being powerful, you always have to guide it step by step&lt;/li&gt;
+&lt;li&gt;Every time you need testing, documentation updates, or PR generation, you have to remind it manually&lt;/li&gt;
+&lt;li&gt;Role switching becomes chaotic and actually reduces efficiency instead of improving it&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Recently, Japanese engineer &lt;a href=&quot;https://github.com/wasabeef&quot;&gt;@wasabeef&lt;/a&gt; released an incredible project — &lt;a href=&quot;https://github.com/wasabeef/claude-code-cookbook&quot;&gt;claude-code-cookbook&lt;/a&gt;,
+&lt;strong&gt;transforming Claude Code into an “automated development assistant” that works fast, provides accurate feedback, and thinks clearly.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;This isn’t just another prompt template collection, but Claude’s “extended operating system.”&lt;/p&gt;
+&lt;p&gt;👇 I’ve been testing it for several days and it’s absolutely impressive. Highly recommended for anyone using Claude for development projects!&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;-three-core-features-unlocking-claudes-hidden-capabilities&quot;&gt;🔧 Three Core Features: Unlocking Claude’s Hidden Capabilities&lt;/h2&gt;&lt;a href=&quot;#-three-core-features-unlocking-claudes-hidden-capabilities&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “🔧 Three Core Features: Unlocking Claude’s Hidden Capabilities”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3 id=&quot;-1-commands-make-claude-follow-your-instructions&quot;&gt;🧾 1. Commands: Make Claude Follow Your Instructions&lt;/h3&gt;&lt;a href=&quot;#-1-commands-make-claude-follow-your-instructions&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “🧾 1. Commands: Make Claude Follow Your Instructions”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Simply type &lt;code dir=&quot;auto&quot;&gt;/command-name&lt;/code&gt; and Claude will execute the corresponding task.&lt;/p&gt;
+&lt;p&gt;For example:&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Command&lt;/th&gt;&lt;th&gt;Function&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;code dir=&quot;auto&quot;&gt;/explain-code&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Automatically explain code logic&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code dir=&quot;auto&quot;&gt;/fix-error&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Generate fixes based on errors&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code dir=&quot;auto&quot;&gt;/commit-message&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Auto-write Git commit messages&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code dir=&quot;auto&quot;&gt;/pr-create&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Auto-generate PR content&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code dir=&quot;auto&quot;&gt;/check-prompt&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Help optimize your prompts&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code dir=&quot;auto&quot;&gt;/semantic-commit&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Semantic commits for better version control&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;p&gt;These commands alone can eliminate countless repetitive conversations.&lt;/p&gt;
+&lt;p&gt;💡 Each command is essentially a Markdown file that supports custom extensions—just place them in the &lt;code dir=&quot;auto&quot;&gt;commands/&lt;/code&gt; directory.&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h3 id=&quot;-2-roles-multi-role-switching-claude-as-professional-consultant&quot;&gt;🎭 2. Roles: Multi-Role Switching, Claude as Professional Consultant&lt;/h3&gt;&lt;a href=&quot;#-2-roles-multi-role-switching-claude-as-professional-consultant&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “🎭 2. Roles: Multi-Role Switching, Claude as Professional Consultant”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Claude supports switching between different roles like “sub-personalities,” such as:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;/role qa&lt;/code&gt; Test Engineer&lt;/li&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;/role mobile&lt;/code&gt; Mobile Development Expert&lt;/li&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;/role security&lt;/code&gt; Security Consultant&lt;/li&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;/role architect&lt;/code&gt; System Architect&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;🌟 The highlight: supports concurrent execution!&lt;/p&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;/role&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;performance&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;--agent&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;/role&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;security&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;--agent&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;p&gt;Claude will simultaneously launch multiple roles for &lt;strong&gt;parallel analysis&lt;/strong&gt; and provide unified recommendations.
+This is incredibly useful for large project reviews and design assessments.&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h3 id=&quot;-3-hooks-automated-scripts-for-maximum-development-experience&quot;&gt;⛓ 3. Hooks: Automated Scripts for Maximum Development Experience&lt;/h3&gt;&lt;a href=&quot;#-3-hooks-automated-scripts-for-maximum-development-experience&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “⛓ 3. Hooks: Automated Scripts for Maximum Development Experience”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;You can set up script hooks that run automatically at specific moments.&lt;/p&gt;
+&lt;p&gt;For example:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;check-ai-commit.sh&lt;/code&gt;: Prevents AI signatures from appearing in Git commits&lt;/li&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;preserve-file-permissions.sh&lt;/code&gt;: Automatically saves/restores file permissions&lt;/li&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;auto-comment.sh&lt;/code&gt;: Prompts to add docstring comments&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Even thoughtful touches like “task completion notifications” are included:&lt;/p&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;osascript&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; (macOS &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;notification&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;script&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;p&gt;In short, &lt;strong&gt;Claude truly becomes a reliable partner that handles chores, provides reminders, and writes code.&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;-complete-project-automation-workflow&quot;&gt;🧪 Complete Project Automation Workflow&lt;/h2&gt;&lt;a href=&quot;#-complete-project-automation-workflow&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “🧪 Complete Project Automation Workflow”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;👇 The project includes a comprehensive development workflow diagram, from task identification to CI status tracking, all seamlessly integrated:&lt;/p&gt;
+
+&lt;p&gt;You can even follow this logic to customize your team’s “Claude development pipeline.”&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;-how-to-use&quot;&gt;🚀 How to Use?&lt;/h2&gt;&lt;a href=&quot;#-how-to-use&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “🚀 How to Use?”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3 id=&quot;installation-and-configuration-are-super-simple&quot;&gt;Installation and Configuration Are Super Simple:&lt;/h3&gt;&lt;a href=&quot;#installation-and-configuration-are-super-simple&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Installation and Configuration Are Super Simple:”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Clone the repository:&lt;/p&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;git&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;clone&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;https://github.com/wasabeef/claude-code-cookbook.git&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;~/.claude&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Set the path in Claude client&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Modify &lt;code dir=&quot;auto&quot;&gt;settings.json&lt;/code&gt; to mount hooks and extend commands&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;🛠 Adding custom commands and roles simply requires writing &lt;code dir=&quot;auto&quot;&gt;.md&lt;/code&gt; files in the corresponding folders—very easy to get started.&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;-summary-transform-claude-into-your-engineering-co-pilot&quot;&gt;🧠 Summary: Transform Claude into Your Engineering Co-Pilot&lt;/h2&gt;&lt;a href=&quot;#-summary-transform-claude-into-your-engineering-co-pilot&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “🧠 Summary: Transform Claude into Your Engineering Co-Pilot”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Claude Code Cookbook brings a &lt;strong&gt;systematic development workflow&lt;/strong&gt; that enables you to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Efficiently organize&lt;/strong&gt; project tasks with Claude automatically following up&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Freely switch&lt;/strong&gt; between professional roles to handle different work scenarios&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Automate scripts&lt;/strong&gt; to completely free your hands&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For everyone doing serious development with Claude, this is a game-changing tool for boosting efficiency and professionalism.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;📣 &lt;strong&gt;What commands would you most like to customize for Claude?&lt;/strong&gt;
+Feel free to share in the comments and let’s build smarter Claude assistants together!&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;If you enjoy these AI tool tips, remember to share with your tech-savvy friends!&lt;/p&gt;</content:encoded><category>AI Agent</category><category>Claude Code</category></item><item><title>Claude Code Beyond Coding: Running My Daily Life</title><link>https://www.vibesparking.com/en/blog/ai/claude-code/2025-08-01-no-coding-needed-use-claude-code-to-run-your-daily-life/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/claude-code/2025-08-01-no-coding-needed-use-claude-code-to-run-your-daily-life/</guid><pubDate>Fri, 01 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # Claude Code Beyond Coding: Running My Daily Life --&gt;
 &lt;p&gt;&lt;strong&gt;Still using Claude Code just for writing code? I’ve moved on to using Claude Code for managing my entire life.&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;This isn’t a joke—I’ve built a complete “life operating system” with Claude Code that effortlessly manages my daily routines, captures inspiration, tracks goals, and even takes care of my mental wellbeing.&lt;/p&gt;
 &lt;p&gt;With just 10 minutes of setup, Claude helps me complete countless small but important tasks every day.&lt;/p&gt;
@@ -2062,7 +2179,7 @@ Opal instantly generates four nodes: “Upload notes → Gemini summary → Gene
 &lt;hr&gt;
 &lt;div&gt;&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;&lt;a href=&quot;#conclusion&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Conclusion”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
 &lt;p&gt;&lt;strong&gt;Opal downgrades “AI application development” from writing code to writing one sentence + dragging blocks.&lt;/strong&gt;
-Any automation idea you can think of can basically be up and running before your lunch break ends. &lt;strong&gt;What will you build with it first?&lt;/strong&gt; Feel free to share in the comments.&lt;/p&gt;</content:encoded><category>AI</category><category>Google Opal</category><category>n8n</category><category>Dify</category><category>Coze</category></item><item><title>Build Anything Locally with Dyad – The Free Open-Source Alternative to v0 &amp; Replit</title><link>https://www.vibesparking.com/en/blog/ai/vibe-coding/2025-07-31-dyad-local-ai-builder/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/vibe-coding/2025-07-31-dyad-local-ai-builder/</guid><pubDate>Thu, 31 Jul 2025 00:00:00 GMT</pubDate><content:encoded/><category>Dyad</category><category>AI Agent</category><category>Vibe Coding</category><category>V0</category><category>Lovable</category><category>Bolt</category></item><item><title>Prompt Optimizer: One-Click Boost for Better AI Prompts</title><link>https://www.vibesparking.com/en/blog/ai/prompt-engineering/2025-07-31-prompt-optimizer-review/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/prompt-engineering/2025-07-31-prompt-optimizer-review/</guid><pubDate>Thu, 31 Jul 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- **Recommended Titles**
+Any automation idea you can think of can basically be up and running before your lunch break ends. &lt;strong&gt;What will you build with it first?&lt;/strong&gt; Feel free to share in the comments.&lt;/p&gt;</content:encoded><category>AI</category><category>Google Opal</category><category>n8n</category><category>Dify</category><category>Coze</category></item><item><title>Prompt Optimizer: One-Click Boost for Better AI Prompts</title><link>https://www.vibesparking.com/en/blog/ai/prompt-engineering/2025-07-31-prompt-optimizer-review/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/prompt-engineering/2025-07-31-prompt-optimizer-review/</guid><pubDate>Thu, 31 Jul 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- **Recommended Titles**
 
 * **Chinese**: Prompt Optimizer 提示词优化器：让 AI 指令一键&quot;开挂&quot;
 * **English**: Prompt Optimizer – One-Click Boost for Better AI Prompts
