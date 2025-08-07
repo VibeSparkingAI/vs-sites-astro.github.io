@@ -1,4 +1,127 @@
-<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Vibe Sparking AI | Blog</title><description/><link>https://www.vibesparking.com/</link><language>zh-CN</language><item><title>120 亿 VS 50 亿：OpenAI 与 Anthropic 收入激增</title><link>https://www.vibesparking.com/zh-cn/blog/ai/2025-08-05-openai-anthropic-revenue-race/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/2025-08-05-openai-anthropic-revenue-race/</guid><pubDate>Tue, 05 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # 120 亿 VS 50 亿：OpenAI 与 Anthropic 收入激增背后的门道 --&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Vibe Sparking AI | Blog</title><description/><link>https://www.vibesparking.com/</link><language>zh-CN</language><item><title>三巨头同日发布：轻量开源 GPT-OSS、编码最强 Opus 4.1 和 实时 3D 世界 Genie 3</title><link>https://www.vibesparking.com/zh-cn/blog/ai/2025-08-06-triple-threat-ai-launch/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/2025-08-06-triple-threat-ai-launch/</guid><pubDate>Wed, 06 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # 三巨头同日发布：轻量开源 GPT-OSS、编码最强 Opus 4.1 和 实时 3D 世界 Genie 3 --&gt;&lt;!-- **一句话总结：** --&gt;
+&lt;p&gt;OpenAI &lt;strong&gt;GPT-OSS&lt;/strong&gt; 聚焦「轻量高性能开源」、Anthropic &lt;strong&gt;Claude Opus 4.1&lt;/strong&gt; 主打「极致编码 + 智能代理」、Google DeepMind &lt;strong&gt;Genie 3&lt;/strong&gt; 打开「实时 3D 世界生成」新赛道——三大模型各有必杀技，也各有最佳落地场景，值得所有 AI 创作者马上上手体验。&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;引言&quot;&gt;引言&lt;/h2&gt;&lt;a href=&quot;#引言&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “引言”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;AI 领域今天像打了鸡血：&lt;strong&gt;OpenAI、Anthropic、Google&lt;/strong&gt; 同日放大招。三大实验室的最新模型不止参数升级，更在方向上分道扬镳。下面 3 分钟，带你看亮点，顺手挑出最适合你的实战场景。&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;模型一openai-gpt-oss-系列&quot;&gt;模型一：OpenAI GPT-OSS 系列&lt;/h2&gt;&lt;a href=&quot;#模型一openai-gpt-oss-系列&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “模型一：OpenAI GPT-OSS 系列”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3 id=&quot;关键词&quot;&gt;关键词&lt;/h3&gt;&lt;a href=&quot;#关键词&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “关键词”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;开源权重 · 单卡即可跑 · 商业友好 Apache 2.0&lt;/strong&gt;&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;核心升级&quot;&gt;核心升级&lt;/h3&gt;&lt;a href=&quot;#核心升级&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “核心升级”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;两款尺寸&lt;/strong&gt;：120B 参数可塞进单张 H100，20B 参数 16 GB 显存就能跑。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;推理成本低&lt;/strong&gt;，延迟相比 GPT-3.5 系列下降 40%。&lt;/li&gt;
+&lt;li&gt;Benchmarks 显示，120B 模型在推理/工具调用上逼近 o4-mini。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;推荐场景&quot;&gt;推荐场景&lt;/h3&gt;&lt;a href=&quot;#推荐场景&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “推荐场景”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;本地私有化部署&lt;/strong&gt;：医疗、金融等对隐私敏感的企业。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;学术研究 &amp;#x26; 二次微调&lt;/strong&gt;：Apache 2.0 随便改，不限商用。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;边缘推理&lt;/strong&gt;：20B 版本配合 16 GB GPU 可上工业网关。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;互动&lt;/strong&gt;：如果你打算自建 LLM 服务，GPT-OSS 更吸引你还是 Llama 3？评论区聊聊～&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;模型二anthropic-claude-opus-41&quot;&gt;模型二：Anthropic Claude Opus 4.1&lt;/h2&gt;&lt;a href=&quot;#模型二anthropic-claude-opus-41&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “模型二：Anthropic Claude Opus 4.1”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3 id=&quot;关键词-1&quot;&gt;关键词&lt;/h3&gt;&lt;a href=&quot;#关键词-1&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “关键词”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;SWE-bench 74.5% · 多轮代理 · 长上下文&lt;/strong&gt;&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;核心升级-1&quot;&gt;核心升级&lt;/h3&gt;&lt;a href=&quot;#核心升级-1&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “核心升级”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;Coding 基准 &lt;strong&gt;SWE-bench Verified 74.5%&lt;/strong&gt;，再刷榜首。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Agentic Search&lt;/strong&gt;：自动分步检索→汇总→生成。&lt;/li&gt;
+&lt;li&gt;已上线 &lt;strong&gt;API、Bedrock、Vertex AI&lt;/strong&gt;，价格与 Opus 4 持平。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;推荐场景-1&quot;&gt;推荐场景&lt;/h3&gt;&lt;a href=&quot;#推荐场景-1&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “推荐场景”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;复杂代码库重构&lt;/strong&gt;：万行级重构 + 单测生成，一口气搞定。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;企业内部知识检索代理&lt;/strong&gt;：给文档库插上会思考的“大脑”。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;RAG 长文报告&lt;/strong&gt;：超长上下文 + 细节追踪，少丢信息。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;模型三google-deepmind-genie-3&quot;&gt;模型三：Google DeepMind Genie 3&lt;/h2&gt;&lt;a href=&quot;#模型三google-deepmind-genie-3&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “模型三：Google DeepMind Genie 3”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3 id=&quot;关键词-2&quot;&gt;关键词&lt;/h3&gt;&lt;a href=&quot;#关键词-2&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “关键词”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;实时 24 fps · 720p · 可交互世界模型&lt;/strong&gt;&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;核心升级-2&quot;&gt;核心升级&lt;/h3&gt;&lt;a href=&quot;#核心升级-2&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “核心升级”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;文本 → &lt;strong&gt;分钟级 3D 世界&lt;/strong&gt;，分辨率 720p，24fps。&lt;/li&gt;
+&lt;li&gt;支持 &lt;strong&gt;Promptable World Events&lt;/strong&gt;：一句话切换天气、加入角色。&lt;/li&gt;
+&lt;li&gt;目标：为机器人、自驾训练提供高保真模拟。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;推荐场景-2&quot;&gt;推荐场景&lt;/h3&gt;&lt;a href=&quot;#推荐场景-2&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “推荐场景”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;游戏快速原型&lt;/strong&gt;：设计师直接用文本拼场景。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;机器人仿真训练&lt;/strong&gt;：虚拟仓库、工厂先练再上真机。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;数字孪生 / 教育体验&lt;/strong&gt;：秒造交互式实验室、历史城市漫游。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;结论--该怎么选&quot;&gt;结论 · 该怎么选？&lt;/h2&gt;&lt;a href=&quot;#结论--该怎么选&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “结论 · 该怎么选？”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;需求&lt;/th&gt;&lt;th&gt;首选模型&lt;/th&gt;&lt;th&gt;理由&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;私有部署 + 低成本&lt;/td&gt;&lt;td&gt;&lt;strong&gt;GPT-OSS 20B/120B&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;轻量、Apache 2.0&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;大型编码 / 复杂搜索&lt;/td&gt;&lt;td&gt;&lt;strong&gt;Claude Opus 4.1&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Coding SOTA + Agent&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3D 交互 / 仿真&lt;/td&gt;&lt;td&gt;&lt;strong&gt;Genie 3&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;实时世界模型&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;p&gt;未来几周 GPT-5 还在路上，大战刚开场，你准备好拥抱这波红利了吗？&lt;/p&gt;&lt;!-- ## 思考题
+
+**你最期待哪一款模型落地？为什么？**
+把你的答案写在评论区，抽 3 位送「AI 作品点评」专属福利。
+
+---
+
+## 推荐标题（多语种 &amp; slug）
+
+| 简体中文                                 | English                                           | 繁體                                   | 日本語                                    | Français                                           | Español                                            | Português                                           | slug                    |
+| ------------------------------------ | ------------------------------------------------- | ------------------------------------ | -------------------------------------- | -------------------------------------------------- | -------------------------------------------------- | --------------------------------------------------- | ----------------------- |
+| 三巨头同日放招：GPT-OSS、Opus 4.1、Genie 3 全解析 | Triple-Threat Launch: GPT-OSS, Opus 4.1 &amp; Genie 3 | 三巨頭同日放招：GPT-OSS、Opus 4.1、Genie 3 全解析 | 3大AIモデル同日デビュー：GPT-OSS・Opus 4.1・Genie 3 | Triple lancement IA : GPT-OSS, Opus 4.1 et Genie 3 | Triple lanzamiento IA: GPT-OSS, Opus 4.1 y Genie 3 | Três lançamentos de IA: GPT-OSS, Opus 4.1 e Genie 3 | triple-threat-ai-launch |
+
+\| 超轻开源 vs 超强编码 vs 超凡世界：谁是你的菜？ | Open Weights vs Coding Beast vs World Builder | 超輕開源 vs 超強編碼 vs 超凡世界：誰是你的菜？ | 軽量OSS vs 最強コーディング vs 新世界モデル | Open Weight vs Codeur suprême vs Créateur de mondes | Peso ligero OSS vs Monstruo del código vs Creador de mundos | Open-weight leve vs Fera do código vs Criador de mundos | openweights-coding-world |
+
+\| GPT-5 前哨战：三大模型齐发，AI 版百团大战打响 | Pre-GPT-5 Showdown: Three Models, One Future | GPT-5 前哨戰：三大模型齊發，AI 版百團大戰打響 | GPT-5前哨戦：三モデル激突 | Avant-garde GPT-5 : trois modèles en lice | Preludio GPT-5: tres modelos se enfrentan | Prelúdio GPT-5: três modelos em campo | gpt5-prelude |
+
+---
+
+## 微信朋友圈热评（任选发）
+
+1. “一天三个大招，这才是我爱 AI 的理由，钱包表示压力山大😂”
+2. “Genie 3 带我穿越元宇宙，Claude 4.1 帮我写代码，GPT-OSS 保我隐私——完美闭环！”
+3. “朋友们，今晚不睡了，开干自建 LLM 集群，明早见成效🏃”
+
+---
+
+我这版文章你觉得**OK 吗？需要再扩写或加案例**，留言告诉我！
+
+[1]: https://huggingface.co/openai/gpt-oss-120b?utm_source=chatgpt.com &quot;openai/gpt-oss-120b&quot;
+[2]: https://openai.com/index/introducing-gpt-oss/?utm_source=chatgpt.com &quot;Introducing gpt-oss&quot;
+[3]: https://www.wired.com/story/openai-just-released-its-first-open-weight-models-since-gpt-2/?utm_source=chatgpt.com &quot;OpenAI Just Released Its First Open-Weight Models Since ...&quot;
+[4]: https://simonwillison.net/2025/Aug/5/gpt-oss/?utm_source=chatgpt.com &quot;OpenAI&apos;s new open weight (Apache 2) models are really ...&quot;
+[5]: https://www.anthropic.com/news/claude-opus-4-1?utm_source=chatgpt.com &quot;Claude Opus 4.1&quot;
+[6]: https://aws.amazon.com/about-aws/whats-new/2025/08/anthropic-claude-opus-4-1-amazon-bedrock/?utm_source=chatgpt.com &quot;Anthropic’s Claude Opus 4.1 now in Amazon Bedrock&quot;
+[7]: https://www.theverge.com/news/718723/google-ai-genie-3-model-video-game-worlds-real-time?utm_source=chatgpt.com &quot;Google&apos;s new AI model creates video game worlds in real time&quot;
+[8]: https://deepmind.google/discover/blog/genie-3-a-new-frontier-for-world-models/?utm_source=chatgpt.com &quot;Genie 3: A new frontier for world models&quot;
+[9]: https://www.theguardian.com/technology/2025/aug/05/google-step-artificial-general-intelligence-deepmind-agi?utm_source=chatgpt.com &quot;Google says its new &apos;world model&apos; could train AI robots in virtual warehouses&quot;
+[10]: https://techcrunch.com/2025/08/05/deepmind-thinks-genie-3-world-model-presents-stepping-stone-towards-agi/?utm_source=chatgpt.com &quot;DeepMind thinks its new Genie 3 world model presents a ...&quot; --&gt;</content:encoded><category>GPT-OSS</category><category>Claude Opus 4.1</category><category>Genie 3</category><category>OpenAI</category><category>Anthropic</category><category>Google DeepMind</category></item><item><title>120 亿 VS 50 亿：OpenAI 与 Anthropic 收入激增</title><link>https://www.vibesparking.com/zh-cn/blog/ai/2025-08-05-openai-anthropic-revenue-race/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/2025-08-05-openai-anthropic-revenue-race/</guid><pubDate>Tue, 05 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # 120 亿 VS 50 亿：OpenAI 与 Anthropic 收入激增背后的门道 --&gt;
 &lt;p&gt;过去半年，生成式 AI 赛道再次刷新速度上限：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;OpenAI&lt;/strong&gt; 的年化经常性收入（ARR）在 6 个月里从 &lt;strong&gt;60 亿美元&lt;/strong&gt; 飙到 &lt;strong&gt;120 亿美元&lt;/strong&gt;。&lt;/li&gt;
@@ -1068,7 +1191,121 @@ HHS 在疫情期上线 &lt;strong&gt;Tiberius&lt;/strong&gt;（&lt;strong&gt;202
 [8]: https://developer.android.com/studio/gemini/overview?utm_source=chatgpt.com &quot;Gemini in Android Studio&quot;
 [9]: https://ai.google.dev/gemini-api/docs/pricing?utm_source=chatgpt.com &quot;Gemini Developer API Pricing | Gemini API | Google AI for ...&quot;
 [10]: https://developer.android.com/studio/releases?utm_source=chatgpt.com &quot;Android Studio Narwhal Feature Drop | 2025.1.2&quot;
-[11]: https://androidstudio.googleblog.com/2025/07/android-studio-narwhal-feature-drop_31.html?utm_source=chatgpt.com &quot;Android Studio Narwhal Feature Drop | 2025.1.2 now ...&quot; --&gt;</content:encoded><category>Android Studio</category><category>Gemini</category><category>AI Agent</category><category>Android</category><category>Google</category></item><item><title>Claude Code Cookbook 秘籍：自动化命令 + 多角色 + 智能 Hook</title><link>https://www.vibesparking.com/zh-cn/blog/ai/claude-code/2025-08-02-claude-code-cookbook-unlock-commands-roles-hooks/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/claude-code/2025-08-02-claude-code-cookbook-unlock-commands-roles-hooks/</guid><pubDate>Sat, 02 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # Claude Code Cookbook 带来一套系统化的开发工作流 --&gt;
+[11]: https://androidstudio.googleblog.com/2025/07/android-studio-narwhal-feature-drop_31.html?utm_source=chatgpt.com &quot;Android Studio Narwhal Feature Drop | 2025.1.2 now ...&quot; --&gt;</content:encoded><category>Android Studio</category><category>Gemini</category><category>AI Agent</category><category>Android</category><category>Google</category></item><item><title>从 Aider 到 Crush：开源 AI 代码助手</title><link>https://www.vibesparking.com/zh-cn/blog/ai/crush/2025-08-02-crush-open-source-coding-king/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/crush/2025-08-02-crush-open-source-coding-king/</guid><pubDate>Sat, 02 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # 从 Aider 到 Crush：开源 AI 代码助手 --&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Crush 是一款由 Charm 团队开源的 &lt;strong&gt;终端里「接好 LLM 就能陪你写代码」AI 代理&lt;/strong&gt;。它支持多家大模型、跨平台、会话记忆、LSP 语义补全、MCP 可扩展插件及细粒度安全控制；安装只需一个包管理器或 &lt;code dir=&quot;auto&quot;&gt;go install&lt;/code&gt; 即可；日常用法围绕「拿到 API-Key → 启动 → 写配置 → 一键切模型」。下面按公众号排版要求，带你 5 分钟摸透 Crush。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;p&gt;写代码的痛点不只是“写”，更多是 &lt;strong&gt;找文档、切上下文、调脚本&lt;/strong&gt;。
+Crush 宣称自己是“Your new coding bestie”——把这些碎活全包办，让你专注逻辑实现。
+不到一周就冲到 5k⭐，比肩 Aider、Cursor 的 CLI 竞争态势火热。&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;1-分钟知识卡片&quot;&gt;1 分钟知识卡片&lt;/h2&gt;&lt;a href=&quot;#1-分钟知识卡片&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1 分钟知识卡片”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;关键词&lt;/th&gt;&lt;th&gt;解释&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;LLM 热插拔&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;中途换模型，历史上下文不丢&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Session&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;项目级多会话，持久保存上下文&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;LSP&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;利用语言服务器拿到 AST，让回答更贴代码&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;MCP&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;自定义上下文源，HTTP/STDIO/SSE 三种插槽&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;.crushignore&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;类似 .gitignore，过滤不想暴露的文件&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;正文&quot;&gt;正文&lt;/h2&gt;&lt;a href=&quot;#正文&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “正文”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3 id=&quot;-核心亮点&quot;&gt;🚀 核心亮点&lt;/h3&gt;&lt;a href=&quot;#-核心亮点&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “🚀 核心亮点”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;1. 多模型一键切换&lt;/strong&gt;
+官方自带 Catwalk 模型库，涵盖 OpenAI、Anthropic、Gemini、Groq 等，还允许自定义 DeepSeek、Claude Sonnet 等配置。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2. 会话隔离 + 项目记忆&lt;/strong&gt;
+同一个项目可以开 N 个「聊天室」，测试脚本、重构和文档互不打扰，退出再进上下文仍在。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;3. LSP 语义上下文&lt;/strong&gt;
+Crush 会自动调用 &lt;code dir=&quot;auto&quot;&gt;gopls&lt;/code&gt;、&lt;code dir=&quot;auto&quot;&gt;typescript-language-server&lt;/code&gt; 等，给模型补充 AST 与类型信息，回答更走心。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;4. MCP 可插拔能力&lt;/strong&gt;
+想让模型读数据库、访问内网 API？写一个 MCP 服务丢进 &lt;code dir=&quot;auto&quot;&gt;mcp&lt;/code&gt; 字段，HTTP/STDIO/SSE 都行。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;5. Everywhere CLI&lt;/strong&gt;
+macOS、Linux、Windows/WSL 乃至 *BSD 一条命令就跑起来。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;6. 安全可控&lt;/strong&gt;
+默认任何 Shell 指令都会二次确认；也可在 &lt;code dir=&quot;auto&quot;&gt;permissions.allowed_tools&lt;/code&gt; 白名单放行，或暴力 &lt;code dir=&quot;auto&quot;&gt;--yolo&lt;/code&gt; 跳过提示（慎用）。&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;️-安装三板斧&quot;&gt;🛠️ 安装三板斧&lt;/h3&gt;&lt;a href=&quot;#️-安装三板斧&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “🛠️ 安装三板斧”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Homebrew&lt;/strong&gt;
+&lt;code dir=&quot;auto&quot;&gt;brew install charmbracelet/tap/crush&lt;/code&gt;
+&lt;strong&gt;npm&lt;/strong&gt;
+&lt;code dir=&quot;auto&quot;&gt;npm i -g @charmland/crush&lt;/code&gt;
+&lt;strong&gt;Go&lt;/strong&gt;
+&lt;code dir=&quot;auto&quot;&gt;go install github.com/charmbracelet/crush@latest&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;装完输入 &lt;code dir=&quot;auto&quot;&gt;crush&lt;/code&gt;，首次会提示粘贴 API-Key。支持 &lt;code dir=&quot;auto&quot;&gt;OPENAI_API_KEY&lt;/code&gt;、&lt;code dir=&quot;auto&quot;&gt;ANTHROPIC_API_KEY&lt;/code&gt; 等环境变量免输入。&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;️-快速上手步骤&quot;&gt;✏️ 快速上手步骤&lt;/h3&gt;&lt;a href=&quot;#️-快速上手步骤&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “✏️ 快速上手步骤”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;启动&lt;/strong&gt;&lt;/p&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;crush&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;p&gt;选择喜欢的模型，写句「Refactor this Go file」。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;项目配置&lt;/strong&gt;
+在仓库根中新建 &lt;code dir=&quot;auto&quot;&gt;.crush.json&lt;/code&gt;，示例：&lt;/p&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;json&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;{&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;$schema&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;https://charm.land/crush.json&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;lsp&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: { &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;go&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: { &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;command&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;gopls&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; } },&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;providers&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: { &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;deepseek&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: { &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;type&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;openai&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;, &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;base_url&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;...&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;, &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;api_key&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;$DEEPSEEK_API_KEY&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; } }&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;3. &lt;strong&gt;忽略杂物&lt;/strong&gt;
+&lt;code dir=&quot;auto&quot;&gt;.crushignore&lt;/code&gt; 里写 &lt;code dir=&quot;auto&quot;&gt;node_modules/&lt;/code&gt;，避免大模型扫无用文件。
+4. &lt;strong&gt;跟踪日志&lt;/strong&gt;
+&lt;code dir=&quot;auto&quot;&gt;crush logs --follow&lt;/code&gt; 实时看模型调用 &amp;#x26; 代价。&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;-进阶技巧&quot;&gt;🔮 进阶技巧&lt;/h3&gt;&lt;a href=&quot;#-进阶技巧&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “🔮 进阶技巧”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Session 魔法&lt;/strong&gt;：&lt;code dir=&quot;auto&quot;&gt;crush session new docs&lt;/code&gt; 专门写文档；&lt;code dir=&quot;auto&quot;&gt;crush session switch bugfix&lt;/code&gt; 回到调试现场。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;模型热插&lt;/strong&gt;：&lt;code dir=&quot;auto&quot;&gt;/model claude-3&lt;/code&gt;；回答风格立马切 Shakespeare。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;成本透明&lt;/strong&gt;：配置里可写 &lt;code dir=&quot;auto&quot;&gt;cost_per_1m_in/out&lt;/code&gt;，Crush 会估算每轮花费。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;开源社区活跃&lt;/strong&gt;：Issues 已有 100+ 讨论，PR 24h 内 merge，非常友好。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;对标 Aider/Cursor&lt;/strong&gt;：Det-Eng Weekly 点名它是 Windsurf/Cursor 的开源替代品，体验丝滑。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;结论&quot;&gt;结论&lt;/h2&gt;&lt;a href=&quot;#结论&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “结论”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Crush = &lt;strong&gt;终端 + LLM + 你的工具链&lt;/strong&gt; 的完美黏合剂。
+如果你习惯 tmux/vim 或 VS Code 内置终端，Crush 会让「写-跑-改」循环少敲无数命令。&lt;/p&gt;&lt;!-- **思考题**：
+
+&gt; 你最想用 Crush 接什么私有工具？在评论区聊聊！
+
+---
+
+## 朋友圈三连评
+
+1. “试了 Crush，终端秒变 Claude 贴身助理，写 Go 爽上天🚀”
+2. “Homebrew 安装 + 一行 API-Key，一杯咖啡读完文档就上手😎”
+3. “CLI 党狂喜：支持 LSP + 会话记忆，开源还能改源码，真香🔥”
+
+---
+
+*需要更细的配置示例或想看实战录像？在评论区告诉我！*
+
+[1]: https://github.com/charmbracelet/crush?utm_source=chatgpt.com &quot;charmbracelet/crush: The glamourous AI coding agent for ...&quot;
+[2]: https://www.detectionengineering.net/p/det-eng-weekly-122-i-stare-at-alerts?utm_source=chatgpt.com &quot;Det. Eng. Weekly #122 - I stare at alerts like an iPad kid&quot;
+[3]: https://github.com/charmbracelet/crush &quot;GitHub - charmbracelet/crush: The glamourous AI coding agent for your favourite terminal &quot;
+[4]: https://github.com/charmbracelet/catwalk?utm_source=chatgpt.com &quot;A collection of LLM inference providers and models - GitHub&quot;
+[5]: https://github.com/charmbracelet/crush/discussions?utm_source=chatgpt.com &quot;charmbracelet crush · Discussions - GitHub&quot; --&gt;</content:encoded><category>AI Agent</category><category>Crush</category><category>Aider</category></item><item><title>Claude Code Cookbook 秘籍：自动化命令 + 多角色 + 智能 Hook</title><link>https://www.vibesparking.com/zh-cn/blog/ai/claude-code/2025-08-02-claude-code-cookbook-unlock-commands-roles-hooks/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/claude-code/2025-08-02-claude-code-cookbook-unlock-commands-roles-hooks/</guid><pubDate>Sat, 02 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # Claude Code Cookbook 带来一套系统化的开发工作流 --&gt;
 &lt;p&gt;&lt;strong&gt;打造你专属的 Claude 编程操作系统&lt;/strong&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;div&gt;&lt;h2 id=&quot;引言&quot;&gt;💡引言&lt;/h2&gt;&lt;a href=&quot;#引言&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “💡引言”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
@@ -1183,121 +1420,7 @@ HHS 在疫情期上线 &lt;strong&gt;Tiberius&lt;/strong&gt;（&lt;strong&gt;202
 &lt;p&gt;📣 &lt;strong&gt;你最想定制什么命令给 Claude？&lt;/strong&gt;
 欢迎在评论区分享，一起打造更聪明的 Claude 助理！&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;如果你喜欢这类 AI 工具技巧，记得【在看 + 转发】给你搞技术的朋友！&lt;/p&gt;</content:encoded><category>AI Agent</category><category>Claude Code</category></item><item><title>从 Aider 到 Crush：开源 AI 代码助手</title><link>https://www.vibesparking.com/zh-cn/blog/ai/crush/2025-08-02-crush-open-source-coding-king/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/crush/2025-08-02-crush-open-source-coding-king/</guid><pubDate>Sat, 02 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # 从 Aider 到 Crush：开源 AI 代码助手 --&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Crush 是一款由 Charm 团队开源的 &lt;strong&gt;终端里「接好 LLM 就能陪你写代码」AI 代理&lt;/strong&gt;。它支持多家大模型、跨平台、会话记忆、LSP 语义补全、MCP 可扩展插件及细粒度安全控制；安装只需一个包管理器或 &lt;code dir=&quot;auto&quot;&gt;go install&lt;/code&gt; 即可；日常用法围绕「拿到 API-Key → 启动 → 写配置 → 一键切模型」。下面按公众号排版要求，带你 5 分钟摸透 Crush。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;p&gt;写代码的痛点不只是“写”，更多是 &lt;strong&gt;找文档、切上下文、调脚本&lt;/strong&gt;。
-Crush 宣称自己是“Your new coding bestie”——把这些碎活全包办，让你专注逻辑实现。
-不到一周就冲到 5k⭐，比肩 Aider、Cursor 的 CLI 竞争态势火热。&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;1-分钟知识卡片&quot;&gt;1 分钟知识卡片&lt;/h2&gt;&lt;a href=&quot;#1-分钟知识卡片&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1 分钟知识卡片”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;关键词&lt;/th&gt;&lt;th&gt;解释&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;LLM 热插拔&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;中途换模型，历史上下文不丢&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Session&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;项目级多会话，持久保存上下文&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;LSP&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;利用语言服务器拿到 AST，让回答更贴代码&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;MCP&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;自定义上下文源，HTTP/STDIO/SSE 三种插槽&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;.crushignore&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;类似 .gitignore，过滤不想暴露的文件&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;正文&quot;&gt;正文&lt;/h2&gt;&lt;a href=&quot;#正文&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “正文”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h3 id=&quot;-核心亮点&quot;&gt;🚀 核心亮点&lt;/h3&gt;&lt;a href=&quot;#-核心亮点&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “🚀 核心亮点”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;1. 多模型一键切换&lt;/strong&gt;
-官方自带 Catwalk 模型库，涵盖 OpenAI、Anthropic、Gemini、Groq 等，还允许自定义 DeepSeek、Claude Sonnet 等配置。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;2. 会话隔离 + 项目记忆&lt;/strong&gt;
-同一个项目可以开 N 个「聊天室」，测试脚本、重构和文档互不打扰，退出再进上下文仍在。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;3. LSP 语义上下文&lt;/strong&gt;
-Crush 会自动调用 &lt;code dir=&quot;auto&quot;&gt;gopls&lt;/code&gt;、&lt;code dir=&quot;auto&quot;&gt;typescript-language-server&lt;/code&gt; 等，给模型补充 AST 与类型信息，回答更走心。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;4. MCP 可插拔能力&lt;/strong&gt;
-想让模型读数据库、访问内网 API？写一个 MCP 服务丢进 &lt;code dir=&quot;auto&quot;&gt;mcp&lt;/code&gt; 字段，HTTP/STDIO/SSE 都行。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;5. Everywhere CLI&lt;/strong&gt;
-macOS、Linux、Windows/WSL 乃至 *BSD 一条命令就跑起来。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;6. 安全可控&lt;/strong&gt;
-默认任何 Shell 指令都会二次确认；也可在 &lt;code dir=&quot;auto&quot;&gt;permissions.allowed_tools&lt;/code&gt; 白名单放行，或暴力 &lt;code dir=&quot;auto&quot;&gt;--yolo&lt;/code&gt; 跳过提示（慎用）。&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;️-安装三板斧&quot;&gt;🛠️ 安装三板斧&lt;/h3&gt;&lt;a href=&quot;#️-安装三板斧&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “🛠️ 安装三板斧”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;Homebrew&lt;/strong&gt;
-&lt;code dir=&quot;auto&quot;&gt;brew install charmbracelet/tap/crush&lt;/code&gt;
-&lt;strong&gt;npm&lt;/strong&gt;
-&lt;code dir=&quot;auto&quot;&gt;npm i -g @charmland/crush&lt;/code&gt;
-&lt;strong&gt;Go&lt;/strong&gt;
-&lt;code dir=&quot;auto&quot;&gt;go install github.com/charmbracelet/crush@latest&lt;/code&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;装完输入 &lt;code dir=&quot;auto&quot;&gt;crush&lt;/code&gt;，首次会提示粘贴 API-Key。支持 &lt;code dir=&quot;auto&quot;&gt;OPENAI_API_KEY&lt;/code&gt;、&lt;code dir=&quot;auto&quot;&gt;ANTHROPIC_API_KEY&lt;/code&gt; 等环境变量免输入。&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;️-快速上手步骤&quot;&gt;✏️ 快速上手步骤&lt;/h3&gt;&lt;a href=&quot;#️-快速上手步骤&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “✏️ 快速上手步骤”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;启动&lt;/strong&gt;&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;crush&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;p&gt;选择喜欢的模型，写句「Refactor this Go file」。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;项目配置&lt;/strong&gt;
-在仓库根中新建 &lt;code dir=&quot;auto&quot;&gt;.crush.json&lt;/code&gt;，示例：&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;json&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;{&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;$schema&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;https://charm.land/crush.json&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;lsp&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: { &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;go&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: { &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;command&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;gopls&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; } },&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;providers&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: { &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;deepseek&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: { &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;type&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;openai&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;, &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;base_url&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;...&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;, &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;api_key&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;$DEEPSEEK_API_KEY&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; } }&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;3. &lt;strong&gt;忽略杂物&lt;/strong&gt;
-&lt;code dir=&quot;auto&quot;&gt;.crushignore&lt;/code&gt; 里写 &lt;code dir=&quot;auto&quot;&gt;node_modules/&lt;/code&gt;，避免大模型扫无用文件。
-4. &lt;strong&gt;跟踪日志&lt;/strong&gt;
-&lt;code dir=&quot;auto&quot;&gt;crush logs --follow&lt;/code&gt; 实时看模型调用 &amp;#x26; 代价。&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;-进阶技巧&quot;&gt;🔮 进阶技巧&lt;/h3&gt;&lt;a href=&quot;#-进阶技巧&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “🔮 进阶技巧”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Session 魔法&lt;/strong&gt;：&lt;code dir=&quot;auto&quot;&gt;crush session new docs&lt;/code&gt; 专门写文档；&lt;code dir=&quot;auto&quot;&gt;crush session switch bugfix&lt;/code&gt; 回到调试现场。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;模型热插&lt;/strong&gt;：&lt;code dir=&quot;auto&quot;&gt;/model claude-3&lt;/code&gt;；回答风格立马切 Shakespeare。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;成本透明&lt;/strong&gt;：配置里可写 &lt;code dir=&quot;auto&quot;&gt;cost_per_1m_in/out&lt;/code&gt;，Crush 会估算每轮花费。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;开源社区活跃&lt;/strong&gt;：Issues 已有 100+ 讨论，PR 24h 内 merge，非常友好。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;对标 Aider/Cursor&lt;/strong&gt;：Det-Eng Weekly 点名它是 Windsurf/Cursor 的开源替代品，体验丝滑。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;结论&quot;&gt;结论&lt;/h2&gt;&lt;a href=&quot;#结论&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “结论”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;Crush = &lt;strong&gt;终端 + LLM + 你的工具链&lt;/strong&gt; 的完美黏合剂。
-如果你习惯 tmux/vim 或 VS Code 内置终端，Crush 会让「写-跑-改」循环少敲无数命令。&lt;/p&gt;&lt;!-- **思考题**：
-
-&gt; 你最想用 Crush 接什么私有工具？在评论区聊聊！
-
----
-
-## 朋友圈三连评
-
-1. “试了 Crush，终端秒变 Claude 贴身助理，写 Go 爽上天🚀”
-2. “Homebrew 安装 + 一行 API-Key，一杯咖啡读完文档就上手😎”
-3. “CLI 党狂喜：支持 LSP + 会话记忆，开源还能改源码，真香🔥”
-
----
-
-*需要更细的配置示例或想看实战录像？在评论区告诉我！*
-
-[1]: https://github.com/charmbracelet/crush?utm_source=chatgpt.com &quot;charmbracelet/crush: The glamourous AI coding agent for ...&quot;
-[2]: https://www.detectionengineering.net/p/det-eng-weekly-122-i-stare-at-alerts?utm_source=chatgpt.com &quot;Det. Eng. Weekly #122 - I stare at alerts like an iPad kid&quot;
-[3]: https://github.com/charmbracelet/crush &quot;GitHub - charmbracelet/crush: The glamourous AI coding agent for your favourite terminal &quot;
-[4]: https://github.com/charmbracelet/catwalk?utm_source=chatgpt.com &quot;A collection of LLM inference providers and models - GitHub&quot;
-[5]: https://github.com/charmbracelet/crush/discussions?utm_source=chatgpt.com &quot;charmbracelet crush · Discussions - GitHub&quot; --&gt;</content:encoded><category>AI Agent</category><category>Crush</category><category>Aider</category></item><item><title>Claude Code 不写代码，用来管理我的日常生活</title><link>https://www.vibesparking.com/zh-cn/blog/ai/claude-code/2025-08-01-no-coding-needed-use-claude-code-to-run-your-daily-life/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/claude-code/2025-08-01-no-coding-needed-use-claude-code-to-run-your-daily-life/</guid><pubDate>Fri, 01 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # Claude Code 不写代码，用来管理我的日常生活 --&gt;
+&lt;p&gt;如果你喜欢这类 AI 工具技巧，记得【在看 + 转发】给你搞技术的朋友！&lt;/p&gt;</content:encoded><category>AI Agent</category><category>Claude Code</category></item><item><title>Claude Code 不写代码，用来管理我的日常生活</title><link>https://www.vibesparking.com/zh-cn/blog/ai/claude-code/2025-08-01-no-coding-needed-use-claude-code-to-run-your-daily-life/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/claude-code/2025-08-01-no-coding-needed-use-claude-code-to-run-your-daily-life/</guid><pubDate>Fri, 01 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # Claude Code 不写代码，用来管理我的日常生活 --&gt;
 &lt;p&gt;&lt;strong&gt;还在用 Claude Code 写代码？我已经用 Claude Code 管人生了。&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;这不是段子，我用 Claude Code 打造了一套“生活操作系统”，轻松管理日常、抓住灵感、追踪目标，连心理状态都照顾到了。&lt;/p&gt;
 &lt;p&gt;只要 10 分钟设置好，Claude 每天就能帮我完成很多琐碎但重要的事。&lt;/p&gt;
@@ -1899,7 +2022,141 @@ Opal 立刻生成“上传纪要 → Gemini 摘要 → 生成 todo → 输出邮
 [3]: https://www.infoq.com/news/2025/07/google-opal-ai/ &quot;Google Labs Introduces Opal, a Visual Platform for Creating AI Mini-Apps - InfoQ&quot;
 [4]: https://sdtimes.com/ai/googles-new-opal-tool-allows-users-to-create-mini-ai-apps-with-no-coding-required/?utm_source=chatgpt.com &quot;Google&apos;s new Opal tool allows users to create mini AI apps with no ...&quot;
 [5]: https://apix-drive.com/en/blog/news/google-launches-opal?utm_source=chatgpt.com &quot;Google Launches Opal: AI-Powered No-Code App Builder - Apix-Drive&quot;
-[6]: https://medium.com/%40ferreradaniel/new-google-opal-automation-tool-build-ai-mini-apps-instantly-without-coding-6596ed53d0fe &quot;NEW! Google Opal Automation Tool: Build AI Mini-Apps Instantly Without Coding | by Daniel Ferrera | Jul, 2025 | Medium&quot; --&gt;</content:encoded><category>AI</category><category>Google Opal</category><category>n8n</category><category>Dify</category><category>Coze</category></item><item><title>Prompt Optimizer 提示词优化器：让 AI 指令一键“开挂”</title><link>https://www.vibesparking.com/zh-cn/blog/ai/prompt-engineering/2025-07-31-prompt-optimizer-review/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/prompt-engineering/2025-07-31-prompt-optimizer-review/</guid><pubDate>Thu, 31 Jul 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- **推荐标题**
+[6]: https://medium.com/%40ferreradaniel/new-google-opal-automation-tool-build-ai-mini-apps-instantly-without-coding-6596ed53d0fe &quot;NEW! Google Opal Automation Tool: Build AI Mini-Apps Instantly Without Coding | by Daniel Ferrera | Jul, 2025 | Medium&quot; --&gt;</content:encoded><category>AI</category><category>Google Opal</category><category>n8n</category><category>Dify</category><category>Coze</category></item><item><title>对标 v0／Lovable／Bolt：本地跑 Dyad AI 开发应用</title><link>https://www.vibesparking.com/zh-cn/blog/ai/vibe-coding/2025-07-31-dyad-local-ai-builder/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/vibe-coding/2025-07-31-dyad-local-ai-builder/</guid><pubDate>Thu, 31 Jul 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- 
+## 推荐标题
+
+* **中文**：
+  **《Dyad 上手指南：零成本、本地跑的 AI 全栈应用工厂》**
+* **英文**：
+  **“Build Anything Locally with Dyad – The Free Open-Source Alternative to v0 &amp; Replit”**
+* **Slug-URI**：`dyad-local-ai-builder` --&gt;
+&lt;hr&gt;&lt;!-- ## 引言：为什么又是「一行提示词造应用」？ --&gt;
+&lt;p&gt;还在为 v0／Lovable／Bolt 的额度、收费、网络延迟抓狂？&lt;strong&gt;Dyad 把同样的 AI 造 app 魔法直接搬到你电脑本地，免费、开源、无限制&lt;/strong&gt;。下载即用，不用注册账号，也没有云端锁定风险。今天这篇文章带你 10 分钟搞懂它的亮点、安装步骤与高阶玩法，让你的灵感马上落地。&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;一dyad-到底是什么&quot;&gt;一、Dyad 到底是什么？&lt;/h2&gt;&lt;a href=&quot;#一dyad-到底是什么&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “一、Dyad 到底是什么？”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;定位&lt;/strong&gt;：本地运行的 AI App Builder，与 v0、Lovable、Bolt 一样能「一句话生成前端 + 后端 + 数据库 + Auth」，但所有代码都存你机器里，私有、可控。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;社区热度&lt;/strong&gt;：GitHub 2.4k⭐、Product Hunt 4.9/5 评价，一周下载量破 10 万。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;目标用户&lt;/strong&gt;：想要快速验证点子、又对数据隐私和成本敏感的开发者 / 设计师 / 创业者。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;二核心卖点拆解&quot;&gt;二、核心卖点拆解&lt;/h2&gt;&lt;a href=&quot;#二核心卖点拆解&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “二、核心卖点拆解”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3 id=&quot;1-100-本地&quot;&gt;1. 100% 本地&lt;/h3&gt;&lt;a href=&quot;#1-100-本地&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1. 100% 本地”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;运行在 macOS / Windows，可离线使用，避免云端延迟与合规担忧。&lt;/li&gt;
+&lt;li&gt;支持 &lt;strong&gt;Ollama 本地大模型&lt;/strong&gt;，CPU/GPU 跑得动就能完全离线生成代码。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;2-自带后端--数据库&quot;&gt;2. 自带后端 &amp;#x26; 数据库&lt;/h3&gt;&lt;a href=&quot;#2-自带后端--数据库&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2. 自带后端 &amp;#x26; 数据库”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;深度集成 &lt;strong&gt;Supabase&lt;/strong&gt;：一句「加登录」就生成 Auth、PostgreSQL 表和 Edge Functions。&lt;/li&gt;
+&lt;li&gt;RLS 默认开启，安全策略 AI 自动写好，你只需审核。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;3-任意-ai-模型自己带-key&quot;&gt;3. 任意 AI 模型，自己带 Key&lt;/h3&gt;&lt;a href=&quot;#3-任意-ai-模型自己带-key&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3. 任意 AI 模型，自己带 Key”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;内置 &lt;em&gt;Auto&lt;/em&gt; 智能调度，可按需切换 OpenAI、Gemini、Claude、OpenRouter 等模型；免费额度用完就换家供应商。&lt;/li&gt;
+&lt;li&gt;本地模型与云端模型无缝同屏对比，随时热切换。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;4-完整-devops-流程&quot;&gt;4. 完整 DevOps 流程&lt;/h3&gt;&lt;a href=&quot;#4-完整-devops-流程&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “4. 完整 DevOps 流程”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;一键推送 GitHub，Dyad 自动生成仓库并处理 Git 流程；进阶用户可继续用 Git CLI / Desktop)。&lt;/li&gt;
+&lt;li&gt;内置预览服务器，实时热更新，支持版本回滚、分支实验。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;5-永远免费--开源&quot;&gt;5. &lt;strong&gt;永远免费 + 开源&lt;/strong&gt;&lt;/h3&gt;&lt;a href=&quot;#5-永远免费--开源&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “5. 永远免费 + 开源”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;Apache-2.0 许可证，社区参与度高，问题响应快。&lt;/li&gt;
+&lt;li&gt;Pro / Max 付费仅加速 AI 调用，不限制核心功能。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;三5-步极速上手&quot;&gt;三、5 步极速上手&lt;/h2&gt;&lt;a href=&quot;#三5-步极速上手&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “三、5 步极速上手”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;步骤&lt;/th&gt;&lt;th&gt;操作&lt;/th&gt;&lt;th&gt;提示语示例&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;① 下载&lt;/td&gt;&lt;td&gt;官网选择 v0.14 稳定版，Mac/Win 双击即装&lt;/td&gt;&lt;td&gt;&lt;em&gt;[配图：下载按钮]&lt;/em&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;② 安装 Node.js&lt;/td&gt;&lt;td&gt;未安装会在首页 banner 提醒，点击跳转&lt;/td&gt;&lt;td&gt;n/a&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;③ 填 API Key&lt;/td&gt;&lt;td&gt;推荐先用 &lt;strong&gt;Gemini&lt;/strong&gt; 免费 250 条/天额度&lt;/td&gt;&lt;td&gt;在设置里粘贴 Key&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;④ 新建 App&lt;/td&gt;&lt;td&gt;聊天框输入「做一个待办清单支持拖拽排序」&lt;/td&gt;&lt;td&gt;“Build a Kanban todo app”&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;⑤ 审核 &amp;#x26; 预览&lt;/td&gt;&lt;td&gt;AI 生成代码 → 点击 &lt;em&gt;Approve&lt;/em&gt; → 右侧实时预览&lt;/td&gt;&lt;td&gt;&lt;em&gt;[配图：预览界面]&lt;/em&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;300 字配图&lt;/strong&gt;：可截屏安装界面 + 预览窗口&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;四高阶玩法把-mvp-直接做完&quot;&gt;四、高阶玩法：把 MVP 直接做完&lt;/h2&gt;&lt;a href=&quot;#四高阶玩法把-mvp-直接做完&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “四、高阶玩法：把 MVP 直接做完”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3 id=&quot;1-连上-supabase后端无痛上线&quot;&gt;1. 连上 Supabase，后端无痛上线&lt;/h3&gt;&lt;a href=&quot;#1-连上-supabase后端无痛上线&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1. 连上 Supabase，后端无痛上线”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;只需在聊天窗口说「接 Supabase 并加邮箱登录」→ 浏览器弹窗授权 → 回到 Dyad 即完成链接。此时数据库表、Auth、Server Functions 都已就绪。&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;2-github-同步--cicd&quot;&gt;2. GitHub 同步 &amp;#x26; CI/CD&lt;/h3&gt;&lt;a href=&quot;#2-github-同步--cicd&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2. GitHub 同步 &amp;#x26; CI/CD”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;进入 &lt;em&gt;App Details → Sync to GitHub&lt;/em&gt;，Dyad 会自动 push 并生成 Public/Private Repo。发布到 Vercel 的教程在 &lt;em&gt;Publishing your App&lt;/em&gt; 页面里一步步跟着走即可)。&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;3-切换混用模型&quot;&gt;3. 切换/混用模型&lt;/h3&gt;&lt;a href=&quot;#3-切换混用模型&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3. 切换/混用模型”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;在右上角模型下拉中选择 &lt;em&gt;Claude-Sonnet&lt;/em&gt;、&lt;em&gt;GPT-4.1&lt;/em&gt; 或本地 &lt;em&gt;Ollama/Llama-3&lt;/em&gt;，观察 UI 与代码质量差异。不同模型互补，复杂项目常用双模型 AB 测试。&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;4-与-v0--bolt--replit-差异&quot;&gt;4. 与 v0 / Bolt / Replit 差异&lt;/h3&gt;&lt;a href=&quot;#4-与-v0--bolt--replit-差异&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “4. 与 v0 / Bolt / Replit 差异”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;维度&lt;/th&gt;&lt;th&gt;Dyad&lt;/th&gt;&lt;th&gt;v0 / Lovable / Bolt / Replit&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;部署&lt;/td&gt;&lt;td&gt;&lt;strong&gt;本地+可云&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;纯云端&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;私密性&lt;/td&gt;&lt;td&gt;代码不出机器&lt;/td&gt;&lt;td&gt;需上传&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;成本&lt;/td&gt;&lt;td&gt;免费不限流&lt;/td&gt;&lt;td&gt;额度或订阅费&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;后端&lt;/td&gt;&lt;td&gt;Supabase 一键整合&lt;/td&gt;&lt;td&gt;多数只管前端&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;模型&lt;/td&gt;&lt;td&gt;BYOK / Local&lt;/td&gt;&lt;td&gt;固定供应商&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;p&gt;详细对比见官方 Comparison 文档，社区帖子也认可 “Dyad = 无锁定版 v0”。&lt;/p&gt;
+&lt;hr&gt;&lt;!-- ## 结语：把控制权拿回来 --&gt;
+&lt;p&gt;在 AI 生产力井喷的 2025，下一个爆款应用可能只差一条 prompt。&lt;strong&gt;Dyad 把大厂才有的端到端开发体验塞进桌面应用&lt;/strong&gt;，重新把速度、隐私、成本交还给个人开发者。
+如果你也想试试「一句话造产品」的爽感，现在就下载，实现你的灵感！&lt;/p&gt;</content:encoded><category>Dyad</category><category>AI Agent</category><category>Vibe Coding</category><category>V0</category><category>Lovable</category><category>Bolt</category></item><item><title>Prompt Optimizer 提示词优化器：让 AI 指令一键“开挂”</title><link>https://www.vibesparking.com/zh-cn/blog/ai/prompt-engineering/2025-07-31-prompt-optimizer-review/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/prompt-engineering/2025-07-31-prompt-optimizer-review/</guid><pubDate>Thu, 31 Jul 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- **推荐标题**
 
 * **中文**：Prompt Optimizer 提示词优化器：让 AI 指令一键“开挂”
 * **English**: Prompt Optimizer – One-Click Boost for Better AI Prompts
@@ -1982,141 +2239,7 @@ Opal 立刻生成“上传纪要 → Gemini 摘要 → 生成 todo → 输出邮
 [3]: https://prompt.always200.com/?utm_source=chatgpt.com &quot;提示词优化器&quot;
 [4]: https://prompt.always200.com/ &quot;提示词优化器&quot;
 [5]: https://github.com/linshenkx/prompt-optimizer?utm_source=chatgpt.com &quot;linshenkx/prompt-optimizer: 一款提示词优化器 - GitHub&quot;
-[6]: https://zhuanlan.zhihu.com/p/1892351710292332883?utm_source=chatgpt.com &quot;2025-04-06｜Prompt-Optimizer: AI 提示词优化神器全攻略 - 知乎专栏&quot; --&gt;</content:encoded><category>Prompt Engineering</category></item><item><title>对标 v0／Lovable／Bolt：本地跑 Dyad AI 开发应用</title><link>https://www.vibesparking.com/zh-cn/blog/ai/vibe-coding/2025-07-31-dyad-local-ai-builder/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/vibe-coding/2025-07-31-dyad-local-ai-builder/</guid><pubDate>Thu, 31 Jul 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- 
-## 推荐标题
-
-* **中文**：
-  **《Dyad 上手指南：零成本、本地跑的 AI 全栈应用工厂》**
-* **英文**：
-  **“Build Anything Locally with Dyad – The Free Open-Source Alternative to v0 &amp; Replit”**
-* **Slug-URI**：`dyad-local-ai-builder` --&gt;
-&lt;hr&gt;&lt;!-- ## 引言：为什么又是「一行提示词造应用」？ --&gt;
-&lt;p&gt;还在为 v0／Lovable／Bolt 的额度、收费、网络延迟抓狂？&lt;strong&gt;Dyad 把同样的 AI 造 app 魔法直接搬到你电脑本地，免费、开源、无限制&lt;/strong&gt;。下载即用，不用注册账号，也没有云端锁定风险。今天这篇文章带你 10 分钟搞懂它的亮点、安装步骤与高阶玩法，让你的灵感马上落地。&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;一dyad-到底是什么&quot;&gt;一、Dyad 到底是什么？&lt;/h2&gt;&lt;a href=&quot;#一dyad-到底是什么&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “一、Dyad 到底是什么？”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;定位&lt;/strong&gt;：本地运行的 AI App Builder，与 v0、Lovable、Bolt 一样能「一句话生成前端 + 后端 + 数据库 + Auth」，但所有代码都存你机器里，私有、可控。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;社区热度&lt;/strong&gt;：GitHub 2.4k⭐、Product Hunt 4.9/5 评价，一周下载量破 10 万。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;目标用户&lt;/strong&gt;：想要快速验证点子、又对数据隐私和成本敏感的开发者 / 设计师 / 创业者。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;二核心卖点拆解&quot;&gt;二、核心卖点拆解&lt;/h2&gt;&lt;a href=&quot;#二核心卖点拆解&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “二、核心卖点拆解”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h3 id=&quot;1-100-本地&quot;&gt;1. 100% 本地&lt;/h3&gt;&lt;a href=&quot;#1-100-本地&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1. 100% 本地”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;运行在 macOS / Windows，可离线使用，避免云端延迟与合规担忧。&lt;/li&gt;
-&lt;li&gt;支持 &lt;strong&gt;Ollama 本地大模型&lt;/strong&gt;，CPU/GPU 跑得动就能完全离线生成代码。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h3 id=&quot;2-自带后端--数据库&quot;&gt;2. 自带后端 &amp;#x26; 数据库&lt;/h3&gt;&lt;a href=&quot;#2-自带后端--数据库&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2. 自带后端 &amp;#x26; 数据库”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;深度集成 &lt;strong&gt;Supabase&lt;/strong&gt;：一句「加登录」就生成 Auth、PostgreSQL 表和 Edge Functions。&lt;/li&gt;
-&lt;li&gt;RLS 默认开启，安全策略 AI 自动写好，你只需审核。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h3 id=&quot;3-任意-ai-模型自己带-key&quot;&gt;3. 任意 AI 模型，自己带 Key&lt;/h3&gt;&lt;a href=&quot;#3-任意-ai-模型自己带-key&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3. 任意 AI 模型，自己带 Key”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;内置 &lt;em&gt;Auto&lt;/em&gt; 智能调度，可按需切换 OpenAI、Gemini、Claude、OpenRouter 等模型；免费额度用完就换家供应商。&lt;/li&gt;
-&lt;li&gt;本地模型与云端模型无缝同屏对比，随时热切换。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h3 id=&quot;4-完整-devops-流程&quot;&gt;4. 完整 DevOps 流程&lt;/h3&gt;&lt;a href=&quot;#4-完整-devops-流程&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “4. 完整 DevOps 流程”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;一键推送 GitHub，Dyad 自动生成仓库并处理 Git 流程；进阶用户可继续用 Git CLI / Desktop)。&lt;/li&gt;
-&lt;li&gt;内置预览服务器，实时热更新，支持版本回滚、分支实验。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h3 id=&quot;5-永远免费--开源&quot;&gt;5. &lt;strong&gt;永远免费 + 开源&lt;/strong&gt;&lt;/h3&gt;&lt;a href=&quot;#5-永远免费--开源&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “5. 永远免费 + 开源”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;Apache-2.0 许可证，社区参与度高，问题响应快。&lt;/li&gt;
-&lt;li&gt;Pro / Max 付费仅加速 AI 调用，不限制核心功能。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;三5-步极速上手&quot;&gt;三、5 步极速上手&lt;/h2&gt;&lt;a href=&quot;#三5-步极速上手&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “三、5 步极速上手”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;步骤&lt;/th&gt;&lt;th&gt;操作&lt;/th&gt;&lt;th&gt;提示语示例&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;① 下载&lt;/td&gt;&lt;td&gt;官网选择 v0.14 稳定版，Mac/Win 双击即装&lt;/td&gt;&lt;td&gt;&lt;em&gt;[配图：下载按钮]&lt;/em&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;② 安装 Node.js&lt;/td&gt;&lt;td&gt;未安装会在首页 banner 提醒，点击跳转&lt;/td&gt;&lt;td&gt;n/a&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;③ 填 API Key&lt;/td&gt;&lt;td&gt;推荐先用 &lt;strong&gt;Gemini&lt;/strong&gt; 免费 250 条/天额度([dyad.sh][7])&lt;/td&gt;&lt;td&gt;在设置里粘贴 Key&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;④ 新建 App&lt;/td&gt;&lt;td&gt;聊天框输入「做一个待办清单支持拖拽排序」&lt;/td&gt;&lt;td&gt;“Build a Kanban todo app”&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;⑤ 审核 &amp;#x26; 预览&lt;/td&gt;&lt;td&gt;AI 生成代码 → 点击 &lt;em&gt;Approve&lt;/em&gt; → 右侧实时预览&lt;/td&gt;&lt;td&gt;&lt;em&gt;[配图：预览界面]&lt;/em&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;300 字配图&lt;/strong&gt;：可截屏安装界面 + 预览窗口&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;四高阶玩法把-mvp-直接做完&quot;&gt;四、高阶玩法：把 MVP 直接做完&lt;/h2&gt;&lt;a href=&quot;#四高阶玩法把-mvp-直接做完&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “四、高阶玩法：把 MVP 直接做完”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h3 id=&quot;1-连上-supabase后端无痛上线&quot;&gt;1. 连上 Supabase，后端无痛上线&lt;/h3&gt;&lt;a href=&quot;#1-连上-supabase后端无痛上线&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1. 连上 Supabase，后端无痛上线”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;只需在聊天窗口说「接 Supabase 并加邮箱登录」→ 浏览器弹窗授权 → 回到 Dyad 即完成链接。此时数据库表、Auth、Server Functions 都已就绪。&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;2-github-同步--cicd&quot;&gt;2. GitHub 同步 &amp;#x26; CI/CD&lt;/h3&gt;&lt;a href=&quot;#2-github-同步--cicd&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2. GitHub 同步 &amp;#x26; CI/CD”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;进入 &lt;em&gt;App Details → Sync to GitHub&lt;/em&gt;，Dyad 会自动 push 并生成 Public/Private Repo。发布到 Vercel 的教程在 &lt;em&gt;Publishing your App&lt;/em&gt; 页面里一步步跟着走即可)。&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;3-切换混用模型&quot;&gt;3. 切换/混用模型&lt;/h3&gt;&lt;a href=&quot;#3-切换混用模型&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3. 切换/混用模型”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;在右上角模型下拉中选择 &lt;em&gt;Claude-Sonnet&lt;/em&gt;、&lt;em&gt;GPT-4.1&lt;/em&gt; 或本地 &lt;em&gt;Ollama/Llama-3&lt;/em&gt;，观察 UI 与代码质量差异。不同模型互补，复杂项目常用双模型 AB 测试。&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;4-与-v0--bolt--replit-差异&quot;&gt;4. 与 v0 / Bolt / Replit 差异&lt;/h3&gt;&lt;a href=&quot;#4-与-v0--bolt--replit-差异&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “4. 与 v0 / Bolt / Replit 差异”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;维度&lt;/th&gt;&lt;th&gt;Dyad&lt;/th&gt;&lt;th&gt;v0 / Lovable / Bolt / Replit&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;部署&lt;/td&gt;&lt;td&gt;&lt;strong&gt;本地+可云&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;纯云端&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;私密性&lt;/td&gt;&lt;td&gt;代码不出机器&lt;/td&gt;&lt;td&gt;需上传&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;成本&lt;/td&gt;&lt;td&gt;免费不限流&lt;/td&gt;&lt;td&gt;额度或订阅费&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;后端&lt;/td&gt;&lt;td&gt;Supabase 一键整合&lt;/td&gt;&lt;td&gt;多数只管前端&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;模型&lt;/td&gt;&lt;td&gt;BYOK / Local&lt;/td&gt;&lt;td&gt;固定供应商&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
-&lt;p&gt;详细对比见官方 Comparison 文档，社区帖子也认可 “Dyad = 无锁定版 v0”。&lt;/p&gt;
-&lt;hr&gt;&lt;!-- ## 结语：把控制权拿回来 --&gt;
-&lt;p&gt;在 AI 生产力井喷的 2025，下一个爆款应用可能只差一条 prompt。&lt;strong&gt;Dyad 把大厂才有的端到端开发体验塞进桌面应用&lt;/strong&gt;，重新把速度、隐私、成本交还给个人开发者。
-如果你也想试试「一句话造产品」的爽感，现在就下载，实现你的灵感！&lt;/p&gt;</content:encoded><category>Dyad</category><category>AI Agent</category><category>Vibe Coding</category><category>V0</category><category>Lovable</category><category>Bolt</category></item><item><title>Claude Code 太贵用不起？自建账号拼车共享是趋势</title><link>https://www.vibesparking.com/zh-cn/blog/ai/claude-code/2025-07-30-beat-weekly-limits-with-claude-relay/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/claude-code/2025-07-30-beat-weekly-limits-with-claude-relay/</guid><pubDate>Wed, 30 Jul 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- Claude Code 太贵用不起？：自建账号拼车共享是趋势 --&gt;
+[6]: https://zhuanlan.zhihu.com/p/1892351710292332883?utm_source=chatgpt.com &quot;2025-04-06｜Prompt-Optimizer: AI 提示词优化神器全攻略 - 知乎专栏&quot; --&gt;</content:encoded><category>Prompt Engineering</category></item><item><title>Claude Code 太贵用不起？自建账号拼车共享是趋势</title><link>https://www.vibesparking.com/zh-cn/blog/ai/claude-code/2025-07-30-beat-weekly-limits-with-claude-relay/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/claude-code/2025-07-30-beat-weekly-limits-with-claude-relay/</guid><pubDate>Wed, 30 Jul 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- Claude Code 太贵用不起？：自建账号拼车共享是趋势 --&gt;
 &lt;div&gt;&lt;h2 id=&quot;省流版&quot;&gt;省流版&lt;/h2&gt;&lt;a href=&quot;#省流版&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “省流版”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
 &lt;div&gt;&lt;h2 id=&quot;anthropic-刚刚推出每周配额团队拼车账号-3-天就可能超限自建-claude-relay-service-中转站支持多账户池自动轮换无惧最新限额用-docker-compose-3-分钟上线一人一把-api-key照样跑满整周&quot;&gt;&lt;strong&gt;Anthropic 刚刚推出「每周配额」，团队拼车账号 3 天就可能超限；自建 &lt;strong&gt;claude-relay-service&lt;/strong&gt; 中转站，支持多账户池自动轮换，无惧最新限额。用 Docker-Compose 3 分钟上线，一人一把 API Key，照样跑满整周！&lt;/strong&gt;&lt;/h2&gt;&lt;a href=&quot;#anthropic-刚刚推出每周配额团队拼车账号-3-天就可能超限自建-claude-relay-service-中转站支持多账户池自动轮换无惧最新限额用-docker-compose-3-分钟上线一人一把-api-key照样跑满整周&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Anthropic 刚刚推出「每周配额」，团队拼车账号 3 天就可能超限；自建 claude-relay-service 中转站，支持多账户池自动轮换，无惧最新限额。用 Docker-Compose 3 分钟上线，一人一把 API Key，照样跑满整周！”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
 &lt;div&gt;&lt;h2 id=&quot;限额风暴羊毛党集体哀嚎&quot;&gt;限额风暴，羊毛党集体哀嚎&lt;/h2&gt;&lt;a href=&quot;#限额风暴羊毛党集体哀嚎&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “限额风暴，羊毛党集体哀嚎”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
@@ -2239,144 +2362,4 @@ Opal 立刻生成“上传纪要 → Gemini 摘要 → 生成 todo → 输出邮
 &lt;div&gt;&lt;h3 id=&quot;思考题&quot;&gt;思考题&lt;/h3&gt;&lt;a href=&quot;#思考题&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “思考题”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
 &lt;blockquote&gt;
 &lt;p&gt;你准备怎么分配 Key &amp;#x26; 配额？欢迎在评论区支招～&lt;/p&gt;
-&lt;/blockquote&gt;</content:encoded><category>Claude Code</category><category>Anthropic</category><category>Claude Relay Service</category></item><item><title>单词默写不犯难：ChatGPT 给出小学三年级每天 1 小时英语词汇训练方案</title><link>https://www.vibesparking.com/zh-cn/blog/ai/education/primary-school/2025-07-30-stress-free-spelling-1-hour-daily-vocab-plan/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/education/primary-school/2025-07-30-stress-free-spelling-1-hour-daily-vocab-plan/</guid><pubDate>Wed, 30 Jul 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- 中文：单词默写不犯难：小学三年级 1 小时英语词汇训练方案
-
-English: Stress-Free Spelling – A 1-Hour-a-Day Vocabulary Program for 3rd Graders
-
-slug-uri: stress-free-spelling-1-hour-daily-vocab-plan --&gt;
-&lt;p&gt;ChatGPT 设计了一个适合小学三年级学生的英语单词默写训练方案：每天花1小时，结合画画、游戏、家长互动，重点解决拼写记不住和默写紧张的问题，并确保每周掌握单词量合理有效。&lt;/p&gt;&lt;!-- # 小学三年级英语单词默写训练方案 --&gt;
-&lt;div&gt;&lt;h2 id=&quot;引言&quot;&gt;引言&lt;/h2&gt;&lt;a href=&quot;#引言&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “引言”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;针对一位三年级小学生的英语单词默写需求，我们设计了一套科学有趣的训练方案。该学生每周计划掌握约70个新单词，但根据科学建议我们会进行调整。学生每天有1小时练习时间，父母可陪同参与。孩子喜欢画画和游戏，目前主要困难是记不住单词拼写，在默写时容易紧张。下面我们将从每周单词数量、每日练习安排、记忆技巧、家长协助方法、缓解默写紧张的游戏，以及每周复习测验六个方面进行说明。&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;div&gt;&lt;h2 id=&quot;一每周新单词数量的科学建议&quot;&gt;一、每周新单词数量的科学建议&lt;/h2&gt;&lt;a href=&quot;#一每周新单词数量的科学建议&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “一、每周新单词数量的科学建议”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;研究表明，每周集中学习&lt;strong&gt;10~12个新单词&lt;/strong&gt;效果更佳。过多的新词会超出孩子的记忆负荷，导致遗忘率上升。以中国小学英语新课标为例，&lt;strong&gt;小学阶段总词汇量约505个基本单词&lt;/strong&gt;。新版三年级教材上册包含111个单词（旧版为64个）。按这个速度计算，小学生平均每周只需掌握&lt;strong&gt;5~10个单词&lt;/strong&gt;左右。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;科学建议：&lt;strong&gt;将每周新学单词数量调整到&lt;/strong&gt;20~30个&lt;/strong&gt;左右更为合理，可根据孩子的接受能力浮动。例如每周学习25个新词，每天约5个。这样既能保证孩子有足够重复巩固的机会，又不会因为数量过多而产生畏难情绪。重质不重量，确保孩子真正掌握每个单词的拼写和用法，比一味追求数量更重要。&lt;/p&gt;
-&lt;div&gt;&lt;h2 id=&quot;二每天1小时练习时间安排听说读写玩&quot;&gt;二、每天1小时练习时间安排（听、说、读、写、玩）&lt;/h2&gt;&lt;a href=&quot;#二每天1小时练习时间安排听说读写玩&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “二、每天1小时练习时间安排（听、说、读、写、玩）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;每天1小时的练习需要&lt;strong&gt;合理分配听、说、读、写、玩的环节&lt;/strong&gt;，做到动静结合、张弛有度。下面以表格形式给出每日练习安排建议：&lt;/p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;时间段&lt;/th&gt;&lt;th&gt;活动内容（技能侧重）&lt;/th&gt;&lt;th&gt;说明与目的&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;5 分钟&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;&lt;strong&gt;热身与回顾&lt;/strong&gt;（听、说）&lt;/td&gt;&lt;td&gt;&lt;strong&gt;听&lt;/strong&gt;父母朗读前一天学过的单词或短语，孩子跟着&lt;strong&gt;说&lt;/strong&gt;出发音。一边拍手或做动作一边念，可以调动兴趣。通过快速回顾已学词汇，激活记忆，为当天学习做好准备。&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;10 分钟&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;&lt;strong&gt;新单词导入&lt;/strong&gt;（听、说）&lt;/td&gt;&lt;td&gt;利用录音或家长示范，&lt;strong&gt;听&lt;/strong&gt;3~5个新单词的正确发音，并&lt;strong&gt;跟读&lt;/strong&gt;练习发音。家长可将单词放入简短句子中读给孩子听，帮助理解词义。孩子在这一环节主要培养听音辨字和开口模仿，初步认识新词。&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;15 分钟&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;&lt;strong&gt;认读与理解&lt;/strong&gt;（读、说、玩）&lt;/td&gt;&lt;td&gt;出示新单词的卡片或写在白板上，让孩子&lt;strong&gt;读&lt;/strong&gt;出单词并说出中文含义。结合图片或孩子自己画一个小插图，加深&lt;strong&gt;视觉联想&lt;/strong&gt;记忆。可以玩“小老师”游戏，让孩子给每个单词造句或讲&lt;strong&gt;小故事&lt;/strong&gt;，边说边记，增强理解。这一环节兼顾阅读认知和口语表达，并融入了&lt;strong&gt;游戏&lt;/strong&gt;元素。&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;15 分钟&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;&lt;strong&gt;书写练习&lt;/strong&gt;（写）&lt;/td&gt;&lt;td&gt;让孩子在笔记本上&lt;strong&gt;写&lt;/strong&gt;新单词，每个单词用拼音或分音节划分音节后书写三遍。例如“because”划分为be-cause再书写。可以变换有趣方式，如彩虹字母书写（每个字母用不同颜色）、在沙盘中写字母等，增加趣味。家长要及时检查书写，纠正拼写错误，指导孩子注意字母顺序。通过书写加深单词的拼写记忆。&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;10 分钟&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;&lt;strong&gt;趣味单词游戏&lt;/strong&gt;（听、读、写、玩）&lt;/td&gt;&lt;td&gt;用游戏巩固当天所学。例如：进行&lt;strong&gt;拼写接龙&lt;/strong&gt;游戏，家长说一个单词，孩子写下第一个字母，家长续写第二个字母，轮流拼出单词；或者玩“&lt;strong&gt;字母消失&lt;/strong&gt;”游戏：将单词写出后让孩子闭眼，家长擦去其中一个字母，孩子睁眼后说出缺了哪个字母。也可玩&lt;strong&gt;单词拼图&lt;/strong&gt;、字母卡片拼单词、听写抢答等。通过游戏在轻松氛围中强化拼写。&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;5 分钟&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;&lt;strong&gt;小测验与反馈&lt;/strong&gt;（听、写）&lt;/td&gt;&lt;td&gt;家长口头&lt;strong&gt;提问&lt;/strong&gt;2~3个当日新学单词，请孩子尝试默写。尽量模拟学校默写形式，但气氛轻松。然后一起对照检查拼写是否正确。对写对的给予表扬，写错的不要批评，而是和孩子一起拼读纠正。最后用贴纸或笑脸做好记录。这个环节帮助孩子及时了解掌握情况，做到当日查漏补缺。&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
-&lt;p&gt;以上安排总计约60分钟，各环节时间可根据孩子注意力适当调整。每天的练习既涵盖&lt;strong&gt;听说读写&lt;/strong&gt;各方面，又穿插了&lt;strong&gt;游戏&lt;/strong&gt;和休息转换，保证孩子始终保持兴趣和专注度。在家长陪同下，以鼓励和互动为主，营造愉快的学习氛围。&lt;/p&gt;
-&lt;div&gt;&lt;h2 id=&quot;三适合该年龄段的拼写记忆技巧&quot;&gt;三、适合该年龄段的拼写记忆技巧&lt;/h2&gt;&lt;a href=&quot;#三适合该年龄段的拼写记忆技巧&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “三、适合该年龄段的拼写记忆技巧”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;三年级孩子正处于形象思维和兴趣导向的年龄段，可以采用多种&lt;strong&gt;趣味记忆技巧&lt;/strong&gt;来帮助记忆单词拼写。以下是几种有效的方法：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;图像联想记忆：&lt;strong&gt;利用孩子爱画画的特点，把单词和图像联系起来记忆。例如，记忆单词“elephant”时，可以让孩子画一头大象，在大象身体上标出“elephant”单词的字母；看到&lt;/strong&gt;图像&lt;/strong&gt;就能联想到字母拼写。对于抽象词，可以借助谐音或形象化的方法，将单词的形状与熟悉的事物联系，如把单词看成一幅画。这种&lt;strong&gt;视觉化&lt;/strong&gt;记忆能调动大脑的图像记忆能力，提升记忆效果。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;分音节拼读记法：&lt;strong&gt;将长单词拆分成&lt;/strong&gt;易读的音节&lt;/strong&gt;或拼音块，一部分一部分地记。比如“remember”可以拆为“re-mem-ber”，每次记住其中一节，再连起来拼写。对于多音节单词，也可以编句子帮助记忆每个音节的发音和顺序。例如记忆“mammoth”（猛犸象）时，用一句话“My Aunt Mary’s Manly Hat”来帮助记忆mam-moth两部分（每个单词的首字母对应原单词的拼写）。这种&lt;strong&gt;拆分法&lt;/strong&gt;让长单词变“短”，降低记忆难度。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;有趣口诀与首字母助记：&lt;strong&gt;编创顺口的&lt;/strong&gt;句子或口诀&lt;/strong&gt;，利用单词字母的首字母串联成一句话，加深印象。例如，单词“because”的7个字母B-E-C-A-U-S-E，可以对应一句英语短语：“&lt;strong&gt;Big Elephants Can Always Understand Small Elephants&lt;/strong&gt;”（大象总能理解小象）。滑稽的句子既包含了单词的每个字母开头，又有意义便于记忆，让孩子在乐趣中牢记拼写。家长也可和孩子一起，用中文或英文为容易拼错的单词编造小口诀，越有画面感和趣味性越好。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;押韵歌谣记忆：&lt;strong&gt;利用&lt;/strong&gt;儿歌或韵文&lt;/strong&gt;来记单词拼写和发音。把单词的拼写规则编进简单的歌谣中，或者寻找单词尾音相同的一组词一起念。如通过儿歌记住“字母Q后面总跟着U”的规则，或者把字母表歌用来记拼写。押韵可以帮助儿童更好地感知&lt;strong&gt;音律和字母模式&lt;/strong&gt;。例如让孩子发现&lt;strong&gt;同韵词&lt;/strong&gt;的规律：掌握了“ball”的拼写，就很容易记住“tall, call, fall, hall”等押韵词的拼写。借助熟悉的旋律唱出单词字母，也是孩子喜闻乐见的记忆方式。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;多感官记忆：&lt;strong&gt;鼓励孩子用&lt;/strong&gt;听觉、触觉和运动&lt;/strong&gt;参与背单词。例如，边&lt;strong&gt;拍手或跺脚&lt;/strong&gt;边拼读单词节奏；用彩色橡皮泥捏出单词的字母形状；在纸上先描红字母再尝试默写；闭上眼用手指在空中或手心写字母。这些多感官参与的方法能增强孩子对字母序列的肌肉记忆和感知记忆，让背单词不再只是静态的眼睛和大脑活动。孩子喜欢动手动脑，玩中学会更加牢固。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;p&gt;综上，结合图像、声音、节奏、肢体动作等方法，能够大大提高拼写记忆的效率和乐趣。家长不妨和孩子一起创造属于自己的&lt;strong&gt;记忆小技巧&lt;/strong&gt;，让记单词变成一件充满创意的事情。&lt;/p&gt;
-&lt;div&gt;&lt;h2 id=&quot;四家长协助孩子学习的方式&quot;&gt;四、家长协助孩子学习的方式&lt;/h2&gt;&lt;a href=&quot;#四家长协助孩子学习的方式&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “四、家长协助孩子学习的方式”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;父母的陪伴和指导在孩子的单词学习中非常重要。家长可以采取以下方式来协助孩子高效、有趣地学习：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;参与游戏，共同学习：&lt;strong&gt;利用孩子喜欢游戏的特点，家长可以扮演&lt;/strong&gt;游戏伙伴&lt;/strong&gt;。例如一起玩“&lt;strong&gt;拼字接龙&lt;/strong&gt;”或“&lt;strong&gt;拼写雪人&lt;/strong&gt;（Hangman改编）”等游戏，让学习过程充满欢笑。家长也可以自制奖励机制，比如拼对一个词就给孩子一个小贴纸或画一颗星星，以游戏奖励机制激发动力。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;朗读单词，引导发音：&lt;strong&gt;家长每天陪孩子&lt;/strong&gt;朗读&lt;/strong&gt;单词表或例句，给孩子做正确发音示范。在孩子拼读时，耐心&lt;strong&gt;倾听&lt;/strong&gt;并及时纠正发音与拼写错误。可以采用分音节拼读的方式一块块拼，并&lt;strong&gt;鼓励孩子大胆开口&lt;/strong&gt;模仿。通过亲子共读，孩子既练习了听说能力，又加深了对单词的记忆。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;创设语言环境：&lt;strong&gt;在日常生活中融入所学单词，加深印象。家长可以在家里贴上英语标签（如冰箱上贴“fridge”），或在看到相关物品时用英语说出，让孩子&lt;/strong&gt;情景复习&lt;/strong&gt;。散步时玩“&lt;strong&gt;我看见…&lt;/strong&gt;”游戏（I spy），轮流说出看到的物品英语单词。让孩子体会到单词不是为了默写而学，而是可以实际使用的语言。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;鼓励和正向反馈：&lt;strong&gt;在学习过程中，家长应多给予&lt;/strong&gt;积极评价&lt;/strong&gt;。当孩子拼对一个单词时，及时表扬：“你记得真棒！这些字母顺序都对了。”对于拼错的单词，避免责备，可说：“这个单词有点难，我们再试一次好吗？”并指出其中关键字母让孩子注意。可以允许孩子先按&lt;strong&gt;发音拼写&lt;/strong&gt;尝试（哪怕写成“bkz”表示 &lt;em&gt;because&lt;/em&gt; 这样的拼音拼写也没关系），认可他们的努力再逐步纠正。温暖的鼓励能建立孩子的信心，减少对默写的恐惧。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;协助制作学习工具：&lt;strong&gt;家长可以和孩子一起动手制作&lt;/strong&gt;单词卡片、单词海报或词汇本&lt;/strong&gt;。例如为容易混淆的单词建立一个“错词本”，每次错词写在本子上，日后翻看巩固。或者像前文提到的“海报单词”方法：每个难词画张海报，集齐5个✔️就算过关。家长和孩子一起DIY学习用具，不仅增加亲子互动，还能让孩子更乐于使用这些工具自我检测。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;总之，家长的陪伴应当是&lt;strong&gt;引导者和伙伴&lt;/strong&gt;的角色，通过一起读、一起玩、一起制作，在不知不觉中帮助孩子掌握单词。创造轻松的家庭学习氛围，让孩子感受到父母的支持和学习的乐趣，比起严厉督促更能提高效率。&lt;/p&gt;
-&lt;div&gt;&lt;h2 id=&quot;五缓解默写紧张的练习活动与小游戏&quot;&gt;五、缓解默写紧张的练习活动与小游戏&lt;/h2&gt;&lt;a href=&quot;#五缓解默写紧张的练习活动与小游戏&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “五、缓解默写紧张的练习活动与小游戏”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;默写时的紧张往往来自对错误的恐惧和陌生的考试氛围。我们可以设计一些有针对性的练习和小游戏，帮助孩子在模拟中建立信心，在趣味中克服紧张。&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;通过将拼写练习融入游戏和互动，比如让孩子用字母积木拼单词等方式，可以营造轻松的练习环境，减轻默写带来的压力。家长的陪伴和鼓励使孩子在练习中保持愉快的心情，有助于提高记忆效果和信心。&lt;/em&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;角色扮演默写：&lt;strong&gt;家长和孩子交换角色，玩“老师和学生”的游戏。让孩子当一次“小老师”，给家长出单词默写题目。家长故意写错几个单词，请“小老师”来批改打分。幽默的角色互换能让孩子体会到&lt;/strong&gt;当考官而不是考生&lt;/strong&gt;的感觉，放松对考试的紧张。同时在批改中再次巩固了单词。当重新回到孩子当学生，家长当老师模拟默写时，孩子也会感觉更熟悉放松。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;计时挑战赛：&lt;strong&gt;有时紧张来自于时间压力。我们可以将默写练习设计成“&lt;strong&gt;一分钟拼写挑战&lt;/strong&gt;”。家长设定计时器，在1分钟内说出尽可能多的学过的单词，让孩子尽快写下。这更像游戏而非考试。每次挑战后统计拼对了多少词，与自己之前的成绩&lt;/strong&gt;比赛&lt;/strong&gt;。这种&lt;strong&gt;个人挑战&lt;/strong&gt;的形式，让孩子关注于超越自己，而非害怕出错。随着次数增加，孩子会发现自己进步，从而建立信心。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;**拼词接力球：**准备一个软球，进行“&lt;strong&gt;拼词投球&lt;/strong&gt;”游戏。玩法是家长先说一个单词并把球抛给孩子，孩子需要说出该单词的第一个字母，然后将球抛回给家长。家长说出第二个字母再抛给孩子，如此往返，一起把单词的字母顺序拼出来。如果中途有人说错了字母，也没关系，重新开始这个单词即可。这种边运动边拼写的练习，把默写变成了合作游戏，身体活动还能舒缓紧张情绪。全家人一起玩更有趣，欢笑中不知不觉就把单词默写练熟了。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;错词消灭游戏：&lt;strong&gt;针对孩子在默写中总是特别紧张的几个“拦路虎”单词，可以制作“&lt;strong&gt;炸掉错词&lt;/strong&gt;”小游戏。将这些单词分别写在小卡片上。家长和孩子将卡片铺在桌上，好似游戏关卡。家长扮演出题人，说中文让孩子写英文。如果写对了，就“砰”地盖一个小图章（表示炸弹拆除了），如果写错了，先不急着纠正，而是把卡片留在一边，稍后一起研究这个词为什么错、应该怎么记。通过这种游戏化的闯关形式，孩子会有&lt;/strong&gt;击败难题&lt;/strong&gt;的成就感，而不会一味紧张害怕遇到它们。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;放松训练&lt;/strong&gt;：在正式默写前，教孩子一些&lt;strong&gt;简单放松技巧&lt;/strong&gt;也很重要。例如深呼吸三次，脑中快速回想一次要默写的单词表，然后告诉自己“我已经准备好了”。家长可以和孩子一起做几秒钟的眼保健操或摇摇手放松手指，让身体放松下来再开始写。还可以准备一张“加油微笑纸条”贴在孩子书桌上，上面写着鼓励的话或画个笑脸，在默写前让孩子看一眼，建立积极心态。心理放松好了，上考场就不容易紧张慌乱。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;通过上述这些活动，孩子可以在模拟和游戏中逐步适应默写的形式，把“考”变成“玩”。当真正面对学校默写时，他/她会联想到家里练习时的轻松场景，心态更平和，从而发挥出应有水平。&lt;/p&gt;
-&lt;div&gt;&lt;h2 id=&quot;六每周复习与测验建议查漏补缺&quot;&gt;六、每周复习与测验建议（查漏补缺）&lt;/h2&gt;&lt;a href=&quot;#六每周复习与测验建议查漏补缺&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “六、每周复习与测验建议（查漏补缺）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;要将学过的单词真正掌握，&lt;strong&gt;科学的复习和测验机制&lt;/strong&gt;非常关键。下面是每周循环中复习巩固的建议：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;定期小测验：&lt;strong&gt;建议每周末或下周开始时，由家长组织一次&lt;/strong&gt;小测验&lt;/strong&gt;，内容包括本周的新单词，以及前几周反复出错的旧单词。形式可以多样：既可以是正式的&lt;strong&gt;书面默写&lt;/strong&gt;，也可以是口头拼写或选择题等。在测验中尽量让孩子独立完成，然后家长一起&lt;strong&gt;对答案&lt;/strong&gt;。定期测验就像里程碑一样，检查阶段性学习效果，督促孩子查漏补缺。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;错词本与巩固：&lt;strong&gt;将每次小测验中拼错的单词记录在&lt;/strong&gt;错词本&lt;/strong&gt;上。错词本既可以是一个笔记本，也可以用便利贴贴在墙上“错词墙”。下一周开始时，花10分钟和孩子一起来重点复习这些&lt;strong&gt;易错词&lt;/strong&gt;：分析为什么写错，是发音记错了还是字母顺序混淆了，针对性地运用前面介绍的记忆技巧重新记一遍。例如如果因为粗心丢了字母，就编个口诀提醒自己。如果是某个字母总写反，就刻意多写几遍强化手感。通过这种方式确保&lt;strong&gt;没有疏漏&lt;/strong&gt;：每周把漏洞补上，下次测验争取不再错同样的词。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;循环复习（间隔重复）：&lt;strong&gt;单词记忆需要反复巩固。建议采用“&lt;strong&gt;间隔重复&lt;/strong&gt;”的策略来安排复习频率。例如：本周一学的新词，在周二先快速复习一遍（间隔1天），周五再复习一遍（间隔4天），下周一再次复习（间隔7天）。每次复习时可以让孩子尝试&lt;/strong&gt;闭眼拼写&lt;/strong&gt;或者听家长读词写下，看是否还记得。如果遗忘了就重点再记。一些实践表明，经过1天、3天、1周的渐进式巩固，单词会从短期记忆转入长期记忆，不容易再忘记。家长可在日历上帮孩子做一个简单的复习计划表，按间隔标注哪些天要复习过去哪些单词，让复习有计划地进行。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;综合应用复习：&lt;strong&gt;除了机械地背拼写，也可以通过&lt;/strong&gt;阅读和造句&lt;/strong&gt;来复习单词。在每周末，家长可以和孩子一起读一篇包含本周单词的小故事或短文，在&lt;strong&gt;语境&lt;/strong&gt;中巩固词汇。如果没有合适材料，可以让孩子用这周学的单词各说或写一个句子。比如本周学了颜色词，就让孩子描述“我最喜欢的颜色…”。通过听说读写的综合应用，检查孩子是否真正理解了单词意义及用法，而不仅是会拼写。这样的复习使单词活起来，也更有趣。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;奖励与成就感：&lt;strong&gt;在每周复习和测试结束后，给予孩子一些&lt;/strong&gt;正向反馈&lt;/strong&gt;和奖励，强化他的成就感。如果孩子顺利掌握了大部分单词，可以在词汇表旁画一个进度条或贴上小星星，直观展示“本周掌握了XX个单词”。若全部通过，还可以适当奖励如看一集英文动画或周末户外活动等。让孩子觉得付出努力后收获了成果，从而更有动力面对下一周的新单词学习。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;通过“学习—复习—测验—反馈”的每周闭环，孩子能及时发现并补救自己尚未掌握的词汇，逐步构建起更加牢固的单词库。查漏补缺的过程也是培养&lt;strong&gt;自我监控&lt;/strong&gt;和&lt;strong&gt;主动学习&lt;/strong&gt;习惯的过程。当孩子养成每周自主复习的习惯，日后的英语学习将更加轻松高效。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;结语：&lt;strong&gt;以上方案注重将科学的记忆方法与孩子的兴趣相结合，循序渐进地提高词汇量和默写能力。从控制每周单词数量、每天均衡训练，到运用图像联想和趣味口诀记单词，再到家长的陪伴鼓励，以及克服默写紧张的小妙招，旨在让孩子在轻松愉快的氛围中学有所获。希望通过此方案，孩子能够逐步提升英语单词拼写水平，建立自信心，真正做到&lt;/strong&gt;乐学善记&lt;/strong&gt;，在日后的英语学习道路上打下扎实基础。祝愿孩子在家长的陪伴下快乐地挑战单词王国，每周都有新进步！&lt;/p&gt;</content:encoded><category>ChatGPT</category><category>Education</category><category>Primary School</category><category>English</category></item></channel></rss>
+&lt;/blockquote&gt;</content:encoded><category>Claude Code</category><category>Anthropic</category><category>Claude Relay Service</category></item></channel></rss>
