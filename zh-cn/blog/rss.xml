@@ -1,4 +1,138 @@
-<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Vibe Sparking AI | Blog</title><description/><link>https://www.vibesparking.com/</link><language>zh-CN</language><item><title>Claude Code 套娃使用 Cursor Agent GPT-5 模型</title><link>https://www.vibesparking.com/zh-cn/blog/ai/claude-code/commands/2025-08-12-gpt5-claude-code-cursor-codex/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/claude-code/commands/2025-08-12-gpt5-claude-code-cursor-codex/</guid><pubDate>Tue, 12 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # Claude Code 套娃使用 Cursor Agent GPT-5 模型 --&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Vibe Sparking AI | Blog</title><description/><link>https://www.vibesparking.com/</link><language>zh-CN</language><item><title>ZCF 一键把 Claude Code「配齐」全套的开发工作利器</title><link>https://www.vibesparking.com/zh-cn/blog/ai/claude-code/2025-08-12-zcf-one-click-claude-code/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/claude-code/2025-08-12-zcf-one-click-claude-code/</guid><pubDate>Tue, 12 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # ZCF 一键把 Claude Code「配齐」全套的开发工作利器 --&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;关键词：零配置安装、交互式菜单、CCR 路由、省钱用模态、BMAD 团队工作流、Git 命令集&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;—&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;引言&quot;&gt;引言&lt;/h2&gt;&lt;a href=&quot;#引言&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “引言”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;装 Claude Code，导入工作流，配 API/MCP，设置个性和默认模型……手工一步步配，既枯燥也容易出错。
+**ZCF（Zero-Config Claude-Code Flow）把这一切打包成“一键装好、开箱可用”。**支持中英文、交互式菜单、企业级工作流、CCR 省钱路由，几分钟就能把开发环境跑顺。&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;—&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;亮点一览为啥值得用&quot;&gt;亮点一览（为啥值得用）&lt;/h2&gt;&lt;a href=&quot;#亮点一览为啥值得用&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “亮点一览（为啥值得用）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;零配置 + 一键初始化&lt;/strong&gt;：&lt;code dir=&quot;auto&quot;&gt;npx zcf&lt;/code&gt; 打开交互式菜单，选 1 就能完成：安装 Claude Code、导入工作流、配置 API 或 CCR、配置 MCP。&lt;strong&gt;适合新机器/新成员快速拉起环境&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;交互式菜单超直观&lt;/strong&gt;：菜单覆盖 &lt;strong&gt;配置 API/CCR、MCP、默认模型、AI 个性&lt;/strong&gt; 等常用项；还内置 &lt;strong&gt;CCR 管理、使用统计（ccusage）&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;CCR（Claude Code Router）省钱路由&lt;/strong&gt;：按类型把请求分流到不同模型，&lt;strong&gt;能通过 Claude Code 界面调起 Gemini、DeepSeek 等“免费/低价模型”&lt;/strong&gt;，还带 Web UI 与一键升级。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;BMAD 企业工作流&lt;/strong&gt;：内置产品、项目、架构、研发、测试等&lt;strong&gt;多角色代理&lt;/strong&gt;，支持绿地/存量项目，能自动生成文档，&lt;code dir=&quot;auto&quot;&gt;/bmad-init&lt;/code&gt; 一键初始化。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;实用 Git 命令集&lt;/strong&gt;：&lt;code dir=&quot;auto&quot;&gt;/git-commit&lt;/code&gt; 智能提交、&lt;code dir=&quot;auto&quot;&gt;/git-rollback&lt;/code&gt; 安全回滚、&lt;code dir=&quot;auto&quot;&gt;/git-cleanBranches&lt;/code&gt; 清理分支。&lt;strong&gt;把常用 Git 操作流程化&lt;/strong&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;以上能力在项目 README 的 Quick Start、CCR、BMAD、安装流程和安装项清单里都有明确说明与示例。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;—&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;安装与初始化最省心路径&quot;&gt;安装与初始化（最省心路径）&lt;/h2&gt;&lt;a href=&quot;#安装与初始化最省心路径&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “安装与初始化（最省心路径）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# 方式A：交互式菜单（推荐）&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;npx&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;zcf&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# 方式B：直达一键装好&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;npx&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;zcf&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;i&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;   &lt;/span&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# 安装 Claude Code + 导入工作流 + 配 API/CCR + 配 MCP&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# 已安装 Claude Code，仅更新工作流&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;npx&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;zcf&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;u&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# 打开 CCR 管理（省钱路由）&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;npx&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;zcf&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;ccr&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# 使用统计（ccusage）&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;npx&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;zcf&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;ccu&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;p&gt;**菜单里会让你选择：配置语言、AI 输出语言、AI 个性、鉴权方式（Auth Token 或 API Key）、是否使用 CCR、是否安装 MCP。**全程有备份与合并策略，安全不慌。&lt;/p&gt;
+&lt;p&gt;—&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;推荐用法上手就见效&quot;&gt;推荐用法（上手就见效）&lt;/h2&gt;&lt;a href=&quot;#推荐用法上手就见效&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “推荐用法（上手就见效）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3 id=&quot;1新项目极速起步&quot;&gt;1）新项目极速起步&lt;/h3&gt;&lt;a href=&quot;#1新项目极速起步&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1）新项目极速起步”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;npx zcf i&lt;/code&gt; 完整初始化 → &lt;code dir=&quot;auto&quot;&gt;claude&lt;/code&gt; 启动后输入 &lt;code dir=&quot;auto&quot;&gt;/init&lt;/code&gt; 自动生成 &lt;strong&gt;CLAUDE.md&lt;/strong&gt;，让 AI 先读懂你的项目骨架。&lt;/li&gt;
+&lt;li&gt;小任务直接写自然语言描述即可；&lt;strong&gt;遵循 SOLID/KISS/DRY/YAGNI&lt;/strong&gt; 的最小变更策略。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;2做功能走结构化路线&quot;&gt;2）做功能，走结构化路线&lt;/h3&gt;&lt;a href=&quot;#2做功能走结构化路线&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2）做功能，走结构化路线”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;/feat &amp;#x3C;任务&gt;&lt;/code&gt;：自动进入&lt;strong&gt;规划 → UI&lt;/strong&gt;两阶段，适合有页面/交互的需求。&lt;/li&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;/workflow &amp;#x3C;任务&gt;&lt;/code&gt;：给出多种解法、每步都征求你反馈、可随时改计划，&lt;strong&gt;可控性更强&lt;/strong&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;3团队协作与存量改造&quot;&gt;3）团队协作与存量改造&lt;/h3&gt;&lt;a href=&quot;#3团队协作与存量改造&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3）团队协作与存量改造”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;/bmad-init&lt;/code&gt; 拉起 &lt;strong&gt;BMAD 团队工作流&lt;/strong&gt;，定义角色、质量门禁、文档产出，适合多人并行与遗留系统治理。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;4把成本打下来&quot;&gt;4）把成本打下来&lt;/h3&gt;&lt;a href=&quot;#4把成本打下来&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “4）把成本打下来”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code dir=&quot;auto&quot;&gt;npx zcf ccr&lt;/code&gt; 配好 CCR：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;规则路由“&lt;strong&gt;检索/改写 → 便宜模型&lt;/strong&gt;”，“&lt;strong&gt;核心实现/评审 → 强模型&lt;/strong&gt;”。&lt;/li&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;npx zcf check-updates&lt;/code&gt; 一键升级 CCR 与 Claude Code。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;5日常卫生与回溯&quot;&gt;5）日常卫生与回溯&lt;/h3&gt;&lt;a href=&quot;#5日常卫生与回溯&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “5）日常卫生与回溯”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;/git-commit&lt;/code&gt;、&lt;code dir=&quot;auto&quot;&gt;/git-rollback&lt;/code&gt;、&lt;code dir=&quot;auto&quot;&gt;/git-cleanBranches&lt;/code&gt; &lt;strong&gt;把 Git 操作流程化&lt;/strong&gt;，减少手误，回滚更安心。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;—&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;适合谁&quot;&gt;适合谁&lt;/h2&gt;&lt;a href=&quot;#适合谁&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “适合谁”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;个人开发者&lt;/strong&gt;：一台新电脑，三分钟搭完 AI 开发栈。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;小团队/外包协作&lt;/strong&gt;：统一配置与工作流，&lt;strong&gt;成员加入即开工&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;中大团队/ToB 项目&lt;/strong&gt;：BMAD 多角色 + 质量门，&lt;strong&gt;过程可控、文档齐全&lt;/strong&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;—&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;小技巧与避坑&quot;&gt;小技巧与避坑&lt;/h2&gt;&lt;a href=&quot;#小技巧与避坑&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “小技巧与避坑”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;语言与个性&lt;/strong&gt;：菜单里可设 &lt;strong&gt;AI 输出语言&lt;/strong&gt; 与 &lt;strong&gt;Assistant 个性&lt;/strong&gt;（Professional、Friendly 等），能明显影响沟通风格与结果质量。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;MCP 服务&lt;/strong&gt;：可选 Context7、DeepWiki、Playwright、Exa 等，&lt;strong&gt;按需开&lt;/strong&gt;，避免无谓开销。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Windows / Termux 也稳&lt;/strong&gt;：ZCF 做了平台适配与格式修复逻辑，命令检测也更稳。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;—&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;结语&quot;&gt;结语&lt;/h2&gt;&lt;a href=&quot;#结语&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “结语”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;ZCF 把“装配置、理工作流、控成本”这些琐事一把梭。&lt;/strong&gt;
+想象一下：新成员入职，&lt;code dir=&quot;auto&quot;&gt;npx zcf i&lt;/code&gt;，喝口水回来，项目就能跑。
+你觉得最想先用哪一段？&lt;strong&gt;CCR 省钱路由&lt;/strong&gt;还是 &lt;strong&gt;BMAD 团队工作流&lt;/strong&gt;？欢迎在评论区聊聊。&lt;/p&gt;
+&lt;p&gt;—&lt;/p&gt;&lt;!-- ## 多语言标题（3 组）
+
+1. **中文**：一键装好 Claude Code：ZCF 把安装、工作流、路由全配齐
+   **English**: One-Click Claude Code: ZCF packs setup, workflows, and routing
+   **繁體**：一鍵裝好 Claude Code：ZCF 把安裝、工作流、路由全配齊
+   **日本語**：ワンクリックで Claude Code 完成：ZCF がセットアップもルーティングも
+   **Français** : Claude Code en un clic : ZCF regroupe setup, workflows et routage
+   **Español**: Claude Code en un clic: ZCF integra setup, flujos y ruteo
+   **Português**: Claude Code em um clique: ZCF integra setup, fluxos e roteamento
+   **slug**：zcf-one-click-claude-code
+
+2. **中文**：用 ZCF 省时又省钱：CCR 路由 + BMAD 团队工作流实战
+   **English**: Save time &amp; cost with ZCF: CCR routing + BMaD team workflows
+   **繁體**：用 ZCF 省時又省錢：CCR 路由 + BMAD 團隊工作流實戰
+   **日本語**：ZCF で時短＆コスト削減：CCR ルーティングと BMAD ワークフロー
+   **Français** : Gagnez temps et coûts avec ZCF : routage CCR + flux BMAD
+   **Español**: Ahorra tiempo y coste con ZCF: ruteo CCR + flujos BMAD
+   **Português**: Poupe tempo e custo com ZCF: CCR + fluxos BMAD
+   **slug**：zcf-ccr-bmad-playbook
+
+3. **中文**：零配置上手 AI 开发：ZCF 把 Claude Code 变成“即插即用”
+   **English**: Zero-config AI dev: ZCF makes Claude Code plug-and-play
+   **繁體**：零配置上手 AI 開發：ZCF 讓 Claude Code 即插即用
+   **日本語**：ゼロ設定の AI 開発：ZCF で Claude Code が即戦力に
+   **Français** : IA sans config : ZCF rend Claude Code plug-and-play
+   **Español**: IA sin configuración: ZCF hace Claude Code plug-and-play
+   **Português**: IA sem configuração: ZCF deixa Claude Code plug-and-play
+   **slug**：zcf-zero-config-ai-dev
+
+—
+
+## 插画图建议（2:1，比列固定；**英文文字**；插画风）
+
+**封面图**
+
+* 文案：*“ZCF: One-click setup for Claude Code”*
+* 画面：桌面上终端 `npx zcf` 正在运行；侧边浮现「Workflows」「CCR Router」「BMAD Team」「Git Commands」四个彩色卡片；背景极简科技线条。
+
+**章节配图（推荐 3 张）**
+
+1. *“Interactive Menu”*：终端菜单界面卡片化，选项高亮（Install、Workflows、API/CCR、MCP）。
+2. *“CCR Routing”*：左侧请求流 → 中间路由节点 → 右侧多模型图标（Gemini、DeepSeek…），下方小字 *“Cost Optimized”*。
+3. *“BMAD Team Workflow”*：九宫格角色头像（PO/PM/Architect/Dev/QA/SM/BA/UX…）→ 文档/检查清单图标，标注 *“Quality Gates”*。
+
+—
+
+## 朋友圈/评论区 3 条文案
+
+1. “新同事来一台新电脑？`npx zcf i` 回来就能开干。CCR 还把账单打下来，真香。”
+2. “工作流太散？ZCF 把 feat/workflow、BMAD、Git 命令串成一条龙。效率上热搜。”
+3. “不想手搓配置文件了，交给 ZCF。菜单点点点，比咖啡还提神。”
+
+—
+
+需要我把这篇扩写成「团队落地 SOP + 配置清单」版本吗？或者做一份 **CCR 路由规则样例** 给你直接抄用也行。
+
+[1]: https://github.com/UfoMiao/zcf &quot;GitHub - UfoMiao/zcf: Zero-Config Claude-Code Flow&quot; --&gt;</content:encoded><category>zcf - AI Agent - Claude Code</category></item><item><title>Claude Code 套娃使用 Cursor Agent GPT-5 模型</title><link>https://www.vibesparking.com/zh-cn/blog/ai/claude-code/commands/2025-08-12-gpt5-claude-code-cursor-codex/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/claude-code/commands/2025-08-12-gpt5-claude-code-cursor-codex/</guid><pubDate>Tue, 12 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # Claude Code 套娃使用 Cursor Agent GPT-5 模型 --&gt;
 &lt;p&gt;把 Claude Code 当“调度中心”，用自定义 &lt;strong&gt;slash command&lt;/strong&gt; 把任务转给 &lt;strong&gt;Cursor Agent CLI&lt;/strong&gt;，直接用 &lt;strong&gt;GPT-5&lt;/strong&gt; 在本地动手改代码、跑命令、回报结果。&lt;/p&gt;
 &lt;p&gt;GPT-5 是目前 OpenAI 最强编码模型**，在真实工程场景、长链路代理任务上都有提升；并且官方明确了它在 &lt;strong&gt;Cursor、Windsurf、GitHub Copilot、Codex CLI&lt;/strong&gt; 等“代理式编码”产品里的协作优势。Codex CLI 也把 &lt;strong&gt;GPT-5&lt;/strong&gt; 设为默认/推荐模型。&lt;/p&gt;
 &lt;hr&gt;
@@ -2169,122 +2303,7 @@ HHS 在疫情期上线 &lt;strong&gt;Tiberius&lt;/strong&gt;（&lt;strong&gt;202
 [8]: https://developer.android.com/studio/gemini/overview?utm_source=chatgpt.com &quot;Gemini in Android Studio&quot;
 [9]: https://ai.google.dev/gemini-api/docs/pricing?utm_source=chatgpt.com &quot;Gemini Developer API Pricing | Gemini API | Google AI for ...&quot;
 [10]: https://developer.android.com/studio/releases?utm_source=chatgpt.com &quot;Android Studio Narwhal Feature Drop | 2025.1.2&quot;
-[11]: https://androidstudio.googleblog.com/2025/07/android-studio-narwhal-feature-drop_31.html?utm_source=chatgpt.com &quot;Android Studio Narwhal Feature Drop | 2025.1.2 now ...&quot; --&gt;</content:encoded><category>Android Studio</category><category>Gemini</category><category>AI Agent</category><category>Android</category><category>Google</category></item><item><title>Claude Code Cookbook 秘籍：自动化命令 + 多角色 + 智能 Hook</title><link>https://www.vibesparking.com/zh-cn/blog/ai/claude-code/2025-08-02-claude-code-cookbook-unlock-commands-roles-hooks/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/claude-code/2025-08-02-claude-code-cookbook-unlock-commands-roles-hooks/</guid><pubDate>Sat, 02 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # Claude Code Cookbook 带来一套系统化的开发工作流 --&gt;
-&lt;p&gt;&lt;strong&gt;打造你专属的 Claude 编程操作系统&lt;/strong&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;引言&quot;&gt;💡引言&lt;/h2&gt;&lt;a href=&quot;#引言&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “💡引言”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;很多人用 Claude Code 写代码，但你有没有觉得：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;明明 Claude 很强，却总得手把手教&lt;/li&gt;
-&lt;li&gt;每次要做测试、改文档、生成 PR，全靠你提醒？&lt;/li&gt;
-&lt;li&gt;或者切换角色让人手忙脚乱，效率不升反降？&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;最近日本工程师 &lt;a href=&quot;https://github.com/wasabeef&quot;&gt;@wasabeef&lt;/a&gt; 放出一个神级项目 —— &lt;a href=&quot;https://github.com/wasabeef/claude-code-cookbook&quot;&gt;claude-code-cookbook&lt;/a&gt;，
-&lt;strong&gt;让 Claude Code 像“自动化开发助理”一样，干活快、反馈准、思路清。&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;它不是一个普通的 Prompt 模板，而是 Claude 的“扩展操作系统”。&lt;/p&gt;
-&lt;p&gt;👇 我已经试了几天，非常惊艳，强烈推荐给所有用 Claude 开发项目的朋友！&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;-三大核心功能解锁-claude-的隐藏能力&quot;&gt;🔧 三大核心功能：解锁 Claude 的隐藏能力&lt;/h2&gt;&lt;a href=&quot;#-三大核心功能解锁-claude-的隐藏能力&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “🔧 三大核心功能：解锁 Claude 的隐藏能力”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h3 id=&quot;-1-commands让-claude-听你的命令&quot;&gt;🧾 1. Commands：让 Claude 听你的命令&lt;/h3&gt;&lt;a href=&quot;#-1-commands让-claude-听你的命令&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “🧾 1. Commands：让 Claude 听你的命令”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;只要输入 &lt;code dir=&quot;auto&quot;&gt;/命令名&lt;/code&gt;，Claude 就会开始执行对应任务。&lt;/p&gt;
-&lt;p&gt;比如：&lt;/p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;命令&lt;/th&gt;&lt;th&gt;功能&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;code dir=&quot;auto&quot;&gt;/explain-code&lt;/code&gt;&lt;/td&gt;&lt;td&gt;自动讲解代码逻辑&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code dir=&quot;auto&quot;&gt;/fix-error&lt;/code&gt;&lt;/td&gt;&lt;td&gt;根据报错，生成修复方案&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code dir=&quot;auto&quot;&gt;/commit-message&lt;/code&gt;&lt;/td&gt;&lt;td&gt;自动写 Git commit 信息&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code dir=&quot;auto&quot;&gt;/pr-create&lt;/code&gt;&lt;/td&gt;&lt;td&gt;自动生成 PR 内容&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code dir=&quot;auto&quot;&gt;/check-prompt&lt;/code&gt;&lt;/td&gt;&lt;td&gt;帮你优化提示词&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code dir=&quot;auto&quot;&gt;/semantic-commit&lt;/code&gt;&lt;/td&gt;&lt;td&gt;语义化提交，提升版本控制质量&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
-&lt;p&gt;光是这些就足够让你减少大量重复性对话。&lt;/p&gt;
-&lt;p&gt;💡 每个命令本质是 Markdown 文件，支持自定义扩展，放进 &lt;code dir=&quot;auto&quot;&gt;commands/&lt;/code&gt; 目录即可。&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h3 id=&quot;-2-roles多角色切换claude-化身专业顾问&quot;&gt;🎭 2. Roles：多角色切换，Claude 化身专业顾问&lt;/h3&gt;&lt;a href=&quot;#-2-roles多角色切换claude-化身专业顾问&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “🎭 2. Roles：多角色切换，Claude 化身专业顾问”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;Claude 支持像“子人格”一样切换不同角色，比如：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;/role qa&lt;/code&gt; 测试工程师&lt;/li&gt;
-&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;/role mobile&lt;/code&gt; 移动开发专家&lt;/li&gt;
-&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;/role security&lt;/code&gt; 安全顾问&lt;/li&gt;
-&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;/role architect&lt;/code&gt; 架构师&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;🌟 亮点是：支持并发执行！&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;/role&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;performance&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;--agent&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;/role&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;security&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;--agent&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;p&gt;Claude 会同时启动多个角色，&lt;strong&gt;并行分析&lt;/strong&gt;，最终统一出具建议。
-这在做大项目评审、设计审查时，非常有用。&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h3 id=&quot;-3-hooks自动脚本开发体验拉满&quot;&gt;⛓ 3. Hooks：自动脚本，开发体验拉满&lt;/h3&gt;&lt;a href=&quot;#-3-hooks自动脚本开发体验拉满&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “⛓ 3. Hooks：自动脚本，开发体验拉满”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;你可以设定一些脚本钩子，在特定时机自动运行。&lt;/p&gt;
-&lt;p&gt;比如：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;check-ai-commit.sh&lt;/code&gt;：禁止 AI 签名出现在 Git 提交中&lt;/li&gt;
-&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;preserve-file-permissions.sh&lt;/code&gt;：自动保存/恢复文件权限&lt;/li&gt;
-&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;auto-comment.sh&lt;/code&gt;：提示添加 docstring 注释&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;连 “任务执行完提醒你” 这种小贴心也安排上了：&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;osascript（macOS&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;通知脚本）&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;p&gt;一句话，&lt;strong&gt;Claude 真成了一个帮你打杂 + 提醒 + 写代码的靠谱搭子。&lt;/strong&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;-项目流完整自动化流程图&quot;&gt;🧪 项目流完整自动化流程图&lt;/h2&gt;&lt;a href=&quot;#-项目流完整自动化流程图&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “🧪 项目流完整自动化流程图”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;👇 项目里自带了一套开发流程图，从任务识别到 CI 状态追踪，一气呵成：&lt;/p&gt;
-
-&lt;p&gt;你甚至可以照这个逻辑，定制自己团队的“Claude 开发流水线”。&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;-如何使用&quot;&gt;🚀 如何使用？&lt;/h2&gt;&lt;a href=&quot;#-如何使用&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “🚀 如何使用？”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h3 id=&quot;安装与配置超简单&quot;&gt;安装与配置超简单：&lt;/h3&gt;&lt;a href=&quot;#安装与配置超简单&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “安装与配置超简单：”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;克隆仓库：&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;git&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;clone&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;https://github.com/wasabeef/claude-code-cookbook.git&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;~/.claude&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;在 Claude 客户端设置路径&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;修改 &lt;code dir=&quot;auto&quot;&gt;settings.json&lt;/code&gt; 来挂载 hooks、扩展命令&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;🛠 添加自定义命令、角色也只需在对应文件夹写 &lt;code dir=&quot;auto&quot;&gt;.md&lt;/code&gt;，很容易上手。&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;-总结把-claude-变成你的工程副驾&quot;&gt;🧠 总结：把 Claude 变成你的工程副驾&lt;/h2&gt;&lt;a href=&quot;#-总结把-claude-变成你的工程副驾&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “🧠 总结：把 Claude 变成你的工程副驾”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;Claude Code Cookbook 带来一套&lt;strong&gt;系统化的开发工作流&lt;/strong&gt;，让你：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;高效组织&lt;/strong&gt;项目任务，Claude 自动跟进&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;自由切换&lt;/strong&gt;专业角色，应对不同工作情境&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;自动化脚本&lt;/strong&gt;辅助，彻底解放双手&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;对每个用 Claude 做 serious 开发的你来说，这是提升效率与专业度的神器。&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;📣 &lt;strong&gt;你最想定制什么命令给 Claude？&lt;/strong&gt;
-欢迎在评论区分享，一起打造更聪明的 Claude 助理！&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;如果你喜欢这类 AI 工具技巧，记得【在看 + 转发】给你搞技术的朋友！&lt;/p&gt;</content:encoded><category>AI Agent</category><category>Claude Code</category></item><item><title>从 Aider 到 Crush：开源 AI 代码助手</title><link>https://www.vibesparking.com/zh-cn/blog/ai/crush/2025-08-02-crush-open-source-coding-king/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/crush/2025-08-02-crush-open-source-coding-king/</guid><pubDate>Sat, 02 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # 从 Aider 到 Crush：开源 AI 代码助手 --&gt;
+[11]: https://androidstudio.googleblog.com/2025/07/android-studio-narwhal-feature-drop_31.html?utm_source=chatgpt.com &quot;Android Studio Narwhal Feature Drop | 2025.1.2 now ...&quot; --&gt;</content:encoded><category>Android Studio</category><category>Gemini</category><category>AI Agent</category><category>Android</category><category>Google</category></item><item><title>从 Aider 到 Crush：开源 AI 代码助手</title><link>https://www.vibesparking.com/zh-cn/blog/ai/crush/2025-08-02-crush-open-source-coding-king/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/crush/2025-08-02-crush-open-source-coding-king/</guid><pubDate>Sat, 02 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # 从 Aider 到 Crush：开源 AI 代码助手 --&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Crush 是一款由 Charm 团队开源的 &lt;strong&gt;终端里「接好 LLM 就能陪你写代码」AI 代理&lt;/strong&gt;。它支持多家大模型、跨平台、会话记忆、LSP 语义补全、MCP 可扩展插件及细粒度安全控制；安装只需一个包管理器或 &lt;code dir=&quot;auto&quot;&gt;go install&lt;/code&gt; 即可；日常用法围绕「拿到 API-Key → 启动 → 写配置 → 一键切模型」。下面按公众号排版要求，带你 5 分钟摸透 Crush。&lt;/p&gt;
 &lt;/blockquote&gt;

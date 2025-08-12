@@ -1,4 +1,138 @@
-<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Vibe Sparking AI | Blog</title><description/><link>https://www.vibesparking.com/</link><language>en</language><item><title>Claude Code Orchestrates Cursor Agent with GPT-5</title><link>https://www.vibesparking.com/en/blog/ai/claude-code/commands/2025-08-12-gpt5-claude-code-cursor-codex/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/claude-code/commands/2025-08-12-gpt5-claude-code-cursor-codex/</guid><pubDate>Tue, 12 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # Claude Code Orchestrates Cursor Agent with GPT-5 --&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Vibe Sparking AI | Blog</title><description/><link>https://www.vibesparking.com/</link><language>en</language><item><title>ZCF One-Click: Fully Kit Out Claude Code with a Complete Developer Toolkit</title><link>https://www.vibesparking.com/en/blog/ai/claude-code/2025-08-12-zcf-one-click-claude-code/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/claude-code/2025-08-12-zcf-one-click-claude-code/</guid><pubDate>Tue, 12 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # ZCF One-Click: Fully Kit Out Claude Code with a Complete Developer Toolkit --&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Keywords: zero-config installation, interactive menu, CCR routing, cost-optimized model usage, BMAD team workflows, Git command set&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;—&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;&lt;a href=&quot;#introduction&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Introduction”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Installing Claude Code, importing workflows, setting up API/MCP, configuring persona and default models… doing it all manually is tedious and error-prone.
+&lt;strong&gt;ZCF (Zero-Config Claude-Code Flow) bundles everything into a one-click, out-of-the-box setup.&lt;/strong&gt; It supports both Chinese and English, an interactive menu, enterprise-grade workflows, and CCR cost-saving routing, getting your dev environment humming in minutes.&lt;/p&gt;
+&lt;p&gt;—&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;highlights-at-a-glance-why-its-worth-using&quot;&gt;Highlights at a Glance (Why It’s Worth Using)&lt;/h2&gt;&lt;a href=&quot;#highlights-at-a-glance-why-its-worth-using&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Highlights at a Glance (Why It’s Worth Using)”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Zero configuration + one-click init&lt;/strong&gt;: &lt;code dir=&quot;auto&quot;&gt;npx zcf&lt;/code&gt; opens an interactive menu; choose 1 to complete: install Claude Code, import workflows, configure API or CCR, configure MCP. &lt;strong&gt;Perfect for spinning up new machines/new team members fast&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Intuitive interactive menu&lt;/strong&gt;: Covers &lt;strong&gt;API/CCR, MCP, default model, AI persona&lt;/strong&gt; and other common options; also includes &lt;strong&gt;CCR management and usage stats (ccusage)&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;CCR (Claude Code Router) cost-saving routing&lt;/strong&gt;: Route requests by type to different models, &lt;strong&gt;so you can call Gemini, DeepSeek and other “free/low-cost models” directly from the Claude Code UI&lt;/strong&gt;. Comes with a Web UI and one-click upgrades.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;BMAD enterprise workflows&lt;/strong&gt;: Built-in multi-role agents for product, project, architecture, development, testing, etc., supporting both greenfield and legacy projects, with auto-generated docs; &lt;code dir=&quot;auto&quot;&gt;/bmad-init&lt;/code&gt; initializes with one command.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Practical Git command set&lt;/strong&gt;: &lt;code dir=&quot;auto&quot;&gt;/git-commit&lt;/code&gt; for smart commits, &lt;code dir=&quot;auto&quot;&gt;/git-rollback&lt;/code&gt; for safe rollbacks, &lt;code dir=&quot;auto&quot;&gt;/git-cleanBranches&lt;/code&gt; to clean branches. &lt;strong&gt;Turns common Git operations into guided flows&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;All of the above is clearly documented with examples in the project README’s Quick Start, CCR, BMAD, installation flow, and install options list.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;—&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;installation--initialization-the-easiest-path&quot;&gt;Installation &amp;#x26; Initialization (The Easiest Path)&lt;/h2&gt;&lt;a href=&quot;#installation--initialization-the-easiest-path&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Installation &amp;#x26; Initialization (The Easiest Path)”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# Option A: Interactive menu (recommended)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;npx&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;zcf&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# Option B: One-shot setup&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;npx&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;zcf&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;i&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;   &lt;/span&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# Install Claude Code + import workflows + configure API/CCR + configure MCP&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# Claude Code already installed, only update workflows&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;npx&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;zcf&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;u&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# Open CCR management (cost-saving router)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;npx&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;zcf&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;ccr&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# Usage statistics (ccusage)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;npx&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;zcf&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;ccu&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;The menu lets you choose: interface language, AI output language, AI persona, auth method (Auth Token or API Key), whether to use CCR, whether to install MCP.&lt;/strong&gt; Backups and merge strategies are built-in throughout for peace of mind.&lt;/p&gt;
+&lt;p&gt;—&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;recommended-usage-results-from-day-one&quot;&gt;Recommended Usage (Results from Day One)&lt;/h2&gt;&lt;a href=&quot;#recommended-usage-results-from-day-one&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Recommended Usage (Results from Day One)”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3 id=&quot;1-kickstart-a-new-project&quot;&gt;1) Kickstart a New Project&lt;/h3&gt;&lt;a href=&quot;#1-kickstart-a-new-project&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1) Kickstart a New Project”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;Run &lt;code dir=&quot;auto&quot;&gt;npx zcf i&lt;/code&gt; for full initialization → after launching &lt;code dir=&quot;auto&quot;&gt;claude&lt;/code&gt;, type &lt;code dir=&quot;auto&quot;&gt;/init&lt;/code&gt; to auto-generate &lt;strong&gt;CLAUDE.md&lt;/strong&gt;, so the AI first understands your project’s skeleton.&lt;/li&gt;
+&lt;li&gt;For small tasks, just write natural language; follow &lt;strong&gt;SOLID/KISS/DRY/YAGNI&lt;/strong&gt; with a minimal-change mindset.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;2-build-features-the-structured-way&quot;&gt;2) Build Features the Structured Way&lt;/h3&gt;&lt;a href=&quot;#2-build-features-the-structured-way&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2) Build Features the Structured Way”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;/feat &amp;#x3C;task&gt;&lt;/code&gt;: Automatically enters the two phases of &lt;strong&gt;Planning → UI&lt;/strong&gt;, ideal for page/interaction requirements.&lt;/li&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;/workflow &amp;#x3C;task&gt;&lt;/code&gt;: Presents multiple approaches, asks for your feedback at each step, and supports on-the-fly plan changes — &lt;strong&gt;much stronger controllability&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;3-teaming-up-and-modernizing-legacy-systems&quot;&gt;3) Teaming Up and Modernizing Legacy Systems&lt;/h3&gt;&lt;a href=&quot;#3-teaming-up-and-modernizing-legacy-systems&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3) Teaming Up and Modernizing Legacy Systems”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;/bmad-init&lt;/code&gt; boots &lt;strong&gt;BMAD team workflows&lt;/strong&gt;, defining roles, quality gates, and documentation output — great for multi-person parallel work and legacy system remediation.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;4-drive-costs-down&quot;&gt;4) Drive Costs Down&lt;/h3&gt;&lt;a href=&quot;#4-drive-costs-down&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “4) Drive Costs Down”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Configure CCR with &lt;code dir=&quot;auto&quot;&gt;npx zcf ccr&lt;/code&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Rule-based routing: &lt;strong&gt;“retrieval/rewrites → economical models”&lt;/strong&gt;, &lt;strong&gt;“core implementation/review → strong models.”&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;npx zcf check-updates&lt;/code&gt; upgrades CCR and Claude Code in one go.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;5-daily-hygiene-and-safe-rollbacks&quot;&gt;5) Daily Hygiene and Safe Rollbacks&lt;/h3&gt;&lt;a href=&quot;#5-daily-hygiene-and-safe-rollbacks&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “5) Daily Hygiene and Safe Rollbacks”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;/git-commit&lt;/code&gt;, &lt;code dir=&quot;auto&quot;&gt;/git-rollback&lt;/code&gt;, &lt;code dir=&quot;auto&quot;&gt;/git-cleanBranches&lt;/code&gt; &lt;strong&gt;turn Git operations into guided flows&lt;/strong&gt;, reducing slips and making rollbacks safer.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;—&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;who-is-it-for&quot;&gt;Who Is It For&lt;/h2&gt;&lt;a href=&quot;#who-is-it-for&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Who Is It For”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Individual developers&lt;/strong&gt;: New laptop to fully set up an AI dev stack in three minutes.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Small teams/contract collaborations&lt;/strong&gt;: Unified configuration and workflows; &lt;strong&gt;new members start contributing immediately&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Mid-to-large teams/ToB projects&lt;/strong&gt;: BMAD multi-role + quality gates; &lt;strong&gt;controlled execution with complete documentation&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;—&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;tips-and-pitfalls-to-avoid&quot;&gt;Tips and Pitfalls to Avoid&lt;/h2&gt;&lt;a href=&quot;#tips-and-pitfalls-to-avoid&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Tips and Pitfalls to Avoid”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Language and persona&lt;/strong&gt;: In the menu, you can set &lt;strong&gt;AI output language&lt;/strong&gt; and &lt;strong&gt;Assistant persona&lt;/strong&gt; (Professional, Friendly, etc.), which significantly influence communication style and output quality.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;MCP services&lt;/strong&gt;: Optional services like Context7, DeepWiki, Playwright, Exa — &lt;strong&gt;enable as needed&lt;/strong&gt; to avoid unnecessary costs.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Solid on Windows / Termux&lt;/strong&gt;: ZCF includes platform adaptation and formatting fixes, plus sturdier command detection.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;—&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;closing&quot;&gt;Closing&lt;/h2&gt;&lt;a href=&quot;#closing&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Closing”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;ZCF streamlines the “setup configs, organize workflows, control costs” grind into a single sweep.&lt;/strong&gt;
+Imagine this: a new teammate joins, runs &lt;code dir=&quot;auto&quot;&gt;npx zcf i&lt;/code&gt;, grabs a drink, and the project is ready to run.
+Which part would you try first — &lt;strong&gt;CCR cost-saving routing&lt;/strong&gt; or &lt;strong&gt;BMAD team workflows&lt;/strong&gt;? Share in the comments.&lt;/p&gt;
+&lt;p&gt;—&lt;/p&gt;&lt;!-- ## Multilingual Titles (3 Sets)
+
+1. **Chinese**: 一键装好 Claude Code：ZCF 把安装、工作流、路由全配齐
+   **English**: One-Click Claude Code: ZCF packs setup, workflows, and routing
+   **Traditional Chinese**：一鍵裝好 Claude Code：ZCF 把安裝、工作流、路由全配齊
+   **Japanese**：ワンクリックで Claude Code 完成：ZCF がセットアップもルーティングも
+   **Français** : Claude Code en un clic : ZCF regroupe setup, workflows et routage
+   **Español**: Claude Code en un clic: ZCF integra setup, flujos y ruteo
+   **Português**: Claude Code em um clique: ZCF integra setup, fluxos e roteamento
+   **slug**: zcf-one-click-claude-code
+
+2. **Chinese**: 用 ZCF 省时又省钱：CCR 路由 + BMAD 团队工作流实战
+   **English**: Save time &amp; cost with ZCF: CCR routing + BMaD team workflows
+   **Traditional Chinese**：用 ZCF 省時又省錢：CCR 路由 + BMAD 團隊工作流實戰
+   **Japanese**：ZCF で時短＆コスト削減：CCR ルーティングと BMAD ワークフロー
+   **Français** : Gagnez temps et coûts avec ZCF : routage CCR + flux BMAD
+   **Español**: Ahorra tiempo y coste con ZCF: ruteo CCR + flujos BMAD
+   **Português**: Poupe tempo e custo com ZCF: CCR + fluxos BMAD
+   **slug**: zcf-ccr-bmad-playbook
+
+3. **Chinese**: 零配置上手 AI 开发：ZCF 把 Claude Code 变成“即插即用”
+   **English**: Zero-config AI dev: ZCF makes Claude Code plug-and-play
+   **Traditional Chinese**：零配置上手 AI 開發：ZCF 讓 Claude Code 即插即用
+   **Japanese**：ゼロ設定の AI 開発：ZCF で Claude Code が即戦力に
+   **Français** : IA sans config : ZCF rend Claude Code plug-and-play
+   **Español**: IA sin configuración: ZCF hace Claude Code plug-and-play
+   **Português**: IA sem configuração: ZCF deixa Claude Code plug-and-play
+   **slug**: zcf-zero-config-ai-dev
+
+—
+
+## Illustration Suggestions (2:1 ratio fixed; English text; illustration style)
+
+**Cover**
+
+* Copy: *“ZCF: One-click setup for Claude Code”*
+* Visual: Desktop terminal with `npx zcf` running; four colorful floating cards “Workflows”, “CCR Router”, “BMAD Team”, “Git Commands”; clean tech-line background.
+
+**Section Graphics (3 recommended)**
+
+1. *“Interactive Menu”*: Terminal menu UI stylized as cards, highlighted options (Install, Workflows, API/CCR, MCP).
+2. *“CCR Routing”*: Request flow on the left → routing node in the middle → multiple model icons on the right (Gemini, DeepSeek…), with small text *“Cost Optimized.”*
+3. *“BMAD Team Workflow”*: 3×3 grid of role avatars (PO/PM/Architect/Dev/QA/SM/BA/UX…) → document/checklist icons labeled *“Quality Gates.”*
+
+—
+
+## Social/Comments Copy (3 lines)
+
+1. “New teammate with a fresh laptop? `npx zcf i` and they’re ready to roll by the time they’re back. CCR even trims the bill — delightful.”
+2. “Workflows too scattered? ZCF strings feat/workflow, BMAD, and Git commands into one cohesive chain. Efficiency trending.”
+3. “Don’t want to hand-craft config files? Leave it to ZCF. Click through the menu — more energizing than coffee.”
+
+—
+
+Want me to expand this into a **Team SOP + Configuration Checklist** version? Or put together a **CCR routing rules template** you can copy-paste.
+
+[1]: https://github.com/UfoMiao/zcf &quot;GitHub - UfoMiao/zcf: Zero-Config Claude-Code Flow&quot; --&gt;</content:encoded><category>zcf</category><category>AI Agent</category><category>Claude Code</category></item><item><title>Claude Code Orchestrates Cursor Agent with GPT-5</title><link>https://www.vibesparking.com/en/blog/ai/claude-code/commands/2025-08-12-gpt5-claude-code-cursor-codex/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/claude-code/commands/2025-08-12-gpt5-claude-code-cursor-codex/</guid><pubDate>Tue, 12 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # Claude Code Orchestrates Cursor Agent with GPT-5 --&gt;
 &lt;p&gt;Use Claude Code as a “control center.” With a custom slash command, hand the task off to the Cursor Agent CLI so that GPT-5 can modify code locally, run commands, and report results back.&lt;/p&gt;
 &lt;p&gt;GPT-5 is OpenAI’s most capable coding model to date, with improvements for real-world engineering scenarios and long-horizon agent tasks. The company explicitly highlights its strengths in “agentic coding” products such as Cursor, Windsurf, GitHub Copilot, and Codex CLI. Codex CLI also sets GPT-5 as the default/recommended model.&lt;/p&gt;
 &lt;hr&gt;
@@ -2097,122 +2231,7 @@ Open &lt;strong&gt;Prompt Library → Rules&lt;/strong&gt;, write down your proj
 &lt;div&gt;&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;&lt;a href=&quot;#conclusion&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Conclusion”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
 &lt;p&gt;&lt;strong&gt;Agent Mode isn’t just an “intelligent dialog box”—it’s a full-stack teammate that can modify code, run scripts, and write tests.&lt;/strong&gt;
 It transforms Android Studio into a truly AI-powered IDE.&lt;/p&gt;
-&lt;p&gt;👉 &lt;strong&gt;What will you have the Agent help you with first?&lt;/strong&gt; Writing unit tests? Refactoring legacy modules? Share your thoughts in the comments—maybe the next article will break down your use case!&lt;/p&gt;</content:encoded><category>Android Studio</category><category>Gemini</category><category>AI Agent</category><category>Android</category><category>Google</category></item><item><title>Claude Code Cookbook: Automated Commands + Multi-Role System + Intelligent Hooks</title><link>https://www.vibesparking.com/en/blog/ai/claude-code/2025-08-02-claude-code-cookbook-unlock-commands-roles-hooks/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/claude-code/2025-08-02-claude-code-cookbook-unlock-commands-roles-hooks/</guid><pubDate>Sat, 02 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # Claude Code Cookbook brings a systematic development workflow --&gt;
-&lt;p&gt;&lt;strong&gt;Build Your Personal Claude Programming Operating System&lt;/strong&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;-introduction&quot;&gt;💡 Introduction&lt;/h2&gt;&lt;a href=&quot;#-introduction&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “💡 Introduction”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;Many people use Claude Code for programming, but have you ever felt that:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Despite Claude being powerful, you always have to guide it step by step&lt;/li&gt;
-&lt;li&gt;Every time you need testing, documentation updates, or PR generation, you have to remind it manually&lt;/li&gt;
-&lt;li&gt;Role switching becomes chaotic and actually reduces efficiency instead of improving it&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Recently, Japanese engineer &lt;a href=&quot;https://github.com/wasabeef&quot;&gt;@wasabeef&lt;/a&gt; released an incredible project — &lt;a href=&quot;https://github.com/wasabeef/claude-code-cookbook&quot;&gt;claude-code-cookbook&lt;/a&gt;,
-&lt;strong&gt;transforming Claude Code into an “automated development assistant” that works fast, provides accurate feedback, and thinks clearly.&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;This isn’t just another prompt template collection, but Claude’s “extended operating system.”&lt;/p&gt;
-&lt;p&gt;👇 I’ve been testing it for several days and it’s absolutely impressive. Highly recommended for anyone using Claude for development projects!&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;-three-core-features-unlocking-claudes-hidden-capabilities&quot;&gt;🔧 Three Core Features: Unlocking Claude’s Hidden Capabilities&lt;/h2&gt;&lt;a href=&quot;#-three-core-features-unlocking-claudes-hidden-capabilities&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “🔧 Three Core Features: Unlocking Claude’s Hidden Capabilities”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h3 id=&quot;-1-commands-make-claude-follow-your-instructions&quot;&gt;🧾 1. Commands: Make Claude Follow Your Instructions&lt;/h3&gt;&lt;a href=&quot;#-1-commands-make-claude-follow-your-instructions&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “🧾 1. Commands: Make Claude Follow Your Instructions”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;Simply type &lt;code dir=&quot;auto&quot;&gt;/command-name&lt;/code&gt; and Claude will execute the corresponding task.&lt;/p&gt;
-&lt;p&gt;For example:&lt;/p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Command&lt;/th&gt;&lt;th&gt;Function&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;code dir=&quot;auto&quot;&gt;/explain-code&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Automatically explain code logic&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code dir=&quot;auto&quot;&gt;/fix-error&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Generate fixes based on errors&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code dir=&quot;auto&quot;&gt;/commit-message&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Auto-write Git commit messages&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code dir=&quot;auto&quot;&gt;/pr-create&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Auto-generate PR content&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code dir=&quot;auto&quot;&gt;/check-prompt&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Help optimize your prompts&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code dir=&quot;auto&quot;&gt;/semantic-commit&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Semantic commits for better version control&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
-&lt;p&gt;These commands alone can eliminate countless repetitive conversations.&lt;/p&gt;
-&lt;p&gt;💡 Each command is essentially a Markdown file that supports custom extensions—just place them in the &lt;code dir=&quot;auto&quot;&gt;commands/&lt;/code&gt; directory.&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h3 id=&quot;-2-roles-multi-role-switching-claude-as-professional-consultant&quot;&gt;🎭 2. Roles: Multi-Role Switching, Claude as Professional Consultant&lt;/h3&gt;&lt;a href=&quot;#-2-roles-multi-role-switching-claude-as-professional-consultant&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “🎭 2. Roles: Multi-Role Switching, Claude as Professional Consultant”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;Claude supports switching between different roles like “sub-personalities,” such as:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;/role qa&lt;/code&gt; Test Engineer&lt;/li&gt;
-&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;/role mobile&lt;/code&gt; Mobile Development Expert&lt;/li&gt;
-&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;/role security&lt;/code&gt; Security Consultant&lt;/li&gt;
-&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;/role architect&lt;/code&gt; System Architect&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;🌟 The highlight: supports concurrent execution!&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;/role&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;performance&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;--agent&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;/role&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;security&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;--agent&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;p&gt;Claude will simultaneously launch multiple roles for &lt;strong&gt;parallel analysis&lt;/strong&gt; and provide unified recommendations.
-This is incredibly useful for large project reviews and design assessments.&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h3 id=&quot;-3-hooks-automated-scripts-for-maximum-development-experience&quot;&gt;⛓ 3. Hooks: Automated Scripts for Maximum Development Experience&lt;/h3&gt;&lt;a href=&quot;#-3-hooks-automated-scripts-for-maximum-development-experience&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “⛓ 3. Hooks: Automated Scripts for Maximum Development Experience”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;You can set up script hooks that run automatically at specific moments.&lt;/p&gt;
-&lt;p&gt;For example:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;check-ai-commit.sh&lt;/code&gt;: Prevents AI signatures from appearing in Git commits&lt;/li&gt;
-&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;preserve-file-permissions.sh&lt;/code&gt;: Automatically saves/restores file permissions&lt;/li&gt;
-&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;auto-comment.sh&lt;/code&gt;: Prompts to add docstring comments&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Even thoughtful touches like “task completion notifications” are included:&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;osascript&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; (macOS &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;notification&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;script&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;p&gt;In short, &lt;strong&gt;Claude truly becomes a reliable partner that handles chores, provides reminders, and writes code.&lt;/strong&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;-complete-project-automation-workflow&quot;&gt;🧪 Complete Project Automation Workflow&lt;/h2&gt;&lt;a href=&quot;#-complete-project-automation-workflow&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “🧪 Complete Project Automation Workflow”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;👇 The project includes a comprehensive development workflow diagram, from task identification to CI status tracking, all seamlessly integrated:&lt;/p&gt;
-
-&lt;p&gt;You can even follow this logic to customize your team’s “Claude development pipeline.”&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;-how-to-use&quot;&gt;🚀 How to Use?&lt;/h2&gt;&lt;a href=&quot;#-how-to-use&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “🚀 How to Use?”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h3 id=&quot;installation-and-configuration-are-super-simple&quot;&gt;Installation and Configuration Are Super Simple:&lt;/h3&gt;&lt;a href=&quot;#installation-and-configuration-are-super-simple&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Installation and Configuration Are Super Simple:”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;Clone the repository:&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;git&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;clone&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;https://github.com/wasabeef/claude-code-cookbook.git&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;~/.claude&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Set the path in Claude client&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Modify &lt;code dir=&quot;auto&quot;&gt;settings.json&lt;/code&gt; to mount hooks and extend commands&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;🛠 Adding custom commands and roles simply requires writing &lt;code dir=&quot;auto&quot;&gt;.md&lt;/code&gt; files in the corresponding folders—very easy to get started.&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;-summary-transform-claude-into-your-engineering-co-pilot&quot;&gt;🧠 Summary: Transform Claude into Your Engineering Co-Pilot&lt;/h2&gt;&lt;a href=&quot;#-summary-transform-claude-into-your-engineering-co-pilot&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “🧠 Summary: Transform Claude into Your Engineering Co-Pilot”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;Claude Code Cookbook brings a &lt;strong&gt;systematic development workflow&lt;/strong&gt; that enables you to:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Efficiently organize&lt;/strong&gt; project tasks with Claude automatically following up&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Freely switch&lt;/strong&gt; between professional roles to handle different work scenarios&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Automate scripts&lt;/strong&gt; to completely free your hands&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;For everyone doing serious development with Claude, this is a game-changing tool for boosting efficiency and professionalism.&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;📣 &lt;strong&gt;What commands would you most like to customize for Claude?&lt;/strong&gt;
-Feel free to share in the comments and let’s build smarter Claude assistants together!&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;If you enjoy these AI tool tips, remember to share with your tech-savvy friends!&lt;/p&gt;</content:encoded><category>AI Agent</category><category>Claude Code</category></item><item><title>From Aider to Crush: Open Source AI Coding Assistants</title><link>https://www.vibesparking.com/en/blog/ai/crush/2025-08-02-crush-open-source-coding-king/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/crush/2025-08-02-crush-open-source-coding-king/</guid><pubDate>Sat, 02 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # From Aider to Crush: Open Source AI Coding Assistants --&gt;
+&lt;p&gt;👉 &lt;strong&gt;What will you have the Agent help you with first?&lt;/strong&gt; Writing unit tests? Refactoring legacy modules? Share your thoughts in the comments—maybe the next article will break down your use case!&lt;/p&gt;</content:encoded><category>Android Studio</category><category>Gemini</category><category>AI Agent</category><category>Android</category><category>Google</category></item><item><title>From Aider to Crush: Open Source AI Coding Assistants</title><link>https://www.vibesparking.com/en/blog/ai/crush/2025-08-02-crush-open-source-coding-king/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/crush/2025-08-02-crush-open-source-coding-king/</guid><pubDate>Sat, 02 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # From Aider to Crush: Open Source AI Coding Assistants --&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Crush is an open-source &lt;strong&gt;terminal-based “plug-in-LLM-and-code-with-you” AI agent&lt;/strong&gt; created by the Charm team. It supports multiple large language models, cross-platform compatibility, conversation memory, LSP semantic completion, extensible MCP plugins, and fine-grained security controls. Installation requires just one package manager command or &lt;code dir=&quot;auto&quot;&gt;go install&lt;/code&gt;. Daily usage revolves around “get API key → launch → write config → switch models with one click.” Following our publication format, here’s your 5-minute deep dive into Crush.&lt;/p&gt;
 &lt;/blockquote&gt;
