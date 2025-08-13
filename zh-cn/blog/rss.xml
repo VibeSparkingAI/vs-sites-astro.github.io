@@ -1,4 +1,157 @@
-<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Vibe Sparking AI | Blog</title><description/><link>https://www.vibesparking.com/</link><language>zh-CN</language><item><title>Claude Code 和 Cursor 写好用户画像需求文档</title><link>https://www.vibesparking.com/zh-cn/blog/ai/claude-code/2025-08-13-persona-spec-for-ai-claude-cursor/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/claude-code/2025-08-13-persona-spec-for-ai-claude-cursor/</guid><pubDate>Wed, 13 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # 写给 Claude Code / Cursor 的「用户画像需求文档」：一份能让 AI 秒懂你诉求的模板与实战 --&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Vibe Sparking AI | Blog</title><description/><link>https://www.vibesparking.com/</link><language>zh-CN</language><item><title>Claude Code 和 Cursor 通过 Browser Echo 阅读前端浏览器 console 日志</title><link>https://www.vibesparking.com/zh-cn/blog/ai/2025-08-13-browser-echo-next-terminal-ai-fix/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/2025-08-13-browser-echo-next-terminal-ai-fix/</guid><pubDate>Wed, 13 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # Claude Code 和 Cursor 通过 Browser Echo 阅读浏览器 console 日志 --&gt;
+&lt;blockquote&gt;
+&lt;p&gt;**把浏览器里的 &lt;code dir=&quot;auto&quot;&gt;console.*&lt;/code&gt; 日志与错误，实时**“回声”**到本地终端，&lt;strong&gt;0 配置&lt;/strong&gt;可用，超适合 &lt;strong&gt;Cursor / Claude Code / Copilot CLI / Gemini CLI&lt;/strong&gt; 这类读终端输出的 AI 编码助手。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;引言&quot;&gt;引言&lt;/h2&gt;&lt;a href=&quot;#引言&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “引言”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;线上没复现、线下没堆栈、AI 助手看不到前端日志？
+&lt;strong&gt;Browser Echo&lt;/strong&gt; 直接把浏览器日志&lt;strong&gt;流式&lt;/strong&gt;打到你的开发终端，&lt;strong&gt;无需侵入业务&lt;/strong&gt;、&lt;strong&gt;不影响生产包&lt;/strong&gt;，还带文件行号与堆栈。AI 助手读到错误后，就能在 Cursor 或 Claude Code 里原地修。&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;亮点&quot;&gt;亮点&lt;/h2&gt;&lt;a href=&quot;#亮点&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “亮点”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;专为 AI 编码助手优化&lt;/strong&gt;：终端可读格式，Cursor、Claude Code、Copilot CLI、Gemini CLI 直接吃。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;跨框架即插即用&lt;/strong&gt;：React/Vue、Vite 家族、TanStack Start、&lt;strong&gt;Nuxt 3/4、Next.js&lt;/strong&gt; 全覆盖；也支持自定义集成。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;开发态生效&lt;/strong&gt;：&lt;strong&gt;不注入生产包&lt;/strong&gt;，默认仅 dev 模式启用。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;更像“后端日志”的前端日志&lt;/strong&gt;：批量上报、&lt;code dir=&quot;auto&quot;&gt;sendBeacon&lt;/code&gt;、&lt;strong&gt;文件:行:列&lt;/strong&gt; 源信息、&lt;strong&gt;堆栈&lt;/strong&gt;、&lt;strong&gt;彩色终端输出&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Vite 可选本地文件落盘&lt;/strong&gt;（Next/Nuxt 默认 stdout）。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;开源 MIT，最近更新&lt;/strong&gt;：当前最新 &lt;strong&gt;v0.0.6（2025-08-12）&lt;/strong&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;谁该用它&quot;&gt;谁该用它&lt;/h2&gt;&lt;a href=&quot;#谁该用它&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “谁该用它”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;你在 &lt;strong&gt;Cursor / Claude Code&lt;/strong&gt; 里修前端 bug，却&lt;strong&gt;看不到浏览器控制台&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;需要把用户现场的前端异常，&lt;strong&gt;第一时间抛到终端&lt;/strong&gt;（或文件），方便定位。&lt;/li&gt;
+&lt;li&gt;本地复现困难，希望 &lt;strong&gt;AI 读日志→给 Fix PR&lt;/strong&gt; 的闭环更顺滑。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;nextjsapp-router实战安装与使用&quot;&gt;Next.js（App Router）实战：安装与使用&lt;/h2&gt;&lt;a href=&quot;#nextjsapp-router实战安装与使用&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Next.js（App Router）实战：安装与使用”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;下文以 &lt;strong&gt;Next 14/15 + App Router&lt;/strong&gt; 为例。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div&gt;&lt;h3 id=&quot;-安装包&quot;&gt;① 安装包&lt;/h3&gt;&lt;a href=&quot;#-安装包&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “① 安装包”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# 任选包管理器&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;pnpm&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;add&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;-D&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;@browser-echo/core&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;@browser-echo/next&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# 或 npm/yarn 等价命令&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Browser Echo 的 &lt;strong&gt;Next provider&lt;/strong&gt; 与 &lt;code dir=&quot;auto&quot;&gt;@browser-echo/core&lt;/code&gt; 搭配使用。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div&gt;&lt;h3 id=&quot;-创建日志接收路由&quot;&gt;② 创建日志接收路由&lt;/h3&gt;&lt;a href=&quot;#-创建日志接收路由&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “② 创建日志接收路由”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;默认 &lt;strong&gt;Next&lt;/strong&gt; 的开发路由为：&lt;code dir=&quot;auto&quot;&gt;/api/client-logs&lt;/code&gt;。需要确保 &lt;strong&gt;导出 POST 处理器&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推荐方式（使用官方处理器）&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;包内已提供处理器；根据版本可能导出路径略有不同，请以仓库 README 为准。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;app/api/client-logs/route.ts&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;ts&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5D6376&quot;&gt;// 常见写法（示例）；如果导出路径不同，请按 README 调整&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;export&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; { POST } &lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;from&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&apos;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;@browser-echo/next&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&apos;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;注意：&lt;strong&gt;一定要有这个路由&lt;/strong&gt;，否则前端打点无处可投。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;兜底方式（自定义极简处理器）&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;如果你想先跑通链路再替换为官方处理器，可先临时打印所有 payload：&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;app/api/client-logs/route.ts&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;ts&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;export&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;async&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;function&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;POST&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;--0:#D7DBE0;--1:#403F53&quot;&gt;req&lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--1:#111111&quot;&gt;&lt;span style=&quot;--0:#FFCB8B&quot;&gt;Request&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD&quot;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; {&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;const &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;body&lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt; = await &lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;req&lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;json&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;()&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;console&lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;log&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&apos;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;[browser]&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&apos;&lt;/span&gt;&lt;span style=&quot;--0:#889FB2;--1:#4D667B&quot;&gt;,&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; body) &lt;/span&gt;&lt;span style=&quot;--0:#919F9F;--1:#5D6376&quot;&gt;// 简单直打印；后续可替换为包内处理器&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;return&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; Response&lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;json&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;({ ok: &lt;/span&gt;&lt;span style=&quot;--0:#FF6A83;--1:#A24848&quot;&gt;true&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; })&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3 id=&quot;-在-head-注入脚本组件&quot;&gt;③ 在 &lt;code dir=&quot;auto&quot;&gt;&amp;#x3C;head&gt;&lt;/code&gt; 注入脚本组件&lt;/h3&gt;&lt;a href=&quot;#-在-head-注入脚本组件&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “③ 在 &amp;#x3C;head&gt; 注入脚本组件”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;关键&lt;/strong&gt;：必须渲染 &lt;code dir=&quot;auto&quot;&gt;&amp;#x3C;BrowserEchoScript /&gt;&lt;/code&gt;。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;app/layout.tsx&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;tsx&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;import&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;type&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; { Metadata } &lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;from&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&apos;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;next&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&apos;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;import&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; { BrowserEchoScript } &lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;from&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&apos;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;@browser-echo/next&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&apos;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;export const &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;metadata&lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#FFCB8B;--1:#111111&quot;&gt;Metadata&lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt; = { title: &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&apos;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;My App&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&apos;&lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt; }&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;export&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;default&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;function&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;RootLayout&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;--1:#403F53&quot;&gt;&lt;span style=&quot;--0:#D6DEEB&quot;&gt;{ &lt;/span&gt;&lt;span style=&quot;--0:#D7DBE0&quot;&gt;children&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB&quot;&gt; }&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; { children&lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#FFCB8B;--1:#111111&quot;&gt;React&lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;--0:#FFCB8B;--1:#111111&quot;&gt;ReactNode&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; }&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;)&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; {&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;return&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; (&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span style=&quot;--1:#8844AE&quot;&gt;&lt;span style=&quot;--0:#7FDBCA&quot;&gt;&amp;#x3C;&lt;/span&gt;&lt;span style=&quot;--0:#CAECE6&quot;&gt;html&lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA&quot;&gt; &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;lang&lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;=&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;en&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#8844AE&quot;&gt;&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;      &lt;/span&gt;&lt;span style=&quot;--1:#8844AE&quot;&gt;&lt;span style=&quot;--0:#7FDBCA&quot;&gt;&amp;#x3C;&lt;/span&gt;&lt;span style=&quot;--0:#CAECE6&quot;&gt;head&lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;        &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#8844AE&quot;&gt;&amp;#x3C;&lt;/span&gt;&lt;span style=&quot;--0:#F78C6C;--1:#AA0982&quot;&gt;BrowserEchoScript&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;          &lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;options&lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;=&lt;/span&gt;&lt;span style=&quot;--0:#E2817F;--1:#B23834&quot;&gt;{&lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#8844AE&quot;&gt;{&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;            &lt;/span&gt;&lt;span style=&quot;--0:#919F9F;--1:#5D6376&quot;&gt;// 路由默认为 /api/client-logs（Next）&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;            &lt;/span&gt;&lt;span style=&quot;--0:#919F9F;--1:#5D6376&quot;&gt;// 也可自定义：route: &apos;/api/client-logs&apos;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#8844AE&quot;&gt;            &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#8844AE&quot;&gt;include:&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; [&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&apos;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;warn&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&apos;&lt;/span&gt;&lt;span style=&quot;--0:#889FB2;--1:#4D667B&quot;&gt;,&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&apos;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;error&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&apos;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;]&lt;/span&gt;&lt;span style=&quot;--0:#889FB2;--1:#4D667B&quot;&gt;,&lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#8844AE&quot;&gt;    &lt;/span&gt;&lt;span style=&quot;--0:#919F9F;--1:#5D6376&quot;&gt;// 降噪：只收警告与错误&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#8844AE&quot;&gt;            &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#8844AE&quot;&gt;stackMode: &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&apos;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;condensed&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&apos;&lt;/span&gt;&lt;span style=&quot;--0:#889FB2;--1:#4D667B&quot;&gt;,&lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#8844AE&quot;&gt;        &lt;/span&gt;&lt;span style=&quot;--0:#919F9F;--1:#5D6376&quot;&gt;// 堆栈展示：none | condensed | full&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#8844AE&quot;&gt;            &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#8844AE&quot;&gt;showSource: &lt;/span&gt;&lt;span style=&quot;--0:#FF6A83;--1:#A24848&quot;&gt;true&lt;/span&gt;&lt;span style=&quot;--0:#889FB2;--1:#4D667B&quot;&gt;,&lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#8844AE&quot;&gt;              &lt;/span&gt;&lt;span style=&quot;--0:#919F9F;--1:#5D6376&quot;&gt;// 打印 file:line:col&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#8844AE&quot;&gt;            &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#8844AE&quot;&gt;tag: &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&apos;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;[browser]&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&apos;&lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#8844AE&quot;&gt;               &lt;/span&gt;&lt;span style=&quot;--0:#919F9F;--1:#5D6376&quot;&gt;// 终端前缀&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#8844AE&quot;&gt;          &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#8844AE&quot;&gt;}&lt;/span&gt;&lt;span style=&quot;--0:#E2817F;--1:#B23834&quot;&gt;}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#8844AE&quot;&gt;        &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#8844AE&quot;&gt;/&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;      &lt;/span&gt;&lt;span style=&quot;--1:#8844AE&quot;&gt;&lt;span style=&quot;--0:#7FDBCA&quot;&gt;&amp;#x3C;/&lt;/span&gt;&lt;span style=&quot;--0:#CAECE6&quot;&gt;head&lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;      &lt;/span&gt;&lt;span style=&quot;--1:#8844AE&quot;&gt;&lt;span style=&quot;--0:#7FDBCA&quot;&gt;&amp;#x3C;&lt;/span&gt;&lt;span style=&quot;--0:#CAECE6&quot;&gt;body&lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#E2817F;--1:#B23834&quot;&gt;{&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;children&lt;/span&gt;&lt;span style=&quot;--0:#E2817F;--1:#B23834&quot;&gt;}&lt;/span&gt;&lt;span style=&quot;--1:#8844AE&quot;&gt;&lt;span style=&quot;--0:#7FDBCA&quot;&gt;&amp;#x3C;/&lt;/span&gt;&lt;span style=&quot;--0:#CAECE6&quot;&gt;body&lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span style=&quot;--1:#8844AE&quot;&gt;&lt;span style=&quot;--0:#7FDBCA&quot;&gt;&amp;#x3C;/&lt;/span&gt;&lt;span style=&quot;--0:#CAECE6&quot;&gt;html&lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;button title=&quot;Copy to clipboard&quot; data-copied=&quot;Copied!&quot; data-code=&quot;&quot;&gt;      &lt;head&gt;        &lt;BrowserEchoScript          options={{            // 路由默认为 /api/client-logs（Next）            // 也可自定义：route: &amp;#x27;/api/client-logs&amp;#x27;            include: [&amp;#x27;warn&amp;#x27;, &amp;#x27;error&amp;#x27;],    // 降噪：只收警告与错误            stackMode: &amp;#x27;condensed&amp;#x27;,        // 堆栈展示：none | condensed | full            showSource: true,              // 打印 file:line:col            tag: &amp;#x27;[browser]&amp;#x27;               // 终端前缀          }}        /&gt;      &lt;/head&gt;      &lt;body&gt;{children}&lt;/body&gt;      )}&quot;&gt;&lt;div&gt;&lt;/div&gt;&lt;/button&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;这些 &lt;strong&gt;options 名称与默认值&lt;/strong&gt; 来自官方文档的&lt;strong&gt;共享配置结构&lt;/strong&gt;，Next/Nuxt/Vite 的 provider 会以插件参数或组件 props 的形式承载。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div&gt;&lt;h3 id=&quot;-开发期查看与配合-ai-修复&quot;&gt;④ 开发期查看与配合 AI 修复&lt;/h3&gt;&lt;a href=&quot;#-开发期查看与配合-ai-修复&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “④ 开发期查看与配合 AI 修复”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;启动本地 dev 服务器，&lt;strong&gt;终端会实时打印浏览器日志&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;在 &lt;strong&gt;Cursor / Claude Code&lt;/strong&gt; 打开终端面板，让 AI &lt;strong&gt;读取日志 → 生成修复&lt;/strong&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;-常见问题速查&quot;&gt;⑤ 常见问题速查&lt;/h3&gt;&lt;a href=&quot;#-常见问题速查&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “⑤ 常见问题速查”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;没有任何日志&lt;/strong&gt;：确认你&lt;strong&gt;已经导出&lt;/strong&gt; &lt;code dir=&quot;auto&quot;&gt;app/api/client-logs/route.ts&lt;/code&gt; 的 &lt;code dir=&quot;auto&quot;&gt;POST&lt;/code&gt;，以及 &lt;code dir=&quot;auto&quot;&gt;&amp;#x3C;BrowserEchoScript /&gt;&lt;/code&gt; 已在 &lt;code dir=&quot;auto&quot;&gt;&amp;#x3C;head&gt;&lt;/code&gt; 渲染。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;太吵&lt;/strong&gt;：把 &lt;code dir=&quot;auto&quot;&gt;include&lt;/code&gt; 设为 &lt;code dir=&quot;auto&quot;&gt;[&apos;warn&apos;,&apos;error&apos;]&lt;/code&gt;，&lt;code dir=&quot;auto&quot;&gt;stackMode&lt;/code&gt; 用 &lt;code dir=&quot;auto&quot;&gt;condensed&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;生产可用性&lt;/strong&gt;：provider &lt;strong&gt;只在开发模式&lt;/strong&gt;注入，不会污染生产包。如果你想在生产移除所有 &lt;code dir=&quot;auto&quot;&gt;console.*&lt;/code&gt;，使用构建工具的 strip 插件单独处理即可。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;和传统前端观测的区别&quot;&gt;和传统前端观测的区别&lt;/h2&gt;&lt;a href=&quot;#和传统前端观测的区别&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “和传统前端观测的区别”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Datadog/Grafana 等 RUM/前端可观测提供&lt;strong&gt;线上环境的聚合指标&lt;/strong&gt;与告警；Browser Echo 面向&lt;strong&gt;本地开发调试与 AI 协作&lt;/strong&gt;，追求&lt;strong&gt;最快反馈&lt;/strong&gt;与&lt;strong&gt;终端可读性&lt;/strong&gt;。两者并不冲突。&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;结语&quot;&gt;结语&lt;/h2&gt;&lt;a href=&quot;#结语&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “结语”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;有了 &lt;strong&gt;Browser Echo&lt;/strong&gt;，前端错误不再“卡在浏览器”。
+&lt;strong&gt;终端一眼看穿&lt;/strong&gt;问题，&lt;strong&gt;AI 一把就修&lt;/strong&gt;。
+装上它，你写前端的“闭环速度”，会明显更快。今天就把它加入你的 Next 项目里跑一圈吧。&lt;/p&gt;
+&lt;hr&gt;&lt;!-- 
+## 参考与致谢
+
+* 项目主页与 README（特性、支持框架、安装入口、故障排查、配置项、最新版本）：Browser Echo 仓库。
+
+---
+
+# 推荐标题（3 组，多语言 + slug）
+
+1. **把浏览器错误抛到终端，交给 AI 修：Browser Echo 上手与 Next 实战**
+
+* EN: Ship browser errors to your terminal, let AI fix them: Browser Echo + Next.js
+* 繁體: 把瀏覽器錯誤丟到終端，交給 AI 修：Browser Echo 與 Next 實戰
+* 日本語: ブラウザのエラーをターミナルへ。AIで即修復：Browser Echo × Next.js
+* Français : Envoyez les erreurs du navigateur au terminal, l’IA corrige : Browser Echo + Next.js
+* Español: Lleva los errores del navegador a la terminal y deja que la IA los arregle: Browser Echo + Next.js
+* Português: Leve os erros do navegador ao terminal e deixe a IA corrigir: Browser Echo + Next.js
+* **slug**: `browser-echo-next-terminal-ai-fix`
+
+2. **前端调试加速器：Browser Echo 让 Cursor/Claude Code 看见你的日志**
+
+* EN: Frontend turbo debug: let Cursor/Claude Code see your logs with Browser Echo
+* 繁體: 前端除錯加速器：Browser Echo 讓 Cursor/Claude Code 看見日誌
+* 日本語: フロントのデバッグ加速：Browser Echo で Cursor/Claude がログを読む
+* Français : Accélérateur de debug front : Browser Echo rend vos logs visibles à Cursor/Claude
+* Español: Turbo debug frontend: Browser Echo permite a Cursor/Claude ver tus logs
+* Português: Turbo debug no front: Browser Echo faz Cursor/Claude verem seus logs
+* **slug**: `browser-echo-cursor-claude-logs`
+
+3. **本地也要“可观测”：用 Browser Echo 打通终端 × 浏览器 × AI**
+
+* EN: Local observability: bridge Terminal × Browser × AI with Browser Echo
+* 繁體: 本地也要「可觀測」：用 Browser Echo 打通終端 × 瀏覽器 × AI
+* 日本語: ローカルもオブザーバビリティ：Browser Echo で端末×ブラウザ×AI を接続
+* Français : Observabilité locale : reliez Terminal × Navigateur × IA avec Browser Echo
+* Español: Observabilidad local: conecta Terminal × Navegador × IA con Browser Echo
+* Português: Observabilidade local: Terminal × Navegador × IA com Browser Echo
+* **slug**: `local-observability-browser-echo`
+
+---
+
+# 配图（插画式，2:1，无中文文字）
+
+**封面图 Prompt**
+
+&gt; A clean 2:1 illustration: a developer terminal on the left streaming colorful log lines, a browser window on the right with a red error toast, a thin “echo wave” linking both. Subtle AI assistant icons (Cursor, Claude, Copilot, Gemini) as outline badges near the terminal. Minimal tech style, soft shadows, modern palette.
+
+**章节配图 Prompt（Next.js 集成）**
+
+&gt; A 2:1 diagram-style illustration: “Browser” icon emits log bubbles → arrow to “/api/client-logs” endpoint box → arrow to “Developer Terminal” with flowing logs; a small Next.js logo badge on the endpoint box. Clean lines, minimal gradients, system-blue accents.
+
+---
+
+# 互动小问
+
+* 你最常见的“只在用户机器上出现”的前端错误是什么？
+* 你会把哪些日志级别开放给 AI 助手（`error/warn` 还是 `debug` 也开）？
+* 要不要把它接进你团队的**周回顾**里做一次“错误热力图”？
+
+---
+
+# 朋友圈/评论区文案（3 条）
+
+1. **前端错误别只待在浏览器里**。让它们回声到终端，Cursor 一看就给补丁。Browser Echo 真香。
+2. 我把 Browser Echo 接到 Next 项目里了：**AI 能读到堆栈**，修 Bug 效率直线上升。
+3. 真实体验：报错→终端→Claude Code 一键修，**闭环 3 分钟**。强推给所有写前端的同学。
+
+---
+
+需要我把这篇文章\*\*扩写成“团队内推行指南 + 最佳实践清单”\*\*吗？或者做一版 **Nuxt 3/4** 的实操篇也行～
+
+[1]: https://github.com/instructa/browser-echo &quot;GitHub - instructa/browser-echo: ⚡ Stream browser logs to terminal, zero setup, perfect for Ai Agents&quot;
+[2]: https://docs.datadoghq.com/real_user_monitoring/error_tracking/browser/?utm_source=chatgpt.com &quot;Browser Error Tracking&quot;
+[3]: https://grafana.com/docs/grafana-cloud/monitor-applications/frontend-observability/instrument/error-tracking/?utm_source=chatgpt.com &quot;Error tracking | Grafana Cloud documentation&quot; --&gt;</content:encoded><category>Browser Echo</category><category>Claude Code</category><category>Cursor</category></item><item><title>Claude Code 和 Cursor 写好用户画像需求文档</title><link>https://www.vibesparking.com/zh-cn/blog/ai/claude-code/2025-08-13-persona-spec-for-ai-claude-cursor/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/claude-code/2025-08-13-persona-spec-for-ai-claude-cursor/</guid><pubDate>Wed, 13 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # 写给 Claude Code / Cursor 的「用户画像需求文档」：一份能让 AI 秒懂你诉求的模板与实战 --&gt;
 &lt;blockquote&gt;
 &lt;p&gt;这篇是给会写代码、也会“写给 AI 看”的你。把需求说清楚，AI 才能少走弯路。&lt;strong&gt;一份好的“用户画像 + 需求故事”文档，就是 AI 的最佳提示词&lt;/strong&gt;。&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -2434,161 +2587,4 @@ HHS 在疫情期上线 &lt;strong&gt;Tiberius&lt;/strong&gt;（&lt;strong&gt;202
 [4]: https://www.npmjs.com/package/backlog.md-windows-x64 &quot;backlog.md-windows-x64 - npm&quot;
 [5]: https://formulae.brew.sh/formula/backlog-md?utm_source=chatgpt.com &quot;backlog-md&quot;
 [6]: https://download.copr.fedorainfracloud.org/results/mecattaf/duoRPM/fedora-42-x86_64/09272596-backlog/backlog.spec?utm_source=chatgpt.com &quot;backlog.spec&quot;
-[7]: https://github.com/cytrowski/backlog-md?utm_source=chatgpt.com &quot;Backlog.md - A tool for managing project collaboration ...&quot; --&gt;</content:encoded><category>Backlog.md</category><category>Claude Code</category><category>Vibe Coding</category></item><item><title>Claude Code 的 Slash‑Commands 与 Sub‑Agents 的区别与协作实战</title><link>https://www.vibesparking.com/zh-cn/blog/ai/claude-code/2025-08-03-slash-vs-agents-practical/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/claude-code/2025-08-03-slash-vs-agents-practical/</guid><pubDate>Sun, 03 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # Claude Code 的 Slash‑Commands 与 Sub‑Agents 的区别与协作实战 --&gt;
-&lt;p&gt;你有没有想过，可以把常用的 AI 操作包装成快捷命令，一键执行，还能让 AI 拆任务后分工合作？Claude Code 正是这样一款能让开发者更高效、更规范、也更有趣地使用 AI 辅助编码的工具。今天我用轻松的语言跟你聊聊它的两个核心功能：&lt;strong&gt;Slash‑Commands&lt;/strong&gt; 和 &lt;strong&gt;Sub‑Agents&lt;/strong&gt;，并告诉你它们有什么特点、用法和区别，还举几个真实的例子让你立马能用。&lt;/p&gt;
-&lt;p&gt;在 Claude Code 中，Slash‑Commands 就像你事先写好的“快捷按钮”，能一键触发标准流程；而 Sub‑Agents 就像一支由多个 AI 小助手组成的团队，每个小助手专精一项任务，由主 Claude 给它们安排工作。&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;slashcommands你自定义的-ai-快捷按钮-&quot;&gt;Slash‑Commands：你自定义的 AI 快捷按钮 🚀&lt;/h2&gt;&lt;a href=&quot;#slashcommands你自定义的-ai-快捷按钮-&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Slash‑Commands：你自定义的 AI 快捷按钮 🚀”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h3 id=&quot;特点与用途&quot;&gt;特点与用途&lt;/h3&gt;&lt;a href=&quot;#特点与用途&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “特点与用途”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;自定义提示写一次，用命令调一次&lt;/strong&gt;：将常用操作（如代码审查、性能优化、Issue 修复）写入 &lt;code dir=&quot;auto&quot;&gt;.claude/commands/*.md&lt;/code&gt; 文件，Claude 就把这套提示视为一个命令。输入 &lt;code dir=&quot;auto&quot;&gt;/命令名 参数&lt;/code&gt; 就能自动执行对应流程。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;支持参数化&lt;/strong&gt;：命令中可使用 &lt;code dir=&quot;auto&quot;&gt;$ARGUMENTS&lt;/code&gt; 占位，输入参数时会替换提示内容，接收 Issue 编号、模块名等参数灵活调用。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;项目共享或个人私用&lt;/strong&gt;：放在 &lt;code dir=&quot;auto&quot;&gt;.claude/commands/&lt;/code&gt; 为项目级命令，整个团队都能用；放在 &lt;code dir=&quot;auto&quot;&gt;~/.claude/commands/&lt;/code&gt; 则是个人私有命令。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h3 id=&quot;举例说明&quot;&gt;举例说明&lt;/h3&gt;&lt;a href=&quot;#举例说明&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “举例说明”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;比如你定义一个 &lt;code dir=&quot;auto&quot;&gt;/fix-issue&lt;/code&gt; 命令，模板里写好修复流程：&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;plaintext&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;修复 GitHub issue：$ARGUMENTS。&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;请执行以下步骤：&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;1. 用 gh issue view 获取详情；&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;2. 分析问题； 3. 找到相关代码； 4. 提交修复；…&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;p&gt;在命令行输入：&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;plaintext&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;/fix-issue 123&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;p&gt;Claude 会进行 Git 操作、代码修改、开 Pull Request，整个过程自动化，省了你一大堆重复步骤（也可以选择是否自动提交）。适合重复修 issue、审查 PR、生成文档等场景。&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;subagents由-ai-拆任务分工协作的多智能体系统-&quot;&gt;Sub‑Agents：由 AI 拆任务、分工协作的多智能体系统 🧠&lt;/h2&gt;&lt;a href=&quot;#subagents由-ai-拆任务分工协作的多智能体系统-&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Sub‑Agents：由 AI 拆任务、分工协作的多智能体系统 🧠”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h3 id=&quot;特点与用途-1&quot;&gt;特点与用途&lt;/h3&gt;&lt;a href=&quot;#特点与用途-1&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “特点与用途”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;每个子代理心无旁骛&lt;/strong&gt;：Sub‑Agents 是具有独立上下文的“小 Claude”，专门负责一类任务，如性能优化、测试生成、代码审查等，从不干扰主对话体。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;角色自定义，可复用&lt;/strong&gt;：你可以用 &lt;code dir=&quot;auto&quot;&gt;/agents&lt;/code&gt; 命令创建子代理配置，每个代理有明确名称、描述和权限（如只读代码、运行 tests、调用 grep 等）。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;主代理负责统筹，并可串联多个子代理&lt;/strong&gt;：主 Claude 根据上下文决定哪些子代理执行哪些任务，支持任务拆分、职责分明，最终结果汇总返回主对话界面。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h3 id=&quot;举例说明-1&quot;&gt;举例说明&lt;/h3&gt;&lt;a href=&quot;#举例说明-1&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “举例说明”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;假设你定义了几个子代理：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;code-reviewer.md&lt;/code&gt;：只审查代码风格和安全问题&lt;/li&gt;
-&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;test-builder.md&lt;/code&gt;：专门生成单元测试&lt;/li&gt;
-&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;debugger.md&lt;/code&gt;：负责查错误日志并定位问题&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;你和 Claude 这样对话：&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;“请审查 auth 模块” → 主代理调用 code-reviewer
-“这个模块单测写一下” → 调用 test-builder
-“发现测试失败，找错在哪” → 调用 debugger&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;最后主代理把输出汇总给你。整个过程就像你请来了一队 AI 助手各司其职。&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;两者区别敲门方式不同分工视角不同&quot;&gt;两者区别：敲门方式不同，分工视角不同&lt;/h2&gt;&lt;a href=&quot;#两者区别敲门方式不同分工视角不同&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “两者区别：敲门方式不同，分工视角不同”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;项目&lt;/th&gt;&lt;th&gt;Slash‑Commands&lt;/th&gt;&lt;th&gt;Sub‑Agents&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;调用方式&lt;/td&gt;&lt;td&gt;开始输入 &lt;code dir=&quot;auto&quot;&gt;/&lt;/code&gt; 触发命令&lt;/td&gt;&lt;td&gt;对话中自动或显式使用 &lt;code dir=&quot;auto&quot;&gt;/agents&lt;/code&gt; 调用特定子代理&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;使用门槛&lt;/td&gt;&lt;td&gt;写模板即可，比较直观&lt;/td&gt;&lt;td&gt;需要定义角色描述、工具权限、提示风格等，比较复杂&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;场景定位&lt;/td&gt;&lt;td&gt;重复、标准流程类任务&lt;/td&gt;&lt;td&gt;专业、复杂或可拆分任务（如测试、审查、调试）&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;输出控制&lt;/td&gt;&lt;td&gt;每次用模板一致，比较固定&lt;/td&gt;&lt;td&gt;可以拆多个阶段，用不同代理负责不同环节，输出更细化&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;可维护性&lt;/td&gt;&lt;td&gt;模板文件易管理，适合团队共享&lt;/td&gt;&lt;td&gt;子代理配置文件复杂，需要版本控制、同步更新&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;使用举例真实工作流中的两者协同应用-&quot;&gt;使用举例：真实工作流中的两者协同应用 👩‍💻&lt;/h2&gt;&lt;a href=&quot;#使用举例真实工作流中的两者协同应用-&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “使用举例：真实工作流中的两者协同应用 👩‍💻”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;规范审查流程&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;写一个 Slash‑Command &lt;code dir=&quot;auto&quot;&gt;/security-review&lt;/code&gt;，模板里自动检查代码安全点。&lt;/li&gt;
-&lt;li&gt;主代理调用 security-review，并根据情况再触发 &lt;code dir=&quot;auto&quot;&gt;code-reviewer&lt;/code&gt; 子代理输出细节。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;自动修 Bug + 提单&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Slash‑Command &lt;code dir=&quot;auto&quot;&gt;/fix-issue 456&lt;/code&gt; 启动：主代理扫 GitHub issue -&gt; 调用 &lt;code dir=&quot;auto&quot;&gt;debugger&lt;/code&gt; 查错误 -&gt; 修改代码 -&gt; 再调用 &lt;code dir=&quot;auto&quot;&gt;test-builder&lt;/code&gt; 写测试 -&gt; 最后开 Pull Request。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;模块协作场景&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;创建 &lt;code dir=&quot;auto&quot;&gt;frontend-expert&lt;/code&gt; 子代理专注 React 组件优化、创建 &lt;code dir=&quot;auto&quot;&gt;backend-optimizer&lt;/code&gt; 子代理负责 API 性能。&lt;/li&gt;
-&lt;li&gt;项目想做一个新 feature 时，主代理一个流程让两个子代理各自产出方案，再汇总由你决策。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;使用建议&quot;&gt;使用建议&lt;/h2&gt;&lt;a href=&quot;#使用建议&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “使用建议”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;Slash‑Commands 是你的快捷命令按钮&lt;/strong&gt;，适合反复、标准化的操作
-&lt;strong&gt;Sub‑Agents 是你背后的 AI 小团队&lt;/strong&gt;，可拆任务、多角度、各司其职&lt;/p&gt;
-&lt;p&gt;建议你&lt;strong&gt;先试 Slash‑Commands&lt;/strong&gt;：把最常做的几个操作放到命令里，团队共享模板文件。
-熟练之后，再逐步引入子代理，将复杂流程拆给它们去做，主代理调度、你把控。这样可以少走弯路，也不会一开始就被工具搞晕。&lt;/p&gt;
-&lt;p&gt;如果你是小团队或短项目，一两个 Slash‑Commands 和简单子代理就很够用；长期项目或多人团队，就能慢慢扩展出完整的 AI 协作流水线。就像请了一个靠谱的 AI 助手团队，开发效率和规范性都会明显提升。&lt;/p&gt;&lt;!-- ---
-
-### 📌 封面与配图（插画风，2:1）
-
-* **封面图**：主题为「AI 助手团队协作」，画风简洁插画式，英文文字如 “Slash vs Agents”。
-* **配图 1**：Slash‑Commands 工作流程图，比如 terminal 中输入 `/fix-issue` 的示意。
-* **配图 2**：Sub‑Agents 多角色协作图，几个小 Claude 各做任务，主 Claude 调度。
-
-*(图片文字暂不显示中文)*
-
----
-
-### 📢 三个推荐标题（中/英/繁/日/法/西/葡 + slug）
-
-1. **Slash‑Commands 与 Sub‑Agents 的区别与协作实战** / *Slash‑Commands vs Sub‑Agents in Claude Code* / *Slash‑Commands 與 Sub‑Agents 的區別與協作實戰* / *Slash‑Commands と Sub‑Agents の違いと実践的協業* / *Slash‑Commands et Sub‑Agents : différences et collaboration dans Claude Code* / *Slash‑Commands y Sub‑Agents: diferencias y colaboración en Claude Code* / *Slash‑Commands e Sub‑Agents: diferenças e colaboração no Claude Code*
-   slug: slash-vs-agents-practical
-
-2. **一篇读懂 Slash‑Commands 和 Sub‑Agents 的用法场景** / *Understanding Slash‑Commands &amp; Sub‑Agents* / *一篇讀懂 Slash‑Commands 和 Sub‑Agents 的用法場景* / *Slash‑Commands と Sub‑Agents の使い方と場面* / *Comprendre Slash‑Commands et Sub‑Agents: scénarios d’usage* / *Entendiendo Slash‑Commands y Sub‑Agents: escenarios de uso* / *Compreendendo Slash‑Commands e Sub‑Agents: cenários de uso*
-   slug: understanding-slash-subagents
-
-3. **Claude Code AI 协作：Slash‑Commands 快捷 &amp; Sub‑Agents 助攻** / *Claude Code AI Collaboration: Slash &amp; Agents* / *Claude Code AI 協作：Slash‑Commands 快捷 &amp; Sub‑Agents 助攻* / *Claude Code AI コラボ：Slash‑Commands と Sub‑Agents の連携術* / *Collaboration Claude Code AI : Slash‑Commands rapide &amp; Sub‑Agents* / *Colaboración AI en Claude Code: Slash‑Commands rápidos y Sub‑Agents* / *Colaboração AI no Claude Code: Slash‑Commands e Sub‑Agents*
-   slug: ai-collaboration-clause
-
----
-
-### 💬 三个朋友圈/评论区分享文案
-
-1.
-
-&gt; Slash-Commands 超好用！定义一次模板，日常只要 `/fix-issue 123` Claude 自动搞定 issue 修复。配合 Sub‑Agents 做复杂流程，真的提升效率一大截！
-
-2.
-
-&gt; 发现 Claude Code 的 Sub‑Agents 太有戏了，每个专业代理分工，主 Claude 做统筹，我就像项目经理在指挥 AI 团队！推荐给同事一起用～
-
-3.
-
-&gt; 两个功能特点一看就会用：Slash‑Commands 适合套路重复活，Sub‑Agents 用来拆复杂任务。刚上手建议先命令后代理，不用一步到位也能立刻见效。
-
----
-
-你觉得这样的文章结构和内容方向满意么？要不要我加一些代码示例，或是扩写某个章节？
-
-[1]: https://docs.anthropic.com/en/docs/claude-code/slash-commands?utm_source=chatgpt.com &quot;Slash commands&quot;
-[2]: https://docs.anthropic.com/en/docs/claude-code/common-workflows?utm_source=chatgpt.com &quot;Common workflows&quot;
-[3]: https://www.anthropic.com/engineering/claude-code-best-practices?utm_source=chatgpt.com &quot;Claude Code: Best practices for agentic coding&quot;
-[4]: https://www.tensilityvc.com/insights/ai-interactivity-part-ii-multi-agent-systems-and-ai-copilots?utm_source=chatgpt.com &quot;AI Interactivity (Part II): Multi-Agent Systems and AI Copilots — Tensility Venture Partners&quot;
-[5]: https://docs.anthropic.com/en/docs/claude-code/settings?utm_source=chatgpt.com &quot;Claude Code settings&quot;
-[6]: https://docs.anthropic.com/en/docs/claude-code/sub-agents?utm_source=chatgpt.com &quot;Subagents&quot;
-[7]: https://www.anthropic.com/engineering/built-multi-agent-research-system?utm_source=chatgpt.com &quot;How we built our multi-agent research system&quot; --&gt;</content:encoded><category>AI Agent</category><category>Claude Code</category></item></channel></rss>
+[7]: https://github.com/cytrowski/backlog-md?utm_source=chatgpt.com &quot;Backlog.md - A tool for managing project collaboration ...&quot; --&gt;</content:encoded><category>Backlog.md</category><category>Claude Code</category><category>Vibe Coding</category></item></channel></rss>
