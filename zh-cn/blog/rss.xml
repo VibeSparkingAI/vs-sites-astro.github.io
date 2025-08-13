@@ -151,7 +151,41 @@
 
 [1]: https://github.com/instructa/browser-echo &quot;GitHub - instructa/browser-echo: ⚡ Stream browser logs to terminal, zero setup, perfect for Ai Agents&quot;
 [2]: https://docs.datadoghq.com/real_user_monitoring/error_tracking/browser/?utm_source=chatgpt.com &quot;Browser Error Tracking&quot;
-[3]: https://grafana.com/docs/grafana-cloud/monitor-applications/frontend-observability/instrument/error-tracking/?utm_source=chatgpt.com &quot;Error tracking | Grafana Cloud documentation&quot; --&gt;</content:encoded><category>Browser Echo</category><category>Claude Code</category><category>Cursor</category></item><item><title>Claude Code 和 Cursor 写好用户画像需求文档</title><link>https://www.vibesparking.com/zh-cn/blog/ai/claude-code/2025-08-13-persona-spec-for-ai-claude-cursor/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/claude-code/2025-08-13-persona-spec-for-ai-claude-cursor/</guid><pubDate>Wed, 13 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # 写给 Claude Code / Cursor 的「用户画像需求文档」：一份能让 AI 秒懂你诉求的模板与实战 --&gt;
+[3]: https://grafana.com/docs/grafana-cloud/monitor-applications/frontend-observability/instrument/error-tracking/?utm_source=chatgpt.com &quot;Error tracking | Grafana Cloud documentation&quot; --&gt;</content:encoded><category>Browser Echo</category><category>Claude Code</category><category>Cursor</category></item><item><title>Claude Code 的 Opus Plan Mode 更省钱更智能</title><link>https://www.vibesparking.com/zh-cn/blog/ai/claude-code/2025-08-13-claude-code-opus-plan-mode-cheaper-smarter/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/claude-code/2025-08-13-claude-code-opus-plan-mode-cheaper-smarter/</guid><pubDate>Wed, 13 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;strong&gt;Claude Code 的「Opus Plan Mode」&lt;/strong&gt;＝&lt;em&gt;规划用 Opus，执行用 Sonnet&lt;/em&gt;。把我们一直手动做的“Opus 想、Sonnet 干”做成了一键策略：&lt;strong&gt;复杂推理交给更强的 Opus，真正写改文件交给更省钱的 Sonnet&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;怎么开&quot;&gt;怎么开&lt;/h2&gt;&lt;a href=&quot;#怎么开&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “怎么开”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;在终端里输入 &lt;strong&gt;&lt;code dir=&quot;auto&quot;&gt;/model&lt;/code&gt;&lt;/strong&gt;，菜单里能看到 &lt;em&gt;Opus Plan Mode&lt;/em&gt; 选项；&lt;code dir=&quot;auto&quot;&gt;/status&lt;/code&gt; 可随时查看当前模型。&lt;/li&gt;
+&lt;li&gt;进入/退出&lt;strong&gt;Plan Mode&lt;/strong&gt;：&lt;strong&gt;Shift+Tab&lt;/strong&gt;（多数终端是连按两次），在该模式下只做分析与计划，不会改文件或跑命令。&lt;/li&gt;
+&lt;li&gt;需要真正落地实现，再&lt;strong&gt;退出 Plan Mode&lt;/strong&gt;（快捷键或用 &lt;em&gt;ExitPlanMode&lt;/em&gt; 工具）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h2 id=&quot;为什么更省-token&quot;&gt;为什么更省 Token&lt;/h2&gt;&lt;a href=&quot;#为什么更省-token&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “为什么更省 Token”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;官方定价：&lt;strong&gt;Opus 4.1 $15/$75&lt;/strong&gt;（入/出百万 token），&lt;strong&gt;Sonnet 4 $3/$15&lt;/strong&gt;。&lt;strong&gt;Opus 约贵 5 倍&lt;/strong&gt;。用它只做“思考/规划”，把代码生成交给 Sonnet，成本自然直降。&lt;/li&gt;
+&lt;li&gt;另外，Claude Code 还有一个默认混合策略：&lt;strong&gt;先用 Opus 到一定配额，再自动切到 Sonnet&lt;/strong&gt;（推荐默认）。这同样是“强度/成本”折中。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h2 id=&quot;适用场景&quot;&gt;适用场景&lt;/h2&gt;&lt;a href=&quot;#适用场景&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “适用场景”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;陌生大仓分析 → 方案设计 → 分解任务&lt;/strong&gt;：Plan Mode 里让 Opus 总结架构、列改造步骤与验收点，确认后再执行。Plan Mode 本身就支持“只分析不动手”。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;高风险改动&lt;/strong&gt;（升级、重构、迁移）：先让 Opus 写&lt;strong&gt;详细实施计划&lt;/strong&gt;与回滚方案，再用 Sonnet 逐步实现。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;长流程 Agent&lt;/strong&gt;：规划与执行解耦，成本更可控，也更接近“能长时间跑复杂任务”的代理形态。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h2 id=&quot;小技巧&quot;&gt;小技巧&lt;/h2&gt;&lt;a href=&quot;#小技巧&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “小技巧”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;想让会话默认更安全：在设置里把 &lt;code dir=&quot;auto&quot;&gt;permissions.defaultMode&lt;/code&gt; 设为 &lt;strong&gt;&lt;code dir=&quot;auto&quot;&gt;plan&lt;/code&gt;&lt;/strong&gt;，先计划、后执行。&lt;/li&gt;
+&lt;li&gt;用 &lt;strong&gt;&lt;code dir=&quot;auto&quot;&gt;/model&lt;/code&gt;&lt;/strong&gt; 随时切换需要的组合（比如临时全程用 Opus 解决卡点）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h2 id=&quot;注意&quot;&gt;注意&lt;/h2&gt;&lt;a href=&quot;#注意&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “注意”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;重度使用者这阵子会遇到&lt;strong&gt;新的周度限额&lt;/strong&gt;（主要针对 24/7 跑 Agent 的“鲸鱼”用法），规划阶段尽量把思路讲清、复用计划以减少无效推理。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;一句话总结&lt;/strong&gt;：Opus 负责“想清楚”，Sonnet 负责“干漂亮”。&lt;strong&gt;同等进度、更低花费&lt;/strong&gt;，而且把“规划—执行”的节奏固化成了工作流。你这条感受很准，这确实把 Agent 又往“可长跑的复杂任务”推进了一步。&lt;/p&gt;&lt;!-- [1]: https://www.reddit.com/r/ClaudeAI/comments/1mof7py/they_finally_automated_the_opus_planning_sonnet/?utm_source=chatgpt.com &quot;They finally automated the Opus planning + Sonnet ...&quot;
+[2]: https://support.anthropic.com/en/articles/11940350-claude-code-model-configuration &quot;Claude Code Model Configuration | Anthropic Help Center&quot;
+[3]: https://www.claudelog.com/mechanics/plan-mode/?utm_source=chatgpt.com &quot;Plan Mode&quot;
+[4]: https://docs.anthropic.com/en/docs/claude-code/iam?utm_source=chatgpt.com &quot;Identity and Access Management&quot;
+[5]: https://github.com/anthropics/claude-code/issues/4799 &quot;[BUG] `tool:` specifications appear to be completely ignored be sub-agents · Issue #4799 · anthropics/claude-code · GitHub&quot;
+[6]: https://docs.anthropic.com/en/docs/about-claude/pricing?utm_source=chatgpt.com &quot;Pricing&quot;
+[7]: https://www.businessinsider.com/inference-whales-threaten-ai-coding-startups-business-model-2025-8?utm_source=chatgpt.com &quot;&apos;Inference whales&apos; are eating into AI coding startups&apos; business model&quot; --&gt;</content:encoded><category>Claude Code</category></item><item><title>Claude Code 和 Cursor 写好用户画像需求文档</title><link>https://www.vibesparking.com/zh-cn/blog/ai/claude-code/2025-08-13-persona-spec-for-ai-claude-cursor/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/claude-code/2025-08-13-persona-spec-for-ai-claude-cursor/</guid><pubDate>Wed, 13 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # 写给 Claude Code / Cursor 的「用户画像需求文档」：一份能让 AI 秒懂你诉求的模板与实战 --&gt;
 &lt;blockquote&gt;
 &lt;p&gt;这篇是给会写代码、也会“写给 AI 看”的你。把需求说清楚，AI 才能少走弯路。&lt;strong&gt;一份好的“用户画像 + 需求故事”文档，就是 AI 的最佳提示词&lt;/strong&gt;。&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -2458,133 +2492,4 @@ HHS 在疫情期上线 &lt;strong&gt;Tiberius&lt;/strong&gt;（&lt;strong&gt;202
 [7]: https://cursor.com/?utm_source=chatgpt.com &quot;Cursor - The AI Code Editor&quot;
 [8]: https://www.datacamp.com/tutorial/cursor-ai-code-editor?utm_source=chatgpt.com &quot;Cursor AI: A Guide With 10 Practical Examples&quot;
 [9]: https://gemini.google/overview/video-generation/?utm_source=chatgpt.com &quot;Gemini AI video generator powered by Veo 3&quot;
-[10]: https://n8n.io/ai/?utm_source=chatgpt.com &quot;Advanced AI Workflow Automation Software &amp; Tools&quot; --&gt;</content:encoded><category>AI Era</category><category>ChatGPT</category><category>Gemini</category><category>Claude</category><category>Cursor</category><category>Midjourney</category><category>Veo</category><category>n8n</category></item><item><title>Claude Code + Backlog.md 打造 AI 协作 + Git 看板</title><link>https://www.vibesparking.com/zh-cn/blog/ai/vibe-coding/2025-08-03-backlog-md-git-kanban-ai/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/vibe-coding/2025-08-03-backlog-md-git-kanban-ai/</guid><pubDate>Sun, 03 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;strong&gt;Backlog.md&lt;/strong&gt; + Claude Code 把任何 Git 仓库秒变「&lt;strong&gt;看板 + 文档 + AI 协作中心&lt;/strong&gt;」，而且所有数据都只是 Markdown 文件，&lt;strong&gt;离线私有&lt;/strong&gt;。下面这篇文章会带你 5 分钟上手，从安装、核心亮点到典型工作流，一口气讲透它为什么能成为「人类 + AI」共创项目的最小可行栈。&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;引言&quot;&gt;引言&lt;/h2&gt;&lt;a href=&quot;#引言&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “引言”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;还在多个 SaaS 工具之间疯狂切换？&lt;strong&gt;Backlog.md 用一行命令就能在本地生成一个完整的项目管理系统&lt;/strong&gt;，既适合个人极客，也能无缝接入多智能体流水线，让 Claude、Gemini 直接读写任务。&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;一为什么选-backlogmd&quot;&gt;一、为什么选 Backlog.md？&lt;/h2&gt;&lt;a href=&quot;#一为什么选-backlogmd&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “一、为什么选 Backlog.md？”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h3 id=&quot;1-markdown-天然任务卡片&quot;&gt;1. Markdown 天然任务卡片&lt;/h3&gt;&lt;a href=&quot;#1-markdown-天然任务卡片&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1. Markdown 天然任务卡片”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;每个 Issue 就是一张 &lt;code dir=&quot;auto&quot;&gt;task-123 - title.md&lt;/code&gt;，随时 Git diff。&lt;/li&gt;
-&lt;li&gt;本地编辑器香，AI 也读得懂。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h3 id=&quot;2-100--私有--离线&quot;&gt;2. &lt;strong&gt;100 % 私有 &amp;#x26; 离线&lt;/strong&gt;&lt;/h3&gt;&lt;a href=&quot;#2-100--私有--离线&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2. 100 % 私有 &amp;#x26; 离线”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;所有文件都在仓库里，无需外网依赖；在火车上也能改看板。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h3 id=&quot;3-零配置-kanban&quot;&gt;3. 零配置 Kanban&lt;/h3&gt;&lt;a href=&quot;#3-零配置-kanban&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3. 零配置 Kanban”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;backlog board&lt;/code&gt; 直接在终端渲染实时列队。&lt;/li&gt;
-&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;backlog browser&lt;/code&gt; 自动打开响应式 Web UI，拖拽更新状态。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h3 id=&quot;4-ai-ready-cli&quot;&gt;4. &lt;strong&gt;AI-Ready CLI&lt;/strong&gt;&lt;/h3&gt;&lt;a href=&quot;#4-ai-ready-cli&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “4. AI-Ready CLI”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;自带 &lt;code dir=&quot;auto&quot;&gt;CLAUDE.md&lt;/code&gt; 等说明文件，输入「Claude 请接管 task-33」即可分配工作。&lt;/li&gt;
-&lt;li&gt;支持子代理、Ultrathink 规划，常见模型都能配。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h3 id=&quot;5-跨平台--多渠道安装&quot;&gt;5. 跨平台 + 多渠道安装&lt;/h3&gt;&lt;a href=&quot;#5-跨平台--多渠道安装&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “5. 跨平台 + 多渠道安装”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;npm i -g backlog.md&lt;/code&gt;、&lt;code dir=&quot;auto&quot;&gt;brew install backlog-md&lt;/code&gt;、&lt;code dir=&quot;auto&quot;&gt;nix run&lt;/code&gt; 随便挑。&lt;/li&gt;
-&lt;li&gt;Homebrew &amp;#x26; Fedora 包同时上线，版本跟进快。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;二3-步极速上手&quot;&gt;二、3 步极速上手&lt;/h2&gt;&lt;a href=&quot;#二3-步极速上手&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “二、3 步极速上手”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;步骤&lt;/th&gt;&lt;th&gt;命令&lt;/th&gt;&lt;th&gt;说明&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;初始化&lt;/td&gt;&lt;td&gt;&lt;code dir=&quot;auto&quot;&gt;backlog init &quot;AI Side Project&quot;&lt;/code&gt;&lt;/td&gt;&lt;td&gt;交互式配置，自动生成 &lt;code dir=&quot;auto&quot;&gt;backlog/&lt;/code&gt; 目录&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;捕捉任务&lt;/td&gt;&lt;td&gt;&lt;code dir=&quot;auto&quot;&gt;backlog task create &quot;重构登录流程&quot;&lt;/code&gt;&lt;/td&gt;&lt;td&gt;支持描述、负责人、标签、优先级等&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;查看进度&lt;/td&gt;&lt;td&gt;&lt;code dir=&quot;auto&quot;&gt;backlog board&lt;/code&gt; 或 &lt;code dir=&quot;auto&quot;&gt;backlog browser&lt;/code&gt;&lt;/td&gt;&lt;td&gt;终端 / 浏览器两种味道&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
-&lt;blockquote&gt;
-&lt;p&gt;**Tips：**想让 AI 批量拆解需求？直接把 PRD 粘给 Claude：“请用 ultrathink 拆分任务并识别依赖”。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;三进阶玩法&quot;&gt;三、进阶玩法&lt;/h2&gt;&lt;a href=&quot;#三进阶玩法&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “三、进阶玩法”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h3 id=&quot;1-一键导出周报&quot;&gt;1. 一键导出周报&lt;/h3&gt;&lt;a href=&quot;#1-一键导出周报&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1. 一键导出周报”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;&lt;code dir=&quot;auto&quot;&gt;backlog board export README.md --export-version &quot;v1.0.0&quot;&lt;/code&gt;
-生成带版本号的 Markdown 看板，推上 Git 立刻同步团队。&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;2-多仓库协同&quot;&gt;2. 多仓库协同&lt;/h3&gt;&lt;a href=&quot;#2-多仓库协同&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2. 多仓库协同”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;利用 &lt;code dir=&quot;auto&quot;&gt;git worktree&lt;/code&gt; 或次仓库把 BE / FE 任务汇总到同一目录；所有链接仍指向原始分支。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h3 id=&quot;3-自动提交--钩子旁路&quot;&gt;3. 自动提交 &amp;#x26; 钩子旁路&lt;/h3&gt;&lt;a href=&quot;#3-自动提交--钩子旁路&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3. 自动提交 &amp;#x26; 钩子旁路”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;backlog config set autoCommit true&lt;/code&gt; 省去手动 &lt;code dir=&quot;auto&quot;&gt;git add/commit&lt;/code&gt;。&lt;/li&gt;
-&lt;li&gt;若你有严格 pre-commit，可 &lt;code dir=&quot;auto&quot;&gt;bypassGitHooks true&lt;/code&gt;。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h3 id=&quot;4-统计--dashboard&quot;&gt;4. 统计 &amp;#x26; Dashboard&lt;/h3&gt;&lt;a href=&quot;#4-统计--dashboard&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “4. 统计 &amp;#x26; Dashboard”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;&lt;code dir=&quot;auto&quot;&gt;backlog overview&lt;/code&gt; 在终端显示任务燃尽、柱状统计，让你秒判项目健康度。&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;四适用场景&quot;&gt;四、适用场景&lt;/h2&gt;&lt;a href=&quot;#四适用场景&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “四、适用场景”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;独立开发者&lt;/strong&gt;：本地 Git + Markdown，一台电脑全部搞定。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;远程小团队&lt;/strong&gt;：Pull Request 即同步任务状态，免 Jira。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;AI 代理流水线&lt;/strong&gt;：LLM 读取 / 更新 task 文件，实现「规划→编码→PR」闭环。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;结语&quot;&gt;结语&lt;/h2&gt;&lt;a href=&quot;#结语&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “结语”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;Backlog.md 用最原生的工具链，把&lt;strong&gt;项目管理、文档、AI 协作&lt;/strong&gt;三件事合一，帮我们把注意力拉回「写代码」本身。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;你准备试试这种「本地 Git 看板」了吗？评论区等你分享体验！&lt;/strong&gt;&lt;/p&gt;&lt;!-- ---
-
-### 🔖 多语言标题候选
-
-| 简体中文                                         | English                                                        | 繁體                                | 日本語                                | Français                                                 | Español                                            | Português                                             | slug                       |
-| -------------------------------------------- | -------------------------------------------------------------- | --------------------------------- | ---------------------------------- | -------------------------------------------------------- | -------------------------------------------------- | ----------------------------------------------------- | -------------------------- |
-| **“Backlog.md：让 Git 秒变私有看板，让 AI 和人一起搬砖”**    | Backlog.md: Turn Git Repos into Private Kanban &amp; AI Playground | Backlog.md：讓 Git 秒變私有看板，AI 與人協作   | Backlog.md：Gitを一瞬でプライベート看板＋AIハブに   | Backlog.md : Git devient un Kanban privé piloté par l’IA | Backlog.md: tu repos Git en Kanban privado con IA  | Backlog.md: transforme seu Git em Kanban privado + IA | backlog-md-git-kanban-ai   |
-| **“摆脱 Jira！用 Backlog.md 本地管理任务+AI 交付”**      | Bye Jira! Local Tasks &amp; AI Delivery with Backlog.md            | 擺脫 Jira！Backlog.md 本地任務+AI 交付     | Jira から卒業！Backlog.md でローカルタスク＋AI   | Adieu Jira ! Backlog.md pour gérer tâches locales + IA   | ¡Adiós Jira! Backlog.md para tareas locales + IA   | Adeus Jira! Backlog.md para tarefas locais + IA       | goodbye-jira-backlog-md    |
-| **“Markdown×看板×AI：Backlog.md 打造开发者最小生产力矩阵”** | Markdown × Kanban × AI: Backlog.md Power Trio                  | Markdown×看板×AI：Backlog.md 最小生產力矩陣 | Markdown×看板×AI：Backlog.md で最小開発セット | Markdown×Kanban×IA : Backlog.md, trio gagnant            | Markdown×Kanban×IA: Backlog.md triplete productivo | Markdown×Kanban×IA: Backlog.md trio produtivo         | markdown-kanban-ai-backlog |
-
----
-
-### 🖼️ 图片建议（插画风 2:1）
-
-1. **封面图**：电脑屏幕上显示三列彩色 Kanban，屏幕旁漂浮 Markdown 文件图标和小型 AI 机器人。
-2. **章节配图**：
-
-   * “安装与初始化”：终端窗口里敲 `backlog init`，后面冒出文件树。
-   * “AI 协作”：机器人把任务卡片递给开发者，背景是 Git 标志。
-   * “导出周报”：Markdown 文档飞向同事的邮箱信封图标。
-
-&gt; 图片内不要出现中文文字。
-
----
-
-### 💬 微信朋友圈热门评论（3 选 1）
-
-1. “再见 Jira，我的 Markdown + Git 就够用！Backlog.md YYDS 🎉”
-2. “AI 写代码、人类写 README，现在连看板都 Markdown 化了，香！”
-3. “单机也能跑的项目管理工具太稀缺了，Backlog.md 直接封神👑”
-
----
-
-\*\*觉得文章有用？\*\*点个▼再转给同事，一起把「任务管理」拉回 Git！需要更详细的示例或代码扩写吗？告诉我 🙌
-
-[1]: https://github.com/MrLesk/Backlog.md &quot;GitHub - MrLesk/Backlog.md: Backlog.md - A tool for managing project collaboration between humans and AI Agents in a git ecosystem&quot;
-[2]: https://peerlist.io/mrlesk/project/backlogmd?utm_source=chatgpt.com &quot;Backlog.md&quot;
-[3]: https://news.ycombinator.com/item?id=44483530 &quot;Backlog.md – Markdown‑native Task Manager and Kanban visualizer for any Git repo | Hacker News&quot;
-[4]: https://www.npmjs.com/package/backlog.md-windows-x64 &quot;backlog.md-windows-x64 - npm&quot;
-[5]: https://formulae.brew.sh/formula/backlog-md?utm_source=chatgpt.com &quot;backlog-md&quot;
-[6]: https://download.copr.fedorainfracloud.org/results/mecattaf/duoRPM/fedora-42-x86_64/09272596-backlog/backlog.spec?utm_source=chatgpt.com &quot;backlog.spec&quot;
-[7]: https://github.com/cytrowski/backlog-md?utm_source=chatgpt.com &quot;Backlog.md - A tool for managing project collaboration ...&quot; --&gt;</content:encoded><category>Backlog.md</category><category>Claude Code</category><category>Vibe Coding</category></item></channel></rss>
+[10]: https://n8n.io/ai/?utm_source=chatgpt.com &quot;Advanced AI Workflow Automation Software &amp; Tools&quot; --&gt;</content:encoded><category>AI Era</category><category>ChatGPT</category><category>Gemini</category><category>Claude</category><category>Cursor</category><category>Midjourney</category><category>Veo</category><category>n8n</category></item></channel></rss>
