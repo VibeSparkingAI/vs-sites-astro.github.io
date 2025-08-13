@@ -1,4 +1,393 @@
-<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Vibe Sparking AI | Blog</title><description/><link>https://www.vibesparking.com/</link><language>en</language><item><title>Claude Code and Cursor read browser console logs via Browser Echo</title><link>https://www.vibesparking.com/en/blog/ai/2025-08-13-browser-echo-next-terminal-ai-fix/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/2025-08-13-browser-echo-next-terminal-ai-fix/</guid><pubDate>Wed, 13 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # Claude Code and Cursor read browser console logs via Browser Echo --&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Vibe Sparking AI | Blog</title><description/><link>https://www.vibesparking.com/</link><language>en</language><item><title>Frontend AI Perk: Open-Source Open‑Lovable vs. Lovable — One‑Click Clone Any Website into a React App</title><link>https://www.vibesparking.com/en/blog/ai/open-lovable/2025-08-14-open-lovable-vs-lovable-clone-any-site-to-react/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/open-lovable/2025-08-14-open-lovable-vs-lovable-clone-any-site-to-react/</guid><pubDate>Thu, 14 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # Open-source open-lovable vs Lovable: AI one-click clones any website into a React app --&gt;
+&lt;blockquote&gt;
+&lt;p&gt;For engineers and creators who want to use AI to &lt;strong&gt;ship products faster&lt;/strong&gt; and &lt;strong&gt;validate ideas more cost‑effectively&lt;/strong&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;&lt;a href=&quot;#introduction&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Introduction”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Lovable has gone viral recently: you can chat to generate websites/apps, with pricing based on &lt;strong&gt;credits&lt;/strong&gt;. It’s a fresh model and surprisingly fast. At the same time, the Mendable team released an open-source alternative &lt;strong&gt;open‑lovable&lt;/strong&gt;: &lt;strong&gt;clone any website into a modern React app&lt;/strong&gt;, run it locally, modify it, and extend it. For many teams, this route is more controllable and cost‑efficient.&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;what-is-openlovable&quot;&gt;What is open‑lovable?&lt;/h2&gt;&lt;a href=&quot;#what-is-openlovable&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “What is open‑lovable?”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;In one sentence&lt;/strong&gt;: Give it a URL, and in seconds it pulls page structure and assets and &lt;strong&gt;generates runnable Next.js/React code&lt;/strong&gt; that you can develop locally. Under the hood it has two “engines”:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Firecrawl&lt;/strong&gt;: crawls web content and converts it into LLM‑friendly structured data like Markdown/JSON/screenshots.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;E2B Sandboxes&lt;/strong&gt;: secure, isolated cloud sandboxes serving as an “AI code runtime,” letting agents run commands, read/write files, install packages, and access the network.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The official README clearly lists dependencies and steps (supports Anthropic, OpenAI, Gemini, or Groq — any/some combination). You’ll need &lt;strong&gt;&lt;code dir=&quot;auto&quot;&gt;E2B_API_KEY&lt;/code&gt; + &lt;code dir=&quot;auto&quot;&gt;FIRECRAWL_API_KEY&lt;/code&gt;&lt;/strong&gt;, plus at least one model provider API key. Then &lt;code dir=&quot;auto&quot;&gt;npm run dev&lt;/code&gt; to try it at &lt;code dir=&quot;auto&quot;&gt;localhost:3000&lt;/code&gt;. License is &lt;strong&gt;MIT&lt;/strong&gt;.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Key point&lt;/strong&gt;: open‑lovable leans toward “&lt;strong&gt;clone + local control&lt;/strong&gt;,” while Lovable is more of a “&lt;strong&gt;hosted AI app builder&lt;/strong&gt;.”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;what-does-lovable-do-why-benchmark-against-it&quot;&gt;What does Lovable do? Why benchmark against it?&lt;/h2&gt;&lt;a href=&quot;#what-does-lovable-do-why-benchmark-against-it&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “What does Lovable do? Why benchmark against it?”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Lovable is a &lt;strong&gt;chat‑based full‑stack app builder&lt;/strong&gt;. It supports Agent/Chat/Code/visual editing, Figma import, and integrations like GitHub/Supabase/Stripe/Clerk — very friendly for non‑technical users and small teams; &lt;strong&gt;credit‑based billing&lt;/strong&gt;, Pro starts at &lt;strong&gt;$25/month&lt;/strong&gt;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Agent Mode&lt;/strong&gt;: it can “think, research, and change code” on its own — read code, debug, search docs, modify code, and test.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Visual Edits&lt;/strong&gt;: click elements on the page to change copy/styles, and &lt;strong&gt;no credits are deducted&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The company’s growth is brisk — recent funding and revenue news suggest the category is validated.&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;sidebyside-openlovable-vs-lovable&quot;&gt;Side‑by‑Side: open‑lovable vs. Lovable&lt;/h2&gt;&lt;a href=&quot;#sidebyside-openlovable-vs-lovable&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Side‑by‑Side: open‑lovable vs. Lovable”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Dimension&lt;/th&gt;&lt;th&gt;open‑lovable (Open Source)&lt;/th&gt;&lt;th&gt;Lovable (Commercial SaaS)&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;Core capability&lt;/td&gt;&lt;td&gt;&lt;strong&gt;Clone any website → generate Next.js/React code&lt;/strong&gt;, develop locally&lt;/td&gt;&lt;td&gt;&lt;strong&gt;Natural‑language full‑stack generation&lt;/strong&gt;, supports Agent/Chat/Visual Edits&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Runtime form&lt;/td&gt;&lt;td&gt;Local/self‑hosted, MIT license, deeply modifiable&lt;/td&gt;&lt;td&gt;Hosted cloud, WYSIWYG&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Dependencies&lt;/td&gt;&lt;td&gt;Firecrawl crawling + E2B sandboxes + your chosen LLM provider&lt;/td&gt;&lt;td&gt;Built‑in AI capabilities and many integrations&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Pricing&lt;/td&gt;&lt;td&gt;Open source free (you pay Firecrawl/E2B/model usage)&lt;/td&gt;&lt;td&gt;&lt;strong&gt;Credit‑based&lt;/strong&gt;, Pro from $25/month&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Audience&lt;/td&gt;&lt;td&gt;Devs with frontend skills wanting &lt;strong&gt;fast clone + fast customization&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Teams wanting &lt;strong&gt;zero‑barrier app/prototype&lt;/strong&gt; with minimal code&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Typical scenarios&lt;/td&gt;&lt;td&gt;Migrate competitor/marketing pages; rebuild legacy stack into modern React&lt;/td&gt;&lt;td&gt;0→1 prototypes, MVPs, internal tools, turning designs into code&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;p&gt;(Sources: both products’ websites and docs/READMEs)&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;handson-5minute-local-setup-for-openlovable&quot;&gt;Hands‑On: 5‑Minute Local Setup for open‑lovable&lt;/h2&gt;&lt;a href=&quot;#handson-5minute-local-setup-for-openlovable&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Hands‑On: 5‑Minute Local Setup for open‑lovable”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ol&gt;
+&lt;li&gt;Clone and install&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;git&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;clone&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;https://github.com/mendableai/open-lovable.git&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;cd&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;open-lovable&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;npm&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;install&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;ol start=&quot;2&quot;&gt;
+&lt;li&gt;Configure environment variables (&lt;code dir=&quot;auto&quot;&gt;.env.local&lt;/code&gt;)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# Required&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;E2B_API_KEY&lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;=&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;your_e2b_api_key&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;FIRECRAWL_API_KEY&lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;=&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;your_firecrawl_api_key&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# Choose at least one model&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;OPENAI_API_KEY&lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;=&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;...&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;ANTHROPIC_API_KEY&lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;=&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;...&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;GEMINI_API_KEY&lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;=&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;...&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;GROQ_API_KEY&lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;=&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;...&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;ol start=&quot;3&quot;&gt;
+&lt;li&gt;Run&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;npm&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;run&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;dev&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# Open http://localhost:3000 in your browser&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;p&gt;These steps and dependencies are clearly documented in the official README.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Tip: Firecrawl supports &lt;strong&gt;full‑site crawling/screenshots/Markdown/JSON&lt;/strong&gt;; E2B sandboxes default to a 5‑minute lifetime, configurable.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;three-real-developer-scenarios&quot;&gt;Three Real Developer Scenarios&lt;/h2&gt;&lt;a href=&quot;#three-real-developer-scenarios&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Three Real Developer Scenarios”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3 id=&quot;example-1-competitor-landing-page--sameday-marketing-site-release&quot;&gt;Example 1: Competitor landing page → same‑day marketing site release&lt;/h3&gt;&lt;a href=&quot;#example-1-competitor-landing-page--sameday-marketing-site-release&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Example 1: Competitor landing page → same‑day marketing site release”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Scenario&lt;/strong&gt;: Marketing wants to A/B test a new copy/layout.
+&lt;strong&gt;Approach&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Use open‑lovable to clone a competitor page or your old landing page skeleton into React.&lt;/li&gt;
+&lt;li&gt;Locally wire copy, CTAs, and tracking scripts (GA/analytics).&lt;/li&gt;
+&lt;li&gt;Apply your design system/components, connect the backend form/CRM.
+&lt;strong&gt;Benefit&lt;/strong&gt;: &lt;strong&gt;Finish “migrate + customize + ship” in hours&lt;/strong&gt;, instead of re‑slicing assets and rewriting styles from scratch.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Tech note: Firecrawl extracts clean page content, reducing manual copy‑paste; Next.js structure is tidy, making CI/CD straightforward.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h3 id=&quot;example-2-modernize-an-it-works-but-its-old-site&quot;&gt;Example 2: Modernize an “it works but it’s old” site&lt;/h3&gt;&lt;a href=&quot;#example-2-modernize-an-it-works-but-its-old-site&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Example 2: Modernize an “it works but it’s old” site”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Scenario&lt;/strong&gt;: The company site/docs run, but the stack is aging.
+&lt;strong&gt;Approach&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Clone the current site to generate &lt;strong&gt;modern React code&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Use E2B sandbox‑driven scripts for batch refactors (class naming, image optimization, extracting i18n, etc.).&lt;/li&gt;
+&lt;li&gt;Add Tailwind/your design system to unify visuals.
+&lt;strong&gt;Benefit&lt;/strong&gt;: &lt;strong&gt;Re‑skin first without breaking functionality&lt;/strong&gt;, improve maintainability, then iteratively extract components and data layers.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h3 id=&quot;example-3-stakeholder-review-with-something-clickable-on-day-one&quot;&gt;Example 3: Stakeholder review with something clickable on day one&lt;/h3&gt;&lt;a href=&quot;#example-3-stakeholder-review-with-something-clickable-on-day-one&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Example 3: Stakeholder review with something clickable on day one”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Scenario&lt;/strong&gt;: Lots of new business ideas; leadership wants to “see something.”
+&lt;strong&gt;Approach&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Clone a public page from a similar product as the skeleton.&lt;/li&gt;
+&lt;li&gt;Use models to quickly swap in industry‑specific copy and inline interaction demos.&lt;/li&gt;
+&lt;li&gt;Integrate third‑party auth/payments/email (and migrate to a real backend later).
+&lt;strong&gt;Benefit&lt;/strong&gt;: &lt;strong&gt;You have “something real” the same day&lt;/strong&gt;. Reviews focus on product value rather than “we haven’t built the page yet.” (When you move toward production, switch to Cursor/local repo for continued evolution.)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;If you want &lt;strong&gt;zero‑code 0→1&lt;/strong&gt;, Lovable’s Agent/Visual Edits and integrations are smoother. The open‑source route fits teams that need &lt;strong&gt;engineering‑grade control of code&lt;/strong&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;advanced-plug-into-your-daily-toolchain&quot;&gt;Advanced: Plug into Your Daily Toolchain&lt;/h2&gt;&lt;a href=&quot;#advanced-plug-into-your-daily-toolchain&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Advanced: Plug into Your Daily Toolchain”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;GitHub Actions&lt;/strong&gt;: on PRs, run Lighthouse/Playwright to watch performance and usability.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Supabase/Stripe/Clerk&lt;/strong&gt; for MVP auth/payments/data. open‑lovable outputs standard React code, so integrate as usual; Lovable provides built‑in guides/templates for these services.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Model “mix‑and‑match”&lt;/strong&gt;: use Claude/GPT‑5 for complex logic, Groq/Kimi K2 for speed; switch via env vars as needed.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;how-to-choose&quot;&gt;How to Choose&lt;/h2&gt;&lt;a href=&quot;#how-to-choose&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “How to Choose”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;You want to &lt;strong&gt;control code, cut subscriptions, and reuse existing web pages&lt;/strong&gt; → &lt;strong&gt;open‑lovable&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;You want &lt;strong&gt;0→1 prototypes/internal tools fast&lt;/strong&gt;, and value &lt;strong&gt;hosting and collaboration&lt;/strong&gt; → &lt;strong&gt;Lovable&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Or use a &lt;strong&gt;combo&lt;/strong&gt;: first use open‑lovable to grab the “shell” and refine locally; or validate product/flows in Lovable first, then “export/refactor” to self‑hosted.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Industry chatter often positions Lovable as “&lt;strong&gt;scaffolding + visual design/flow&lt;/strong&gt;,” while serious projects return to local engineering for polishing. open‑lovable neatly covers the “&lt;strong&gt;engineering‑grade control&lt;/strong&gt;” half.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;&lt;a href=&quot;#conclusion&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Conclusion”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;AI‑assisted development is bifurcating&lt;/strong&gt;: one side is &lt;strong&gt;hosted, WYSIWYG&lt;/strong&gt; (Lovable); the other is &lt;strong&gt;open‑source, controllable, engineering‑friendly&lt;/strong&gt; (open‑lovable).&lt;br&gt;
+&lt;strong&gt;There’s no absolute right answer&lt;/strong&gt; — your team’s cost/pace/governance needs matter most.&lt;/p&gt;
+&lt;p&gt;Which side do you lean toward? &lt;strong&gt;Where do you think open‑lovable fits best in your business?&lt;/strong&gt; Share your real‑world scenarios in the comments.&lt;/p&gt;&lt;!-- ---
+
+## Quick references and links
+
+* open‑lovable GitHub (install, deps, MIT license)
+* Firecrawl (turn web pages into LLM‑ready data)
+* E2B (AI code sandboxes, default 5‑minute lifetime)
+* Lovable docs (Agent/Chat/Visual Edits/integrations) and pricing
+* Discussion: different positioning of open‑lovable vs Lovable (HN)
+
+---
+
+## Cover &amp; chapter illustrations (2:1, illustration style, use English text in images)
+
+1. **Cover**
+   “An illustration of an engineer duplicating a live website into a React app box on a laptop, two engines labeled ‘Crawl’ and ‘Sandbox’ powering the conveyor belt. Clean, modern pastel palette, 2:1.”
+
+2. **Key chapter art**
+
+* “How it works”: “Firecrawl pipeline turning messy web pages into tidy blocks labeled Markdown/JSON/Screenshots, flowing into a React folder. 2:1.”
+* “Local setup”: “Terminal window running ‘npm run dev’, browser preview shows a cloned landing page with editable sections. 2:1.”
+* “Comparison list”: “Two cards side‑by‑side: ‘open‑lovable’ (wrench icon) vs ‘Lovable’ (sparkles icon), arrows pointing to ‘Clone &amp; Control’ and ‘Hosted &amp; Fast’. 2:1.”
+
+---
+
+## Micro‑prompts
+
+* **Would you clone first with open‑lovable, or start in Lovable? Why?**
+* **If you were to overhaul your company site, how would you land it?**
+* **Should we write ‘open‑lovable end‑to‑end deployment in practice’? Which parts interest you most?**
+
+---
+
+## Multilingual title options (3 sets)
+
+1. **Open‑source site cloning: open‑lovable vs Lovable, with engineering control**
+
+   * EN: *Open‑Lovable vs. Lovable: Clone Any Site into React, Keep It Fully Under Your Control*
+   * ZH‑TW: *開源克隆站神器：open‑lovable 對標 Lovable，工程化更可控*
+   * JA: *Open‑Lovable vs. Lovable：任意サイトをReact化、コードは完全に自分の手に*
+   * FR: *Open‑Lovable vs Lovable : cloner tout site en React, garder le contrôle total*
+   * ES: *Open‑Lovable vs Lovable: clona cualquier sitio a React y mantén el control total*
+   * PT: *Open‑Lovable vs Lovable: clone qualquer site em React com controle total*
+   * **slug**: `open-lovable-vs-lovable-clone-any-site-to-react`
+
+2. **Turn any website into a React app: the right way to use open‑lovable**
+
+   * EN: *Turn Any Website into a React App: The Right Way to Use Open‑Lovable*
+   * ZH‑TW: *把網站一鍵變成 React 應用：open‑lovable 的正確打開方式*
+   * JA: *任意サイトをReactアプリへ：Open‑Lovableの正しい使い方*
+   * FR: *Transformer n’importe quel site en app React : la bonne manière avec Open‑Lovable*
+   * ES: *Convierte cualquier sitio en una app React: la forma correcta con Open‑Lovable*
+   * PT: *Transforme qualquer site em um app React: o
+--&gt;</content:encoded><category>Open Lovable</category><category>Lovable</category><category>React</category><category>AI</category></item><item><title>Vibe Coding vs. Traditional: Stop Typing, Start Shipping</title><link>https://www.vibesparking.com/en/blog/ai/vibe-coding/2025-08-14-vibe-coding-stop-typing-start-shipping/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/vibe-coding/2025-08-14-vibe-coding-stop-typing-start-shipping/</guid><pubDate>Thu, 14 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;strong&gt;Vibe Coding vs. Traditional Programming&lt;/strong&gt; — key differences:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Vibe Coding&lt;/strong&gt;: driven by natural language; you act as a &lt;strong&gt;director&lt;/strong&gt;; focus on the &lt;strong&gt;end result&lt;/strong&gt;; progress by &lt;strong&gt;questioning&lt;/strong&gt; and dialogue. It’s fast and lowers the barrier, but can lead to a &lt;strong&gt;black‑box understanding&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Traditional programming&lt;/strong&gt;: precise programming languages; you act more like an &lt;strong&gt;architect&lt;/strong&gt;; focus on &lt;strong&gt;implementation details&lt;/strong&gt;; emphasize &lt;strong&gt;algorithms and principles&lt;/strong&gt;. It’s slower and higher‑bar, but yields &lt;strong&gt;deep code understanding&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;&lt;!-- # Vibe Coding vs Traditional Coding: Say it clearly and let the code grow itself --&gt;
+&lt;div&gt;&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;&lt;a href=&quot;#introduction&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Introduction”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Over the past two years, writing code has increasingly become an exercise in &lt;strong&gt;making intent explicit&lt;/strong&gt;. Editing projects directly with natural language, refactoring across files, and auto‑generating PRs are now everyday workflows:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Tools like Cursor/VS Code support &lt;strong&gt;natural‑language edits to entire code blocks&lt;/strong&gt; and cross‑file changes.&lt;/li&gt;
+&lt;li&gt;Replit Agent emphasizes “&lt;strong&gt;describe in everyday language and get a runnable app&lt;/strong&gt;.”&lt;/li&gt;
+&lt;li&gt;Claude Code in the terminal turns “&lt;strong&gt;idea → code&lt;/strong&gt;” into an end‑to‑end workflow.
+Adoption is surging: Stack Overflow’s 2024 survey shows &lt;strong&gt;76%&lt;/strong&gt; of developers use or plan to use AI helpers.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;what-is-vibe-coding&quot;&gt;What Is Vibe Coding?&lt;/h2&gt;&lt;a href=&quot;#what-is-vibe-coding&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “What Is Vibe Coding?”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;In one line: &lt;strong&gt;Define goals in human language → let AI draft first → humans calibrate scope and acceptance via dialogue&lt;/strong&gt;.
+It’s not mystical “going by feel,” but rather turning &lt;strong&gt;intent, constraints, and acceptance&lt;/strong&gt; into an executable collaboration language. Typical vehicles include natural‑language code edits in AI editors and dialog‑driven tasks/batch changes in the terminal/IDE.&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;seven-differences-from-the-comparison-chart-practical-read&quot;&gt;Seven Differences from the Comparison Chart (Practical Read)&lt;/h2&gt;&lt;a href=&quot;#seven-differences-from-the-comparison-chart-practical-read&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Seven Differences from the Comparison Chart (Practical Read)”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Input&lt;/strong&gt;: Vibe uses natural language + examples; traditional relies on design docs + handwritten implementation.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Role&lt;/strong&gt;: Vibe is like a director, breaking down shots and pacing; traditional is like an architect, setting structure and detailing.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Focus&lt;/strong&gt;: Vibe stresses &lt;strong&gt;runnable results&lt;/strong&gt;; traditional stresses a &lt;strong&gt;traceable process&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Skills&lt;/strong&gt;: Vibe emphasizes &lt;strong&gt;questioning and acceptance writing&lt;/strong&gt;; traditional emphasizes &lt;strong&gt;algorithms and language details&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Cadence&lt;/strong&gt;: Vibe iterates fast; traditional moves steadily.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Barrier&lt;/strong&gt;: Vibe is lower, good for cross‑functional alignment; traditional is higher, good for high‑reliability domains.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Cognition&lt;/strong&gt;: Vibe tends toward black‑box; traditional is auditable.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Key takeaway&lt;/strong&gt;: Vibe is a &lt;strong&gt;communication‑paradigm upgrade&lt;/strong&gt;, not a replacement.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;six-everyday-dev-scenarios-vibe-flow-vs-traditional-flow-copyready&quot;&gt;Six Everyday Dev Scenarios: Vibe Flow vs Traditional Flow (Copy‑Ready)&lt;/h2&gt;&lt;a href=&quot;#six-everyday-dev-scenarios-vibe-flow-vs-traditional-flow-copyready&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Six Everyday Dev Scenarios: Vibe Flow vs Traditional Flow (Copy‑Ready)”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3 id=&quot;1-feature-01-add-wechat-qr-login-to-nextjs&quot;&gt;1) Feature 0→1: Add “WeChat QR Login” to Next.js&lt;/h3&gt;&lt;a href=&quot;#1-feature-01-add-wechat-qr-login-to-nextjs&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1) Feature 0→1: Add “WeChat QR Login” to Next.js”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Traditional&lt;/strong&gt;: write requirements → choose library → draw sequence → branch → implement → PR.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Vibe&lt;/strong&gt; (dialogue in Cursor/Claude Code):
+&lt;ol&gt;
+&lt;li&gt;“Project is Next.js + Supabase, need a minimal WeChat QR login. &lt;strong&gt;Constraints: only touch the auth module, don’t change the existing user table.&lt;/strong&gt;”&lt;/li&gt;
+&lt;li&gt;Have AI generate routes, callbacks, and env var checklist, plus &lt;strong&gt;security and rollback&lt;/strong&gt; notes.&lt;/li&gt;
+&lt;li&gt;Ask for a &lt;strong&gt;PR description + E2E acceptance steps&lt;/strong&gt;.
+&lt;em&gt;Why it works: natural‑language cross‑file edits + auto PR/test checklists.&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;2-fast-regression-for-a-production-bug&quot;&gt;2) Fast Regression for a Production Bug&lt;/h3&gt;&lt;a href=&quot;#2-fast-regression-for-a-production-bug&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2) Fast Regression for a Production Bug”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Traditional&lt;/strong&gt;: dig logs → reproduce locally → patch → write regression tests.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Vibe&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Paste exception logs + relevant functions: “Provide the &lt;strong&gt;smallest diff fix&lt;/strong&gt;, and generate the &lt;strong&gt;regression unit test&lt;/strong&gt; and &lt;strong&gt;repro scenario&lt;/strong&gt;.”&lt;/li&gt;
+&lt;li&gt;Humans focus on &lt;strong&gt;blast‑radius review&lt;/strong&gt; and boundary checks.
+&lt;em&gt;Essentials: small PR + must‑test + rollbackable.&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;3-repowide-migration-axios--fetch&quot;&gt;3) Repo‑Wide Migration: axios → fetch&lt;/h3&gt;&lt;a href=&quot;#3-repowide-migration-axios--fetch&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3) Repo‑Wide Migration: axios → fetch”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Traditional&lt;/strong&gt;: global search → manual replace → fix file by file.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Vibe&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;“Scan axios usage, design a &lt;strong&gt;unified wrapper&lt;/strong&gt; and a &lt;strong&gt;batched change plan&lt;/strong&gt; (prioritize low‑risk directories), ship each batch with a &lt;strong&gt;rollback script&lt;/strong&gt;.”&lt;/li&gt;
+&lt;li&gt;Let AI batch‑apply changes; humans ensure &lt;strong&gt;error‑handling strategy in the wrapper layer&lt;/strong&gt; is solid.
+&lt;em&gt;Tooling: natural‑language cross‑file rewrites.&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;4-performance-tuning-slow-db-queries&quot;&gt;4) Performance Tuning: Slow DB Queries&lt;/h3&gt;&lt;a href=&quot;#4-performance-tuning-slow-db-queries&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “4) Performance Tuning: Slow DB Queries”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Traditional&lt;/strong&gt;: explain → index → adjust SQL/cache.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Vibe&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;“Here are the slow‑query logs + schema. Propose a &lt;strong&gt;three‑step optimization order&lt;/strong&gt;: validate index gains first, then consider caching; output target &lt;strong&gt;P95/QPS&lt;/strong&gt; and a baseline script.”&lt;/li&gt;
+&lt;li&gt;AI produces SQL and metrics scripts; humans run benchmarks and do canary rollout.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;5-prereview-for-code-reviews&quot;&gt;5) Pre‑Review for Code Reviews&lt;/h3&gt;&lt;a href=&quot;#5-prereview-for-code-reviews&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “5) Pre‑Review for Code Reviews”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Traditional&lt;/strong&gt;: reviewer scans logic manually.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Vibe&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Have AI produce a &lt;strong&gt;pre‑review summary&lt;/strong&gt; (high‑risk changes, uncovered paths, potential injection spots),&lt;/li&gt;
+&lt;li&gt;Humans gatekeep &lt;strong&gt;business semantics and compliance&lt;/strong&gt;.
+&lt;em&gt;Benefit: reviewers spend time on critical semantic judgment.&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;6-personal-projectsnewcomer-onboarding&quot;&gt;6) Personal Projects/Newcomer Onboarding&lt;/h3&gt;&lt;a href=&quot;#6-personal-projectsnewcomer-onboarding&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “6) Personal Projects/Newcomer Onboarding”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Traditional&lt;/strong&gt;: read docs, poke around the repo.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Vibe&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Describe the tool/page you need; an agent scaffolds and runs it — great for &lt;strong&gt;spin‑up in an afternoon&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;risks-and-guardrails&quot;&gt;Risks and “Guardrails”&lt;/h2&gt;&lt;a href=&quot;#risks-and-guardrails&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Risks and “Guardrails””&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Black‑box feel&lt;/strong&gt;: many can use the tools yet &lt;strong&gt;don’t fully understand the generated code&lt;/strong&gt;; industry surveys flag this as a risk.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Guardrail checklist (strongly bake into templates/commands)&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;PR template: background, &lt;strong&gt;acceptance criteria&lt;/strong&gt;, impact surface, rollback.&lt;/li&gt;
+&lt;li&gt;CI: &lt;strong&gt;must‑run tests&lt;/strong&gt;, coverage thresholds, dependency and license scanning, secrets scanning.&lt;/li&gt;
+&lt;li&gt;Conversation templates: goals/MVP/&lt;strong&gt;disallowed changes&lt;/strong&gt;/log level/time‑budget and rate limits.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Slash Commands&lt;/strong&gt;: codify common flows so the team can reuse with one command.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;when-to-use-vibe--and-when-not-yet&quot;&gt;When to Use Vibe — and When Not Yet&lt;/h2&gt;&lt;a href=&quot;#when-to-use-vibe--and-when-not-yet&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “When to Use Vibe — and When Not Yet”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Great fit&lt;/strong&gt;: prototyping, CRUD features, bulk renames/refactors, scaffolding, repetitive fixes.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Don’t fully “outsource” yet&lt;/strong&gt;: high‑security/strict‑compliance systems, core algorithms, modules requiring strong performance explainability.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Team readiness&lt;/strong&gt;: shared PR/test templates, clear rollback conventions, and at least one &lt;strong&gt;one‑command project bootstrap + acceptance&lt;/strong&gt; script.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;&lt;a href=&quot;#conclusion&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Conclusion”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;The essence of Vibe Coding is a &lt;strong&gt;communication upgrade&lt;/strong&gt;: turning human intent into machine‑executable steps. It doesn’t think for you — it makes the &lt;strong&gt;boundaries of your thinking clearer&lt;/strong&gt;.
+As a next step, take your team’s three most common tasks and turn them into reusable &lt;strong&gt;conversation templates/Slash commands&lt;/strong&gt; — you can speed up starting today.&lt;/p&gt;&lt;!-- 
+---
+
+## Multilingual Titles (pick 1 of 3 sets)
+
+1. **Vibe Coding Kills Communication Overhead: Say it clearly and the code grows itself**
+   EN: *Vibe Coding vs Traditional: Stop Typing, Start Shipping*
+   ZH-TW: *Vibe Coding 解放溝通成本：把話說清楚程式就能跑*
+   JA: *Vibe Coding入門：書くより「意図」を伝える*
+   FR: *Vibe Coding : moins écrire, mieux livrer*
+   ES: *Vibe Coding: menos código, más entregas*
+   PT: *Vibe Coding: menos digitar, mais entregar*
+   **slug**: vibe-coding-stop-typing-start-shipping
+
+2. **From PRs to Prompts: A Vibe‑ification Playbook for Engineering Teams**
+   EN: *From PRs to Prompts: A Practical Guide to Team Vibe‑ification*
+   **slug**: from-prs-to-prompts-guide
+
+3. **Don’t Fight the Syntax — Lead with Intent**
+   EN: *Don’t Fight the Syntax—Lead with Intent*
+   **slug**: lead-with-intent-not-syntax
+
+---
+
+## Illustration Prompts (illustration style, 2:1; follow image+text pairing, no Chinese text in images)
+
+**Cover**:
+“An illustration of a developer as a film director pointing at a storyboard while an AI assistant assembles code blocks into a running app on a conveyor belt. Clean, pastel colors, minimal lines, 2:1.”
+
+**Key chapter art (pick one)**:
+1) “Two balanced scales: left pan labeled ‘Vibe Coding’ showing chat bubbles, checklist, and rocket; right pan labeled ‘Traditional’ showing code braces, blueprint, gears. Minimal, 2:1.”
+2) “A terminal window with a slash command launching automated tests and a CI pipeline dashboard lighting up. Flat illustration, 2:1.”
+3) “Bug report flows into an AI mixer and comes out as a tiny diff + test file. Playful yet clean, 2:1.”
+
+---
+
+## Social/Comments Copy (pick 1 of 3)
+
+1. “Tried Vibe Coding today — **spelled out the acceptance** and had a usable version in half a day. The PR even came with a test checklist. Chef’s kiss 😎”
+2. “Coding is like filmmaking: you direct, AI is the crew. **Don’t forget guardrails and rollback** — or who else gets blamed when the box office flops? 😂”
+3. “Bulk refactor axios → fetch in one go? Don’t. **Batch + rollback** — let AI do the heavy lifting while humans hold the line ✅”
+
+—
+
+Does this fit your taste? Want us to expand the six scenarios into **copy‑and‑paste dialogue templates + Slash commands**?
+
+[1]: https://cursor.com/?utm_source=chatgpt.com &quot;Cursor - The AI Code Editor&quot;
+[2]: https://code.visualstudio.com/docs/copilot/overview?utm_source=chatgpt.com &quot;GitHub Copilot in VS Code&quot;
+[3]: https://docs.replit.com/replitai/agent?utm_source=chatgpt.com &quot;Replit&apos;s AI Agent&quot;
+[4]: https://replit.com/ai?utm_source=chatgpt.com &quot;Replit AI – Turn natural language into apps and websites&quot;
+[5]: https://docs.anthropic.com/en/docs/claude-code/overview?utm_source=chatgpt.com &quot;Claude Code overview&quot;
+[6]: https://survey.stackoverflow.co/2024/ai?utm_source=chatgpt.com &quot;AI | 2024 Stack Overflow Developer Survey&quot;
+[7]: https://www.itpro.com/software/development/developers-say-ai-can-code-better-than-most-humans-but-theres-a-catch?utm_source=chatgpt.com &quot;Developers say AI can code better than most humans - but there&apos;s a catch&quot;
+[8]: https://docs.anthropic.com/en/docs/claude-code/slash-commands?utm_source=chatgpt.com &quot;Slash commands&quot; --&gt;</content:encoded><category>Vibe Coding</category></item><item><title>Claude Code and Cursor read browser console logs via Browser Echo</title><link>https://www.vibesparking.com/en/blog/ai/2025-08-13-browser-echo-next-terminal-ai-fix/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/2025-08-13-browser-echo-next-terminal-ai-fix/</guid><pubDate>Wed, 13 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # Claude Code and Cursor read browser console logs via Browser Echo --&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;Stream the browser’s &lt;code dir=&quot;auto&quot;&gt;console.*&lt;/code&gt; logs and errors, in real time, **“echo”** back to your local terminal;&lt;/strong&gt; &lt;strong&gt;zero-config&lt;/strong&gt; out of the box, perfect for AI coding assistants that read terminal output such as &lt;strong&gt;Cursor / Claude Code / Copilot CLI / Gemini CLI&lt;/strong&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -2139,234 +2528,4 @@ HHS launched &lt;strong&gt;Tiberius&lt;/strong&gt; during the pandemic (&lt;stro
 [33]: https://investors.palantir.com/news-details/2024/Palantir-to-Unveil-New-Customers-and-Product-Announcements-at-AIPCon/?utm_source=chatgpt.com &quot;Palantir IR - News&quot;
 [34]: https://www.barrons.com/articles/palantir-stock-price-earnings-66f0d20f?utm_source=chatgpt.com &quot;Palantir&apos;s Earnings Expectations Are Stratospheric-as Always&quot;
 [35]: https://www.palantir.com/platforms/aip/bootcamp/?utm_source=chatgpt.com &quot;Palantir AIP Bootcamp&quot;
-[36]: https://www.palantir.com/platforms/aip/?utm_source=chatgpt.com &quot;Palantir Artificial Intelligence Platform&quot; --&gt;</content:encoded><category>Finance</category><category>Palantir</category><category>NYSE: PLTR</category><category>AI</category><category>US Stock Market</category></item><item><title>Do Nvidia GPUs Determine Whether AWS, Google, and Azure Meet Performance Targets?</title><link>https://www.vibesparking.com/en/blog/finance/us-market/2025-08-04-aws-gcp-azure-who-affords-nvidia-ai-cloud/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/finance/us-market/2025-08-04-aws-gcp-azure-who-affords-nvidia-ai-cloud/</guid><pubDate>Mon, 04 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # Do Nvidia GPUs Determine Whether AWS, Google, and Azure Meet Performance Targets? --&gt;
-&lt;p&gt;Analysis of the relationship between AWS, Google, and Microsoft’s latest &lt;strong&gt;Q2 cloud services performance&lt;/strong&gt; “meeting targets” and &lt;strong&gt;Nvidia chip market share&lt;/strong&gt;:&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;p&gt;The chart displays &lt;strong&gt;estimated 2025 cloud revenue market share vs. Nvidia GPU ownership&lt;/strong&gt;:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;AWS (Amazon) is projected to account for approximately &lt;strong&gt;44%&lt;/strong&gt; of cloud revenue and &lt;strong&gt;20%&lt;/strong&gt; of Nvidia GPUs&lt;/li&gt;
-&lt;li&gt;Google Cloud holds about &lt;strong&gt;19% cloud revenue&lt;/strong&gt; and &lt;strong&gt;20% GPUs&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;Microsoft Azure commands &lt;strong&gt;30% cloud revenue&lt;/strong&gt; and &lt;strong&gt;30% GPUs&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;Other emerging cloud services (such as CoreWeave, Oracle) represent &lt;strong&gt;5%&lt;/strong&gt; of cloud revenue and &lt;strong&gt;11%&lt;/strong&gt; of GPUs, with total newcomer GPU share around &lt;strong&gt;30%&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;q2-fy2026-latest-earnings-cloud-revenue-performance-overview&quot;&gt;Q2 FY2026 Latest Earnings: Cloud Revenue Performance Overview&lt;/h2&gt;&lt;a href=&quot;#q2-fy2026-latest-earnings-cloud-revenue-performance-overview&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Q2 FY2026 Latest Earnings: Cloud Revenue Performance Overview”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h3 id=&quot;aws-amazon-web-services&quot;&gt;AWS (Amazon Web Services)&lt;/h3&gt;&lt;a href=&quot;#aws-amazon-web-services&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “AWS (Amazon Web Services)”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;Q2 cloud revenue ~&lt;strong&gt;$31B&lt;/strong&gt;, up &lt;strong&gt;17.5%&lt;/strong&gt; year-over-year, with an annual run rate of approximately $123B.&lt;/li&gt;
-&lt;li&gt;Despite beating expectations, growth rate lags behind Microsoft and Google Cloud.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h3 id=&quot;google-cloud&quot;&gt;Google Cloud&lt;/h3&gt;&lt;a href=&quot;#google-cloud&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Google Cloud”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;Q2 cloud revenue approximately &lt;strong&gt;$13.6B&lt;/strong&gt;, up &lt;strong&gt;32%&lt;/strong&gt; year-over-year, exceeding market expectations.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h3 id=&quot;microsoft-azure-part-of-intelligent-cloud&quot;&gt;Microsoft Azure (part of Intelligent Cloud)&lt;/h3&gt;&lt;a href=&quot;#microsoft-azure-part-of-intelligent-cloud&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Microsoft Azure (part of Intelligent Cloud)”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;Microsoft Q2 revenue $76.4B, with Azure segment up approximately &lt;strong&gt;39%&lt;/strong&gt; year-over-year. Azure annual revenue has surpassed $75B and continues accelerating.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;analysis-of-correlation-with-nvidia-chip-market-share&quot;&gt;Analysis of Correlation with Nvidia Chip Market Share&lt;/h2&gt;&lt;a href=&quot;#analysis-of-correlation-with-nvidia-chip-market-share&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Analysis of Correlation with Nvidia Chip Market Share”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h3 id=&quot;1-does-gpu-share-correspond-to-cloud-revenue-share&quot;&gt;1. Does GPU Share Correspond to Cloud Revenue Share?&lt;/h3&gt;&lt;a href=&quot;#1-does-gpu-share-correspond-to-cloud-revenue-share&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1. Does GPU Share Correspond to Cloud Revenue Share?”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;The cloud revenue share vs. Nvidia GPU ownership for AWS, Google, and Microsoft shown in the chart:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Azure: 30% cloud revenue ⇄ 30% GPU&lt;/li&gt;
-&lt;li&gt;GCP: 19% cloud revenue ⇄ 20% GPU&lt;/li&gt;
-&lt;li&gt;AWS: 44% cloud revenue ⇄ 20% GPU&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Compared to real-world data: All three are among Nvidia GPU’s largest buyers, but AWS, despite having the largest cloud revenue (approximately 30-32% market share), has seen its GPU share historically decline to ~20%, well below its revenue dominance. This may be influenced by AWS’s in-house Trainium/Inferentia chips replacing some Nvidia demand. Meanwhile, Microsoft and Google show greater dependence on Nvidia, with GPU shares closely matching their cloud revenue shares.&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;2-does-q2-performance-meet-targets&quot;&gt;2. Does Q2 Performance “Meet Targets”?&lt;/h3&gt;&lt;a href=&quot;#2-does-q2-performance-meet-targets&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2. Does Q2 Performance “Meet Targets”?”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Microsoft Azure&lt;/strong&gt;: 39% growth rate is robust, outpacing peers as the growth leader. Cloud revenue growth perfectly matches Nvidia GPU share, with both AI capabilities and hardware allocation performing to “target” standards.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Google Cloud&lt;/strong&gt;: 32% growth rate is also impressive, aligning with its GPU share ~20% (slightly higher than cloud revenue share, showing modest matching), achieving steady target performance.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;AWS&lt;/strong&gt;: While having the largest cloud revenue, growth lags (17.5%), failing to synchronize with GPU share increases. GPU share at only ~20% falls short of its cloud revenue market share (~30%), reflecting AWS’s increasing use of domestic chips to replace Nvidia, thus impacting Nvidia chip purchases—overall, cloud business growth falls short of expectations, weakening the relationship with Nvidia’s high market dominance.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;comprehensive-outlook-and-projections&quot;&gt;Comprehensive Outlook and Projections&lt;/h2&gt;&lt;a href=&quot;#comprehensive-outlook-and-projections&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Comprehensive Outlook and Projections”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Microsoft Azure&lt;/strong&gt;: Strong growth, high GPU spending, highly aligned with Nvidia share, forming dual AI/cloud engines—standard target achievement;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Google Cloud&lt;/strong&gt;: Accelerating growth, increased capital expenditure, GPU share slightly exceeding cloud share—steady “target” achievement;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;AWS&lt;/strong&gt;: Revenue leadership but slower growth, with GPU share below cloud revenue share—under the trend of reduced Nvidia supply dependence, AWS’s contribution to Nvidia decouples from cloud business growth.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h3 id=&quot;from-nvidias-perspective&quot;&gt;From Nvidia’s Perspective:&lt;/h3&gt;&lt;a href=&quot;#from-nvidias-perspective&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “From Nvidia’s Perspective:”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;Although Nvidia still controls &lt;strong&gt;approximately 90%+ of the data center GPU market share&lt;/strong&gt;, its dependence on the three major hyperscalers is diverging: AWS dependence is decreasing, while Microsoft and Google are further increasing procurement to match AI deployments.&lt;/li&gt;
-&lt;li&gt;Simultaneously, Nvidia is expanding to “new cloud” platforms like CoreWeave, capturing future 11% GPU market share (consistent with the chart’s new cloud ≈ 30% GPU direction).&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;summary-table&quot;&gt;Summary Table&lt;/h2&gt;&lt;a href=&quot;#summary-table&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Summary Table”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Company&lt;/th&gt;&lt;th&gt;Q2 Cloud Revenue Growth&lt;/th&gt;&lt;th&gt;Nvidia GPU Share&lt;/th&gt;&lt;th&gt;Alignment with GPU Share&lt;/th&gt;&lt;th&gt;Target Met&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;Microsoft Azure&lt;/td&gt;&lt;td&gt;~39%&lt;/td&gt;&lt;td&gt;~30%&lt;/td&gt;&lt;td&gt;Highly matched&lt;/td&gt;&lt;td&gt;✅ Met&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Google Cloud&lt;/td&gt;&lt;td&gt;~32%&lt;/td&gt;&lt;td&gt;~20%&lt;/td&gt;&lt;td&gt;Slightly high, matched&lt;/td&gt;&lt;td&gt;✅ Met&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;AWS&lt;/td&gt;&lt;td&gt;~17-18%&lt;/td&gt;&lt;td&gt;~20%&lt;/td&gt;&lt;td&gt;Cloud revenue share exceeds GPU share&lt;/td&gt;&lt;td&gt;❌ Not Met&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;conclusion-and-recommendations&quot;&gt;Conclusion and Recommendations&lt;/h2&gt;&lt;a href=&quot;#conclusion-and-recommendations&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Conclusion and Recommendations”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;Microsoft Azure and Google Cloud’s cloud service growth aligns well with Nvidia GPU share overall, qualifying as “meeting targets.”&lt;/li&gt;
-&lt;li&gt;AWS, despite being the largest in scale, shows a gap between growth rate and GPU share, making it difficult to claim synchronized growth with Nvidia GPU usage.&lt;/li&gt;
-&lt;li&gt;Nvidia’s consumption structure is diversifying from concentrated hyperscalers toward partnerships with small and medium cloud service platforms (like CoreWeave). Continued observation is needed to see if future GPU distribution across these platforms can maintain the chart’s “new cloud ~30%” trend.&lt;/li&gt;
-&lt;/ul&gt;&lt;!-- ---
-
-If you&apos;d like to dive deeper into each company&apos;s Q2 earnings CAPEX, Free Cash Flow, or Nvidia&apos;s specific supply contracts and GPU architecture share changes with hyperscalers, please let me know—I can investigate further!
-
-Do you find my analysis clear? Are there other dimensions of analysis you&apos;d like me to add?
-
-* [Barron&apos;s](https://www.barrons.com/articles/microsoft-earnings-stock-price-8b30c578?utm_source=chatgpt.com)
-* [Investors.com](https://www.investors.com/news/technology/amazon-stock-ai-cloud-microsoft-google/?utm_source=chatgpt.com)
-* [Android Central](https://www.androidcentral.com/phones/google-pixel/alphabet-exceeds-expectations-raises-spending-for-the-year-sees-huge-growth-in-cloud-revenue-in-q2-2025-earnings?utm_source=chatgpt.com)
-
-[1]: https://canalys.com/newsroom/global-cloud-q1-2025?utm_source=chatgpt.com &quot;Global cloud infrastructure spending rose 21% in Q1 2025&quot;
-[2]: https://www.wsj.com/tech/ai/nvidia-dgx-cloud-computing-28c49748?utm_source=chatgpt.com &quot;Nvidia Ruffles Tech Giants With Move Into Cloud Computing&quot;
-[3]: https://www.ciodive.com/news/aws-security-generative-ai-cloud-capacity-revenue-growth/756554/?utm_source=chatgpt.com &quot;Amazon leans on AWS&apos; size, security as Q2 cloud market ...&quot;
-[4]: https://io-fund.com/ai-stocks/google-stock-q2-capex-concern?utm_source=chatgpt.com &quot;Google Stock Clears Major Hurdle, Yet One Serious ...&quot;
-[5]: https://www.barrons.com/articles/microsoft-earnings-stock-price-8b30c578?utm_source=chatgpt.com &quot;Microsoft Just Misses $4 Trillion Market Cap After Earnings. The Stock Is on Fire.&quot;
-[6]: https://www.barrons.com/articles/amazon-stock-earnings-cloud-ai-spending-38416183?utm_source=chatgpt.com &quot;The Mag 7&apos;s Strength Just Became a Weakness&quot;
-[7]: https://www.marketsandmarkets.com/Market-Reports/data-center-gpu-market-18997435.html?utm_source=chatgpt.com &quot;Data Center GPU Market Size, Share &amp; Trends, 2025 To ...&quot;
-[8]: https://iot-analytics.com/leading-generative-ai-companies/?utm_source=chatgpt.com &quot;The leading generative AI companies&quot;
-[9]: https://www.ft.com/content/2ba1d064-242d-4a2a-a381-374d9643e23a?utm_source=chatgpt.com &quot;Nvidia seeks to build its business beyond Big Tech&quot; --&gt;</content:encoded><category>Nvidia</category><category>Cloud Computing</category><category>AI Infrastructure</category><category>AWS</category><category>Google Cloud</category><category>Microsoft Azure</category></item><item><title>Claude Code Security Review: Your AI Security Watchdog</title><link>https://www.vibesparking.com/en/blog/ai/claude-code/commands/2025-08-07-claude-code-security-review-intro/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/claude-code/commands/2025-08-07-claude-code-security-review-intro/</guid><pubDate>Mon, 04 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;strong&gt;Claude Code Security Review: Making Security Audits as Easy as Writing Commands&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Claude Code’s newly released &lt;strong&gt;claude-code-security-review&lt;/strong&gt; integrates Anthropic Claude’s large language model reasoning capabilities directly into GitHub Actions and terminal commands. It can analyze diffs during pull request (PR) stages to identify high-risk vulnerabilities like SQL injection, XSS, and authorization bypasses, while automatically filtering out low-value noise. You can even scan locally with a simple &lt;code dir=&quot;auto&quot;&gt;/security-review&lt;/code&gt; command. Your code’s potential vulnerabilities are flagged by AI before it even gets merged.&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;1-what-is-claude-code-security-review&quot;&gt;1. What is Claude Code Security Review?&lt;/h2&gt;&lt;a href=&quot;#1-what-is-claude-code-security-review&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1. What is Claude Code Security Review?”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;AI-Powered Security Auditing&lt;/strong&gt;: Leverages Claude’s deep semantic understanding to go beyond regex matching and directly comprehend code intent.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;GitHub Action Integration&lt;/strong&gt;: Automatically triggers on PR opens or syncs, posting vulnerability findings directly to specific code lines.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Terminal Slash Commands&lt;/strong&gt;: Enter &lt;code dir=&quot;auto&quot;&gt;/security-review&lt;/code&gt; in Claude Code for the same scanning capabilities to run instantly offline.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;2-core-highlights&quot;&gt;2. Core Highlights&lt;/h2&gt;&lt;a href=&quot;#2-core-highlights&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2. Core Highlights”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h3 id=&quot;1-high-signal-to-noise-results&quot;&gt;1. High Signal-to-Noise Results&lt;/h3&gt;&lt;a href=&quot;#1-high-signal-to-noise-results&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1. High Signal-to-Noise Results”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;Built-in &lt;strong&gt;False Positive Filtering&lt;/strong&gt; automatically screens out low-risk alerts like DoS, resource exhaustion, and input validation with no actual impact, surfacing only the truly critical vulnerabilities.&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;2-semantic-level-vulnerability-detection&quot;&gt;2. Semantic-Level Vulnerability Detection&lt;/h3&gt;&lt;a href=&quot;#2-semantic-level-vulnerability-detection&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2. Semantic-Level Vulnerability Detection”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;Identifies 10 major categories of issues including injection attacks, authentication flaws, hardcoded secrets, weak encryption, and business logic race conditions.&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;3-diff-aware--language-agnostic&quot;&gt;3. Diff-Aware &amp;#x26; Language Agnostic&lt;/h3&gt;&lt;a href=&quot;#3-diff-aware--language-agnostic&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3. Diff-Aware &amp;#x26; Language Agnostic”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;Only analyzes changed files, supports any programming language, making it ideal for multi-language microservice repositories.&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;4-zero-configuration-cicd&quot;&gt;4. Zero-Configuration CI/CD&lt;/h3&gt;&lt;a href=&quot;#4-zero-configuration-cicd&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “4. Zero-Configuration CI/CD”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;Just one YAML snippet gets you running:&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;yaml&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;- &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#111111&quot;&gt;uses&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;anthropics/claude-code-security-review@main&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#111111&quot;&gt;with&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;:&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#111111&quot;&gt;claude-api-key&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;${{ secrets.CLAUDE_API_KEY }}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#111111&quot;&gt;comment-pr&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#FF6A83;--1:#A24848&quot;&gt;true&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h3 id=&quot;5-industry-wide-recognition&quot;&gt;5. Industry-Wide Recognition&lt;/h3&gt;&lt;a href=&quot;#5-industry-wide-recognition&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “5. Industry-Wide Recognition”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;Publications like VentureBeat and The New Stack have noted that as AI-generated code volume surges, automated security auditing has become essential. This Action fills that critical gap.&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;3-getting-started&quot;&gt;3. Getting Started&lt;/h2&gt;&lt;a href=&quot;#3-getting-started&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3. Getting Started”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h3 id=&quot;1-quick-github-actions-integration&quot;&gt;1. Quick GitHub Actions Integration&lt;/h3&gt;&lt;a href=&quot;#1-quick-github-actions-integration&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1. Quick GitHub Actions Integration”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ol&gt;
-&lt;li&gt;Create &lt;code dir=&quot;auto&quot;&gt;.github/workflows/security.yml&lt;/code&gt; in your project root&lt;/li&gt;
-&lt;li&gt;Copy the YAML above and add &lt;code dir=&quot;auto&quot;&gt;CLAUDE_API_KEY&lt;/code&gt; to your repository Secrets&lt;/li&gt;
-&lt;li&gt;Submit a PR to see Claude automatically comment with vulnerability details + fix suggestions&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div&gt;&lt;h3 id=&quot;2-local-security-review-command&quot;&gt;2. Local /security-review Command&lt;/h3&gt;&lt;a href=&quot;#2-local-security-review-command&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2. Local /security-review Command”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;In your terminal or VS Code Claude Code panel, enter:&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;plaintext&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;/security-review&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;p&gt;This executes the same level of auditing on your current uncommitted changes, perfect for solo development or offline scenarios.&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;3-custom-rules&quot;&gt;3. Custom Rules&lt;/h3&gt;&lt;a href=&quot;#3-custom-rules&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3. Custom Rules”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;Copy &lt;code dir=&quot;auto&quot;&gt;security-review.md&lt;/code&gt; from the repository to &lt;code dir=&quot;auto&quot;&gt;.claude/commands/&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Edit filtering rules or add company-specific security baselines, such as prohibiting weak password algorithms.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;4-real-world-scenarios&quot;&gt;4. Real-World Scenarios&lt;/h2&gt;&lt;a href=&quot;#4-real-world-scenarios&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “4. Real-World Scenarios”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Scenario&lt;/th&gt;&lt;th&gt;Trigger Method&lt;/th&gt;&lt;th&gt;AI-Discovered Issues&lt;/th&gt;&lt;th&gt;Outcome&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Internal Tool Adding Local HTTP Service&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Automated audit before PR merge&lt;/td&gt;&lt;td&gt;DNS Rebinding → RCE&lt;/td&gt;&lt;td&gt;Vulnerability fixed before merge&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Legacy Project Refactoring&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Terminal &lt;code dir=&quot;auto&quot;&gt;/security-review&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Sensitive log leakage + weak AES-ECB encryption&lt;/td&gt;&lt;td&gt;One-click generation of encryption/log fix patches&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Multi-Language Microservice Repo&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Every PR&lt;/td&gt;&lt;td&gt;Python dependency poisoning + Node XSS&lt;/td&gt;&lt;td&gt;PR comments list vulnerabilities + npm audit fix commands&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;5-final-thoughts&quot;&gt;5. Final Thoughts&lt;/h2&gt;&lt;a href=&quot;#5-final-thoughts&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “5. Final Thoughts”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;AI writes code fast, &lt;strong&gt;but AI must guard security even faster&lt;/strong&gt;. Integrate claude-code-security-review into your DevSecOps pipeline to ensure every line of code passes through security gates before entering the main branch. The next zero-day might just be the one you keep out.&lt;/p&gt;&lt;!-- ---
-
-## 🚀 Three Sets of Multi-Language Titles &amp; Slugs
-
-1. **Scan Before You Code! Claude Code Security Review Catches Bugs in One Click**
-
-   * EN: *Scan Before You Ship – Catch Bugs in One Click with Claude Code Security Review*
-   * 繁中: **寫程式前先掃！Claude Code Security Review 一鍵抓漏洞**
-   * 日: *コードを書く前にスキャン！Claude Code Security Review で脆弱性を一発検出*
-   * FR: *Scannez avant de publier : Claude Code Security Review traque les failles en un clic*
-   * ES: *¡Escanea antes de hacer merge! Claude Code Security Review detecta fallos al instante*
-   * PT: *Varra antes de subir – Claude Code Security Review acha brechas num clique*
-   * **slug**: `claude-code-security-review-intro`
-
-2. **Auto Security Audit Update: Claude Watches Your Back**
-
-   * EN: *Auto Security Audit: Let Claude Watch Your Back*
-   * Other languages follow similarly
-   * **slug**: `auto-security-audit-claude`
-
-3. **DevSecOps Power Tool! The Right Way to Kill Bugs at PR Time**
-
-   * EN: *DevSecOps Power Tool: Kill Bugs at PR Time*
-   * Other languages follow similarly
-   * **slug**: `devsecops-pr-vulnerability-killer`
-
----
-
-## 💬 Social Media Comments (Pick 1 of 3)
-
-1. &quot;Run Claude before merging code, SQL injection gets flagged red immediately, so satisfying!&quot;
-2. &quot;Security team can go home without worry, Claude helps me audit PRs on night shift 😂&quot;
-3. &quot;Add one YAML line to CI, zero-cost AI vulnerability scanning integration, even the boss praises the cost savings&quot;
-
----
-
-Think this looks good? If you want to learn more or need detailed expansions, just let me know!
-
-[1]: https://github.com/anthropics/claude-code-security-review &quot;GitHub - anthropics/claude-code-security-review: An AI-powered security review GitHub Action using Claude to analyze code changes for security vulnerabilities.&quot;
-[2]: https://www.anthropic.com/news/automate-security-reviews-with-claude-code?utm_source=chatgpt.com &quot;Automate security reviews with Claude Code&quot;
-[3]: https://venturebeat.com/ai/anthropic-ships-automated-security-reviews-for-claude-code-as-ai-generated-vulnerabilities-surge/?utm_source=chatgpt.com &quot;Anthropic ships automated security reviews for Claude Code as AI-generated vulnerabilities surge&quot;
-[4]: https://www.reddit.com/r/ClaudeAI/comments/1mjc40q/claude_code_now_has_automated_security_reviews/?utm_source=chatgpt.com &quot;Claude Code now has Automated Security Reviews&quot;
-[5]: https://thenewstack.io/anthropic-adds-auto-security-reviews-to-claude-code/?utm_source=chatgpt.com &quot;Anthropic Adds Auto Security Reviews to Claude Code&quot;
-[6]: https://www.wired.com/story/ai-agents-are-getting-better-at-writing-code-and-hacking-it-as-well?utm_source=chatgpt.com &quot;AI Agents Are Getting Better at Writing Code-and Hacking It as Well&quot; --&gt;</content:encoded><category>AI Agent</category><category>Claude Code</category><category>security-review</category></item></channel></rss>
+[36]: https://www.palantir.com/platforms/aip/?utm_source=chatgpt.com &quot;Palantir Artificial Intelligence Platform&quot; --&gt;</content:encoded><category>Finance</category><category>Palantir</category><category>NYSE: PLTR</category><category>AI</category><category>US Stock Market</category></item></channel></rss>

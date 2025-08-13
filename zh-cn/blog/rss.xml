@@ -1,4 +1,425 @@
-<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Vibe Sparking AI | Blog</title><description/><link>https://www.vibesparking.com/</link><language>zh-CN</language><item><title>Claude Code 和 Cursor 通过 Browser Echo 阅读前端浏览器 console 日志</title><link>https://www.vibesparking.com/zh-cn/blog/ai/2025-08-13-browser-echo-next-terminal-ai-fix/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/2025-08-13-browser-echo-next-terminal-ai-fix/</guid><pubDate>Wed, 13 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # Claude Code 和 Cursor 通过 Browser Echo 阅读浏览器 console 日志 --&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Vibe Sparking AI | Blog</title><description/><link>https://www.vibesparking.com/</link><language>zh-CN</language><item><title>前端 AI 福利：开源 Open-Lovable 对标 Lovable 把任意网站一键克隆成 React 应用</title><link>https://www.vibesparking.com/zh-cn/blog/ai/open-lovable/2025-08-14-open-lovable-vs-lovable-clone-any-site-to-react/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/open-lovable/2025-08-14-open-lovable-vs-lovable-clone-any-site-to-react/</guid><pubDate>Thu, 14 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # 开源 open-lovable 对标 Lovable：AI 把任意网站一键克隆成 React 应用 --&gt;
+&lt;blockquote&gt;
+&lt;p&gt;写给想用 AI &lt;strong&gt;更快落地产品&lt;/strong&gt;、&lt;strong&gt;更省钱验证想法&lt;/strong&gt;的工程师与创作者。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;引言&quot;&gt;引言&lt;/h2&gt;&lt;a href=&quot;#引言&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “引言”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;最近火出圈的 Lovable，用聊天就能生成网站/应用，收费按&lt;strong&gt;credits&lt;/strong&gt;计价，模式新鲜、速度惊人。与此同时，Mendable 团队放出了开源替代品 &lt;strong&gt;open-lovable&lt;/strong&gt;：&lt;strong&gt;把任意网站克隆成现代 React 应用&lt;/strong&gt;，本地跑、可改、可二开。对很多团队，这是更可控、更经济的一条路。&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;open-lovable-是什么&quot;&gt;open-lovable 是什么？&lt;/h2&gt;&lt;a href=&quot;#open-lovable-是什么&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “open-lovable 是什么？”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;一句话&lt;/strong&gt;：给它一个网址，几秒钟拉下页面结构与资产，&lt;strong&gt;生成可运行的 Next.js/React 代码&lt;/strong&gt;，你在本地直接二次开发。背后两块“发动机”：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Firecrawl&lt;/strong&gt;：把网页内容爬下来，转成 LLM 友好的 Markdown/JSON/截图等结构化数据。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;E2B Sandboxes&lt;/strong&gt;：安全隔离的云端沙箱，作为“AI 代码运行时”，让智能体能跑命令、读写文件、调包、联网。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;官方 README 开箱就写明了依赖与步骤（支持 Anthropic、OpenAI、Gemini、Groq 任一/多家模型）：&lt;strong&gt;&lt;code dir=&quot;auto&quot;&gt;E2B_API_KEY&lt;/code&gt; + &lt;code dir=&quot;auto&quot;&gt;FIRECRAWL_API_KEY&lt;/code&gt; 必填，至少配置一个模型提供商的 API Key&lt;/strong&gt;，&lt;code dir=&quot;auto&quot;&gt;npm run dev&lt;/code&gt; 即可在 &lt;code dir=&quot;auto&quot;&gt;localhost:3000&lt;/code&gt; 体验。许可证 &lt;strong&gt;MIT&lt;/strong&gt;。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;重点&lt;/strong&gt;：open-lovable 的定位偏“&lt;strong&gt;克隆 + 本地可控&lt;/strong&gt;”，而 Lovable 更像“&lt;strong&gt;托管式 AI App Builder&lt;/strong&gt;”。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;lovable-做了什么为什么值得对标&quot;&gt;Lovable 做了什么？为什么值得对标&lt;/h2&gt;&lt;a href=&quot;#lovable-做了什么为什么值得对标&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Lovable 做了什么？为什么值得对标”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Lovable 是一个&lt;strong&gt;聊天式全栈应用构建平台&lt;/strong&gt;，支持 Agent/Chat/Code/可视化编辑、Figma 导入、集成 GitHub/Supabase/Stripe/Clerk 等，面向非技术用户与小团队非常友好；&lt;strong&gt;采用 credit 计费&lt;/strong&gt;，Pro 起步 &lt;strong&gt;$25/月&lt;/strong&gt;。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Agent Mode&lt;/strong&gt;：会“自己想、自己查、自己改”，能读代码、排错、搜文档、改动代码并调试。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Visual Edits&lt;/strong&gt;：在画面上直接点选元素改文案、样式，&lt;strong&gt;不扣 credits&lt;/strong&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这家公司增长也很猛，最近融资与营收的新闻不少，说明这条赛道已被验证。&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;对标清单open-lovable-vs-lovable&quot;&gt;对标清单：open-lovable vs. Lovable&lt;/h2&gt;&lt;a href=&quot;#对标清单open-lovable-vs-lovable&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “对标清单：open-lovable vs. Lovable”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;维度&lt;/th&gt;&lt;th&gt;open-lovable（开源）&lt;/th&gt;&lt;th&gt;Lovable（商业SaaS）&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;核心能力&lt;/td&gt;&lt;td&gt;&lt;strong&gt;克隆任意网站 → 生成 Next.js/React 代码&lt;/strong&gt;，本地二开&lt;/td&gt;&lt;td&gt;&lt;strong&gt;自然语言生成全栈应用&lt;/strong&gt;，支持 Agent/Chat/Visual Edits&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;运行形态&lt;/td&gt;&lt;td&gt;本地/自托管，MIT 协议，可深度改造&lt;/td&gt;&lt;td&gt;托管云端，所见即所得&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;依赖&lt;/td&gt;&lt;td&gt;Firecrawl 抓取 + E2B 沙箱 + 你选的 LLM 提供商&lt;/td&gt;&lt;td&gt;内置 AI 能力与众多集成&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;计费&lt;/td&gt;&lt;td&gt;开源免费（自行承担 Firecrawl/E2B/模型调用费用）&lt;/td&gt;&lt;td&gt;&lt;strong&gt;credit 计费&lt;/strong&gt;，Pro $25/月起&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;适合人群&lt;/td&gt;&lt;td&gt;有前端基础，想&lt;strong&gt;快克隆+快改造&lt;/strong&gt;的工程师/团队&lt;/td&gt;&lt;td&gt;想&lt;strong&gt;零门槛搭应用/原型&lt;/strong&gt;，少碰代码的团队&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;典型场景&lt;/td&gt;&lt;td&gt;竞品页/营销页迁移、把旧栈重做成现代 React&lt;/td&gt;&lt;td&gt;0→1 原型、MVP、内部工具、设计稿到代码&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;p&gt;（数据来源：两者官网与文档/README）&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;实操5-分钟上手-open-lovable本地&quot;&gt;实操：5 分钟上手 open-lovable（本地）&lt;/h2&gt;&lt;a href=&quot;#实操5-分钟上手-open-lovable本地&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “实操：5 分钟上手 open-lovable（本地）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ol&gt;
+&lt;li&gt;克隆与安装&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;git&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;clone&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;https://github.com/mendableai/open-lovable.git&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;cd&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;open-lovable&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;npm&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;install&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;ol start=&quot;2&quot;&gt;
+&lt;li&gt;配置环境变量（&lt;code dir=&quot;auto&quot;&gt;.env.local&lt;/code&gt;）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# 必填&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;E2B_API_KEY&lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;=&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;你的e2b_api_key&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;FIRECRAWL_API_KEY&lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;=&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;你的firecrawl_api_key&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# 至少选一个模型&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;OPENAI_API_KEY&lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;=&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;...&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;ANTHROPIC_API_KEY&lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;=&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;...&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;GEMINI_API_KEY&lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;=&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;...&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;GROQ_API_KEY&lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;=&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;...&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;ol start=&quot;3&quot;&gt;
+&lt;li&gt;运行&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;npm&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;run&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;dev&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# 浏览器打开 http://localhost:3000&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;p&gt;这些步骤与依赖在官方 README 写得非常清楚。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;小贴士：Firecrawl 支持&lt;strong&gt;抓全站/截屏/Markdown/JSON&lt;/strong&gt;等；E2B 沙箱默认存活 5 分钟，可配置超时。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;开发者日常的-3-个真例子&quot;&gt;开发者日常的 3 个“真”例子&lt;/h2&gt;&lt;a href=&quot;#开发者日常的-3-个真例子&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “开发者日常的 3 个“真”例子”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3 id=&quot;例子1竞品落地页当天发版的营销站&quot;&gt;例子1：竞品落地页→当天发版的营销站&lt;/h3&gt;&lt;a href=&quot;#例子1竞品落地页当天发版的营销站&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “例子1：竞品落地页→当天发版的营销站”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;场景&lt;/strong&gt;：市场要 A/B 测试一版新文案与排版。
+&lt;strong&gt;做法&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;用 open-lovable 克隆竞品页或旧落地页骨架到 React。&lt;/li&gt;
+&lt;li&gt;在本地把文案、CTA、跟踪脚本接上（GA/分析埋点）。&lt;/li&gt;
+&lt;li&gt;挂上你自己的样式系统与组件库，接入后端表单/CRM。
+&lt;strong&gt;好处&lt;/strong&gt;：&lt;strong&gt;几小时完成“迁移+定制+上线”&lt;/strong&gt;，而不是重切图、重写样式。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;技术点：Firecrawl 拿干净的页面内容，减少手抄；Next.js 目录结构清晰，上 CI/CD 很顺。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h3 id=&quot;例子2把老项目现代化&quot;&gt;例子2：把“老项目”现代化&lt;/h3&gt;&lt;a href=&quot;#例子2把老项目现代化&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “例子2：把“老项目”现代化”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;场景&lt;/strong&gt;：公司有一套“能跑但老旧”的官网/Docs。
+&lt;strong&gt;做法&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;直接克隆现站，生成&lt;strong&gt;现代化 React 代码&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;用 E2B 沙箱驱动脚本做批量替换/重构（比如类名体系、图片优化、i18n 抽离）。&lt;/li&gt;
+&lt;li&gt;接入 Tailwind/Design System，统一视觉。
+&lt;strong&gt;好处&lt;/strong&gt;：&lt;strong&gt;不改功能先换壳&lt;/strong&gt;，提升可维护性，再逐步抽象组件与数据层。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h3 id=&quot;例子3方案评审当天就能点给领导看&quot;&gt;例子3：方案评审当天就能点给领导看&lt;/h3&gt;&lt;a href=&quot;#例子3方案评审当天就能点给领导看&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “例子3：方案评审当天就能点给领导看”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;场景&lt;/strong&gt;：新业务想法很多，领导想“看到东西”。
+&lt;strong&gt;做法&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;克隆一个同类产品公开页面为骨架。&lt;/li&gt;
+&lt;li&gt;用模型快速替换行业文案、页内交互 Demo。&lt;/li&gt;
+&lt;li&gt;接入第三方登录/支付/邮件等（后续可迁到真实后端）。
+&lt;strong&gt;好处&lt;/strong&gt;：&lt;strong&gt;当天就能“有样子”&lt;/strong&gt;，评审聚焦产品价值而非“页面还没搭”。（真要做产品化，再转 Cursor/本地仓库持续演进。）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;如果追求&lt;strong&gt;零代码从 0 到 1&lt;/strong&gt;，Lovable 在 Agent/Visual Edits、集成上更顺滑；开源替代更适合&lt;strong&gt;工程化落地&lt;/strong&gt;与“&lt;strong&gt;要代码可控&lt;/strong&gt;”的团队。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;进阶玩法和日常开发工具链拼起来&quot;&gt;进阶玩法：和日常开发工具链拼起来&lt;/h2&gt;&lt;a href=&quot;#进阶玩法和日常开发工具链拼起来&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “进阶玩法：和日常开发工具链拼起来”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;配合 GitHub Actions&lt;/strong&gt;：提交 PR 即触发 Lighthouse/Playwright，盯性能与可用性。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;接 Supabase/Stripe/Clerk&lt;/strong&gt; 做 MVP 支付/鉴权/数据。open-lovable 产出是标准 React 代码，直接按常规方式对接即可；Lovable 则内置了对这些服务的教程与模版。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;模型“混搭”&lt;/strong&gt;：场景复杂用 Claude/GPT-5，速度需求用 Groq/Kimi K2；环境变量按需切换。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;该怎么选&quot;&gt;该怎么选？&lt;/h2&gt;&lt;a href=&quot;#该怎么选&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “该怎么选？”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;你要&lt;strong&gt;掌控代码、节省订阅费、复用现有网页&lt;/strong&gt; → &lt;strong&gt;open-lovable&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;你要&lt;strong&gt;0→1 快速出原型/内部工具&lt;/strong&gt;，更看重&lt;strong&gt;托管与协作&lt;/strong&gt; → &lt;strong&gt;Lovable&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;也可以&lt;strong&gt;组合拳&lt;/strong&gt;：先用 open-lovable 把“壳”拉下来，再在本地细改；或先在 Lovable 验证产品/数据流，再“导出/重构”到自托管。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;业界讨论普遍把 Lovable 当成“&lt;strong&gt;脚手架 + 设计/流程可视化&lt;/strong&gt;”，严肃项目会回到本地工程继续打磨。open-lovable 恰好补上了“&lt;strong&gt;工程化可控&lt;/strong&gt;”那半步。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;结语&quot;&gt;结语&lt;/h2&gt;&lt;a href=&quot;#结语&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “结语”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;AI 辅助开发正在走向两端&lt;/strong&gt;：一端是&lt;strong&gt;托管式&lt;/strong&gt;、所见即所得的 Lovable；另一端是&lt;strong&gt;开源可控&lt;/strong&gt;、贴近工程实践的 open-lovable。
+&lt;strong&gt;没有绝对正确&lt;/strong&gt;，只有你团队的成本/节奏/管控需求最重要。&lt;/p&gt;
+&lt;p&gt;你更偏向哪一种？**你觉得 open-lovable 最适合落在哪些业务？**欢迎在评论区聊聊你的真场景。&lt;/p&gt;&lt;!-- ---
+
+## 快速参考与链接
+
+* open-lovable GitHub（安装、依赖、MIT 许可）
+* Firecrawl（把网页变成 LLM 就绪数据）
+* E2B（AI 代码沙箱，默认 5 分钟生命周期）
+* Lovable 文档（Agent/Chat/Visual Edits/集成）与定价
+* 讨论：open-lovable 与 Lovable 定位差异（HN）
+
+---
+
+## 封面 &amp; 章节插画（2:1，插画风，**图片中文字请用英文**）
+
+1. **封面图**
+   “An illustration of an engineer duplicating a live website into a React app box on a laptop, two engines labeled ‘Crawl’ and ‘Sandbox’ powering the conveyor belt. Clean, modern pastel palette, 2:1.”
+
+2. **关键章节配图**
+
+* 「工作原理」：“Firecrawl pipeline turning messy web pages into tidy blocks labeled Markdown/JSON/Screenshots, flowing into a React folder. 2:1.”
+* 「本地上手」：“Terminal window running ‘npm run dev’, browser preview shows a cloned landing page with editable sections. 2:1.”
+* 「对标清单」：“Two cards side-by-side: ‘open-lovable’ (wrench icon) vs ‘Lovable’ (sparkles icon), arrows pointing to ‘Clone &amp; Control’ and ‘Hosted &amp; Fast’. 2:1.”
+
+---
+
+## 互动小问题
+
+* **你会先用 open-lovable 克隆，还是先用 Lovable 起项目？为什么？**
+* **如果让你把公司官网“脱胎换骨”，会怎么落地？**
+* **要不要出一篇《open-lovable 全链路部署实践》？你想看哪一段？**
+
+---
+
+## 多语言标题（3 组选）
+
+1. **开源克隆站神器：open-lovable 对标 Lovable，工程化更可控**
+
+   * EN: *Open-Lovable vs. Lovable: Clone Any Site into React, Keep It Fully Under Your Control*
+   * 繁体: *開源克隆站神器：open-lovable 對標 Lovable，工程化更可控*
+   * 日: *Open-Lovable vs. Lovable：任意サイトをReact化、コードは完全に自分の手に*
+   * 法: *Open-Lovable vs Lovable : cloner tout site en React, garder le contrôle total*
+   * 西: *Open-Lovable vs Lovable: clona cualquier sitio a React y mantén el control total*
+   * 葡: *Open-Lovable vs Lovable: clone qualquer site em React com controle total*
+   * **slug**：`open-lovable-vs-lovable-clone-any-site-to-react`
+
+2. **把网站一键变成 React 应用：open-lovable 的正确打开方式**
+
+   * EN: *Turn Any Website into a React App: The Right Way to Use Open-Lovable*
+   * 繁体: *把網站一鍵變成 React 應用：open-lovable 的正確打開方式*
+   * 日: *任意サイトをReactアプリへ：Open-Lovableの正しい使い方*
+   * 法: *Transformer n’importe quel site en app React : la bonne manière avec Open-Lovable*
+   * 西: *Convierte cualquier sitio en una app React: la forma correcta con Open-Lovable*
+   * 葡: *Transforme qualquer site em um app React: o jeito certo com Open-Lovable*
+   * **slug**：`open-lovable-turn-website-into-react-app`
+
+3. **从托管到自控：Lovable 与 open-lovable 的最佳组合拳**
+
+   * EN: *From Hosted to In-Control: The Best Combo of Lovable and Open-Lovable*
+   * 繁体: *從託管到自控：Lovable 與 open-lovable 的最佳組合拳*
+   * 日: *ホステッドから自律へ：Lovable × Open-Lovable 最強コンボ*
+   * 法: *De l’hébergé au maîtrisé : le duo gagnant Lovable + Open-Lovable*
+   * 西: *De alojado a bajo control: la mejor dupla Lovable + Open-Lovable*
+   * 葡: *Do hospedado ao controle: a melhor dupla Lovable + Open-Lovable*
+   * **slug**：`lovable-open-lovable-best-combo`
+
+---
+
+## 朋友圈/评论区推荐文案（3 组）
+
+1. “有了 open-lovable，竞品页直接克隆成 React，下午就能上 A/B。不用重切图，真香～”
+2. “Lovable 适合 0→1，open-lovable 适合工程化落地。组合拳 = 速度 + 可控，打工人狂喜。”
+3. “谁还在手撸营销页？克隆→改文案→接支付，今晚就能给老板看线上 Demo 😎”
+
+---
+
+如果你喜欢这篇，想不想我再**扩写一篇《open-lovable 生产级部署与成本测算》**？或者做一版**脚手架模版仓库**（带 CI/CD、监控、错误上报）？我现在就开干。
+
+[1]: https://lovable.dev/pricing &quot;Lovable&quot;
+[2]: https://github.com/mendableai/open-lovable &quot;GitHub - mendableai/open-lovable:  Clone and recreate any website as a modern React app in seconds&quot;
+[3]: https://firecrawl.dev/?ref=open-lovable-github &quot;Firecrawl&quot;
+[4]: https://e2b.dev/docs?utm_source=chatgpt.com &quot;E2B - Code Interpreting for AI apps&quot;
+[5]: https://news.ycombinator.com/item?id=44854120&amp;utm_source=chatgpt.com &quot;Open Lovable&quot;
+[6]: https://docs.lovable.dev/ &quot;Welcome - Lovable Documentation&quot;
+[7]: https://docs.lovable.dev/features/modes &quot;Modes - Lovable Documentation&quot;
+[8]: https://www.ft.com/content/01bc8e7e-6c45-4348-b89f-00e091149531?utm_source=chatgpt.com &quot;Swedish AI start-up Lovable nears $2bn valuation&quot;
+[9]: https://omni.se/a/OoVk5k?utm_source=chatgpt.com &quot;Svenska Lovable snabbast växande startupen någonsin&quot;
+[10]: https://e2b.dev/docs/sandbox?utm_source=chatgpt.com &quot;Sandbox lifecycle&quot;
+[11]: https://docs.lovable.dev/integrations/introduction &quot;Introduction - Lovable Documentation&quot;
+[12]: https://www.reddit.com/r/lovable/comments/1kixyei/stop_using_lovable_for_everything_heres_a_smarter/?utm_source=chatgpt.com &quot;Stop Using Lovable for Everything, Here&apos;s a Smarter Way ...&quot; --&gt;</content:encoded><category>Open Lovable</category><category>Lovable</category><category>React</category><category>AI</category></item><item><title>Vibe Coding vs 传统手工 Coding：把话说清楚，代码 AI 自己长出来</title><link>https://www.vibesparking.com/zh-cn/blog/ai/vibe-coding/2025-08-14-vibe-coding-stop-typing-start-shipping/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/vibe-coding/2025-08-14-vibe-coding-stop-typing-start-shipping/</guid><pubDate>Thu, 14 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;strong&gt;Vibe Coding vs 传统编程&lt;/strong&gt; 的差异：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Vibe Coding&lt;/strong&gt;：自然语言驱动、你像&lt;strong&gt;导演&lt;/strong&gt;；更关注&lt;strong&gt;最终效果&lt;/strong&gt;；靠&lt;strong&gt;提问&lt;/strong&gt;与对话推进；速度很快、门槛更低，但容易形成“&lt;strong&gt;黑箱式理解&lt;/strong&gt;”。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;传统编程&lt;/strong&gt;：精确的编程语言、你更像&lt;strong&gt;架构师&lt;/strong&gt;；关注&lt;strong&gt;实现细节&lt;/strong&gt;；强调&lt;strong&gt;算法与原理&lt;/strong&gt;；节奏更慢、门槛更高，但对代码有&lt;strong&gt;深度理解&lt;/strong&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;&lt;!-- # Vibe Coding vs 传统 Coding：把话说清楚，代码自己长出来 --&gt;
+&lt;div&gt;&lt;h2 id=&quot;引言&quot;&gt;引言&lt;/h2&gt;&lt;a href=&quot;#引言&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “引言”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;这两年，写代码越来越像“&lt;strong&gt;把意图讲清楚&lt;/strong&gt;”。编辑器里直接用自然语言改项目、跨文件重构、自动生成 PR，这些都成了家常便饭：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Cursor/VS Code 等工具支持&lt;strong&gt;自然语言编辑整段代码&lt;/strong&gt;与跨文件修改。&lt;/li&gt;
+&lt;li&gt;Replit Agent 主打“&lt;strong&gt;用日常语言描述，就能搭起可运行应用&lt;/strong&gt;”。&lt;/li&gt;
+&lt;li&gt;终端里的 Claude Code，把“&lt;strong&gt;想法→代码&lt;/strong&gt;”做成了一整套工作流。
+采用度也在飙升：Stack Overflow 2024 调查显示，&lt;strong&gt;76%&lt;/strong&gt; 的开发者使用或计划使用 AI 辅助工具。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;什么是-vibe-coding&quot;&gt;什么是 Vibe Coding？&lt;/h2&gt;&lt;a href=&quot;#什么是-vibe-coding&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “什么是 Vibe Coding？”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;一句话：&lt;strong&gt;用人话定义目标 → 让 AI 先起稿 → 人在对话中校准边界与验收&lt;/strong&gt;。
+它不是玄学的“凭感觉”，而是把“&lt;strong&gt;意图、约束、验收&lt;/strong&gt;”变成可执行的协作语言。典型载体包括：AI 编辑器的自然语言改码、终端/IDE 里的对话式任务与批量变更。&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;对照图总结的-7-处差异落地解读&quot;&gt;对照图总结的 7 处差异（落地解读）&lt;/h2&gt;&lt;a href=&quot;#对照图总结的-7-处差异落地解读&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “对照图总结的 7 处差异（落地解读）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;输入&lt;/strong&gt;：Vibe 用自然语言 + 示例驱动；传统靠设计文档 + 手写实现。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;角色&lt;/strong&gt;：Vibe 更像导演，拆镜头、控节奏；传统更像建筑师，定结构、理细节。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;关注点&lt;/strong&gt;：Vibe 重&lt;strong&gt;可运行结果&lt;/strong&gt;；传统重&lt;strong&gt;可解释的过程&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;技能&lt;/strong&gt;：Vibe 重&lt;strong&gt;提问与验收写法&lt;/strong&gt;；传统重&lt;strong&gt;算法与语言细节&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;节奏&lt;/strong&gt;：Vibe 快速迭代；传统稳。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;门槛&lt;/strong&gt;：Vibe 低，适合拉齐跨职能协作；传统高，适合高可靠领域。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;认知&lt;/strong&gt;：Vibe 易黑箱；传统可溯源。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;关键启示&lt;/strong&gt;：Vibe 更像“&lt;strong&gt;沟通范式升级&lt;/strong&gt;”，不是谁替代谁。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;6-个日常研发场景vibe-流-vs-传统流可照抄&quot;&gt;6 个日常研发场景：Vibe 流 vs 传统流（可照抄）&lt;/h2&gt;&lt;a href=&quot;#6-个日常研发场景vibe-流-vs-传统流可照抄&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “6 个日常研发场景：Vibe 流 vs 传统流（可照抄）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3 id=&quot;1功能-01给-nextjs-加微信扫码登录&quot;&gt;1）功能 0→1：给 Next.js 加“微信扫码登录”&lt;/h3&gt;&lt;a href=&quot;#1功能-01给-nextjs-加微信扫码登录&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1）功能 0→1：给 Next.js 加“微信扫码登录””&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;传统&lt;/strong&gt;：写需求→选库→画时序→拉分支→实现→PR。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Vibe&lt;/strong&gt;（在 Cursor/Claude Code 中对话）：
+1）“项目是 Next.js + Supabase，要最小可行的微信扫码登录。&lt;strong&gt;限制：只改 auth 模块，不动现有用户表。&lt;/strong&gt;”
+2）让 AI 生成路由、回调与环境变量清单，补上&lt;strong&gt;安全与回滚&lt;/strong&gt;说明。
+3）要求附&lt;strong&gt;PR 描述 + e2e 验收步骤&lt;/strong&gt;。
+&lt;em&gt;为什么有效：自然语言跨文件改码 + 自动补 PR/测试清单&lt;/em&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;2线上-bug-快速回归&quot;&gt;2）线上 Bug 快速回归&lt;/h3&gt;&lt;a href=&quot;#2线上-bug-快速回归&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2）线上 Bug 快速回归”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;传统&lt;/strong&gt;：翻日志→本地复现→打补丁→写回归用例。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Vibe&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;粘贴异常日志 + 相关函数：“请给&lt;strong&gt;最小 diff 修复&lt;/strong&gt;，并生成&lt;strong&gt;回归单测&lt;/strong&gt;与&lt;strong&gt;复现场景&lt;/strong&gt;。”&lt;/li&gt;
+&lt;li&gt;人只做&lt;strong&gt;风险面审查&lt;/strong&gt;与边界确认。
+&lt;em&gt;要点：小 PR + 必测 + 可回滚&lt;/em&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;3全仓迁移axios--fetch&quot;&gt;3）全仓迁移：axios → fetch&lt;/h3&gt;&lt;a href=&quot;#3全仓迁移axios--fetch&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3）全仓迁移：axios → fetch”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;传统&lt;/strong&gt;：全局搜→人肉替换→逐文件修。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Vibe&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;“扫描仓库 axios 用法，生成&lt;strong&gt;统一封装&lt;/strong&gt;与&lt;strong&gt;批次变更计划&lt;/strong&gt;（优先低风险目录），每批附&lt;strong&gt;回滚脚本&lt;/strong&gt;。”&lt;/li&gt;
+&lt;li&gt;让 AI 批量改；人盯&lt;strong&gt;封装层异常策略&lt;/strong&gt;。
+&lt;em&gt;工具支撑：自然语言跨文件重写&lt;/em&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;4性能优化数据库慢查询&quot;&gt;4）性能优化：数据库慢查询&lt;/h3&gt;&lt;a href=&quot;#4性能优化数据库慢查询&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “4）性能优化：数据库慢查询”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;传统&lt;/strong&gt;：explain→索引→调整 SQL/缓存。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Vibe&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;“这是慢查询日志 + 表结构。给&lt;strong&gt;三步优化顺序&lt;/strong&gt;，先验证索引收益，再考虑缓存；输出&lt;strong&gt;P95/QPS&lt;/strong&gt; 目标与基准脚本。”&lt;/li&gt;
+&lt;li&gt;AI 给出 SQL/指标脚本；人跑基准与灰度发布。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;5代码评审预审&quot;&gt;5）代码评审预审&lt;/h3&gt;&lt;a href=&quot;#5代码评审预审&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “5）代码评审预审”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;传统&lt;/strong&gt;：Reviewer 人肉扫逻辑。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Vibe&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;先让 AI 做&lt;strong&gt;预审总结&lt;/strong&gt;（高风险改动、未覆盖路径、潜在注入点），&lt;/li&gt;
+&lt;li&gt;人做&lt;strong&gt;业务语义与合规&lt;/strong&gt;把关。
+&lt;em&gt;好处：把 Reviewer 的精力留给关键语义判断&lt;/em&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;6个人项目新人上手&quot;&gt;6）个人项目/新人上手&lt;/h3&gt;&lt;a href=&quot;#6个人项目新人上手&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “6）个人项目/新人上手”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;传统&lt;/strong&gt;：读文档、摸仓库。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Vibe&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;直接描述要做的工具/页面，Agent 生成骨架并跑起来，适合&lt;strong&gt;一下午拉起原型&lt;/strong&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;风险与护栏&quot;&gt;风险与“护栏”&lt;/h2&gt;&lt;a href=&quot;#风险与护栏&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “风险与“护栏””&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;黑箱感&lt;/strong&gt;：很多人会用但&lt;strong&gt;没完全理解生成代码&lt;/strong&gt;，这在行业调查里被点名是风险。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;护栏清单（强烈建议固化到模板/命令里）&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;PR 模板：背景、&lt;strong&gt;验收标准&lt;/strong&gt;、影响面、回滚。&lt;/li&gt;
+&lt;li&gt;CI：&lt;strong&gt;必跑测试&lt;/strong&gt;、覆盖率红线、依赖与许可扫描、Secrets 扫描。&lt;/li&gt;
+&lt;li&gt;对话模板：目标/MVP/&lt;strong&gt;不允许改动&lt;/strong&gt;/日志级别/限时限量。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Slash Commands&lt;/strong&gt;：把常用流程固化为命令，团队一键复用。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;什么时候用-vibe什么时候先别用&quot;&gt;什么时候用 Vibe，什么时候先别用&lt;/h2&gt;&lt;a href=&quot;#什么时候用-vibe什么时候先别用&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “什么时候用 Vibe，什么时候先别用”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;很适合&lt;/strong&gt;：原型探索、CRUD 特性、批量改名/重构、脚手架搭建、重复性修复。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;先别用来“全托管”&lt;/strong&gt;：强安全/强合规、核心算法、对性能可解释性极高的模块。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;团队准备度&lt;/strong&gt;：有共识的 PR/测试模板、清晰的回滚规范、以及最少一套“&lt;strong&gt;一条命令起项目并跑验收&lt;/strong&gt;”的脚本。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;结语&quot;&gt;结语&lt;/h2&gt;&lt;a href=&quot;#结语&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “结语”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Vibe Coding 的本质是&lt;strong&gt;沟通升级&lt;/strong&gt;：把人类意图变成机器可执行的步骤。它不是替你思考，而是让&lt;strong&gt;思考的边界更清楚&lt;/strong&gt;。
+下一步，不妨把你们团队最常做的 3 件事，写成可复用的&lt;strong&gt;对话模板/Slash 命令&lt;/strong&gt;，从今天就能提速。&lt;/p&gt;&lt;!-- 
+---
+
+## 多语言标题（3 组选 1）
+
+1. **Vibe Coding 干掉沟通内耗：把话说清楚，代码自己长出来**
+   EN: *Vibe Coding vs Traditional: Stop Typing, Start Shipping*
+   繁中：*Vibe Coding 解放溝通成本：把話說清楚程式就能跑*
+   日语：*Vibe Coding入門：書くより「意図」を伝える*
+   法语：*Vibe Coding : moins écrire, mieux交付*
+   西语：*Vibe Coding: menos código, más entrega*
+   葡语：*Vibe Coding: menos digitar, mais entregar*
+   **slug**: vibe-coding-stop-typing-start-shipping
+
+2. **从 PR 到 Prompt：工程团队的 Vibe 化升级手册**
+   EN: *From PRs to Prompts: A Practical Guide to Team Vibe-ification*
+   **slug**: from-prs-to-prompts-guide
+
+3. **别死磕语法，先把意图说清楚**
+   EN: *Don’t Fight the Syntax—Lead with Intent*
+   **slug**: lead-with-intent-not-syntax
+
+---
+
+## 配图提示（插画风，2:1，比照图文，无中文文字）
+
+**封面图**：
+“An illustration of a developer as a film director pointing at a storyboard while an AI assistant assembles code blocks into a running app on a conveyor belt. Clean, pastel colors, minimal lines, 2:1.”
+
+**关键章节配图（任选其一）**：
+1）“Two balanced scales: left pan labeled ‘Vibe Coding’ showing chat bubbles, checklist, and rocket; right pan labeled ‘Traditional’ showing code braces, blueprint, gears. Minimal, 2:1.”
+2）“A terminal window with a slash command launching automated tests and a CI pipeline dashboard lighting up. Flat illustration, 2:1.”
+3）“Bug report flows into an AI mixer and comes out as a tiny diff + test file. Playful yet clean, 2:1.”
+
+---
+
+## 朋友圈/评论区文案（3 选 1）
+
+1. “今天试了 Vibe Coding，**把验收说清**，半天起了个可用版，PR 还自带测试清单，真香😎”
+2. “写代码像拍电影：你当导演，AI 当剧组。**别忘了护栏和回滚**，不然票房亏了怪谁😂”
+3. “重构 axios→fetch 一把梭？别闹。**分批+回滚**，让 AI 干体力活，人守住红线✅”
+
+—
+
+这版是否合你口味？要不要把上面的 6 个场景进一步扩成**可复制的对话模板 + Slash 命令**？
+
+[1]: https://cursor.com/?utm_source=chatgpt.com &quot;Cursor - The AI Code Editor&quot;
+[2]: https://code.visualstudio.com/docs/copilot/overview?utm_source=chatgpt.com &quot;GitHub Copilot in VS Code&quot;
+[3]: https://docs.replit.com/replitai/agent?utm_source=chatgpt.com &quot;Replit&apos;s AI Agent&quot;
+[4]: https://replit.com/ai?utm_source=chatgpt.com &quot;Replit AI – Turn natural language into apps and websites&quot;
+[5]: https://docs.anthropic.com/en/docs/claude-code/overview?utm_source=chatgpt.com &quot;Claude Code overview&quot;
+[6]: https://survey.stackoverflow.co/2024/ai?utm_source=chatgpt.com &quot;AI | 2024 Stack Overflow Developer Survey&quot;
+[7]: https://www.itpro.com/software/development/developers-say-ai-can-code-better-than-most-humans-but-theres-a-catch?utm_source=chatgpt.com &quot;Developers say AI can code better than most humans - but there&apos;s a catch&quot;
+[8]: https://docs.anthropic.com/en/docs/claude-code/slash-commands?utm_source=chatgpt.com &quot;Slash commands&quot; --&gt;</content:encoded><category>Vibe Coding</category></item><item><title>Claude Code 和 Cursor 通过 Browser Echo 阅读前端浏览器 console 日志</title><link>https://www.vibesparking.com/zh-cn/blog/ai/2025-08-13-browser-echo-next-terminal-ai-fix/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/2025-08-13-browser-echo-next-terminal-ai-fix/</guid><pubDate>Wed, 13 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # Claude Code 和 Cursor 通过 Browser Echo 阅读浏览器 console 日志 --&gt;
 &lt;blockquote&gt;
 &lt;p&gt;**把浏览器里的 &lt;code dir=&quot;auto&quot;&gt;console.*&lt;/code&gt; 日志与错误，实时**“回声”**到本地终端，&lt;strong&gt;0 配置&lt;/strong&gt;可用，超适合 &lt;strong&gt;Cursor / Claude Code / Copilot CLI / Gemini CLI&lt;/strong&gt; 这类读终端输出的 AI 编码助手。&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -2222,242 +2643,4 @@ HHS 在疫情期上线 &lt;strong&gt;Tiberius&lt;/strong&gt;（&lt;strong&gt;202
 [33]: https://investors.palantir.com/news-details/2024/Palantir-to-Unveil-New-Customers-and-Product-Announcements-at-AIPCon/?utm_source=chatgpt.com &quot;Palantir IR - News&quot;
 [34]: https://www.barrons.com/articles/palantir-stock-price-earnings-66f0d20f?utm_source=chatgpt.com &quot;Palantir&apos;s Earnings Expectations Are Stratospheric-as Always&quot;
 [35]: https://www.palantir.com/platforms/aip/bootcamp/?utm_source=chatgpt.com &quot;Palantir AIP Bootcamp&quot;
-[36]: https://www.palantir.com/platforms/aip/?utm_source=chatgpt.com &quot;Palantir Artificial Intelligence Platform&quot; --&gt;</content:encoded><category>Finance</category><category>Palantir</category><category>NYSE: PLTR</category><category>AI</category><category>US Stock Market</category></item><item><title>Nvidia GPU 左右 AWS, Google, Azure 业绩是否达标？</title><link>https://www.vibesparking.com/zh-cn/blog/finance/us-market/2025-08-04-aws-gcp-azure-who-affords-nvidia-ai-cloud/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/finance/us-market/2025-08-04-aws-gcp-azure-who-affords-nvidia-ai-cloud/</guid><pubDate>Mon, 04 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # Nvidia GPU 芯片左右 AWS, Google, Azure 业绩是否达标？ --&gt;
-&lt;p&gt;AWS、Google、Microsoft 最新 &lt;strong&gt;Q2 云服务业务&lt;/strong&gt;是否“达标”与 &lt;strong&gt;Nvidia 芯片份额&lt;/strong&gt;的关系分析：&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;p&gt;展示了 &lt;strong&gt;2025 年估计的云收入市场份额（cloud revenue）与 Nvidia GPU 占有率&lt;/strong&gt;：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;AWS（亚马逊）预计占云收入约 &lt;strong&gt;44%&lt;/strong&gt;，占 Nvidia GPU &lt;strong&gt;20%&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;Google Cloud 约 &lt;strong&gt;19% 云收入&lt;/strong&gt;，&lt;strong&gt;20% GPU&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;Microsoft Azure &lt;strong&gt;30% 云收入&lt;/strong&gt;，&lt;strong&gt;30% GPU&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;其余新云服务（如 CoreWeave、Oracle）占云收入 &lt;strong&gt;5%&lt;/strong&gt;、GPU &lt;strong&gt;11%&lt;/strong&gt;，合计新玩家 GPU 约 &lt;strong&gt;30%&lt;/strong&gt; 左右&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;二2026-财年-q2-最新财报云收入表现一览&quot;&gt;二、2026 财年 Q2 最新财报：云收入表现一览&lt;/h2&gt;&lt;a href=&quot;#二2026-财年-q2-最新财报云收入表现一览&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “二、2026 财年 Q2 最新财报：云收入表现一览”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h3 id=&quot;aws-amazon-web-services&quot;&gt;AWS (Amazon Web Services)&lt;/h3&gt;&lt;a href=&quot;#aws-amazon-web-services&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “AWS (Amazon Web Services)”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;Q2 云收入 ~&lt;strong&gt;$31 B&lt;/strong&gt;，同比增长 &lt;strong&gt;17.5%&lt;/strong&gt;，年度运行率约 $123 B 。&lt;/li&gt;
-&lt;li&gt;尽管跑赢预期，但相比 Microsoft 与 Google Cloud 的增长率落后。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h3 id=&quot;google-cloud&quot;&gt;Google Cloud&lt;/h3&gt;&lt;a href=&quot;#google-cloud&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Google Cloud”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;Q2 云收入约 &lt;strong&gt;$13.6 B&lt;/strong&gt;，同比增长 &lt;strong&gt;32%&lt;/strong&gt;，超出市场预期。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h3 id=&quot;microsoft-azure隶属-intelligent-cloud&quot;&gt;Microsoft Azure（隶属 Intelligent Cloud）&lt;/h3&gt;&lt;a href=&quot;#microsoft-azure隶属-intelligent-cloud&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Microsoft Azure（隶属 Intelligent Cloud）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;微软 Q2 收入 $76.4 B，Azure 部分同比上涨 &lt;strong&gt;约 39%&lt;/strong&gt;，Azure 年收入已突破 $75 B，并继续加速。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;三与-nvidia-芯片份额的对应关系分析&quot;&gt;三、与 Nvidia 芯片份额的对应关系分析&lt;/h2&gt;&lt;a href=&quot;#三与-nvidia-芯片份额的对应关系分析&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “三、与 Nvidia 芯片份额的对应关系分析”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h3 id=&quot;1-gpu-占比是否对应云收入份额&quot;&gt;1. GPU 占比是否对应云收入份额&lt;/h3&gt;&lt;a href=&quot;#1-gpu-占比是否对应云收入份额&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1. GPU 占比是否对应云收入份额”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;图片中 AWS、Google、Microsoft 的云收入份额与 Nvidia GPU 占比分别为：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Azure：30% 云收入 ⇄ 30% GPU&lt;/li&gt;
-&lt;li&gt;GCP：19% 云收入 ⇄ 20% GPU&lt;/li&gt;
-&lt;li&gt;AWS：44% 云收入 ⇄ 20% GPU&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;对应现实数据：三家都是 Nvidia GPU 最大买家，但 AWS 尽管云营收最大（约 30–32% 市场份额），其 GPU 占比被历史降至 ~20%，远低于它的营收主导份额，这可能受 AWS 自研 Trainium/Inferentia 芯片替代部分 Nvidia 需求的影响 。而 Microsoft 与 Google 对 Nvidia 依赖更大，因此 GPU 占比接近其云收入份额。&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;2-q2-表现是否达标&quot;&gt;2. Q2 表现是否“达标”&lt;/h3&gt;&lt;a href=&quot;#2-q2-表现是否达标&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2. Q2 表现是否“达标””&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Microsoft Azure&lt;/strong&gt;：39% 增速强劲，高于同行，是增长领先者，云收入成长完美匹配 Nvidia GPU 占比，其 AI 能力和硬件配比表现都“达标”。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Google Cloud&lt;/strong&gt;：32% 增速也非常亮眼，符合其 GPU 占比 ~20%（略高于云收入占比的小幅匹配），算是稳步达标。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;AWS&lt;/strong&gt;：虽然云收入最大，但增长落后（17.5%），未能与 GPU 占比同步提升；而 GPU 占比仅约 20%，低于其云收入市场份额（约 30%），这反映 AWS 越来越多使用本土芯片替代 Nvidia，从而影响 Nvidia 芯片购买—总体来看云业务增长不及预期，与 Nvidia 高市场占有率的关系弱化。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;四综合观点与展望&quot;&gt;四、综合观点与展望&lt;/h2&gt;&lt;a href=&quot;#四综合观点与展望&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “四、综合观点与展望”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;微软 Azure&lt;/strong&gt;：强增长、高 GPU 支出、与 Nvidia 占比高度契合，构成 AI/云双重引擎，标准达标；&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Google Cloud&lt;/strong&gt;：增长加速、资本开支提升、GPU 占比略超云份额，稳步“达标”；&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;AWS&lt;/strong&gt;：营收领先但增速偏慢，且 GPU 占比低于云营收份额—在 Nvidia 供应依赖减少的趋势下，AWS 对 Nvidia 的贡献与云业务增长脱钩。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h3 id=&quot;nvidia-角度&quot;&gt;Nvidia 角度：&lt;/h3&gt;&lt;a href=&quot;#nvidia-角度&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Nvidia 角度：”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;尽管 Nvidia 仍掌握 &lt;strong&gt;约 90%+ 数据中心 GPU 市场份额&lt;/strong&gt; ，但其对三大 hyperscaler 的依赖正在分化：AWS 的依赖性在降低，而微软与 Google 更进一步加大采购匹配 AI 布局。&lt;/li&gt;
-&lt;li&gt;同时，Nvidia 拓展 CoreWeave 等“新云”平台，抢占未来 11% GPU 市场份额（图中新云 ≈ 30% GPU）方向一致 。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;简要总结表格&quot;&gt;简要总结表格&lt;/h2&gt;&lt;a href=&quot;#简要总结表格&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “简要总结表格”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;公司&lt;/th&gt;&lt;th&gt;Q2 云营收增长率&lt;/th&gt;&lt;th&gt;Nvidia GPU 占比&lt;/th&gt;&lt;th&gt;与 GPU 占比是否契合&lt;/th&gt;&lt;th&gt;是否达标&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;Microsoft Azure&lt;/td&gt;&lt;td&gt;~39%&lt;/td&gt;&lt;td&gt;~30%&lt;/td&gt;&lt;td&gt;高度匹配&lt;/td&gt;&lt;td&gt;✅ 达标&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Google Cloud&lt;/td&gt;&lt;td&gt;~32%&lt;/td&gt;&lt;td&gt;~20%&lt;/td&gt;&lt;td&gt;略高略匹配&lt;/td&gt;&lt;td&gt;✅ 达标&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;AWS&lt;/td&gt;&lt;td&gt;~17–18%&lt;/td&gt;&lt;td&gt;~20%&lt;/td&gt;&lt;td&gt;云收入份额高于 GPU 占比&lt;/td&gt;&lt;td&gt;❌ 未达标&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;总结建议&quot;&gt;总结建议&lt;/h2&gt;&lt;a href=&quot;#总结建议&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “总结建议”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;微软 Azure 与 Google Cloud 的云服务增长与 Nvidia GPU 占比整体匹配良好，可视为“达标”。&lt;/li&gt;
-&lt;li&gt;AWS 尽管规模最大，但其增长速度与 GPU 占比存在落差，难以称其与 Nvidia GPU 使用之间保持同步增长。&lt;/li&gt;
-&lt;li&gt;Nvidia 消费结构正从集中 hyperscaler 向联手中小云服务平台（如 CoreWeave）多元化延展，应继续观察未来 GPU 在这些平台的分布是否能维持图中的“新云 ~30%”趋势。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;注：本报告基于公开信息分析，不构成投资建议，投资有风险，入市需谨慎。&lt;/strong&gt;&lt;/p&gt;&lt;!-- ---
-
-如你还想深入了解各家 Q2 财报的 CAPEX、Free Cash Flow、或 Nvidia 对 hyperscaler 的具体供应合约和 GPU 架构占比变化，也可以告诉我，我可以进一步查找！
-
-你觉得我的分析清晰吗？还需要增加其他维度的分析吗？
-
-* [Barron&apos;s](https://www.barrons.com/articles/microsoft-earnings-stock-price-8b30c578?utm_source=chatgpt.com)
-* [Investors.com](https://www.investors.com/news/technology/amazon-stock-ai-cloud-microsoft-google/?utm_source=chatgpt.com)
-* [Android Central](https://www.androidcentral.com/phones/google-pixel/alphabet-exceeds-expectations-raises-spending-for-the-year-sees-huge-growth-in-cloud-revenue-in-q2-2025-earnings?utm_source=chatgpt.com)
-
-[1]: https://canalys.com/newsroom/global-cloud-q1-2025?utm_source=chatgpt.com &quot;Global cloud infrastructure spending rose 21% in Q1 2025&quot;
-[2]: https://www.wsj.com/tech/ai/nvidia-dgx-cloud-computing-28c49748?utm_source=chatgpt.com &quot;Nvidia Ruffles Tech Giants With Move Into Cloud Computing&quot;
-[3]: https://www.ciodive.com/news/aws-security-generative-ai-cloud-capacity-revenue-growth/756554/?utm_source=chatgpt.com &quot;Amazon leans on AWS&apos; size, security as Q2 cloud market ...&quot;
-[4]: https://io-fund.com/ai-stocks/google-stock-q2-capex-concern?utm_source=chatgpt.com &quot;Google Stock Clears Major Hurdle, Yet One Serious ...&quot;
-[5]: https://www.barrons.com/articles/microsoft-earnings-stock-price-8b30c578?utm_source=chatgpt.com &quot;Microsoft Just Misses $4 Trillion Market Cap After Earnings. The Stock Is on Fire.&quot;
-[6]: https://www.barrons.com/articles/amazon-stock-earnings-cloud-ai-spending-38416183?utm_source=chatgpt.com &quot;The Mag 7&apos;s Strength Just Became a Weakness&quot;
-[7]: https://www.marketsandmarkets.com/Market-Reports/data-center-gpu-market-18997435.html?utm_source=chatgpt.com &quot;Data Center GPU Market Size, Share &amp; Trends, 2025 To ...&quot;
-[8]: https://iot-analytics.com/leading-generative-ai-companies/?utm_source=chatgpt.com &quot;The leading generative AI companies&quot;
-[9]: https://www.ft.com/content/2ba1d064-242d-4a2a-a381-374d9643e23a?utm_source=chatgpt.com &quot;Nvidia seeks to build its business beyond Big Tech&quot; --&gt;</content:encoded><category>Nvidia</category><category>Cloud Computing</category><category>AI Infrastructure</category><category>AWS</category><category>Google Cloud</category><category>Microsoft Azure</category><category>CoreWeave</category></item><item><title>Claude Code Security Review 帮你盯代码安全漏洞</title><link>https://www.vibesparking.com/zh-cn/blog/ai/claude-code/commands/2025-08-07-claude-code-security-review-intro/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/claude-code/commands/2025-08-07-claude-code-security-review-intro/</guid><pubDate>Mon, 04 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- **Claude Code Security Review：让安全审计像写指令一样简单** --&gt;
-&lt;p&gt;Claude Code 刚发布的 &lt;strong&gt;claude-code-security-review&lt;/strong&gt; 把 Anthropic Claude 的大模型推理力塞进 GitHub Actions 和终端指令里。它能在拉取请求（PR）阶段就解析 diff，找出 SQL 注入、XSS、授权绕过等高风险漏洞，并自动过滤低价值噪声，还能通过 &lt;code dir=&quot;auto&quot;&gt;/security-review&lt;/code&gt; 一键在本地扫描。你的代码还没合并，潜在漏洞就已经被 AI 点名。&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;一claude-code-security-review-是什么&quot;&gt;一、Claude Code Security Review 是什么？&lt;/h2&gt;&lt;a href=&quot;#一claude-code-security-review-是什么&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “一、Claude Code Security Review 是什么？”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;AI 驱动的安全审计&lt;/strong&gt;：调用 Claude 的深度语义理解，超越正则匹配，直接读懂代码意图。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;GitHub Action 集成&lt;/strong&gt;：在 PR 打开或同步时自动触发，漏扫结果回帖到具体代码行。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;终端 Slash 指令&lt;/strong&gt;：在 Claude Code 里输入 &lt;code dir=&quot;auto&quot;&gt;/security-review&lt;/code&gt;，同样的扫描能力即刻离线运行。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;二核心亮点&quot;&gt;二、核心亮点&lt;/h2&gt;&lt;a href=&quot;#二核心亮点&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “二、核心亮点”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h3 id=&quot;1-高信噪比结果&quot;&gt;1. 高信噪比结果&lt;/h3&gt;&lt;a href=&quot;#1-高信噪比结果&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1. 高信噪比结果”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;内置 &lt;strong&gt;False Positive Filtering&lt;/strong&gt;，默认屏蔽 DOS、资源耗尽、无实际影响的输入校验等低危告警，只把真正要命的洞拉出来。&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;2-语义级漏洞检测&quot;&gt;2. 语义级漏洞检测&lt;/h3&gt;&lt;a href=&quot;#2-语义级漏洞检测&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2. 语义级漏洞检测”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;可识别注入攻击、鉴权缺陷、硬编码密钥、弱加密、业务逻辑竞态等 10 大类问题。&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;3-diff-aware--语言无关&quot;&gt;3. Diff-Aware &amp;#x26; 语言无关&lt;/h3&gt;&lt;a href=&quot;#3-diff-aware--语言无关&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3. Diff-Aware &amp;#x26; 语言无关”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;只分析改动文件，不挑语言，适合多语言微服务仓库。&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;4-cicd-零配置&quot;&gt;4. CI/CD 零配置&lt;/h3&gt;&lt;a href=&quot;#4-cicd-零配置&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “4. CI/CD 零配置”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;一段 YAML 就能跑：&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;yaml&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;- &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#111111&quot;&gt;uses&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;anthropics/claude-code-security-review@main&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#111111&quot;&gt;with&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;:&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#111111&quot;&gt;claude-api-key&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;${{ secrets.CLAUDE_API_KEY }}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#111111&quot;&gt;comment-pr&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#FF6A83;--1:#A24848&quot;&gt;true&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h3 id=&quot;5-全景行业背书&quot;&gt;5. 全景行业背书&lt;/h3&gt;&lt;a href=&quot;#5-全景行业背书&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “5. 全景行业背书”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;VentureBeat、The New Stack 等媒体均指出，随着 AI 生成代码量激增，自动化安全审计已成刚需。这一 Action 正填补空缺。&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;三如何上手&quot;&gt;三、如何上手？&lt;/h2&gt;&lt;a href=&quot;#三如何上手&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “三、如何上手？”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h3 id=&quot;1-github-actions-快速集成&quot;&gt;1. GitHub Actions 快速集成&lt;/h3&gt;&lt;a href=&quot;#1-github-actions-快速集成&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1. GitHub Actions 快速集成”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ol&gt;
-&lt;li&gt;在项目根目录新建 &lt;code dir=&quot;auto&quot;&gt;.github/workflows/security.yml&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;复制上方 YAML，并在仓库 Secrets 里添加 &lt;code dir=&quot;auto&quot;&gt;CLAUDE_API_KEY&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;提 PR 即可看到 Claude 自动评论漏洞详情 + 修复建议&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&amp;#x3C;空一行&gt;&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;2-本地-security-review-指令&quot;&gt;2. 本地 /security-review 指令&lt;/h3&gt;&lt;a href=&quot;#2-本地-security-review-指令&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2. 本地 /security-review 指令”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;在终端或 VS Code Claude Code 面板输入：&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;plaintext&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;/security-review&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;p&gt;即可对当前未提交改动执行同等级别审计，适合单人开发或离线场景。&lt;/p&gt;
-&lt;p&gt;&amp;#x3C;空一行&gt;&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;3-自定义规则&quot;&gt;3. 自定义规则&lt;/h3&gt;&lt;a href=&quot;#3-自定义规则&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3. 自定义规则”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;将仓库中的 &lt;code dir=&quot;auto&quot;&gt;security-review.md&lt;/code&gt; 复制到 &lt;code dir=&quot;auto&quot;&gt;.claude/commands/&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;编辑过滤规则或补充公司专属安全基线，比如禁止弱密码算法。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;四实战场景&quot;&gt;四、实战场景&lt;/h2&gt;&lt;a href=&quot;#四实战场景&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “四、实战场景”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;场景&lt;/th&gt;&lt;th&gt;触发方式&lt;/th&gt;&lt;th&gt;AI 发现的问题&lt;/th&gt;&lt;th&gt;结果&lt;/th&gt;&lt;th&gt;&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;内部工具新增本地 HTTP 服务&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;PR 合并前自动审计&lt;/td&gt;&lt;td&gt;DNS Rebinding → RCE&lt;/td&gt;&lt;td&gt;漏洞在合并前被修复&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;老项目重构&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;终端 &lt;code dir=&quot;auto&quot;&gt;/security-review&lt;/code&gt;&lt;/td&gt;&lt;td&gt;敏感日志泄露 + 弱加密 AES-ECB&lt;/td&gt;&lt;td&gt;一键生成加密/日志修复 Patch&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;多语言微服务仓库&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;每次 PR&lt;/td&gt;&lt;td&gt;Python 依赖投毒 + Node XSS&lt;/td&gt;&lt;td&gt;PR 评论列出漏洞 + npm audit fix 指令&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;五写在最后&quot;&gt;五、写在最后&lt;/h2&gt;&lt;a href=&quot;#五写在最后&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “五、写在最后”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;AI 写码快，&lt;strong&gt;AI 把关安全更要快&lt;/strong&gt;。把 claude-code-security-review 接入你的 DevSecOps 流水线，
-让每一行提交先过安全门，再进主干。下一个零日，也许就被你提前关在门外。&lt;/p&gt;&lt;!-- ---
-
-## 🚀 三组多语言标题 &amp; slug
-
-1. **写代码前先扫一遍！Claude Code Security Review，一键抓漏洞**
-
-   * EN: *Scan Before You Ship – Catch Bugs in One Click with Claude Code Security Review*
-   * 繁中: **寫程式前先掃！Claude Code Security Review 一鍵抓漏洞**
-   * 日: *コードを書く前にスキャン！Claude Code Security Review で脆弱性を一発検出*
-   * FR: *Scannez avant de publier : Claude Code Security Review traque les failles en un clic*
-   * ES: *¡Escanea antes de hacer merge! Claude Code Security Review detecta fallos al instante*
-   * PT: *Varra antes de subir – Claude Code Security Review acha brechas num clique*
-   * **slug**: `claude-code-security-review-intro`
-
-2. **自动安全审计上新：Claude 帮你盯漏洞**
-
-   * EN: *Auto Security Audit: Let Claude Watch Your Back*
-   * 其余语言同理
-   * **slug**: `auto-security-audit-claude`
-
-3. **DevSecOps 神器！在 PR 阶段消灭漏洞的正确姿势**
-
-   * EN: *DevSecOps Power Tool: Kill Bugs at PR Time*
-   * 其余语言同理
-   * **slug**: `devsecops-pr-vulnerability-killer`
-
----
-
-## 💬 朋友圈评论（3 选 1）
-
-1. “合代码之前跑一遍 Claude，SQL 注入直接标红，真香！”
-2. “安全团队下班也不怕，Claude 帮我夜班审计 PR 😂”
-3. “CI 加一行 YAML，0 成本接入 AI 漏扫，老板都夸省钱”
-
----
-
-觉得还不错吗？如果想了解更深或需要扩写细节，随时告诉我！
-
-[1]: https://github.com/anthropics/claude-code-security-review &quot;GitHub - anthropics/claude-code-security-review: An AI-powered security review GitHub Action using Claude to analyze code changes for security vulnerabilities.&quot;
-[2]: https://www.anthropic.com/news/automate-security-reviews-with-claude-code?utm_source=chatgpt.com &quot;Automate security reviews with Claude Code&quot;
-[3]: https://venturebeat.com/ai/anthropic-ships-automated-security-reviews-for-claude-code-as-ai-generated-vulnerabilities-surge/?utm_source=chatgpt.com &quot;Anthropic ships automated security reviews for Claude Code as AI-generated vulnerabilities surge&quot;
-[4]: https://www.reddit.com/r/ClaudeAI/comments/1mjc40q/claude_code_now_has_automated_security_reviews/?utm_source=chatgpt.com &quot;Claude Code now has Automated Security Reviews&quot;
-[5]: https://thenewstack.io/anthropic-adds-auto-security-reviews-to-claude-code/?utm_source=chatgpt.com &quot;Anthropic Adds Auto Security Reviews to Claude Code&quot;
-[6]: https://www.wired.com/story/ai-agents-are-getting-better-at-writing-code-and-hacking-it-as-well?utm_source=chatgpt.com &quot;AI Agents Are Getting Better at Writing Code-and Hacking It as Well&quot; --&gt;</content:encoded><category>AI Agent</category><category>Claude Code</category><category>security-review</category></item></channel></rss>
+[36]: https://www.palantir.com/platforms/aip/?utm_source=chatgpt.com &quot;Palantir Artificial Intelligence Platform&quot; --&gt;</content:encoded><category>Finance</category><category>Palantir</category><category>NYSE: PLTR</category><category>AI</category><category>US Stock Market</category></item></channel></rss>
