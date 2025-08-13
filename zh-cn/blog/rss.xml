@@ -419,7 +419,187 @@
 [5]: https://docs.anthropic.com/en/docs/claude-code/overview?utm_source=chatgpt.com &quot;Claude Code overview&quot;
 [6]: https://survey.stackoverflow.co/2024/ai?utm_source=chatgpt.com &quot;AI | 2024 Stack Overflow Developer Survey&quot;
 [7]: https://www.itpro.com/software/development/developers-say-ai-can-code-better-than-most-humans-but-theres-a-catch?utm_source=chatgpt.com &quot;Developers say AI can code better than most humans - but there&apos;s a catch&quot;
-[8]: https://docs.anthropic.com/en/docs/claude-code/slash-commands?utm_source=chatgpt.com &quot;Slash commands&quot; --&gt;</content:encoded><category>Vibe Coding</category></item><item><title>Claude Code 和 Cursor 通过 Browser Echo 阅读前端浏览器 console 日志</title><link>https://www.vibesparking.com/zh-cn/blog/ai/2025-08-13-browser-echo-next-terminal-ai-fix/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/2025-08-13-browser-echo-next-terminal-ai-fix/</guid><pubDate>Wed, 13 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # Claude Code 和 Cursor 通过 Browser Echo 阅读浏览器 console 日志 --&gt;
+[8]: https://docs.anthropic.com/en/docs/claude-code/slash-commands?utm_source=chatgpt.com &quot;Slash commands&quot; --&gt;</content:encoded><category>Vibe Coding</category></item><item><title>Conductor 把多个 Claude Code Agent 管理起来</title><link>https://www.vibesparking.com/zh-cn/blog/ai/claude-code/conductor/2025-08-14-conductor-slash-queues-hands-on.md/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/claude-code/conductor/2025-08-14-conductor-slash-queues-hands-on.md/</guid><pubDate>Thu, 14 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;div&gt;&lt;h1 id=&quot;conductor把多个-claude-code-agent-一起指挥起来&quot;&gt;Conductor：把多个 Claude Code Agent 一起指挥起来&lt;/h1&gt;&lt;a href=&quot;#conductor把多个-claude-code-agent-一起指挥起来&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Conductor：把多个 Claude Code Agent 一起指挥起来”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;一句话&lt;/strong&gt;：&lt;strong&gt;Conductor&lt;/strong&gt; 让你一次性开多位“Claude 小伙伴”，每位各自一套隔离的 git worktree，同步推进不同任务；还能看谁在干活、谁卡住了，改了啥，一目了然。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;—&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;引言&quot;&gt;引言&lt;/h2&gt;&lt;a href=&quot;#引言&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “引言”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;做复杂项目，&lt;strong&gt;并行推进&lt;/strong&gt;才是生产力密码。传统做法是开好多终端、手动切分分支、来回切目录，还容易串改。
+&lt;strong&gt;Conductor&lt;/strong&gt; 直接把这套流程做成了可视化工作台：点一点就能让&lt;strong&gt;多个 Claude Code&lt;/strong&gt;在&lt;strong&gt;各自隔离的工作区&lt;/strong&gt;里同时开工。还支持&lt;strong&gt;本地/ GitHub / 任意 Git URL 仓库&lt;/strong&gt;接入、&lt;strong&gt;多标签页终端&lt;/strong&gt;、&lt;strong&gt;Slash 命令&lt;/strong&gt;、&lt;strong&gt;消息队列&lt;/strong&gt;、以及归档脚本等实用能力。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;❗️&lt;strong&gt;提醒&lt;/strong&gt;：本文的 Conductor 指的是 &lt;strong&gt;conductor.build&lt;/strong&gt; 的 Mac 应用，不是 Netflix/Orkes 的微服务工作流引擎“Conductor OSS”。别混淆了。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;亮点与特点&quot;&gt;亮点与特点&lt;/h2&gt;&lt;a href=&quot;#亮点与特点&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “亮点与特点”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3 id=&quot;1-多-agent-并行可视化谁在跑谁卡住改了啥都能看&quot;&gt;1) 多 Agent 并行可视化：谁在跑、谁卡住、改了啥都能看&lt;/h3&gt;&lt;a href=&quot;#1-多-agent-并行可视化谁在跑谁卡住改了啥都能看&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1) 多 Agent 并行可视化：谁在跑、谁卡住、改了啥都能看”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;每个 Claude Code 实例各自工作，界面能直接看到状态与变更，&lt;strong&gt;团队式协作&lt;/strong&gt;体验拉满。&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;2-真隔离每个工作区都是一个新的-git-worktree&quot;&gt;2) 真·隔离：每个工作区都是一个新的 &lt;strong&gt;git worktree&lt;/strong&gt;&lt;/h3&gt;&lt;a href=&quot;#2-真隔离每个工作区都是一个新的-git-worktree&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2) 真·隔离：每个工作区都是一个新的 git worktree”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;不是简单的临时目录，而是&lt;strong&gt;每个 Agent 一个 worktree+分支&lt;/strong&gt;，避免互相覆盖与冲突。官方 FAQ 已写明：&lt;strong&gt;“Yes, each workspace is a new git worktree.”&lt;/strong&gt;&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;3-本地仓库github任意-git-url-都能接&quot;&gt;3) &lt;strong&gt;本地仓库、GitHub、任意 Git URL&lt;/strong&gt; 都能接&lt;/h3&gt;&lt;a href=&quot;#3-本地仓库github任意-git-url-都能接&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3) 本地仓库、GitHub、任意 Git URL 都能接”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;最新变更里已加入&lt;strong&gt;本地仓库&lt;/strong&gt;支持；也可一键克隆远程仓库，完全在你的 Mac 上工作。&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;4-内置终端多标签页&quot;&gt;4) 内置终端，&lt;strong&gt;多标签页&lt;/strong&gt;&lt;/h3&gt;&lt;a href=&quot;#4-内置终端多标签页&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “4) 内置终端，多标签页”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Changelog 中多次出现与&lt;strong&gt;终端标签&lt;/strong&gt;相关的修复/优化，证实已内置多标签页终端。&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;5-slash-命令内建把高频操作收进短命令&quot;&gt;5) &lt;strong&gt;Slash 命令&lt;/strong&gt;内建：把高频操作收进短命令&lt;/h3&gt;&lt;a href=&quot;#5-slash-命令内建把高频操作收进短命令&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “5) Slash 命令内建：把高频操作收进短命令”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;官方更新宣布 &lt;strong&gt;Slash commands 已上线&lt;/strong&gt;，可在设置里管理；结合 Claude Code 的 Slash 机制更香。&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;6-消息队列与归档脚本&quot;&gt;6) &lt;strong&gt;消息队列&lt;/strong&gt;与&lt;strong&gt;归档脚本&lt;/strong&gt;&lt;/h3&gt;&lt;a href=&quot;#6-消息队列与归档脚本&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “6) 消息队列与归档脚本”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Changelog 提到&lt;strong&gt;消息队列&lt;/strong&gt;（按顺序处理多条消息）与&lt;strong&gt;可选归档脚本&lt;/strong&gt;，方便把沟通与产出沉淀成可追溯资产。&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;7-复用你现有的-claude-登录key&quot;&gt;7) 复用你现有的 Claude 登录/Key&lt;/h3&gt;&lt;a href=&quot;#7-复用你现有的-claude-登录key&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “7) 复用你现有的 Claude 登录/Key”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Conductor 直接用你当前登录的 Claude Code（API Key、Pro 或 Max 计划），无需重复配置。&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;安装与准备&quot;&gt;安装与准备&lt;/h2&gt;&lt;a href=&quot;#安装与准备&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “安装与准备”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;系统&lt;/strong&gt;：目前为 &lt;strong&gt;macOS 应用&lt;/strong&gt;；进入官网点击 &lt;strong&gt;Download Conductor&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;准备 Claude Code&lt;/strong&gt;：建议先在本机安装并能正常使用 Claude Code CLI / 原生二进制（官方安装脚本见文档）。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;首次启动&lt;/strong&gt;：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;打开 Conductor，按提示&lt;strong&gt;添加仓库&lt;/strong&gt;（本地路径 / GitHub / 任意 Git URL）。&lt;/li&gt;
+&lt;li&gt;选择要启动的 &lt;strong&gt;Claude Code Agent 数量&lt;/strong&gt;与各自任务描述。&lt;/li&gt;
+&lt;li&gt;应用会为每个 Agent 建立&lt;strong&gt;独立 worktree + 分支&lt;/strong&gt;并开始执行。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;上手使用3-个日常软件开发并行场景&quot;&gt;上手使用：3 个「日常软件开发」并行场景&lt;/h2&gt;&lt;a href=&quot;#上手使用3-个日常软件开发并行场景&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “上手使用：3 个「日常软件开发」并行场景”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3 id=&quot;场景-a一边修测试一边做-lint-和格式化&quot;&gt;场景 A：一边修测试、一边做 Lint 和格式化&lt;/h3&gt;&lt;a href=&quot;#场景-a一边修测试一边做-lint-和格式化&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “场景 A：一边修测试、一边做 Lint 和格式化”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;Agent A：修复失败的单测与断言&lt;/li&gt;
+&lt;li&gt;Agent B：跑 &lt;code dir=&quot;auto&quot;&gt;ruff/black/eslint/prettier&lt;/code&gt; 等&lt;/li&gt;
+&lt;li&gt;Agent C：同步更新 CI 配置
+每位 Agent 在&lt;strong&gt;不同 worktree 分支&lt;/strong&gt;上推进，互不干扰，最后你再逐个合并。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;场景-b安全上线灰度回滚位移&quot;&gt;场景 B：安全上线+灰度回滚位移&lt;/h3&gt;&lt;a href=&quot;#场景-b安全上线灰度回滚位移&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “场景 B：安全上线+灰度回滚位移”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;Agent A：改造鉴权逻辑&lt;/li&gt;
+&lt;li&gt;Agent B：写回滚脚本与开关&lt;/li&gt;
+&lt;li&gt;Agent C：补充 SLO 监控与报警
+将&lt;strong&gt;Slash 命令&lt;/strong&gt;固化成 &lt;code dir=&quot;auto&quot;&gt;/ship feature-x&lt;/code&gt;、&lt;code dir=&quot;auto&quot;&gt;/prepare rollback&lt;/code&gt;，按一次就跑一套流程。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;场景-c文档化与沉淀&quot;&gt;场景 C：文档化与沉淀&lt;/h3&gt;&lt;a href=&quot;#场景-c文档化与沉淀&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “场景 C：文档化与沉淀”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;消息队列&lt;/strong&gt;让你“先丢任务，排队处理”，写完再集中 Review&lt;/li&gt;
+&lt;li&gt;使用&lt;strong&gt;归档脚本&lt;/strong&gt;把关键对话、变更记录、产出打包保存（如发布前档案）
+（以上两点源自官方 Changelog 能力项，可结合你团队规范落地自动化。）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;工作流建议结合-claude-code-最佳实践&quot;&gt;工作流建议（结合 Claude Code 最佳实践）&lt;/h2&gt;&lt;a href=&quot;#工作流建议结合-claude-code-最佳实践&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “工作流建议（结合 Claude Code 最佳实践）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;任务拆分清晰&lt;/strong&gt;：每个 Agent 聚焦一个目标（如：Auth 重构 / 报表新页面 / DSL 解析器）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;保持隔离&lt;/strong&gt;：不同任务用&lt;strong&gt;不同 worktree 分支&lt;/strong&gt;，避免相互阻塞，提升合并质量与速度。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;命令模板化&lt;/strong&gt;：把常用提示语收敛为 &lt;strong&gt;Slash 命令&lt;/strong&gt;，把“废话”变成“一行指令”。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;快速上手清单checklist&quot;&gt;快速上手清单（Checklist）&lt;/h2&gt;&lt;a href=&quot;#快速上手清单checklist&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “快速上手清单（Checklist）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;安装 Claude Code&lt;/strong&gt;（若未装）。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;下载并打开 Conductor&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;在 Conductor 里&lt;strong&gt;添加仓库&lt;/strong&gt;（本地 / GitHub / Git URL）。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;创建多个 Agent&lt;/strong&gt;，写上各自任务。&lt;/li&gt;
+&lt;li&gt;在&lt;strong&gt;终端多标签&lt;/strong&gt;里观察日志 / 执行命令；必要时启用&lt;strong&gt;消息队列&lt;/strong&gt;，顺序投递批量消息。&lt;/li&gt;
+&lt;li&gt;用 &lt;strong&gt;Slash 命令&lt;/strong&gt;复用你常用的工作流。&lt;/li&gt;
+&lt;li&gt;完成后&lt;strong&gt;归档脚本&lt;/strong&gt;打包沉淀，或合并分支发版。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;避坑与对比&quot;&gt;避坑与对比&lt;/h2&gt;&lt;a href=&quot;#避坑与对比&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “避坑与对比”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;不要和 Conductor OSS 混淆&lt;/strong&gt;：后者是微服务编排平台（Netflix/Orkes 社区维护），不是这款 Claude Code GUI。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;只支持 Claude Code&lt;/strong&gt;（目前）：FAQ 明确写着“Right now, just Claude Code. Others coming soon.”，别指望立刻跑其它模型。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;性能&lt;/strong&gt;：并行意味着本机资源消耗加大；建议合理控制 Agent 数量，配合消息队列节奏化推进。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;结语&quot;&gt;结语&lt;/h2&gt;&lt;a href=&quot;#结语&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “结语”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Conductor = 多 Agent 并行 + worktree 隔离 + 可视化掌控&lt;/strong&gt;。
+如果你常在多个需求间来回切换、又怕互相覆盖，这款工具能立刻提升产能与心流。配合 &lt;strong&gt;Slash 命令&lt;/strong&gt;和&lt;strong&gt;归档脚本&lt;/strong&gt;，还能把“人肉流程”收敛为&lt;strong&gt;标准化按键&lt;/strong&gt;，把“对话产出”沉淀为&lt;strong&gt;可回溯知识库&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;你觉得这类“多 Agent 并行”的方式适合你的项目吗？**你会怎么拆分任务？**欢迎在评论区聊聊你的经验。&lt;/p&gt;&lt;!-- 
+---
+
+# 推荐标题（3 组，多语种 + slug）
+
+1.
+
+* 简体：**把 1 个开发者变成 5 人小队：Conductor 并行指挥 Claude Code 的正确姿势**
+* English: **Ship Like a Team of Five: Conductor for Parallel Claude Code**
+* 繁體：**一人五隊：用 Conductor 並行指揮 Claude Code**
+* 日本語：**1人が5人分に。ConductorでClaude Codeを並列指揮**
+* Français : **Passer en équipe de cinq : Conductor et le Claude Code en parallèle**
+* Español: **Entrega como un equipo de cinco: Conductor y Claude Code en paralelo**
+* Português: **Entregue como uma equipe de cinco: Conductor com Claude Code em paralelo**
+* slug: `conductor-parallel-claude-code-team-of-five`
+
+2.
+
+* 简体：**并行不串线：Conductor + git worktree，多个 Claude 一起飞**
+* English: **Parallel Without Collisions: Conductor + Git Worktrees**
+* 繁體：**並行不打架：Conductor + git worktree**
+* 日本語：**衝突なしの並列開発：Conductor × Git Worktree**
+* Français : **Parallèle sans collisions : Conductor + Git Worktrees**
+* Español: **Paralelo sin choques: Conductor + Git Worktrees**
+* Português: **Paralelo sem conflitos: Conductor + Git Worktrees**
+* slug: `conductor-git-worktree-parallel-dev`
+
+3.
+
+* 简体：**从命令到交响乐：Slash 命令、消息队列与 Conductor 实战**
+* English: **From Commands to Symphony: Slash, Queues &amp; Conductor**
+* 繁體：**從指令到交響：Slash、佇列與 Conductor 實戰**
+* 日本語：**コマンドから交響曲へ：Slash・キュー・Conductor**
+* Français : **Des commandes à la symphonie : Slash, files et Conductor**
+* Español: **De comandos a sinfonía: Slash, colas y Conductor**
+* Português: **De comandos à sinfonia: Slash, filas e Conductor**
+* slug: `conductor-slash-queues-hands-on`
+
+---
+
+# 配图（插画式，2:1）
+
+&gt; 文案均为英文（按你的要求：**图片文字暂不显示中文**）。
+&gt; 你可把下列提示交给任意绘图模型生成：
+
+**封面图**
+
+* 提示词：*“A sleek control room dashboard showing multiple AI coding agents working in parallel lanes, each lane labeled with a branch name, with a conductor’s baton icon above. Minimal pastel palette, clean lines, 2:1 illustration, no Chinese text.”*
+
+**章节配图 A（worktree 隔离）**
+
+* 提示词：*“Split-screen illustration of three isolated code workspaces connected to a single Git repository core, each workspace tagged ‘worktree’. Subtle arrows show separate commits. Pastel, flat style, 2:1.”*
+
+**章节配图 B（Slash 命令）**
+
+* 提示词：*“A command palette card with ‘/test’, ‘/lint’, ‘/ship’ floating like shortcuts, linking to an AI agent panel. Minimal UI illustration, soft shadows, 2:1.”*
+
+**章节配图 C（消息队列与归档）**
+
+* 提示词：*“A vertical message queue feeding an AI agent, with processed messages moving into an ‘Archive’ box on the side. Calm colors, vector illustration, 2:1.”*
+
+---
+
+# 朋友圈/评论区文案（3 组）
+
+1. **“一台 Mac、三位 Claude、各干各的，还不打架。Conductor 把并行开发变成点点点，爽！”**
+2. **“把琐碎流程塞进 Slash 命令，交给 Agent 去跑，我只负责当指挥。效率这次是真上头。”**
+3. **“以前怕并行：合并地狱。现在用 worktree + Conductor，改完各自 PR，香到飞起。”**
+
+---
+
+如果你需要，我可以**把这篇扩写成系列**（如：和 Cursor/VS Code 的协作、CI/CD 接入、团队权限与分支策略、真实项目案例等）。要不要继续？🙂
+
+---
+
+### 参考与延伸
+
+* 官方站点（功能、FAQ、下载、worktree 隔离）：Conductor 网站。
+* 本地仓库/任意 Git URL 支持：Changelog 更新条目。
+* 内置终端多标签：Changelog 修复与改进。
+* Slash 命令（Conductor 新增 + Claude Code 机制）：Changelog 与 Anthropic 文档。
+* 消息队列 &amp; 归档脚本：Changelog 更新条目。
+* 别与 Netflix/Orkes 的 Conductor OSS 混淆：GitHub 项目主页。
+
+——
+*你满意这样的篇幅和风格吗？需要我把“实操命令模板（Slash）+ 推荐项目拆分清单”继续扩写吗？*
+
+[1]: https://conductor.build/ &quot;Conductor&quot;
+[2]: https://github.com/conductor-oss/conductor?utm_source=chatgpt.com &quot;conductor-oss/conductor&quot;
+[3]: https://conductor.build/changelog?utm_source=chatgpt.com &quot;Bug Fixes! - conductor.build&quot;
+[4]: https://docs.anthropic.com/en/docs/claude-code/slash-commands?utm_source=chatgpt.com &quot;Slash commands&quot;
+[5]: https://docs.anthropic.com/en/docs/claude-code/setup?utm_source=chatgpt.com &quot;Set up Claude Code&quot;
+[6]: https://www.anthropic.com/engineering/claude-code-best-practices?utm_source=chatgpt.com &quot;Claude Code: Best practices for agentic coding&quot; --&gt;</content:encoded><category>Claude Code</category><category>Conductor</category></item><item><title>Claude Code 和 Cursor 通过 Browser Echo 阅读前端浏览器 console 日志</title><link>https://www.vibesparking.com/zh-cn/blog/ai/2025-08-13-browser-echo-next-terminal-ai-fix/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/2025-08-13-browser-echo-next-terminal-ai-fix/</guid><pubDate>Wed, 13 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # Claude Code 和 Cursor 通过 Browser Echo 阅读浏览器 console 日志 --&gt;
 &lt;blockquote&gt;
 &lt;p&gt;**把浏览器里的 &lt;code dir=&quot;auto&quot;&gt;console.*&lt;/code&gt; 日志与错误，实时**“回声”**到本地终端，&lt;strong&gt;0 配置&lt;/strong&gt;可用，超适合 &lt;strong&gt;Cursor / Claude Code / Copilot CLI / Gemini CLI&lt;/strong&gt; 这类读终端输出的 AI 编码助手。&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -2532,115 +2712,4 @@ OpenAI 与 Anthropic 都在刷新收入增长纪录，但二者的“增长曲�
 [6]: https://vibecodinghub.org/tools/claude-code?utm_source=chatgpt.com &quot;Claude Code Review 2025: Complete Guide to Anthropic&apos;s AI Coding Assistant&quot;
 [7]: https://www.anthropic.com/claude-code?utm_source=chatgpt.com &quot;Claude Code: Deep coding at terminal velocity \ Anthropic&quot;
 [8]: https://www.anthropic.com/news/claude-4?utm_source=chatgpt.com &quot;Introducing Claude 4&quot;
-[9]: https://news.ycombinator.com/item?id=43307809&amp;utm_source=chatgpt.com &quot;I&apos;ve been using Claude Code for a couple of days&quot; --&gt;</content:encoded><category>AI Agent</category><category>Claude Code</category></item><item><title>Palantir 股价走强背后的可控 AI 工程学</title><link>https://www.vibesparking.com/zh-cn/blog/finance/palantir/2025-08-04-controlled-ai-engineering-palantir-stock-surge/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/finance/palantir/2025-08-04-controlled-ai-engineering-palantir-stock-surge/</guid><pubDate>Mon, 04 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # Palantir 股价走强背后的可控 AI 工程学 --&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;导读&lt;/strong&gt;｜当 AI 的“执行速度”远超人的复核速度，真正稀缺的是面向高风险行业的&lt;strong&gt;工程化质量与治理体系&lt;/strong&gt;。Palantir 之所以能在 2025 年成为资本市场与产业落地的“双热门”，不是更会“讲故事”，而是把 &lt;strong&gt;数据—模型—行动—审计—交付&lt;/strong&gt;焊成了一套可复用的&lt;strong&gt;可控 AI&lt;/strong&gt;工程系统，并在医疗、航天、制造、国防这些“硬场景”里规模化复用。与此同时，股价持续走强，也在用市场定价反馈这套体系的商业穿透力与现金流确定性。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;div&gt;&lt;h2 id=&quot;一基本面为何顶得住股价来自两条主线的双重确认&quot;&gt;一、基本面为何“顶得住”股价？——来自两条主线的双重确认&lt;/h2&gt;&lt;a href=&quot;#一基本面为何顶得住股价来自两条主线的双重确认&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “一、基本面为何“顶得住”股价？——来自两条主线的双重确认”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;1) 经营与指引的上修&lt;/strong&gt;
-2025 年一季报，Palantir 收入 &lt;strong&gt;$8.84 亿&lt;/strong&gt;、同比 &lt;strong&gt;+39%&lt;/strong&gt;，并上调全年营收至 &lt;strong&gt;$38.9–39.02 亿&lt;/strong&gt;区间；美国区收入 &lt;strong&gt;+55%&lt;/strong&gt;，其中&lt;strong&gt;美国商业&lt;/strong&gt;收入 &lt;strong&gt;+71%&lt;/strong&gt; 至 &lt;strong&gt;$2.55 亿&lt;/strong&gt;，成为增长主引擎。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;2) 长约 + 总框架的“现金流地基”&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Maven Smart System&lt;/strong&gt;：美军在 &lt;strong&gt;2025-05-20&lt;/strong&gt; 对既有合同追加 &lt;strong&gt;$7.95 亿&lt;/strong&gt;上限，至 &lt;strong&gt;2029-05-28&lt;/strong&gt;。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;美陆军 10 年企业级协议（EA）&lt;/strong&gt;：将 &lt;strong&gt;75&lt;/strong&gt; 份分散合同&lt;strong&gt;整合&lt;/strong&gt;为一份覆盖 &lt;strong&gt;10 年、上限 $100 亿&lt;/strong&gt; 的企业级软件协议，用于快速采购 Palantir 的数据与 AI 软件（上限非承诺额）。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;小结&lt;/strong&gt;：&lt;strong&gt;高确定性的大客户+高增速的商业业务&lt;/strong&gt;叠加，既提供了当期业绩的兑现，也为估值提供了“耐久资产”的锚。即便短线因“估值贵”而波动，机构与媒体普遍将“业绩上修+合同框架”视作股价强势的主要支撑。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;二为什么是-palantirai-工程化四件套打穿关键业务闭环&quot;&gt;二、为什么是 Palantir？——“AI 工程化四件套”打穿关键业务闭环&lt;/h2&gt;&lt;a href=&quot;#二为什么是-palantirai-工程化四件套打穿关键业务闭环&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “二、为什么是 Palantir？——“AI 工程化四件套”打穿关键业务闭环”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Ontology｜业务语义层&lt;/strong&gt;：把企业真实世界（对象/关系/动作）数字化为“可被人和 AI 共识理解、且可执行回写”的语义底座。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Foundry｜数据+治理+应用&lt;/strong&gt;：内置&lt;strong&gt;数据血缘、细粒度权限与合规模板&lt;/strong&gt;，数据与动作全程可审计、可追责。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;AIP｜AI 平台&lt;/strong&gt;：在 &lt;strong&gt;Workflow/Logic/Agent Studio&lt;/strong&gt; 中构建可上线的 AI 工作流与代理，支持多家主流 LLM 并把**Guardrails（规则/审批/权限）**写进流程。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Apollo｜跨域持续交付&lt;/strong&gt;：在&lt;strong&gt;云/本地/空隔&lt;/strong&gt;等多安全域统一版本、灰度与回滚；官方文章详述其在&lt;strong&gt;分级（含 IL6）&lt;strong&gt;与&lt;/strong&gt;空隔&lt;/strong&gt;环境的交付方法论。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;关键词&lt;/strong&gt;：不是“更强模型”，而是&lt;strong&gt;更强工程&lt;/strong&gt;：把 AI 的“思考速度”&lt;strong&gt;关进制度的笼子&lt;/strong&gt;——从语义到动作为一体，从数据到行动全链条审计与治理。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;三四个难啃行业的落地样板&quot;&gt;三、四个“难啃行业”的落地样板&lt;/h2&gt;&lt;a href=&quot;#三四个难啃行业的落地样板&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “三、四个“难啃行业”的落地样板”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;① 公共卫生｜英国 NHS 联邦数据平台（FDP）&lt;/strong&gt;
-NHS 官方披露：&lt;strong&gt;7 年期、最高 £3.3 亿&lt;/strong&gt; 投入，用于把分散系统联成面向一线临床与运营的联邦底座；推进中亦有采用进度与治理争议（英媒长期跟踪）。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;② 航空航天｜Airbus Skywise 行业平台&lt;/strong&gt;
-空客 2017 年联合 Palantir 启动 &lt;strong&gt;Skywise&lt;/strong&gt;，平台后续&lt;strong&gt;对行业开放&lt;/strong&gt;并被官方确认“&lt;strong&gt;Powered by Foundry&lt;/strong&gt;”；Palantir 概览披露已&lt;strong&gt;超 100 家航司&lt;/strong&gt;接入。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;③ 公共治理/供应链｜HHS/CDC 的 “Tiberius”&lt;/strong&gt;
-HHS 在疫情期上线 &lt;strong&gt;Tiberius&lt;/strong&gt;（&lt;strong&gt;2020 年 9 月&lt;/strong&gt;起运行），用于疫苗与治疗物资的全链路分配与追踪，文献明确其&lt;strong&gt;建立在 Palantir Foundry&lt;/strong&gt; 之上。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;④ 国防安全｜Maven + 陆军企业协议&lt;/strong&gt;
-&lt;strong&gt;Maven&lt;/strong&gt; 合同增补与&lt;strong&gt;陆军 10 年 EA&lt;/strong&gt; 是“从项目走向&lt;strong&gt;统一软件采购体系&lt;/strong&gt;”的信号：把 AI/数据平台当作&lt;strong&gt;长期软件基建&lt;/strong&gt;来运维与迭代。&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;四接近光速的质量与风险控制把制造医疗航天的-qa-搬进-ai&quot;&gt;四、“接近光速”的质量与风险控制：把制造/医疗/航天的 QA 搬进 AI&lt;/h2&gt;&lt;a href=&quot;#四接近光速的质量与风险控制把制造医疗航天的-qa-搬进-ai&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “四、“接近光速”的质量与风险控制：把制造/医疗/航天的 QA 搬进 AI”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;细粒度权限 × 全程血缘&lt;/strong&gt;：Foundry 原生&lt;strong&gt;列/行级&lt;/strong&gt;权限与&lt;strong&gt;数据血缘&lt;/strong&gt;，可对敏感信息实施差异化可见；行动（Action Types）同样受控并被记录。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;受控代理（Agent）与工作流护栏&lt;/strong&gt;：AIP 将&lt;strong&gt;规则、审批、状态机&lt;/strong&gt;嵌入工作流，让“能说会做”的 AI 始终处于&lt;strong&gt;可审计的动作空间&lt;/strong&gt;。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;跨域连续发布&lt;/strong&gt;：Apollo 支持空隔与多密级环境的二进制传递与元数据同步，提供&lt;strong&gt;统一版本、灰度与回滚&lt;/strong&gt;能力。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;制造业质量管理（QMOS）&lt;/strong&gt;：Palantir 将&lt;strong&gt;SPC/质管&lt;/strong&gt;方法做成应用（QMOS）并在 Foundry 里统一数据、过程与改善循环；学术案例也显示车间数据工程化接入能显著提升班组效率与质量闭环。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;五资本市场读懂了什么股价--采用度--业绩兑现--估值风险&quot;&gt;五、资本市场读懂了什么？——“股价 ≈ 采用度 × 业绩兑现 / 估值风险”&lt;/h2&gt;&lt;a href=&quot;#五资本市场读懂了什么股价--采用度--业绩兑现--估值风险&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “五、资本市场读懂了什么？——“股价 ≈ 采用度 × 业绩兑现 / 估值风险””&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;采用度正在量化&lt;/strong&gt;：以 &lt;strong&gt;AIP Bootcamp（5 天从 0 到可用）&lt;/strong&gt; 为核心的 go-to-market，被官方与媒体反复提及：&lt;strong&gt;自 2023 年以来累计完成超 1,300 场&lt;/strong&gt;，显著压缩试点到生产的周期。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;业绩兑现在提速&lt;/strong&gt;：Q1 收入与全年指引上修，尤其&lt;strong&gt;美国商业&lt;/strong&gt;高增，成为市场上修预期的重要依据。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;估值与波动&lt;/strong&gt;：尽管股价屡创新高，但主流媒体也反复提示&lt;strong&gt;估值偏高/波动大&lt;/strong&gt;；投资者需重点跟踪&lt;strong&gt;政府框架协议的转化节奏&lt;/strong&gt;与&lt;strong&gt;商业侧续航&lt;/strong&gt;。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;六给难啃行业的-ai-落地清单可直接对表执行&quot;&gt;六、给“难啃行业”的 AI 落地清单（可直接对表执行）&lt;/h2&gt;&lt;a href=&quot;#六给难啃行业的-ai-落地清单可直接对表执行&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “六、给“难啃行业”的 AI 落地清单（可直接对表执行）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;闭环优先&lt;/strong&gt;：优先选能闭环的高价值/高风险流程（排产、质控、临床路径、指挥链），把&lt;strong&gt;权限/审计/血缘&lt;/strong&gt;一开始就写进方案。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;建设企业级 Ontology&lt;/strong&gt;：将对象—关系—动作统一建模，既让 AI &lt;strong&gt;有规可依&lt;/strong&gt;，也让人类&lt;strong&gt;可追溯、可回滚&lt;/strong&gt;。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;把 Guardrails 写进工作流&lt;/strong&gt;：用审批、状态转换、双人钥等机制限制代理动作空间；&lt;strong&gt;默认“人授能、AI 受控”&lt;/strong&gt;。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;跨域持续交付&lt;/strong&gt;：在云/本地/空隔统一版本与灰度，避免“影子系统”。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Bootcamp 化推进&lt;/strong&gt;：一周打出&lt;strong&gt;可上线的最小闭环&lt;/strong&gt;，以事实证据拉动组织与预算。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;结语&quot;&gt;结语&lt;/h2&gt;&lt;a href=&quot;#结语&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “结语”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;当 AI 的执行速度&lt;strong&gt;逼近“光速”&lt;/strong&gt;，赢家不是说得最快的公司，而是&lt;strong&gt;把速度驯服进质量与治理&lt;/strong&gt;的公司。&lt;strong&gt;Palantir&lt;/strong&gt; 用 &lt;strong&gt;Ontology + Foundry + AIP + Apollo&lt;/strong&gt; 在&lt;strong&gt;医疗、航天、制造、国防&lt;/strong&gt;这些最难场景里跑通了&lt;strong&gt;可执行、可审计、可复用&lt;/strong&gt;的 AI 工程体系；&lt;strong&gt;股价的持续走强&lt;/strong&gt;，正是市场对这套体系“可持续兑现”的一次集体投票。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;注：本报告基于公开信息分析，不构成投资建议，投资有风险，入市需谨慎。&lt;/strong&gt;&lt;/p&gt;&lt;!-- ---
-
-**延伸阅读（最新）**
-
-* [Barron&apos;s](https://www.barrons.com/articles/palantir-stock-army-ai-eefde1cf?utm_source=chatgpt.com)
-* [Investors.com](https://www.investors.com/news/technology/palantir-stock-us-army-10-billion-enterprise-agreement/?utm_source=chatgpt.com)
-* [Kiplinger](https://www.kiplinger.com/investing/stocks/17494/next-week-earnings-calendar-stocks?utm_source=chatgpt.com)
-* [Barron&apos;s](https://www.barrons.com/articles/palantir-earnings-stock-price-a9409612?utm_source=chatgpt.com)
-* [Financial Times](https://www.ft.com/content/da096707-9448-4576-864f-04b9c9db919b?utm_source=chatgpt.com)
-
-&gt; *风险提示：本文为公开资料梳理与分析，不构成投资建议。股市有风险，投资需谨慎。*
-
-[1]: https://www.investors.com/news/technology/palantir-stock-palantir-earnings-preview-citi-analyst/?utm_source=chatgpt.com &quot;Palantir Earnings Preview: Citi Expects Revenue Beat. Shares Hit New High, Pull Back.&quot;
-[2]: https://www.barchart.com/story/news/33743697/can-palantir-stock-hit-170-in-2025?utm_source=chatgpt.com &quot;Can Palantir Stock Hit $170 In 2025?&quot;
-[3]: https://www.reuters.com/business/palantir-shares-dive-after-quarterly-results-fail-impress-investors-2025-05-06/?utm_source=chatgpt.com &quot;Palantir shares dive after quarterly results fail to impress ...&quot;
-[4]: https://investors.palantir.com/news-details/2025/Palantir-Reports-Q1-2025-Revenue-Growth-of-39-YY-U-S--Revenue-Growth-of-55-YY-Raises-FY-2025-Revenue-Guidance-to-36-YY-Growth-and-U-S--Comm-Revenue-Guidance-to-68-YY-Crushing-Consensus-Expectations/?utm_source=chatgpt.com &quot;5/5/2025 Palantir Reports Q1 2025 Revenue Growth of 39 ...&quot;
-[5]: https://www.defense.gov/News/Contracts/Contract/Article/4194643/?utm_source=chatgpt.com &quot;Contracts for May 21, 2025&quot;
-[6]: https://defensescoop.com/2025/05/23/dod-palantir-maven-smart-system-contract-increase/?utm_source=chatgpt.com &quot;&apos;Growing demand&apos; sparks DOD to raise Palantir&apos;s Maven ...&quot;
-[7]: https://defensescoop.com/2025/07/31/army-palantir-software-enterprise-agreement-10-billion/?utm_source=chatgpt.com &quot;Army plans big shakeup in software buying practices ...&quot;
-[8]: https://breakingdefense.com/2025/08/army-consolidates-dozens-of-palantir-software-contracts-into-one-deal-worth-up-to-10-billion/?utm_source=chatgpt.com &quot;Army consolidates dozens of Palantir software contracts ...&quot;
-[9]: https://www.washingtontechnology.com/contracts/2025/08/palantir-signs-10b-enterprise-agreement-army/407153/?oref=wt-homepage-river&amp;utm_source=chatgpt.com &quot;Palantir signs $10B enterprise agreement with Army&quot;
-[10]: https://www.barrons.com/articles/palantir-earnings-stock-price-a9409612?utm_source=chatgpt.com &quot;Palantir Stock Slides Despite Strong Earnings. That&apos;s the Price of a Sky-High Valuation.&quot;
-[11]: https://www.barrons.com/articles/palantir-stock-army-ai-eefde1cf?utm_source=chatgpt.com &quot;Palantir Won a Big Army Pact. The AI Firm Is &apos;in the Sweet Spot,&apos; Says Analyst.&quot;
-[12]: https://palantir.com/docs/foundry/ontology/core-concepts/?utm_source=chatgpt.com &quot;Core concepts&quot;
-[13]: https://palantir.com/docs/foundry/ontology/overview/?utm_source=chatgpt.com &quot;Overview • Ontology&quot;
-[14]: https://palantir.com/docs/foundry/data-lineage/overview/?utm_source=chatgpt.com &quot;Data Lineage • Overview&quot;
-[15]: https://palantir.com/docs/foundry/security/overview/?utm_source=chatgpt.com &quot;Overview • Security&quot;
-[16]: https://palantir.com/docs/foundry/aip/overview/?utm_source=chatgpt.com &quot;AIP overview&quot;
-[17]: https://palantir.com/docs/foundry/aip/supported-llms/?utm_source=chatgpt.com &quot;Supported LLMs&quot;
-[18]: https://www.palantir.com/docs/apollo/core/introduction?utm_source=chatgpt.com &quot;Introduction&quot;
-[19]: https://blog.palantir.com/deploying-across-security-domains-449c786d92c0?utm_source=chatgpt.com &quot;Deploying Across Security Domains&quot;
-[20]: https://palantir.com/docs/foundry/platform-overview/architecture/?utm_source=chatgpt.com &quot;Architecture - Platform overview&quot;
-[21]: https://www.england.nhs.uk/2023/11/new-nhs-software-to-improve-care-for-millions-of-patients/?utm_source=chatgpt.com &quot;New NHS software to improve care for millions of patients&quot;
-[22]: https://www.england.nhs.uk/long-read/federated-data-platform-update/?utm_source=chatgpt.com &quot;Federated Data Platform update&quot;
-[23]: https://www.ft.com/content/9efae6c4-c039-49b9-bbe6-dcac575cb4a5?utm_source=chatgpt.com &quot;NHS take-up of Palantir data platform rises despite hurdles&quot;
-[24]: https://www.airbus.com/en/newsroom/press-releases/2017-06-airbus-launches-skywise-aviations-open-data-platform?utm_source=chatgpt.com &quot;Airbus launches Skywise – aviation&apos;s open data platform&quot;
-[25]: https://www.airbus.com/en/newsroom/press-releases/2019-06-airbus-opens-skywise-to-global-it-services-leaders?utm_source=chatgpt.com &quot;Airbus opens Skywise to global IT services leaders&quot;
-[26]: https://www.palantir.com/assets/xrfr7uokpv1b/7uEHPTEM0MkKtBFcx2zh63/9d75da5b76439717ac95135b5012479e/Palantir-Airbus-Partnership_Overview.pdf?utm_source=chatgpt.com &quot;Palantir &amp; Airbus Partnership Overview&quot;
-[27]: https://www.meps.ahrq.gov/data_files/publications/workingpapers/wp_25001.pdf?utm_source=chatgpt.com &quot;HHS Data Council Workgroup Report on Data Gaps During ...&quot;
-[28]: https://fedscoop.com/cdc-expands-tiberius-use-again/?utm_source=chatgpt.com &quot;CDC further expands use of Palantir&apos;s Tiberius platform&quot;
-[29]: https://palantir.com/docs/foundry/action-types/overview//?utm_source=chatgpt.com &quot;Action types • Overview&quot;
-[30]: https://www.palantir.com/assets/xrfr7uokpv1b/6ITiZpsrLgJZrdyceZeUO6/c15cd7b89a872f17c147fa70e953971c/Whitepaper_-_End_to_End_Quality_Management_with_Palantir_QMOS.pdf?utm_source=chatgpt.com &quot;Quality Management Operating System [QMOS]&quot;
-[31]: https://www.mdpi.com/2227-9717/12/12/2816?utm_source=chatgpt.com &quot;Data Digitization in Manufacturing Factory Using Palantir ...&quot;
-[32]: https://www.businesswire.com/news/home/20240605318018/en/Palantir-to-Unveil-New-Customers-and-Product-Announcements-at-AIPCon?utm_source=chatgpt.com &quot;Palantir to Unveil New Customers and Product ...&quot;
-[33]: https://investors.palantir.com/news-details/2024/Palantir-to-Unveil-New-Customers-and-Product-Announcements-at-AIPCon/?utm_source=chatgpt.com &quot;Palantir IR - News&quot;
-[34]: https://www.barrons.com/articles/palantir-stock-price-earnings-66f0d20f?utm_source=chatgpt.com &quot;Palantir&apos;s Earnings Expectations Are Stratospheric-as Always&quot;
-[35]: https://www.palantir.com/platforms/aip/bootcamp/?utm_source=chatgpt.com &quot;Palantir AIP Bootcamp&quot;
-[36]: https://www.palantir.com/platforms/aip/?utm_source=chatgpt.com &quot;Palantir Artificial Intelligence Platform&quot; --&gt;</content:encoded><category>Finance</category><category>Palantir</category><category>NYSE: PLTR</category><category>AI</category><category>US Stock Market</category></item></channel></rss>
+[9]: https://news.ycombinator.com/item?id=43307809&amp;utm_source=chatgpt.com &quot;I&apos;ve been using Claude Code for a couple of days&quot; --&gt;</content:encoded><category>AI Agent</category><category>Claude Code</category></item></channel></rss>
