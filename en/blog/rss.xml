@@ -344,7 +344,153 @@ After that, hand the &lt;strong&gt;final draft&lt;/strong&gt; to your human part
    Français: Cessez les “Ne pas” : hiérarchie d’instructions efficace
    Español: Basta de “No”: jerarquía de instrucciones para acertar a la primera
    Português: Pare de “Não”: Hierarquia de instruções para acerto de primeira
-   **slug**: instruction-hierarchy-first-time-right --&gt;</content:encoded><category>Prompt Engineering</category></item><item><title>Vibe Coding vs. Traditional: Stop Typing, Start Shipping</title><link>https://www.vibesparking.com/en/blog/ai/vibe-coding/2025-08-14-vibe-coding-stop-typing-start-shipping/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/vibe-coding/2025-08-14-vibe-coding-stop-typing-start-shipping/</guid><pubDate>Thu, 14 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;strong&gt;Vibe Coding vs. Traditional Programming&lt;/strong&gt; — key differences:&lt;/p&gt;
+   **slug**: instruction-hierarchy-first-time-right --&gt;</content:encoded><category>Prompt Engineering</category></item><item><title>As Claude Code Gets Stronger, Engineers Should Spend More Time on Architecture, Requirements, and Problem‑Solving</title><link>https://www.vibesparking.com/en/blog/ai/vibe-coding/2025-08-14-ai-coding-assistants-new-rule/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/vibe-coding/2025-08-14-ai-coding-assistants-new-rule/</guid><pubDate>Thu, 14 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;strong&gt;Over the next 6–24 months, the direction of AI‑driven “Vibe Coding” will become ever clearer, and within 5 years the way we program will change dramatically&lt;/strong&gt;; &lt;strong&gt;routine implementation and boilerplate coding will be highly automated&lt;/strong&gt;, and engineers will spend more time on &lt;strong&gt;architecture, translating requirements, and creative problem‑solving&lt;/strong&gt;. At the same time, don’t underestimate the speed and limits of this evolution.
+This captures the emerging consensus since the rise of AI coding assistants like &lt;strong&gt;Claude Code&lt;/strong&gt; and &lt;strong&gt;Cursor&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;&lt;!-- # As Claude Code gets stronger, we should spend more time on system architecture, requirements understanding, and problem‑solving --&gt;
+&lt;div&gt;&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;&lt;a href=&quot;#introduction&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Introduction”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Over the past year, you may have felt it: writing code is no longer “finishing a function,” but &lt;strong&gt;organizing intelligence and process&lt;/strong&gt;.
+&lt;strong&gt;Cursor&lt;/strong&gt; inside the IDE can “see the repo, run commands, and act as an executor.” &lt;strong&gt;Claude Code&lt;/strong&gt; in the terminal brings Slash commands, Sub‑agents, and automated security reviews. This isn’t hype — it’s a &lt;strong&gt;new production line&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;1-where-exactly-are-ai-coding-assistants-strong&quot;&gt;1) Where exactly are AI coding assistants strong?&lt;/h2&gt;&lt;a href=&quot;#1-where-exactly-are-ai-coding-assistants-strong&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1) Where exactly are AI coding assistants strong?”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Code understanding and batch rewriting&lt;/strong&gt;: Cursor’s Agent mode supports &lt;strong&gt;cross‑file exploration, edits, and multi‑turn fixes&lt;/strong&gt;; Ask mode does read‑only retrieval to understand first, then modify.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Orchestratable workflows&lt;/strong&gt;: Claude Code’s &lt;strong&gt;Slash Commands&lt;/strong&gt; turn common actions into commands; &lt;strong&gt;Sub‑agents&lt;/strong&gt; let different tasks use dedicated helpers with isolated context.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Built‑in security review&lt;/strong&gt;: the official &lt;strong&gt;/security-review and GitHub Action&lt;/strong&gt; can automatically scan PRs and suggest fixes.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Bottom line: the goal isn’t to “type a few extra lines for you,” but to turn &lt;strong&gt;requirements → changes → verification → merge&lt;/strong&gt; into a &lt;strong&gt;semi‑automated assembly line&lt;/strong&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;2-what-work-will-be-accelerated-or-even-replaced&quot;&gt;2) What work will be “accelerated” or even “replaced”?&lt;/h2&gt;&lt;a href=&quot;#2-what-work-will-be-accelerated-or-even-replaced&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2) What work will be “accelerated” or even “replaced”?”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Boilerplate, CRUD, repetitive scaffolding&lt;/strong&gt; — the most common AI use case. In Stack Overflow’s 2024 survey, among developers who use AI, &lt;strong&gt;82% use it to “write code.”&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Small‑to‑medium feature work and debugging&lt;/strong&gt; — GitHub and academic controlled studies show developers using Copilot complete tasks &lt;strong&gt;55.8% faster&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Tests, docs, migrations&lt;/strong&gt; — trend reports and frontline practice alike reinforce that AI is taking over the grunt work, letting humans return to design and decision‑making.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;3-risks-and-pitfalls-not-to-ignore&quot;&gt;3) Risks and pitfalls not to ignore&lt;/h2&gt;&lt;a href=&quot;#3-risks-and-pitfalls-not-to-ignore&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3) Risks and pitfalls not to ignore”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Security regression risk&lt;/strong&gt;: multiple studies indicate &lt;strong&gt;developers using code‑gen AI are more likely to produce insecure code&lt;/strong&gt;; industry reports likewise note that more than half of developers frequently see security issues in AI suggestions.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Lack of understanding and over‑reliance&lt;/strong&gt;: recent surveys show &lt;strong&gt;59% of developers use AI‑generated code they don’t fully understand&lt;/strong&gt;, creating quality and maintainability hazards.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Trust and quality gap&lt;/strong&gt;: leaders and community voices stress that &lt;strong&gt;AI is powerful, but doesn’t automatically ship products faster&lt;/strong&gt; — we need mature engineering methods and human gatekeeping.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;4-how-the-engineers-role-is-shifting&quot;&gt;4) How the engineer’s role is shifting&lt;/h2&gt;&lt;a href=&quot;#4-how-the-engineers-role-is-shifting&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “4) How the engineer’s role is shifting”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;From “implementer” to “designer and verifier”&lt;/strong&gt;: leaders broadly agree developers will invest more in &lt;strong&gt;architecture, validation, and AI supervision&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;From “writing functions” to “building factories”&lt;/strong&gt;: connect Claude Code commands, Sub‑agents, CI security reviews, and Cursor Agent to build an &lt;strong&gt;end‑to‑end automated pipeline&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;5-a-90day-action-plan-copyready&quot;&gt;5) A 90‑day action plan (copy‑ready)&lt;/h2&gt;&lt;a href=&quot;#5-a-90day-action-plan-copyready&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “5) A 90‑day action plan (copy‑ready)”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Days 0–30: Standardize the process&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Provide a &lt;strong&gt;Spec template&lt;/strong&gt; (user stories, boundaries, acceptance criteria).&lt;/li&gt;
+&lt;li&gt;In Claude Code, implement common Slash commands such as &lt;strong&gt;/create-mvp, /write-tests, /changelog&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Days 31–60: Shift security left&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Add the &lt;strong&gt;Claude Code Security Review GitHub Action&lt;/strong&gt; to the repo so every PR is scanned automatically with suggested fixes.&lt;/li&gt;
+&lt;li&gt;Set &lt;strong&gt;blocking rules&lt;/strong&gt; and allowlists to reduce false positives and noise.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Days 61–90: Orchestrate the intelligence&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Use &lt;strong&gt;Sub‑agents&lt;/strong&gt; for a “test agent, docs agent, migration agent.”&lt;/li&gt;
+&lt;li&gt;In Cursor, combine &lt;strong&gt;Agent / Ask modes&lt;/strong&gt; — Ask to read the codebase first, then modify.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;6-opportunity-map-for-individuals-and-teams&quot;&gt;6) Opportunity map for individuals and teams&lt;/h2&gt;&lt;a href=&quot;#6-opportunity-map-for-individuals-and-teams&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “6) Opportunity map for individuals and teams”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;New roles&lt;/strong&gt;: Agent Ops (keep agents running reliably), Prompt QA (turn natural language into acceptance cases), security review collaboration (AI + SAST/DAST).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;10× individuals&lt;/strong&gt;: one person can use Cursor/Claude Code to stand up the pipeline from scaffolding to deploy; small teams can punch above their weight.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Organizational compounding&lt;/strong&gt;: codify useful Slash commands, Sub‑agents, and checklists in the repo — &lt;strong&gt;the more you use them, the smoother it gets&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;7-two-suggestions-for-managers&quot;&gt;7) Two suggestions for managers&lt;/h2&gt;&lt;a href=&quot;#7-two-suggestions-for-managers&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “7) Two suggestions for managers”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Bake “human‑in‑the‑loop” into the process&lt;/strong&gt;: before merging code, require both &lt;strong&gt;AI security review + human review&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Measure ROI with data&lt;/strong&gt;: compare pre/post‑AI &lt;strong&gt;lead time, defect rate, rollback rate, refactor frequency&lt;/strong&gt; — don’t just look at commit counts. The industry debate is a reminder to &lt;strong&gt;let metrics do the talking&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;&lt;a href=&quot;#conclusion&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Conclusion”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;AI isn’t here to steal keyboards; it’s here to reshape the production line.&lt;/strong&gt;
+Lots of people can write code; far fewer can &lt;strong&gt;build an AI‑driven production line&lt;/strong&gt;.
+State requirements clearly, contain risk, and choreograph intelligence — that’s the &lt;strong&gt;core competitive edge&lt;/strong&gt; of the next‑gen engineer. Are you ready?&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Food for thought:
+What are the first three things your team could “automate”?&lt;br&gt;
+How would you turn them into Slash commands or Sub‑agents?&lt;/p&gt;
+&lt;/blockquote&gt;&lt;!-- 
+---
+
+## Three multilingual titles (with slug)
+
+1. **中文**：AI 编程助手大爆发：工程师的新赛道与生存法则
+   **English**: AI Coding Assistants Are Here: The New Rules for Software Engineers
+   **繁體**：AI 程式助理來了：工程師的新賽道與生存法則
+   **日本語**：AIコーディング時代：エンジニアの新しいルール
+   **Français**：L’ère des assistants de code : les nouvelles règles pour les ingénieurs
+   **Español**: La era de los asistentes de código: nuevas reglas para ingenieros
+   **Português**: A era dos assistentes de código: novas regras para engenheiros
+   **slug**: `ai-coding-assistants-new-rules`
+
+2. **中文**：从“写函数”到“搭工厂”：Claude Code 与 Cursor 的真实冲击
+   **English**: From Writing Functions to Building Factories: Claude Code &amp; Cursor in Practice
+   **繁體**：從「寫函式」到「建工廠」：Claude Code 與 Cursor 的衝擊
+   **日本語**：関数から工場へ：Claude Code と Cursor の実務インパクト
+   **Français**：Des fonctions aux usines : l’impact de Claude Code et Cursor
+   **Español**: De funciones a fábricas: el impacto de Claude Code y Cursor
+   **Português**: De funções a fábricas: o impacto do Claude Code e do Cursor
+   **slug**: `from-functions-to-factories-claude-code-cursor`
+
+3. **中文**：5 年窗口期：程序员如何用 AI 升级职业护城河
+   **English**: The 5-Year Window: Using AI to Reinvent Your Engineering Moat
+   **繁體**：五年窗口期：工程師如何用 AI 強化護城河
+   **日本語**：5年のチャンス：AIでエンジニアの堀を再設計
+   **Français**：Fenêtre de 5 ans : renforcer son avantage avec l’IA
+   **Español**: Ventana de 5 años: reforzar tu ventaja con IA
+   **Português**: Janela de 5 anos: reforçar sua vantagem com IA
+   **slug**: `five-year-window-ai-engineering-moat`
+
+---
+
+## Cover and illustrations (flat illustration | 2:1 | English copy only)
+
+**Cover prompt**
+“An illustration of a developer orchestrating multiple AI agents on a conveyor-belt style software factory, with terminals, test badges, and security shields; clean pastel palette, minimal lines, wide 2:1 composition; text-free.”
+
+**Figure 1 (section: strengths)**
+“Diagram-style illustration of Cursor and Claude Code as two robotic arms editing a codebase blueprint, with nodes for slash commands, sub-agents, security review; gentle gradients; 2:1; no text.”
+
+**Figure 2 (section: risks &amp; pitfalls)**
+“Playful illustration of a bug sneaking through AI-generated code while a human reviewer catches it with a magnifying glass; security icons and PR comments; 2:1; text-free.”
+
+**Figure 3 (section: action plan)**
+“Kanban board with cards labeled spec, tests, security review, release, connected by dotted arrows and small AI assistant icons; modern flat illustration; 2:1; no text.”
+
+---
+
+## Social/comments copy (three options)
+
+1. “Coding now feels like running a production line: AI codes, I make intentions explicit and contain risk. Throughput ↑, cognitive load ↓. Love it.”
+2. “Field‑tested: Cursor edits, Claude Code reviews. Humans do three things — define specs, gauge risk, green‑light release.”
+3. “One‑shot refactor axios → fetch? Don’t. **Batch + rollback**. Let AI do the heavy lifting while humans hold the line.”
+
+---
+
+Want me to expand this into a **team playbook** (command templates, Sub‑agent examples, PR audit rules)? I can assemble a copy‑ready checklist now.
+
+[1]: https://cursor.com/features?utm_source=chatgpt.com &quot;Features | Cursor - The AI Code Editor&quot;
+[2]: https://docs.cursor.com/agent?utm_source=chatgpt.com &quot;Cursor – Modes&quot;
+[3]: https://docs.anthropic.com/en/docs/claude-code/overview?utm_source=chatgpt.com &quot;Claude Code overview&quot;
+[4]: https://support.anthropic.com/en/articles/11932705-automated-security-reviews-in-claude-code?utm_source=chatgpt.com &quot;Automated Security Reviews in Claude Code&quot;
+[5]: https://docs.anthropic.com/en/docs/claude-code/slash-commands?utm_source=chatgpt.com &quot;Slash commands&quot;
+[6]: https://www.anthropic.com/news/automate-security-reviews-with-claude-code?utm_source=chatgpt.com &quot;Automate security reviews with Claude Code&quot;
+[7]: https://github.com/anthropics/claude-code-security-review?utm_source=chatgpt.com &quot;anthropics/claude-code-security-review&quot;
+[8]: https://survey.stackoverflow.co/2024/ai?utm_source=chatgpt.com &quot;AI | 2024 Stack Overflow Developer Survey&quot;
+[9]: https://arxiv.org/abs/2302.06590?utm_source=chatgpt.com &quot;The Impact of AI on Developer Productivity: Evidence from GitHub Copilot&quot;
+[10]: https://www.businessinsider.com/ai-tools-product-development-coding-engineers-a16z-partner-2025-7?utm_source=chatgpt.com &quot;AI tools won&apos;t get products out faster, but they&apos;ll solve 2 coding problems, says a16z partner&quot;
+[11]: https://www.theverge.com/decoder-podcast-with-nilay-patel/715267/anysphere-ceo-michael-truell-cursor-ai-automate-pr
+--&gt;</content:encoded><category>Vibe Coding</category></item><item><title>Vibe Coding vs. Traditional: Stop Typing, Start Shipping</title><link>https://www.vibesparking.com/en/blog/ai/vibe-coding/2025-08-14-vibe-coding-stop-typing-start-shipping/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/vibe-coding/2025-08-14-vibe-coding-stop-typing-start-shipping/</guid><pubDate>Thu, 14 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;strong&gt;Vibe Coding vs. Traditional Programming&lt;/strong&gt; — key differences:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Vibe Coding&lt;/strong&gt;: driven by natural language; you act as a &lt;strong&gt;director&lt;/strong&gt;; focus on the &lt;strong&gt;end result&lt;/strong&gt;; progress by &lt;strong&gt;questioning&lt;/strong&gt; and dialogue. It’s fast and lowers the barrier, but can lead to a &lt;strong&gt;black‑box understanding&lt;/strong&gt;.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Traditional programming&lt;/strong&gt;: precise programming languages; you act more like an &lt;strong&gt;architect&lt;/strong&gt;; focus on &lt;strong&gt;implementation details&lt;/strong&gt;; emphasize &lt;strong&gt;algorithms and principles&lt;/strong&gt;. It’s slower and higher‑bar, but yields &lt;strong&gt;deep code understanding&lt;/strong&gt;.&lt;/li&gt;
@@ -534,153 +680,7 @@ Does this fit your taste? Want us to expand the six scenarios into **copy‑and�
 [5]: https://docs.anthropic.com/en/docs/claude-code/overview?utm_source=chatgpt.com &quot;Claude Code overview&quot;
 [6]: https://survey.stackoverflow.co/2024/ai?utm_source=chatgpt.com &quot;AI | 2024 Stack Overflow Developer Survey&quot;
 [7]: https://www.itpro.com/software/development/developers-say-ai-can-code-better-than-most-humans-but-theres-a-catch?utm_source=chatgpt.com &quot;Developers say AI can code better than most humans - but there&apos;s a catch&quot;
-[8]: https://docs.anthropic.com/en/docs/claude-code/slash-commands?utm_source=chatgpt.com &quot;Slash commands&quot; --&gt;</content:encoded><category>Vibe Coding</category></item><item><title>As Claude Code Gets Stronger, Engineers Should Spend More Time on Architecture, Requirements, and Problem‑Solving</title><link>https://www.vibesparking.com/en/blog/ai/vibe-coding/2025-08-14-ai-coding-assistants-new-rule/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/vibe-coding/2025-08-14-ai-coding-assistants-new-rule/</guid><pubDate>Thu, 14 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;strong&gt;Over the next 6–24 months, the direction of AI‑driven “Vibe Coding” will become ever clearer, and within 5 years the way we program will change dramatically&lt;/strong&gt;; &lt;strong&gt;routine implementation and boilerplate coding will be highly automated&lt;/strong&gt;, and engineers will spend more time on &lt;strong&gt;architecture, translating requirements, and creative problem‑solving&lt;/strong&gt;. At the same time, don’t underestimate the speed and limits of this evolution.
-This captures the emerging consensus since the rise of AI coding assistants like &lt;strong&gt;Claude Code&lt;/strong&gt; and &lt;strong&gt;Cursor&lt;/strong&gt;.&lt;/p&gt;
-&lt;hr&gt;&lt;!-- # As Claude Code gets stronger, we should spend more time on system architecture, requirements understanding, and problem‑solving --&gt;
-&lt;div&gt;&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;&lt;a href=&quot;#introduction&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Introduction”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;Over the past year, you may have felt it: writing code is no longer “finishing a function,” but &lt;strong&gt;organizing intelligence and process&lt;/strong&gt;.
-&lt;strong&gt;Cursor&lt;/strong&gt; inside the IDE can “see the repo, run commands, and act as an executor.” &lt;strong&gt;Claude Code&lt;/strong&gt; in the terminal brings Slash commands, Sub‑agents, and automated security reviews. This isn’t hype — it’s a &lt;strong&gt;new production line&lt;/strong&gt;.&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;1-where-exactly-are-ai-coding-assistants-strong&quot;&gt;1) Where exactly are AI coding assistants strong?&lt;/h2&gt;&lt;a href=&quot;#1-where-exactly-are-ai-coding-assistants-strong&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1) Where exactly are AI coding assistants strong?”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Code understanding and batch rewriting&lt;/strong&gt;: Cursor’s Agent mode supports &lt;strong&gt;cross‑file exploration, edits, and multi‑turn fixes&lt;/strong&gt;; Ask mode does read‑only retrieval to understand first, then modify.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Orchestratable workflows&lt;/strong&gt;: Claude Code’s &lt;strong&gt;Slash Commands&lt;/strong&gt; turn common actions into commands; &lt;strong&gt;Sub‑agents&lt;/strong&gt; let different tasks use dedicated helpers with isolated context.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Built‑in security review&lt;/strong&gt;: the official &lt;strong&gt;/security-review and GitHub Action&lt;/strong&gt; can automatically scan PRs and suggest fixes.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Bottom line: the goal isn’t to “type a few extra lines for you,” but to turn &lt;strong&gt;requirements → changes → verification → merge&lt;/strong&gt; into a &lt;strong&gt;semi‑automated assembly line&lt;/strong&gt;.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;2-what-work-will-be-accelerated-or-even-replaced&quot;&gt;2) What work will be “accelerated” or even “replaced”?&lt;/h2&gt;&lt;a href=&quot;#2-what-work-will-be-accelerated-or-even-replaced&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2) What work will be “accelerated” or even “replaced”?”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Boilerplate, CRUD, repetitive scaffolding&lt;/strong&gt; — the most common AI use case. In Stack Overflow’s 2024 survey, among developers who use AI, &lt;strong&gt;82% use it to “write code.”&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Small‑to‑medium feature work and debugging&lt;/strong&gt; — GitHub and academic controlled studies show developers using Copilot complete tasks &lt;strong&gt;55.8% faster&lt;/strong&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Tests, docs, migrations&lt;/strong&gt; — trend reports and frontline practice alike reinforce that AI is taking over the grunt work, letting humans return to design and decision‑making.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;3-risks-and-pitfalls-not-to-ignore&quot;&gt;3) Risks and pitfalls not to ignore&lt;/h2&gt;&lt;a href=&quot;#3-risks-and-pitfalls-not-to-ignore&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3) Risks and pitfalls not to ignore”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Security regression risk&lt;/strong&gt;: multiple studies indicate &lt;strong&gt;developers using code‑gen AI are more likely to produce insecure code&lt;/strong&gt;; industry reports likewise note that more than half of developers frequently see security issues in AI suggestions.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Lack of understanding and over‑reliance&lt;/strong&gt;: recent surveys show &lt;strong&gt;59% of developers use AI‑generated code they don’t fully understand&lt;/strong&gt;, creating quality and maintainability hazards.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Trust and quality gap&lt;/strong&gt;: leaders and community voices stress that &lt;strong&gt;AI is powerful, but doesn’t automatically ship products faster&lt;/strong&gt; — we need mature engineering methods and human gatekeeping.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;4-how-the-engineers-role-is-shifting&quot;&gt;4) How the engineer’s role is shifting&lt;/h2&gt;&lt;a href=&quot;#4-how-the-engineers-role-is-shifting&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “4) How the engineer’s role is shifting”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;From “implementer” to “designer and verifier”&lt;/strong&gt;: leaders broadly agree developers will invest more in &lt;strong&gt;architecture, validation, and AI supervision&lt;/strong&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;From “writing functions” to “building factories”&lt;/strong&gt;: connect Claude Code commands, Sub‑agents, CI security reviews, and Cursor Agent to build an &lt;strong&gt;end‑to‑end automated pipeline&lt;/strong&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;5-a-90day-action-plan-copyready&quot;&gt;5) A 90‑day action plan (copy‑ready)&lt;/h2&gt;&lt;a href=&quot;#5-a-90day-action-plan-copyready&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “5) A 90‑day action plan (copy‑ready)”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;Days 0–30: Standardize the process&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Provide a &lt;strong&gt;Spec template&lt;/strong&gt; (user stories, boundaries, acceptance criteria).&lt;/li&gt;
-&lt;li&gt;In Claude Code, implement common Slash commands such as &lt;strong&gt;/create-mvp, /write-tests, /changelog&lt;/strong&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Days 31–60: Shift security left&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Add the &lt;strong&gt;Claude Code Security Review GitHub Action&lt;/strong&gt; to the repo so every PR is scanned automatically with suggested fixes.&lt;/li&gt;
-&lt;li&gt;Set &lt;strong&gt;blocking rules&lt;/strong&gt; and allowlists to reduce false positives and noise.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Days 61–90: Orchestrate the intelligence&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Use &lt;strong&gt;Sub‑agents&lt;/strong&gt; for a “test agent, docs agent, migration agent.”&lt;/li&gt;
-&lt;li&gt;In Cursor, combine &lt;strong&gt;Agent / Ask modes&lt;/strong&gt; — Ask to read the codebase first, then modify.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;6-opportunity-map-for-individuals-and-teams&quot;&gt;6) Opportunity map for individuals and teams&lt;/h2&gt;&lt;a href=&quot;#6-opportunity-map-for-individuals-and-teams&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “6) Opportunity map for individuals and teams”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;New roles&lt;/strong&gt;: Agent Ops (keep agents running reliably), Prompt QA (turn natural language into acceptance cases), security review collaboration (AI + SAST/DAST).&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;10× individuals&lt;/strong&gt;: one person can use Cursor/Claude Code to stand up the pipeline from scaffolding to deploy; small teams can punch above their weight.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Organizational compounding&lt;/strong&gt;: codify useful Slash commands, Sub‑agents, and checklists in the repo — &lt;strong&gt;the more you use them, the smoother it gets&lt;/strong&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;7-two-suggestions-for-managers&quot;&gt;7) Two suggestions for managers&lt;/h2&gt;&lt;a href=&quot;#7-two-suggestions-for-managers&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “7) Two suggestions for managers”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Bake “human‑in‑the‑loop” into the process&lt;/strong&gt;: before merging code, require both &lt;strong&gt;AI security review + human review&lt;/strong&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Measure ROI with data&lt;/strong&gt;: compare pre/post‑AI &lt;strong&gt;lead time, defect rate, rollback rate, refactor frequency&lt;/strong&gt; — don’t just look at commit counts. The industry debate is a reminder to &lt;strong&gt;let metrics do the talking&lt;/strong&gt;.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;&lt;a href=&quot;#conclusion&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Conclusion”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;AI isn’t here to steal keyboards; it’s here to reshape the production line.&lt;/strong&gt;
-Lots of people can write code; far fewer can &lt;strong&gt;build an AI‑driven production line&lt;/strong&gt;.
-State requirements clearly, contain risk, and choreograph intelligence — that’s the &lt;strong&gt;core competitive edge&lt;/strong&gt; of the next‑gen engineer. Are you ready?&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Food for thought:
-What are the first three things your team could “automate”?&lt;br&gt;
-How would you turn them into Slash commands or Sub‑agents?&lt;/p&gt;
-&lt;/blockquote&gt;&lt;!-- 
----
-
-## Three multilingual titles (with slug)
-
-1. **中文**：AI 编程助手大爆发：工程师的新赛道与生存法则
-   **English**: AI Coding Assistants Are Here: The New Rules for Software Engineers
-   **繁體**：AI 程式助理來了：工程師的新賽道與生存法則
-   **日本語**：AIコーディング時代：エンジニアの新しいルール
-   **Français**：L’ère des assistants de code : les nouvelles règles pour les ingénieurs
-   **Español**: La era de los asistentes de código: nuevas reglas para ingenieros
-   **Português**: A era dos assistentes de código: novas regras para engenheiros
-   **slug**: `ai-coding-assistants-new-rules`
-
-2. **中文**：从“写函数”到“搭工厂”：Claude Code 与 Cursor 的真实冲击
-   **English**: From Writing Functions to Building Factories: Claude Code &amp; Cursor in Practice
-   **繁體**：從「寫函式」到「建工廠」：Claude Code 與 Cursor 的衝擊
-   **日本語**：関数から工場へ：Claude Code と Cursor の実務インパクト
-   **Français**：Des fonctions aux usines : l’impact de Claude Code et Cursor
-   **Español**: De funciones a fábricas: el impacto de Claude Code y Cursor
-   **Português**: De funções a fábricas: o impacto do Claude Code e do Cursor
-   **slug**: `from-functions-to-factories-claude-code-cursor`
-
-3. **中文**：5 年窗口期：程序员如何用 AI 升级职业护城河
-   **English**: The 5-Year Window: Using AI to Reinvent Your Engineering Moat
-   **繁體**：五年窗口期：工程師如何用 AI 強化護城河
-   **日本語**：5年のチャンス：AIでエンジニアの堀を再設計
-   **Français**：Fenêtre de 5 ans : renforcer son avantage avec l’IA
-   **Español**: Ventana de 5 años: reforzar tu ventaja con IA
-   **Português**: Janela de 5 anos: reforçar sua vantagem com IA
-   **slug**: `five-year-window-ai-engineering-moat`
-
----
-
-## Cover and illustrations (flat illustration | 2:1 | English copy only)
-
-**Cover prompt**
-“An illustration of a developer orchestrating multiple AI agents on a conveyor-belt style software factory, with terminals, test badges, and security shields; clean pastel palette, minimal lines, wide 2:1 composition; text-free.”
-
-**Figure 1 (section: strengths)**
-“Diagram-style illustration of Cursor and Claude Code as two robotic arms editing a codebase blueprint, with nodes for slash commands, sub-agents, security review; gentle gradients; 2:1; no text.”
-
-**Figure 2 (section: risks &amp; pitfalls)**
-“Playful illustration of a bug sneaking through AI-generated code while a human reviewer catches it with a magnifying glass; security icons and PR comments; 2:1; text-free.”
-
-**Figure 3 (section: action plan)**
-“Kanban board with cards labeled spec, tests, security review, release, connected by dotted arrows and small AI assistant icons; modern flat illustration; 2:1; no text.”
-
----
-
-## Social/comments copy (three options)
-
-1. “Coding now feels like running a production line: AI codes, I make intentions explicit and contain risk. Throughput ↑, cognitive load ↓. Love it.”
-2. “Field‑tested: Cursor edits, Claude Code reviews. Humans do three things — define specs, gauge risk, green‑light release.”
-3. “One‑shot refactor axios → fetch? Don’t. **Batch + rollback**. Let AI do the heavy lifting while humans hold the line.”
-
----
-
-Want me to expand this into a **team playbook** (command templates, Sub‑agent examples, PR audit rules)? I can assemble a copy‑ready checklist now.
-
-[1]: https://cursor.com/features?utm_source=chatgpt.com &quot;Features | Cursor - The AI Code Editor&quot;
-[2]: https://docs.cursor.com/agent?utm_source=chatgpt.com &quot;Cursor – Modes&quot;
-[3]: https://docs.anthropic.com/en/docs/claude-code/overview?utm_source=chatgpt.com &quot;Claude Code overview&quot;
-[4]: https://support.anthropic.com/en/articles/11932705-automated-security-reviews-in-claude-code?utm_source=chatgpt.com &quot;Automated Security Reviews in Claude Code&quot;
-[5]: https://docs.anthropic.com/en/docs/claude-code/slash-commands?utm_source=chatgpt.com &quot;Slash commands&quot;
-[6]: https://www.anthropic.com/news/automate-security-reviews-with-claude-code?utm_source=chatgpt.com &quot;Automate security reviews with Claude Code&quot;
-[7]: https://github.com/anthropics/claude-code-security-review?utm_source=chatgpt.com &quot;anthropics/claude-code-security-review&quot;
-[8]: https://survey.stackoverflow.co/2024/ai?utm_source=chatgpt.com &quot;AI | 2024 Stack Overflow Developer Survey&quot;
-[9]: https://arxiv.org/abs/2302.06590?utm_source=chatgpt.com &quot;The Impact of AI on Developer Productivity: Evidence from GitHub Copilot&quot;
-[10]: https://www.businessinsider.com/ai-tools-product-development-coding-engineers-a16z-partner-2025-7?utm_source=chatgpt.com &quot;AI tools won&apos;t get products out faster, but they&apos;ll solve 2 coding problems, says a16z partner&quot;
-[11]: https://www.theverge.com/decoder-podcast-with-nilay-patel/715267/anysphere-ceo-michael-truell-cursor-ai-automate-pr
---&gt;</content:encoded><category>Vibe Coding</category></item><item><title>Conductor Orchestrates Multiple Claude Code Agents</title><link>https://www.vibesparking.com/en/blog/ai/claude-code/conductor/2025-08-14-conductor-slash-queues-hands-on.md/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/claude-code/conductor/2025-08-14-conductor-slash-queues-hands-on.md/</guid><pubDate>Thu, 14 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;div&gt;&lt;h1 id=&quot;conductor-orchestrate-multiple-claude-code-agents-together&quot;&gt;Conductor: Orchestrate Multiple Claude Code Agents Together&lt;/h1&gt;&lt;a href=&quot;#conductor-orchestrate-multiple-claude-code-agents-together&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Conductor: Orchestrate Multiple Claude Code Agents Together”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+[8]: https://docs.anthropic.com/en/docs/claude-code/slash-commands?utm_source=chatgpt.com &quot;Slash commands&quot; --&gt;</content:encoded><category>Vibe Coding</category></item><item><title>Conductor Orchestrates Multiple Claude Code Agents</title><link>https://www.vibesparking.com/en/blog/ai/claude-code/conductor/2025-08-14-conductor-slash-queues-hands-on.md/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/claude-code/conductor/2025-08-14-conductor-slash-queues-hands-on.md/</guid><pubDate>Thu, 14 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;div&gt;&lt;h1 id=&quot;conductor-orchestrate-multiple-claude-code-agents-together&quot;&gt;Conductor: Orchestrate Multiple Claude Code Agents Together&lt;/h1&gt;&lt;a href=&quot;#conductor-orchestrate-multiple-claude-code-agents-together&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Conductor: Orchestrate Multiple Claude Code Agents Together”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;In one sentence&lt;/strong&gt;: &lt;strong&gt;Conductor&lt;/strong&gt; lets you spin up multiple “Claude teammates” at once, each with its own isolated git worktree, so different tasks progress in parallel; you can also see who’s working, who’s stuck, and what changed — all at a glance.&lt;/p&gt;
 &lt;/blockquote&gt;
