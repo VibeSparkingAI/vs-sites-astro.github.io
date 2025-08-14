@@ -1,4 +1,186 @@
-<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Vibe Sparking AI | Blog</title><description/><link>https://www.vibesparking.com/</link><language>zh-CN</language><item><title>前端 AI 福利：开源 Open-Lovable 对标 Lovable 把任意网站一键克隆成 React 应用</title><link>https://www.vibesparking.com/zh-cn/blog/ai/open-lovable/2025-08-14-open-lovable-vs-lovable-clone-any-site-to-react/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/open-lovable/2025-08-14-open-lovable-vs-lovable-clone-any-site-to-react/</guid><pubDate>Thu, 14 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # 开源 open-lovable 对标 Lovable：AI 把任意网站一键克隆成 React 应用 --&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Vibe Sparking AI | Blog</title><description/><link>https://www.vibesparking.com/</link><language>zh-CN</language><item><title>Claude Code 真省钱用法</title><link>https://www.vibesparking.com/zh-cn/blog/ai/claude-code/2025-08-14-claude-code-save-money-right-model-lean-context-permissions/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/claude-code/2025-08-14-claude-code-save-money-right-model-lean-context-permissions/</guid><pubDate>Thu, 14 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # Claude Code 真省钱用法 --&gt;
+&lt;blockquote&gt;
+&lt;p&gt;把对话瘦身、模型用对、权限管严，Claude Code 的账单能直接腰斩。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;引言&quot;&gt;引言&lt;/h2&gt;&lt;a href=&quot;#引言&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “引言”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;很多人用 Claude Code，账单月月“破防”。
+不是你敲多了，而是&lt;strong&gt;隐形 Token 黑洞&lt;/strong&gt;在吞钱。
+好消息是：&lt;strong&gt;能控&lt;/strong&gt;，而且立刻见效。&lt;/p&gt;
+&lt;p&gt;这篇把省钱术拆成三层：基础、进阶、高阶。
+照做就能省下大头。&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;一钱都花在哪4-个token-黑洞&quot;&gt;一、钱都花在哪？4 个“Token 黑洞”&lt;/h2&gt;&lt;a href=&quot;#一钱都花在哪4-个token-黑洞&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “一、钱都花在哪？4 个“Token 黑洞””&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;1）系统与记忆的“隐形上下文”&lt;/strong&gt;
+Claude Code 会自动加载系统提示与各级 &lt;code dir=&quot;auto&quot;&gt;CLAUDE.md&lt;/code&gt; 记忆（企业/项目/用户）。这些内容&lt;strong&gt;每次对话都会进上下文&lt;/strong&gt;，自然吃 Token。**&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2）模型价差太大&lt;/strong&gt;
+官方定价：&lt;strong&gt;Sonnet 4 ≈ $3/$15 每百万 输入/输出 Token；Opus 4/4.1 ≈ $15/$75&lt;/strong&gt;。同一段对话，模型一换，&lt;strong&gt;单价就是 5 倍&lt;/strong&gt;。**&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;3）上下文越聊越胖&lt;/strong&gt;
+Claude Code 支持超大上下文（Sonnet 4 最高到 1M Token 测试中）。&lt;strong&gt;对话越长，越容易触发自动压缩与重复“铺垫”&lt;/strong&gt;，Token 跑得飞快。**&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;4）背景与噪音消耗&lt;/strong&gt;
+除了你看得见的回复，&lt;strong&gt;/cost 查询、自动摘要、Haiku 提示&lt;/strong&gt;等后台动作也会花少量 Token。小数怕长计。**&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;小结：&lt;strong&gt;不是你多问了，而是“它每次都把家底搬上台”。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;二三层省钱心法立刻能用&quot;&gt;二、三层省钱心法（立刻能用）&lt;/h2&gt;&lt;a href=&quot;#二三层省钱心法立刻能用&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “二、三层省钱心法（立刻能用）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3 id=&quot;a-基础篇人人必会的-4-个动作&quot;&gt;A. 基础篇：人人必会的 4 个动作&lt;/h3&gt;&lt;a href=&quot;#a-基础篇人人必会的-4-个动作&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “A. 基础篇：人人必会的 4 个动作”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;手动瘦身而不是被动压缩&lt;/strong&gt;
+用 &lt;code dir=&quot;auto&quot;&gt;/compact&lt;/code&gt; 主动压缩，并加一句聚焦指令：&lt;/p&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;plaintext&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;/compact Focus on code diffs and failing tests only&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;p&gt;自动压缩是在&lt;strong&gt;95% 容量&lt;/strong&gt;时才触发，等它触发就晚了。**&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;一事一议，做完就清&lt;/strong&gt;
+每个小任务开新会话，完结立刻 &lt;code dir=&quot;auto&quot;&gt;/clear&lt;/code&gt;，避免历史“滚雪球”。**&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;选对默认模型&lt;/strong&gt;
+日常开发用 &lt;strong&gt;Sonnet 4&lt;/strong&gt;。确有“难、长、推理深”的阶段，再 &lt;code dir=&quot;auto&quot;&gt;/model&lt;/code&gt; 切 &lt;strong&gt;Opus&lt;/strong&gt;。现在还支持**“Opus 规划 + Sonnet 执行”的模式**，规划更强、执行更省。**&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;随时查账&lt;/strong&gt;
+每个会话敲 &lt;code dir=&quot;auto&quot;&gt;/cost&lt;/code&gt; 看本次消耗；团队可在控制台看历史与&lt;strong&gt;设置工作区消费上限&lt;/strong&gt;。**&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;配图建议（插画 2:1 | 英文文案）&lt;/strong&gt;
+“A developer squeezing a giant chat bubble into a slim pill, while a tiny receipt shows shrinking token numbers.”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h3 id=&quot;b-进阶篇流程一收账单就瘦&quot;&gt;B. 进阶篇：流程一收，账单就瘦&lt;/h3&gt;&lt;a href=&quot;#b-进阶篇流程一收账单就瘦&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “B. 进阶篇：流程一收，账单就瘦”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;文档驱动，防上下文爆炸&lt;/strong&gt;
+先让 Claude 产出「TODO 清单 / 方案简述」，确认后再执行。
+反复迭代在**Plan Mode（规划模式）**里完成，确认再切回执行。**&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;把“长期记忆”写进 CLAUDE.md&lt;/strong&gt;
+规范、常用命令、项目约定写入 &lt;code dir=&quot;auto&quot;&gt;CLAUDE.md&lt;/code&gt;，下次直接生效；必要时在会话里 &lt;code dir=&quot;auto&quot;&gt;/memory&lt;/code&gt; 快速编辑。&lt;strong&gt;记忆按层级自动加载&lt;/strong&gt;，减少你每次“复述”的 Token。**&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;小步提交，可随时回滚&lt;/strong&gt;
+让 Claude 每完成一个小块就写一次 commit message。出错回滚，&lt;strong&gt;少走弯路就少花 Token&lt;/strong&gt;。（工程实践，无需额外引用）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;团队限流 &amp;#x26; 飞行仪表&lt;/strong&gt;
+按组织规模设置合理的&lt;strong&gt;TPM（每分钟 Token）&lt;/strong&gt;，防并发“烧机”。**&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h3 id=&quot;c-高阶篇硬核降本效果最猛&quot;&gt;C. 高阶篇：硬核降本（效果最猛）&lt;/h3&gt;&lt;a href=&quot;#c-高阶篇硬核降本效果最猛&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “C. 高阶篇：硬核降本（效果最猛）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;1）权限白/黑名单，堵住“乱读文件”&lt;/strong&gt;
+用 &lt;code dir=&quot;auto&quot;&gt;/permissions&lt;/code&gt; + &lt;code dir=&quot;auto&quot;&gt;.claude/settings.json&lt;/code&gt;，&lt;strong&gt;禁止读取日志、二进制、大目录&lt;/strong&gt;，只给必要路径。规则支持 &lt;strong&gt;gitignore&lt;/strong&gt; 风格。**&lt;/p&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;json&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;{&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;defaultMode&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;plan&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;readRules&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: [&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;src/**&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;docs/**&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;!**/*.log&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;!**/*.bin&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;!node_modules/**&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;!dist/**&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;!coverage/**&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;],&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;editRules&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: [&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;src/**&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;, &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;docs/**&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;]&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;说明：&lt;code dir=&quot;auto&quot;&gt;plan&lt;/code&gt; 模式只分析不改动；读/写规则用来&lt;strong&gt;缩小文件面&lt;/strong&gt;，少扫＝少 Token。**&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;2）精确到“几行”而不是“整文件”&lt;/strong&gt;
+不要整段粘贴，把&lt;strong&gt;文件路径 + 需修改的行号 + 5 点摘要&lt;/strong&gt;给 Claude，降低无关扫描。（工程实践）&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;3）模型分工：Opus 只做“贵的部分”&lt;/strong&gt;
+在 &lt;code dir=&quot;auto&quot;&gt;/model&lt;/code&gt; 里把 &lt;strong&gt;Opus&lt;/strong&gt; 用在&lt;strong&gt;方案/重构设计/跨模块依赖分析&lt;/strong&gt;；真正代码生成与改错交给 &lt;strong&gt;Sonnet&lt;/strong&gt;。官方也在推广这一路线。**&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;4）（团队/网关）用 Prompt Caching&lt;/strong&gt;
+做 API 或企业网关接入时，&lt;strong&gt;提示缓存&lt;/strong&gt;对重复大段前缀能省到肉眼可见。官方给出缓存价差（写入/命中价更低）。**&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;三开箱即用的省钱配置清单&quot;&gt;三、开箱即用的省钱配置清单&lt;/h2&gt;&lt;a href=&quot;#三开箱即用的省钱配置清单&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “三、开箱即用的省钱配置清单”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;默认用 Sonnet，必要时临时切 Opus&lt;/strong&gt;：&lt;code dir=&quot;auto&quot;&gt;/model&lt;/code&gt; 一键切。**&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;固定开启 Plan Mode&lt;/strong&gt;：规划期不执行，确认再动手。**&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;每次进入先瘦身&lt;/strong&gt;：&lt;code dir=&quot;auto&quot;&gt;/compact Focus on code diffs and test failures&lt;/code&gt;。**&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;任务闭环就 &lt;code dir=&quot;auto&quot;&gt;/clear&lt;/code&gt;&lt;/strong&gt;：防历史越滚越大。**&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;权限严控&lt;/strong&gt;：用 &lt;code dir=&quot;auto&quot;&gt;/permissions&lt;/code&gt; 和 &lt;code dir=&quot;auto&quot;&gt;readRules/editRules&lt;/code&gt; 限目录与类型。**&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;随时查账&lt;/strong&gt;：&lt;code dir=&quot;auto&quot;&gt;/cost&lt;/code&gt; + 控制台“工作区消费上限”。**&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;记忆写入 CLAUDE.md&lt;/strong&gt;：减少重复铺垫与上下文喂料。**&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;四真金白银为什么这些策略有效&quot;&gt;四、真金白银：为什么这些策略有效？&lt;/h2&gt;&lt;a href=&quot;#四真金白银为什么这些策略有效&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “四、真金白银：为什么这些策略有效？”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;单价差异&lt;/strong&gt;：Opus 单价约为 Sonnet &lt;strong&gt;5 倍&lt;/strong&gt;，把“贵的工作”集中到规划期，执行期用 Sonnet，整体成本&lt;strong&gt;大幅走低&lt;/strong&gt;。**&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;体积成本&lt;/strong&gt;：自动加载记忆 + 长对话让上下文变胖；主动 &lt;code dir=&quot;auto&quot;&gt;/compact&lt;/code&gt;、&lt;code dir=&quot;auto&quot;&gt;/clear&lt;/code&gt; 能&lt;strong&gt;直接减少传输体积&lt;/strong&gt;。**&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;减少无关读写&lt;/strong&gt;：权限与规则像“&lt;strong&gt;成本防火墙&lt;/strong&gt;”，拦住大而无用的目录/文件。**&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;后台开销可控&lt;/strong&gt;：知道哪里在“悄悄花钱”，就能避免无意义的刷新与查询。**&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;结语&quot;&gt;结语&lt;/h2&gt;&lt;a href=&quot;#结语&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “结语”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Claude Code 的强大，来自“把一切都带上”。
+&lt;strong&gt;省钱的关键&lt;/strong&gt;，就是&lt;strong&gt;只带必要的那一部分&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;今天就把这套清单落到你的项目里：
+从 &lt;code dir=&quot;auto&quot;&gt;/model&lt;/code&gt;、&lt;code dir=&quot;auto&quot;&gt;/compact&lt;/code&gt;、&lt;code dir=&quot;auto&quot;&gt;/clear&lt;/code&gt; 开始，
+再把 &lt;code dir=&quot;auto&quot;&gt;CLAUDE.md&lt;/code&gt; 与权限规则补齐。
+月底账单，会给你惊喜。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;你怎么看？你还踩过哪些“吞钱坑”？评论区见。&lt;/strong&gt;&lt;/p&gt;&lt;!-- ---
+
+## 题图与章节配图（插画式｜2:1｜英文文案，不含中文）
+
+**封面图 Prompt**
+“An illustration of a developer catching leaking tokens with a mesh filter labeled ‘/compact, /clear, /model’, a price tag drops from ‘\$75’ to ‘\$15’, clean lines, modern pastel, wide 2:1, text-free.”
+
+**关键章节配图 Prompt 1（基础篇）**
+“Minimal blueprint of a terminal showing /compact and /clear commands slimming a giant chat history into a thin strip, receipt icon shows fewer tokens, 2:1, pastel, text-free.”
+
+**关键章节配图 Prompt 2（进阶篇）**
+“Kanban-style plan mode board feeding into small git commits on a conveyor belt, a green TPM gauge stays stable, 2:1, pastel, text-free.”
+
+**关键章节配图 Prompt 3（高阶篇）**
+“Permission rules shield blocking folders logs/, node\_modules/, dist/, while a bright path to src/ remains open, 2:1, pastel, text-free.”
+
+---
+
+## 多语言标题与 slug（3 组）
+
+1. **中文**：Claude Code 省钱指南：用对模型、瘦身上下文、权限堵洞
+   **English**: Claude Code on a Budget: Right Model, Lean Context, Locked-Down Permissions
+   **繁體**：Claude Code 省錢指南：用對模型、瘦身上下文、權限堵洞
+   **日本語**：Claude Code節約術：モデル最適化・文脈スリム化・権限ロック
+   **Français** : Claude Code à petit budget : bon modèle, contexte allégé, permissions verrouillées
+   **Español**: Claude Code con presupuesto: modelo correcto, contexto ligero y permisos seguros
+   **Português**: Claude Code econômico: modelo certo, contexto enxuto e permissões rígidas
+   **slug**：`claude-code-save-money-right-model-lean-context-permissions`
+
+2. **中文**：别再烧钱了！3 层实战让 Claude Code 账单减半
+   **English**: Stop the Burn! A 3-Layer Playbook to Halve Your Claude Code Bill
+   **繁體**：別再燒錢！三層實戰讓 Claude Code 帳單砍半
+   **日本語**：無駄遣い終了！3層プレイブックで請求を半減
+   **Français** : Fin de l’hémorragie : un guide en 3 niveaux pour diviser la facture
+   **Español**: Basta de derroche: 3 capas para partir la factura a la mitad
+   **Português**: Chega de queimar verba: 3 camadas para cortar a conta pela metade
+   **slug**：`claude-code-3-layer-cost-cut-playbook`
+
+3. **中文**：从 5x 单价到 0 噪音：Claude Code 最强降本术
+   **English**: From 5× Price Gap to Zero Noise: Ultimate Cost Cuts for Claude Code
+   **繁體**：從 5x 單價到零噪音：Claude Code 終極降本術
+   **日本語**：5倍単価の壁を越えろ：Claude Code究極のコスト削減
+   **Français** : De l’écart 5× au zéro bruit : l’optimisation ultime des coûts
+   **Español**: Del precio 5× al ruido cero: el recorte definitivo
+   **Português**: Do preço 5× ao ruído zero: o corte definitivo de custos
+   **slug**：`claude-code-ultimate-cost-cuts`
+
+---
+
+## 圈友评论（3 条，直接可发）
+
+1. **“以前以为是我问多了，结果是上下文太胖… 按这篇把 /compact、/clear、/permissions 用起来，账单立减，爽！”**
+2. **“Opus 只负责动脑，Sonnet 动手干活，这组合太省钱了。月底费用第一次没超标🎯。”**
+3. **“把日志、node\_modules 一刀切掉，Claude 不再到处乱看，速度更快、钱也更少，一举两得。”**
+
+---
+
+需要我把文中的**配置模板**按你的仓库结构改一版吗？或给你做一套**一键初始化脚本**（含 `CLAUDE.md`、`settings.json`、常用 `/commands` ）？我也可以把全文**扩写成图文版**。
+
+[1]: https://docs.anthropic.com/en/docs/claude-code/memory &quot;Manage Claude&apos;s memory - Anthropic&quot;
+[2]: https://docs.anthropic.com/en/docs/about-claude/pricing?utm_source=chatgpt.com &quot;Pricing&quot;
+[3]: https://www.anthropic.com/news/claude-4?utm_source=chatgpt.com &quot;Introducing Claude 4&quot;
+[4]: https://docs.anthropic.com/en/docs/build-with-claude/context-windows?utm_source=chatgpt.com &quot;Context windows&quot;
+[5]: https://docs.anthropic.com/en/docs/claude-code/costs &quot;Manage costs effectively - Anthropic&quot;
+[6]: https://docs.anthropic.com/en/docs/claude-code/slash-commands &quot;Slash commands - Anthropic&quot;
+[7]: https://www.threads.com/%40boris_cherny/post/DNTYPVMJpPs/claude-code-has-a-new-model-option-opus-for-plan-modethis-setting-uses-claude-op?utm_source=chatgpt.com &quot;Claude Code has a new /model option: Opus for plan mode.&quot;
+[8]: https://x.com/claude_code?utm_source=chatgpt.com &quot;Claude Code Community (@claude_code) / X&quot;
+[9]: https://www.claudelog.com/faqs/what-is-plan-mode/?utm_source=chatgpt.com &quot;What is Plan Mode in Claude Code&quot;
+[10]: https://docs.anthropic.com/en/docs/claude-code/iam &quot;Identity and Access Management - Anthropic&quot;
+[11]: https://www.anthropic.com/pricing?utm_source=chatgpt.com &quot;Pricing&quot; --&gt;</content:encoded><category>Claude Code</category><category>Cursor</category></item><item><title>前端 AI 福利：开源 Open-Lovable 对标 Lovable 把任意网站一键克隆成 React 应用</title><link>https://www.vibesparking.com/zh-cn/blog/ai/open-lovable/2025-08-14-open-lovable-vs-lovable-clone-any-site-to-react/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/open-lovable/2025-08-14-open-lovable-vs-lovable-clone-any-site-to-react/</guid><pubDate>Thu, 14 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # 开源 open-lovable 对标 Lovable：AI 把任意网站一键克隆成 React 应用 --&gt;
 &lt;blockquote&gt;
 &lt;p&gt;写给想用 AI &lt;strong&gt;更快落地产品&lt;/strong&gt;、&lt;strong&gt;更省钱验证想法&lt;/strong&gt;的工程师与创作者。&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -754,7 +936,151 @@ Anthropic 的防幻觉建议已给出可直接粘贴的写法，可纳入你的�
 [5]: https://docs.anthropic.com/en/docs/claude-code/overview?utm_source=chatgpt.com &quot;Claude Code overview&quot;
 [6]: https://survey.stackoverflow.co/2024/ai?utm_source=chatgpt.com &quot;AI | 2024 Stack Overflow Developer Survey&quot;
 [7]: https://www.itpro.com/software/development/developers-say-ai-can-code-better-than-most-humans-but-theres-a-catch?utm_source=chatgpt.com &quot;Developers say AI can code better than most humans - but there&apos;s a catch&quot;
-[8]: https://docs.anthropic.com/en/docs/claude-code/slash-commands?utm_source=chatgpt.com &quot;Slash commands&quot; --&gt;</content:encoded><category>Vibe Coding</category></item><item><title>Conductor 把多个 Claude Code Agent 管理起来</title><link>https://www.vibesparking.com/zh-cn/blog/ai/claude-code/conductor/2025-08-14-conductor-slash-queues-hands-on.md/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/claude-code/conductor/2025-08-14-conductor-slash-queues-hands-on.md/</guid><pubDate>Thu, 14 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;div&gt;&lt;h1 id=&quot;conductor把多个-claude-code-agent-一起指挥起来&quot;&gt;Conductor：把多个 Claude Code Agent 一起指挥起来&lt;/h1&gt;&lt;a href=&quot;#conductor把多个-claude-code-agent-一起指挥起来&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Conductor：把多个 Claude Code Agent 一起指挥起来”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+[8]: https://docs.anthropic.com/en/docs/claude-code/slash-commands?utm_source=chatgpt.com &quot;Slash commands&quot; --&gt;</content:encoded><category>Vibe Coding</category></item><item><title>调整 Claude Code 输出风格 @agent-output-style-setup</title><link>https://www.vibesparking.com/zh-cn/blog/ai/claude-code/agents/2025-08-14-claude-code-hidden-output-style-agent/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/claude-code/agents/2025-08-14-claude-code-hidden-output-style-agent/</guid><pubDate>Thu, 14 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # 调整 Claude Code 输出风格 --&gt;
+&lt;blockquote&gt;
+&lt;p&gt;在 &lt;strong&gt;Claude Code 1.0.80&lt;/strong&gt; 里，有个没写进文档的Agent &lt;strong&gt;&lt;code dir=&quot;auto&quot;&gt;@agent-output-style-setup&lt;/code&gt;&lt;/strong&gt;，能一键创建和切换“输出风格”（比如超简洁、评审模式、教学模式），把废话变摘要，把长篇变 &lt;strong&gt;diff + 要点&lt;/strong&gt;。这条Agent来自社区实测与公开贴文披露。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;为什么值得关注&quot;&gt;为什么值得关注？&lt;/h2&gt;&lt;a href=&quot;#为什么值得关注&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “为什么值得关注？”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;官方的「Styles」能力&lt;/strong&gt;允许你自定义语气、结构与细节层级；适配“写报告要正式、修 bug 要干脆”的真实场景。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Claude Code&lt;/strong&gt; 本身支持配置项、slash Agent、项目级设置，适合把“风格”做成可重复、可版本化的工作流。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;组合拳就是：用隐藏Agent生成风格 → 用 slash Agent一键切换 → 按场景自动控节奏。&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;这条隐藏agent到底做了啥&quot;&gt;这条隐藏Agent，到底做了啥？&lt;/h2&gt;&lt;a href=&quot;#这条隐藏agent到底做了啥&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “这条隐藏Agent，到底做了啥？”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;社区贴文与 issue 显示，运行 &lt;code dir=&quot;auto&quot;&gt;@agent-output-style-setup&lt;/code&gt; 后，终端里的 Agent 会引导你回答偏好问题，并&lt;strong&gt;生成若干可切换的风格&lt;/strong&gt;（如 Concise、Educational、Code Reviewer、Rapid Prototyping 等）。很多人用它做出“&lt;strong&gt;小写、像朋友聊天&lt;/strong&gt;、&lt;strong&gt;最小解释&lt;/strong&gt;、&lt;strong&gt;优先给 diff&lt;/strong&gt;”的输出习惯；有的示例还能通过 &lt;code dir=&quot;auto&quot;&gt;@style concise&lt;/code&gt; 直接切换。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;注意&lt;/strong&gt;：这是“未记录/实验性”能力，可能随版本调整；稳定做法是把最终风格固化为 &lt;strong&gt;Styles&lt;/strong&gt; 与 &lt;strong&gt;自定义 slash Agent&lt;/strong&gt;。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;三步上手10-分钟搞定&quot;&gt;三步上手（10 分钟搞定）&lt;/h2&gt;&lt;a href=&quot;#三步上手10-分钟搞定&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “三步上手（10 分钟搞定）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Step 1：跑一次向导&lt;/strong&gt;
+在 Claude Code 交互 REPL 里执行：&lt;/p&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;plaintext&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;@agent-output-style-setup&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;p&gt;根据提示描述你的口味，比如：&lt;strong&gt;“简洁、只给必要解释、默认展示文件 diff、语气更随和”&lt;/strong&gt;。完成后，Agent 会回显创建成功的信息与使用方式。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Step 2：把结果固化到项目里&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;用 &lt;strong&gt;Styles&lt;/strong&gt; 作为全局/项目默认写作风格；适合“团队统一口径”。&lt;/li&gt;
+&lt;li&gt;用 &lt;strong&gt;自定义 slash Agent&lt;/strong&gt;（如 &lt;code dir=&quot;auto&quot;&gt;@style-concise&lt;/code&gt;、&lt;code dir=&quot;auto&quot;&gt;@style-reviewer&lt;/code&gt;）做“随时切档位”的开关。Agent本质是 Markdown 文件，能进 Git 管理、团队共享。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Step 3：和其他设置配合&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;需要时 &lt;code dir=&quot;auto&quot;&gt;/model&lt;/code&gt; 切模型、&lt;code dir=&quot;auto&quot;&gt;/status&lt;/code&gt; 看状态，走标准配置入口 &lt;code dir=&quot;auto&quot;&gt;/config&lt;/code&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;实战-3-例开发日常更省心&quot;&gt;实战 3 例：开发日常更省心&lt;/h2&gt;&lt;a href=&quot;#实战-3-例开发日常更省心&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “实战 3 例：开发日常更省心”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;① 修小 bug：默认给 diff&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;指令：&lt;code dir=&quot;auto&quot;&gt;@style concise&lt;/code&gt; → “只说做了啥 + 为啥 + diff”。&lt;/li&gt;
+&lt;li&gt;价值：&lt;strong&gt;减少滚屏&lt;/strong&gt;，让你直接确认改动是否可接受。&lt;/li&gt;
+&lt;li&gt;背书：Styles 支持“更简洁、更到点”的输出；Claude Code 支持把工作流做成自定义Agent。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;② 代码评审：结构化点评&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;指令：&lt;code dir=&quot;auto&quot;&gt;@style reviewer&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;输出：问题列表、风险点、建议、可复用片段。&lt;/li&gt;
+&lt;li&gt;价值：把“感性吐槽”变“可执行清单”，更适合 PR 沟通。&lt;/li&gt;
+&lt;li&gt;依据：Styles 可定义语气与结构；Claude Code 最佳实践鼓励可复用流程。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;③ 新手带教：教学模式&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;指令：&lt;code dir=&quot;auto&quot;&gt;@style educational&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;输出：分步解释、概念脉络、对比与小练习。&lt;/li&gt;
+&lt;li&gt;价值：&lt;strong&gt;会上手&lt;/strong&gt;又不拖慢老手节奏。&lt;/li&gt;
+&lt;li&gt;依据：官方 Styles 提供“详细/解释型”预设；媒体评测亦提到风格在学习场景的价值。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;小技巧&quot;&gt;小技巧&lt;/h2&gt;&lt;a href=&quot;#小技巧&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “小技巧”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;把风格写进模板&lt;/strong&gt;：项目根目录放一组 &lt;code dir=&quot;auto&quot;&gt;/.claude/agents/*.md&lt;/code&gt;，团队统一调用。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;按场景切档位&lt;/strong&gt;：写文档用“Formal”，查错用“Concise”，重构用“Reviewer”。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;别忘了回退&lt;/strong&gt;：遇到场景冲突，直接切回默认 Style；Claude 遵循“&lt;strong&gt;风格不影响正确性&lt;/strong&gt;”的原则。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;风险与边界&quot;&gt;风险与边界&lt;/h2&gt;&lt;a href=&quot;#风险与边界&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “风险与边界”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;未记录功能可能变动&lt;/strong&gt;：版本升级可能改名或更换入口；建议把成品落到 Styles 与 slash Agent，避免被动。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;别过度压缩&lt;/strong&gt;：再简洁也要保证“完整与正确”；这是 Claude 风格系统的底线。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;团队协作要可见&lt;/strong&gt;：把风格文件进仓库，让 PR/评审看得见、调得动。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;结语&quot;&gt;结语&lt;/h2&gt;&lt;a href=&quot;#结语&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “结语”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;输出风格&lt;/strong&gt;这件事，以前靠人肉约定；现在可以“&lt;strong&gt;一键成型 + 一键切换&lt;/strong&gt;”。
+把它接入你的日常工作流，你会发现：沟通更顺，节奏更稳，&lt;strong&gt;产出更像你&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;**你会把默认风格设成哪一种？为什么？**欢迎留言聊聊。&lt;/p&gt;&lt;!-- 
+---
+
+# 标题推荐（3 组）
+
+1. **用一条“隐藏Agent”，把 Claude Code 说人话**
+   EN: *Tame Claude Code Output with One Hidden Command*
+   繁體: *用一條「隱藏指令」，讓 Claude Code 更懂你*
+   日本語: *隠しコマンド一発で、Claude Codeの出力を手懐ける*
+   Français : *Un seul commande cachée pour dompter la sortie de Claude Code*
+   Español: *Un comando oculto para domar la salida de Claude Code*
+   Português: *Um comando oculto para domar a saída do Claude Code*
+   **slug**: `claude-code-hidden-output-style-command`
+
+2. **@agent-output-style-setup：把废话变要点**
+   EN: *@agent-output-style-setup: Turn Fluff into Essentials*
+   繁體: *@agent-output-style-setup：把廢話變重點*
+   日本語: *@agent-output-style-setup：冗長を要点に*
+   Français : *@agent-output-style-setup : Du bavardage à l’essentiel*
+   Español: *@agent-output-style-setup: De paja a lo esencial*
+   Português: *@agent-output-style-setup: Do blá-blá-blá ao essencial*
+   **slug**: `agent-output-style-setup-guide`
+
+3. **开发者必备：三步做出你的 Claude 输出风格**
+   EN: *Dev Essentials: Craft Your Claude Output Style in 3 Steps*
+   繁體: *開發者必備：3 步做出你的 Claude 輸出風格*
+   日本語: *開発者必携：3ステップで出力スタイルを作る*
+   Français : *Indispensable: créez votre style de sortie Claude en 3 étapes*
+   Español: *Imprescindible: crea tu estilo de salida de Claude en 3 pasos*
+   Português: *Essencial: crie seu estilo de saída do Claude em 3 passos*
+   **slug**: `build-claude-output-style-in-3-steps`
+
+---
+
+## 封面与配图（插画风｜2:1｜英文文案，不含中文）
+
+**封面图 Prompt**
+“An illustration of a terminal window with a friendly AI agent flipping toggle switches labeled ‘Concise’, ‘Reviewer’, ‘Educational’, while code diffs and checkmarks float around; clean pastel palette, minimal lines, wide 2:1 composition; text-free.”
+
+**配图 1（风格向导）**
+“An AI assistant handing a user a ‘style blueprint’ with sliders for tone, detail, and diff output; terminal UI in the background; modern pastel, flat illustration, 2:1, text-free.”
+
+**配图 2（团队协作）**
+“Developers passing Markdown cards labeled ‘@style concise’, ‘@style reviewer’ across a Kanban board linked to a Git repo; minimal lines, soft gradients, 2:1, text-free.”
+
+**配图 3（实战效果）**
+“Split scene: left shows long verbose text fading out; right shows crisp diff blocks and bullet points popping in; clean vector style, 2:1, text-free.”
+
+---
+
+## 朋友圈/评论区 3 条热评
+
+1. **用上这条隐藏Agent，Claude 一下子懂我了：先给 diff，再解释为啥，省下半小时复盘。你试了吗？**
+2. **风格这玩意儿别靠嘴对嘴约定了，直接固化到 @style Agent里，团队协作丝滑到离谱。**
+3. **写需求用“教学”，修 bug 切“简洁”，评审换“Reviewer”。一把切档位，比喝咖啡还提神。**
+
+---
+
+需要我把**你现在的项目**打包一套可用的风格与 slash Agent模板吗？我可以直接给出 **可复制的 `.md` Agent文件**和示例配置。你觉得呢？
+
+[1]: https://x.com/iannuttall/status/1955750903623114757?utm_source=chatgpt.com &quot;Ian Nuttall - X&quot;
+[2]: https://github.com/anthropics/claude-code/issues/5708?utm_source=chatgpt.com &quot;Docs: Undocumented feature `@agent-output-mode-setup ...&quot;
+[3]: https://support.anthropic.com/en/articles/10181068-configuring-and-using-styles?utm_source=chatgpt.com &quot;Configuring and Using Styles&quot;
+[4]: https://www.anthropic.com/news@styles?utm_source=chatgpt.com &quot;Tailor Claude&apos;s responses to your personal style&quot;
+[5]: https://www.theverge.com/2024/11/26/24306575/anthropic-claude-ai-custom-style-presets?utm_source=chatgpt.com &quot;Anthropic says Claude AI can match your unique writing style&quot;
+[6]: https://docs.anthropic.com/en/docs/claude-code/overview?utm_source=chatgpt.com &quot;Claude Code overview&quot;
+[7]: https://docs.anthropic.com/en/docs/claude-code/slash-commands?utm_source=chatgpt.com &quot;Slash commands&quot;
+[8]: https://support.anthropic.com/en/articles/11940350-claude-code-model-configuration?utm_source=chatgpt.com &quot;Claude Code Model Configuration&quot;
+[9]: https://docs.anthropic.com/en/docs/claude-code/common-workflows?utm_source=chatgpt.com &quot;Common workflows&quot;
+[10]: https://www.anthropic.com/engineering/claude-code-best-practices?utm_source=chatgpt.com &quot;Claude Code: Best practices for agentic coding&quot;
+[11]: https://www.wired.com/story/subscriber-only-livestream-replay-chatbot-basics-beginner-advice-for-claude?utm_source=chatgpt.com &quot;Get Advice on Using Anthropic&apos;s Claude in Our &apos;Chatbot Basics&apos; Subscriber-Only Livestream Replay&quot;
+[12]: https://simonwillison.net/2025/May/25/claude-4-system-prompt/?utm_source=chatgpt.com &quot;Highlights from the Claude 4 system prompt&quot; --&gt;</content:encoded><category>Claude Code</category><category>Cursor Agent</category></item><item><title>Conductor 把多个 Claude Code Agent 管理起来</title><link>https://www.vibesparking.com/zh-cn/blog/ai/claude-code/conductor/2025-08-14-conductor-slash-queues-hands-on.md/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/claude-code/conductor/2025-08-14-conductor-slash-queues-hands-on.md/</guid><pubDate>Thu, 14 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;div&gt;&lt;h1 id=&quot;conductor把多个-claude-code-agent-一起指挥起来&quot;&gt;Conductor：把多个 Claude Code Agent 一起指挥起来&lt;/h1&gt;&lt;a href=&quot;#conductor把多个-claude-code-agent-一起指挥起来&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Conductor：把多个 Claude Code Agent 一起指挥起来”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;一句话&lt;/strong&gt;：&lt;strong&gt;Conductor&lt;/strong&gt; 让你一次性开多位“Claude 小伙伴”，每位各自一套隔离的 git worktree，同步推进不同任务；还能看谁在干活、谁卡住了，改了啥，一目了然。&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -2685,252 +3011,4 @@ Google Gemini 刚上线的 &lt;strong&gt;Story Book&lt;/strong&gt; 功能，可�
 [3]: https://9to5google.com/2025/08/05/gemini-storybooks/?utm_source=chatgpt.com &quot;Gemini app can now create custom storybooks, comics, more&quot;
 [4]: https://blog.google/products/gemini/storybooks/?utm_source=chatgpt.com &quot;Create AI storybooks with illustrations in the Gemini app&quot;
 [5]: https://www.notebookcheck.net/Google-Gemini-can-now-create-children-s-storybooks-with-illustrations.1081685.0.html?utm_source=chatgpt.com &quot;Google Gemini can now create children&apos;s storybooks with ...&quot;
-[6]: https://cincodias.elpais.com/smartlife/lifestyle/2025-08-06/gemini-storybook-nueva-funcion-crear-libros-ilustrados.html?utm_source=chatgpt.com &quot;Storybook, la nueva función de Gemini que permite crear libros ilustrados&quot; --&gt;</content:encoded><category>AI</category><category>Google Gemini</category><category>Story Book</category></item><item><title>三巨头同日发布：轻量开源 GPT-OSS、编码最强 Opus 4.1 和 实时 3D 世界 Genie 3</title><link>https://www.vibesparking.com/zh-cn/blog/ai/2025-08-06-triple-threat-ai-launch/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/2025-08-06-triple-threat-ai-launch/</guid><pubDate>Wed, 06 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # 三巨头同日发布：轻量开源 GPT-OSS、编码最强 Opus 4.1 和 实时 3D 世界 Genie 3 --&gt;&lt;!-- **一句话总结：** --&gt;
-&lt;p&gt;OpenAI &lt;strong&gt;GPT-OSS&lt;/strong&gt; 聚焦「轻量高性能开源」、Anthropic &lt;strong&gt;Claude Opus 4.1&lt;/strong&gt; 主打「极致编码 + 智能代理」、Google DeepMind &lt;strong&gt;Genie 3&lt;/strong&gt; 打开「实时 3D 世界生成」新赛道——三大模型各有必杀技，也各有最佳落地场景，值得所有 AI 创作者马上上手体验。&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;引言&quot;&gt;引言&lt;/h2&gt;&lt;a href=&quot;#引言&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “引言”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;AI 领域今天像打了鸡血：&lt;strong&gt;OpenAI、Anthropic、Google&lt;/strong&gt; 同日放大招。三大实验室的最新模型不止参数升级，更在方向上分道扬镳。下面 3 分钟，带你看亮点，顺手挑出最适合你的实战场景。&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;模型一openai-gpt-oss-系列&quot;&gt;模型一：OpenAI GPT-OSS 系列&lt;/h2&gt;&lt;a href=&quot;#模型一openai-gpt-oss-系列&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “模型一：OpenAI GPT-OSS 系列”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h3 id=&quot;关键词&quot;&gt;关键词&lt;/h3&gt;&lt;a href=&quot;#关键词&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “关键词”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;开源权重 · 单卡即可跑 · 商业友好 Apache 2.0&lt;/strong&gt;&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;核心升级&quot;&gt;核心升级&lt;/h3&gt;&lt;a href=&quot;#核心升级&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “核心升级”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;两款尺寸&lt;/strong&gt;：120B 参数可塞进单张 H100，20B 参数 16 GB 显存就能跑。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;推理成本低&lt;/strong&gt;，延迟相比 GPT-3.5 系列下降 40%。&lt;/li&gt;
-&lt;li&gt;Benchmarks 显示，120B 模型在推理/工具调用上逼近 o4-mini。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h3 id=&quot;推荐场景&quot;&gt;推荐场景&lt;/h3&gt;&lt;a href=&quot;#推荐场景&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “推荐场景”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;本地私有化部署&lt;/strong&gt;：医疗、金融等对隐私敏感的企业。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;学术研究 &amp;#x26; 二次微调&lt;/strong&gt;：Apache 2.0 随便改，不限商用。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;边缘推理&lt;/strong&gt;：20B 版本配合 16 GB GPU 可上工业网关。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;互动&lt;/strong&gt;：如果你打算自建 LLM 服务，GPT-OSS 更吸引你还是 Llama 3？评论区聊聊～&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;模型二anthropic-claude-opus-41&quot;&gt;模型二：Anthropic Claude Opus 4.1&lt;/h2&gt;&lt;a href=&quot;#模型二anthropic-claude-opus-41&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “模型二：Anthropic Claude Opus 4.1”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h3 id=&quot;关键词-1&quot;&gt;关键词&lt;/h3&gt;&lt;a href=&quot;#关键词-1&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “关键词”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;SWE-bench 74.5% · 多轮代理 · 长上下文&lt;/strong&gt;&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;核心升级-1&quot;&gt;核心升级&lt;/h3&gt;&lt;a href=&quot;#核心升级-1&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “核心升级”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;Coding 基准 &lt;strong&gt;SWE-bench Verified 74.5%&lt;/strong&gt;，再刷榜首。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Agentic Search&lt;/strong&gt;：自动分步检索→汇总→生成。&lt;/li&gt;
-&lt;li&gt;已上线 &lt;strong&gt;API、Bedrock、Vertex AI&lt;/strong&gt;，价格与 Opus 4 持平。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h3 id=&quot;推荐场景-1&quot;&gt;推荐场景&lt;/h3&gt;&lt;a href=&quot;#推荐场景-1&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “推荐场景”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;复杂代码库重构&lt;/strong&gt;：万行级重构 + 单测生成，一口气搞定。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;企业内部知识检索代理&lt;/strong&gt;：给文档库插上会思考的“大脑”。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;RAG 长文报告&lt;/strong&gt;：超长上下文 + 细节追踪，少丢信息。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;模型三google-deepmind-genie-3&quot;&gt;模型三：Google DeepMind Genie 3&lt;/h2&gt;&lt;a href=&quot;#模型三google-deepmind-genie-3&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “模型三：Google DeepMind Genie 3”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h3 id=&quot;关键词-2&quot;&gt;关键词&lt;/h3&gt;&lt;a href=&quot;#关键词-2&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “关键词”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;实时 24 fps · 720p · 可交互世界模型&lt;/strong&gt;&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;核心升级-2&quot;&gt;核心升级&lt;/h3&gt;&lt;a href=&quot;#核心升级-2&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “核心升级”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;文本 → &lt;strong&gt;分钟级 3D 世界&lt;/strong&gt;，分辨率 720p，24fps。&lt;/li&gt;
-&lt;li&gt;支持 &lt;strong&gt;Promptable World Events&lt;/strong&gt;：一句话切换天气、加入角色。&lt;/li&gt;
-&lt;li&gt;目标：为机器人、自驾训练提供高保真模拟。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h3 id=&quot;推荐场景-2&quot;&gt;推荐场景&lt;/h3&gt;&lt;a href=&quot;#推荐场景-2&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “推荐场景”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;游戏快速原型&lt;/strong&gt;：设计师直接用文本拼场景。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;机器人仿真训练&lt;/strong&gt;：虚拟仓库、工厂先练再上真机。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;数字孪生 / 教育体验&lt;/strong&gt;：秒造交互式实验室、历史城市漫游。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;结论--该怎么选&quot;&gt;结论 · 该怎么选？&lt;/h2&gt;&lt;a href=&quot;#结论--该怎么选&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “结论 · 该怎么选？”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;需求&lt;/th&gt;&lt;th&gt;首选模型&lt;/th&gt;&lt;th&gt;理由&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;私有部署 + 低成本&lt;/td&gt;&lt;td&gt;&lt;strong&gt;GPT-OSS 20B/120B&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;轻量、Apache 2.0&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;大型编码 / 复杂搜索&lt;/td&gt;&lt;td&gt;&lt;strong&gt;Claude Opus 4.1&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Coding SOTA + Agent&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3D 交互 / 仿真&lt;/td&gt;&lt;td&gt;&lt;strong&gt;Genie 3&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;实时世界模型&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
-&lt;p&gt;未来几周 GPT-5 还在路上，大战刚开场，你准备好拥抱这波红利了吗？&lt;/p&gt;&lt;!-- ## 思考题
-
-**你最期待哪一款模型落地？为什么？**
-把你的答案写在评论区，抽 3 位送「AI 作品点评」专属福利。
-
----
-
-## 推荐标题（多语种 &amp; slug）
-
-| 简体中文                                 | English                                           | 繁體                                   | 日本語                                    | Français                                           | Español                                            | Português                                           | slug                    |
-| ------------------------------------ | ------------------------------------------------- | ------------------------------------ | -------------------------------------- | -------------------------------------------------- | -------------------------------------------------- | --------------------------------------------------- | ----------------------- |
-| 三巨头同日放招：GPT-OSS、Opus 4.1、Genie 3 全解析 | Triple-Threat Launch: GPT-OSS, Opus 4.1 &amp; Genie 3 | 三巨頭同日放招：GPT-OSS、Opus 4.1、Genie 3 全解析 | 3大AIモデル同日デビュー：GPT-OSS・Opus 4.1・Genie 3 | Triple lancement IA : GPT-OSS, Opus 4.1 et Genie 3 | Triple lanzamiento IA: GPT-OSS, Opus 4.1 y Genie 3 | Três lançamentos de IA: GPT-OSS, Opus 4.1 e Genie 3 | triple-threat-ai-launch |
-
-\| 超轻开源 vs 超强编码 vs 超凡世界：谁是你的菜？ | Open Weights vs Coding Beast vs World Builder | 超輕開源 vs 超強編碼 vs 超凡世界：誰是你的菜？ | 軽量OSS vs 最強コーディング vs 新世界モデル | Open Weight vs Codeur suprême vs Créateur de mondes | Peso ligero OSS vs Monstruo del código vs Creador de mundos | Open-weight leve vs Fera do código vs Criador de mundos | openweights-coding-world |
-
-\| GPT-5 前哨战：三大模型齐发，AI 版百团大战打响 | Pre-GPT-5 Showdown: Three Models, One Future | GPT-5 前哨戰：三大模型齊發，AI 版百團大戰打響 | GPT-5前哨戦：三モデル激突 | Avant-garde GPT-5 : trois modèles en lice | Preludio GPT-5: tres modelos se enfrentan | Prelúdio GPT-5: três modelos em campo | gpt5-prelude |
-
----
-
-## 微信朋友圈热评（任选发）
-
-1. “一天三个大招，这才是我爱 AI 的理由，钱包表示压力山大😂”
-2. “Genie 3 带我穿越元宇宙，Claude 4.1 帮我写代码，GPT-OSS 保我隐私——完美闭环！”
-3. “朋友们，今晚不睡了，开干自建 LLM 集群，明早见成效🏃”
-
----
-
-我这版文章你觉得**OK 吗？需要再扩写或加案例**，留言告诉我！
-
-[1]: https://huggingface.co/openai/gpt-oss-120b?utm_source=chatgpt.com &quot;openai/gpt-oss-120b&quot;
-[2]: https://openai.com/index/introducing-gpt-oss/?utm_source=chatgpt.com &quot;Introducing gpt-oss&quot;
-[3]: https://www.wired.com/story/openai-just-released-its-first-open-weight-models-since-gpt-2/?utm_source=chatgpt.com &quot;OpenAI Just Released Its First Open-Weight Models Since ...&quot;
-[4]: https://simonwillison.net/2025/Aug/5/gpt-oss/?utm_source=chatgpt.com &quot;OpenAI&apos;s new open weight (Apache 2) models are really ...&quot;
-[5]: https://www.anthropic.com/news/claude-opus-4-1?utm_source=chatgpt.com &quot;Claude Opus 4.1&quot;
-[6]: https://aws.amazon.com/about-aws/whats-new/2025/08/anthropic-claude-opus-4-1-amazon-bedrock/?utm_source=chatgpt.com &quot;Anthropic’s Claude Opus 4.1 now in Amazon Bedrock&quot;
-[7]: https://www.theverge.com/news/718723/google-ai-genie-3-model-video-game-worlds-real-time?utm_source=chatgpt.com &quot;Google&apos;s new AI model creates video game worlds in real time&quot;
-[8]: https://deepmind.google/discover/blog/genie-3-a-new-frontier-for-world-models/?utm_source=chatgpt.com &quot;Genie 3: A new frontier for world models&quot;
-[9]: https://www.theguardian.com/technology/2025/aug/05/google-step-artificial-general-intelligence-deepmind-agi?utm_source=chatgpt.com &quot;Google says its new &apos;world model&apos; could train AI robots in virtual warehouses&quot;
-[10]: https://techcrunch.com/2025/08/05/deepmind-thinks-genie-3-world-model-presents-stepping-stone-towards-agi/?utm_source=chatgpt.com &quot;DeepMind thinks its new Genie 3 world model presents a ...&quot; --&gt;</content:encoded><category>GPT-OSS</category><category>Claude Opus 4.1</category><category>Genie 3</category><category>OpenAI</category><category>Anthropic</category><category>Google DeepMind</category></item><item><title>120 亿 VS 50 亿：OpenAI 与 Anthropic 收入激增</title><link>https://www.vibesparking.com/zh-cn/blog/ai/2025-08-05-openai-anthropic-revenue-race/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/2025-08-05-openai-anthropic-revenue-race/</guid><pubDate>Tue, 05 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # 120 亿 VS 50 亿：OpenAI 与 Anthropic 收入激增背后的门道 --&gt;
-&lt;p&gt;过去半年，生成式 AI 赛道再次刷新速度上限：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;OpenAI&lt;/strong&gt; 的年化经常性收入（ARR）在 6 个月里从 &lt;strong&gt;60 亿美元&lt;/strong&gt; 飙到 &lt;strong&gt;120 亿美元&lt;/strong&gt;。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Anthropic&lt;/strong&gt; 则在 7 个月内实现了 &lt;strong&gt;10 亿 → 50 亿美元&lt;/strong&gt; 的 5 倍跳跃。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;这两家明星公司为何能同时“起飞”？更关键的是，它们的增长动能来自哪里、未来可能出现哪些变局？本文拆解四个关键收入模块，带你看清赛道暗流。&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;div&gt;&lt;h2 id=&quot;1-消费者订阅openai-继续一骑绝尘&quot;&gt;1. 消费者订阅：OpenAI 继续一骑绝尘&lt;/h2&gt;&lt;a href=&quot;#1-消费者订阅openai-继续一骑绝尘&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1. 消费者订阅：OpenAI 继续一骑绝尘”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;模块&lt;/th&gt;&lt;th&gt;OpenAI 2025E ARR&lt;/th&gt;&lt;th&gt;Anthropic 2025E ARR&lt;/th&gt;&lt;th&gt;主要驱动&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;消费者订阅&lt;/td&gt;&lt;td&gt;55 亿美元&lt;/td&gt;&lt;td&gt;7 亿美元&lt;/td&gt;&lt;td&gt;ChatGPT Plus、Team、学生订阅等&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
-&lt;p&gt;OpenAI 在 C 端的优势由 &lt;strong&gt;ChatGPT Plus&lt;/strong&gt; 和 &lt;strong&gt;Team&lt;/strong&gt; 强化：月费 20–30 美元的订阅模式将庞大的免费流量转化为现金流。相比之下，Anthropic 尚未跑出类似体量的直面消费者产品。&lt;/p&gt;
-&lt;div&gt;&lt;h2 id=&quot;2-企业与伙伴订阅微软加持带来的顺风车&quot;&gt;2. 企业与伙伴订阅：微软加持带来的“顺风车”&lt;/h2&gt;&lt;a href=&quot;#2-企业与伙伴订阅微软加持带来的顺风车&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2. 企业与伙伴订阅：微软加持带来的“顺风车””&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;模块&lt;/th&gt;&lt;th&gt;OpenAI&lt;/th&gt;&lt;th&gt;Anthropic&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;企业 &amp;#x26; 合作伙伴订阅&lt;/td&gt;&lt;td&gt;36 亿美元&lt;/td&gt;&lt;td&gt;9 亿美元&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
-&lt;p&gt;OpenAI 得益于 &lt;strong&gt;Microsoft 365 Copilot&lt;/strong&gt; 与 Azure OpenAI Service 的深度绑定：企业通过 Azure 采购 GPT-4o，计入 OpenAI 的合作收入。Anthropic 虽与 Google、AWS 均有捆绑，但规模仍落后。&lt;/p&gt;
-&lt;div&gt;&lt;h2 id=&quot;3-api-收入anthropic-反超的唯一战场&quot;&gt;3. API 收入：Anthropic 反超的唯一战场&lt;/h2&gt;&lt;a href=&quot;#3-api-收入anthropic-反超的唯一战场&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3. API 收入：Anthropic 反超的唯一战场”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;模块&lt;/th&gt;&lt;th&gt;OpenAI&lt;/th&gt;&lt;th&gt;Anthropic&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;API 收入总额&lt;/td&gt;&lt;td&gt;29 亿美元&lt;/td&gt;&lt;td&gt;&lt;strong&gt;31 亿美元&lt;/strong&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
-&lt;p&gt;API 是 Anthropic 唯一领先的细分：Claude 3/4 系列在开发者社区口碑突出，更以 &lt;em&gt;token 价格友好&lt;/em&gt;、&lt;em&gt;稳态响应&lt;/em&gt; 抢占市场。&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;coding-场景--anthropic-的油门&quot;&gt;Coding 场景 = Anthropic 的“油门”&lt;/h3&gt;&lt;a href=&quot;#coding-场景--anthropic-的油门&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Coding 场景 = Anthropic 的“油门””&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Cursor&lt;/strong&gt; + &lt;strong&gt;GitHub Copilot&lt;/strong&gt; 合计贡献 &lt;strong&gt;14 亿美元&lt;/strong&gt; ARR，占 Anthropic API 收入近一半。&lt;/li&gt;
-&lt;li&gt;代码专用模型 &lt;strong&gt;Claude Code&lt;/strong&gt;（前称 Claude 3 Haiku-Code）也在短短数周内 ARR 从 2 亿涨到 &lt;strong&gt;4 亿美元&lt;/strong&gt;。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;几乎所有热门 IDE 插件、浏览器扩展默认调用 Claude 4 Sonnet，这让 Anthropic 在代码生成领域形成了事实标准。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;div&gt;&lt;h2 id=&quot;4-产品矩阵对比谁更抗周期&quot;&gt;4. 产品矩阵对比：谁更“抗周期”？&lt;/h2&gt;&lt;a href=&quot;#4-产品矩阵对比谁更抗周期&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “4. 产品矩阵对比：谁更“抗周期”？”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;收入来源多样性&lt;/th&gt;&lt;th&gt;OpenAI&lt;/th&gt;&lt;th&gt;Anthropic&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;消费者订阅&lt;/td&gt;&lt;td&gt;强&lt;/td&gt;&lt;td&gt;弱&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;企业订阅&lt;/td&gt;&lt;td&gt;强&lt;/td&gt;&lt;td&gt;中&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;API&lt;/td&gt;&lt;td&gt;中&lt;/td&gt;&lt;td&gt;&lt;strong&gt;强&lt;/strong&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;代码专用模型&lt;/td&gt;&lt;td&gt;弱&lt;/td&gt;&lt;td&gt;&lt;strong&gt;独占高增长&lt;/strong&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
-&lt;p&gt;OpenAI 的结构更均衡；Anthropic 则高度依赖 &lt;strong&gt;开发者 API + Coding&lt;/strong&gt;，集中度高意味着 &lt;strong&gt;弹性与风险并存&lt;/strong&gt;：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;利好&lt;/strong&gt;：只要持续领先代码能力，ARR 可爆发式增长。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;隐忧&lt;/strong&gt;：一旦 &lt;strong&gt;GPT-5&lt;/strong&gt; 或其他模型在代码任务上追平并通过价格战渗透，API 客户（尤其是 Cursor、Copilot）可能出走，营收会立刻受挫。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h2 id=&quot;5-接下来可能出现的拐点&quot;&gt;5. 接下来可能出现的拐点&lt;/h2&gt;&lt;a href=&quot;#5-接下来可能出现的拐点&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “5. 接下来可能出现的拐点”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;GPT-5 的代码性能&lt;/strong&gt;&lt;br&gt;
-OpenAI 已公开招聘“Code LLM”团队，若 GPT-5 在代码生成与单元测试自动化上大幅超越 Claude 4，Anthropic 的护城河或被冲击。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;成本结构差异&lt;/strong&gt;&lt;br&gt;
-Anthropic 依赖 AWS Trn1/Trn2，同时加购 Nvidia H100；算力与资本支出更重。OpenAI 在微软定制超算上拥有成本优势，可通过降价压缩对手利润率。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;垂直化 SaaS 夹击&lt;/strong&gt;&lt;br&gt;
-Replit Ghostwriter、Sourcegraph Cody 等自研或多模型路由方案在兴起，降低了对单一 API 的依赖。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div&gt;&lt;h2 id=&quot;6-对开发者与投资者的启示&quot;&gt;6. 对开发者与投资者的启示&lt;/h2&gt;&lt;a href=&quot;#6-对开发者与投资者的启示&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “6. 对开发者与投资者的启示”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;开发者&lt;/strong&gt;：短期内 Claude 4 Sonnet 在代码任务依旧性价比最高，但应提前做多模型兼容，规避供应商锁定。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;产品经理/创业者&lt;/strong&gt;：若定位非代码场景（客服、文案、多模态），OpenAI 的生态、插件体系更成熟。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;投资者&lt;/strong&gt;：关注两家公司在 &lt;strong&gt;代码 LLM&lt;/strong&gt; 领域的新基准测试（HumanEval+, SWE-Bench 等），以及大客户绑定的续约价格——这将直接折射出增长曲线是否可持续。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;结论&lt;/strong&gt;&lt;br&gt;
-OpenAI 与 Anthropic 都在刷新收入增长纪录，但二者的“增长曲线”底层逻辑截然不同：前者多点开花、护城河宽；后者依赖单一高增速赛道冲刺。未来 6–12 个月，代码生成这条“胜负手”若被改写，2025 年 ARR 排名很可能再度洗牌。&lt;/p&gt;&lt;!-- [1] https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/images/7596734/04df8a1a-9c00-4369-92b5-102d13be4a2e/image.jpg?AWSAccessKeyId=ASIA2F3EMEYEXV5KM5IX&amp;Signature=tRbQqgP6%2FMm1i4HJFOyVMvljd0Y%3D&amp;x-amz-security-token=IQoJb3JpZ2luX2VjECYaCXVzLWVhc3QtMSJGMEQCICTobNRGaohlqlIKDsTLv%2FxW66ZFhCkFBcP1Ajy3rfUnAiASOg%2Fa1gW78hxOLDvL5AE2txXAayUh6OPPWw6UUlPVqyrxBAheEAEaDDY5OTc1MzMwOTcwNSIMInnpr0HR2dmoS2Q3Ks4EZc9aR7i8XKyaAz%2BBX2VOjibL%2FGITmXGd127DEGIsDN53pOa84cca34kn0I1LuWG7l%2BtBs3tUFebHcR3afdVT%2FlMcB4g6NU0pJPBvgD1Lq5uQ9F11IdReDEIFJuv8xAAu031QmUOPGi7zafaaX15Hc39vZLjcXUu0Ibeh9iqe0Y%2BRHJgeNMLxHK7dBGkPZwgLlHxPTZVj901pvFhB8aajVkU%2BIpAem4rITIFcS2RE4K66FezHa7VKlhsv%2B6dHPJ71h%2BxfmC4PfAQTycEXaTPncdoq3ZlLbGGhw9OWvr48T3kcI2GAfwaBRbSlngbZuIDSVpnZQ2IijJAz5cR6g5UDYDax%2FHFq1nwq2xN0sfHOIbZ4vSw9PFVgX9RCX4gwu9uRoS9b3EFfOsH7WQuZroTHkcXuVtSgLCQWAMCitZiDl9ywd3EYdfUrATgZ8PJy7ZlxNPjJkdGDvzJwuZXmcXAU7jZP6yePbIkxRpaCeS730vwZpMpVWwKWmzBjmN397sohnrHG9PZcV6Yyu2KiESn%2B%2BUqpvQHFmkfkjWqZPV3wmXxow8POL3vsvf8d17TsIufT4v46PsINX3L%2BgCUgBNaE5odreeVE4iF0QsXMn%2F9vjUlh42Jx6RmqoL5i6wHu3hD%2FQxYF9IJfYWOoU53yrjSGBso3saSYbZL6cYUeRGATu%2F2CXEBkg6Qm8I1wSp7vdE%2FgZjJiU7OT29AhPT58yeiZm%2F0DT95ekAc5FKrDR8y8DmofGpc31PXb6A3LHzI5T%2FWToJJ%2FmJhUakhM9016PRAw34fIxAY6mwHfKU3FTWgdU9OtWJ030JJBuFlc7YmOzNf0lbQSWINxYACkrSjuBlpDU%2B81giwjre9AARc8eige0%2FUY12hSJOgeJL0Uy0pTrmQvOq74JRxbOe%2BBGZMgRIakbiexsKTtyh4rMbbVvFb2FI5vuiOFLEk9mpSXic%2ByOpVrTndV22EFB3q3aORh4tF8h1M3dRy4tgG9zINJEUArmDXmWw%3D%3D&amp;Expires=1754401561 --&gt;</content:encoded><category>OpenAI</category><category>Anthropic</category></item></channel></rss>
+[6]: https://cincodias.elpais.com/smartlife/lifestyle/2025-08-06/gemini-storybook-nueva-funcion-crear-libros-ilustrados.html?utm_source=chatgpt.com &quot;Storybook, la nueva función de Gemini que permite crear libros ilustrados&quot; --&gt;</content:encoded><category>AI</category><category>Google Gemini</category><category>Story Book</category></item></channel></rss>

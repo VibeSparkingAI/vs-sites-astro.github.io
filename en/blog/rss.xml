@@ -1,4 +1,181 @@
-<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Vibe Sparking AI | Blog</title><description/><link>https://www.vibesparking.com/</link><language>en</language><item><title>Frontend AI Perk: Open-Source Open‑Lovable vs. Lovable — One‑Click Clone Any Website into a React App</title><link>https://www.vibesparking.com/en/blog/ai/open-lovable/2025-08-14-open-lovable-vs-lovable-clone-any-site-to-react/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/open-lovable/2025-08-14-open-lovable-vs-lovable-clone-any-site-to-react/</guid><pubDate>Thu, 14 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # Open-source open-lovable vs Lovable: AI one-click clones any website into a React app --&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Vibe Sparking AI | Blog</title><description/><link>https://www.vibesparking.com/</link><language>en</language><item><title>Claude Code on a Budget</title><link>https://www.vibesparking.com/en/blog/ai/claude-code/2025-08-14-claude-code-save-money-right-model-lean-context-permissions/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/claude-code/2025-08-14-claude-code-save-money-right-model-lean-context-permissions/</guid><pubDate>Thu, 14 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # Claude Code on a Budget --&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Trim conversations, pick the right model, lock down permissions — and your Claude Code bill can drop by half.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;&lt;a href=&quot;#introduction&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Introduction”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Many teams use Claude Code and feel “budget pain” every month.
+It’s not that you typed too much — it’s the &lt;strong&gt;invisible token sink&lt;/strong&gt; eating the bill.
+The good news: you can &lt;strong&gt;control it&lt;/strong&gt;, and the effect is immediate.&lt;/p&gt;
+&lt;p&gt;This guide breaks cost‑saving into three tiers: basic, intermediate, advanced.
+Follow them and you’ll save the bulk of your spend.&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;i-where-does-the-money-go-4-token-sinks&quot;&gt;I. Where Does the Money Go? 4 “Token Sinks”&lt;/h2&gt;&lt;a href=&quot;#i-where-does-the-money-go-4-token-sinks&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “I. Where Does the Money Go? 4 “Token Sinks””&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;1) Invisible context from system and memory&lt;/strong&gt;
+Claude Code automatically loads the system prompt and layered &lt;code dir=&quot;auto&quot;&gt;CLAUDE.md&lt;/code&gt; memory (org/project/user). This content &lt;strong&gt;enters context on every turn&lt;/strong&gt;, naturally consuming tokens.**&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2) Big price gaps across models&lt;/strong&gt;
+Official pricing: &lt;strong&gt;Sonnet 4 ≈ $3/$15 per million input/output tokens; Opus 4/4.1 ≈ $15/$75&lt;/strong&gt;. For the same conversation, switching models means &lt;strong&gt;~5× unit price&lt;/strong&gt;.**&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;3) Context gets fatter as you chat&lt;/strong&gt;
+Claude Code supports very large contexts (Sonnet 4 up to 1M tokens in testing). &lt;strong&gt;Longer chats trigger auto‑compression and repeated “setup”&lt;/strong&gt;, making tokens fly.**&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;4) Background and noise spending&lt;/strong&gt;
+Beyond visible replies, &lt;strong&gt;&lt;code dir=&quot;auto&quot;&gt;/cost&lt;/code&gt; queries, auto‑summaries, Haiku prompts&lt;/strong&gt;, etc., also burn small amounts of tokens. Pennies add up.**&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Summary: &lt;strong&gt;It’s not that you ask too much — it’s that “everything gets hauled on stage every time.”&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;ii-three-tiers-of-savings-use-now&quot;&gt;II. Three Tiers of Savings (Use Now)&lt;/h2&gt;&lt;a href=&quot;#ii-three-tiers-of-savings-use-now&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “II. Three Tiers of Savings (Use Now)”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3 id=&quot;a-basics-4-moves-everyone-should-use&quot;&gt;A. Basics: 4 Moves Everyone Should Use&lt;/h3&gt;&lt;a href=&quot;#a-basics-4-moves-everyone-should-use&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “A. Basics: 4 Moves Everyone Should Use”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Manual slimming beats passive compression&lt;/strong&gt;
+Use &lt;code dir=&quot;auto&quot;&gt;/compact&lt;/code&gt; proactively, and add a focus directive:&lt;/p&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;plaintext&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;/compact Focus on code diffs and failing tests only&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;p&gt;Auto‑compression triggers near &lt;strong&gt;95% capacity&lt;/strong&gt; — waiting is too late.**&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;One task per thread; clear when done&lt;/strong&gt;
+Start a new session for each small task; once finished, run &lt;code dir=&quot;auto&quot;&gt;/clear&lt;/code&gt; to avoid a ballooning history.**&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Pick the right default model&lt;/strong&gt;
+Use &lt;strong&gt;Sonnet 4&lt;/strong&gt; for day‑to‑day development. When you truly hit “hard/long/deep reasoning,” switch to &lt;strong&gt;Opus&lt;/strong&gt; via &lt;code dir=&quot;auto&quot;&gt;/model&lt;/code&gt;. You can also use &lt;strong&gt;“Opus for planning + Sonnet for execution”&lt;/strong&gt; — stronger planning, cheaper execution.**&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Check the bill anytime&lt;/strong&gt;
+In any session, run &lt;code dir=&quot;auto&quot;&gt;/cost&lt;/code&gt; to see current spend; teams can check history in the console and &lt;strong&gt;set workspace spend limits&lt;/strong&gt;.**&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Figure idea (illustration 2:1 | English copy)&lt;/strong&gt;
+“A developer squeezing a giant chat bubble into a slim pill, while a tiny receipt shows shrinking token numbers.”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h3 id=&quot;b-intermediate-tighten-the-flow-shrink-the-bill&quot;&gt;B. Intermediate: Tighten the Flow, Shrink the Bill&lt;/h3&gt;&lt;a href=&quot;#b-intermediate-tighten-the-flow-shrink-the-bill&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “B. Intermediate: Tighten the Flow, Shrink the Bill”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Docs‑first to prevent context blowups&lt;/strong&gt;
+First have Claude produce a “TODO list / brief plan,” confirm, then execute.
+Iterate in &lt;strong&gt;Plan Mode (planning mode)&lt;/strong&gt;; confirm and switch back to execution.**&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Put “long‑term memory” into CLAUDE.md&lt;/strong&gt;
+Put standards, common commands, and project conventions into &lt;code dir=&quot;auto&quot;&gt;CLAUDE.md&lt;/code&gt;; next time it applies automatically. Use &lt;code dir=&quot;auto&quot;&gt;/memory&lt;/code&gt; to edit quickly in a chat when needed. &lt;strong&gt;Memory loads by layer automatically&lt;/strong&gt;, reducing the tokens you spend “repeating yourself.”**&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Small commits, easy to roll back&lt;/strong&gt;
+Ask Claude to produce a commit message after each small chunk. If something goes wrong, roll back — &lt;strong&gt;fewer wrong turns means fewer tokens&lt;/strong&gt;. (Engineering practice)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Team rate‑limits &amp;#x26; flight instruments&lt;/strong&gt;
+Set sane &lt;strong&gt;TPM (tokens per minute)&lt;/strong&gt; based on org size to avoid costly concurrency “meltdowns.”**&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h3 id=&quot;c-advanced-hardcore-cost-downs-biggest-gains&quot;&gt;C. Advanced: Hard‑Core Cost Downs (Biggest Gains)&lt;/h3&gt;&lt;a href=&quot;#c-advanced-hardcore-cost-downs-biggest-gains&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “C. Advanced: Hard‑Core Cost Downs (Biggest Gains)”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;1) Permission allow/deny lists to stop “random file reads”&lt;/strong&gt;
+Use &lt;code dir=&quot;auto&quot;&gt;/permissions&lt;/code&gt; + &lt;code dir=&quot;auto&quot;&gt;.claude/settings.json&lt;/code&gt; to &lt;strong&gt;forbid logs, binaries, and huge directories&lt;/strong&gt;, and allow only necessary paths. Rules support &lt;strong&gt;gitignore&lt;/strong&gt; patterns.**&lt;/p&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;json&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;{&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;defaultMode&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;plan&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;readRules&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: [&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;src/**&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;docs/**&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;!**/*.log&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;!**/*.bin&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;!node_modules/**&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;!dist/**&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;!coverage/**&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;],&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;editRules&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: [&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;src/**&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;, &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;docs/**&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;]&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Note: &lt;code dir=&quot;auto&quot;&gt;plan&lt;/code&gt; mode analyzes without changing files; read/write rules &lt;strong&gt;shrink the file surface&lt;/strong&gt; — less scanning = fewer tokens.**&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;2) Be precise to “lines,” not whole files&lt;/strong&gt;
+Don’t paste entire blocks. Provide &lt;strong&gt;file path + target line ranges + 5 key bullets&lt;/strong&gt; to minimize irrelevant scanning. (Engineering practice)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;3) Model split: let Opus handle only the “expensive parts”&lt;/strong&gt;
+In &lt;code dir=&quot;auto&quot;&gt;/model&lt;/code&gt;, use &lt;strong&gt;Opus&lt;/strong&gt; for &lt;strong&gt;plans/architecture/cross‑module dependency analysis&lt;/strong&gt;; hand off code generation and fixes to &lt;strong&gt;Sonnet&lt;/strong&gt;. This is the recommended direction from official guidance.**&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;4) (Team/Gateway) Use Prompt Caching&lt;/strong&gt;
+For API or enterprise gateways, &lt;strong&gt;prompt caching&lt;/strong&gt; saves visibly on repeated large prefixes. Official pricing offers cheaper write/hit rates for cached prompts.**&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;iii-readytouse-costsaving-checklist&quot;&gt;III. Ready‑to‑Use Cost‑Saving Checklist&lt;/h2&gt;&lt;a href=&quot;#iii-readytouse-costsaving-checklist&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “III. Ready‑to‑Use Cost‑Saving Checklist”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Default to Sonnet; switch to Opus only when needed&lt;/strong&gt;: flip with &lt;code dir=&quot;auto&quot;&gt;/model&lt;/code&gt;.**&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Keep Plan Mode on by default&lt;/strong&gt;: plan first, execute after confirmation.**&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Start every session by slimming&lt;/strong&gt;: &lt;code dir=&quot;auto&quot;&gt;/compact Focus on code diffs and test failures&lt;/code&gt;.**&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Close the loop with &lt;code dir=&quot;auto&quot;&gt;/clear&lt;/code&gt;&lt;/strong&gt;: prevent ever‑growing history.**&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Strict permissions&lt;/strong&gt;: use &lt;code dir=&quot;auto&quot;&gt;/permissions&lt;/code&gt; and &lt;code dir=&quot;auto&quot;&gt;readRules/editRules&lt;/code&gt; to restrict directories and types.**&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Audit anytime&lt;/strong&gt;: &lt;code dir=&quot;auto&quot;&gt;/cost&lt;/code&gt; + console “workspace spend limit.”**&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Write memory into CLAUDE.md&lt;/strong&gt;: reduce repeated priming and context stuffing.**&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;iv-real-savings-why-these-work&quot;&gt;IV. Real Savings: Why These Work&lt;/h2&gt;&lt;a href=&quot;#iv-real-savings-why-these-work&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “IV. Real Savings: Why These Work”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Unit price spread&lt;/strong&gt;: Opus costs about &lt;strong&gt;5×&lt;/strong&gt; Sonnet. Concentrate “expensive thinking” in planning; use Sonnet for execution — total cost &lt;strong&gt;drops significantly&lt;/strong&gt;.**&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Size costs&lt;/strong&gt;: auto‑loaded memory + long threads fatten context; proactive &lt;code dir=&quot;auto&quot;&gt;/compact&lt;/code&gt; and &lt;code dir=&quot;auto&quot;&gt;/clear&lt;/code&gt; &lt;strong&gt;shrink transfer volume directly&lt;/strong&gt;.**&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Less irrelevant I/O&lt;/strong&gt;: permissions and rules act as a &lt;strong&gt;cost firewall&lt;/strong&gt;, blocking large, low‑value dirs/files.**&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Background overhead under control&lt;/strong&gt;: knowing what “quietly spends” helps you avoid pointless refreshes and queries.**&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;&lt;a href=&quot;#conclusion&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Conclusion”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Claude Code’s power comes from “bringing everything along.”
+The &lt;strong&gt;key to saving&lt;/strong&gt; is to &lt;strong&gt;bring only what’s necessary&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Apply this checklist to your project today:
+start with &lt;code dir=&quot;auto&quot;&gt;/model&lt;/code&gt;, &lt;code dir=&quot;auto&quot;&gt;/compact&lt;/code&gt;, &lt;code dir=&quot;auto&quot;&gt;/clear&lt;/code&gt;,
+then add &lt;code dir=&quot;auto&quot;&gt;CLAUDE.md&lt;/code&gt; and permission rules.
+By month’s end, your bill should surprise you — in a good way.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;What do you think? What other money pits have you hit? Share in the comments.&lt;/strong&gt;&lt;/p&gt;&lt;!-- ---
+
+## Cover and Section Figures (illustrative | 2:1 | English copy, no Chinese)
+
+**Cover Prompt**
+“An illustration of a developer catching leaking tokens with a mesh filter labeled ‘/compact, /clear, /model’, a price tag drops from ‘$75’ to ‘$15’, clean lines, modern pastel, wide 2:1, text-free.”
+
+**Key Figure 1 (Basics)**
+“Minimal blueprint of a terminal showing /compact and /clear commands slimming a giant chat history into a thin strip, receipt icon shows fewer tokens, 2:1, pastel, text-free.”
+
+**Key Figure 2 (Intermediate)**
+“Kanban-style plan mode board feeding into small git commits on a conveyor belt, a green TPM gauge stays stable, 2:1, pastel, text-free.”
+
+**Key Figure 3 (Advanced)**
+“Permission rules shield blocking folders logs/, node_modules/, dist/, while a bright path to src/ remains open, 2:1, pastel, text-free.”
+
+---
+
+## Multilingual Titles and Slugs (3 sets)
+
+1. **中文**：Claude Code 省钱指南：用对模型、瘦身上下文、权限堵洞
+   **English**: Claude Code on a Budget: Right Model, Lean Context, Locked-Down Permissions
+   **繁體**：Claude Code 省錢指南：用對模型、瘦身上下文、權限堵洞
+   **日本語**：Claude Code節約術：モデル最適化・文脈スリム化・権限ロック
+   **Français** : Claude Code à petit budget : bon modèle, contexte allégé, permissions verrouillées
+   **Español**: Claude Code con presupuesto: modelo correcto, contexto ligero y permisos seguros
+   **Português**: Claude Code econômico: modelo certo, contexto enxuto e permissões rígidas
+   **slug**: `claude-code-save-money-right-model-lean-context-permissions`
+
+2. **中文**：别再烧钱了！3 层实战让 Claude Code 账单减半
+   **English**: Stop the Burn! A 3-Layer Playbook to Halve Your Claude Code Bill
+   **繁體**：別再燒錢！三層實戰讓 Claude Code 帳單砍半
+   **日本語**：無駄遣い終了！3層プレイブックで請求を半減
+   **Français** : Fin de l’hémorragie : un guide en 3 niveaux pour diviser la facture
+   **Español**: Basta de derroche: 3 capas para partir la factura a la mitad
+   **Português**: Chega de queimar verba: 3 camadas para cortar a conta pela metade
+   **slug**: `claude-code-3-layer-cost-cut-playbook`
+
+3. **中文**：从 5x 单价到 0 噪音：Claude Code 最强降本术
+   **English**: From 5× Price Gap to Zero Noise: Ultimate Cost Cuts for Claude Code
+   **繁體**：從 5x 單價到零噪音：Claude Code 終極降本術
+   **日本語**：5倍単価の壁を越えろ：Claude Code究極のコスト削減
+   **Français** : De l’écart 5× au zéro bruit : l’optimisation ultime des coûts
+   **Español**: Del precio 5× al ruido cero: el recorte definitivo
+   **Português**: Do preço 5× ao ruído zero: o corte definitivo de custos
+   **slug**: `claude-code-ultimate-cost-cuts`
+
+---
+
+## Community Comments (3 lines, ready to post)
+
+1. **“I thought I was asking too much — turns out the context was too fat… Enable `/compact`, `/clear`, and `/permissions` per this guide and the bill drops. Bliss!”**
+2. **“Opus does the thinking, Sonnet does the doing — this combo saved our budget. First month under target 🎯.”**
+3. **“Cut logs and node_modules outright — Claude stops peeking everywhere. Faster and cheaper — win‑win.”**
+
+---
+
+Want me to adapt the **config templates** to your repo layout? Or ship a **one‑shot init script** (includes `CLAUDE.md`, `settings.json`, common `/commands`)? I can also expand this into a full illustrated doc.
+
+[1]: https://docs.anthropic.com/en/docs/claude-code/memory &quot;Manage Claude&apos;s memory - Anthropic&quot;
+[2]: https://docs.anthropic.com/en/docs/about-claude/pricing?utm_source=chatgpt.com &quot;Pricing&quot;
+[3]: https://www.anthropic.com/news/claude-4?utm_source=chatgpt.com &quot;Introducing Claude 4&quot;
+[4]: https://docs.anthropic.com/en/docs/build-with-claude/context-windows?utm_source=chatgpt.com &quot;Context windows&quot;
+[5]: https://docs.anthropic.com/en/docs/claude-code/costs &quot;Manage costs effectively - Anthropic&quot;
+--&gt;</content:encoded><category>Claude Code</category><category>Cursor</category></item><item><title>Frontend AI Perk: Open-Source Open‑Lovable vs. Lovable — One‑Click Clone Any Website into a React App</title><link>https://www.vibesparking.com/en/blog/ai/open-lovable/2025-08-14-open-lovable-vs-lovable-clone-any-site-to-react/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/open-lovable/2025-08-14-open-lovable-vs-lovable-clone-any-site-to-react/</guid><pubDate>Thu, 14 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # Open-source open-lovable vs Lovable: AI one-click clones any website into a React app --&gt;
 &lt;blockquote&gt;
 &lt;p&gt;For engineers and creators who want to use AI to &lt;strong&gt;ship products faster&lt;/strong&gt; and &lt;strong&gt;validate ideas more cost‑effectively&lt;/strong&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -680,7 +857,151 @@ Does this fit your taste? Want us to expand the six scenarios into **copy‑and�
 [5]: https://docs.anthropic.com/en/docs/claude-code/overview?utm_source=chatgpt.com &quot;Claude Code overview&quot;
 [6]: https://survey.stackoverflow.co/2024/ai?utm_source=chatgpt.com &quot;AI | 2024 Stack Overflow Developer Survey&quot;
 [7]: https://www.itpro.com/software/development/developers-say-ai-can-code-better-than-most-humans-but-theres-a-catch?utm_source=chatgpt.com &quot;Developers say AI can code better than most humans - but there&apos;s a catch&quot;
-[8]: https://docs.anthropic.com/en/docs/claude-code/slash-commands?utm_source=chatgpt.com &quot;Slash commands&quot; --&gt;</content:encoded><category>Vibe Coding</category></item><item><title>Conductor Orchestrates Multiple Claude Code Agents</title><link>https://www.vibesparking.com/en/blog/ai/claude-code/conductor/2025-08-14-conductor-slash-queues-hands-on.md/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/claude-code/conductor/2025-08-14-conductor-slash-queues-hands-on.md/</guid><pubDate>Thu, 14 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;div&gt;&lt;h1 id=&quot;conductor-orchestrate-multiple-claude-code-agents-together&quot;&gt;Conductor: Orchestrate Multiple Claude Code Agents Together&lt;/h1&gt;&lt;a href=&quot;#conductor-orchestrate-multiple-claude-code-agents-together&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Conductor: Orchestrate Multiple Claude Code Agents Together”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+[8]: https://docs.anthropic.com/en/docs/claude-code/slash-commands?utm_source=chatgpt.com &quot;Slash commands&quot; --&gt;</content:encoded><category>Vibe Coding</category></item><item><title>Tuning Claude Code Output Style @agent-output-style-setup</title><link>https://www.vibesparking.com/en/blog/ai/claude-code/agents/2025-08-14-claude-code-hidden-output-style-agent/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/claude-code/agents/2025-08-14-claude-code-hidden-output-style-agent/</guid><pubDate>Thu, 14 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # Tuning Claude Code Output Style --&gt;
+&lt;blockquote&gt;
+&lt;p&gt;In &lt;strong&gt;Claude Code 1.0.80&lt;/strong&gt;, there’s an undocumented Agent &lt;strong&gt;&lt;code dir=&quot;auto&quot;&gt;@agent-output-style-setup&lt;/code&gt;&lt;/strong&gt; that can create and switch “output styles” in one go (e.g., ultra‑concise, reviewer mode, educational mode). It turns rambling into a summary and long text into &lt;strong&gt;diff + key points&lt;/strong&gt;. This Agent was surfaced by community testing and public posts.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;why-it-matters&quot;&gt;Why It Matters&lt;/h2&gt;&lt;a href=&quot;#why-it-matters&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Why It Matters”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;The official &lt;strong&gt;Styles&lt;/strong&gt; capability lets you customize tone, structure, and detail level — matching real situations like “be formal for reports, be crisp for bug fixes.”&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Claude Code&lt;/strong&gt; supports configuration, slash Agents, and project‑level settings — ideal for making “style” a repeatable, versionable workflow.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;The combo is: generate styles via the hidden Agent → switch with a slash Agent → control the pace by scenario.&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;what-does-this-hidden-agent-do&quot;&gt;What Does This Hidden Agent Do?&lt;/h2&gt;&lt;a href=&quot;#what-does-this-hidden-agent-do&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “What Does This Hidden Agent Do?”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Community posts and issues indicate that after running &lt;code dir=&quot;auto&quot;&gt;@agent-output-style-setup&lt;/code&gt;, the terminal Agent guides you through preference prompts and &lt;strong&gt;generates several switchable styles&lt;/strong&gt; (such as Concise, Educational, Code Reviewer, Rapid Prototyping). Many use it to establish a &lt;strong&gt;lowercase, conversational&lt;/strong&gt; tone with &lt;strong&gt;minimal explanation&lt;/strong&gt; and &lt;strong&gt;diff‑first&lt;/strong&gt; output; some examples allow direct switching via &lt;code dir=&quot;auto&quot;&gt;@style concise&lt;/code&gt;.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;: This is an “undocumented/experimental” capability and may change with versions; the stable approach is to solidify your final styles using &lt;strong&gt;Styles&lt;/strong&gt; and &lt;strong&gt;custom slash Agents&lt;/strong&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;get-started-in-3-steps-10-minutes&quot;&gt;Get Started in 3 Steps (10 minutes)&lt;/h2&gt;&lt;a href=&quot;#get-started-in-3-steps-10-minutes&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Get Started in 3 Steps (10 minutes)”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Step 1: Run the wizard once&lt;/strong&gt;&lt;br&gt;
+In the Claude Code interactive REPL, execute:&lt;/p&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;plaintext&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;@agent-output-style-setup&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;p&gt;Describe your preferences, for example: &lt;strong&gt;“concise, only necessary explanations, show file diffs by default, friendlier tone.”&lt;/strong&gt; When finished, the Agent will confirm creation and usage.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Step 2: Persist the result in your project&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Use &lt;strong&gt;Styles&lt;/strong&gt; as the global/project default writing style; perfect for a “single team voice.”&lt;/li&gt;
+&lt;li&gt;Use &lt;strong&gt;custom slash Agents&lt;/strong&gt; (e.g., &lt;code dir=&quot;auto&quot;&gt;@style-concise&lt;/code&gt;, &lt;code dir=&quot;auto&quot;&gt;@style-reviewer&lt;/code&gt;) as toggles to “switch gears anytime.” Agents are just Markdown files — commit to Git and share across the team.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Step 3: Combine with other settings&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;When needed, use &lt;code dir=&quot;auto&quot;&gt;/model&lt;/code&gt; to switch the model, &lt;code dir=&quot;auto&quot;&gt;/status&lt;/code&gt; to check status, and the standard &lt;code dir=&quot;auto&quot;&gt;/config&lt;/code&gt; entrypoint.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;3-practical-examples-smoother-everyday-dev&quot;&gt;3 Practical Examples: Smoother Everyday Dev&lt;/h2&gt;&lt;a href=&quot;#3-practical-examples-smoother-everyday-dev&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3 Practical Examples: Smoother Everyday Dev”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;1) Small bugfixes: diff by default&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Directive: &lt;code dir=&quot;auto&quot;&gt;@style concise&lt;/code&gt; → “say what changed + why + diff.”&lt;/li&gt;
+&lt;li&gt;Value: &lt;strong&gt;less scrolling&lt;/strong&gt;, so you can quickly confirm whether the change is acceptable.&lt;/li&gt;
+&lt;li&gt;Basis: Styles support “more concise, on‑point” output; Claude Code supports turning workflows into custom Agents.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;2) Code review: structured feedback&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Directive: &lt;code dir=&quot;auto&quot;&gt;@style reviewer&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Output: issue list, risks, suggestions, reusable snippets.&lt;/li&gt;
+&lt;li&gt;Value: turns “vibes and rants” into an “actionable checklist,” better for PR communication.&lt;/li&gt;
+&lt;li&gt;Basis: Styles define tone and structure; Claude Code best practices encourage reusable flows.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;3) Onboarding: educational mode&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Directive: &lt;code dir=&quot;auto&quot;&gt;@style educational&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Output: step‑by‑step explanations, conceptual threads, comparisons, and small exercises.&lt;/li&gt;
+&lt;li&gt;Value: &lt;strong&gt;gets newcomers up to speed&lt;/strong&gt; without slowing down seniors.&lt;/li&gt;
+&lt;li&gt;Basis: Official Styles include “detailed/explanatory” presets; media reviews also highlight value for learning.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;tips&quot;&gt;Tips&lt;/h2&gt;&lt;a href=&quot;#tips&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Tips”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Bake styles into templates&lt;/strong&gt;: place a set in &lt;code dir=&quot;auto&quot;&gt;/.claude/agents/*.md&lt;/code&gt; at the repo root so the team can call them uniformly.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Switch by scenario&lt;/strong&gt;: “Formal” for documentation, “Concise” for debugging, “Reviewer” for refactors.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Don’t forget to revert&lt;/strong&gt;: if a scenario conflicts, switch back to the default Style; Claude follows the principle that &lt;strong&gt;style must not affect correctness&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;risks--limits&quot;&gt;Risks &amp;#x26; Limits&lt;/h2&gt;&lt;a href=&quot;#risks--limits&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Risks &amp;#x26; Limits”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Undocumented features can change&lt;/strong&gt;: upgrades may rename or move the entry; persist the end result into Styles and slash Agents to avoid surprises.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Don’t over‑compress&lt;/strong&gt;: even when concise, ensure “complete and correct” — the baseline of Claude’s style system.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Make it visible for teams&lt;/strong&gt;: check in style files so PRs/reviews can see and adjust them.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;final-thoughts&quot;&gt;Final Thoughts&lt;/h2&gt;&lt;a href=&quot;#final-thoughts&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Final Thoughts”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;We used to rely on informal agreements for &lt;strong&gt;output style&lt;/strong&gt;; now it’s &lt;strong&gt;one‑click to shape + one‑click to switch&lt;/strong&gt;.&lt;br&gt;
+Wire this into your daily workflow and you’ll find: smoother communication, steadier cadence, and &lt;strong&gt;outputs that sound like you&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Which default style would you choose, and why?&lt;/strong&gt; Share your thoughts.&lt;/p&gt;&lt;!-- 
+---
+
+# Title Suggestions (3 sets)
+
+1. **One Hidden Agent to Make Claude Code Speak Human**
+   EN: *Tame Claude Code Output with One Hidden Command*
+   繁體: *用一條「隱藏指令」，讓 Claude Code 更懂你*
+   日本語: *隠しコマンド一発で、Claude Codeの出力を手懐ける*
+   Français : *Un seul commande cachée pour dompter la sortie de Claude Code*
+   Español: *Un comando oculto para domar la salida de Claude Code*
+   Português: *Um comando oculto para domar a saída do Claude Code*
+   **slug**: `claude-code-hidden-output-style-command`
+
+2. **@agent-output-style-setup: Turn Fluff into Essentials**
+   EN: *@agent-output-style-setup: Turn Fluff into Essentials*
+   繁體: *@agent-output-style-setup：把廢話變重點*
+   日本語: *@agent-output-style-setup：冗長を要点に*
+   Français : *@agent-output-style-setup : Du bavardage à l’essentiel*
+   Español: *@agent-output-style-setup: De paja a lo esencial*
+   Português: *@agent-output-style-setup: Do blá-blá-blá ao essencial*
+   **slug**: `agent-output-style-setup-guide`
+
+3. **Dev Essentials: Craft Your Claude Output Style in 3 Steps**
+   EN: *Dev Essentials: Craft Your Claude Output Style in 3 Steps*
+   繁體: *開發者必備：3 步做出你的 Claude 輸出風格*
+   日本語: *開発者必携：3ステップで出力スタイルを作る*
+   Français : *Indispensable: créez votre style de sortie Claude en 3 étapes*
+   Español: *Imprescindible: crea tu estilo de salida de Claude en 3 pasos*
+   Português: *Essencial: crie seu estilo de saída do Claude em 3 passos*
+   **slug**: `build-claude-output-style-in-3-steps`
+
+---
+
+## Cover &amp; Figures (illustrative | 2:1 | English copy, no Chinese)
+
+**Cover Prompt**
+“An illustration of a terminal window with a friendly AI agent flipping toggle switches labeled ‘Concise’, ‘Reviewer’, ‘Educational’, while code diffs and checkmarks float around; clean pastel palette, minimal lines, wide 2:1 composition; text-free.”
+
+**Figure 1 (Style wizard)**
+“An AI assistant handing a user a ‘style blueprint’ with sliders for tone, detail, and diff output; terminal UI in the background; modern pastel, flat illustration, 2:1, text-free.”
+
+**Figure 2 (Team collaboration)**
+“Developers passing Markdown cards labeled ‘@style concise’, ‘@style reviewer’ across a Kanban board linked to a Git repo; minimal lines, soft gradients, 2:1, text-free.”
+
+**Figure 3 (In practice)**
+“Split scene: left shows long verbose text fading out; right shows crisp diff blocks and bullet points popping in; clean vector style, 2:1, text-free.”
+
+---
+
+## Social Comments (3 lines)
+
+1. **This hidden Agent finally made Claude get me: diff first, then why — saved me half an hour of review. Have you tried it?**
+2. **Stop relying on word‑of‑mouth for style. Bake it into `@style` Agents — team workflows become absurdly smooth.**
+3. **Requirements in “Educational,” bugfixes in “Concise,” reviews in “Reviewer.” One gear‑shift away — better than coffee.**
+
+---
+
+Want me to package **your current project** with a ready‑to‑use set of styles and slash Agent templates? I can provide **copy‑pasteable `.md` Agent files** and sample configs. Interested?
+
+[1]: https://x.com/iannuttall/status/1955750903623114757?utm_source=chatgpt.com &quot;Ian Nuttall - X&quot;
+[2]: https://github.com/anthropics/claude-code/issues/5708?utm_source=chatgpt.com &quot;Docs: Undocumented feature `@agent-output-mode-setup ...&quot;
+[3]: https://support.anthropic.com/en/articles/10181068-configuring-and-using-styles?utm_source=chatgpt.com &quot;Configuring and Using Styles&quot;
+[4]: https://www.anthropic.com/news@styles?utm_source=chatgpt.com &quot;Tailor Claude&apos;s responses to your personal style&quot;
+[5]: https://www.theverge.com/2024/11/26/24306575/anthropic-claude-ai-custom-style-presets?utm_source=chatgpt.com &quot;Anthropic says Claude AI can match your unique writing style&quot;
+[6]: https://docs.anthropic.com/en/docs/claude-code/overview?utm_source=chatgpt.com &quot;Claude Code overview&quot;
+[7]: https://docs.anthropic.com/en/docs/claude-code/slash-commands?utm_source=chatgpt.com &quot;Slash commands&quot;
+[8]: https://support.anthropic.com/en/articles/11940350-claude-code-model-configuration?utm_source=chatgpt.com &quot;Claude Code Model Configuration&quot;
+[9]: https://docs.anthropic.com/en/docs/claude-code/common-workflows?utm_source=chatgpt.com &quot;Common workflows&quot;
+[10]: https://www.anthropic.com/engineering/claude-code-best-practices?utm_source=chatgpt.com &quot;Claude Code: Best practices for agentic coding&quot;
+[11]: https://www.wired.com/story/subscriber-only-livestream-replay-chatbot-basics-beginner-advice-for-claude?utm_source=chatgpt.com &quot;Get Advice on Using Anthropic&apos;s Claude in Our &apos;Chatbot Basics&apos; Subscriber-Only Livestream Replay&quot;
+[12]: https://simonwillison.net/2025/May/25/claude-4-system-prompt/?utm_source=chatgpt.com &quot;Highlights from the Claude 4 system prompt&quot; --&gt;</content:encoded><category>Claude Code</category><category>Cursor Agent</category></item><item><title>Conductor Orchestrates Multiple Claude Code Agents</title><link>https://www.vibesparking.com/en/blog/ai/claude-code/conductor/2025-08-14-conductor-slash-queues-hands-on.md/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/claude-code/conductor/2025-08-14-conductor-slash-queues-hands-on.md/</guid><pubDate>Thu, 14 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;div&gt;&lt;h1 id=&quot;conductor-orchestrate-multiple-claude-code-agents-together&quot;&gt;Conductor: Orchestrate Multiple Claude Code Agents Together&lt;/h1&gt;&lt;a href=&quot;#conductor-orchestrate-multiple-claude-code-agents-together&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Conductor: Orchestrate Multiple Claude Code Agents Together”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;In one sentence&lt;/strong&gt;: &lt;strong&gt;Conductor&lt;/strong&gt; lets you spin up multiple “Claude teammates” at once, each with its own isolated git worktree, so different tasks progress in parallel; you can also see who’s working, who’s stuck, and what changed — all at a glance.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -2529,257 +2850,4 @@ Google Gemini’s newly launched &lt;strong&gt;Story Book&lt;/strong&gt; feature
 [3]: https://9to5google.com/2025/08/05/gemini-storybooks/?utm_source=chatgpt.com &quot;Gemini app can now create custom storybooks, comics, more&quot;
 [4]: https://blog.google/products/gemini/storybooks/?utm_source=chatgpt.com &quot;Create AI storybooks with illustrations in the Gemini app&quot;
 [5]: https://www.notebookcheck.net/Google-Gemini-can-now-create-children-s-storybooks-with-illustrations.1081685.0.html?utm_source=chatgpt.com &quot;Google Gemini can now create children&apos;s storybooks with ...&quot;
-[6]: https://cincodias.elpais.com/smartlife/lifestyle/2025-08-06/gemini-storybook-nueva-funcion-crear-libros-ilustrados.html?utm_source=chatgpt.com &quot;Storybook, la nueva función de Gemini que permite crear libros ilustrados&quot; --&gt;</content:encoded><category>AI</category><category>Google Gemini</category><category>Story Book</category></item><item><title>Triple Threat Launch: Lightweight Open-Source GPT-OSS, Coding Powerhouse Opus 4.1, and Real-Time 3D World Genie 3</title><link>https://www.vibesparking.com/en/blog/ai/2025-08-06-triple-threat-ai-launch/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/2025-08-06-triple-threat-ai-launch/</guid><pubDate>Wed, 06 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # Triple Threat Launch: Lightweight Open-Source GPT-OSS, Coding Powerhouse Opus 4.1, and Real-Time 3D World Genie 3 --&gt;&lt;!-- **One-Sentence Summary:** --&gt;
-&lt;p&gt;OpenAI’s &lt;strong&gt;GPT-OSS&lt;/strong&gt; focuses on “lightweight, high-performance open source,” Anthropic’s &lt;strong&gt;Claude Opus 4.1&lt;/strong&gt; champions “extreme coding + intelligent agents,” and Google DeepMind’s &lt;strong&gt;Genie 3&lt;/strong&gt; opens the “real-time 3D world generation” frontier—three models each with killer features and optimal use cases, worth immediate hands-on experience for all AI creators.&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;&lt;a href=&quot;#introduction&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Introduction”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;The AI field is buzzing with energy today: &lt;strong&gt;OpenAI, Anthropic, and Google&lt;/strong&gt; all dropped major announcements on the same day. The latest models from these three labs aren’t just parameter upgrades—they’re diverging in fundamentally different directions. Here’s a 3-minute breakdown of the highlights, plus we’ll help you identify the best practical scenarios for your needs.&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;model-one-openai-gpt-oss-series&quot;&gt;Model One: OpenAI GPT-OSS Series&lt;/h2&gt;&lt;a href=&quot;#model-one-openai-gpt-oss-series&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Model One: OpenAI GPT-OSS Series”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h3 id=&quot;key-features&quot;&gt;Key Features&lt;/h3&gt;&lt;a href=&quot;#key-features&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Key Features”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;Open Weights · Single-Card Capable · Commercial-Friendly Apache 2.0&lt;/strong&gt;&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;core-upgrades&quot;&gt;Core Upgrades&lt;/h3&gt;&lt;a href=&quot;#core-upgrades&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Core Upgrades”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Two Sizes&lt;/strong&gt;: 120B parameters fit on a single H100, 20B parameters run on 16GB VRAM.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Low inference costs&lt;/strong&gt;, with 40% latency reduction compared to GPT-3.5 series.&lt;/li&gt;
-&lt;li&gt;Benchmarks show the 120B model approaches o4-mini performance in reasoning/tool calling.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h3 id=&quot;recommended-use-cases&quot;&gt;Recommended Use Cases&lt;/h3&gt;&lt;a href=&quot;#recommended-use-cases&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Recommended Use Cases”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Private On-Premises Deployment&lt;/strong&gt;: Privacy-sensitive enterprises in healthcare, finance, etc.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Academic Research &amp;#x26; Fine-Tuning&lt;/strong&gt;: Apache 2.0 allows unlimited modification and commercial use.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Edge Inference&lt;/strong&gt;: 20B version works with 16GB GPU for industrial gateways.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;Discussion&lt;/strong&gt;: If you’re planning to build your own LLM service, what appeals more—GPT-OSS or Llama 3? Let’s chat in the comments~&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;model-two-anthropic-claude-opus-41&quot;&gt;Model Two: Anthropic Claude Opus 4.1&lt;/h2&gt;&lt;a href=&quot;#model-two-anthropic-claude-opus-41&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Model Two: Anthropic Claude Opus 4.1”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h3 id=&quot;key-features-1&quot;&gt;Key Features&lt;/h3&gt;&lt;a href=&quot;#key-features-1&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Key Features”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;SWE-bench 74.5% · Multi-Turn Agents · Long Context&lt;/strong&gt;&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;core-upgrades-1&quot;&gt;Core Upgrades&lt;/h3&gt;&lt;a href=&quot;#core-upgrades-1&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Core Upgrades”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;Coding benchmark &lt;strong&gt;SWE-bench Verified 74.5%&lt;/strong&gt;, breaking records again.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Agentic Search&lt;/strong&gt;: Automatically performs step-by-step retrieval→synthesis→generation.&lt;/li&gt;
-&lt;li&gt;Now available on &lt;strong&gt;API, Bedrock, Vertex AI&lt;/strong&gt; at the same price point as Opus 4.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h3 id=&quot;recommended-use-cases-1&quot;&gt;Recommended Use Cases&lt;/h3&gt;&lt;a href=&quot;#recommended-use-cases-1&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Recommended Use Cases”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Complex Codebase Refactoring&lt;/strong&gt;: Handle 10,000+ line refactors plus unit test generation in one go.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Enterprise Internal Knowledge Retrieval Agents&lt;/strong&gt;: Give your document repository a thinking “brain.”&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;RAG Long-Form Reports&lt;/strong&gt;: Ultra-long context + detail tracking minimizes information loss.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;model-three-google-deepmind-genie-3&quot;&gt;Model Three: Google DeepMind Genie 3&lt;/h2&gt;&lt;a href=&quot;#model-three-google-deepmind-genie-3&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Model Three: Google DeepMind Genie 3”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h3 id=&quot;key-features-2&quot;&gt;Key Features&lt;/h3&gt;&lt;a href=&quot;#key-features-2&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Key Features”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;Real-time 24fps · 720p · Interactive World Models&lt;/strong&gt;&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;core-upgrades-2&quot;&gt;Core Upgrades&lt;/h3&gt;&lt;a href=&quot;#core-upgrades-2&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Core Upgrades”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;Text → &lt;strong&gt;minute-long 3D worlds&lt;/strong&gt; at 720p, 24fps resolution.&lt;/li&gt;
-&lt;li&gt;Supports &lt;strong&gt;Promptable World Events&lt;/strong&gt;: Change weather or add characters with simple text commands.&lt;/li&gt;
-&lt;li&gt;Goal: Provide high-fidelity simulation for robotics and autonomous vehicle training.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h3 id=&quot;recommended-use-cases-2&quot;&gt;Recommended Use Cases&lt;/h3&gt;&lt;a href=&quot;#recommended-use-cases-2&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Recommended Use Cases”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Rapid Game Prototyping&lt;/strong&gt;: Designers can build scenes directly with text descriptions.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Robot Simulation Training&lt;/strong&gt;: Practice in virtual warehouses and factories before deploying on real machines.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Digital Twins / Educational Experiences&lt;/strong&gt;: Instantly create interactive labs or historical city tours.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;conclusion--how-to-choose&quot;&gt;Conclusion · How to Choose?&lt;/h2&gt;&lt;a href=&quot;#conclusion--how-to-choose&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Conclusion · How to Choose?”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Need&lt;/th&gt;&lt;th&gt;Top Choice&lt;/th&gt;&lt;th&gt;Reason&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;Private Deployment + Low Cost&lt;/td&gt;&lt;td&gt;&lt;strong&gt;GPT-OSS 20B/120B&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Lightweight, Apache 2.0&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Large-Scale Coding / Complex Search&lt;/td&gt;&lt;td&gt;&lt;strong&gt;Claude Opus 4.1&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Coding SOTA + Agent&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3D Interaction / Simulation&lt;/td&gt;&lt;td&gt;&lt;strong&gt;Genie 3&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Real-time world models&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
-&lt;p&gt;GPT-5 is still on the horizon in the coming weeks—the battle has just begun. Are you ready to embrace this wave of opportunities?&lt;/p&gt;&lt;!-- ## Reflection Question
-
-**Which model are you most excited to see in production? Why?**
-Share your thoughts in the comments below, and we&apos;ll select 3 winners for exclusive &quot;AI Project Review&quot; perks.
-
----
-
-## Recommended Titles (Multi-language &amp; slug)
-
-| Simplified Chinese                    | English                                           | Traditional Chinese              | Japanese                                | French                                           | Spanish                                        | Portuguese                                    | slug                    |
-| ------------------------------------- | ------------------------------------------------- | -------------------------------- | --------------------------------------- | ------------------------------------------------ | ---------------------------------------------- | --------------------------------------------- | ----------------------- |
-| 三巨头同日放招：GPT-OSS、Opus 4.1、Genie 3 全解析 | Triple-Threat Launch: GPT-OSS, Opus 4.1 &amp; Genie 3 | 三巨頭同日放招：GPT-OSS、Opus 4.1、Genie 3 全解析 | 3大AIモデル同日デビュー：GPT-OSS・Opus 4.1・Genie 3 | Triple lancement IA : GPT-OSS, Opus 4.1 et Genie 3 | Triple lanzamiento IA: GPT-OSS, Opus 4.1 y Genie 3 | Três lançamentos de IA: GPT-OSS, Opus 4.1 e Genie 3 | triple-threat-ai-launch |
-
-| 超轻开源 vs 超强编码 vs 超凡世界：谁是你的菜？ | Open Weights vs Coding Beast vs World Builder | 超輕開源 vs 超強編碼 vs 超凡世界：誰是你的菜？ | 軽量OSS vs 最強コーディング vs 新世界モデル | Open Weight vs Codeur suprême vs Créateur de mondes | Peso ligero OSS vs Monstruo del código vs Creador de mundos | Open-weight leve vs Fera do código vs Criador de mundos | openweights-coding-world |
-
-| GPT-5 前哨战：三大模型齐发，AI 版百团大战打响 | Pre-GPT-5 Showdown: Three Models, One Future | GPT-5 前哨戰：三大模型齊發，AI 版百團大戰打響 | GPT-5前哨戦：三モデル激突 | Avant-garde GPT-5 : trois modèles en lice | Preludio GPT-5: tres modelos se enfrentan | Prelúdio GPT-5: três modelos em campo | gpt5-prelude |
-
----
-
-## WeChat Moments Hot Takes (Pick Any)
-
-1. &quot;Three major releases in one day—this is why I love AI, though my wallet is feeling the pressure 😂&quot;
-2. &quot;Genie 3 takes me through the metaverse, Claude 4.1 writes my code, GPT-OSS protects my privacy—perfect ecosystem!&quot;
-3. &quot;Friends, no sleep tonight—building my own LLM cluster, see results by morning 🏃&quot;
-
----
-
-How does this version look? Need more expansion or examples? Let me know in the comments!
-
-[1]: https://huggingface.co/openai/gpt-oss-120b?utm_source=chatgpt.com &quot;openai/gpt-oss-120b&quot;
-[2]: https://openai.com/index/introducing-gpt-oss/?utm_source=chatgpt.com &quot;Introducing gpt-oss&quot;
-[3]: https://www.wired.com/story/openai-just-released-its-first-open-weight-models-since-gpt-2/?utm_source=chatgpt.com &quot;OpenAI Just Released Its First Open-Weight Models Since ...&quot;
-[4]: https://simonwillison.net/2025/Aug/5/gpt-oss/?utm_source=chatgpt.com &quot;OpenAI&apos;s new open weight (Apache 2) models are really ...&quot;
-[5]: https://www.anthropic.com/news/claude-opus-4-1?utm_source=chatgpt.com &quot;Claude Opus 4.1&quot;
-[6]: https://aws.amazon.com/about-aws/whats-new/2025/08/anthropic-claude-opus-4-1-amazon-bedrock/?utm_source=chatgpt.com &quot;Anthropic&apos;s Claude Opus 4.1 now in Amazon Bedrock&quot;
-[7]: https://www.theverge.com/news/718723/google-ai-genie-3-model-video-game-worlds-real-time?utm_source=chatgpt.com &quot;Google&apos;s new AI model creates video game worlds in real time&quot;
-[8]: https://deepmind.google/discover/blog/genie-3-a-new-frontier-for-world-models/?utm_source=chatgpt.com &quot;Genie 3: A new frontier for world models&quot;
-[9]: https://www.theguardian.com/technology/2025/aug/05/google-step-artificial-general-intelligence-deepmind-agi?utm_source=chatgpt.com &quot;Google says its new &apos;world model&apos; could train AI robots in virtual warehouses&quot;
-[10]: https://techcrunch.com/2025/08/05/deepmind-thinks-genie-3-world-model-presents-stepping-stone-towards-agi/?utm_source=chatgpt.com &quot;DeepMind thinks its new Genie 3 world model presents a ...&quot; --&gt;</content:encoded><category>GPT-OSS</category><category>Claude Opus 4.1</category><category>Genie 3</category><category>OpenAI</category><category>Anthropic</category><category>Google DeepMind</category></item><item><title>$12B vs $5B: The Revenue Surge Strategies Behind OpenAI and Anthropic&apos;s Success</title><link>https://www.vibesparking.com/en/blog/ai/2025-08-05-openai-anthropic-revenue-race/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/2025-08-05-openai-anthropic-revenue-race/</guid><pubDate>Tue, 05 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # $12B vs $5B: The Revenue Surge Strategies Behind OpenAI and Anthropic&apos;s Success --&gt;
-&lt;p&gt;The past six months have redefined speed limits in the generative AI race:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;OpenAI&lt;/strong&gt;’s annualized recurring revenue (ARR) skyrocketed from &lt;strong&gt;$6 billion to $12 billion&lt;/strong&gt; in just 6 months.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Anthropic&lt;/strong&gt; achieved a 5x leap from &lt;strong&gt;$1 billion to $5 billion&lt;/strong&gt; ARR within 7 months.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Why did these two AI powerhouses simultaneously take off? More importantly, what drives their growth momentum, and what shifts might we see ahead? This analysis breaks down four key revenue streams to reveal the underlying currents shaping this competitive landscape.&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;div&gt;&lt;h2 id=&quot;1-consumer-subscriptions-openai-maintains-its-lead&quot;&gt;1. Consumer Subscriptions: OpenAI Maintains Its Lead&lt;/h2&gt;&lt;a href=&quot;#1-consumer-subscriptions-openai-maintains-its-lead&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1. Consumer Subscriptions: OpenAI Maintains Its Lead”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Revenue Stream&lt;/th&gt;&lt;th&gt;OpenAI 2025E ARR&lt;/th&gt;&lt;th&gt;Anthropic 2025E ARR&lt;/th&gt;&lt;th&gt;Key Drivers&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;Consumer Subscriptions&lt;/td&gt;&lt;td&gt;$5.5B&lt;/td&gt;&lt;td&gt;$0.7B&lt;/td&gt;&lt;td&gt;ChatGPT Plus, Teams, Student subscriptions&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
-&lt;p&gt;OpenAI’s consumer advantage is reinforced by &lt;strong&gt;ChatGPT Plus&lt;/strong&gt; and &lt;strong&gt;Teams&lt;/strong&gt;: the $20-30 monthly subscription model effectively converts massive free traffic into steady cash flow. In contrast, Anthropic has yet to develop a direct-to-consumer product of comparable scale.&lt;/p&gt;
-&lt;div&gt;&lt;h2 id=&quot;2-enterprise--partner-subscriptions-microsofts-strategic-boost&quot;&gt;2. Enterprise &amp;#x26; Partner Subscriptions: Microsoft’s Strategic Boost&lt;/h2&gt;&lt;a href=&quot;#2-enterprise--partner-subscriptions-microsofts-strategic-boost&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2. Enterprise &amp;#x26; Partner Subscriptions: Microsoft’s Strategic Boost”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Revenue Stream&lt;/th&gt;&lt;th&gt;OpenAI&lt;/th&gt;&lt;th&gt;Anthropic&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;Enterprise &amp;#x26; Partner Subscriptions&lt;/td&gt;&lt;td&gt;$3.6B&lt;/td&gt;&lt;td&gt;$0.9B&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
-&lt;p&gt;OpenAI benefits from deep integration with &lt;strong&gt;Microsoft 365 Copilot&lt;/strong&gt; and Azure OpenAI Service: enterprises purchasing GPT-4o through Azure contribute to OpenAI’s partnership revenue. While Anthropic has partnerships with Google and AWS, their scale remains behind.&lt;/p&gt;
-&lt;div&gt;&lt;h2 id=&quot;3-api-revenue-anthropics-only-leading-battleground&quot;&gt;3. API Revenue: Anthropic’s Only Leading Battleground&lt;/h2&gt;&lt;a href=&quot;#3-api-revenue-anthropics-only-leading-battleground&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3. API Revenue: Anthropic’s Only Leading Battleground”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Revenue Stream&lt;/th&gt;&lt;th&gt;OpenAI&lt;/th&gt;&lt;th&gt;Anthropic&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;Total API Revenue&lt;/td&gt;&lt;td&gt;$2.9B&lt;/td&gt;&lt;td&gt;&lt;strong&gt;$3.1B&lt;/strong&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
-&lt;p&gt;API represents Anthropic’s only segment lead: the Claude 3/4 series has earned strong developer community reputation, capturing market share through &lt;em&gt;competitive token pricing&lt;/em&gt; and &lt;em&gt;stable performance&lt;/em&gt;.&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;coding-use-cases--anthropics-accelerator&quot;&gt;Coding Use Cases = Anthropic’s “Accelerator”&lt;/h3&gt;&lt;a href=&quot;#coding-use-cases--anthropics-accelerator&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Coding Use Cases = Anthropic’s “Accelerator””&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Cursor&lt;/strong&gt; and &lt;strong&gt;GitHub Copilot&lt;/strong&gt; combined contribute &lt;strong&gt;$1.4 billion&lt;/strong&gt; ARR, accounting for nearly half of Anthropic’s API revenue.&lt;/li&gt;
-&lt;li&gt;The specialized &lt;strong&gt;Claude Code&lt;/strong&gt; model (formerly Claude 3 Haiku-Code) grew from $200 million to &lt;strong&gt;$400 million&lt;/strong&gt; ARR in just weeks.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Nearly all popular IDE plugins and browser extensions default to Claude 4 Sonnet, establishing Anthropic as the de facto standard in code generation.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;div&gt;&lt;h2 id=&quot;4-product-portfolio-comparison-whos-more-recession-resistant&quot;&gt;4. Product Portfolio Comparison: Who’s More “Recession-Resistant”?&lt;/h2&gt;&lt;a href=&quot;#4-product-portfolio-comparison-whos-more-recession-resistant&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “4. Product Portfolio Comparison: Who’s More “Recession-Resistant”?”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Revenue Diversification&lt;/th&gt;&lt;th&gt;OpenAI&lt;/th&gt;&lt;th&gt;Anthropic&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;Consumer Subscriptions&lt;/td&gt;&lt;td&gt;Strong&lt;/td&gt;&lt;td&gt;Weak&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Enterprise Subscriptions&lt;/td&gt;&lt;td&gt;Strong&lt;/td&gt;&lt;td&gt;Medium&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;API&lt;/td&gt;&lt;td&gt;Medium&lt;/td&gt;&lt;td&gt;&lt;strong&gt;Strong&lt;/strong&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Code-Specialized Models&lt;/td&gt;&lt;td&gt;Weak&lt;/td&gt;&lt;td&gt;&lt;strong&gt;Exclusive High Growth&lt;/strong&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
-&lt;p&gt;OpenAI maintains a more balanced structure; Anthropic heavily relies on &lt;strong&gt;developer APIs + coding&lt;/strong&gt;, with high concentration meaning &lt;strong&gt;both flexibility and risk&lt;/strong&gt;:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Upside&lt;/strong&gt;: Continued leadership in coding capabilities can drive explosive ARR growth.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Risk&lt;/strong&gt;: If &lt;strong&gt;GPT-5&lt;/strong&gt; or other models match coding performance and penetrate through price competition, API customers (especially Cursor, Copilot) might switch, immediately impacting revenue.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h2 id=&quot;5-potential-inflection-points-ahead&quot;&gt;5. Potential Inflection Points Ahead&lt;/h2&gt;&lt;a href=&quot;#5-potential-inflection-points-ahead&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “5. Potential Inflection Points Ahead”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;GPT-5’s Coding Performance&lt;/strong&gt;&lt;br&gt;
-OpenAI has publicly recruited a “Code LLM” team. If GPT-5 significantly surpasses Claude 4 in code generation and automated unit testing, Anthropic’s moat could face serious challenges.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Cost Structure Differences&lt;/strong&gt;&lt;br&gt;
-Anthropic relies on AWS Trn1/Trn2 while also purchasing Nvidia H100s; their compute and capital expenditure burden is heavier. OpenAI enjoys cost advantages on Microsoft’s custom supercomputers, enabling aggressive pricing to compress competitors’ margins.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Vertical SaaS Competition&lt;/strong&gt;&lt;br&gt;
-Solutions like Replit Ghostwriter and Sourcegraph Cody are emerging with proprietary or multi-model routing approaches, reducing dependence on single API providers.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div&gt;&lt;h2 id=&quot;6-implications-for-developers-and-investors&quot;&gt;6. Implications for Developers and Investors&lt;/h2&gt;&lt;a href=&quot;#6-implications-for-developers-and-investors&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “6. Implications for Developers and Investors”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Developers&lt;/strong&gt;: Claude 4 Sonnet remains the most cost-effective for coding tasks short-term, but consider multi-model compatibility early to avoid vendor lock-in.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Product Managers/Entrepreneurs&lt;/strong&gt;: For non-coding scenarios (customer service, content creation, multimodal), OpenAI’s ecosystem and plugin infrastructure are more mature.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Investors&lt;/strong&gt;: Monitor both companies’ performance on &lt;strong&gt;code LLM&lt;/strong&gt; benchmarks (HumanEval+, SWE-Bench, etc.) and enterprise customer renewal pricing—these directly reflect growth curve sustainability.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Conclusion&lt;/strong&gt;&lt;br&gt;
-Both OpenAI and Anthropic are setting new revenue growth records, but their underlying “growth curve” logic differs fundamentally: the former diversifies across multiple fronts with wide moats; the latter sprints on a single high-growth track. Over the next 6-12 months, if the code generation “decisive factor” gets rewritten, the 2025 ARR rankings could see another major reshuffle.&lt;/p&gt;&lt;!-- [1] https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/images/7596734/04df8a1a-9c00-4369-92b5-102d13be4a2e/image.jpg?AWSAccessKeyId=ASIA2F3EMEYEXV5KM5IX&amp;Signature=tRbQqgP6%2FMm1i4HJFOyVMvljd0Y%3D&amp;x-amz-security-token=IQoJb3JpZ2luX2VjECYaCXVzLWVhc3QtMSJGMEQCICTobNRGaohlqlIKDsTLv%2FxW66ZFhCkFBcP1Ajy3rfUnAiASOg%2Fa1gW78hxOLDvL5AE2txXAayUh6OPPWw6UUlPVqyrxBAheEAEaDDY5OTc1MzMwOTcwNSIMInnpr0HR2dmoS2Q3Ks4EZc9aR7i8XKyaAz%2BBX2VOjibL%2FGITmXGd127DEGIsDN53pOa84cca34kn0I1LuWG7l%2BtBs3tUFebHcR3afdVT%2FlMcB4g6NU0pJPBvgD1Lq5uQ9F11IdReDEIFJuv8xAAu031QmUOPGi7zafaaX15Hc39vZLjcXUu0Ibeh9iqe0Y%2BRHJgeNMLxHK7dBGkPZwgLlHxPTZVj901pvFhB8aajVkU%2BIpAem4rITIFcS2RE4K66FezHa7VKlhsv%2B6dHPJ71h%2BxfmC4PfAQTycEXaTPncdoq3ZlLbGGhw9OWvr48T3kcI2GAfwaBRbSlngbZuIDSVpnZQ2IijJAz5cR6g5UDYDax%2FHFq1nwq2xN0sfHOIbZ4vSw9PFVgX9RCX4gwu9uRoS9b3EFfOsH7WQuZroTHkcXuVtSgLCQWAMCitZiDl9ywd3EYdfUrATgZ8PJy7ZlxNPjJkdGDvzJwuZXmcXAU7jZP6yePbIkxRpaCeS730vwZpMpVWwKWmzBjmN397sohnrHG9PZcV6Yyu2KiESn%2B%2BUqpvQHFmkfkjWqZPV3wmXxow8POL3vsvf8d17TsIufT4v46PsINX3L%2BgCUgBNaE5odreeVE4iF0QsXMn%2F9vjUlh42Jx6RmqoL5i6wHu3hD%2FQxYF9IJfYWOoU53yrjSGBso3saSYbZL6cYUeRGATu%2F2CXEBkg6Qm8I1wSp7vdE%2FgZjJiU7OT29AhPT58yeiZm%2F0DT95ekAc5FKrDR8y8DmofGpc31PXb6A3LHzI5T%2FWToJJ%2FmJhUakhM9016PRAw34fIxAY6mwHfKU3FTWgdU9OtWJ030JJBuFlc7YmOzNf0lbQSWINxYACkrSjuBlpDU%2B81giwjre9AARc8eige0%2FUY12hSJOgeJL0Uy0pTrmQvOq74JRxbOe%2BBGZMgRIakbiexsKTtyh4rMbbVvFb2FI5vuiOFLEk9mpSXic%2ByOpVrTndV22EFB3q3aORh4tF8h1M3dRy4tgG9zINJEUArmDXmWw%3D%3D&amp;Expires=1754401561 --&gt;</content:encoded><category>OpenAI</category><category>Anthropic</category></item></channel></rss>
+[6]: https://cincodias.elpais.com/smartlife/lifestyle/2025-08-06/gemini-storybook-nueva-funcion-crear-libros-ilustrados.html?utm_source=chatgpt.com &quot;Storybook, la nueva función de Gemini que permite crear libros ilustrados&quot; --&gt;</content:encoded><category>AI</category><category>Google Gemini</category><category>Story Book</category></item></channel></rss>
