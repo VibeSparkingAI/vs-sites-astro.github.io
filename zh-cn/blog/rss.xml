@@ -232,7 +232,160 @@
 [9]: https://omni.se/a/OoVk5k?utm_source=chatgpt.com &quot;Svenska Lovable snabbast växande startupen någonsin&quot;
 [10]: https://e2b.dev/docs/sandbox?utm_source=chatgpt.com &quot;Sandbox lifecycle&quot;
 [11]: https://docs.lovable.dev/integrations/introduction &quot;Introduction - Lovable Documentation&quot;
-[12]: https://www.reddit.com/r/lovable/comments/1kixyei/stop_using_lovable_for_everything_heres_a_smarter/?utm_source=chatgpt.com &quot;Stop Using Lovable for Everything, Here&apos;s a Smarter Way ...&quot; --&gt;</content:encoded><category>Open Lovable</category><category>Lovable</category><category>React</category><category>AI</category></item><item><title>Vibe Coding vs 传统手工 Coding：像老板把话说清楚，AI 员工代码自己长出来</title><link>https://www.vibesparking.com/zh-cn/blog/ai/vibe-coding/2025-08-14-vibe-coding-stop-typing-start-shipping/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/vibe-coding/2025-08-14-vibe-coding-stop-typing-start-shipping/</guid><pubDate>Thu, 14 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;strong&gt;Vibe Coding vs 传统编程&lt;/strong&gt; 的差异：&lt;/p&gt;
+[12]: https://www.reddit.com/r/lovable/comments/1kixyei/stop_using_lovable_for_everything_heres_a_smarter/?utm_source=chatgpt.com &quot;Stop Using Lovable for Everything, Here&apos;s a Smarter Way ...&quot; --&gt;</content:encoded><category>Open Lovable</category><category>Lovable</category><category>React</category><category>AI</category></item><item><title>Claude Code 越强意味着我们应该把更多时间精力花在系统架构、需求理解和解决问题上</title><link>https://www.vibesparking.com/zh-cn/blog/ai/vibe-coding/2025-08-14-ai-coding-assistants-new-rule.md/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/vibe-coding/2025-08-14-ai-coding-assistants-new-rule.md/</guid><pubDate>Thu, 14 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- 千万别低估 Claude Code, Cursor, GitHub Copilot 对软件开发的影响。优秀的资深工程师会把更多时间精力花在架构、需求理解、创造性问题解决这些高层工作上 --&gt;
+&lt;p&gt;&lt;strong&gt;6–24 个月内 AI Vibe Coding 方向会越来越清晰，5 年内编程形态会大变&lt;/strong&gt;；&lt;strong&gt;常规实现与例行编码会被高度自动化&lt;/strong&gt;，工程师将把时间花在&lt;strong&gt;架构、需求翻译、创造性问题解决&lt;/strong&gt;这些高层工作上；同时也提醒我们别低估这场演化的速度与边界。
+这段话，基本说中了 &lt;strong&gt;Claude Code、Cursor&lt;/strong&gt; 等 AI 编程助手崛起后的行业共识。&lt;/p&gt;
+&lt;hr&gt;&lt;!-- # Claude Code 越强意味着我们应该把更多时间精力花在系统架构、需求理解和解决问题上 --&gt;
+&lt;div&gt;&lt;h2 id=&quot;引言&quot;&gt;引言&lt;/h2&gt;&lt;a href=&quot;#引言&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “引言”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;这一年，你可能已经感受到：写代码不再是“把函数敲完”，而是&lt;strong&gt;把智能与流程组织起来&lt;/strong&gt;。
+&lt;strong&gt;Cursor&lt;/strong&gt; 在 IDE 里“会看仓库、会跑命令、会代理执行”；&lt;strong&gt;Claude Code&lt;/strong&gt; 在终端里“有 Slash 命令，有 Sub-agents，还能做自动化安全审计”。这不是噱头，是&lt;strong&gt;新生产线&lt;/strong&gt;。&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;一ai-编程助手到底强在哪&quot;&gt;一、AI 编程助手，到底强在哪？&lt;/h2&gt;&lt;a href=&quot;#一ai-编程助手到底强在哪&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “一、AI 编程助手，到底强在哪？”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;代码理解与批量改写&lt;/strong&gt;：Cursor 的 Agent 模式可以&lt;strong&gt;跨文件探索、编辑、多回合修复&lt;/strong&gt;；Ask 模式只读检索，先搞懂再修改。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;可编排的工作流&lt;/strong&gt;：Claude Code 的 &lt;strong&gt;Slash Commands&lt;/strong&gt; 把常用动作固化成命令；&lt;strong&gt;Sub-agents&lt;/strong&gt; 让不同任务用不同“专用助理”，上下文互不干扰。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;内置安全审查&lt;/strong&gt;：官方提供 &lt;strong&gt;/security-review 与 GitHub Action&lt;/strong&gt;，自动扫描 PR 并给出修复建议。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;小结：这套组合拳的目标不是替你“多打一行代码”，而是把&lt;strong&gt;需求→修改→验证→合并&lt;/strong&gt;做成&lt;strong&gt;半自动产线&lt;/strong&gt;。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;二哪些工作会被加速甚至替代&quot;&gt;二、哪些工作会被“加速”甚至“替代”？&lt;/h2&gt;&lt;a href=&quot;#二哪些工作会被加速甚至替代&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “二、哪些工作会被“加速”甚至“替代”？”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;样板代码、CRUD、重复脚手架&lt;/strong&gt; —— 这是大家最常用的 AI 场景，Stack Overflow 2024 调研显示，使用 AI 的开发者中 &lt;strong&gt;82% 用它来“写代码”&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;中小型功能开发与排错&lt;/strong&gt; —— GitHub 与学界的对照实验：使用 Copilot 的开发者完成任务&lt;strong&gt;快 55.8%&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;测试、文档、迁移&lt;/strong&gt; —— 趋势报道与一线观察都在强化：AI 正把琐碎活儿接走，让人类回到设计与决策。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;三别忽略的风险与坑&quot;&gt;三、别忽略的风险与坑&lt;/h2&gt;&lt;a href=&quot;#三别忽略的风险与坑&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “三、别忽略的风险与坑”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;安全性下滑的风险&lt;/strong&gt;：多项研究提示，&lt;strong&gt;使用代码生成 AI 的开发者更容易写出不安全代码&lt;/strong&gt;；行业报告同样指出过半开发者经常在 AI 建议里看到安全问题。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;理解缺失与过度依赖&lt;/strong&gt;：最新行业调查显示，&lt;strong&gt;59% 开发者会使用自己并未完全理解的 AI 代码&lt;/strong&gt;，带来质量与可维护性隐患。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;信任与质量的落差&lt;/strong&gt;：高管与社区的声音都在强调——&lt;strong&gt;AI 很强，但并不总能让产品更快落地&lt;/strong&gt;，需要更成熟的工程化方法与人类把关。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;四工程师角色正在往哪迁移&quot;&gt;四、工程师角色，正在往哪迁移？&lt;/h2&gt;&lt;a href=&quot;#四工程师角色正在往哪迁移&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “四、工程师角色，正在往哪迁移？”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;从“实现者”到“设计与验证者”&lt;/strong&gt;：行业领导者的共识是，开发者会更多投入到&lt;strong&gt;架构、验证、AI 监督&lt;/strong&gt;这些高层工作中。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;从“写函数”到“搭工厂”&lt;/strong&gt;：把 Claude Code 的命令、Sub-agents、CI 上的安全审计和 Cursor Agent 串起来，做一条&lt;strong&gt;端到端自动化产线&lt;/strong&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;五90-天落地行动清单可直接抄&quot;&gt;五、90 天落地行动清单（可直接抄）&lt;/h2&gt;&lt;a href=&quot;#五90-天落地行动清单可直接抄&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “五、90 天落地行动清单（可直接抄）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;第 0–30 天：把流程“规范化”&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;给团队准备 &lt;strong&gt;Spec 模板&lt;/strong&gt;（用户故事、边界条件、验收标准）。&lt;/li&gt;
+&lt;li&gt;在 Claude Code 里落地 &lt;strong&gt;/create-mvp、/write-tests、/changelog&lt;/strong&gt; 等常用 Slash 命令。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;第 31–60 天：把安全“左移”&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;在仓库接入 &lt;strong&gt;Claude Code Security Review GitHub Action&lt;/strong&gt;，每个 PR 自动扫描并回贴建议。&lt;/li&gt;
+&lt;li&gt;设定&lt;strong&gt;阻断规则&lt;/strong&gt;与白名单，减少误报与噪声。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;第 61–90 天：把智能“编排起来”&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;用 &lt;strong&gt;Sub-agents&lt;/strong&gt; 拆出“测试代理、文档代理、迁移代理”。&lt;/li&gt;
+&lt;li&gt;在 Cursor 启用 &lt;strong&gt;Agent / Ask 模式&lt;/strong&gt;的组合，用 Ask 先读库再改动。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;六个人与团队的机会地图&quot;&gt;六、个人与团队的“机会地图”&lt;/h2&gt;&lt;a href=&quot;#六个人与团队的机会地图&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “六、个人与团队的“机会地图””&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;新职位&lt;/strong&gt;：Agent Ops（让智能体稳定长跑）、Prompt QA（把口语变验收用例）、安全审计协同（AI+SAST/DAST）。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;个人 10×&lt;/strong&gt;：一个人用 Cursor/Claude Code 拉起从脚手架到部署的完整链路，小团队也能打大仗。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;组织复利&lt;/strong&gt;：把好用的 Slash 命令、Sub-agents、检查清单沉淀到仓库，&lt;strong&gt;越用越顺&lt;/strong&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;七给管理者的两条建议&quot;&gt;七、给管理者的两条建议&lt;/h2&gt;&lt;a href=&quot;#七给管理者的两条建议&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “七、给管理者的两条建议”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;把“人类在环”写进流程&lt;/strong&gt;：代码合入前，必须过 &lt;strong&gt;AI 安全审计 + 人工复核&lt;/strong&gt; 两道门。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;用数据度量 ROI&lt;/strong&gt;：对比“AI 前后”的&lt;strong&gt;交付时长、缺陷率、回滚率、重构频次&lt;/strong&gt;，别只看提交量。行业的分歧恰恰提醒我们要&lt;strong&gt;用度量说话&lt;/strong&gt;。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;结语&quot;&gt;结语&lt;/h2&gt;&lt;a href=&quot;#结语&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “结语”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;AI 不是来抢键盘的，是来重塑产线的。&lt;/strong&gt;
+会写代码的人很多，&lt;strong&gt;会搭 AI 产线的人&lt;/strong&gt;还很少。
+把需求说清、把风险兜住、把智能安排好，这就是新一代工程师的&lt;strong&gt;核心竞争力&lt;/strong&gt;。你准备好了吗？&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;思考题：
+你的团队里，最先可以“自动化”的三件事是什么？
+你会怎么把它们变成 Slash 命令或 Sub-agents？&lt;/p&gt;
+&lt;/blockquote&gt;&lt;!-- 
+---
+
+## 3 个多语言标题（含 slug）
+
+1. **中文**：AI 编程助手大爆发：工程师的新赛道与生存法则
+   **English**: AI Coding Assistants Are Here: The New Rules for Software Engineers
+   **繁體**：AI 程式助理來了：工程師的新賽道與生存法則
+   **日本語**：AIコーディング時代：エンジニアの新しいルール
+   **Français**：L’ère des assistants de code : les nouvelles règles pour les ingénieurs
+   **Español**: La era de los asistentes de código: nuevas reglas para ingenieros
+   **Português**: A era dos assistentes de código: novas regras para engenheiros
+   **slug**: `ai-coding-assistants-new-rules`
+
+2. **中文**：从“写函数”到“搭工厂”：Claude Code 与 Cursor 的真实冲击
+   **English**: From Writing Functions to Building Factories: Claude Code &amp; Cursor in Practice
+   **繁體**：從「寫函式」到「建工廠」：Claude Code 與 Cursor 的衝擊
+   **日本語**：関数から工場へ：Claude Code と Cursor の実務インパクト
+   **Français**：Des fonctions aux usines : l’impact de Claude Code et Cursor
+   **Español**: De funciones a fábricas: el impacto de Claude Code y Cursor
+   **Português**: De funções a fábricas: o impacto do Claude Code e do Cursor
+   **slug**: `from-functions-to-factories-claude-code-cursor`
+
+3. **中文**：5 年窗口期：程序员如何用 AI 升级职业护城河
+   **English**: The 5-Year Window: Using AI to Reinvent Your Engineering Moat
+   **繁體**：五年窗口期：工程師如何用 AI 強化護城河
+   **日本語**：5年のチャンス：AIでエンジニアの堀を再設計
+   **Français**：Fenêtre de 5 ans : renforcer son avantage avec l’IA
+   **Español**: Ventana de 5 años: reforzar tu ventaja con IA
+   **Português**: Janela de 5 anos: reforçar sua vantagem com IA
+   **slug**: `five-year-window-ai-engineering-moat`
+
+---
+
+## 封面与配图（插画风｜2:1｜英文文案，不含中文）
+
+**封面图 Prompt**
+“An illustration of a developer orchestrating multiple AI agents on a conveyor-belt style software factory, with terminals, test badges, and security shields; clean pastel palette, minimal lines, wide 2:1 composition; text-free.”
+
+**配图 1（章节：强在哪）**
+“Diagram-style illustration of Cursor and Claude Code as two robotic arms editing a codebase blueprint, with nodes for slash commands, sub-agents, security review; gentle gradients; 2:1; no text.”
+
+**配图 2（章节：风险与坑）**
+“Playful illustration of a bug sneaking through AI-generated code while a human reviewer catches it with a magnifying glass; security icons and PR comments; 2:1; text-free.”
+
+**配图 3（章节：行动清单）**
+“Kanban board with cards labeled spec, tests, security review, release, connected by dotted arrows and small AI assistant icons; modern flat illustration; 2:1; no text.”
+
+---
+
+## 朋友圈/评论区话术（3 条）
+
+1. “现在写代码像带生产线：AI 负责编码，我负责把事说清楚、把风险兜住。效率↑ 心智负担↓，真香。”
+2. “实测：Cursor 负责改，Claude Code 负责审。人类只做三件事——定规格、看风险、拍板上线。”
+3. “别怕 AI 抢饭碗，先把 Slash 命令写起来。把套路固化，你就有复利。”
+
+---
+
+需要我把本文扩写成**团队落地手册**版（含命令模板、Sub-agents 样例、PR 审计规则）吗？我现在就整理一套可复制的清单给你。
+
+[1]: https://cursor.com/features?utm_source=chatgpt.com &quot;Features | Cursor - The AI Code Editor&quot;
+[2]: https://docs.cursor.com/agent?utm_source=chatgpt.com &quot;Cursor – Modes&quot;
+[3]: https://docs.anthropic.com/en/docs/claude-code/overview?utm_source=chatgpt.com &quot;Claude Code overview&quot;
+[4]: https://support.anthropic.com/en/articles/11932705-automated-security-reviews-in-claude-code?utm_source=chatgpt.com &quot;Automated Security Reviews in Claude Code&quot;
+[5]: https://docs.anthropic.com/en/docs/claude-code/slash-commands?utm_source=chatgpt.com &quot;Slash commands&quot;
+[6]: https://www.anthropic.com/news/automate-security-reviews-with-claude-code?utm_source=chatgpt.com &quot;Automate security reviews with Claude Code&quot;
+[7]: https://github.com/anthropics/claude-code-security-review?utm_source=chatgpt.com &quot;anthropics/claude-code-security-review&quot;
+[8]: https://survey.stackoverflow.co/2024/ai?utm_source=chatgpt.com &quot;AI | 2024 Stack Overflow Developer Survey&quot;
+[9]: https://arxiv.org/abs/2302.06590?utm_source=chatgpt.com &quot;The Impact of AI on Developer Productivity: Evidence from GitHub Copilot&quot;
+[10]: https://www.businessinsider.com/ai-tools-product-development-coding-engineers-a16z-partner-2025-7?utm_source=chatgpt.com &quot;AI tools won&apos;t get products out faster, but they&apos;ll solve 2 coding problems, says a16z partner&quot;
+[11]: https://www.theverge.com/decoder-podcast-with-nilay-patel/715267/anysphere-ceo-michael-truell-cursor-ai-automate-programming-interview?utm_source=chatgpt.com &quot;Why tech is racing to adopt AI coding&quot;
+[12]: https://arxiv.org/pdf/2211.03622?utm_source=chatgpt.com &quot;Do Users Write More Insecure Code with AI Assistants?&quot;
+[13]: https://techcrunch.com/2022/12/28/code-generating-ai-can-introduce-security-vulnerabilities-study-finds/?utm_source=chatgpt.com &quot;Code-generating AI can introduce security vulnerabilities ...&quot;
+[14]: https://snyk.io/reports/ai-code-security/?utm_source=chatgpt.com &quot;Snyk&apos;s 2023 AI-Generated Code Security Report&quot;
+[15]: https://www.itpro.com/software/development/developers-say-ai-can-code-better-than-most-humans-but-theres-a-catch?utm_source=chatgpt.com &quot;Developers say AI can code better than most humans - but there&apos;s a catch&quot;
+[16]: https://www.itpro.com/technology/artificial-intelligence/ai-transforming-software-development-jetbrains-ceo-kirill-skrygan-developers?utm_source=chatgpt.com &quot;AI is transforming software development - JetBrains CEO Kirill Skrygan says it&apos;s up to developers to transform with it&quot;
+[17]: https://docs.anthropic.com/en/docs/claude-code/sub-agents?utm_source=chatgpt.com &quot;Subagents&quot;
+[18]: https://visualstudiomagazine.com/articles/2024/09/17/another-report-weighs-in-on-github-copilot-dev-productivity.aspx?utm_source=chatgpt.com &quot;Another Report Weighs In on GitHub Copilot Dev Productivity&quot; --&gt;</content:encoded><category>Vibe Coding</category></item><item><title>Vibe Coding vs 传统手工 Coding：像老板把话说清楚，AI 员工代码自己长出来</title><link>https://www.vibesparking.com/zh-cn/blog/ai/vibe-coding/2025-08-14-vibe-coding-stop-typing-start-shipping/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/vibe-coding/2025-08-14-vibe-coding-stop-typing-start-shipping/</guid><pubDate>Thu, 14 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;strong&gt;Vibe Coding vs 传统编程&lt;/strong&gt; 的差异：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Vibe Coding&lt;/strong&gt;：自然语言驱动、你像&lt;strong&gt;导演&lt;/strong&gt;；更关注&lt;strong&gt;最终效果&lt;/strong&gt;；靠&lt;strong&gt;提问&lt;/strong&gt;与对话推进；速度很快、门槛更低，但容易形成“&lt;strong&gt;黑箱式理解&lt;/strong&gt;”。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;传统编程&lt;/strong&gt;：精确的编程语言、你更像&lt;strong&gt;架构师&lt;/strong&gt;；关注&lt;strong&gt;实现细节&lt;/strong&gt;；强调&lt;strong&gt;算法与原理&lt;/strong&gt;；节奏更慢、门槛更高，但对代码有&lt;strong&gt;深度理解&lt;/strong&gt;。&lt;/li&gt;
@@ -2652,64 +2805,4 @@ OpenAI 与 Anthropic 都在刷新收入增长纪录，但二者的“增长曲�
 [7]: https://ai.google.dev/gemini-api/docs/models?utm_source=chatgpt.com &quot;Gemini models | Gemini API | Google AI for Developers&quot;
 [8]: https://cloud.google.com/vertex-ai/generative-ai/docs/models/gemini/2-5-flash?utm_source=chatgpt.com &quot;Gemini 2.5 Flash | Generative AI on Vertex AI&quot;
 [9]: https://github.com/siteboon/claudecodeui?utm_source=chatgpt.com &quot;siteboon/claudecodeui: Use Claude Code on mobile and ...&quot;
-[10]: https://stackoverflow.com/questions/51026532/json-server-cannot-access-via-local-ip?utm_source=chatgpt.com &quot;json-server cannot access via local IP&quot; --&gt;</content:encoded><category>AI Agent</category><category>Claude Code</category></item><item><title>Claude Code 助你开发效率从 1× 到 100× 的蜕变</title><link>https://www.vibesparking.com/zh-cn/blog/ai/claude-code/2025-08-05-unlock-claude-code-1x-to-100x-engineer/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/claude-code/2025-08-05-unlock-claude-code-1x-to-100x-engineer/</guid><pubDate>Mon, 04 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # Claude Code 助你开发效率从 1× 到 100× 的蜕变 --&gt;
-&lt;div&gt;&lt;h2 id=&quot;引言&quot;&gt;引言&lt;/h2&gt;&lt;a href=&quot;#引言&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “引言”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;你是不是也听过那句经典论调：「&lt;strong&gt;一个 1× 工程师用 AI 是 0.1×，但一个 10× 工程师用 AI 就是 100×&lt;/strong&gt;」。这不是夸张，而是真的 —— 前提是你具备 &lt;strong&gt;系统思考、沟通精准、架构设计&lt;/strong&gt; 等关键能力。本文逐条拆解，结合 &lt;strong&gt;Claude Code&lt;/strong&gt; 的真实能力，告诉你如何将 AI 效能暴涨 100 倍。&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h1 id=&quot;场景-1高维思维-vs-文件级思维-&quot;&gt;场景 1：高维思维 vs 文件级思维 🚀&lt;/h1&gt;&lt;a href=&quot;#场景-1高维思维-vs-文件级思维-&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “场景 1：高维思维 vs 文件级思维 🚀”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;.1× 工程师只能想“写一个方法”，而 100× 工程师能够在心里保持整个系统的状态。&lt;strong&gt;Claude Code&lt;/strong&gt; 能够瞬间建立对百万行代码的整体视图。只需一句话，你就能让它 “搜索项目中的用户权限逻辑，分析跨服务依赖，并生成包含所有修改的 PR” —— 整个代码库级别的联动由 Claude 去做。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;举例&lt;/strong&gt;
-你想将 &lt;code dir=&quot;auto&quot;&gt;authToken&lt;/code&gt; 的加密方式从 HMAC-SHA256 换成 RSA：只需一句 “用 RSA 重写 token 逻辑并确保测试绿灯”；Claude Code 一次性跨 5 个文件：controller、service、utils 和单测，形成协调一致的 Git 提交。&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h1 id=&quot;场景-2沟通精确度就是效率倍增器&quot;&gt;场景 2：沟通精确度，就是效率倍增器&lt;/h1&gt;&lt;a href=&quot;#场景-2沟通精确度就是效率倍增器&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “场景 2：沟通精确度，就是效率倍增器”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;.1× 工程师给出模糊需求，CLAUDE 要 “猜”、要“试”，容易反复。&lt;/p&gt;
-&lt;p&gt;而那些会写工程思维文案的 100× 工程师知道，&lt;strong&gt;prompt 写得像好文章&lt;/strong&gt;，LLM 才能帮你精准执行。&lt;/p&gt;
-&lt;p&gt;Claude 团队多次强调&lt;strong&gt;结构式 Prompt&lt;/strong&gt;：包括背景、意图、格式、例子、校验条件等要素。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;举例&lt;/strong&gt;
-你想重构 &lt;code dir=&quot;auto&quot;&gt;calculateScore&lt;/code&gt; 函数，并确保逻辑保持一致：
-你提供示例输入输出表、希望 PR 标题模板、CI 校验规则；然后一句话交给 Claude Code：“基于以下示例和规则，重构 calculateScore，请输出 PR diff、测试报告和 commit message。”&lt;/p&gt;
-&lt;p&gt;结果：PR 合格率 99%，人工 Curate 降低 20 倍。&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h1 id=&quot;场景-3耐心打磨架构ai-才淘宝李察才能稳定输出&quot;&gt;场景 3：耐心打磨架构，AI 才淘宝李察才能稳定输出&lt;/h1&gt;&lt;a href=&quot;#场景-3耐心打磨架构ai-才淘宝李察才能稳定输出&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “场景 3：耐心打磨架构，AI 才淘宝李察才能稳定输出”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;.1× 工程师头也不回地叫 Claude 写功能，结果系统崩；100× 工程师知道重要的是事前设计。&lt;/p&gt;
-&lt;p&gt;Claude Code 能结合长上下文记忆与工程意图，执行设计得当的结构变更——Cue MCP（Model Context Protocol），让 Claude 可以接入你的设计文档、tickets、架构图等，形成长期视角（state）。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;举例&lt;/strong&gt;
-你计划把 monolith 分拆成 service mesh：先写明确文档 + 接口契约 + 合并策略，然后用 Claude Code 一步步生成 scaffolding、提取逻辑、生成 SDK 和原型 PR，甚至连 CI 配置都自动生成，测试通过才交给你审查。&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h1 id=&quot;场景-4上下文控制力是你价值的翻倍杠杆&quot;&gt;场景 4：上下文控制力，是你价值的翻倍杠杆&lt;/h1&gt;&lt;a href=&quot;#场景-4上下文控制力是你价值的翻倍杠杆&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “场景 4：上下文控制力，是你价值的翻倍杠杆”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;停止把 LLM 当作 autocomplete，开始把它当作系统级上下文引擎。&lt;strong&gt;Claude Code&lt;/strong&gt; 嵌入了 Claude Opus 4，能完整地理解整个项目结构、依赖图、命名规则、样式规范，甚至 README 和 issue template。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;举例&lt;/strong&gt;
-你想新增一个“移动端缓存层”模块。只要一句话让 Claude Code “遵循项目现有的 cache‑service pattern，生成 consistent module + README + unit tests”，它就能识别 pattern，把新增代码一致地插入代码架构。&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h1 id=&quot;场景-5真实智力与系统思维优先工具知识可有可无&quot;&gt;场景 5：真实智力与系统思维优先，工具知识可有可无&lt;/h1&gt;&lt;a href=&quot;#场景-5真实智力与系统思维优先工具知识可有可无&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “场景 5：真实智力与系统思维优先，工具知识可有可无”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;.1× 工程师挂靠 IDE 快捷键记事，.10× 工程师从 Node.js 切到 Go r，&lt;strong&gt;但 100× 工程师享受的并不是写代码，而是提出模式、解构问题并让 Agent 去买单&lt;/strong&gt;。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Claude Opus 4&lt;/strong&gt; 在 Anthropic 自己内部被称为 “the best coding model in the world”，能让工程师“在几小时内持久完成数百步骤的复杂任务”——这就是系统思考+Agent 控制的典型成果。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;举例&lt;/strong&gt;
-你想重写一个微服务，从 Express 移植到 Rust，保留原先全部行为边界：你写需求和样板数据，Claude Code 自动 scaffold Rust 服务、生成 HTTP 接口、映射数据模型、迁移旧逻辑，还生成了对比测试和部署 config。&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h1 id=&quot;场景-6ai-是强放大器你的优点让-ai-更强缺点让-ai-更糟&quot;&gt;场景 6：AI 是强放大器，你的优点让 AI 更强，缺点让 AI 更糟&lt;/h1&gt;&lt;a href=&quot;#场景-6ai-是强放大器你的优点让-ai-更强缺点让-ai-更糟&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “场景 6：AI 是强放大器，你的优点让 AI 更强，缺点让 AI 更糟”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;对 100× 工程师来说，Claude 会把你的&lt;strong&gt;组织原则、命名规范、测试覆盖、文档风格&lt;/strong&gt;“学习”起来，然后在每个 commit 中都一致执行。如果你乱写英文注释和乱用缩进，它会帮你继续乱；你有纪律，它把你变成一套风格化的引擎。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;举例&lt;/strong&gt;
-项目早期你严格遵守 &lt;code dir=&quot;auto&quot;&gt;&amp;#x3C;service&gt;.test.js&lt;/code&gt;、commit 90 字以上 PR 描述，README 和 issue 模板齐全。Claude Code 会像你一样严格标注 &lt;code dir=&quot;auto&quot;&gt;&quot;BREAKING CHANGE&quot;&lt;/code&gt;、现在发现未测试路径不会生成代码，commit 中自动引用 issue ID。如果项目混乱，它生成的 commit 往往也会混乱——这个“坐骑”跟谁奔，谁有节奏。&lt;/p&gt;
-&lt;p&gt;来自社区真实反馈：&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;“I have mindlessly asked Claude Code over a large codebase … it gave an extremely clear report…” —— 大意是即便 prompt 不好，但项目结构清晰，Claude Code 挺给力。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h1 id=&quot;结语&quot;&gt;结语&lt;/h1&gt;&lt;a href=&quot;#结语&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “结语”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Claude Code 并不仅是智能编写代码，更是让你能像架构师一样思考系统问题，精准沟通设计意图，持续维护代码标准。&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;它不是让你不写代码，而是让你的大脑留给真正重要的决策，把繁重重复任务交给 AI 去背。&lt;/li&gt;
-&lt;li&gt;当你把&lt;strong&gt;系统思考、prompt 文案、项目结构、测试覆盖、工程规范&lt;/strong&gt;等打磨好时，Claude 就像你零误差的 100× 扩音器。&lt;/li&gt;
-&lt;/ul&gt;&lt;!-- 你觉得怎样？想再加一个场景，或加个真实案例截图，或者针对具体项目定制 prompt 模板表？留言告诉我 —— 想要我再深化哪些方面？
-
-[1]: https://www.anthropic.com/engineering/claude-code-best-practices?utm_source=chatgpt.com &quot;Claude Code: Best practices for agentic coding&quot;
-[2]: https://kean.blog/post/experiencing-claude-code?utm_source=chatgpt.com &quot;Claude Code Experience&quot;
-[3]: https://medium.com/%40kushalbanda/mastering-claude-code-the-ultimate-guide-to-ai-powered-development-afccf1bdbd5b?utm_source=chatgpt.com &quot;Mastering Claude Code: The Ultimate Guide to AI-Powered ...&quot;
-[4]: https://en.wikipedia.org/wiki/Model_Context_Protocol?utm_source=chatgpt.com &quot;Model Context Protocol&quot;
-[5]: https://www.datacamp.com/tutorial/claude-code?utm_source=chatgpt.com &quot;Claude Code: A Guide With Practical Examples&quot;
-[6]: https://vibecodinghub.org/tools/claude-code?utm_source=chatgpt.com &quot;Claude Code Review 2025: Complete Guide to Anthropic&apos;s AI Coding Assistant&quot;
-[7]: https://www.anthropic.com/claude-code?utm_source=chatgpt.com &quot;Claude Code: Deep coding at terminal velocity \ Anthropic&quot;
-[8]: https://www.anthropic.com/news/claude-4?utm_source=chatgpt.com &quot;Introducing Claude 4&quot;
-[9]: https://news.ycombinator.com/item?id=43307809&amp;utm_source=chatgpt.com &quot;I&apos;ve been using Claude Code for a couple of days&quot; --&gt;</content:encoded><category>AI Agent</category><category>Claude Code</category></item></channel></rss>
+[10]: https://stackoverflow.com/questions/51026532/json-server-cannot-access-via-local-ip?utm_source=chatgpt.com &quot;json-server cannot access via local IP&quot; --&gt;</content:encoded><category>AI Agent</category><category>Claude Code</category></item></channel></rss>
