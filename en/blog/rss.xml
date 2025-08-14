@@ -197,153 +197,7 @@
    * FR: *Transformer n’importe quel site en app React : la bonne manière avec Open‑Lovable*
    * ES: *Convierte cualquier sitio en una app React: la forma correcta con Open‑Lovable*
    * PT: *Transforme qualquer site em um app React: o
---&gt;</content:encoded><category>Open Lovable</category><category>Lovable</category><category>React</category><category>AI</category></item><item><title>As Claude Code Gets Stronger, Engineers Should Spend More Time on Architecture, Requirements, and Problem‑Solving</title><link>https://www.vibesparking.com/en/blog/ai/vibe-coding/2025-08-14-ai-coding-assistants-new-rule/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/vibe-coding/2025-08-14-ai-coding-assistants-new-rule/</guid><pubDate>Thu, 14 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;strong&gt;Over the next 6–24 months, the direction of AI‑driven “Vibe Coding” will become ever clearer, and within 5 years the way we program will change dramatically&lt;/strong&gt;; &lt;strong&gt;routine implementation and boilerplate coding will be highly automated&lt;/strong&gt;, and engineers will spend more time on &lt;strong&gt;architecture, translating requirements, and creative problem‑solving&lt;/strong&gt;. At the same time, don’t underestimate the speed and limits of this evolution.
-This captures the emerging consensus since the rise of AI coding assistants like &lt;strong&gt;Claude Code&lt;/strong&gt; and &lt;strong&gt;Cursor&lt;/strong&gt;.&lt;/p&gt;
-&lt;hr&gt;&lt;!-- # As Claude Code gets stronger, we should spend more time on system architecture, requirements understanding, and problem‑solving --&gt;
-&lt;div&gt;&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;&lt;a href=&quot;#introduction&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Introduction”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;Over the past year, you may have felt it: writing code is no longer “finishing a function,” but &lt;strong&gt;organizing intelligence and process&lt;/strong&gt;.
-&lt;strong&gt;Cursor&lt;/strong&gt; inside the IDE can “see the repo, run commands, and act as an executor.” &lt;strong&gt;Claude Code&lt;/strong&gt; in the terminal brings Slash commands, Sub‑agents, and automated security reviews. This isn’t hype — it’s a &lt;strong&gt;new production line&lt;/strong&gt;.&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;1-where-exactly-are-ai-coding-assistants-strong&quot;&gt;1) Where exactly are AI coding assistants strong?&lt;/h2&gt;&lt;a href=&quot;#1-where-exactly-are-ai-coding-assistants-strong&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1) Where exactly are AI coding assistants strong?”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Code understanding and batch rewriting&lt;/strong&gt;: Cursor’s Agent mode supports &lt;strong&gt;cross‑file exploration, edits, and multi‑turn fixes&lt;/strong&gt;; Ask mode does read‑only retrieval to understand first, then modify.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Orchestratable workflows&lt;/strong&gt;: Claude Code’s &lt;strong&gt;Slash Commands&lt;/strong&gt; turn common actions into commands; &lt;strong&gt;Sub‑agents&lt;/strong&gt; let different tasks use dedicated helpers with isolated context.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Built‑in security review&lt;/strong&gt;: the official &lt;strong&gt;/security-review and GitHub Action&lt;/strong&gt; can automatically scan PRs and suggest fixes.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Bottom line: the goal isn’t to “type a few extra lines for you,” but to turn &lt;strong&gt;requirements → changes → verification → merge&lt;/strong&gt; into a &lt;strong&gt;semi‑automated assembly line&lt;/strong&gt;.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;2-what-work-will-be-accelerated-or-even-replaced&quot;&gt;2) What work will be “accelerated” or even “replaced”?&lt;/h2&gt;&lt;a href=&quot;#2-what-work-will-be-accelerated-or-even-replaced&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2) What work will be “accelerated” or even “replaced”?”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Boilerplate, CRUD, repetitive scaffolding&lt;/strong&gt; — the most common AI use case. In Stack Overflow’s 2024 survey, among developers who use AI, &lt;strong&gt;82% use it to “write code.”&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Small‑to‑medium feature work and debugging&lt;/strong&gt; — GitHub and academic controlled studies show developers using Copilot complete tasks &lt;strong&gt;55.8% faster&lt;/strong&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Tests, docs, migrations&lt;/strong&gt; — trend reports and frontline practice alike reinforce that AI is taking over the grunt work, letting humans return to design and decision‑making.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;3-risks-and-pitfalls-not-to-ignore&quot;&gt;3) Risks and pitfalls not to ignore&lt;/h2&gt;&lt;a href=&quot;#3-risks-and-pitfalls-not-to-ignore&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3) Risks and pitfalls not to ignore”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Security regression risk&lt;/strong&gt;: multiple studies indicate &lt;strong&gt;developers using code‑gen AI are more likely to produce insecure code&lt;/strong&gt;; industry reports likewise note that more than half of developers frequently see security issues in AI suggestions.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Lack of understanding and over‑reliance&lt;/strong&gt;: recent surveys show &lt;strong&gt;59% of developers use AI‑generated code they don’t fully understand&lt;/strong&gt;, creating quality and maintainability hazards.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Trust and quality gap&lt;/strong&gt;: leaders and community voices stress that &lt;strong&gt;AI is powerful, but doesn’t automatically ship products faster&lt;/strong&gt; — we need mature engineering methods and human gatekeeping.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;4-how-the-engineers-role-is-shifting&quot;&gt;4) How the engineer’s role is shifting&lt;/h2&gt;&lt;a href=&quot;#4-how-the-engineers-role-is-shifting&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “4) How the engineer’s role is shifting”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;From “implementer” to “designer and verifier”&lt;/strong&gt;: leaders broadly agree developers will invest more in &lt;strong&gt;architecture, validation, and AI supervision&lt;/strong&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;From “writing functions” to “building factories”&lt;/strong&gt;: connect Claude Code commands, Sub‑agents, CI security reviews, and Cursor Agent to build an &lt;strong&gt;end‑to‑end automated pipeline&lt;/strong&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;5-a-90day-action-plan-copyready&quot;&gt;5) A 90‑day action plan (copy‑ready)&lt;/h2&gt;&lt;a href=&quot;#5-a-90day-action-plan-copyready&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “5) A 90‑day action plan (copy‑ready)”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;Days 0–30: Standardize the process&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Provide a &lt;strong&gt;Spec template&lt;/strong&gt; (user stories, boundaries, acceptance criteria).&lt;/li&gt;
-&lt;li&gt;In Claude Code, implement common Slash commands such as &lt;strong&gt;/create-mvp, /write-tests, /changelog&lt;/strong&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Days 31–60: Shift security left&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Add the &lt;strong&gt;Claude Code Security Review GitHub Action&lt;/strong&gt; to the repo so every PR is scanned automatically with suggested fixes.&lt;/li&gt;
-&lt;li&gt;Set &lt;strong&gt;blocking rules&lt;/strong&gt; and allowlists to reduce false positives and noise.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Days 61–90: Orchestrate the intelligence&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Use &lt;strong&gt;Sub‑agents&lt;/strong&gt; for a “test agent, docs agent, migration agent.”&lt;/li&gt;
-&lt;li&gt;In Cursor, combine &lt;strong&gt;Agent / Ask modes&lt;/strong&gt; — Ask to read the codebase first, then modify.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;6-opportunity-map-for-individuals-and-teams&quot;&gt;6) Opportunity map for individuals and teams&lt;/h2&gt;&lt;a href=&quot;#6-opportunity-map-for-individuals-and-teams&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “6) Opportunity map for individuals and teams”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;New roles&lt;/strong&gt;: Agent Ops (keep agents running reliably), Prompt QA (turn natural language into acceptance cases), security review collaboration (AI + SAST/DAST).&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;10× individuals&lt;/strong&gt;: one person can use Cursor/Claude Code to stand up the pipeline from scaffolding to deploy; small teams can punch above their weight.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Organizational compounding&lt;/strong&gt;: codify useful Slash commands, Sub‑agents, and checklists in the repo — &lt;strong&gt;the more you use them, the smoother it gets&lt;/strong&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;7-two-suggestions-for-managers&quot;&gt;7) Two suggestions for managers&lt;/h2&gt;&lt;a href=&quot;#7-two-suggestions-for-managers&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “7) Two suggestions for managers”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Bake “human‑in‑the‑loop” into the process&lt;/strong&gt;: before merging code, require both &lt;strong&gt;AI security review + human review&lt;/strong&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Measure ROI with data&lt;/strong&gt;: compare pre/post‑AI &lt;strong&gt;lead time, defect rate, rollback rate, refactor frequency&lt;/strong&gt; — don’t just look at commit counts. The industry debate is a reminder to &lt;strong&gt;let metrics do the talking&lt;/strong&gt;.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;&lt;a href=&quot;#conclusion&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Conclusion”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;AI isn’t here to steal keyboards; it’s here to reshape the production line.&lt;/strong&gt;
-Lots of people can write code; far fewer can &lt;strong&gt;build an AI‑driven production line&lt;/strong&gt;.
-State requirements clearly, contain risk, and choreograph intelligence — that’s the &lt;strong&gt;core competitive edge&lt;/strong&gt; of the next‑gen engineer. Are you ready?&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Food for thought:
-What are the first three things your team could “automate”?&lt;br&gt;
-How would you turn them into Slash commands or Sub‑agents?&lt;/p&gt;
-&lt;/blockquote&gt;&lt;!-- 
----
-
-## Three multilingual titles (with slug)
-
-1. **中文**：AI 编程助手大爆发：工程师的新赛道与生存法则
-   **English**: AI Coding Assistants Are Here: The New Rules for Software Engineers
-   **繁體**：AI 程式助理來了：工程師的新賽道與生存法則
-   **日本語**：AIコーディング時代：エンジニアの新しいルール
-   **Français**：L’ère des assistants de code : les nouvelles règles pour les ingénieurs
-   **Español**: La era de los asistentes de código: nuevas reglas para ingenieros
-   **Português**: A era dos assistentes de código: novas regras para engenheiros
-   **slug**: `ai-coding-assistants-new-rules`
-
-2. **中文**：从“写函数”到“搭工厂”：Claude Code 与 Cursor 的真实冲击
-   **English**: From Writing Functions to Building Factories: Claude Code &amp; Cursor in Practice
-   **繁體**：從「寫函式」到「建工廠」：Claude Code 與 Cursor 的衝擊
-   **日本語**：関数から工場へ：Claude Code と Cursor の実務インパクト
-   **Français**：Des fonctions aux usines : l’impact de Claude Code et Cursor
-   **Español**: De funciones a fábricas: el impacto de Claude Code y Cursor
-   **Português**: De funções a fábricas: o impacto do Claude Code e do Cursor
-   **slug**: `from-functions-to-factories-claude-code-cursor`
-
-3. **中文**：5 年窗口期：程序员如何用 AI 升级职业护城河
-   **English**: The 5-Year Window: Using AI to Reinvent Your Engineering Moat
-   **繁體**：五年窗口期：工程師如何用 AI 強化護城河
-   **日本語**：5年のチャンス：AIでエンジニアの堀を再設計
-   **Français**：Fenêtre de 5 ans : renforcer son avantage avec l’IA
-   **Español**: Ventana de 5 años: reforzar tu ventaja con IA
-   **Português**: Janela de 5 anos: reforçar sua vantagem com IA
-   **slug**: `five-year-window-ai-engineering-moat`
-
----
-
-## Cover and illustrations (flat illustration | 2:1 | English copy only)
-
-**Cover prompt**
-“An illustration of a developer orchestrating multiple AI agents on a conveyor-belt style software factory, with terminals, test badges, and security shields; clean pastel palette, minimal lines, wide 2:1 composition; text-free.”
-
-**Figure 1 (section: strengths)**
-“Diagram-style illustration of Cursor and Claude Code as two robotic arms editing a codebase blueprint, with nodes for slash commands, sub-agents, security review; gentle gradients; 2:1; no text.”
-
-**Figure 2 (section: risks &amp; pitfalls)**
-“Playful illustration of a bug sneaking through AI-generated code while a human reviewer catches it with a magnifying glass; security icons and PR comments; 2:1; text-free.”
-
-**Figure 3 (section: action plan)**
-“Kanban board with cards labeled spec, tests, security review, release, connected by dotted arrows and small AI assistant icons; modern flat illustration; 2:1; no text.”
-
----
-
-## Social/comments copy (three options)
-
-1. “Coding now feels like running a production line: AI codes, I make intentions explicit and contain risk. Throughput ↑, cognitive load ↓. Love it.”
-2. “Field‑tested: Cursor edits, Claude Code reviews. Humans do three things — define specs, gauge risk, green‑light release.”
-3. “One‑shot refactor axios → fetch? Don’t. **Batch + rollback**. Let AI do the heavy lifting while humans hold the line.”
-
----
-
-Want me to expand this into a **team playbook** (command templates, Sub‑agent examples, PR audit rules)? I can assemble a copy‑ready checklist now.
-
-[1]: https://cursor.com/features?utm_source=chatgpt.com &quot;Features | Cursor - The AI Code Editor&quot;
-[2]: https://docs.cursor.com/agent?utm_source=chatgpt.com &quot;Cursor – Modes&quot;
-[3]: https://docs.anthropic.com/en/docs/claude-code/overview?utm_source=chatgpt.com &quot;Claude Code overview&quot;
-[4]: https://support.anthropic.com/en/articles/11932705-automated-security-reviews-in-claude-code?utm_source=chatgpt.com &quot;Automated Security Reviews in Claude Code&quot;
-[5]: https://docs.anthropic.com/en/docs/claude-code/slash-commands?utm_source=chatgpt.com &quot;Slash commands&quot;
-[6]: https://www.anthropic.com/news/automate-security-reviews-with-claude-code?utm_source=chatgpt.com &quot;Automate security reviews with Claude Code&quot;
-[7]: https://github.com/anthropics/claude-code-security-review?utm_source=chatgpt.com &quot;anthropics/claude-code-security-review&quot;
-[8]: https://survey.stackoverflow.co/2024/ai?utm_source=chatgpt.com &quot;AI | 2024 Stack Overflow Developer Survey&quot;
-[9]: https://arxiv.org/abs/2302.06590?utm_source=chatgpt.com &quot;The Impact of AI on Developer Productivity: Evidence from GitHub Copilot&quot;
-[10]: https://www.businessinsider.com/ai-tools-product-development-coding-engineers-a16z-partner-2025-7?utm_source=chatgpt.com &quot;AI tools won&apos;t get products out faster, but they&apos;ll solve 2 coding problems, says a16z partner&quot;
-[11]: https://www.theverge.com/decoder-podcast-with-nilay-patel/715267/anysphere-ceo-michael-truell-cursor-ai-automate-pr
---&gt;</content:encoded><category>Vibe Coding</category></item><item><title>Vibe Coding vs. Traditional: Stop Typing, Start Shipping</title><link>https://www.vibesparking.com/en/blog/ai/vibe-coding/2025-08-14-vibe-coding-stop-typing-start-shipping/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/vibe-coding/2025-08-14-vibe-coding-stop-typing-start-shipping/</guid><pubDate>Thu, 14 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;strong&gt;Vibe Coding vs. Traditional Programming&lt;/strong&gt; — key differences:&lt;/p&gt;
+--&gt;</content:encoded><category>Open Lovable</category><category>Lovable</category><category>React</category><category>AI</category></item><item><title>Vibe Coding vs. Traditional: Stop Typing, Start Shipping</title><link>https://www.vibesparking.com/en/blog/ai/vibe-coding/2025-08-14-vibe-coding-stop-typing-start-shipping/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/vibe-coding/2025-08-14-vibe-coding-stop-typing-start-shipping/</guid><pubDate>Thu, 14 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;strong&gt;Vibe Coding vs. Traditional Programming&lt;/strong&gt; — key differences:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Vibe Coding&lt;/strong&gt;: driven by natural language; you act as a &lt;strong&gt;director&lt;/strong&gt;; focus on the &lt;strong&gt;end result&lt;/strong&gt;; progress by &lt;strong&gt;questioning&lt;/strong&gt; and dialogue. It’s fast and lowers the barrier, but can lead to a &lt;strong&gt;black‑box understanding&lt;/strong&gt;.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Traditional programming&lt;/strong&gt;: precise programming languages; you act more like an &lt;strong&gt;architect&lt;/strong&gt;; focus on &lt;strong&gt;implementation details&lt;/strong&gt;; emphasize &lt;strong&gt;algorithms and principles&lt;/strong&gt;. It’s slower and higher‑bar, but yields &lt;strong&gt;deep code understanding&lt;/strong&gt;.&lt;/li&gt;
@@ -533,7 +387,153 @@ Does this fit your taste? Want us to expand the six scenarios into **copy‑and�
 [5]: https://docs.anthropic.com/en/docs/claude-code/overview?utm_source=chatgpt.com &quot;Claude Code overview&quot;
 [6]: https://survey.stackoverflow.co/2024/ai?utm_source=chatgpt.com &quot;AI | 2024 Stack Overflow Developer Survey&quot;
 [7]: https://www.itpro.com/software/development/developers-say-ai-can-code-better-than-most-humans-but-theres-a-catch?utm_source=chatgpt.com &quot;Developers say AI can code better than most humans - but there&apos;s a catch&quot;
-[8]: https://docs.anthropic.com/en/docs/claude-code/slash-commands?utm_source=chatgpt.com &quot;Slash commands&quot; --&gt;</content:encoded><category>Vibe Coding</category></item><item><title>Conductor Orchestrates Multiple Claude Code Agents</title><link>https://www.vibesparking.com/en/blog/ai/claude-code/conductor/2025-08-14-conductor-slash-queues-hands-on.md/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/claude-code/conductor/2025-08-14-conductor-slash-queues-hands-on.md/</guid><pubDate>Thu, 14 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;div&gt;&lt;h1 id=&quot;conductor-orchestrate-multiple-claude-code-agents-together&quot;&gt;Conductor: Orchestrate Multiple Claude Code Agents Together&lt;/h1&gt;&lt;a href=&quot;#conductor-orchestrate-multiple-claude-code-agents-together&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Conductor: Orchestrate Multiple Claude Code Agents Together”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+[8]: https://docs.anthropic.com/en/docs/claude-code/slash-commands?utm_source=chatgpt.com &quot;Slash commands&quot; --&gt;</content:encoded><category>Vibe Coding</category></item><item><title>As Claude Code Gets Stronger, Engineers Should Spend More Time on Architecture, Requirements, and Problem‑Solving</title><link>https://www.vibesparking.com/en/blog/ai/vibe-coding/2025-08-14-ai-coding-assistants-new-rule/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/vibe-coding/2025-08-14-ai-coding-assistants-new-rule/</guid><pubDate>Thu, 14 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;strong&gt;Over the next 6–24 months, the direction of AI‑driven “Vibe Coding” will become ever clearer, and within 5 years the way we program will change dramatically&lt;/strong&gt;; &lt;strong&gt;routine implementation and boilerplate coding will be highly automated&lt;/strong&gt;, and engineers will spend more time on &lt;strong&gt;architecture, translating requirements, and creative problem‑solving&lt;/strong&gt;. At the same time, don’t underestimate the speed and limits of this evolution.
+This captures the emerging consensus since the rise of AI coding assistants like &lt;strong&gt;Claude Code&lt;/strong&gt; and &lt;strong&gt;Cursor&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;&lt;!-- # As Claude Code gets stronger, we should spend more time on system architecture, requirements understanding, and problem‑solving --&gt;
+&lt;div&gt;&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;&lt;a href=&quot;#introduction&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Introduction”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Over the past year, you may have felt it: writing code is no longer “finishing a function,” but &lt;strong&gt;organizing intelligence and process&lt;/strong&gt;.
+&lt;strong&gt;Cursor&lt;/strong&gt; inside the IDE can “see the repo, run commands, and act as an executor.” &lt;strong&gt;Claude Code&lt;/strong&gt; in the terminal brings Slash commands, Sub‑agents, and automated security reviews. This isn’t hype — it’s a &lt;strong&gt;new production line&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;1-where-exactly-are-ai-coding-assistants-strong&quot;&gt;1) Where exactly are AI coding assistants strong?&lt;/h2&gt;&lt;a href=&quot;#1-where-exactly-are-ai-coding-assistants-strong&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1) Where exactly are AI coding assistants strong?”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Code understanding and batch rewriting&lt;/strong&gt;: Cursor’s Agent mode supports &lt;strong&gt;cross‑file exploration, edits, and multi‑turn fixes&lt;/strong&gt;; Ask mode does read‑only retrieval to understand first, then modify.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Orchestratable workflows&lt;/strong&gt;: Claude Code’s &lt;strong&gt;Slash Commands&lt;/strong&gt; turn common actions into commands; &lt;strong&gt;Sub‑agents&lt;/strong&gt; let different tasks use dedicated helpers with isolated context.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Built‑in security review&lt;/strong&gt;: the official &lt;strong&gt;/security-review and GitHub Action&lt;/strong&gt; can automatically scan PRs and suggest fixes.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Bottom line: the goal isn’t to “type a few extra lines for you,” but to turn &lt;strong&gt;requirements → changes → verification → merge&lt;/strong&gt; into a &lt;strong&gt;semi‑automated assembly line&lt;/strong&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;2-what-work-will-be-accelerated-or-even-replaced&quot;&gt;2) What work will be “accelerated” or even “replaced”?&lt;/h2&gt;&lt;a href=&quot;#2-what-work-will-be-accelerated-or-even-replaced&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2) What work will be “accelerated” or even “replaced”?”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Boilerplate, CRUD, repetitive scaffolding&lt;/strong&gt; — the most common AI use case. In Stack Overflow’s 2024 survey, among developers who use AI, &lt;strong&gt;82% use it to “write code.”&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Small‑to‑medium feature work and debugging&lt;/strong&gt; — GitHub and academic controlled studies show developers using Copilot complete tasks &lt;strong&gt;55.8% faster&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Tests, docs, migrations&lt;/strong&gt; — trend reports and frontline practice alike reinforce that AI is taking over the grunt work, letting humans return to design and decision‑making.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;3-risks-and-pitfalls-not-to-ignore&quot;&gt;3) Risks and pitfalls not to ignore&lt;/h2&gt;&lt;a href=&quot;#3-risks-and-pitfalls-not-to-ignore&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3) Risks and pitfalls not to ignore”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Security regression risk&lt;/strong&gt;: multiple studies indicate &lt;strong&gt;developers using code‑gen AI are more likely to produce insecure code&lt;/strong&gt;; industry reports likewise note that more than half of developers frequently see security issues in AI suggestions.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Lack of understanding and over‑reliance&lt;/strong&gt;: recent surveys show &lt;strong&gt;59% of developers use AI‑generated code they don’t fully understand&lt;/strong&gt;, creating quality and maintainability hazards.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Trust and quality gap&lt;/strong&gt;: leaders and community voices stress that &lt;strong&gt;AI is powerful, but doesn’t automatically ship products faster&lt;/strong&gt; — we need mature engineering methods and human gatekeeping.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;4-how-the-engineers-role-is-shifting&quot;&gt;4) How the engineer’s role is shifting&lt;/h2&gt;&lt;a href=&quot;#4-how-the-engineers-role-is-shifting&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “4) How the engineer’s role is shifting”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;From “implementer” to “designer and verifier”&lt;/strong&gt;: leaders broadly agree developers will invest more in &lt;strong&gt;architecture, validation, and AI supervision&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;From “writing functions” to “building factories”&lt;/strong&gt;: connect Claude Code commands, Sub‑agents, CI security reviews, and Cursor Agent to build an &lt;strong&gt;end‑to‑end automated pipeline&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;5-a-90day-action-plan-copyready&quot;&gt;5) A 90‑day action plan (copy‑ready)&lt;/h2&gt;&lt;a href=&quot;#5-a-90day-action-plan-copyready&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “5) A 90‑day action plan (copy‑ready)”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Days 0–30: Standardize the process&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Provide a &lt;strong&gt;Spec template&lt;/strong&gt; (user stories, boundaries, acceptance criteria).&lt;/li&gt;
+&lt;li&gt;In Claude Code, implement common Slash commands such as &lt;strong&gt;/create-mvp, /write-tests, /changelog&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Days 31–60: Shift security left&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Add the &lt;strong&gt;Claude Code Security Review GitHub Action&lt;/strong&gt; to the repo so every PR is scanned automatically with suggested fixes.&lt;/li&gt;
+&lt;li&gt;Set &lt;strong&gt;blocking rules&lt;/strong&gt; and allowlists to reduce false positives and noise.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Days 61–90: Orchestrate the intelligence&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Use &lt;strong&gt;Sub‑agents&lt;/strong&gt; for a “test agent, docs agent, migration agent.”&lt;/li&gt;
+&lt;li&gt;In Cursor, combine &lt;strong&gt;Agent / Ask modes&lt;/strong&gt; — Ask to read the codebase first, then modify.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;6-opportunity-map-for-individuals-and-teams&quot;&gt;6) Opportunity map for individuals and teams&lt;/h2&gt;&lt;a href=&quot;#6-opportunity-map-for-individuals-and-teams&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “6) Opportunity map for individuals and teams”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;New roles&lt;/strong&gt;: Agent Ops (keep agents running reliably), Prompt QA (turn natural language into acceptance cases), security review collaboration (AI + SAST/DAST).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;10× individuals&lt;/strong&gt;: one person can use Cursor/Claude Code to stand up the pipeline from scaffolding to deploy; small teams can punch above their weight.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Organizational compounding&lt;/strong&gt;: codify useful Slash commands, Sub‑agents, and checklists in the repo — &lt;strong&gt;the more you use them, the smoother it gets&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;7-two-suggestions-for-managers&quot;&gt;7) Two suggestions for managers&lt;/h2&gt;&lt;a href=&quot;#7-two-suggestions-for-managers&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “7) Two suggestions for managers”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Bake “human‑in‑the‑loop” into the process&lt;/strong&gt;: before merging code, require both &lt;strong&gt;AI security review + human review&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Measure ROI with data&lt;/strong&gt;: compare pre/post‑AI &lt;strong&gt;lead time, defect rate, rollback rate, refactor frequency&lt;/strong&gt; — don’t just look at commit counts. The industry debate is a reminder to &lt;strong&gt;let metrics do the talking&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;&lt;a href=&quot;#conclusion&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Conclusion”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;AI isn’t here to steal keyboards; it’s here to reshape the production line.&lt;/strong&gt;
+Lots of people can write code; far fewer can &lt;strong&gt;build an AI‑driven production line&lt;/strong&gt;.
+State requirements clearly, contain risk, and choreograph intelligence — that’s the &lt;strong&gt;core competitive edge&lt;/strong&gt; of the next‑gen engineer. Are you ready?&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Food for thought:
+What are the first three things your team could “automate”?&lt;br&gt;
+How would you turn them into Slash commands or Sub‑agents?&lt;/p&gt;
+&lt;/blockquote&gt;&lt;!-- 
+---
+
+## Three multilingual titles (with slug)
+
+1. **中文**：AI 编程助手大爆发：工程师的新赛道与生存法则
+   **English**: AI Coding Assistants Are Here: The New Rules for Software Engineers
+   **繁體**：AI 程式助理來了：工程師的新賽道與生存法則
+   **日本語**：AIコーディング時代：エンジニアの新しいルール
+   **Français**：L’ère des assistants de code : les nouvelles règles pour les ingénieurs
+   **Español**: La era de los asistentes de código: nuevas reglas para ingenieros
+   **Português**: A era dos assistentes de código: novas regras para engenheiros
+   **slug**: `ai-coding-assistants-new-rules`
+
+2. **中文**：从“写函数”到“搭工厂”：Claude Code 与 Cursor 的真实冲击
+   **English**: From Writing Functions to Building Factories: Claude Code &amp; Cursor in Practice
+   **繁體**：從「寫函式」到「建工廠」：Claude Code 與 Cursor 的衝擊
+   **日本語**：関数から工場へ：Claude Code と Cursor の実務インパクト
+   **Français**：Des fonctions aux usines : l’impact de Claude Code et Cursor
+   **Español**: De funciones a fábricas: el impacto de Claude Code y Cursor
+   **Português**: De funções a fábricas: o impacto do Claude Code e do Cursor
+   **slug**: `from-functions-to-factories-claude-code-cursor`
+
+3. **中文**：5 年窗口期：程序员如何用 AI 升级职业护城河
+   **English**: The 5-Year Window: Using AI to Reinvent Your Engineering Moat
+   **繁體**：五年窗口期：工程師如何用 AI 強化護城河
+   **日本語**：5年のチャンス：AIでエンジニアの堀を再設計
+   **Français**：Fenêtre de 5 ans : renforcer son avantage avec l’IA
+   **Español**: Ventana de 5 años: reforzar tu ventaja con IA
+   **Português**: Janela de 5 anos: reforçar sua vantagem com IA
+   **slug**: `five-year-window-ai-engineering-moat`
+
+---
+
+## Cover and illustrations (flat illustration | 2:1 | English copy only)
+
+**Cover prompt**
+“An illustration of a developer orchestrating multiple AI agents on a conveyor-belt style software factory, with terminals, test badges, and security shields; clean pastel palette, minimal lines, wide 2:1 composition; text-free.”
+
+**Figure 1 (section: strengths)**
+“Diagram-style illustration of Cursor and Claude Code as two robotic arms editing a codebase blueprint, with nodes for slash commands, sub-agents, security review; gentle gradients; 2:1; no text.”
+
+**Figure 2 (section: risks &amp; pitfalls)**
+“Playful illustration of a bug sneaking through AI-generated code while a human reviewer catches it with a magnifying glass; security icons and PR comments; 2:1; text-free.”
+
+**Figure 3 (section: action plan)**
+“Kanban board with cards labeled spec, tests, security review, release, connected by dotted arrows and small AI assistant icons; modern flat illustration; 2:1; no text.”
+
+---
+
+## Social/comments copy (three options)
+
+1. “Coding now feels like running a production line: AI codes, I make intentions explicit and contain risk. Throughput ↑, cognitive load ↓. Love it.”
+2. “Field‑tested: Cursor edits, Claude Code reviews. Humans do three things — define specs, gauge risk, green‑light release.”
+3. “One‑shot refactor axios → fetch? Don’t. **Batch + rollback**. Let AI do the heavy lifting while humans hold the line.”
+
+---
+
+Want me to expand this into a **team playbook** (command templates, Sub‑agent examples, PR audit rules)? I can assemble a copy‑ready checklist now.
+
+[1]: https://cursor.com/features?utm_source=chatgpt.com &quot;Features | Cursor - The AI Code Editor&quot;
+[2]: https://docs.cursor.com/agent?utm_source=chatgpt.com &quot;Cursor – Modes&quot;
+[3]: https://docs.anthropic.com/en/docs/claude-code/overview?utm_source=chatgpt.com &quot;Claude Code overview&quot;
+[4]: https://support.anthropic.com/en/articles/11932705-automated-security-reviews-in-claude-code?utm_source=chatgpt.com &quot;Automated Security Reviews in Claude Code&quot;
+[5]: https://docs.anthropic.com/en/docs/claude-code/slash-commands?utm_source=chatgpt.com &quot;Slash commands&quot;
+[6]: https://www.anthropic.com/news/automate-security-reviews-with-claude-code?utm_source=chatgpt.com &quot;Automate security reviews with Claude Code&quot;
+[7]: https://github.com/anthropics/claude-code-security-review?utm_source=chatgpt.com &quot;anthropics/claude-code-security-review&quot;
+[8]: https://survey.stackoverflow.co/2024/ai?utm_source=chatgpt.com &quot;AI | 2024 Stack Overflow Developer Survey&quot;
+[9]: https://arxiv.org/abs/2302.06590?utm_source=chatgpt.com &quot;The Impact of AI on Developer Productivity: Evidence from GitHub Copilot&quot;
+[10]: https://www.businessinsider.com/ai-tools-product-development-coding-engineers-a16z-partner-2025-7?utm_source=chatgpt.com &quot;AI tools won&apos;t get products out faster, but they&apos;ll solve 2 coding problems, says a16z partner&quot;
+[11]: https://www.theverge.com/decoder-podcast-with-nilay-patel/715267/anysphere-ceo-michael-truell-cursor-ai-automate-pr
+--&gt;</content:encoded><category>Vibe Coding</category></item><item><title>Conductor Orchestrates Multiple Claude Code Agents</title><link>https://www.vibesparking.com/en/blog/ai/claude-code/conductor/2025-08-14-conductor-slash-queues-hands-on.md/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/claude-code/conductor/2025-08-14-conductor-slash-queues-hands-on.md/</guid><pubDate>Thu, 14 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;div&gt;&lt;h1 id=&quot;conductor-orchestrate-multiple-claude-code-agents-together&quot;&gt;Conductor: Orchestrate Multiple Claude Code Agents Together&lt;/h1&gt;&lt;a href=&quot;#conductor-orchestrate-multiple-claude-code-agents-together&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Conductor: Orchestrate Multiple Claude Code Agents Together”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;In one sentence&lt;/strong&gt;: &lt;strong&gt;Conductor&lt;/strong&gt; lets you spin up multiple “Claude teammates” at once, each with its own isolated git worktree, so different tasks progress in parallel; you can also see who’s working, who’s stuck, and what changed — all at a glance.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -712,7 +712,172 @@ If you’d like, I can **expand this into a series** (e.g., working with Cursor/
 [2]: https://github.com/conductor-oss/conductor?utm_source=chatgpt.com &quot;conductor-oss/conductor&quot;
 [3]: https://conductor.build/changelog?utm_source=chatgpt.com &quot;Bug Fixes! - conductor.build&quot;
 [4]: https://docs.anthrop
---&gt;</content:encoded><category>Claude Code</category><category>Conductor</category></item><item><title>Claude Code and Cursor read browser console logs via Browser Echo</title><link>https://www.vibesparking.com/en/blog/ai/2025-08-13-browser-echo-next-terminal-ai-fix/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/2025-08-13-browser-echo-next-terminal-ai-fix/</guid><pubDate>Wed, 13 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # Claude Code and Cursor read browser console logs via Browser Echo --&gt;
+--&gt;</content:encoded><category>Claude Code</category><category>Conductor</category></item><item><title>Omnara Pushes Real-Time Claude Code / Cursor / Copilot Coding Progress to Your Phone</title><link>https://www.vibesparking.com/en/blog/ai/vibe-coding/omnara/2025-08-14-omnara-pocket-ai-agents/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/vibe-coding/omnara/2025-08-14-omnara-pocket-ai-agents/</guid><pubDate>Thu, 14 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;div&gt;&lt;h1 id=&quot;omnara-pushes-real-time-claude-code--cursor--copilot-coding-progress-to-your-phone&quot;&gt;Omnara Pushes Real-Time Claude Code / Cursor / Copilot Coding Progress to Your Phone&lt;/h1&gt;&lt;a href=&quot;#omnara-pushes-real-time-claude-code--cursor--copilot-coding-progress-to-your-phone&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Omnara Pushes Real-Time Claude Code / Cursor / Copilot Coding Progress to Your Phone”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Do long-running tasks stall with errors the moment you step away?&lt;/strong&gt;
+Omnara, an open-source project, makes “human-in-the-loop” the default: &lt;strong&gt;monitor every step in real time, push critical checkpoints to your phone, and let you chime in with guidance anytime&lt;/strong&gt;. No more discovering hours later that an agent crashed long ago.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The project site, docs, installation flow, and iOS client are live — you can try it now.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;why-use-omnara&quot;&gt;Why Use Omnara?&lt;/h2&gt;&lt;a href=&quot;#why-use-omnara&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Why Use Omnara?”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;It tackles real pain points:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Real-time visibility&lt;/strong&gt;: a timeline shows each agent action and its context. You’ll instantly see where it’s stuck.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Two-way human–agent dialogue&lt;/strong&gt;: when uncertain, the agent &lt;strong&gt;pauses proactively&lt;/strong&gt;, sends a notification to your phone, and waits for your brief instruction to proceed.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Mobile-first&lt;/strong&gt;: &lt;strong&gt;iOS client&lt;/strong&gt; plus web console — review and approve even on the subway.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Unified command center&lt;/strong&gt;: manage &lt;strong&gt;Claude Code, Cursor, GitHub Copilot&lt;/strong&gt;, and more in one panel.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Two operating modes&lt;/strong&gt;:
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Monitor&lt;/strong&gt; local sessions in real time;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Initiate remotely&lt;/strong&gt; — trigger tasks from your phone to run on your machine.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Protocol-friendly&lt;/strong&gt;: supports &lt;strong&gt;MCP&lt;/strong&gt; (Model Context Protocol), plus REST/Python SDKs for easy extension.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Open source + pricing&lt;/strong&gt;: code is &lt;strong&gt;Apache-2.0&lt;/strong&gt;; official Free/Pro ($9/mo) service and iOS IAP available.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Latest release v1.4.10 is out, fixing notification and other details.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;three-minute-setup-install-and-start&quot;&gt;Three-Minute Setup: Install and Start&lt;/h2&gt;&lt;a href=&quot;#three-minute-setup-install-and-start&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Three-Minute Setup: Install and Start”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Option A | Monitor local Claude Code sessions (recommended first run)&lt;/strong&gt;&lt;/p&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# Install (either)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;pip&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;install&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;omnara&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# or&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;uv&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;pip&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;install&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;omnara&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# Run the monitoring wrapper&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;omnara&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# or&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;uv&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;run&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;omnara&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;p&gt;After launch, your browser opens for login/binding; from then on, every step in your local Claude Code sessions streams live to the dashboard, and &lt;strong&gt;critical prompts get pushed to your phone&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Option B | Initiate tasks remotely from your phone&lt;/strong&gt;&lt;/p&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# Start the local service&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;omnara&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;serve&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# or&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;uv&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;run&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;omnara&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;serve&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;p&gt;Use the &lt;strong&gt;webhook URL&lt;/strong&gt; printed in the terminal to add an agent in the mobile app. You can then &lt;strong&gt;start/pause/resume&lt;/strong&gt; jobs from your phone.&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;how-it-fits-with-popular-tools&quot;&gt;How It Fits with Popular Tools&lt;/h2&gt;&lt;a href=&quot;#how-it-fits-with-popular-tools&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “How It Fits with Popular Tools”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3 id=&quot;1-claude-code-terminal--inside-editor&quot;&gt;1) Claude Code (terminal / inside editor)&lt;/h3&gt;&lt;a href=&quot;#1-claude-code-terminal--inside-editor&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1) Claude Code (terminal / inside editor)”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;Wrap your Claude Code session with &lt;strong&gt;&lt;code dir=&quot;auto&quot;&gt;omnara&lt;/code&gt;&lt;/strong&gt; as above.&lt;/li&gt;
+&lt;li&gt;You get a synced &lt;strong&gt;step stream&lt;/strong&gt;, &lt;strong&gt;error points&lt;/strong&gt;, and &lt;strong&gt;interactive prompts&lt;/strong&gt; viewable/respondable from web/iOS.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;2-cursor&quot;&gt;2) Cursor&lt;/h3&gt;&lt;a href=&quot;#2-cursor&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2) Cursor”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;Cursor supports &lt;strong&gt;MCP servers&lt;/strong&gt;. Add Omnara as an MCP server to gain &lt;strong&gt;remote initiation and two‑way interaction&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Sample configuration (from the README “Manual MCP Configuration”):&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;json&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;{&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;mcpServers&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: {&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;omnara&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: {&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;      &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;command&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;pipx&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;      &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;args&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: [&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;run&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;, &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;--no-cache&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;, &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;omnara&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;, &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;mcp&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;, &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;--api-key&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;, &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;YOUR_API_KEY&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;]&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;    &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;p&gt;Save and Cursor’s agent will talk to Omnara in real time; you can give “product‑manager‑style” guidance from your phone.&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;3-github-copilot--other-agents&quot;&gt;3) GitHub Copilot / other agents&lt;/h3&gt;&lt;a href=&quot;#3-github-copilot--other-agents&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3) GitHub Copilot / other agents”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;Many IDE‑built agents don’t yet natively support MCP, but you can use the &lt;strong&gt;REST API / Python SDK&lt;/strong&gt; to proactively report key steps, questions, and approval points to Omnara:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;python&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;from&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; omnara &lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;import&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; OmnaraClient&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;client &lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;=&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#B2CCD6;--1:#096E72&quot;&gt;OmnaraClient&lt;/span&gt;&lt;span style=&quot;--1:#403F53&quot;&gt;&lt;span style=&quot;--0:#D6DEEB&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;--0:#D7DBE0&quot;&gt;api_key&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;=&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;YOUR_API_KEY&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;client.&lt;/span&gt;&lt;span style=&quot;--0:#B2CCD6;--1:#096E72&quot;&gt;send_message&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;(&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span style=&quot;--0:#D7DBE0;--1:#403F53&quot;&gt;agent_type&lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;=&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;copilot&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span style=&quot;--0:#D7DBE0;--1:#403F53&quot;&gt;content&lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;=&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;Running integration tests for checkout flow&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span style=&quot;--0:#D7DBE0;--1:#403F53&quot;&gt;requires_user_input&lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;=&lt;/span&gt;&lt;span style=&quot;--0:#FF6A83;--1:#A24848&quot;&gt;False&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;When a test needs your “rollback?” confirmation, set &lt;code dir=&quot;auto&quot;&gt;requires_user_input=True&lt;/code&gt;. You’ll get a prompt on your phone and can &lt;strong&gt;reply with one tap&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;real-world-scenarios&quot;&gt;Real-World Scenarios&lt;/h2&gt;&lt;a href=&quot;#real-world-scenarios&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Real-World Scenarios”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Long-running refactors&lt;/strong&gt;
+Kick off a 6‑hour refactor and step into meetings. Omnara &lt;strong&gt;streams&lt;/strong&gt; each refactor step, change summary, and test delta. When a business rule is unclear, your phone buzzes; reply with a sentence and the agent carries on.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Night fixes&lt;/strong&gt;
+When a midnight alert fires, review the agent’s investigation path and log highlights on your phone, and &lt;strong&gt;direct&lt;/strong&gt; it to gather more evidence or rollback.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;CI / data migrations&lt;/strong&gt;
+Let an agent run a migration or E2E suite; migration progress, retry on failure, and schema‑change approvals are &lt;strong&gt;pushed centrally&lt;/strong&gt; via Omnara — no more discovering in the morning that it failed hours ago.&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;advanced-and-selfhosting&quot;&gt;Advanced and Self‑Hosting&lt;/h2&gt;&lt;a href=&quot;#advanced-and-selfhosting&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Advanced and Self‑Hosting”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Architecture&lt;/strong&gt;: FastAPI backend + PostgreSQL, with Push/Email/SMS channels; frontend is Web (React) + iOS (React Native).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Protocols&lt;/strong&gt;: &lt;strong&gt;MCP&lt;/strong&gt; standard lets you plug in your tools/data sources — like giving AI a USB‑C port.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Source &amp;#x26; license&lt;/strong&gt;: Apache‑2.0, fork‑friendly.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;faq&quot;&gt;FAQ&lt;/h2&gt;&lt;a href=&quot;#faq&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “FAQ”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Q: What about offline?&lt;/strong&gt;
+The local service buffers requests and syncs once online; critical actions require your confirmation to execute, preventing mishaps. &lt;em&gt;(See official notes and code for mechanics.)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Q: Do I need to pay?&lt;/strong&gt;
+The code is open source for self‑hosting; the official service offers &lt;strong&gt;Free / Pro ($9/mo)&lt;/strong&gt; tiers and &lt;strong&gt;iOS IAP&lt;/strong&gt;, great for managed convenience.&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;&lt;a href=&quot;#conclusion&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Conclusion”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Agents that truly “communicate” double efficiency.&lt;/strong&gt;
+Starting today, hand long runs to Omnara and &lt;strong&gt;only step in at critical junctures&lt;/strong&gt;.
+That’s how human–AI collaboration should work.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Which task will you connect to Omnara first?&lt;/strong&gt; Tell us in the comments.&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h1 id=&quot;install-cheat-sheet&quot;&gt;Install Cheat Sheet&lt;/h1&gt;&lt;a href=&quot;#install-cheat-sheet&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Install Cheat Sheet”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;Install: &lt;code dir=&quot;auto&quot;&gt;pip install omnara&lt;/code&gt; or &lt;code dir=&quot;auto&quot;&gt;uv pip install omnara&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Monitor local: &lt;code dir=&quot;auto&quot;&gt;omnara&lt;/code&gt; / &lt;code dir=&quot;auto&quot;&gt;uv run omnara&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Remote initiation: &lt;code dir=&quot;auto&quot;&gt;omnara serve&lt;/code&gt; / &lt;code dir=&quot;auto&quot;&gt;uv run omnara serve&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;iOS client: search “Omnara: AI Command Center” in the App Store&lt;/li&gt;
+&lt;li&gt;MCP: add the &lt;code dir=&quot;auto&quot;&gt;mcpServers&lt;/code&gt; config shown above in your editor&lt;/li&gt;
+&lt;/ul&gt;&lt;!-- 
+---
+
+## Recommended titles (3 sets, multilingual + slug)
+
+1. **Pocket your AI agents: Omnara ends black‑box long runs**
+
+* EN: *Pocket your AI agents: Omnara kills black-box long runs*
+* ZH‑TW: *把 AI 代理裝進口袋：Omnara 讓長任務不再黑箱*
+* JA: *AIエージェントをポケットに。Omnaraで長時間処理の“ブラックボックス”を解消*
+* FR: *Mettez vos agents IA dans la poche : Omnara met fin au “boîte noire” des longues tâches*
+* ES: *Pon tus agentes de IA en el bolsillo: Omnara acaba con las tareas en caja negra*
+* PT: *Coloque seus agentes de IA no bolso: Omnara acaba com execuções de caixa-preta*
+* **slug**: `omnara-pocket-ai-agents`
+
+2. **One dashboard for Claude Code / Cursor / Copilot: Omnara field guide**
+
+* EN: *One dashboard for Claude Code / Cursor / Copilot: Omnara field guide*
+* ZH‑TW: *Claude Code / Cursor / Copilot 一站式監管：Omnara 實戰指南*
+* JA: *Claude Code・Cursor・Copilotを一括監視：Omnara実戦ガイド*
+* FR: *Un tableau unique pour Claude Code / Cursor / Copilot : guide pratique Omnara*
+* ES: *Un panel para Claude Code / Cursor / Copilot: guía práctica de Omnara*
+* PT: *Um painel para Claude Code / Cursor / Copilot: guia prático do Omnara*
+* **slug**: `omnara-dashboard-guide`
+
+3. **Stop waiting for crash logs: real human‑in‑the‑loop with Omnara**
+
+* EN: *Stop waiting for crash logs: real human-in-the-loop with Omnara*
+* ZH‑TW: *別再等崩潰日誌：用 Omnara 做「人在環」即時督導*
+* JA: *クラッシュログ待ちは終わり。Omnaraでヒューマンインザループ監督*
+* FR: *Finie l’attente des logs : supervision temps réel avec Omnara*
+* ES: *Se acabó esperar logs: supervisión en tiempo real con Omnara*
+* PT: *Chega de esperar logs: supervisão em tempo real com Omnara*
+* **slug**: `omnara-human-in-the-loop`
+
+---
+
+## Illustration suggestions (flat / 2:1 / English elements only)
+
+**Cover prompt**
+“An illustration of a developer holding a phone that shows a live timeline of an AI agent’s steps, with push notifications popping up; in the background, multiple agents (Claude Code, Cursor, Copilot icons implied by generic symbols) run on servers; clean pastel palette, minimal lines, 2:1.”
+
+**Key art 1 (real-time monitoring)**
+“Split-screen illustration: left side shows a terminal running a long task; right side shows a mobile timeline with step-by-step actions and a ‘Need input?’ card; friendly, modern, 2:1.”
+
+**Key art 2 (MCP extensions)**
+“Diagram-style illustration of an MCP ‘USB-C for AI’ port connecting different tools to a command center; arrows for two-way messages; soft gradients, 2:1.”
+
+**Key art 3 (remote initiation)**
+“A comfy café scene: a person taps ‘Start Agent’ on phone; at home workstation a PC wakes up and starts tasks; subtle motion lines, pastel colors, 2:1.”
+
+---
+
+## Three viral social/comment lines
+
+1. “Stop watching progress bars. I hooked Claude/Cursor into Omnara — I annotate on the subway, get instant stuck‑point pings. Ridiculously calming.”
+
+2. “Let an agent run a migration overnight; I replied twice on my phone before bed and it shipped. Omnara makes human‑in‑the‑loop real — productivity soared.”
+
+3. “Who still waits for crash logs? With Omnara, I watch steps in real time and chime in anytime — Claude/Cursor/Copilot all in one place. Bliss.”
+
+---
+
+Want me to turn **a specific project’s** integration steps (e.g., your CI, a repo refactor) into copy‑paste scripts? I can tailor a **one‑click** version for your environment (Mac/Linux, IDE, CI). Like this draft? Want expanded examples and marketing copy?
+
+[1]: https://github.com/omnara-ai/omnara &quot;GitHub - omnara-ai/omnara: Omnara (YC S25) - Talk to Your AI Agents from Anywhere!&quot;
+[2]: https://apps.apple.com/us/app/omnara-ai-command-center/id6748426727 &quot;
+      ‎Omnara: AI Command Center on the App Store
+    &quot;
+[3]: https://modelcontextprotocol.io/?utm_source=chatgpt.com &quot;Model Context Protocol: Introduction&quot;
+[4]: https://github.com/omnara-ai/omnara/releases/tag/v1.4.10 &quot;Release v1.4.10 · omnara-ai/omnara · GitHub&quot;
+[5]: https://www.anthropic.com/news/model-context-protocol?utm_source=chatgpt.com &quot;Introducing the Model Context Protocol&quot;
+--&gt;</content:encoded><category>VibeTunnel</category><category>macOS</category><category>Vibe Coding</category></item><item><title>Claude Code and Cursor read browser console logs via Browser Echo</title><link>https://www.vibesparking.com/en/blog/ai/2025-08-13-browser-echo-next-terminal-ai-fix/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/2025-08-13-browser-echo-next-terminal-ai-fix/</guid><pubDate>Wed, 13 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # Claude Code and Cursor read browser console logs via Browser Echo --&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;Stream the browser’s &lt;code dir=&quot;auto&quot;&gt;console.*&lt;/code&gt; logs and errors, in real time, **“echo”** back to your local terminal;&lt;/strong&gt; &lt;strong&gt;zero-config&lt;/strong&gt; out of the box, perfect for AI coding assistants that read terminal output such as &lt;strong&gt;Cursor / Claude Code / Copilot CLI / Gemini CLI&lt;/strong&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -2573,114 +2738,4 @@ Both OpenAI and Anthropic are setting new revenue growth records, but their unde
 [2]: https://medium.com/coding-nexus/automate-your-claude-code-cli-using-ccplugins-1d484e431bf1?utm_source=chatgpt.com &quot;Automate your Claude Code CLI using CCPlugins&quot;
 [3]: https://www.reddit.com/r/ClaudeAI/comments/1mb37uj/found_claude_code_plugins_that_actually_work/?utm_source=chatgpt.com &quot;found claude code plugins that actually work : r/ClaudeAI&quot;
 [4]: https://github.com/brennercruvinel/CCPlugins/actions?utm_source=chatgpt.com &quot;Workflow runs · brennercruvinel/CCPlugins&quot;
-[5]: https://zenn.dev/masato13/articles/3cf47f65afcc05?utm_source=chatgpt.com &quot;CursorでClaude Codeのカスタムスラッシュコマンドを瞬時に ...&quot; --&gt;</content:encoded><category>AI Agent</category><category>Claude Code</category></item><item><title>Claude Code Running in Your Local Browser</title><link>https://www.vibesparking.com/en/blog/ai/claude-code/cui/2025-08-05-browser-to-claude-code-cui/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/claude-code/cui/2025-08-05-browser-to-claude-code-cui/</guid><pubDate>Tue, 05 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- [![Tech Flat Ui Job Stock Illustrations – 51 Tech Flat Ui Job Stock ...](https://tse2.mm.bing.net/th/id/OIP.Wt4abrlVhfIKTiCwdREZJgHaFa?r=0\&amp;pid=Api)](https://www.dreamstime.com/illustration/tech-flat-ui-job.html)
-
-**Quick Overview:** --&gt;
-&lt;p&gt;Claude Code Web UI (abbreviated as &lt;strong&gt;CUI&lt;/strong&gt;) brings Claude Code from the terminal into your browser with a modern interface, parallel multi-session support, push notifications, and voice dictation. Simply run &lt;code dir=&quot;auto&quot;&gt;npx cui-server&lt;/code&gt; to launch, then log in to continue your AI programming tasks from any device.&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;&lt;a href=&quot;#introduction&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Introduction”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;Still stuck having “black screen conversations” with Claude in the command line? &lt;strong&gt;CUI upgrades your AI programming experience to a cloud IDE&lt;/strong&gt;, letting you write prompts, run agents, and receive notifications right in your browser, with mobile device continuity support.&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;key-features&quot;&gt;Key Features&lt;/h2&gt;&lt;a href=&quot;#key-features&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Key Features”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h3 id=&quot;-modern-design&quot;&gt;✨ Modern Design&lt;/h3&gt;&lt;a href=&quot;#-modern-design&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “✨ Modern Design”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;Built with React + TypeScript, responsive interface for desktop and mobile.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Auto-completion&lt;/strong&gt; consistent with CLI, zero learning curve.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h3 id=&quot;-parallel-background-agents&quot;&gt;🚀 Parallel Background Agents&lt;/h3&gt;&lt;a href=&quot;#-parallel-background-agents&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “🚀 Parallel Background Agents”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;Supports &lt;strong&gt;simultaneous multi-task streaming output&lt;/strong&gt;, no more queuing for complex projects.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h3 id=&quot;-task-management&quot;&gt;📂 Task Management&lt;/h3&gt;&lt;a href=&quot;#-task-management&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “📂 Task Management”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;CUI scans &lt;code dir=&quot;auto&quot;&gt;~/.claude/&lt;/code&gt; history, centrally displays tasks with one-click &lt;strong&gt;Resume / Fork / Archive&lt;/strong&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h3 id=&quot;-push-notifications&quot;&gt;🔔 Push Notifications&lt;/h3&gt;&lt;a href=&quot;#-push-notifications&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “🔔 Push Notifications”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;Integrated &lt;strong&gt;ntfy&lt;/strong&gt;, instant alerts when tasks complete or await authorization.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h3 id=&quot;️-gemini-25-flash-dictation&quot;&gt;🎙️ Gemini 2.5 Flash Dictation&lt;/h3&gt;&lt;a href=&quot;#️-gemini-25-flash-dictation&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “🎙️ Gemini 2.5 Flash Dictation”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;Connected to Google Gemini API, fast and accurate long-sentence voice-to-text.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;three-step-quick-installation&quot;&gt;Three-Step Quick Installation&lt;/h2&gt;&lt;a href=&quot;#three-step-quick-installation&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Three-Step Quick Installation”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Environment Setup&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Node.js ≥ 20.19.0.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;One-Click Launch&lt;/strong&gt;&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;npx&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;cui-server&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# Or install globally: npm i -g cui-server&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;p&gt;The terminal will output a &lt;code dir=&quot;auto&quot;&gt;#token&lt;/code&gt; string, copy it for use.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Browser Access&lt;/strong&gt;
-Open &lt;code dir=&quot;auto&quot;&gt;http://localhost:3001/#&amp;#x3C;token&gt;&lt;/code&gt; to log in.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;TIP:&lt;/strong&gt;
-Need remote access? Set &lt;code dir=&quot;auto&quot;&gt;server.host&lt;/code&gt; to &lt;code dir=&quot;auto&quot;&gt;0.0.0.0&lt;/code&gt; in &lt;code dir=&quot;auto&quot;&gt;~/.cui/config.json&lt;/code&gt;, or use &lt;code dir=&quot;auto&quot;&gt;--host / --port&lt;/code&gt; parameters, then pair with Caddy reverse proxy to upgrade to HTTPS.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;advanced-usage&quot;&gt;Advanced Usage&lt;/h2&gt;&lt;a href=&quot;#advanced-usage&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Advanced Usage”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h3 id=&quot;parallel-multi-tasking&quot;&gt;Parallel Multi-Tasking&lt;/h3&gt;&lt;a href=&quot;#parallel-multi-tasking&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Parallel Multi-Tasking”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;Check running sessions in the &lt;strong&gt;Tasks&lt;/strong&gt; tab; long tasks can run in the background after closing pages, no disconnection worries.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h3 id=&quot;chat-shortcuts&quot;&gt;Chat Shortcuts&lt;/h3&gt;&lt;a href=&quot;#chat-shortcuts&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Chat Shortcuts”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;/&lt;/code&gt; for commands, &lt;code dir=&quot;auto&quot;&gt;@&lt;/code&gt; for files, maintaining the same muscle memory as CLI.&lt;/li&gt;
-&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;⌘/Ctrl + Enter&lt;/code&gt; to send, space for new lines, small tricks to boost typing efficiency by 10%.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h3 id=&quot;voice-dictation&quot;&gt;Voice Dictation&lt;/h3&gt;&lt;a href=&quot;#voice-dictation&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Voice Dictation”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;Export &lt;code dir=&quot;auto&quot;&gt;GOOGLE_API_KEY&lt;/code&gt; in your system first, then restart the server to enable voice input.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h3 id=&quot;real-time-push&quot;&gt;Real-Time Push&lt;/h3&gt;&lt;a href=&quot;#real-time-push&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Real-Time Push”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;Install ntfy client on any device, subscribe to the same topic, get vibration alerts immediately when tasks finish, no more screen watching.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;&lt;a href=&quot;#conclusion&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Conclusion”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;CUI creates a “browser-visualized shell” for Claude Code’s capabilities, with lightweight installation + remote access + push ecosystem&lt;/strong&gt;, making AI programming as smooth as browsing the web. What pain points are you most excited to solve with it? Share in the comments!&lt;/p&gt;&lt;!-- 
----
-
-## 🎯 Discussion Questions
-
-1. How would you design workflows if CUI integrated with your own CI/CD pipeline?
-2. Can voice dictation + prompt writing improve requirement communication efficiency?
-
----
-
-## Multi-Language Titles &amp; Slugs
-
-| # | 简体中文                                  | English                                                  | 繁體                              | 日本語                              | Français                                                        | Español                                                | Português                                               | slug                       |
-| - | ------------------------------------- | -------------------------------------------------------- | ------------------------------- | -------------------------------- | --------------------------------------------------------------- | ------------------------------------------------------ | ------------------------------------------------------- | -------------------------- |
-| 1 | **&quot;浏览器秒变 Claude Code：CUI 全攻略&quot;**       | &quot;Turn Your Browser into Claude Code: The CUI Guide&quot;      | 瀏覽器秒變 Claude Code：CUI 全攻略       | ブラウザで Claude Code！CUI 徹底ガイド      | Transformez votre navigateur en Claude Code : guide CUI         | Convierte tu navegador en Claude Code: guía de CUI     | Transforme seu navegador em Claude Code: guia do CUI    | browser-to-claude-code-cui |
-| 2 | **&quot;用 CUI 打造多任务 AI 编程工作台&quot;**            | &quot;Build a Multi-Task AI Workbench with CUI&quot;               | 用 CUI 打造多任務 AI 編程工作台            | CUI で作るマルチタスク AI 作業台             | Créez un poste AI multitâche avec CUI                           | Crea un banco de trabajo AI multitarea con CUI         | Monte uma bancada AI multitarefa com CUI                | cui-multitask-ai-workbench |
-| 3 | **&quot;一条 npx 指令，解锁 Claude Code Web UI&quot;** | &quot;One npx to Rule Them All: Unlocking Claude Code Web UI&quot; | 一條 npx 指令，解鎖 Claude Code Web UI | 1 行 npx で Claude Code Web UI を解放 | Un npx pour tout faire : déverrouiller le Web UI de Claude Code | Un npx y entra en juego: abre la Web UI de Claude Code | Um npx para tudo: desbloqueando a Web UI do Claude Code | unlock-claude-code-webui   |
-
----
-
-## Social Media Comments (Pick Any)
-
-1. **&quot;Just used CUI to bring Claude into the browser, tasks run in background with push notifications, amazing!&quot;**
-2. **&quot;One `npx cui-server` command, even mobile can write prompts, efficiency+++++!&quot;**
-3. **&quot;Voice dictation + parallel multi-sessions, Claude became a cloud assistant, highly recommend~&quot;**
-
-[1]: https://github.com/wbopan/cui?utm_source=chatgpt.com &quot;wbopan/cui: A web UI for Claude Code agents&quot;
-[2]: https://github.com/BMPixel/cui?utm_source=chatgpt.com &quot;BMPixel/cui: A web UI for Claude Code agents&quot;
-[3]: https://x.com/jeffjose/status/1949874216230408366?utm_source=chatgpt.com &quot;Jeffrey Jose - X&quot;
-[4]: https://www.anthropic.com/engineering/claude-code-best-practices?utm_source=chatgpt.com &quot;Claude Code: Best practices for agentic coding&quot;
-[5]: https://docs.ntfy.sh/subscribe/cli/?utm_source=chatgpt.com &quot;From the CLI - ntfy&quot;
-[6]: https://ntfy.sh/?utm_source=chatgpt.com &quot;ntfy.sh | Send push notifications to your phone via PUT/POST&quot;
-[7]: https://ai.google.dev/gemini-api/docs/models?utm_source=chatgpt.com &quot;Gemini models | Gemini API | Google AI for Developers&quot;
-[8]: https://cloud.google.com/vertex-ai/generative-ai/docs/models/gemini/2-5-flash?utm_source=chatgpt.com &quot;Gemini 2.5 Flash | Generative AI on Vertex AI&quot;
-[9]: https://github.com/siteboon/claudecodeui?utm_source=chatgpt.com &quot;siteboon/claudecodeui: Use Claude Code on mobile and ...&quot;
-[10]: https://stackoverflow.com/questions/51026532/json-server-cannot-access-via-local-ip?utm_source=chatgpt.com &quot;json-server cannot access via local IP&quot; --&gt;</content:encoded><category>AI Agent</category><category>Claude Code</category></item></channel></rss>
+[5]: https://zenn.dev/masato13/articles/3cf47f65afcc05?utm_source=chatgpt.com &quot;CursorでClaude Codeのカスタムスラッシュコマンドを瞬時に ...&quot; --&gt;</content:encoded><category>AI Agent</category><category>Claude Code</category></item></channel></rss>
