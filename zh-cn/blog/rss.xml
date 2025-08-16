@@ -248,7 +248,189 @@
 [5]: https://www.theverge.com/news/672705/anthropic-claude-4-ai-ous-sonnet-availability?utm_source=chatgpt.com &quot;Anthropic&apos;s Claude 4 AI models are better at coding and reasoning&quot;
 [6]: https://aws.amazon.com/blogs/aws/claude-opus-4-anthropics-most-powerful-model-for-coding-is-now-in-amazon-bedrock/?utm_source=chatgpt.com &quot;Introducing Claude 4 in Amazon Bedrock, the most powerful ...&quot;
 [7]: https://github.com/codingworkflow/claude-code-api?utm_source=chatgpt.com &quot;codingworkflow/claude-code-api&quot;
-[8]: https://www.reddit.com/r/LocalLLaMA/comments/1mfuu40/gatewayproxy_for_claudecode_to_openai_api/?utm_source=chatgpt.com &quot;Gateway/Proxy for Claude-Code to OpenAI API compatible.&quot; --&gt;</content:encoded><category>Ki2API</category><category>Kiro</category></item><item><title>Claude Code 里养电子宠物 Tamagotchi，它居然会劝我别熬夜…</title><link>https://www.vibesparking.com/zh-cn/blog/ai/claude-code/tamagotchi/2025-08-15-tamagotchi-in-claude-code/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/claude-code/tamagotchi/2025-08-15-tamagotchi-in-claude-code/</guid><pubDate>Fri, 15 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # 把“电子宠物”塞进 Claude Code：这只 Tamagotchi，懂你的代码也懂你 --&gt;
+[8]: https://www.reddit.com/r/LocalLLaMA/comments/1mfuu40/gatewayproxy_for_claudecode_to_openai_api/?utm_source=chatgpt.com &quot;Gateway/Proxy for Claude-Code to OpenAI API compatible.&quot; --&gt;</content:encoded><category>Ki2API</category><category>Kiro</category></item><item><title>AI 提示词写作技巧 Two-Stepping 两步法，先生成，再优化</title><link>https://www.vibesparking.com/zh-cn/blog/ai/prompt-engineering/2025-08-15-two-stepping-one-prompt-double-output/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/prompt-engineering/2025-08-15-two-stepping-one-prompt-double-output/</guid><pubDate>Fri, 15 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # AI 提示词写作技巧 Two-Stepping 两步法，先生成，再优化 --&gt;
+&lt;p&gt;先让 AI 正常完成任务；&lt;strong&gt;再&lt;/strong&gt;在同一条提示里，让它立刻对&lt;strong&gt;刚产出的内容&lt;/strong&gt;做总结、润色、重构或自检。&lt;strong&gt;一次提示，两次价值。&lt;/strong&gt;
+Two-Stepping 由创作者 Rob Lennon 在公开帖子与课程中持续推广，被许多内容与产品团队采纳。其核心是“先生成，后优化”的顺序化思维。&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;为什么两步法这么管用&quot;&gt;为什么“两步法”这么管用？&lt;/h2&gt;&lt;a href=&quot;#为什么两步法这么管用&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “为什么“两步法”这么管用？”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;1）降低认知负担。&lt;/strong&gt; 一口气塞太多要求，模型会分心、拉扯、冲突。拆成“先做事，再做评审”，更稳。这个思路与学术界的&lt;strong&gt;自我反馈→再改写&lt;/strong&gt;路线同源：先出初稿，再由模型给反馈并据此修订，多项任务上都有显著提升（研究报告给出的区间在 &lt;strong&gt;5%–40%&lt;/strong&gt;）。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2）让模型“看见自己”，再优化。&lt;/strong&gt; 模型把想法写出来之后，才有“可批判”的对象；基于成品来评审，质量往往更高。类似研究中常见的&lt;strong&gt;两阶段流程&lt;/strong&gt;：先产出再回答/复核，也被证明更稳定。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;3）一次提示解决“产出 + 加工”。&lt;/strong&gt; 把“写→改→压缩→转换风格”串成&lt;strong&gt;同一条&lt;/strong&gt;提示，减少往返，保持上下文一致。Rob Lennon 给出的 Two-Stepping 概念与课程实践，也强调把复杂任务切成&lt;strong&gt;可执行的连续步骤&lt;/strong&gt;。&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;适用场景越加工型越合适&quot;&gt;适用场景（越“加工型”，越合适）&lt;/h2&gt;&lt;a href=&quot;#适用场景越加工型越合适&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “适用场景（越“加工型”，越合适）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;内容创作&lt;/strong&gt;：长文 → 50 字导语 / 3 要点 / 多平台改写。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;产品与文档&lt;/strong&gt;：PRD → 风险清单 / 评审问题 / 验收标准。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;编程协作&lt;/strong&gt;：生成函数 → 单测 + 边界条件 + 自检报告。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;数据分析&lt;/strong&gt;：分析全文 → 结论表 / 决策建议 / 复盘要点。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;营销增长&lt;/strong&gt;：广告脚本 → 异议处理版 / A/B 文案 / 平台适配。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;背后逻辑与“自我精炼（Self-Refine）”一致：&lt;strong&gt;生成—反馈—再生成&lt;/strong&gt;的闭环，经验证能稳步提升结果质量。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;直接可用4-份两步法超级模板复制即可&quot;&gt;直接可用：4 份「两步法」超级模板（复制即可）&lt;/h2&gt;&lt;a href=&quot;#直接可用4-份两步法超级模板复制即可&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “直接可用：4 份「两步法」超级模板（复制即可）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;通用版（任何任务都能套）&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;首先&lt;/strong&gt;，按以下要求完成任务：
+– 目标：{你要的结果}
+– 受众：{谁看}
+– 限制：{长度/风格/禁用点}
+– 输出格式：{结构/字段}
+&lt;strong&gt;然后&lt;/strong&gt;，基于你刚输出的内容，做二次加工：
+– 提炼 3–5 个要点 + 1 句金句
+– 指出 3 个可改进点并给出改进后的完整版本
+– 给出一个「更短、更口语化」的版本（≤ {字数}）&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;内容创作版（长文 → 标题矩阵 + 社媒卡片）&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;先写&lt;/strong&gt;一篇 {主题} 的文章，包含：引言/3–5 小节/结语/行动号召。
+&lt;strong&gt;再&lt;/strong&gt;输出二次成果：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;10 个可转化标题（含情绪词/数字/承诺），&lt;/li&gt;
+&lt;li&gt;50 字导语 + 3 条要点，&lt;/li&gt;
+&lt;li&gt;为 {平台} 生成 2 条社媒贴文。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;编程版（函数 → 单测 + 自检报告）&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;先实现&lt;/strong&gt; {函数/模块}，要求：可读性、异常处理、注释齐全。
+&lt;strong&gt;随后&lt;/strong&gt;：
+– 生成覆盖率高的单测（列出边界用例与期望结果）
+– 给出复杂度评估与 3 点重构建议，并给出改后代码
+– 输出一次「自检报告」（缺陷、风险、改进点）&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;分析决策版（洞察 → 决策就绪）&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;先完成&lt;/strong&gt;对 {数据/方案/竞品} 的分析，输出结构化结论。
+&lt;strong&gt;再&lt;/strong&gt;给出：
+– 决策速览（TL;DR 100 字）
+– 对高层的 3 个建议与落地清单（负责人、里程碑、指标）
+– 可能的反对意见与反驳要点&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;小贴士：&lt;strong&gt;把“然后”部分当成“编辑/QA 角色描述”来写&lt;/strong&gt;，你在演什么角色，模型就会朝那个标准去改。这个做法与“两阶段 prompting/自反馈迭代”的研究结论是对齐的。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;实战示例贴近你的日常&quot;&gt;实战示例（贴近你的日常）&lt;/h2&gt;&lt;a href=&quot;#实战示例贴近你的日常&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “实战示例（贴近你的日常）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;1）公众号排版流水线&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;先写&lt;/strong&gt; 1200–1500 字正文（有小标题、有粗体）。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;再产出&lt;/strong&gt; 50 字导语、3 条要点、结尾 CTA、10 个标题备选、&lt;strong&gt;朋友圈一句话&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;结果：&lt;strong&gt;一次提示，完成稿+发布素材&lt;/strong&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;2）前端小功能落地&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;先&lt;/strong&gt;写一个日期选择器组件。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;再&lt;/strong&gt;自动生成单测、列边界条件（时区/闰年），附复杂度与重构建议。&lt;/li&gt;
+&lt;li&gt;结果：&lt;strong&gt;代码+测试+评审意见&lt;/strong&gt;一条龙。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;3）PRD 到任务分解&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;先&lt;/strong&gt;输出完整 PRD。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;再&lt;/strong&gt;产出交付物清单、里程碑、风险与应对、验收标准。&lt;/li&gt;
+&lt;li&gt;结果：&lt;strong&gt;PRD 即计划&lt;/strong&gt;，团队直接开干。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;注意事项踩坑清单&quot;&gt;注意事项（踩坑清单）&lt;/h2&gt;&lt;a href=&quot;#注意事项踩坑清单&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “注意事项（踩坑清单）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;防“放水”&lt;/strong&gt;：有时模型会故意把第一版写差，第二步“显著提升”。&lt;strong&gt;要点&lt;/strong&gt;：第一步明确&lt;strong&gt;硬性指标&lt;/strong&gt;（长度、格式、约束），并要求“&lt;strong&gt;两版都必须可直接使用&lt;/strong&gt;”。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;重要任务建议真·两步&lt;/strong&gt;：拆成&lt;strong&gt;两条消息&lt;/strong&gt;更稳，尤其是合规、合同、风控类场景；这与自我精炼类研究中的&lt;strong&gt;多轮迭代&lt;/strong&gt;经验一致。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;角色切换&lt;/strong&gt;：第二步明确“你是&lt;strong&gt;编辑/评审/QA&lt;/strong&gt;”，并给标准。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;控制篇幅与格式&lt;/strong&gt;：给出&lt;strong&gt;字数上限/表格字段&lt;/strong&gt;，避免跑题。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;可观测性&lt;/strong&gt;：要求“&lt;strong&gt;指出改变了什么&lt;/strong&gt;”，利于复审与对比。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;别全靠它&lt;/strong&gt;：涉及&lt;strong&gt;时效/事实&lt;/strong&gt;的内容，仍需你做外部校对。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;进阶把两步法变成团队的按钮&quot;&gt;进阶：把“两步法”变成团队的“按钮”&lt;/h2&gt;&lt;a href=&quot;#进阶把两步法变成团队的按钮&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “进阶：把“两步法”变成团队的“按钮””&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;做成 Snippet/Slash 命令&lt;/strong&gt;：/two-step-content、/two-step-code、/two-step-prd。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;预设风格与禁区&lt;/strong&gt;：在提示里加入“&lt;strong&gt;Disallowed/Allowed&lt;/strong&gt;”区块，持续稳定输出。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;与评审 SOP 绑定&lt;/strong&gt;：让“第二步”永远输出&lt;strong&gt;要点+改进+可执行清单&lt;/strong&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;小结&quot;&gt;小结&lt;/h2&gt;&lt;a href=&quot;#小结&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “小结”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Two-Stepping 的本质，是把“做事”和“做校对”打包成交付。&lt;/strong&gt;
+它兼顾速度与质量，适合内容、产品、研发、分析等所有“先产出、再加工”的工作流。
+&lt;strong&gt;一次提示，两次收成。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;你觉得呢？&lt;/strong&gt; 你在哪个环节最想用“两步法”？评论区聊聊。&lt;/p&gt;&lt;!-- 
+---
+
+# 3 个爆款标题（含多语言 &amp; slug）
+
+1. **中文**：两步法提示：一次提示，两次收成
+   **English**: Two-Stepping Prompts: One Prompt, Double Output
+   **繁體**：兩步法提示：一條提示，兩倍產出
+   **日本語**：ツーステップ・プロンプト：1回の指示で2倍の成果
+   **Français** : Two-Stepping : un prompt, deux livrables
+   **Español**: Two-Stepping: un prompt, dos entregables
+   **Português**: Two-Stepping: um prompt, dois resultados
+   **slug**: two-stepping-one-prompt-double-output
+
+2. **中文**：先生成，再优化：把 AI 变成你的“写作搭档”
+   **English**: Draft, Then Upgrade: Turn AI into Your Co-Editor
+   **繁體**：先產出，再優化：把 AI 變成你的共筆編輯
+   **日本語**：先に作成、次に磨く：AIを共同編集者に
+   **Français** : D’abord rédiger, puis améliorer
+   **Español**: Primero redacta, luego mejora
+   **Português**: Primeiro gera, depois lapida
+   **slug**: draft-then-upgrade-ai-co-editor
+
+3. **中文**：把“产出+校对”装进一条提示：Two-Stepping 全攻略
+   **English**: Ship + QA in One Prompt: The Two-Stepping Playbook
+   **繁體**：把「產出+校對」裝進一條提示
+   **日本語**：制作と校正を一つのプロンプトに
+   **Français** : Produire + relire en un seul prompt
+   **Español**: Producción + QA en un solo prompt
+   **Português**: Entrega + QA em um único prompt
+   **slug**: two-stepping-complete-playbook
+
+---
+
+# 配图（插画风｜2:1｜英文文案，不含中文）
+
+**封面图 Prompt**
+“An illustration of a writer handing a first draft to an editor version of the same person across a conveyor belt labeled ‘First → Then’; clean minimal lines, modern pastel palette, wide 2:1 composition, text-free.”
+
+**关键章节配图 1（原稿→要点）**
+“Two stacked sheets morphing into bullet points and a headline tag; airy layout, soft shadows, pastel colors, 2:1, text-free.”
+
+**关键章节配图 2（代码→单测）**
+“Code block transforming into a checklist and a test badge icon; flat vector, gentle gradients, modern pastel, 2:1, text-free.”
+
+**关键章节配图 3（分析→决策卡）**
+“Charts flowing into a decision card with OK/Nope toggles; minimal line art, pastel tones, 2:1, text-free.”
+
+---
+
+# 朋友圈/评论区 3 条金句
+
+1. **“一条提示，干完写作+编辑，两步法真是省心省电——谁用谁知道。”**
+2. **“先让 AI 出活，再让它挑毛病。效率翻倍，质量也不掉线。”**
+3. **“我把 PRD 的二次加工全交给 ‘Then’ 了，团队开会直接进入执行。”**
+
+---
+
+## 参考与延伸阅读
+
+* Rob Lennon 于社媒帖子中示范 Two-Stepping 的做法与思路；其课程也将该技巧纳入体系化训练。
+* Self-Refine：让模型**先生成，再自我反馈与改写**，多任务上取得显著提升（含 5%–40% 提升区间与代码任务案例）。
+* “两阶段”提示思路在研究中的运用：先生成中间结果，再进行回答/聚合，稳定性更好。
+
+—
+
+需要我把上面的模板**替换成你的业务场景**（比如“技术写作/运营方案/增长投放/代码评审”）并给出**可直接粘贴**的版本吗？我可以顺手**扩写成 SOP**。你满意这版吗，要不要我再补几个真实案例？
+
+[1]: https://www.linkedin.com/posts/rob-lennon_if-your-prompts-arent-quite-giving-you-the-activity-7186140307258781696-Y_Tg?utm_source=chatgpt.com &quot;Rob Lennon&apos;s Post&quot;
+[2]: https://gptpromptcourse.com/?utm_source=chatgpt.com &quot;AI Prompt Engineering Masterclass&quot;
+[3]: https://arxiv.org/abs/2303.17651?utm_source=chatgpt.com &quot;Self-Refine: Iterative Refinement with Self-Feedback&quot;
+[4]: https://openreview.net/pdf?id=bhUPJnS2g0X&amp;utm_source=chatgpt.com &quot;ask me anything: a simple strategy for&quot;
+[5]: https://mastery.lennonlabs.com/?utm_source=chatgpt.com &quot;Prompting Mastery by Rob Lennon&quot;
+[6]: https://selfrefine.info/?utm_source=chatgpt.com &quot;Self-Refine: Iterative Refinement with Self-Feedback&quot;
+[7]: https://openreview.net/forum?id=S37hOerQLB&amp;utm_source=chatgpt.com &quot;Self-Refine: Iterative Refinement with Self-Feedback&quot;
+[8]: https://arxiv.org/pdf/2303.17651?utm_source=chatgpt.com &quot;Self-Refine: Iterative Refinement with Self-Feedback&quot;
+[9]: https://www.linkedin.com/posts/rob-lennon_getting-strict-with-your-ai-doesnt-make-activity-7196185900429553664-6Q-b?utm_source=chatgpt.com &quot;Getting strict with your AI doesn&apos;t make you a bad person.&quot; --&gt;</content:encoded><category>Prompt Engineering</category></item><item><title>Claude Code 里养电子宠物 Tamagotchi，它居然会劝我别熬夜…</title><link>https://www.vibesparking.com/zh-cn/blog/ai/claude-code/tamagotchi/2025-08-15-tamagotchi-in-claude-code/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/claude-code/tamagotchi/2025-08-15-tamagotchi-in-claude-code/</guid><pubDate>Fri, 15 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # 把“电子宠物”塞进 Claude Code：这只 Tamagotchi，懂你的代码也懂你 --&gt;
 &lt;p&gt;&lt;strong&gt;一个有点离谱、却很上头的小玩具。&lt;/strong&gt;
 它住在 Claude Code 的状态栏里，会呼吸，会撒娇，会吐槽你的 TODO。你写久了它会饿，你调试崩了它会安慰你，还会提醒你去喝水吃饭。&lt;/p&gt;
 &lt;hr&gt;
@@ -2777,243 +2959,4 @@ tmux/screen 想“模拟”这些能力，很费力也不稳。&lt;/li&gt;
 &lt;hr&gt;
 &lt;div&gt;&lt;h3 id=&quot;在-claude-code-中使用&quot;&gt;在 Claude Code 中使用&lt;/h3&gt;&lt;a href=&quot;#在-claude-code-中使用&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “在 Claude Code 中使用”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
 &lt;p&gt;在 Claude Code 中使用 &lt;code dir=&quot;auto&quot;&gt;/cursor-gpt-5&lt;/code&gt; 命令，Claude 会自动识别并调用相应的子代理进行处理。&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;plaintext&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;&gt; /cursor-gpt-5 &amp;#x3C;TASK and CONTEXT&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;button title=&quot;Copy to clipboard&quot; data-copied=&quot;Copied!&quot; data-code=&quot;&quot;&gt; /cursor-gpt-5 &lt;/button&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;</content:encoded><category>GPT-5</category><category>Claude Code</category><category>Cursor Agent</category></item><item><title>AI 产品推荐榜（截至 2025/8/9）：这 25 款最值得你马上上手</title><link>https://www.vibesparking.com/zh-cn/blog/ai/2025-08-09-ai-power-list-2025-top-25-tools/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/2025-08-09-ai-power-list-2025-top-25-tools/</guid><pubDate>Sat, 09 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # AI 产品推荐榜（截至 2025/8/9）：这 25 款最值得你马上上手 --&gt;
-&lt;blockquote&gt;
-&lt;p&gt;这篇是给&lt;strong&gt;做产品、写代码、做设计&lt;/strong&gt;的你写的上手清单。
-我把最新一版「AI 产品推荐榜」按&lt;strong&gt;用途场景&lt;/strong&gt;拆开，每一类只说&lt;strong&gt;为什么选它 + 怎么用它&lt;/strong&gt;。
-别担心长篇报告，看完就能直接用。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;div&gt;&lt;h1 id=&quot;一图速览各类场景怎么选&quot;&gt;一图速览：各类场景怎么选？&lt;/h1&gt;&lt;a href=&quot;#一图速览各类场景怎么选&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “一图速览：各类场景怎么选？”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;写方案/带团队&lt;/strong&gt;：GPT-5 / Claude Opus 4.1&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;设计物料&lt;/strong&gt;：Midjourney + Ideogram（排字）+ Recraft（矢量）&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;广告/玩法视频&lt;/strong&gt;：Sora / Veo 3 / Runway Gen-3&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;配乐/歌声&lt;/strong&gt;：Suno 4.5+ / Eleven Music&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;字幕/会议纪要&lt;/strong&gt;：Whisper → Dify 工作流&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;多模型接入&lt;/strong&gt;：OpenRouter + Replicate/Fal&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;自动化&lt;/strong&gt;：n8n / Coze / Opal&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;本地推理/私有化&lt;/strong&gt;：DeepSeek-R1、Wan 2.2、olmOCR&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;引言今年的-ai-怎么上手更快回报更高&quot;&gt;引言：今年的 AI 怎么“上手更快、回报更高”？&lt;/h2&gt;&lt;a href=&quot;#引言今年的-ai-怎么上手更快回报更高&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “引言：今年的 AI 怎么“上手更快、回报更高”？”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;两句结论：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;通用大模型更强&lt;/strong&gt;：GPT-5、Claude Opus 4.1、Qwen3、Kimi K2 等在推理、前端生成与 Agent 任务上明显提升。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;垂直工具更成熟&lt;/strong&gt;：视频（Sora、Veo 3、Runway Gen-3）、音乐（Suno 4.5+、Eleven Music）、设计（Midjourney、Ideogram、Recraft）已经&lt;strong&gt;够稳、够快、够好看&lt;/strong&gt;。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h1 id=&quot;通用大模型做难题带项目当脑暴合伙人&quot;&gt;通用大模型（做难题、带项目、当“脑暴合伙人”）&lt;/h1&gt;&lt;a href=&quot;#通用大模型做难题带项目当脑暴合伙人&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “通用大模型（做难题、带项目、当“脑暴合伙人”）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;1) GPT-5（首选）&lt;/strong&gt;
-前端/多模态编码能力很猛，能一把生成&lt;strong&gt;可上线的响应式界面&lt;/strong&gt;，对排版与留白的审美更准。更适合把“草图想法”直接变成&lt;strong&gt;能点能点的页面/小站&lt;/strong&gt;。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;上手建议&lt;/strong&gt;：给出 Figma 截图 + 交互说明，要求输出 &lt;code dir=&quot;auto&quot;&gt;Next.js + Tailwind + shadcn/ui&lt;/code&gt; 可运行项目。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;2) Claude Opus 4.1（代码与 Agent 任务）&lt;/strong&gt;
-强化&lt;strong&gt;真实世界编码与多步骤推理&lt;/strong&gt;；在 Claude Code 里可直接跑工作流，适合“&lt;strong&gt;先规划、再执行&lt;/strong&gt;”的工程流。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;3) Qwen3（中文生态 + 本地/云灵活）&lt;/strong&gt;
-旗舰模型在代码、数学和通用能力上对齐一线水准；阿里生态下&lt;strong&gt;易接入企业应用&lt;/strong&gt;。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;4) DeepSeek-R1（性价比与开源氛围）&lt;/strong&gt;
-公开权重/许可更友好，强化&lt;strong&gt;RL 推理&lt;/strong&gt;，适合做&lt;strong&gt;低成本自建推理服务&lt;/strong&gt;与蒸馏。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;5) Kimi K2 / GLM-4.5 / Grok 4（特色补位）&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;K2&lt;/strong&gt;：大规模 MoE、长文本与工具调用增强；中文场景顺手。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;GLM-4.5&lt;/strong&gt;：官方强调&lt;strong&gt;推理、代码与 Agent&lt;/strong&gt;场景。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Grok 4&lt;/strong&gt;：原生工具使用 + 实时搜索场景强。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;想在&lt;strong&gt;本地&lt;/strong&gt;做实验？关注 OpenAI 发布的 &lt;strong&gt;GPT-OSS-120B/20B&lt;/strong&gt; 开源权重，适合高端本地机推。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h1 id=&quot;文生图做海报kvlogo社媒物料&quot;&gt;文生图（做海报、KV、Logo、社媒物料）&lt;/h1&gt;&lt;a href=&quot;#文生图做海报kvlogo社媒物料&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “文生图（做海报、KV、Logo、社媒物料）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;Midjourney&lt;/strong&gt;：质感与风格化第一梯队，连&lt;strong&gt;细节光影&lt;/strong&gt;都稳。
-&lt;strong&gt;Ideogram&lt;/strong&gt;：&lt;strong&gt;排版/文字可读性&lt;/strong&gt;强，做 KV、Banner、海报标题很省心。
-&lt;strong&gt;Recraft&lt;/strong&gt;：一键出&lt;strong&gt;可编辑矢量&lt;/strong&gt;与扁平插画，品牌一致性好维护。
-&lt;strong&gt;Qwen-Image&lt;/strong&gt;：&lt;strong&gt;中文文本渲染&lt;/strong&gt;与&lt;strong&gt;精修编辑&lt;/strong&gt;能力强，适合国内场景。
-&lt;strong&gt;Imagen&lt;/strong&gt;（Google）：写实度、排字与安全水印做得更全。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;实用提示&lt;/strong&gt;：给 3 条风格线 + 1 条禁忌线（如“不要过度锐化”），要求出&lt;strong&gt;分层 PSD/SVG&lt;/strong&gt; 便于后期。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h1 id=&quot;文生视频广告剪辑应用商店预告玩法演示&quot;&gt;文生视频（广告剪辑、应用商店预告、玩法演示）&lt;/h1&gt;&lt;a href=&quot;#文生视频广告剪辑应用商店预告玩法演示&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “文生视频（广告剪辑、应用商店预告、玩法演示）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;Sora&lt;/strong&gt;：画面质感 + 物理一致性强，已可生成&lt;strong&gt;20 秒 1080p&lt;/strong&gt;并支持二次编辑。适合&lt;strong&gt;概念片/玩法演示&lt;/strong&gt;。
-&lt;strong&gt;Runway Gen-3&lt;/strong&gt;：&lt;strong&gt;提示对齐&lt;/strong&gt;与运动连贯更稳，商业可用度高。
-&lt;strong&gt;Luma Dream Machine（Ray2）&lt;/strong&gt;：运动摄影视觉出片快，&lt;strong&gt;订阅内即可用&lt;/strong&gt;。
-&lt;strong&gt;Veo 3&lt;/strong&gt;（Google）：&lt;strong&gt;原生音频&lt;/strong&gt;、口型同步和&lt;strong&gt;图生视频&lt;/strong&gt;能力上线到 Gemini/Vertex。
-&lt;strong&gt;Wan 2.2&lt;/strong&gt;：国内外开源可玩度高，适合&lt;strong&gt;本地/云混合&lt;/strong&gt;部署探索。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;落地建议&lt;/strong&gt;：把脚本拆成&lt;strong&gt;镜头表&lt;/strong&gt;（景别/时长/主体/镜头运动），逐镜生成，再用 Runway/CapCut 拼接。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h1 id=&quot;ai-音乐与声音游戏音轨短视频-bgm播客片头&quot;&gt;AI 音乐与声音（游戏音轨、短视频 BGM、播客片头）&lt;/h1&gt;&lt;a href=&quot;#ai-音乐与声音游戏音轨短视频-bgm播客片头&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “AI 音乐与声音（游戏音轨、短视频 BGM、播客片头）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;Suno v4.5+&lt;/strong&gt;：多风格融合、声线更真实，新增“&lt;strong&gt;加人声/加伴奏/Inspire&lt;/strong&gt;”等制作级功能。
-&lt;strong&gt;Eleven Music&lt;/strong&gt;：&lt;strong&gt;全文商用&lt;/strong&gt;定位+与 Merlin/Kobalt 的授权合作，适合品牌与商业视频配乐。
-&lt;strong&gt;Udio&lt;/strong&gt;：人声情感细腻、易上手，做&lt;strong&gt;抖音/YouTube&lt;/strong&gt;素材很快。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;工作流&lt;/strong&gt;：先用 Suno/Eleven 给 Demo，锁定&lt;strong&gt;BPM/情绪曲线&lt;/strong&gt;后再迭代歌词与配器。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h1 id=&quot;语音合成--识别旁白配音字幕笔记&quot;&gt;语音合成 &amp;#x26; 识别（旁白/配音/字幕/笔记）&lt;/h1&gt;&lt;a href=&quot;#语音合成--识别旁白配音字幕笔记&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “语音合成 &amp;#x26; 识别（旁白/配音/字幕/笔记）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;ElevenLabs TTS&lt;/strong&gt;：70+ 语言、情感控制细腻，有成熟 API。
-&lt;strong&gt;Whisper&lt;/strong&gt;：开源 ASR 老将，生态有 &lt;code dir=&quot;auto&quot;&gt;whisper.cpp / faster-whisper&lt;/code&gt; 等高性能实现；&lt;strong&gt;低成本本地化&lt;/strong&gt;首选。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;高风险行业（医疗/法务）请&lt;strong&gt;人工校对&lt;/strong&gt;，避免误识问题。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h1 id=&quot;开发者工具写代码跑代理接多家模型&quot;&gt;开发者工具（写代码、跑代理、接多家模型）&lt;/h1&gt;&lt;a href=&quot;#开发者工具写代码跑代理接多家模型&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “开发者工具（写代码、跑代理、接多家模型）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;Claude Code&lt;/strong&gt;：复杂任务&lt;strong&gt;规划-执行-复盘&lt;/strong&gt;一条龙，用“结构化对话”推进交付。
-&lt;strong&gt;Cursor / Copilot / Windsurf&lt;/strong&gt;：日常增量开发与多文件重构体验更成熟。
-&lt;strong&gt;Trae / Kiro / Gemini CLI&lt;/strong&gt;：团队协作、移动端或命令行工作流的&lt;strong&gt;轻量替代&lt;/strong&gt;可考虑。
-&lt;strong&gt;OpenRouter / Replicate / Fal&lt;/strong&gt;：一个入口连&lt;strong&gt;多家模型 &amp;#x26; 各类生成服务&lt;/strong&gt;，适合&lt;strong&gt;成本/性能动态路由&lt;/strong&gt;。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;落地套路&lt;/strong&gt;：前台用 Cursor/Claude Code，后台接 &lt;strong&gt;OpenRouter&lt;/strong&gt; 做&lt;strong&gt;多模型路由&lt;/strong&gt;，图片/视频特殊任务走 &lt;strong&gt;Replicate/Fal&lt;/strong&gt;。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h1 id=&quot;agent--工作流把人肉流程自动化&quot;&gt;Agent &amp;#x26; 工作流（把“人肉流程”自动化）&lt;/h1&gt;&lt;a href=&quot;#agent--工作流把人肉流程自动化&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Agent &amp;#x26; 工作流（把“人肉流程”自动化）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;Dify&lt;/strong&gt;（自建/企业就绪）：可视化&lt;strong&gt;Agent 工作流 + RAG + 观测&lt;/strong&gt;，云端/本地都能跑。
-&lt;strong&gt;n8n&lt;/strong&gt;：AI 节点 + 400+ 集成，&lt;strong&gt;把 CRM/工单/数据库&lt;/strong&gt;串起来；有大量模板。
-&lt;strong&gt;Coze&lt;/strong&gt;：&lt;strong&gt;零代码搭 Bot/小助手&lt;/strong&gt;，国内团队易推广到多平台。
-&lt;strong&gt;Opal（Google Labs）&lt;/strong&gt;：用自然语言拼&lt;strong&gt;迷你 AI 应用/流程&lt;/strong&gt;，适合产品经理做&lt;strong&gt;快速原型&lt;/strong&gt;。&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h1 id=&quot;ocr--文档结构化把-pdf-变成可学可查的-markdown&quot;&gt;OCR / 文档结构化（把 PDF 变成“可学可查”的 Markdown）&lt;/h1&gt;&lt;a href=&quot;#ocr--文档结构化把-pdf-变成可学可查的-markdown&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “OCR / 文档结构化（把 PDF 变成“可学可查”的 Markdown）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;olmOCR（AI2）&lt;/strong&gt;：表格/公式/手写支持，&lt;strong&gt;阅读顺序&lt;/strong&gt;保持好；可本地部署。
-&lt;strong&gt;MonkeyOCR&lt;/strong&gt;：提出 **SRR（结构-识别-关系）**范式，&lt;strong&gt;速度快、版面理解强&lt;/strong&gt;。
-&lt;strong&gt;OCRFlux&lt;/strong&gt;：轻量 3B，多页合并与复杂版式处理出色；有在线 Demo 与 GGUF。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;工作流建议&lt;/strong&gt;：PDF →（olmOCR/MonkeyOCR）→ Markdown →（Dify/Agent）做&lt;strong&gt;结构化抽取 + 知识库&lt;/strong&gt;。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h1 id=&quot;现在就动手&quot;&gt;现在就动手&lt;/h1&gt;&lt;a href=&quot;#现在就动手&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “现在就动手”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;别把这篇当收藏夹。
-挑&lt;strong&gt;一个场景 + 一个模型&lt;/strong&gt;，今天就跑一条小链路。
-&lt;strong&gt;一周后&lt;/strong&gt;再加一个环节，就是你的&lt;strong&gt;专属 AI 生产线&lt;/strong&gt;。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;你最想先落地哪一条？留言告诉我。&lt;/strong&gt;&lt;/p&gt;&lt;!-- 
----
-
-# 3 个可直接复用的实战脚本
-
-**A. “产品着陆页” 30 分钟上线**
-1）给 GPT-5：Figma 截图 + 功能文案 → 产出 `Next.js + Tailwind`。
-2）Ideogram 出 3 套 Hero 图含可读大标题。
-3）n8n 连表单 → Slack/飞书 通知。
-
-**B. “玩法演示” 短视频**
-脚本分镜 → Sora/Veo 3 逐镜生成 → Runway 合成/调色 → Eleven Music 配乐。
-
-**C. “PDF 知识库” 自动建**
-olmOCR/MonkeyOCR → Markdown → Dify RAG → 前端挂 Chat Widget。
-
----
-
-# 结语：现在就动手
-
-别把这篇当收藏夹。
-挑**一个场景 + 一个模型**，今天就跑一条小链路。
-**一周后**再加一个环节，就是你的**专属 AI 生产线**。
-
-**你最想先落地哪一条？留言告诉我。**
-
----
-
-## 题图与配图（插画风 2:1，图中文字用英文）
-
-* **封面图**：A desk with a laptop showing multiple colorful AI app icons connected by flowing lines; sticky notes say “Ship Today”, “10x Workflow”; clean gradient background.
-* **章节配图**
-  1）**通用大模型**：A thinker robot sketching UI wireframes turning into real code snippets on screen.
-  2）**文生视频**：Storyboards on the left → camera movement arrows → final cinematic frame on the right.
-  3）**工作流自动化**：Blocks “LLM / RAG / OCR / API” snapped together like Lego into a pipeline.
-
-（需要我直接生成这些插画吗？我可以一键出图。）
-
----
-
-## 多语言标题（3 组）
-
-1. **中文**：AI 产品推荐榜：这 25 款最值得你现在就用
-   **English**: The 2025 AI Power List: 25 Tools You Should Use Now
-   **繁體**：AI 產品推薦榜：這 25 款最值得你現在就用
-   **日本語**：2025年AI最強リスト：今すぐ使うべき25ツール
-   **Français**：Top IA 2025 : 25 outils à utiliser dès maintenant
-   **Español**: Lista IA 2025: 25 herramientas para usar ya
-   **Português**: Lista IA 2025: 25 ferramentas para usar agora
-   **slug**：ai-power-list-2025-top-25-tools
-
-2. **中文**：一文选型：模型、视频、音乐、IDE、工作流全覆盖
-   **English**: One Guide to Rule Them All: Models, Video, Music, IDEs &amp; Workflows
-   **繁體**：一文選型：模型、影片、音樂、IDE、流程全覆蓋
-   **日本語**：完全ガイド：モデル・動画・音楽・IDE・ワークフロー
-   **Français**：Guide unique : modèles, vidéo, musique, IDE et workflows
-   **Español**: Guía total: modelos, video, música, IDE y flujos
-   **Português**: Guia completo: modelos, vídeo, música, IDE e fluxos
-   **slug**：ultimate-ai-buyers-guide-2025
-
-3. **中文**：把 AI 变成生产力：我的高转化上手清单
-   **English**: Turn AI into Output: My High-ROI Starter Kit
-   **繁體**：把 AI 變成產能：高回報上手清單
-   **日本語**：AIを戦力化：高ROIスターターキット
-   **Français**：Passer à l’IA productive : kit de démarrage ROI
-   **Español**: Convierte IA en productividad: kit de inicio ROI
-   **Português**: IA em produtividade: kit de arranque ROI
-   **slug**：ai-to-output-starter-kit
-
----
-
-## 朋友圈/评论区 3 条示例
-
-1. **“清单收了！”** 今天就用 GPT-5 + Ideogram + n8n 搞个极简落地页，晚上再冲 Sora 小片。谁来一起打卡？
-2. **“救命好用”** Suno 4.5+ 做 BGM，Eleven Music 上商用，视频用 Runway 拼一把，效率起飞。
-3. **“企业同学看这”** Dify + OpenRouter 搭多模型路由，再接 Whisper/olmOCR，知识库一周能跑通。
-
----
-
-要不要我**按你的团队场景**，把上面的清单改成**可复制的一周落地计划**？或者你想先从哪一条开始，我帮你把**提示词+脚本+验收标准**都写好。需要的话，我也可以**直接生成封面和章节插画**。满意吗？需不需要我再**扩写几个行业版**（电商、教育、出海 App）？
-
-[1]: https://openai.com/index/introducing-gpt-5/?utm_source=chatgpt.com &quot;Introducing GPT-5&quot;
-[2]: https://www.anthropic.com/news/claude-opus-4-1?utm_source=chatgpt.com &quot;Claude Opus 4.1&quot;
-[3]: https://qwenlm.github.io/blog/qwen3/?utm_source=chatgpt.com &quot;Qwen3: Think Deeper, Act Faster | Qwen&quot;
-[4]: https://moonshotai.github.io/Kimi-K2/?utm_source=chatgpt.com &quot;Kimi K2: Open Agentic Intelligence - Moonshot AI&quot;
-[5]: https://openai.com/index/sora/?utm_source=chatgpt.com &quot;Sora: Creating video from text&quot;
-[6]: https://deepmind.google/models/veo/?utm_source=chatgpt.com &quot;Veo&quot;
-[7]: https://runwayml.com/research/introducing-gen-3-alpha?utm_source=chatgpt.com &quot;Runway Research | Introducing Gen-3 Alpha: A New ...&quot;
-[8]: https://suno.com/blog/introducing-v4-5?utm_source=chatgpt.com &quot;Introducing v4.5&quot;
-[9]: https://elevenlabs.io/music?utm_source=chatgpt.com &quot;AI Music Generator | Free Song Maker &amp; Music Creator&quot;
-[10]: https://www.midjourney.com/?utm_source=chatgpt.com &quot;Midjourney&quot;
-[11]: https://ideogram.ai/?utm_source=chatgpt.com &quot;Ideogram.ai&quot;
-[12]: https://www.recraft.ai/?utm_source=chatgpt.com &quot;Recraft.ai&quot;
-[13]: https://api-docs.deepseek.com/news/news250120?utm_source=chatgpt.com &quot;DeepSeek-R1 Release&quot;
-[14]: https://www.moonshot.ai/?utm_source=chatgpt.com &quot;Moonshot AI&quot;
-[15]: https://bigmodel.cn/?utm_source=chatgpt.com &quot;ZHIPU·AI&quot;
-[16]: https://glm45.org/?utm_source=chatgpt.com &quot;GLM-4.5 - by Zhipu AI&quot;
-[17]: https://x.ai/news/grok-4?utm_source=chatgpt.com &quot;Grok 4&quot;
-[18]: https://www.infoq.com/news/2025/08/openai-gpt-oss/?utm_source=chatgpt.com &quot;OpenAI Releases gpt-oss-120b and gpt-oss-20b, Open-Weight Language Models for Local Deployment&quot;
-[19]: https://www.actuia.com/en/news/openai-returns-to-openness-with-two-open-weight-models-gpt-oss-120b-and-gpt-oss-20b/?utm_source=chatgpt.com &quot;OpenAI Returns to Openness with Two Open-Weight Models: GPT-OSS-120B and GPT-OSS-20B&quot;
-[20]: https://github.com/QwenLM/Qwen-Image?utm_source=chatgpt.com &quot;QwenLM/Qwen-Image&quot;
-[21]: https://deepmind.google/models/imagen/?utm_source=chatgpt.com &quot;Imagen&quot;
-[22]: https://cloud.google.com/vertex-ai/generative-ai/docs/image/overview?utm_source=chatgpt.com &quot;Imagen on Vertex AI | AI Image Generator&quot;
-[23]: https://openai.com/index/sora-is-here/?utm_source=chatgpt.com &quot;Sora is here&quot;
-[24]: https://help.openai.com/en/articles/9957612-generating-videos-on-sora?utm_source=chatgpt.com &quot;Generating videos on Sora&quot;
-[25]: https://lumalabs.ai/dream-machine?utm_source=chatgpt.com &quot;Luma Dream Machine: New Freedoms of Imagination&quot;
-[26]: https://gemini.google/overview/video-generation/?utm_source=chatgpt.com &quot;Gemini AI video generator powered by Veo 3&quot;
-[27]: https://cincodias.elpais.com/smartlife/lifestyle/2025-07-29/google-veo-3-veo-3-fast-vertex-ai.html?utm_source=chatgpt.com &quot;Google lanza Veo 3 y Veo 3 Fast en Vertex AI: crea vídeos generativos de alta calidad&quot;
-[28]: https://wan.video/?utm_source=chatgpt.com &quot;Wan AI | Wan 2.2: Leading AI Video Generation Model&quot;
-[29]: https://www.musicbusinessworldwide.com/suno-is-getting-more-advanced-as-ai-music-generator-launches-v4-5-update-with-previously-unimaginable-production-capabilities/?utm_source=chatgpt.com &quot;Suno is getting more advanced, as AI music generator ...&quot;
-[30]: https://www.wsj.com/articles/voice-startup-elevenlabs-launches-ai-music-service-8a546cef?utm_source=chatgpt.com &quot;Voice Startup ElevenLabs Launches AI Music Service&quot;
-[31]: https://www.udio.com/?utm_source=chatgpt.com &quot;Udio | AI Music Generator - Official Website&quot;
-[32]: https://en.wikipedia.org/wiki/Udio?utm_source=chatgpt.com &quot;Udio&quot;
-[33]: https://elevenlabs.io/text-to-speech?utm_source=chatgpt.com &quot;Free Text To Speech Online with Lifelike AI Voices&quot;
-[34]: https://github.com/openai/whisper?utm_source=chatgpt.com &quot;openai/whisper: Robust Speech Recognition via Large-Scale ...&quot;
-[35]: https://apnews.com/article/90020cdf5fa16c79ca2e5b6c4c9bbb14?utm_source=chatgpt.com &quot;Researchers say an AI-powered transcription tool used in hospitals invents things no one ever said&quot;
-[36]: https://www.theverge.com/2024/10/27/24281170/open-ai-whisper-hospitals-transcription-hallucinations-studies?utm_source=chatgpt.com &quot;Hospitals use a transcription tool powered by a hallucination-prone OpenAI model&quot;
-[37]: https://github.com/features/copilot?utm_source=chatgpt.com &quot;GitHub Copilot · Your AI pair programmer&quot;
-[38]: https://docs.anthropic.com/en/docs/claude-code/overview?utm_source=chatgpt.com &quot;Claude Code overview&quot;
-[39]: https://www.wsj.com/articles/openrouter-a-marketplace-for-ai-models-raises-40-million-168073de?utm_source=chatgpt.com &quot;OpenRouter, a Marketplace for AI Models, Raises $40 Million&quot;
-[40]: https://www.optimizesmart.com/what-is-openrouter-api-and-how-to-use-it/?utm_source=chatgpt.com &quot;What is OpenRouter API and how to use it. - Optimize Smart&quot;
-[41]: https://ai-sdk.dev/providers/ai-sdk-providers/fal?utm_source=chatgpt.com &quot;Fal Provider&quot;
-[42]: https://dify.ai/?utm_source=chatgpt.com &quot;Dify: Leading Agentic AI Development Platform&quot;
-[43]: https://github.com/langgenius/dify?utm_source=chatgpt.com &quot;GitHub - langgenius/dify: Production-ready platform for agentic ...&quot;
-[44]: https://n8n.io/?utm_source=chatgpt.com &quot;AI Workflow Automation Platform &amp; Tools - n8n&quot;
-[45]: https://www.coze.com/?utm_source=chatgpt.com &quot;Coze: Next-Gen AI App Developing Platform&quot;
-[46]: https://developers.googleblog.com/en/introducing-opal/?utm_source=chatgpt.com &quot;Introducing Opal: describe, create, and share your AI mini- ...&quot;
-[47]: https://olmocr.allenai.org/?utm_source=chatgpt.com &quot;olmOCR – Open-Source OCR for Accurate Document ...&quot;
-[48]: https://arxiv.org/html/2506.05218v1?utm_source=chatgpt.com &quot;MonkeyOCR: Document Parsing with a Structure ...&quot;
-[49]: https://ocrflux.pdfparser.io/?utm_source=chatgpt.com &quot;OCRFlux&quot;
-[50]: https://huggingface.co/Mungert/OCRFlux-3B-GGUF?utm_source=chatgpt.com &quot;Mungert/OCRFlux-3B-GGUF&quot; --&gt;</content:encoded><category>GPT-5</category><category>Claude Code</category></item></channel></rss>
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;plaintext&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;&gt; /cursor-gpt-5 &amp;#x3C;TASK and CONTEXT&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;button title=&quot;Copy to clipboard&quot; data-copied=&quot;Copied!&quot; data-code=&quot;&quot;&gt; /cursor-gpt-5 &lt;/button&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;</content:encoded><category>GPT-5</category><category>Claude Code</category><category>Cursor Agent</category></item></channel></rss>

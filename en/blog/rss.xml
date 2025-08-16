@@ -180,7 +180,111 @@ Need me to also prepare **Nginx reverse proxy &amp; rate limiting examples**, **
 [5]: https://www.theverge.com/news/672705/anthropic-claude-4-ai-ous-sonnet-availability?utm_source=chatgpt.com &quot;Anthropic&apos;s Claude 4 AI models are better at coding and reasoning&quot;
 [6]: https://aws.amazon.com/blogs/aws/claude-opus-4-anthropics-most-powerful-model-for-coding-is-now-in-amazon-bedrock/?utm_source=chatgpt.com &quot;Introducing Claude 4 in Amazon Bedrock, the most powerful ...&quot;
 [7]: https://github.com/codingworkflow/claude-code-api?utm_source=chatgpt.com &quot;codingworkflow/claude-code-api&quot;
-[8]: https://www.reddit.com/r/LocalLLaMA/comments/1mfuu40/gatewayproxy_for_claudecode_to_openai_api/?utm_source=chatgpt.com &quot;Gateway/Proxy for Claude-Code to OpenAI API compatible.&quot; --&gt;</content:encoded><category>Ki2API</category><category>Claude Code</category><category>Kiro</category></item><item><title>A Tamagotchi in Claude Code — It Even Tells Me Not to Stay Up Late…</title><link>https://www.vibesparking.com/en/blog/ai/claude-code/tamagotchi/2025-08-15-tamagotchi-in-claude-code/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/claude-code/tamagotchi/2025-08-15-tamagotchi-in-claude-code/</guid><pubDate>Fri, 15 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # Put a “virtual pet” into Claude Code: This Tamagotchi understands your code — and you --&gt;
+[8]: https://www.reddit.com/r/LocalLLaMA/comments/1mfuu40/gatewayproxy_for_claudecode_to_openai_api/?utm_source=chatgpt.com &quot;Gateway/Proxy for Claude-Code to OpenAI API compatible.&quot; --&gt;</content:encoded><category>Ki2API</category><category>Claude Code</category><category>Kiro</category></item><item><title>AI Prompt Writing Technique: Two-Stepping Method - Generate First, Then Optimize</title><link>https://www.vibesparking.com/en/blog/ai/prompt-engineering/2025-08-15-two-stepping-one-prompt-double-output/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/prompt-engineering/2025-08-15-two-stepping-one-prompt-double-output/</guid><pubDate>Fri, 15 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;First, let AI complete the task normally; &lt;strong&gt;then&lt;/strong&gt; in the same prompt, have it immediately summarize, polish, refactor, or self-check the &lt;strong&gt;just-produced content&lt;/strong&gt;. &lt;strong&gt;One prompt, double value.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Two-Stepping has been continuously promoted by creator Rob Lennon in public posts and courses, adopted by many content and product teams. Its core is the sequential thinking of “generate first, optimize later.”&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;why-does-the-two-step-method-work-so-well&quot;&gt;Why Does the “Two-Step Method” Work So Well?&lt;/h2&gt;&lt;a href=&quot;#why-does-the-two-step-method-work-so-well&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Why Does the “Two-Step Method” Work So Well?”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;1) Reduces cognitive load.&lt;/strong&gt; Cramming too many requirements at once causes the model to get distracted, pulled in different directions, and conflicted. Breaking it into “do the work first, then review” is more stable. This approach aligns with academia’s &lt;strong&gt;self-feedback → rewrite&lt;/strong&gt; approach: first produce a draft, then have the model provide feedback and revise accordingly, showing significant improvements across multiple tasks (research reports show improvement ranges of &lt;strong&gt;5%–40%&lt;/strong&gt;).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2) Lets the model “see itself” and then optimize.&lt;/strong&gt; After the model writes out its thoughts, it has a “criticizable” object; reviewing based on the finished product often yields higher quality. Similar &lt;strong&gt;two-stage processes&lt;/strong&gt; commonly seen in research: first produce then answer/review, also proven to be more stable.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;3) Solves “output + processing” in one prompt.&lt;/strong&gt; Stringing “write → revise → compress → style conversion” into &lt;strong&gt;the same&lt;/strong&gt; prompt reduces round trips and maintains context consistency. Rob Lennon’s Two-Stepping concept and course practice also emphasize breaking complex tasks into &lt;strong&gt;executable sequential steps&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;applicable-scenarios-the-more-processing-heavy-the-better&quot;&gt;Applicable Scenarios (The More “Processing-Heavy,” the Better)&lt;/h2&gt;&lt;a href=&quot;#applicable-scenarios-the-more-processing-heavy-the-better&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Applicable Scenarios (The More “Processing-Heavy,” the Better)”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Content Creation&lt;/strong&gt;: Long article → 50-word lead / 3 key points / multi-platform adaptation.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Product &amp;#x26; Documentation&lt;/strong&gt;: PRD → risk checklist / review questions / acceptance criteria.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Programming Collaboration&lt;/strong&gt;: Generate function → unit tests + edge cases + self-check report.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Data Analysis&lt;/strong&gt;: Full analysis → conclusion table / decision recommendations / retrospective points.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Marketing Growth&lt;/strong&gt;: Ad script → objection handling version / A/B copy / platform adaptation.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The underlying logic aligns with “Self-Refine”: the &lt;strong&gt;generate—feedback—regenerate&lt;/strong&gt; loop, proven to steadily improve result quality.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;ready-to-use-4-two-step-method-super-templates-copy--paste&quot;&gt;Ready-to-Use: 4 “Two-Step Method” Super Templates (Copy &amp;#x26; Paste)&lt;/h2&gt;&lt;a href=&quot;#ready-to-use-4-two-step-method-super-templates-copy--paste&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Ready-to-Use: 4 “Two-Step Method” Super Templates (Copy &amp;#x26; Paste)”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Universal Version (Works for Any Task)&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;First&lt;/strong&gt;, complete the task according to the following requirements:
+– Goal: {your desired result}
+– Audience: {who will see it}
+– Constraints: {length/style/forbidden elements}
+– Output format: {structure/fields}
+&lt;strong&gt;Then&lt;/strong&gt;, based on the content you just output, do secondary processing:
+– Extract 3–5 key points + 1 golden sentence
+– Point out 3 areas for improvement and provide the complete improved version
+– Provide a “shorter, more conversational” version (≤ {word count})&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Content Creation Version (Long Article → Title Matrix + Social Media Cards)&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;First write&lt;/strong&gt; an article about {topic}, including: introduction/3–5 sections/conclusion/call to action.
+&lt;strong&gt;Then&lt;/strong&gt; output secondary results:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;10 convertible titles (with emotional words/numbers/promises),&lt;/li&gt;
+&lt;li&gt;50-word lead + 3 key points,&lt;/li&gt;
+&lt;li&gt;Generate 2 social media posts for {platform}.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Programming Version (Function → Unit Tests + Self-Check Report)&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;First implement&lt;/strong&gt; {function/module}, requirements: readability, exception handling, complete comments.
+&lt;strong&gt;Then&lt;/strong&gt;:
+– Generate high-coverage unit tests (list edge cases and expected results)
+– Provide complexity assessment and 3 refactoring suggestions, with improved code
+– Output a “self-check report” (defects, risks, improvement points)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Analysis &amp;#x26; Decision Version (Insights → Decision-Ready)&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;First complete&lt;/strong&gt; analysis of {data/solution/competitors}, output structured conclusions.
+&lt;strong&gt;Then&lt;/strong&gt; provide:
+– Decision overview (TL;DR 100 words)
+– 3 recommendations for leadership with implementation checklist (owner, milestones, metrics)
+– Possible objections and counterargument points&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Tip: &lt;strong&gt;Treat the “then” part as “editor/QA role description”&lt;/strong&gt; – whatever role you’re playing, the model will improve toward that standard. This approach aligns with “two-stage prompting/self-feedback iteration” research conclusions.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;real-world-examples-close-to-your-daily-work&quot;&gt;Real-World Examples (Close to Your Daily Work)&lt;/h2&gt;&lt;a href=&quot;#real-world-examples-close-to-your-daily-work&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Real-World Examples (Close to Your Daily Work)”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;1) WeChat Article Production Pipeline&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;First write&lt;/strong&gt; 1200–1500 word main text (with subheadings, bold text).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Then produce&lt;/strong&gt; 50-word lead, 3 key points, ending CTA, 10 title alternatives, &lt;strong&gt;one-sentence social media post&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Result: &lt;strong&gt;One prompt, complete draft + publishing materials&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;2) Frontend Feature Implementation&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;First&lt;/strong&gt; write a date picker component.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Then&lt;/strong&gt; auto-generate unit tests, list edge cases (timezone/leap year), with complexity and refactoring suggestions.&lt;/li&gt;
+&lt;li&gt;Result: &lt;strong&gt;Code + tests + review feedback&lt;/strong&gt; all-in-one.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;3) PRD to Task Breakdown&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;First&lt;/strong&gt; output complete PRD.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Then&lt;/strong&gt; produce deliverables list, milestones, risks &amp;#x26; responses, acceptance criteria.&lt;/li&gt;
+&lt;li&gt;Result: &lt;strong&gt;PRD becomes plan&lt;/strong&gt;, team can start immediately.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;precautions-pitfall-checklist&quot;&gt;Precautions (Pitfall Checklist)&lt;/h2&gt;&lt;a href=&quot;#precautions-pitfall-checklist&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Precautions (Pitfall Checklist)”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Prevent “sandbagging”&lt;/strong&gt;: Sometimes the model deliberately writes the first version poorly to “significantly improve” in step two. &lt;strong&gt;Key point&lt;/strong&gt;: Set &lt;strong&gt;hard metrics&lt;/strong&gt; (length, format, constraints) in step one, and require “&lt;strong&gt;both versions must be directly usable&lt;/strong&gt;”.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Important tasks suggest true two-step&lt;/strong&gt;: Split into &lt;strong&gt;two messages&lt;/strong&gt; for more stability, especially for compliance, contracts, risk control scenarios; this aligns with &lt;strong&gt;multi-round iteration&lt;/strong&gt; experience in self-refine research.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Role switching&lt;/strong&gt;: Clearly state in step two “you are &lt;strong&gt;editor/reviewer/QA&lt;/strong&gt;” and provide standards.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Control length &amp;#x26; format&lt;/strong&gt;: Provide &lt;strong&gt;word limits/table fields&lt;/strong&gt; to avoid going off-topic.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Observability&lt;/strong&gt;: Require “&lt;strong&gt;point out what changed&lt;/strong&gt;” for easy review and comparison.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Don’t rely entirely on it&lt;/strong&gt;: Content involving &lt;strong&gt;timeliness/facts&lt;/strong&gt; still needs your external verification.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;advanced-turn-two-step-method-into-team-buttons&quot;&gt;Advanced: Turn “Two-Step Method” into Team “Buttons”&lt;/h2&gt;&lt;a href=&quot;#advanced-turn-two-step-method-into-team-buttons&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Advanced: Turn “Two-Step Method” into Team “Buttons””&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Make into Snippets/Slash commands&lt;/strong&gt;: /two-step-content, /two-step-code, /two-step-prd.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Preset styles &amp;#x26; restrictions&lt;/strong&gt;: Add “&lt;strong&gt;Disallowed/Allowed&lt;/strong&gt;” blocks in prompts for consistent stable output.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Bind with review SOP&lt;/strong&gt;: Make “step two” always output &lt;strong&gt;key points + improvements + actionable checklist&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;summary&quot;&gt;Summary&lt;/h2&gt;&lt;a href=&quot;#summary&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Summary”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;The essence of Two-Stepping is packaging “doing the work” and “doing the review” into delivery.&lt;/strong&gt;
+It balances speed and quality, suitable for content, product, development, analysis, and all “produce first, process later” workflows.
+&lt;strong&gt;One prompt, double harvest.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;What do you think?&lt;/strong&gt; Where would you most like to use the “two-step method”? Let’s chat in the comments.&lt;/p&gt;</content:encoded><category>Prompt Engineering</category></item><item><title>A Tamagotchi in Claude Code — It Even Tells Me Not to Stay Up Late…</title><link>https://www.vibesparking.com/en/blog/ai/claude-code/tamagotchi/2025-08-15-tamagotchi-in-claude-code/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/claude-code/tamagotchi/2025-08-15-tamagotchi-in-claude-code/</guid><pubDate>Fri, 15 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # Put a “virtual pet” into Claude Code: This Tamagotchi understands your code — and you --&gt;
 &lt;p&gt;&lt;strong&gt;A slightly absurd, oddly addictive little toy.&lt;/strong&gt;
 It lives in Claude Code’s status bar, breathes, pouts, and roasts your TODOs. If you code for too long it gets hungry; when debugging goes sideways it comforts you; it’ll even remind you to drink water and grab a bite.&lt;/p&gt;
 &lt;hr&gt;
@@ -2536,190 +2640,4 @@ Use &lt;code dir=&quot;auto&quot;&gt;--model &quot;gpt-5&quot;&lt;/code&gt; if n
 &lt;hr&gt;
 &lt;div&gt;&lt;h3 id=&quot;use-in-claude-code&quot;&gt;Use in Claude Code&lt;/h3&gt;&lt;a href=&quot;#use-in-claude-code&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Use in Claude Code”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
 &lt;p&gt;In Claude Code, invoke the &lt;code dir=&quot;auto&quot;&gt;/cursor-gpt-5&lt;/code&gt; command and Claude will automatically recognize and call the corresponding sub-agent to handle the task.&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;plaintext&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;&gt; /cursor-gpt-5 &amp;#x3C;TASK and CONTEXT&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;button title=&quot;Copy to clipboard&quot; data-copied=&quot;Copied!&quot; data-code=&quot;&quot;&gt; /cursor-gpt-5 &lt;/button&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;</content:encoded><category>GPT-5</category><category>Claude Code</category><category>Cursor Agent</category></item><item><title>AI Power List (as of 2025/8/9): 25 Tools Worth Using Right Now</title><link>https://www.vibesparking.com/en/blog/ai/2025-08-09-ai-power-list-2025-top-25-tools/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/2025-08-09-ai-power-list-2025-top-25-tools/</guid><pubDate>Sat, 09 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # AI Power List (as of 2025/8/9): 25 Tools Worth Using Right Now --&gt;
-&lt;blockquote&gt;
-&lt;p&gt;This quick-start checklist is for those who &lt;strong&gt;build products, write code, or design&lt;/strong&gt;.
-I split the latest “AI Power List” by &lt;strong&gt;use case&lt;/strong&gt;, and for each category only cover &lt;strong&gt;why it’s chosen + how to use it&lt;/strong&gt;.
-No long reports—read it and put it to work immediately.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;div&gt;&lt;h1 id=&quot;at-a-glance-what-to-choose-for-each-scenario&quot;&gt;At a Glance: What to Choose for Each Scenario&lt;/h1&gt;&lt;a href=&quot;#at-a-glance-what-to-choose-for-each-scenario&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “At a Glance: What to Choose for Each Scenario”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Writing plans/leading teams&lt;/strong&gt;: GPT-5 / Claude Opus 4.1&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Design assets&lt;/strong&gt;: Midjourney + Ideogram (typesetting) + Recraft (vector)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Ads/gameplay videos&lt;/strong&gt;: Sora / Veo 3 / Runway Gen-3&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Music/vocals&lt;/strong&gt;: Suno 4.5+ / Eleven Music&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Subtitles/meeting minutes&lt;/strong&gt;: Whisper → Dify workflow&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Multi-model access&lt;/strong&gt;: OpenRouter + Replicate/Fal&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Automation&lt;/strong&gt;: n8n / Coze / Opal&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Local inference/self-hosting&lt;/strong&gt;: DeepSeek-R1, Wan 2.2, olmOCR&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;introduction-how-to-get-faster-start-up-and-higher-roi-this-year&quot;&gt;Introduction: How to Get Faster Start-up and Higher ROI This Year&lt;/h2&gt;&lt;a href=&quot;#introduction-how-to-get-faster-start-up-and-higher-roi-this-year&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Introduction: How to Get Faster Start-up and Higher ROI This Year”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;Two takeaways:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;General-purpose frontier models got stronger&lt;/strong&gt;: GPT-5, Claude Opus 4.1, Qwen3, Kimi K2 and others noticeably improved in reasoning, front-end generation, and agent tasks.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Vertical tools matured&lt;/strong&gt;: Video (Sora, Veo 3, Runway Gen-3), music (Suno 4.5+, Eleven Music), and design (Midjourney, Ideogram, Recraft) are now &lt;strong&gt;stable, fast, and great-looking&lt;/strong&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h1 id=&quot;general-purpose-models-tackle-hard-problems-run-projects-brainstorm-partner&quot;&gt;General-Purpose Models (Tackle Hard Problems, Run Projects, Brainstorm Partner)&lt;/h1&gt;&lt;a href=&quot;#general-purpose-models-tackle-hard-problems-run-projects-brainstorm-partner&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “General-Purpose Models (Tackle Hard Problems, Run Projects, Brainstorm Partner)”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;1) GPT-5 (top pick)&lt;/strong&gt;
-Exceptional front-end/multimodal coding—can generate &lt;strong&gt;production-ready responsive UIs&lt;/strong&gt; in one go, with better aesthetics for typography and whitespace. Ideal for turning “sketchy ideas” straight into &lt;strong&gt;clickable pages/micro-sites&lt;/strong&gt;.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Getting started&lt;/strong&gt;: Provide Figma screenshots + interaction notes; request a runnable project in &lt;code dir=&quot;auto&quot;&gt;Next.js + Tailwind + shadcn/ui&lt;/code&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;2) Claude Opus 4.1 (code and agent tasks)&lt;/strong&gt;
-Strengthened &lt;strong&gt;real-world coding and multi-step reasoning&lt;/strong&gt;; within Claude Code you can execute workflows directly—great for an engineering flow of &lt;strong&gt;“plan first, then execute.”&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;3) Qwen3 (Chinese ecosystem + flexible local/cloud)&lt;/strong&gt;
-Flagship model now competitive in code, math, and general abilities; &lt;strong&gt;easy enterprise integration&lt;/strong&gt; within Alibaba’s ecosystem.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;4) DeepSeek-R1 (value and open-source vibe)&lt;/strong&gt;
-Open weights and friendlier licensing; stronger &lt;strong&gt;RL-style reasoning&lt;/strong&gt;; suitable for &lt;strong&gt;low-cost self-hosted inference&lt;/strong&gt; and distillation.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;5) Kimi K2 / GLM-4.5 / Grok 4 (niche strengths)&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;K2&lt;/strong&gt;: Large-scale MoE, longer context, stronger tool use; smooth for Chinese scenarios.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;GLM-4.5&lt;/strong&gt;: Emphasizes &lt;strong&gt;reasoning, coding, and agent&lt;/strong&gt; use cases.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Grok 4&lt;/strong&gt;: Strong at native tool use + real-time search scenarios.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Want to experiment &lt;strong&gt;locally&lt;/strong&gt;? Watch for OpenAI’s &lt;strong&gt;GPT-OSS-120B/20B&lt;/strong&gt; open weights—good targets for high-end local rigs.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h1 id=&quot;text-to-image-posters-kv-logos-social-assets&quot;&gt;Text-to-Image (Posters, KV, Logos, Social Assets)&lt;/h1&gt;&lt;a href=&quot;#text-to-image-posters-kv-logos-social-assets&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Text-to-Image (Posters, KV, Logos, Social Assets)”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;Midjourney&lt;/strong&gt;: Top-tier for texture and stylization; even &lt;strong&gt;lighting details&lt;/strong&gt; hold up.
-&lt;strong&gt;Ideogram&lt;/strong&gt;: Outstanding &lt;strong&gt;typography/legibility&lt;/strong&gt;—great for KV, banners, and headline lockups.
-&lt;strong&gt;Recraft&lt;/strong&gt;: One-click &lt;strong&gt;editable vectors&lt;/strong&gt; and flat illustrations; easy to maintain brand consistency.
-&lt;strong&gt;Qwen-Image&lt;/strong&gt;: Strong &lt;strong&gt;Chinese text rendering&lt;/strong&gt; and &lt;strong&gt;precision edits&lt;/strong&gt;—useful for domestic needs.
-&lt;strong&gt;Imagen&lt;/strong&gt; (Google): Realism, typography, and safety watermarking are more comprehensive.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Practical tip&lt;/strong&gt;: Provide 3 style directions + 1 “avoid” constraint (e.g., “no oversharpening”), and request &lt;strong&gt;layered PSD/SVG&lt;/strong&gt; for easier post-production.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h1 id=&quot;text-to-video-ad-cuts-app-store-trailers-gameplay-demos&quot;&gt;Text-to-Video (Ad Cuts, App Store Trailers, Gameplay Demos)&lt;/h1&gt;&lt;a href=&quot;#text-to-video-ad-cuts-app-store-trailers-gameplay-demos&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Text-to-Video (Ad Cuts, App Store Trailers, Gameplay Demos)”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;Sora&lt;/strong&gt;: Strong visual quality + physical consistency; can generate &lt;strong&gt;20s 1080p&lt;/strong&gt; with iterative editing. Ideal for &lt;strong&gt;concept pieces/gameplay demos&lt;/strong&gt;.
-&lt;strong&gt;Runway Gen-3&lt;/strong&gt;: Better &lt;strong&gt;prompt adherence&lt;/strong&gt; and motion coherence; highly production-ready.
-&lt;strong&gt;Luma Dream Machine (Ray2)&lt;/strong&gt;: Fast cinematic motion results; &lt;strong&gt;included in subscription&lt;/strong&gt;.
-&lt;strong&gt;Veo 3&lt;/strong&gt; (Google): &lt;strong&gt;Native audio&lt;/strong&gt;, lip-sync, and &lt;strong&gt;image-to-video&lt;/strong&gt; now in Gemini/Vertex.
-&lt;strong&gt;Wan 2.2&lt;/strong&gt;: High playability in the open-source community; good for &lt;strong&gt;hybrid local/cloud&lt;/strong&gt; experiments.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Execution advice&lt;/strong&gt;: Break your script into a &lt;strong&gt;shot list&lt;/strong&gt; (shot size/duration/subject/camera move), generate per shot, then assemble with Runway/CapCut.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h1 id=&quot;ai-music-and-voice-game-osts-short-form-bgm-podcast-intros&quot;&gt;AI Music and Voice (Game OSTs, Short-Form BGM, Podcast Intros)&lt;/h1&gt;&lt;a href=&quot;#ai-music-and-voice-game-osts-short-form-bgm-podcast-intros&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “AI Music and Voice (Game OSTs, Short-Form BGM, Podcast Intros)”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;Suno v4.5+&lt;/strong&gt;: Versatile styles and more realistic vocals; adds production-grade features like &lt;strong&gt;add vocals/add accompaniment/Inspire&lt;/strong&gt;.
-&lt;strong&gt;Eleven Music&lt;/strong&gt;: &lt;strong&gt;Fully commercial&lt;/strong&gt; focus with Merlin/Kobalt licensing—suited for brands and commercial video scoring.
-&lt;strong&gt;Udio&lt;/strong&gt;: Nuanced vocal emotion and easy UX—great for &lt;strong&gt;TikTok/YouTube&lt;/strong&gt; assets.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Workflow&lt;/strong&gt;: Prototype with Suno/Eleven, lock &lt;strong&gt;BPM/emotional curve&lt;/strong&gt;, then iterate lyrics and instrumentation.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h1 id=&quot;speech-synthesis--asr-voiceoverdubbingsubtitlesnotes&quot;&gt;Speech Synthesis &amp;#x26; ASR (Voiceover/Dubbing/Subtitles/Notes)&lt;/h1&gt;&lt;a href=&quot;#speech-synthesis--asr-voiceoverdubbingsubtitlesnotes&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Speech Synthesis &amp;#x26; ASR (Voiceover/Dubbing/Subtitles/Notes)”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;ElevenLabs TTS&lt;/strong&gt;: 70+ languages, fine-grained emotion control, mature API.
-&lt;strong&gt;Whisper&lt;/strong&gt;: Veteran open-source ASR with high-performance variants like &lt;code dir=&quot;auto&quot;&gt;whisper.cpp / faster-whisper&lt;/code&gt;; the &lt;strong&gt;cost-effective&lt;/strong&gt; choice for local deployments.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;For high-risk domains (medical/legal), ensure &lt;strong&gt;human review&lt;/strong&gt; to avoid misrecognition issues.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h1 id=&quot;developer-tools-write-code-proxies-multi-model-access&quot;&gt;Developer Tools (Write Code, Proxies, Multi-Model Access)&lt;/h1&gt;&lt;a href=&quot;#developer-tools-write-code-proxies-multi-model-access&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Developer Tools (Write Code, Proxies, Multi-Model Access)”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;Claude Code&lt;/strong&gt;: End-to-end &lt;strong&gt;plan → execute → review&lt;/strong&gt; for complex tasks, using “structured dialogue” to drive delivery.
-&lt;strong&gt;Cursor / Copilot / Windsurf&lt;/strong&gt;: Mature day-to-day ergonomics for incremental dev and multi-file refactors.
-&lt;strong&gt;Trae / Kiro / Gemini CLI&lt;/strong&gt;: Consider these as &lt;strong&gt;lightweight alternatives&lt;/strong&gt; for team collaboration, mobile, or CLI workflows.
-&lt;strong&gt;OpenRouter / Replicate / Fal&lt;/strong&gt;: One gateway to &lt;strong&gt;many models &amp;#x26; generative services&lt;/strong&gt;; enables &lt;strong&gt;dynamic cost/perf routing&lt;/strong&gt;.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Practical stack&lt;/strong&gt;: Use Cursor/Claude Code at the frontend; route models via &lt;strong&gt;OpenRouter&lt;/strong&gt;; send image/video special tasks to &lt;strong&gt;Replicate/Fal&lt;/strong&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h1 id=&quot;agents--workflows-automate-manual-processes&quot;&gt;Agents &amp;#x26; Workflows (Automate “Manual Processes”)&lt;/h1&gt;&lt;a href=&quot;#agents--workflows-automate-manual-processes&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Agents &amp;#x26; Workflows (Automate “Manual Processes”)”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;Dify&lt;/strong&gt; (self-host/enterprise-ready): Visual &lt;strong&gt;agent workflows + RAG + observability&lt;/strong&gt;; runs in cloud or on-prem.
-&lt;strong&gt;n8n&lt;/strong&gt;: AI nodes + 400+ integrations, wiring up &lt;strong&gt;CRM/tickets/databases&lt;/strong&gt;; plenty of templates.
-&lt;strong&gt;Coze&lt;/strong&gt;: &lt;strong&gt;No-code&lt;/strong&gt; for bots/helpers; easy promotion to multiple platforms for domestic teams.
-&lt;strong&gt;Opal (Google Labs)&lt;/strong&gt;: Compose &lt;strong&gt;mini AI apps/flows&lt;/strong&gt; in natural language—great for PMs to build &lt;strong&gt;quick prototypes&lt;/strong&gt;.&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h1 id=&quot;ocr--document-structuring-turn-pdfs-into-learnablequeryable-markdown&quot;&gt;OCR / Document Structuring (Turn PDFs into “Learnable/Queryable” Markdown)&lt;/h1&gt;&lt;a href=&quot;#ocr--document-structuring-turn-pdfs-into-learnablequeryable-markdown&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “OCR / Document Structuring (Turn PDFs into “Learnable/Queryable” Markdown)”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;olmOCR (AI2)&lt;/strong&gt;: Tables/formulas/handwriting support, preserves &lt;strong&gt;reading order&lt;/strong&gt; well; can run locally.
-&lt;strong&gt;MonkeyOCR&lt;/strong&gt;: Proposes the &lt;strong&gt;SRR (Structure–Recognition–Relation)&lt;/strong&gt; paradigm; &lt;strong&gt;fast + strong layout understanding&lt;/strong&gt;.
-&lt;strong&gt;OCRFlux&lt;/strong&gt;: Lightweight 3B, excellent multi-page merging and complex layouts; online demo and GGUF available.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Suggested workflow&lt;/strong&gt;: PDF → (olmOCR/MonkeyOCR) → Markdown → (Dify/Agent) for &lt;strong&gt;structured extraction + knowledge base&lt;/strong&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h1 id=&quot;get-started-now&quot;&gt;Get Started Now&lt;/h1&gt;&lt;a href=&quot;#get-started-now&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Get Started Now”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;Don’t file this under “to read later.”
-Pick &lt;strong&gt;one scenario + one model&lt;/strong&gt; and run a small pipeline today.
-Add one more step &lt;strong&gt;a week later&lt;/strong&gt;, and you’ve built your &lt;strong&gt;personal AI production line&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Which one will you ship first? Tell me in the comments.&lt;/strong&gt;&lt;/p&gt;&lt;!-- 
----
-
-# 3 Ready-to-Use Practical Scripts
-
-**A. “Product Landing Page” Live in 30 Minutes**
-1) To GPT-5: Figma screenshots + copy → output `Next.js + Tailwind`.
-2) Ideogram produces 3 hero variations with legible headline lockups.
-3) n8n hooks form → Slack/Feishu notifications.
-
-**B. “Gameplay Demo” Short Video**
-Storyboard → Sora/Veo 3 per-shot generation → Runway assembly/color → Eleven Music scoring.
-
-**C. “PDF Knowledge Base” Auto-Build**
-olmOCR/MonkeyOCR → Markdown → Dify RAG → front-end Chat Widget.
-
----
-
-# Conclusion: Get Moving Now
-
-Don’t file this under “to read later.”
-Pick **one scenario + one model** and run a small pipeline today.
-Add one more step **a week later**, and you’ve built your **personal AI production line**.
-
-**Which one will you ship first? Tell me in the comments.**
-
----
-
-## Cover and Illustrations (2:1 Illustration Style; On-image Text in English)
-
-* **Cover**: A desk with a laptop showing multiple colorful AI app icons connected by flowing lines; sticky notes say “Ship Today”, “10x Workflow”; clean gradient background.
-* **Section Illustrations**
-  1) **Frontier Models**: A thinker robot sketching UI wireframes that turn into real code on screen.
-  2) **Text-to-Video**: Storyboards on the left → camera movement arrows → final cinematic frame on the right.
-  3) **Workflow Automation**: Blocks labeled “LLM / RAG / OCR / API” snapping together like Lego into a pipeline.
-
-(Want me to generate these illustrations directly? I can one‑click them.)
-
----
-
-## Multilingual Titles (3 Sets)
-
-1. **中文**：AI 产品推荐榜：这 25 款最值得你现在就用
-   **English**: The 2025 AI Power List: 25 Tools You Should Use Now
-   **繁體**：AI 產品推薦榜：這 25 款最值得你現在就用
-   **日本語**：2025年AI最強リスト：今すぐ使うべき25ツール
-   **Français**：Top IA 2025 : 25 outils à utiliser dès maintenant
-   **Español**: Lista IA 2025: 25 herramientas para usar ya
-   **Português**: Lista IA 2025: 25 ferramentas para usar agora
-   **slug**：ai-power-list-2025-top-25-tools
-
-2. **中文**：一文选型：模型、视频、音乐、IDE、工作流全覆盖
-   **English**: One Guide to Rule Them All: Models, Video, Music, IDEs &amp; Workflows
-   **繁體**：一文選型：模型、影片、音樂、IDE、流程全覆蓋
-   **繁體**：一文選型：模型、影片、音樂、IDE、流程全覆蓋
-   **日本語**：完全ガイド：モデル・動画・音楽・IDE・ワークフロー
-   **Français**：Guide unique : modèles, vidéo, musique, IDE et workflows
-   **Español**: Guía total: modelos, video, música, IDE y flujos
-   **Português**: Guia completo: modelos, vídeo, música, IDE e fluxos
-   **slug**：ultimate-ai-buyers-guide-2025
-
-3. **中文**：把 AI 变成生产力：我的高转化上手清单
-   **English**: Turn AI into Output: My High-ROI Starter Kit
-   **繁體**：把 AI 變成產能：高回報上手清單
-   **日本語**：AIを戦力化：高ROIスターターキット
-   **Français**：Passer à l’IA productive : kit de démarrage ROI
-   **Español**: Convierte IA en productividad: kit de inicio ROI
-   **Português**: IA em produtividade: kit de arranque ROI
-   **slug**：ai-to-output-starter-kit
-
----
-
-## Moments/Comments Examples (3)
-
-1. **“Saved this list!”** I’m shipping a minimal landing page today with GPT-5 + Ideogram + n8n, then cutting a Sora short tonight. Who’s joining the sprint?
-2. **“
-
---&gt;</content:encoded><category>GPT-5</category><category>Claude Code</category></item></channel></rss>
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;plaintext&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;&gt; /cursor-gpt-5 &amp;#x3C;TASK and CONTEXT&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;button title=&quot;Copy to clipboard&quot; data-copied=&quot;Copied!&quot; data-code=&quot;&quot;&gt; /cursor-gpt-5 &lt;/button&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;</content:encoded><category>GPT-5</category><category>Claude Code</category><category>Cursor Agent</category></item></channel></rss>
