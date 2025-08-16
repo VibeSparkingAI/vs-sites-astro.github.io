@@ -1,4 +1,464 @@
-<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Vibe Sparking AI | Blog</title><description/><link>https://www.vibesparking.com/</link><language>zh-CN</language><item><title>Claude Code 真省钱用法</title><link>https://www.vibesparking.com/zh-cn/blog/ai/claude-code/2025-08-14-claude-code-save-money-right-model-lean-context-permissions/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/claude-code/2025-08-14-claude-code-save-money-right-model-lean-context-permissions/</guid><pubDate>Thu, 14 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # Claude Code 真省钱用法 --&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Vibe Sparking AI | Blog</title><description/><link>https://www.vibesparking.com/</link><language>zh-CN</language><item><title>Ki2API 免费用 Kiro 的 Claude Sonnet 4 模型</title><link>https://www.vibesparking.com/zh-cn/blog/ai/claude-code/kiro/2025-08-16-ki2api-claude-sonnet4-openai-in-3-steps/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/claude-code/kiro/2025-08-16-ki2api-claude-sonnet4-openai-in-3-steps/</guid><pubDate>Sat, 16 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # Ki2API 免费用 Kiro 的 Claude Sonnet 4 模型 --&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Ki2API 是一个 Docker 化、小而美的 &lt;strong&gt;OpenAI 兼容 API 网关&lt;/strong&gt;，把 &lt;strong&gt;Claude Sonnet 4&lt;/strong&gt; 暴露成 &lt;code dir=&quot;auto&quot;&gt;/v1/chat/completions&lt;/code&gt;，老代码几乎零改动就能用上新模型。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;为什么值得关注&quot;&gt;为什么值得关注？&lt;/h2&gt;&lt;a href=&quot;#为什么值得关注&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “为什么值得关注？”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;完全兼容 OpenAI API 形状&lt;/strong&gt;：走 &lt;code dir=&quot;auto&quot;&gt;/v1/models&lt;/code&gt;、&lt;code dir=&quot;auto&quot;&gt;/v1/chat/completions&lt;/code&gt;，支持 &lt;strong&gt;SSE 流式&lt;/strong&gt;。迁移成本很低。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;聚焦一个稳定型号&lt;/strong&gt;：内置 &lt;strong&gt;&lt;code dir=&quot;auto&quot;&gt;claude-sonnet-4-20250514&lt;/code&gt;&lt;/strong&gt;，就是 Anthropic 文档与云厂商列出的稳定版号，省去“今天又换 alias 吗”的烦恼。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;一键起服务&lt;/strong&gt;：&lt;code dir=&quot;auto&quot;&gt;docker-compose up -d&lt;/code&gt;，默认监听 &lt;strong&gt;&lt;code dir=&quot;auto&quot;&gt;http://localhost:8989&lt;/code&gt;&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;免折腾凭证&lt;/strong&gt;：容器会自动读取本机 &lt;code dir=&quot;auto&quot;&gt;~/.aws/sso/cache/kiro-auth-token.json&lt;/code&gt;（Windows 在 &lt;code dir=&quot;auto&quot;&gt;%USERPROFILE%\.aws\sso\cache\…&lt;/code&gt;），并带有 &lt;strong&gt;自动刷新 token&lt;/strong&gt; 的逻辑。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;注：&lt;strong&gt;Claude Sonnet 4&lt;/strong&gt; 是 2025 年 5 月发布的新一代 Sonnet，主打&lt;strong&gt;更强推理与更稳编码&lt;/strong&gt;，价格/性能比好，API 与各大云也同步提供。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;适合谁用&quot;&gt;适合谁用？&lt;/h2&gt;&lt;a href=&quot;#适合谁用&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “适合谁用？”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;已有 OpenAI SDK 项目&lt;/strong&gt;，想&lt;strong&gt;原地替换&lt;/strong&gt;为 Claude Sonnet 4，避免大改接口。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;公司内网/单机&lt;/strong&gt;想要个&lt;strong&gt;轻量网关&lt;/strong&gt;，把团队的调用都走一个标准入口，便于审计与限流。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;多模型评测/AB 实验&lt;/strong&gt;，把 Sonnet 4 接在 “OpenAI 形状” 后面，脚手架通用。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;需要流式输出的工具链&lt;/strong&gt;（Terminal/CLI、前端聊天框、日志观测），SSE 开箱即用。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;快速上手3-分钟&quot;&gt;快速上手（3 分钟）&lt;/h2&gt;&lt;a href=&quot;#快速上手3-分钟&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “快速上手（3 分钟）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3 id=&quot;1启动服务&quot;&gt;1）启动服务&lt;/h3&gt;&lt;a href=&quot;#1启动服务&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1）启动服务”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;docker-compose&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;up&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;-d&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;默认服务地址&lt;/strong&gt;：&lt;code dir=&quot;auto&quot;&gt;http://localhost:8989&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;默认 API Key&lt;/strong&gt;：&lt;code dir=&quot;auto&quot;&gt;ki2api-key-2024&lt;/code&gt;（可作本地开发用）。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;健康检查&lt;/strong&gt;：&lt;code dir=&quot;auto&quot;&gt;GET /health&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;列模型&lt;/strong&gt;：&lt;code dir=&quot;auto&quot;&gt;GET /v1/models&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;聊天&lt;/strong&gt;：&lt;code dir=&quot;auto&quot;&gt;POST /v1/chat/completions&lt;/code&gt;
+以上接口与默认端口均见项目 README。/&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;已登录 &lt;strong&gt;Kiro&lt;/strong&gt; 的机器上，容器会自动读取本地 token 文件并自动刷新；也可通过 &lt;code dir=&quot;auto&quot;&gt;KIRO_ACCESS_TOKEN&lt;/code&gt;/&lt;code dir=&quot;auto&quot;&gt;KIRO_REFRESH_TOKEN&lt;/code&gt; 显式传入。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div&gt;&lt;h3 id=&quot;2用-openai-sdk-直连nodejs&quot;&gt;2）用 OpenAI SDK 直连（Node/JS）&lt;/h3&gt;&lt;a href=&quot;#2用-openai-sdk-直连nodejs&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2）用 OpenAI SDK 直连（Node/JS）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;js&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;import&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; OpenAI &lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;from&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;openai&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;const &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;client&lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt; = &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;new&lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;OpenAI&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;{&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;apiKey: &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;ki2api-key-2024&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;baseURL: &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;http://localhost:8989/v1&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;}&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;);&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;const &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;completion&lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt; = await &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;client&lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;--0:#FAF39F;--1:#111111&quot;&gt;chat&lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;--0:#FAF39F;--1:#111111&quot;&gt;completions&lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;create&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;{&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;model: &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;claude-sonnet-4-20250514&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;messages:&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; [{ role: &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;user&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;, content: &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;用一句话介绍 Ki2API&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; }]&lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;stream: &lt;/span&gt;&lt;span style=&quot;--0:#FF6A83;--1:#A24848&quot;&gt;false&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;}&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;);&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;console&lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;log&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;completion&lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;choices&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;[&lt;/span&gt;&lt;span style=&quot;--0:#F78C6C;--1:#AA0982&quot;&gt;0&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;]&lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;--0:#FAF39F;--1:#111111&quot;&gt;message&lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;content&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;);&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;流式&lt;/strong&gt;：把 &lt;code dir=&quot;auto&quot;&gt;stream: true&lt;/code&gt; 开起来即可，前端/Node 监听 &lt;strong&gt;SSE&lt;/strong&gt; 即时渲染。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div&gt;&lt;h3 id=&quot;3curl-快测&quot;&gt;3）cURL 快测&lt;/h3&gt;&lt;a href=&quot;#3curl-快测&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3）cURL 快测”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;shell&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;curl&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;-H&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;Authorization: Bearer ki2api-key-2024&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#F78C6C;--1:#AA0982&quot;&gt;\&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;     &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;http://localhost:8989/v1/models&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;{&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;&quot;object&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;&quot;list&quot;&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;,&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;&quot;data&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;[{&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;id&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;&quot;:&quot;&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;claude-sonnet-4-20250514&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;&quot;,&quot;&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;object&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;&quot;:&quot;&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;model&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;&quot;,&quot;&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;created&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;&quot;:1755296317,&quot;&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;owned_by&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;&quot;:&quot;&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;ki2api&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;&quot;},{&quot;&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;id&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;&quot;:&quot;&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;claude-3-5-haiku-20241022&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;&quot;,&quot;&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;object&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;&quot;:&quot;&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;model&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;&quot;,&quot;&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;created&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;&quot;:1755296317,&quot;&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;owned_by&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;&quot;:&quot;&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;ki2api&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;&quot;}]}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;curl&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;-X&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;POST&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;http://localhost:8989/v1/chat/completions&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#F78C6C;--1:#AA0982&quot;&gt;\&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;-H&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;Authorization: Bearer ki2api-key-2024&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#F78C6C;--1:#AA0982&quot;&gt;\&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;-H&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;Content-Type: application/json&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#F78C6C;--1:#AA0982&quot;&gt;\&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;-d&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&apos;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;{&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;    &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;&quot;model&quot;: &quot;claude-sonnet-4-20250514&quot;,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;    &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;&quot;messages&quot;: [{&quot;role&quot;: &quot;user&quot;, &quot;content&quot;: &quot;你好，请介绍一下自己&quot;}],&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;    &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;&quot;max_tokens&quot;: 1000&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;}&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&apos;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;shell&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;curl&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;-X&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;POST&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;http://localhost:8989/v1/chat/completions&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#F78C6C;--1:#AA0982&quot;&gt;\&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;-H&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;Authorization: Bearer ki2api-key-2024&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#F78C6C;--1:#AA0982&quot;&gt;\&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;-H&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;Content-Type: application/json&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#F78C6C;--1:#AA0982&quot;&gt;\&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;-d&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&apos;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;{&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;    &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;&quot;model&quot;: &quot;claude-sonnet-4-20250514&quot;,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;    &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;&quot;messages&quot;: [&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;      &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;{&quot;role&quot;: &quot;user&quot;, &quot;content&quot;: &quot;写一首关于春天的诗&quot;}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;    &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;],&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;    &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;&quot;stream&quot;: true,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;    &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;&quot;max_tokens&quot;: 500&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;}&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&apos;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;data:&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;{&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;id&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;chatcmpl-ca5987c8-c362-4f0c-b90c-1e2ee8035d77&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;,&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;object&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;chat.completion.chunk&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;,&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;created&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;:1755296346,&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;model&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;claude-sonnet-4-20250514&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;,&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;system_fingerprint&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;fp_ki2api_v3&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;,&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;choices&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;:[{&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;index&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;:0,&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;delta&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;:{&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;role&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;assistant&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;}}]}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;data:&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;{&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;id&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;chatcmpl-ca5987c8-c362-4f0c-b90c-1e2ee8035d77&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;,&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;object&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;chat.completion.chunk&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;,&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;created&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;:1755296346,&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;model&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;claude-sonnet-4-20250514&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;,&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;system_fingerprint&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;fp_ki2api_v3&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;,&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;choices&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;:[{&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;index&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;:0,&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;delta&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;:{&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;content&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;春日吟\n\n嫩绿初萌柳梢头，\n桃花含笑映清流。\n燕子归来衔泥忙，\n蝴蝶翩翩舞不休。\n\n暖风轻拂过田野，&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;}}]}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;data:&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;{&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;id&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;chatcmpl-ca5987c8-c362-4f0c-b90c-1e2ee8035d77&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;,&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;object&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;chat.completion.chunk&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;,&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;created&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;:1755296346,&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;model&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;claude-sonnet-4-20250514&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;,&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;system_fingerprint&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;fp_ki2api_v3&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;,&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;choices&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;:[{&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;index&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;:0,&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;delta&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;:{&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;content&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;\n细雨润物细无声。\n万物复苏生机现，\n春光明媚满人间。\n\n孩童放纸鸢高飞，\n老人庭院赏花开。\n一年之&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;}}]}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;data:&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;{&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;id&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;chatcmpl-ca5987c8-c362-4f0c-b90c-1e2ee8035d77&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;,&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;object&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;chat.completion.chunk&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;,&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;created&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;:1755296346,&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;model&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;claude-sonnet-4-20250514&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;,&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;system_fingerprint&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;fp_ki2api_v3&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;,&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;choices&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;:[{&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;index&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;:0,&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;delta&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;:{&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;content&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;计在于春，\n希望种子心中栽。&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;}}]}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;data:&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;{&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;id&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;chatcmpl-ca5987c8-c362-4f0c-b90c-1e2ee8035d77&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;,&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;object&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;chat.completion.chunk&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;,&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;created&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;:1755296346,&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;model&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;claude-sonnet-4-20250514&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;,&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;system_fingerprint&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;fp_ki2api_v3&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;,&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;choices&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;:[{&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;index&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;:0,&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;delta&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;:{},&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;finish_reason&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;stop&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;}]}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;data:&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; [DONE]&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;p&gt;同 README 所示，也支持 &lt;code dir=&quot;auto&quot;&gt;stream: true&lt;/code&gt; 的流式请求。&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;对同类方案的补充视角&quot;&gt;对同类方案的补充视角&lt;/h2&gt;&lt;a href=&quot;#对同类方案的补充视角&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “对同类方案的补充视角”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;有些社区网关也做“Claude ↔ OpenAI 形状”的桥接，但 Ki2API &lt;strong&gt;聚焦单模型、轻量起步&lt;/strong&gt;，非常适合&lt;strong&gt;快速落地&lt;/strong&gt;与&lt;strong&gt;教学/分享&lt;/strong&gt;场景。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;结语&quot;&gt;结语&lt;/h2&gt;&lt;a href=&quot;#结语&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “结语”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Ki2API 把“换模型”变成“换 baseURL + 改 model 名”这点事。&lt;/strong&gt;
+对想快速上 Sonnet 4 的个人和小团队，非常友好。&lt;/p&gt;
+&lt;p&gt;你准备把哪个项目先换一下？&lt;strong&gt;你觉得呢？&lt;/strong&gt;&lt;/p&gt;&lt;!-- ---
+
+## 配图（插画式｜2:1｜英文文案｜不含中文）
+
+**封面图 Prompt**
+“An illustration of a tiny Docker ship bridging two API islands labeled ‘OpenAI v1’ and ‘Claude Sonnet 4’, packets streaming as dotted lines; clean minimal vectors, soft pastels, wide 2:1, no text.”
+
+**章节配图 1｜快速上手**
+“Isometric laptop running a terminal with `docker-compose up`, a green health heartbeat panel, and a localhost URL glowing; modern flat illustration, 2:1, no text.”
+
+**章节配图 2｜推荐场景**
+“Flow diagram showing boxes: Legacy App → Ki2API → Sonnet 4, with SSE stream lines animating; soft gradients, minimal lines, 2:1, no text.”
+
+**章节配图 3｜安全与最佳实践**
+“Shield and lock overlaying a reverse proxy dashboard with rate-limit sliders and IP allowlist chips; pastel illustration, 2:1, no text.”
+
+---
+
+## 多语言标题（3 组）
+
+1. **中文**：Ki2API：三步把 Claude Sonnet 4 接进 OpenAI 接口
+   **English**: Ki2API: Plug Claude Sonnet 4 into OpenAI APIs in 3 Steps
+   **繁體**：Ki2API：三步把 Claude Sonnet 4 接進 OpenAI 介面
+   **日本語**：Ki2API：3ステップでClaude Sonnet 4をOpenAI APIに接続
+   **Français** : Ki2API : relier Claude Sonnet 4 à l’API OpenAI en 3 étapes
+   **Español**: Ki2API: conecta Claude Sonnet 4 al API de OpenAI en 3 pasos
+   **Português**: Ki2API: conecte o Claude Sonnet 4 ao API da OpenAI em 3 passos
+   **slug**: `ki2api-claude-sonnet4-openai-in-3-steps`
+
+2. **中文**：本地一键起，流式直出：Ki2API 上手指南
+   **English**: One-Command Local, Streaming Ready: Ki2API Quickstart
+   **繁體**：本地一鍵啟，串流直出：Ki2API 上手指南
+   **日本語**：ワンコマンド起動・ストリーミング対応：Ki2API入門
+   **Français** : Démarrage local en une commande, streaming natif : Guide Ki2API
+   **Español**: Local con un comando, streaming listo: Guía Ki2API
+   **Português**: Local com um comando, streaming pronto: Guia Ki2API
+   **slug**: `ki2api-quickstart-local-streaming`
+
+3. **中文**：把老项目“无痛换心”：用 Ki2API 切到 Sonnet 4
+   **English**: “Heart Swap” for Legacy Apps: Switch to Sonnet 4 via Ki2API
+   **繁體**：老專案「無痛換心」：用 Ki2API 切到 Sonnet 4
+   **日本語**：「レガシーを無痛移行」：Ki2APIでSonnet 4へ切替
+   **Français** : « Greffe sans douleur » : migrer vers Sonnet 4 avec Ki2API
+   **Español**: “Trasplante sin dolor”: pasa a Sonnet 4 con Ki2API
+   **Português**: “Transplante sem dor”: mude para Sonnet 4 com Ki2API
+   **slug**: `ki2api-switch-to-sonnet4-for-legacy-apps`
+
+---
+
+## 朋友圈/评论区文案（3 条）
+
+1. “把 baseURL 指到 Ki2API，模型名填 `claude-sonnet-4-20250514`，老项目就吃上 Sonnet 4 了。五分钟真升级，今晚就开测⚡️”
+2. “流式 SSE 真的香，前端消息一刷一刷地出，体验拉满。Ki2API 这体量，讲解培训也很适合～”
+3. “最喜欢它的‘少即是多’：就一个模型，少纠结多产出。谁还在手搓网关？上车吧🚢”
+
+---
+
+需要我把 **Nginx 反代与限流示例**、**Docker Compose 模板**、或 **Python/Go/TS 最佳实践片段**也配齐吗？我可以直接补一版“可复制即用”的清单。
+
+[1]: https://github.com/zhalice2011/ki2api?utm_source=chatgpt.com &quot;zhalice2011/ki2api: RT&quot;
+[2]: https://docs.anthropic.com/en/docs/about-claude/models/overview?utm_source=chatgpt.com &quot;Models overview&quot;
+[3]: https://cloud.google.com/vertex-ai/generative-ai/docs/partner-models/claude/sonnet-4?utm_source=chatgpt.com &quot;Claude Sonnet 4 | Generative AI on Vertex AI&quot;
+[4]: https://www.anthropic.com/news/claude-4?utm_source=chatgpt.com &quot;Introducing Claude 4&quot;
+[5]: https://www.theverge.com/news/672705/anthropic-claude-4-ai-ous-sonnet-availability?utm_source=chatgpt.com &quot;Anthropic&apos;s Claude 4 AI models are better at coding and reasoning&quot;
+[6]: https://aws.amazon.com/blogs/aws/claude-opus-4-anthropics-most-powerful-model-for-coding-is-now-in-amazon-bedrock/?utm_source=chatgpt.com &quot;Introducing Claude 4 in Amazon Bedrock, the most powerful ...&quot;
+[7]: https://github.com/codingworkflow/claude-code-api?utm_source=chatgpt.com &quot;codingworkflow/claude-code-api&quot;
+[8]: https://www.reddit.com/r/LocalLLaMA/comments/1mfuu40/gatewayproxy_for_claudecode_to_openai_api/?utm_source=chatgpt.com &quot;Gateway/Proxy for Claude-Code to OpenAI API compatible.&quot; --&gt;</content:encoded><category>Ki2API</category><category>Kiro</category></item><item><title>Claude Code 里养电子宠物 Tamagotchi，它居然会劝我别熬夜…</title><link>https://www.vibesparking.com/zh-cn/blog/ai/claude-code/tamagotchi/2025-08-15-tamagotchi-in-claude-code/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/claude-code/tamagotchi/2025-08-15-tamagotchi-in-claude-code/</guid><pubDate>Fri, 15 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # 把“电子宠物”塞进 Claude Code：这只 Tamagotchi，懂你的代码也懂你 --&gt;
+&lt;p&gt;&lt;strong&gt;一个有点离谱、却很上头的小玩具。&lt;/strong&gt;
+它住在 Claude Code 的状态栏里，会呼吸，会撒娇，会吐槽你的 TODO。你写久了它会饿，你调试崩了它会安慰你，还会提醒你去喝水吃饭。&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;为什么它有趣&quot;&gt;为什么它有趣？&lt;/h2&gt;&lt;a href=&quot;#为什么它有趣&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “为什么它有趣？”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;真的住在状态栏&lt;/strong&gt;：跟着你的会话节奏呼吸、换表情、发心情泡泡，不是截图小摆件，是活的。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;看得懂你的“节奏”&lt;/strong&gt;：&lt;strong&gt;基于活动而不是墙钟&lt;/strong&gt;更新；能识别你是否休息过（5 分钟以上的间隔）；状态保存在 &lt;code dir=&quot;auto&quot;&gt;~/.claude/pets/&lt;/code&gt;，关了再开，记忆还在。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;四维属性&lt;/strong&gt;：饥饿、能量、清洁、快乐；低于阈值会给⚠️提醒。&lt;strong&gt;它会真情实感“求你投喂”。&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;会说话&lt;/strong&gt;：内置 &lt;strong&gt;200+ 条上下文想法&lt;/strong&gt;，会评价你的代码风格、工作习惯，也会来点“人生哲学”。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;双通道交互&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Slash 命令：&lt;code dir=&quot;auto&quot;&gt;/pet-feed pizza&lt;/code&gt;、&lt;code dir=&quot;auto&quot;&gt;/pet-play ball&lt;/code&gt;、&lt;code dir=&quot;auto&quot;&gt;/pet-sleep&lt;/code&gt;、&lt;code dir=&quot;auto&quot;&gt;/pet-stats&lt;/code&gt;…&lt;/li&gt;
+&lt;li&gt;终端 CLI：&lt;code dir=&quot;auto&quot;&gt;claude-code-tamagotchi feed pizza&lt;/code&gt;、&lt;code dir=&quot;auto&quot;&gt;... play ball&lt;/code&gt;、&lt;code dir=&quot;auto&quot;&gt;... stats&lt;/code&gt; 等。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;随心改性格&lt;/strong&gt;：一堆环境变量 + 现成“人格预设”（禅宗大师、戏精、调试狂魔、沉默陪伴等），想话痨就话痨，想“净空”就净空。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;MIT 开源&lt;/strong&gt;；&lt;strong&gt;刚发不久就上 npm&lt;/strong&gt;，连着修了兼容性与体验（Node.js 直接可用、默认显示模型名、状态持久化修复等）。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;背景补充：Claude Code 本体是什么？它是 Anthropic 的“代理式”命令行编程助手，能读项目结构、跑工具链、处理 Git 流程。Tamagotchi 就是给它加了一个“有情绪的状态栏搭子”。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;1三分钟装好入门指北&quot;&gt;1）三分钟装好：入门指北&lt;/h2&gt;&lt;a href=&quot;#1三分钟装好入门指北&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1）三分钟装好：入门指北”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;方案 A｜全局安装（最省事）&lt;/strong&gt;&lt;/p&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# 1) 安装&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;npm&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;install&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;-g&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;claude-code-tamagotchi&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# 或&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;bun&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;add&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;-g&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;claude-code-tamagotchi&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# 2) 开启状态栏宠物：编辑 ~/.claude/settings.json&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;{&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;&quot;statusLine&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;{&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;&quot;type&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;command&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;&quot;command&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;bunx claude-code-tamagotchi statusline&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;&quot;padding&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#F78C6C;--1:#AA0982&quot;&gt;0&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;优点：立刻在状态栏看到萌宠；&lt;strong&gt;自带 CLI 命令&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;注意：&lt;strong&gt;不包含 Slash 命令&lt;/strong&gt;；想要 &lt;code dir=&quot;auto&quot;&gt;/pet-*&lt;/code&gt;，看下一步。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;加上 Slash 命令（可选）&lt;/strong&gt;&lt;/p&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;git&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;clone&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;https://github.com/Ido-Levi/claude-code-tamagotchi.git&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;/tmp/claude-pet&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &amp;#x26;&amp;#x26; &lt;/span&gt;&lt;span style=&quot;--0:#F78C6C;--1:#AA0982&quot;&gt;\&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;cp&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;-r&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;/tmp/claude-pet/claude-commands/&lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;*&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;~/.claude/commands/&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &amp;#x26;&amp;#x26; &lt;/span&gt;&lt;span style=&quot;--0:#F78C6C;--1:#AA0982&quot;&gt;\&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;rm&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;-rf&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;/tmp/claude-pet&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;现在可以在 Claude Code 里直接用 &lt;code dir=&quot;auto&quot;&gt;/pet-feed&lt;/code&gt;、&lt;code dir=&quot;auto&quot;&gt;/pet-play&lt;/code&gt; 等。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;方案 B｜克隆 + 自动配置（全功能）&lt;/strong&gt;&lt;/p&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;git&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;clone&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;https://github.com/Ido-Levi/claude-code-tamagotchi.git&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;cd&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;claude-code-tamagotchi&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;./setup.sh&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;脚本会安装依赖、配置状态栏、&lt;strong&gt;一次性放好全部 &lt;code dir=&quot;auto&quot;&gt;/pet-*&lt;/code&gt; 命令&lt;/strong&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;小贴士：作者已把包发布到 npm，并修了 &lt;strong&gt;“无需 Bun、Node.js 直接可用”&lt;/strong&gt; 的兼容；默认还能显示当前 Claude 模型名。想“极简接入”的同学可以直接走 A 方案。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;2好玩在哪真实的陪伴感&quot;&gt;2）好玩在哪：真实的“陪伴感”&lt;/h2&gt;&lt;a href=&quot;#2好玩在哪真实的陪伴感&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2）好玩在哪：真实的“陪伴感””&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;会在 2 点提醒你别硬刚&lt;/strong&gt;：“我们已经四小时了…先吃点再战？”——有点好笑，但真的能打断糟糕的熬夜循环。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;看心情变脸&lt;/strong&gt;：&lt;code dir=&quot;auto&quot;&gt;(◕ᴥ◕)&lt;/code&gt; ↔ &lt;code dir=&quot;auto&quot;&gt;(◕ᴗ◕)&lt;/code&gt; 开心呼吸，&lt;code dir=&quot;auto&quot;&gt;(-ᴥ-)&lt;/code&gt; 睡觉，&lt;code dir=&quot;auto&quot;&gt;(◕︵◕)&lt;/code&gt; 需要关注。&lt;strong&gt;情绪就是状态栏 UI。&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;“人格开关”&lt;/strong&gt;：想要佛系就把衰减调慢；要鸡血就加快能量恢复；要“代码挑刺王”，就把“coding 想法权重”拉满。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;3五个推荐使用场景&quot;&gt;3）五个推荐使用场景&lt;/h2&gt;&lt;a href=&quot;#3五个推荐使用场景&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3）五个推荐使用场景”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;长时间 Debug/排错&lt;/strong&gt;：当你沉迷堆日志，它会提示你起来动一动。&lt;strong&gt;减少“越修越乱”。&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;直播、录课、内训 Demo&lt;/strong&gt;：屏幕上有个会“呼吸”的宠物，气氛一下就活了，&lt;strong&gt;互动感爆棚&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;团队远程氛围&lt;/strong&gt;：把人格预设“统一下发”，大家的宠物一起“打卡吐槽”，当个轻社交。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;自我约束&lt;/strong&gt;：配合 &lt;code dir=&quot;auto&quot;&gt;/pet-stats&lt;/code&gt; 看四维指标，给自己设“休息即投喂”的小奖励机制。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;状态栏信息中心&lt;/strong&gt;：显示当前目录、会话计数、&lt;strong&gt;模型名&lt;/strong&gt;；切模型/切目录时心里更有数。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;4一键换性格几套好用的人格预设&quot;&gt;4）一键换性格：几套好用的“人格预设”&lt;/h2&gt;&lt;a href=&quot;#4一键换性格几套好用的人格预设&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “4）一键换性格：几套好用的“人格预设””&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;禅宗大师（几乎不打扰）&lt;/strong&gt;&lt;/p&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;export&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;PET_DECAY_INTERVAL&lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;=&lt;/span&gt;&lt;span style=&quot;--0:#F78C6C;--1:#AA0982&quot;&gt;100&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;export&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;PET_HUNGER_DECAY&lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;=&lt;/span&gt;&lt;span style=&quot;--0:#F78C6C;--1:#AA0982&quot;&gt;0.1&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;export&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;PET_ENERGY_DECAY&lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;=&lt;/span&gt;&lt;span style=&quot;--0:#F78C6C;--1:#AA0982&quot;&gt;0.1&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;export&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;PET_CLEAN_DECAY&lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;=&lt;/span&gt;&lt;span style=&quot;--0:#F78C6C;--1:#AA0982&quot;&gt;0.1&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;export&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;PET_CHATTINESS&lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;=&lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;quiet&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;调试狂魔（专盯代码）&lt;/strong&gt;&lt;/p&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;export&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;PET_THOUGHT_WEIGHT_CODING&lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;=&lt;/span&gt;&lt;span style=&quot;--0:#F78C6C;--1:#AA0982&quot;&gt;70&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;export&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;PET_THOUGHT_WEIGHT_RANDOM&lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;=&lt;/span&gt;&lt;span style=&quot;--0:#F78C6C;--1:#AA0982&quot;&gt;5&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;export&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;PET_THOUGHT_FREQUENCY&lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;=&lt;/span&gt;&lt;span style=&quot;--0:#F78C6C;--1:#AA0982&quot;&gt;10&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;戏精（很会表达需求）&lt;/strong&gt;&lt;/p&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;export&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;PET_NEED_THRESHOLD&lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;=&lt;/span&gt;&lt;span style=&quot;--0:#F78C6C;--1:#AA0982&quot;&gt;70&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;export&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;PET_CRITICAL_THRESHOLD&lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;=&lt;/span&gt;&lt;span style=&quot;--0:#F78C6C;--1:#AA0982&quot;&gt;50&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;export&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;PET_CHATTINESS&lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;=&lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;chatty&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;以上预设都来自 README，复制进 &lt;code dir=&quot;auto&quot;&gt;~/.zshrc&lt;/code&gt; / &lt;code dir=&quot;auto&quot;&gt;~/.bashrc&lt;/code&gt; 即可生效。&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;5踩坑与退出&quot;&gt;5）踩坑与退出&lt;/h2&gt;&lt;a href=&quot;#5踩坑与退出&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “5）踩坑与退出”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;看不到宠物？重启 Claude Code，检查 &lt;code dir=&quot;auto&quot;&gt;~/.claude/settings.json&lt;/code&gt; 的 &lt;code dir=&quot;auto&quot;&gt;statusLine&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;命令无效？确认 &lt;code dir=&quot;auto&quot;&gt;~/.claude/commands/&lt;/code&gt; 是否有 &lt;code dir=&quot;auto&quot;&gt;/pet-*&lt;/code&gt; 文件；检查 &lt;code dir=&quot;auto&quot;&gt;bun --version&lt;/code&gt;（走 Bun 路线时）。&lt;/li&gt;
+&lt;li&gt;想卸载？删 &lt;code dir=&quot;auto&quot;&gt;~/.claude/commands/pet-*.md&lt;/code&gt;、清理 &lt;code dir=&quot;auto&quot;&gt;~/.claude/pets/*.json&lt;/code&gt;、移除 &lt;code dir=&quot;auto&quot;&gt;statusLine&lt;/code&gt; 配置。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;结语&quot;&gt;结语&lt;/h2&gt;&lt;a href=&quot;#结语&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “结语”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;工作需要效率，脑袋也需要治愈。&lt;/strong&gt;
+这只小宠物，不会替你写代码，但能把“和 AI 协作的那点人味儿”带回来。装上，试两天。&lt;strong&gt;也许你会更喜欢“被看见的编程”。&lt;/strong&gt;
+（截至 &lt;strong&gt;2025-08-15&lt;/strong&gt;，项目约 &lt;strong&gt;36⭐&lt;/strong&gt;，仍在快节奏更新中。）&lt;/p&gt;&lt;!-- **思考题**：你更需要一个“话痨教练”，还是“沉默陪伴”？在评论区聊聊你的预设组合。 --&gt;&lt;!-- ---
+
+## 封面与配图（插画式｜2:1｜英文文案，不含中文）
+
+**封面图 Prompt**
+“An illustration of a tiny virtual pet living in a terminal status bar, breathing and changing expressions while a developer debugs code at night; clean minimal lines, modern pastel palette, wide 2:1 composition; text-free.”
+
+**配图 1｜交互**
+“An illustration showing slash commands like /pet-feed and /pet-play floating as stickers around a terminal window, playful UI icons, minimal pastel, 2:1, text-free.”
+
+**配图 2｜人格预设**
+“An illustration of five personality cards—Zen Master, Drama Queen, Debugger, Silent Companion, Motivational Coach—arranged like trading cards around a status bar pet, clean minimal pastel, 2:1, text-free.”
+
+**配图 3｜四维属性**
+“An illustration of four gauges labeled with icons for hunger, energy, cleanliness, happiness above a smiling terminal pet, soft gradients, minimal lines, 2:1, text-free.”
+
+---
+
+## 多语标题（3 组）
+
+1. **中文**：把电子宠物塞进 Claude Code：它会吐槽你的 TODO，还会劝你休息
+   **English**: A Tamagotchi in Claude Code: It roasts your TODOs and reminds you to rest
+   **繁體**：把電子寵物塞進 Claude Code：它會吐槽你的 TODO，也會勸你休息
+   **日本語**：Claude Code に住むタマゴッチ：TODO をいじりつつ休憩も勧める
+   **Français** : Un Tamagotchi dans Claude Code : il chambre vos TODO et vous rappelle de faire une pause
+   **Español**: Un Tamagotchi en Claude Code: se burla de tus TODO y te recuerda descansar
+   **Português**: Um Tamagotchi no Claude Code: zoa seus TODOs e lembra você de descansar
+   **slug**：tamagotchi-in-claude-code
+
+2. **中文**：这只会“呼吸”的状态栏宠物，把编程变得更有人味
+   **English**: A Breathing Status-Bar Pet that Makes Coding Feel Human
+   **繁體**：會「呼吸」的狀態欄寵物，讓編程更有人味
+   **日本語**：呼吸するステータスバーのペットで、コーディングに人間味を
+   **Français** : Un petit compagnon « respirant » dans la barre d’état
+   **Español**: Una mascota “que respira” en la barra de estado
+   **Português**: Um pet “respirante” na barra de status
+   **slug**：breathing-statusbar-pet
+
+3. **中文**：写代码不必孤单：Claude Code Tamagotchi 上手与玩法
+   **English**: You Don’t Have to Code Alone: Getting Started with Claude Code Tamagotchi
+   **繁體**：寫程式不必孤單：Claude Code Tamagotchi 上手與玩法
+   **日本語**：一人で書かなくていい：Claude Code タマゴッチ入門
+   **Français** : Coder sans être seul : guide Tamagotchi pour Claude Code
+   **Español**: No programes en soledad: guía de Tamagotchi para Claude Code
+   **Português**: Não codifique sozinho: guia do Tamagotchi no Claude Code
+   **slug**：not-coding-alone-claude-pet
+
+---
+
+## 朋友圈/评论区文案（3 条）
+
+1. “把电子宠物塞进状态栏了，它居然会劝我别熬夜…今天被一只 `(◕ᴥ◕)` 拯救 👀”
+2. “/pet-feed pizza → bug 没修好，我先吃饱了。编程从来不是一个人打怪哈哈。”
+3. “调试狂魔人格 + stats 面板，沉迷被宠物监督写代码的爽感，强推。”
+
+---
+
+### 参考与致谢
+
+项目主页（README、安装与命令、预设、工作原理等）与状态说明。
+最近改动（npm 发布、Node 兼容、默认显示模型名、状态持久化修复等）。
+Claude Code 官方介绍与安装文档（理解本体与环境要求）。
+
+——
+这版你满意吗？要不要我**再扩写一版更“技术向”**（比如深挖源码结构、状态机设计、定制想法库的写法），或者做一版**更“运营向”的短版**，方便在社群传播？
+
+[1]: https://github.com/Ido-Levi/claude-code-tamagotchi &quot;GitHub - Ido-Levi/claude-code-tamagotchi: The ultimate productivity companion/destroyer! This Tamagotchi tries its best to help but mostly just wants snacks.&quot;
+[2]: https://docs.anthropic.com/en/docs/claude-code/overview?utm_source=chatgpt.com &quot;Claude Code overview&quot;
+[3]: https://www.anthropic.com/claude-code?utm_source=chatgpt.com &quot;Claude Code: Deep coding at terminal velocity ...&quot;
+[4]: https://github.com/Ido-Levi/claude-code-tamagotchi/commits/main/ &quot;Commits · Ido-Levi/claude-code-tamagotchi · GitHub&quot; --&gt;</content:encoded><category>Claude Code</category><category>Tamagotchi</category></item><item><title>Station 统一管理 Claude / Cursor 的 Agent</title><link>https://www.vibesparking.com/zh-cn/blog/ai/vibe-coding/station/2025-08-15-station-ship-sub-agents-to-prod/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/vibe-coding/station/2025-08-15-station-ship-sub-agents-to-prod/</guid><pubDate>Fri, 15 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # Station 统一管理 Claude / Cursor 的 Agent --&gt;
+&lt;blockquote&gt;
+&lt;p&gt;想要一套&lt;strong&gt;自托管、可版本、可打包&lt;/strong&gt;的 Agent 运行时，让 Claude Code / Cursor 里产出的“小 Agent”真正落地上线？Station 就是为这件事而生的。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;引言&quot;&gt;引言&lt;/h2&gt;&lt;a href=&quot;#引言&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “引言”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;最近这款 &lt;strong&gt;Station&lt;/strong&gt; 在圈里挺火。它不是又一个“应用级”Agent 平台，而是专门给 &lt;strong&gt;可部署子代理（Sub-Agents）&lt;/strong&gt; 准备的&lt;strong&gt;轻量运行时与打包分发体系&lt;/strong&gt;。
+一句话理解：把你在 Claude Code、Cursor 里做出来的“能干活的小 Agent”，打包、上生产、接权限、可审计，还能版本化管理。&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;亮点一览为内部场景而生&quot;&gt;亮点一览（为“内部场景”而生）&lt;/h2&gt;&lt;a href=&quot;#亮点一览为内部场景而生&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “亮点一览（为“内部场景”而生）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;**为什么用 Station？**因为内部自动化不同于普通 App：要拿密钥、要进数据库、要打 CI/CD、要过审计。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;面向内部任务&lt;/strong&gt;：子代理可以连生产库、监控基础设施、走 CI/CD、做安全扫描与应急响应。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;安全内建&lt;/strong&gt;：自托管、机密加密（AES）、多环境隔离（dev/staging/prod）、全量审计轨迹。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;轻量可融入&lt;/strong&gt;：&lt;strong&gt;单一约 45MB 二进制&lt;/strong&gt;、本地 &lt;strong&gt;SQLite&lt;/strong&gt; 即开箱，生产可切 &lt;strong&gt;PostgreSQL&lt;/strong&gt;，天然 &lt;strong&gt;GitOps&lt;/strong&gt;（配置可版本）。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;MCP 原生&lt;/strong&gt;：直接做 &lt;strong&gt;MCP 运行时&lt;/strong&gt;，复用你团队已经批准的 MCP 工具（文件系统、Slack、AWS、K8s、DB…）。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;开发体验&lt;/strong&gt;：提供 &lt;strong&gt;Genkit 驱动的浏览器 Playground&lt;/strong&gt; 与 &lt;code dir=&quot;auto&quot;&gt;stn develop&lt;/code&gt;，可视化调试工具调用与执行流。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;MCP 是什么？简单说就是**让 LLM 用“受控工具”**的统一协议，Claude Desktop 官方教程里有快速上手与 Claude 配置示例。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;station-怎么工作&quot;&gt;Station 怎么工作？&lt;/h2&gt;&lt;a href=&quot;#station-怎么工作&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Station 怎么工作？”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;核心结构&lt;/strong&gt;很简单：
+&lt;strong&gt;一个 &lt;code dir=&quot;auto&quot;&gt;.prompt&lt;/code&gt; 文件 + 一组 MCP 工具 = 一个可部署的子代理&lt;/strong&gt;。
+环境以 &lt;strong&gt;dev/staging/prod&lt;/strong&gt; 组织，工具定义在 &lt;code dir=&quot;auto&quot;&gt;template.json&lt;/code&gt;，环境变量写 &lt;code dir=&quot;auto&quot;&gt;variables.yml&lt;/code&gt;，最终可&lt;strong&gt;打包 Bundle&lt;/strong&gt;并分发安装。&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;安装与接入5-分钟上手&quot;&gt;安装与接入（5 分钟上手）&lt;/h2&gt;&lt;a href=&quot;#安装与接入5-分钟上手&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “安装与接入（5 分钟上手）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;安装 &amp;#x26; 初始化&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;curl&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;-fsSL&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;https://raw.githubusercontent.com/cloudshipai/station/main/install.sh&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;|&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;bash&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;stn&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;init&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;   &lt;/span&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# 初始化数据库与加密&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;ol start=&quot;2&quot;&gt;
+&lt;li&gt;&lt;strong&gt;接入 Claude Desktop / Claude Code（MCP）&lt;/strong&gt;
+在 Claude 配置里加入：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;json&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;{&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;mcpServers&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: {&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;station&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: {&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;      &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;command&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;stn&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;      &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;args&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: [&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;stdio&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;]&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;    &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;p&gt;现在，跟 Claude 说“创建一个安全审计代理”，它会自动给这个代理配好需要的工具（如文件扫描 + Slack）。&lt;/p&gt;
+&lt;ol start=&quot;3&quot;&gt;
+&lt;li&gt;&lt;strong&gt;一键打包 &amp;#x26; 安装 Bundle（把环境搬去生产）&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;stn&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;template&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;create&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;prod-bundle&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;--env&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;default&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;--name&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;Prod Bundle&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;--author&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;Team&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;--description&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;Prod env&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;stn&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;template&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;bundle&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;prod-bundle&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;stn&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;template&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;install&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;prod-bundle.tar.gz&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;production&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;stn&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;sync&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;production&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;p&gt;完成后，一个包含 &lt;strong&gt;多子代理 + 多 MCP 服务器&lt;/strong&gt; 的可部署包就到位了。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;想要&lt;strong&gt;可视化调试&lt;/strong&gt;？本地跑：&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;genkit&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;start&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;--&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;stn&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;develop&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;--env&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;dev&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;p&gt;浏览器里即可测试输入、看实时调用轨迹与日志。&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;推荐使用场景配可复制示例&quot;&gt;推荐使用场景（配可复制示例）&lt;/h2&gt;&lt;a href=&quot;#推荐使用场景配可复制示例&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “推荐使用场景（配可复制示例）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3 id=&quot;1-安全合规--基线扫描-slack-告警&quot;&gt;1) 安全合规 / 基线扫描（+ Slack 告警）&lt;/h3&gt;&lt;a href=&quot;#1-安全合规--基线扫描-slack-告警&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1) 安全合规 / 基线扫描（+ Slack 告警）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;目标：定时扫描敏感目录，发现异常即时推 Slack。&lt;/li&gt;
+&lt;li&gt;做法：创建 &lt;code dir=&quot;auto&quot;&gt;SecurityScanner.prompt&lt;/code&gt;，挂接 &lt;strong&gt;filesystem MCP&lt;/strong&gt; + &lt;strong&gt;Slack MCP&lt;/strong&gt;；在 Station 里设定执行元数据与步数上限。&lt;/li&gt;
+&lt;li&gt;触发语句（Claude 内）：
+“运行安全扫描，目录 &lt;code dir=&quot;auto&quot;&gt;/etc&lt;/code&gt;，把高危项发到 &lt;code dir=&quot;auto&quot;&gt;#sec-alerts&lt;/code&gt;。”&lt;/li&gt;
+&lt;li&gt;价值：自动化+可追踪，方便审计与回溯。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;2-基础设施巡检--成本看板aws-成本&quot;&gt;2) 基础设施巡检 / 成本看板（AWS 成本）&lt;/h3&gt;&lt;a href=&quot;#2-基础设施巡检--成本看板aws-成本&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2) 基础设施巡检 / 成本看板（AWS 成本）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;目标：拉取近 7 天成本，生成日报，发 Slack。&lt;/li&gt;
+&lt;li&gt;做法：Agent 组合 &lt;strong&gt;AWS 成本工具&lt;/strong&gt; + &lt;strong&gt;Slack&lt;/strong&gt;，输出 Markdown 周期推送。&lt;/li&gt;
+&lt;li&gt;价值：把“AI+云成本”变成日常节拍，随手可得。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;3-cicd-部署自动化容器k8s&quot;&gt;3) CI/CD 部署自动化（容器/K8s）&lt;/h3&gt;&lt;a href=&quot;#3-cicd-部署自动化容器k8s&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3) CI/CD 部署自动化（容器/K8s）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;目标：小版本上线，自动 &lt;code dir=&quot;auto&quot;&gt;docker exec&lt;/code&gt; + &lt;code dir=&quot;auto&quot;&gt;kubectl apply&lt;/code&gt;，回写变更单链接。&lt;/li&gt;
+&lt;li&gt;做法：Agent 组合 &lt;strong&gt;Docker MCP&lt;/strong&gt; + &lt;strong&gt;Kubernetes MCP&lt;/strong&gt;；上线时只需一句话。&lt;/li&gt;
+&lt;li&gt;价值：开发说人话，Agent 做苦活。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;4-生产库只读巡检--慢-sql-抓取&quot;&gt;4) 生产库只读巡检 / 慢 SQL 抓取&lt;/h3&gt;&lt;a href=&quot;#4-生产库只读巡检--慢-sql-抓取&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “4) 生产库只读巡检 / 慢 SQL 抓取”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;目标：连接生产库（只读凭证），抽样检查慢查询与索引命中。&lt;/li&gt;
+&lt;li&gt;做法：Agent 组合 &lt;strong&gt;DB MCP&lt;/strong&gt; 与自定义分析脚本。&lt;/li&gt;
+&lt;li&gt;价值：尽量靠近“问题源头”，减少排障往返。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;5-代码评审机器人内部规则版&quot;&gt;5) 代码评审机器人（内部规则版）&lt;/h3&gt;&lt;a href=&quot;#5-代码评审机器人内部规则版&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “5) 代码评审机器人（内部规则版）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;目标：按团队规范（安全/性能/风格）出评审建议。&lt;/li&gt;
+&lt;li&gt;做法：在 &lt;code dir=&quot;auto&quot;&gt;.prompt&lt;/code&gt; 写清评分维度与建议格式，挂 &lt;strong&gt;filesystem MCP&lt;/strong&gt; 读取代码，输出结构化建议。&lt;/li&gt;
+&lt;li&gt;价值：把“规范”产品化，持续一致。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;与应用型-agent-平台的区别&quot;&gt;与应用型 Agent 平台的区别&lt;/h2&gt;&lt;a href=&quot;#与应用型-agent-平台的区别&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “与应用型 Agent 平台的区别”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;Station 默认面向 &lt;strong&gt;“能进你内网、需要权限与审计”&lt;/strong&gt; 的任务；&lt;/li&gt;
+&lt;li&gt;强调 &lt;strong&gt;自托管与数据主权&lt;/strong&gt;；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;单文件 + SQLite&lt;/strong&gt; 的轻量形态，让它像一件运维工具，而不是一套平台。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;你也可以把 Station 当作 &lt;strong&gt;MCP“中枢”&lt;/strong&gt;：它既能消费别的 MCP 服务器，也能对外暴露“调 Agent、列 Agent、建 Agent”的 MCP 工具给其他客户端使用。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;上线建议团队落地清单&quot;&gt;上线建议（团队落地清单）&lt;/h2&gt;&lt;a href=&quot;#上线建议团队落地清单&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “上线建议（团队落地清单）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;凭证托管&lt;/strong&gt;：密钥与连接串放入 Station 的加密存储，按环境隔离。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;最小权限&lt;/strong&gt;：为每个子代理单独配置只需的 MCP 工具，少即是多。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;GitOps&lt;/strong&gt;：&lt;code dir=&quot;auto&quot;&gt;template.json&lt;/code&gt;、&lt;code dir=&quot;auto&quot;&gt;.prompt&lt;/code&gt;、&lt;code dir=&quot;auto&quot;&gt;variables.yml&lt;/code&gt; 全进仓库，走 MR 审核再发版。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;审计留痕&lt;/strong&gt;：所有执行都有轨迹，出事可回溯。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;结语&quot;&gt;结语&lt;/h2&gt;&lt;a href=&quot;#结语&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “结语”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Station 把“会干活的小 Agent”从桌面聊到的点子，落成&lt;strong&gt;可部署、可审计、可复制&lt;/strong&gt;的内部自动化。你不用再为平台折腾，只需把 &lt;code dir=&quot;auto&quot;&gt;.prompt&lt;/code&gt; 写好，工具接上，&lt;strong&gt;一打包就能到生产&lt;/strong&gt;。
+这就是我最喜欢它的地方：&lt;strong&gt;简单、可控、能扩散&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;—&lt;/p&gt;
+&lt;p&gt;**你觉得最值得先做的一个子代理是什么？**欢迎在评论区聊聊，也可以把这篇转给团队同事，一起设计你们的“内部 Agent 工厂”。&lt;/p&gt;&lt;!-- ---
+
+## 3 个多语言爆款标题 &amp; slug
+
+1. **把 Claude 的小 Agent 送进生产：Station 自托管子代理运行时指南**
+   EN: Ship Your Claude Sub-Agents to Prod: A Hands-On Guide to Station
+   繁體: 把 Claude 小代理送進生產：Station 自託管子代理運行時指南
+   日本語: Claude の小さなエージェントを本番へ：Station 実践ガイド
+   Fr: Mettez vos sous-agents Claude en prod : guide pratique Station
+   Es: Lleva tus sub-agentes de Claude a producción: guía práctica de Station
+   Pt: Leve os sub-agentes do Claude para produção: guia prático do Station
+   **slug**: station-ship-sub-agents-to-prod
+
+2. **轻量、可审计、能打包：Station 打造你的内部 AI 自动化工厂**
+   EN: Lightweight, Auditable, Packable: Build an Internal AI Automation Factory with Station
+   繁體: 輕量、可稽核、可打包：用 Station 搭建內部 AI 自動化工廠
+   日本語: 軽量・監査可能・パッケージ化：Station で社内AI自動化工場を作る
+   Fr: Léger, traçable, empaquetable : votre usine d’automatisation interne avec Station
+   Es: Ligero, auditable y empaquetable: tu fábrica de automatización interna con Station
+   Pt: Leve, auditável e empacotável: sua fábrica interna de automação com Station
+   **slug**: station-internal-ai-automation-factory
+
+3. **不是平台，是运行时：Station 用 MCP 驱动可部署子代理**
+   EN: Not a Platform—A Runtime: Station Powers Deployable Sub-Agents with MCP
+   繁體: 不是平台，而是運行時：Station 以 MCP 驅動可部署子代理
+   日本語: プラットフォームではなくランタイム：Station が MCP で配備可能なサブエージェントを実現
+   Fr: Pas une plateforme, un runtime : Station active des sous-agents déployables avec MCP
+   Es: No es plataforma, es runtime: Station impulsa sub-agentes desplegables con MCP
+   Pt: Não é plataforma, é runtime: Station viabiliza sub-agentes com MCP
+   **slug**: station-runtime-not-platform
+
+---
+
+## 封面与章节配图（插画风｜2:1｜英文文案，不含中文）
+
+**封面图 Prompt**
+“An illustration of a compact control room labeled ‘Station’ orchestrating many small ‘sub-agents’ as tool icons (file, database, Kubernetes, Slack) on conveyor belts; clean minimal lines, modern pastel palette, wide 2:1 composition; no text on image.”
+
+**章节配图 Prompt（“内部自动化工厂”）**
+“An illustration of a developer handing a `.prompt` file to a packaging robot that seals a ‘bundle’ crate, with arrows to ‘dev’, ‘staging’, ‘prod’ bays; modern pastel, minimal style, 2:1 aspect ratio, text-free.”
+
+---
+
+## 3 条朋友圈/评论文案
+
+1. “把小 Agent 真正送进生产了！Station 自托管 + 打包分发，搞定权限、审计和多环境，团队自动化马上起飞🚀”
+2. “不是又一个平台，是能落地的运行时。`.prompt` + MCP 工具 = 子代理，打包就能拎包上生产，太爽了😎”
+3. “安全扫描、CI/CD、成本报表…一句话触发，Agent 干完活还留审计痕迹。这才是 AI 在开发团队的正确打开方式✅”
+
+---
+
+想不想我再写一篇 **“用 Station 从 0 到 1 做一套团队模板（含示例 .prompt 与 template.json）”** 的实操篇？需要的话我现在就开写。
+
+[1]: https://github.com/cloudshipai/station &quot;GitHub - cloudshipai/station&quot;
+[2]: https://modelcontextprotocol.info/docs/quickstart/quickstart/ &quot;Quickstart – Model Context Protocol （MCP）&quot; --&gt;</content:encoded><category>Station</category><category>Claude Code</category><category>Cursor</category><category>Vibe Coding</category></item><item><title>Claude Code 真省钱用法</title><link>https://www.vibesparking.com/zh-cn/blog/ai/claude-code/2025-08-14-claude-code-save-money-right-model-lean-context-permissions/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/claude-code/2025-08-14-claude-code-save-money-right-model-lean-context-permissions/</guid><pubDate>Thu, 14 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # Claude Code 真省钱用法 --&gt;
 &lt;blockquote&gt;
 &lt;p&gt;把对话瘦身、模型用对、权限管严，Claude Code 的账单能直接腰斩。&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -2588,427 +3048,4 @@ olmOCR/MonkeyOCR → Markdown → Dify RAG → 前端挂 Chat Widget。
 [18]: https://github.blog/news-insights/company-news/introducing-mona-sans-and-hubot-sans/?utm_source=chatgpt.com &quot;Introducing Mona Sans and Hubot Sans&quot;
 [19]: https://www.ibm.com/plex/specs/?utm_source=chatgpt.com &quot;06 Specs | IBM Plex&quot;
 [20]: https://fonts.google.com/specimen/IBM%2BPlex%2BSans?utm_source=chatgpt.com &quot;IBM Plex Sans&quot;
-[21]: https://ui.shadcn.com/?utm_source=chatgpt.com &quot;The Foundation for your Design System - shadcn/ui&quot; --&gt;</content:encoded><category>GPT-5</category><category>OpenAI</category><category>Web</category><category>AI Model</category></item><item><title>Gemini Storybook 支持中文配音，PDF下载打印就能成漫画书</title><link>https://www.vibesparking.com/zh-cn/blog/ai/google/gemini/2025-08-09-storybook-cn-voice-styles-pdf/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/google/gemini/2025-08-09-storybook-cn-voice-styles-pdf/</guid><pubDate>Sat, 09 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # Gemini Storybook 支持中文配音，PDF下载打印就能成漫画书 --&gt;
-&lt;p&gt;&lt;strong&gt;一句话版本&lt;/strong&gt;：Gemini 的 Storybook 新功能上新了——&lt;strong&gt;支持中文朗读&lt;/strong&gt;、&lt;strong&gt;多风格插画可选&lt;/strong&gt;、&lt;strong&gt;网页直接打印/导出 PDF&lt;/strong&gt;，做一本孩子专属绘本，不到 1 分钟。&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;引言&quot;&gt;引言&lt;/h2&gt;&lt;a href=&quot;#引言&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “引言”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;你是不是也有这种瞬间：临睡前，孩子突然想听“恐龙超人去火星”；家里抽屉塞满了小朋友的画，舍不得丢。
-&lt;strong&gt;Storybook 把这些灵感一键变成 10 页插画故事 + 语音朗读&lt;/strong&gt;，还能把孩子的照片、手绘一起“收编”进画面里。&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;这次升级有三点最香&quot;&gt;这次升级，有三点最香&lt;/h2&gt;&lt;a href=&quot;#这次升级有三点最香&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “这次升级，有三点最香”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h3 id=&quot;1-原生中文配音到位&quot;&gt;1) &lt;strong&gt;原生中文配音，到位&lt;/strong&gt;&lt;/h3&gt;&lt;a href=&quot;#1-原生中文配音到位&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1) 原生中文配音，到位”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;官方已上线**“朗读（read-aloud）”&lt;strong&gt;，并说明支持语言会逐步扩展；媒体报道与实测显示&lt;/strong&gt;中文已可用**，家长能直接听中文讲故事。效果自然流畅，适合床边故事。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;要点：&lt;strong&gt;45+ 语言覆盖&lt;/strong&gt;（文本与音频），移动端与网页端均可用。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h3 id=&quot;2-无限画风自由切换&quot;&gt;2) &lt;strong&gt;“无限画风”自由切换&lt;/strong&gt;&lt;/h3&gt;&lt;a href=&quot;#2-无限画风自由切换&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2) “无限画风”自由切换”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;想水彩、动漫、像素、橡皮泥、涂色书？&lt;strong&gt;一句话换风格&lt;/strong&gt;，还能&lt;strong&gt;上传孩子的照片或手绘&lt;/strong&gt;，当作灵感生成插图。&lt;strong&gt;角色名、场景细节&lt;/strong&gt;也能随时改，再生成新版本。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;官方举例：从“讲太阳系”到“讲搬家”，&lt;strong&gt;教育场景&lt;/strong&gt;同样适用。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h3 id=&quot;3-一键成册分享打印都省心&quot;&gt;3) &lt;strong&gt;一键成册，分享/打印都省心&lt;/strong&gt;&lt;/h3&gt;&lt;a href=&quot;#3-一键成册分享打印都省心&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3) 一键成册，分享/打印都省心”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;每本故事都能&lt;strong&gt;生成分享链接&lt;/strong&gt;；网页端&lt;strong&gt;直接打印&lt;/strong&gt;。实际操作里，&lt;strong&gt;打印为 PDF&lt;/strong&gt; 就能得到可直接去打印店出纸的文件。&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;怎么用三步走&quot;&gt;怎么用，三步走&lt;/h2&gt;&lt;a href=&quot;#怎么用三步走&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “怎么用，三步走”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;打开 Gemini&lt;/strong&gt;，发起对话：
-“帮我做一本《胆小恐龙学跳舞》故事书，画风水彩，适合 5 岁。”&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;加料&lt;/strong&gt;：上传孩子画的恐龙/照片，指定主角名字、小怪兽爱吃什么。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;微调&lt;/strong&gt;：让它“更搞笑一点”“把风格换成动漫”，生成新版本；&lt;strong&gt;点朗读&lt;/strong&gt;直接播放。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&quot;&quot;&gt;&lt;/h2&gt;
-&lt;div&gt;&lt;h2 id=&quot;真实场景立刻能用&quot;&gt;真实场景，立刻能用&lt;/h2&gt;&lt;a href=&quot;#真实场景立刻能用&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “真实场景，立刻能用”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;睡前 10 分钟&lt;/strong&gt;：把“今天在幼儿园的小冲突”，改写成和解冒险故事。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;知识小课&lt;/strong&gt;：用“涂色书风格”讲清“太阳系/垃圾分类/交通安全”。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;纪念册&lt;/strong&gt;：把旅行照片/家庭合影，串成“我们在济州的奇遇记”。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;使用小贴士避坑指南&quot;&gt;使用小贴士（避坑指南）&lt;/h2&gt;&lt;a href=&quot;#使用小贴士避坑指南&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “使用小贴士（避坑指南）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;朗读语言&lt;/strong&gt;：官方注记“&lt;strong&gt;朗读目前仅在部分语言开放&lt;/strong&gt;”，若没看到按钮，换语言或等更新。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;角色一致性&lt;/strong&gt;：AI 插画偶尔“离谱”，比如角色细节前后不一。&lt;strong&gt;用照片/重复强调设定&lt;/strong&gt;能明显改善。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;分享权限&lt;/strong&gt;：&lt;strong&gt;工作/学生账号&lt;/strong&gt;可能&lt;strong&gt;不能分享公开链接&lt;/strong&gt;；用&lt;strong&gt;个人账号&lt;/strong&gt;最稳。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;为什么这波值得关注&quot;&gt;为什么这波值得关注？&lt;/h2&gt;&lt;a href=&quot;#为什么这波值得关注&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “为什么这波值得关注？”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;门槛降到“开口即创作”&lt;/strong&gt;：家长、老师、创作者都能把想法快速落地。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;陪伴质量更稳定&lt;/strong&gt;：忙碌时有“AI 讲读”，有空时再亲自读，灵活切换。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;风格量级自由&lt;/strong&gt;：从&lt;strong&gt;像素风&lt;/strong&gt;到&lt;strong&gt;橡皮泥&lt;/strong&gt;，再到&lt;strong&gt;孩子亲笔画&lt;/strong&gt;，&lt;strong&gt;个性化强&lt;/strong&gt;。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;结语&quot;&gt;结语&lt;/h2&gt;&lt;a href=&quot;#结语&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “结语”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;Storybook 把“讲一个好故事”的门槛，降到了“说一句话”。&lt;/strong&gt;
-中文能听、风格能玩、打印能带走。你负责想，&lt;strong&gt;它负责把故事装订成爱&lt;/strong&gt;。
-你会先做哪一本？&lt;strong&gt;留言告诉我你的第一个主题&lt;/strong&gt;。&lt;/p&gt;&lt;!-- 
----
-
-# 推荐标题（3 组，多语 &amp; slug）
-
-1. **中文**：Storybook 升级真香：中文配音、千变画风、PDF 一键成册
-   **English**: Storybook gets real: Chinese narration, style freedom, and instant PDF
-   **繁體**：Storybook 升級真香：中文配音、千變畫風、PDF 一鍵成冊
-   **日本語**：Storybook大型アップデート：中文ナレーション、無限スタイル、PDF出力
-   **Français** : Storybook se met à niveau : narration chinoise, styles illimités, PDF instantané
-   **Español**: Storybook sube de nivel: narración en chino, estilos ilimitados y PDF al instante
-   **Português**: Storybook atualizado: narração em chinês, estilos livres e PDF imediato
-   **slug**：storybook-cn-voice-styles-pdf
-
-2. **中文**：用 1 分钟装订爱：Storybook 的中文朗读与自由画风
-   **English**: Bind love in 1 minute: Storybook’s Chinese read-aloud &amp; free styles
-   **繁體**：用 1 分鐘裝訂愛：Storybook 的中文朗讀與自由畫風
-   **日本語**：1分で物語を製本：Storybookの中国語朗読と自由な画風
-   **Français** : Relié en 1 minute : narration chinoise &amp; styles libres
-   **Español**: En 1 minuto: narración en chino y estilos libres
-   **Português**: Em 1 minuto: narração em chinês e estilos livres
-   **slug**：storybook-one-minute-chinese-readaloud
-
-3. **中文**：把孩子的画变成书：Storybook 新版 3 大亮点
-   **English**: Turn kids’ doodles into books: 3 big Storybook upgrades
-   **繁體**：把孩子的畫變成書：Storybook 新版 3 大亮點
-   **日本語**：子どもの絵が本になる：Storybook 3つの進化
-   **Français** : Les dessins deviennent des livres : 3 atouts de Storybook
-   **Español**: Los dibujos se vuelven libros: 3 mejoras clave
-   **Português**: Rabiscos viram livros: 3 destaques do Storybook
-   **slug**：storybook-turn-doodles-into-books
-
----
-
-# 配图建议（插画风｜2:1｜图中文字请用英文）
-
-* **封面**：Parent and child reading a colorful AI-generated picture book; floating icons for “voice”, “styles”, “print”. Soft watercolor vibes, cozy bedtime.
-* **章节图 1（中文配音）**：A speech bubble icon over a storybook page; a simple “Play” button; subtle Chinese characters in the narration waveform UI.
-* **章节图 2（自由画风）**：A grid of mini-pages in different styles: watercolor, pixel art, claymation, coloring book.
-* **章节图 3（打印/分享）**：Browser window with “Print” dialog previewing a 10-page booklet; next to it a “Share link” card.
-
----
-
-# 朋友圈评论（3 条）
-
-1. “睡前临时编故事不再熬脑：Storybook 中文朗读 + 多画风，我家 5 岁直接上头😂”
-2. “把娃的涂鸦做成真书，网页一键导出 PDF，送到打印店 30 分钟拿成品，爽！”
-3. “教育场景也好用：用像素风讲太阳系，孩子第一次听完不跑神👍”
-
----
-
-需要我把**上手话术模版**和**高质量提示词**也配好，或者直接做一套**可打印 PDF 样本**吗？你说主题，我来排。
-
-[1]: https://blog.google/products/gemini/storybooks/?utm_source=chatgpt.com &quot;Create personal illustrated storybooks in the Gemini app.&quot;
-[2]: https://gemini.google/overview/storybook/ &quot;Gemini Storybook — for the stories only you could imagine&quot;
-[3]: https://blog.google/intl/en-mena/product-updates/explore-get-answers/google-launches-storybook-feature-on-gemini-arabic/?utm_source=chatgpt.com &quot;Create custom stories with Storybook on Gemini&quot;
-[4]: https://cn.technode.com/post/2025-08-08/google-gemini-story-book/?utm_source=chatgpt.com &quot;谷歌想让你用AI助手，为孩子一键生成专属睡前故事书&quot;
-[5]: https://www.fonearena.com/blog/461045/gemini-storybook-generation.html?utm_source=chatgpt.com &quot;Gemini adds 10-page illustrated Storybook generation with ...&quot;
-[6]: https://www.techradar.com/ai-platforms-assistants/gemini/gemini-ai-can-turn-prompts-into-picture-books-but-i-still-prefer-paddington?utm_source=chatgpt.com &quot;Gemini AI can turn prompts into picture books, but I still prefer Paddington&quot; --&gt;</content:encoded><category>AI</category><category>Google Gemini</category><category>Story Book</category></item><item><title>GPT-5 规划设计 + Claude Code 生成代码 + GPT-5 评审总结</title><link>https://www.vibesparking.com/zh-cn/blog/ai/2025-08-08-gpt5-claude-workflow-playbook/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/2025-08-08-gpt5-claude-workflow-playbook/</guid><pubDate>Fri, 08 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # GPT-5 规划设计 + Claude Code 生成代码 + GPT-5 评审总结 --&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;结论先说&lt;/strong&gt;：**GPT-5 适合做规划、结构化设计与评审总结协作；Claude Code（Sonnet / Opus）更稳于“动手执行、缝合改造”。**实际落地，用“&lt;strong&gt;GPT-5 规划设计 + Claude Code 生成代码 + GPT-5 评审总结&lt;/strong&gt;”的组合，效率更高、翻车更少。你觉得呢？&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;引言&quot;&gt;引言&lt;/h2&gt;&lt;a href=&quot;#引言&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “引言”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;昨晚看完发布会，我的第一反应是：&lt;strong&gt;GPT-5 不只是更快更准，它更会“想”了&lt;/strong&gt;。官方把“&lt;strong&gt;最小化推理（minimal reasoning）&lt;/strong&gt;”和“&lt;strong&gt;verbosity 冗长度&lt;/strong&gt;”做成了可控参数，还把&lt;strong&gt;上下文做到 40 万 tokens、单次最多输出 12.8 万&lt;/strong&gt;，并且把 &lt;strong&gt;Gmail/Google Calendar 等连接器&lt;/strong&gt;直接塞进 ChatGPT 里，团队用户今天就能用，企业与教育版 &lt;strong&gt;8 月 14 日&lt;/strong&gt;跟上。&lt;/p&gt;
-&lt;p&gt;媒体给的关键词也很一致：&lt;strong&gt;更少幻觉、更强编码、更“像专家”&lt;/strong&gt;；但也有提醒——宣传图表翻车，别迷信厂商曲线，要看独立评测与真实项目。&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;一gpt-5-到底强在哪&quot;&gt;一、GPT-5 到底强在哪？&lt;/h2&gt;&lt;a href=&quot;#一gpt-5-到底强在哪&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “一、GPT-5 到底强在哪？”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;可控的“思考力度”&lt;/strong&gt;：API 里新增 &lt;code dir=&quot;auto&quot;&gt;reasoning_effort=&quot;minimal&quot;&lt;/code&gt;，能在&lt;strong&gt;不牺牲太多质量&lt;/strong&gt;的情况下更快给结果；&lt;code dir=&quot;auto&quot;&gt;verbosity&lt;/code&gt; 控制回答长短与信息密度。对工程同学，这俩就是&lt;strong&gt;速度/质量旋钮&lt;/strong&gt;。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;更长的“工作记忆”&lt;/strong&gt;：&lt;strong&gt;40 万上下文&lt;/strong&gt;（约 272k 输入 + 128k 输出），更靠谱的长文档/长链工具调用。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;价格公开&lt;/strong&gt;：&lt;strong&gt;输入 $1.25 / 百万 tokens，输出 $10 / 百万&lt;/strong&gt;；mini、nano 更便宜。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;工具链协作&lt;/strong&gt;：官方宣称在复杂工具调用上显著提升（τ²-bench 电信场景 &lt;strong&gt;96.7%&lt;/strong&gt;），适合&lt;strong&gt;端到端 Agent 工作&lt;/strong&gt;。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;ChatGPT 侧的新体验&lt;/strong&gt;：&lt;strong&gt;连接邮箱与日历&lt;/strong&gt;、个性化语气与语音、学习模式等，让“日常用+团队协同”门槛更低。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;一句话&lt;/strong&gt;：&lt;strong&gt;GPT-5 是“更可驾驭的通才”，能按需快思/深想，还更懂工具。&lt;/strong&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;二我的上手感受含和-claude-对比&quot;&gt;二、我的上手感受（含和 Claude 对比）&lt;/h2&gt;&lt;a href=&quot;#二我的上手感受含和-claude-对比&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “二、我的上手感受（含和 Claude 对比）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;blockquote&gt;
-&lt;p&gt;下面是我在真实仓库里的手感，偏主观，欢迎拍砖。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;空手起稿容易犯错&lt;/strong&gt;：让 GPT-5 直接写一大段后端代码，&lt;strong&gt;API 使用与技术栈细节&lt;/strong&gt;偶有偏差，尤其是一些“看起来对、跑起来错”的小坑；&lt;strong&gt;Claude Code Sonnet / Opus&lt;/strong&gt;在这种“&lt;strong&gt;把活儿做细&lt;/strong&gt;”的任务里更稳。&lt;strong&gt;Opus 4.1 的 SWE-bench Verified 官方给到 74.5%&lt;/strong&gt;，确实能打。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;“照着现有例子扩写/改写”成功率高&lt;/strong&gt;：把已有项目的&lt;strong&gt;目录 + 关键文件 + 我写的最小可行样例&lt;/strong&gt;丢给 GPT-5，&lt;strong&gt;它在跟随风格与兼容已有接口上更靠谱&lt;/strong&gt;，尤其前端 UI/交互一把过。Wired 与 TechCrunch 的实测也都强调了&lt;strong&gt;编码与写作/分析的全面提升&lt;/strong&gt;。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;基准分是强，但别神化&lt;/strong&gt;：OpenAI 自报 &lt;strong&gt;SWE-bench Verified 74.9%、Aider polyglot 88%&lt;/strong&gt;；第三方也有说 &lt;strong&gt;GPT-5 ≈ Opus 4.1 ≈ Grok 4&lt;/strong&gt; 的场景，&lt;strong&gt;差距因任务而异&lt;/strong&gt;。所以&lt;strong&gt;上生产别只看分&lt;/strong&gt;。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;个人结论&lt;/strong&gt;：&lt;strong&gt;做“蓝图”和“评审”我更愿意用 GPT-5；真正“落锤拧螺丝”，Claude Code 更省心&lt;/strong&gt;。&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;三推荐工作流gpt-5-规划--claude-code-执行&quot;&gt;三、推荐工作流：GPT-5 规划 + Claude Code 执行&lt;/h2&gt;&lt;a href=&quot;#三推荐工作流gpt-5-规划--claude-code-执行&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “三、推荐工作流：GPT-5 规划 + Claude Code 执行”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;Step 1｜产品/架构设计&lt;/strong&gt;&lt;br&gt;
-把&lt;strong&gt;业务目标、边界条件、非功能指标&lt;/strong&gt;丢给 GPT-5，要求产出&lt;strong&gt;系统草图、接口契约、失败用例与监控点&lt;/strong&gt;。可提示：&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;“用 &lt;code dir=&quot;auto&quot;&gt;verbosity=low&lt;/code&gt; 给摘要；再用 &lt;code dir=&quot;auto&quot;&gt;high&lt;/code&gt; 展开关键模块风险清单。”&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;Step 2｜任务拆解与验收&lt;/strong&gt;&lt;br&gt;
-让 GPT-5 输出&lt;strong&gt;里程碑 → 任务 → 验收标准&lt;/strong&gt;，并生成&lt;strong&gt;代码变更清单&lt;/strong&gt;（文件、函数、风险点）。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Step 3｜交给 Claude Code 干活&lt;/strong&gt;&lt;br&gt;
-把&lt;strong&gt;现有仓库 + 任务卡 + 验收标准&lt;/strong&gt;交给 Sonnet/Opus，要求&lt;strong&gt;分支开发、每步提交日志、失败可回滚&lt;/strong&gt;。&lt;strong&gt;Opus 4.1&lt;/strong&gt;在多文件重构/调试的稳定性正是强项。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Step 4｜双向复核&lt;/strong&gt;&lt;br&gt;
-让 GPT-5 做 &lt;strong&gt;PR Review、补测试、写变更日志&lt;/strong&gt;；再让 Claude 做&lt;strong&gt;修复与扫尾&lt;/strong&gt;。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Step 5｜长链自动化&lt;/strong&gt;&lt;br&gt;
-复杂链路（搜索/检索/调用 N 个工具）可优先交给 GPT-5，官方在&lt;strong&gt;长链与工具指令遵循&lt;/strong&gt;上给出新数据背书；但&lt;strong&gt;关键步骤加人工断点&lt;/strong&gt;，别全权放飞。&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;四什么时候该选谁&quot;&gt;四、什么时候该选谁？&lt;/h2&gt;&lt;a href=&quot;#四什么时候该选谁&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “四、什么时候该选谁？”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;0→1 原型、前端美感、落地即用&lt;/strong&gt;：偏 &lt;strong&gt;GPT-5&lt;/strong&gt;（前端生成与“按需软件”趋势多家媒体实测/评价）。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;大仓改造、长时间连续执行、细粒度修修补补&lt;/strong&gt;：偏 &lt;strong&gt;Claude Code（Sonnet / Opus）&lt;/strong&gt;；其新版本在真实工程任务上持续强化。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;跨应用协同、日常办公&lt;/strong&gt;：&lt;strong&gt;ChatGPT（GPT-5）+ 连接器&lt;/strong&gt;更顺手。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;五冷静两点别被曲线图骗了别只看榜单&quot;&gt;五、冷静两点：别被曲线图骗了，别只看榜单&lt;/h2&gt;&lt;a href=&quot;#五冷静两点别被曲线图骗了别只看榜单&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “五、冷静两点：别被曲线图骗了，别只看榜单”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;发布会图表出过事故&lt;/strong&gt;，官方承认“图表大翻车”。看信息请以&lt;strong&gt;官网页面与文档&lt;/strong&gt;为准。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;独立评测还在赶&lt;/strong&gt;：像 Vellum 这类平台给出的&lt;strong&gt;横评更接地气&lt;/strong&gt;，不同数据集下胜负手不一样。&lt;strong&gt;把问题换成你的真实工作流&lt;/strong&gt;，才是王道。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;结语&quot;&gt;结语&lt;/h2&gt;&lt;a href=&quot;#结语&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “结语”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;GPT-5 是“更会想”的通才，Claude Code 是“更会做”的工匠。&lt;/strong&gt;&lt;br&gt;
-**用对位：**让 GPT-5 定战略、画蓝图、督工；让 Claude Code 推进、缝合、打磨。&lt;br&gt;
-&lt;strong&gt;组合起来，才是 2025 年最靠谱的工程打法。&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;你会怎么分工？评论区聊聊你的组合拳。&lt;/strong&gt;&lt;/p&gt;&lt;!-- ---
-
-# 附：快速卡片
-
-### GPT-5 关键信息
-
-- **上下文**：400K（约 272k 入 + 128k 出）
-    
-- **参数**：`reasoning_effort` 支持 **minimal**；`verbosity` 支持 **low/medium/high**
-    
-- **价格**：输入 $1.25 / 百万，输出 $10 / 百万；mini/nano 更便宜
-    
-- **可用性**：Team 今日可用；**Enterprise/Edu 8 月 14 日**上线  
-    
-    
-
----
-
-## 推荐标题（含多语 &amp; slug）
-
-- **简体**：**GPT-5 实测：做规划一把梭，执行交给 Claude**
-    
-- **English**: GPT-5 in Practice: Plan with 5, Ship with Claude
-    
-- **繁體**：GPT-5 實測：規劃交給 5，落地交給 Claude
-    
-- **日本語**：GPT-5 実践：設計は5、実装はClaude
-    
-- **Français** : GPT-5 sur le terrain : concevoir avec 5, livrer avec Claude
-    
-- **Español**: GPT-5 a prueba: plan con 5, entrega con Claude
-    
-- **Português**: GPT-5 na prática: planeje com 5, entregue com Claude
-    
-- **slug**：`gpt5-claude-workflow-playbook`
-    
-
-- **简体**：**别单挑，用组合：GPT-5 规划 × Claude Code 执行**
-    
-- **English**: Don’t Solo—Combo: GPT-5 Plans × Claude Code Builds
-    
-- **繁體**：別單挑，用組合：GPT-5 規劃 × Claude Code 實作
-    
-- **日本語**：単騎禁止：GPT-5 設計 × Claude Code 実装
-    
-- **Français** : Pas en solo : GPT-5 planifie × Claude Code exécute
-    
-- **Español**: No vayas solo: GPT-5 planifica × Claude Code ejecuta
-    
-- **Português**: Sem jogo solo: GPT-5 planeja × Claude Code executa
-    
-- **slug**：`combo-gpt5-claude-code`
-    
-
-- **简体**：**新范式上工：GPT-5 做大脑，Claude 当手**
-    
-- **English**: New Dev Paradigm: GPT-5 as Brain, Claude as Hands
-    
-- **繁體**：新範式上工：GPT-5 做大腦，Claude 當雙手
-    
-- **日本語**：新しい開発様式：GPT-5 は頭脳、Claude は手足
-    
-- **Français** : Nouveau paradigme : GPT-5 au cerveau, Claude aux mains
-    
-- **Español**: Nuevo paradigma: GPT-5 cerebro, Claude manos
-    
-- **Português**: Novo paradigma: GPT-5 cérebro, Claude mãos
-    
-- **slug**：`gpt5-brain-claude-hands`
-    
-
----
-
-## 图片（插画风｜2:1｜英文元素）
-
-**封面图**
-
-- 提示词：A studio-style illustration of a split workspace: left side shows “GPT-5” as a calm architect drawing a system blueprint on a glass board; right side shows “Claude Code” as a focused builder typing in a terminal with a multi-file tree and green unit test checkmarks; soft gradient background; minimal, clean, modern; no Chinese text.
-    
-
-**章节配图 ①（GPT-5 升级点）**
-
-- 提示词：Infographic illustration showing dials labeled “Reasoning effort (minimal→high)” and “Verbosity (low→high)”, plus a long scroll labeled “400K context”; sleek UI style.
-    
-
-**章节配图 ②（组合拳流程）**
-
-- 提示词：Five panels timeline: “Plan → Tasks → Execute → Review → Ship”; icons for blueprint, checklist, terminal, code review, rocket; bright and friendly.
-    
-
-**章节配图 ③（基准与现实）**
-
-- 提示词：Two charts side-by-side: one glossy marketing chart with sparkles, the other a realistic checklist titled “real-world evals”; playful but clear.
-    
-
----
-
-## 互动区小问题
-
-- 你在真实项目里，**GPT-5 和 Claude**各自最惊喜/最坑的一次体验是什么？
-    
-- 你的团队会怎么**分工与验收**？愿不愿意分享一份模板？
-    
-
----
-
-### 参考与延伸阅读
-
-- OpenAI 产品页与团队可用性、连接器与定价等（含 8 月 14 日企业/教育版时间）
-    
-- GPT-5 开发者文与新参数（`minimal`、`verbosity`）、工具调用与长链改进、基准数据（SWE-bench、Aider）
-    
-- 媒体评测与报道（Wired / TechCrunch / The Verge）
-    
-- Opus 4.1 官方基准（SWE-bench Verified 74.5%）
-    
-- 第三方横评与理性提醒（Vellum）
-    
-- 发布会图表争议（保持审慎）
-    
-
----
-
-## 朋友圈/评论区推荐文案（3 选 1）
-
-1. **现在的正确姿势**：**GPT-5 画蓝图，Claude Code 干活**。一个会想，一个能做。别硬刚，用组合拳。
-    
-2. 我试了 GPT-5，**做规划真的香**；但真要改大仓、抠细节，还是 Claude 更稳。**分工明确，产能起飞**。
-    
-3. 别卷模型，**卷流程**：让 GPT-5 写方案、验收和测试，Claude 去落地。**结果导向**，这是 2025 上分秘籍。
-    
-
----
-
-要不要我**把这篇扩成“实操手册版”**（含 Prompt 模板与 PR 检查清单）？我可以按你的技术栈（Next.js/Django/Flask/Spring…）各给一套。 --&gt;</content:encoded><category>GPT-5</category><category>Claude Code</category></item><item><title>爸妈救星：Gemini Story Book 亲子创作故事书</title><link>https://www.vibesparking.com/zh-cn/blog/ai/google/gemini/2025-08-07-parents-superpower-gemini-story-book/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/google/gemini/2025-08-07-parents-superpower-gemini-story-book/</guid><pubDate>Thu, 07 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!--# 爸妈救星：Gemini Story Book 亲子创作故事书 --&gt;
-&lt;p&gt;&lt;strong&gt;一分钟速览&lt;/strong&gt;
-Google Gemini 刚上线的 &lt;strong&gt;Story Book&lt;/strong&gt; 功能，可以把一句灵感瞬间变成一册 10 页、带配图和朗读的电子绘本。它支持 45+ 语言、自定义画风，还能导入孩子的涂鸦当素材——对爸妈、省心；对小朋友、激发创造；对专业作者、快速打样。&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;-gemini-story-book-有啥魔法&quot;&gt;✨ Gemini Story Book 有啥魔法？&lt;/h2&gt;&lt;a href=&quot;#-gemini-story-book-有啥魔法&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “✨ Gemini Story Book 有啥魔法？”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;10 页成书&lt;/strong&gt;：一句提示词，文本+插画+朗读一次打包。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;任意画风&lt;/strong&gt;：像素、粘土、漫画甚至黑白涂色本都行，还可上传照片当角色。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;45 种语言&lt;/strong&gt;：多语朗读，跨国也能当睡前故事。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;一分钟完成&lt;/strong&gt;：云端渲染，手机也能搞定。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;-给家长睡前故事不再词穷&quot;&gt;👪 给家长：睡前故事不再“词穷”&lt;/h2&gt;&lt;a href=&quot;#-给家长睡前故事不再词穷&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “👪 给家长：睡前故事不再“词穷””&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;场景：5分钟搞定《勇敢的小恐龙找睡眠》&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;div&gt;&lt;h3 id=&quot;10-页剧本&quot;&gt;10 页剧本&lt;/h3&gt;&lt;a href=&quot;#10-页剧本&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “10 页剧本”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ol&gt;
-&lt;li&gt;暮色森林，小恐龙哈比揉着眼睛却睡不着。&lt;/li&gt;
-&lt;li&gt;它遇到会发光的萤火虫，请它们唱摇篮曲。&lt;/li&gt;
-&lt;li&gt;萤火虫说：先学会深呼吸。&lt;/li&gt;
-&lt;li&gt;哈比“呼——吸——”，心跳慢下来。&lt;/li&gt;
-&lt;li&gt;月亮奶奶送来一片温暖月光被子。&lt;/li&gt;
-&lt;li&gt;星星宝宝们跳舞，在夜空排成“Zzz”。&lt;/li&gt;
-&lt;li&gt;风爷爷摇晃树梢，奏起沙沙安眠曲。&lt;/li&gt;
-&lt;li&gt;哈比感到眼皮变重，打了个大哈欠。&lt;/li&gt;
-&lt;li&gt;它钻进月光被子，对萤火虫说晚安。&lt;/li&gt;
-&lt;li&gt;最后一幅：哈比微笑入睡，星空静谧。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;➡️ &lt;strong&gt;操作&lt;/strong&gt;：把以上 10 段粘进 Story Book，选“手绘水彩”风格，30 秒后就得到图文+朗读绘本。孩子看图、家长解放双手。&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;-给小朋友自己当导演&quot;&gt;👧 给小朋友：自己当导演&lt;/h2&gt;&lt;a href=&quot;#-给小朋友自己当导演&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “👧 给小朋友：自己当导演”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;场景：悠悠和小机器人学编程&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;div&gt;&lt;h3 id=&quot;10-页剧本-1&quot;&gt;10 页剧本&lt;/h3&gt;&lt;a href=&quot;#10-页剧本-1&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “10 页剧本”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ol&gt;
-&lt;li&gt;教室里，7 岁悠悠收到一台迷你机器人。&lt;/li&gt;
-&lt;li&gt;机器人说：“给我指令，我们去冒险！”&lt;/li&gt;
-&lt;li&gt;悠悠在平板上写下 &lt;code dir=&quot;auto&quot;&gt;move forward&lt;/code&gt;。&lt;/li&gt;
-&lt;li&gt;机器人翻过彩虹积木桥。&lt;/li&gt;
-&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;turn left&lt;/code&gt;——它绕过睡觉的猫咪。&lt;/li&gt;
-&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;pick flower&lt;/code&gt;——手臂伸出采下蓝色花朵。&lt;/li&gt;
-&lt;li&gt;花瓣变成数字雨，屏幕弹出“Hello World！”&lt;/li&gt;
-&lt;li&gt;悠悠惊喜：代码能让世界动起来！&lt;/li&gt;
-&lt;li&gt;她写下新指令：&lt;code dir=&quot;auto&quot;&gt;dance()&lt;/code&gt;。&lt;/li&gt;
-&lt;li&gt;机器人与悠悠一起跳舞，大声喊“Coding is fun!”&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;➡️ &lt;strong&gt;操作&lt;/strong&gt;：孩子把剧本贴进 Story Book，挑“像素漫画”风格，一本专属“编程冒险”就生成，寓教于乐。&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;️-给故事创作者概念一分钟打样&quot;&gt;🖋️ 给故事创作者：概念一分钟打样&lt;/h2&gt;&lt;a href=&quot;#️-给故事创作者概念一分钟打样&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “🖋️ 给故事创作者：概念一分钟打样”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;场景：《咖啡猫的时间旅行》提案&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;div&gt;&lt;h3 id=&quot;10-页剧本-2&quot;&gt;10 页剧本&lt;/h3&gt;&lt;a href=&quot;#10-页剧本-2&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “10 页剧本”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ol&gt;
-&lt;li&gt;咖啡馆里的橘猫踩到闹钟，穿越到1925。&lt;/li&gt;
-&lt;li&gt;复古电车叮当驶过，它四处寻找咖啡豆。&lt;/li&gt;
-&lt;li&gt;遇到蓝围裙女爵，递来蒸汽咖啡机。&lt;/li&gt;
-&lt;li&gt;蒸汽化作时间隧道，猫咪跌入2050。&lt;/li&gt;
-&lt;li&gt;机器人服务生用冷萃招待它。&lt;/li&gt;
-&lt;li&gt;萌猫按下“Home”键，时空倒转。&lt;/li&gt;
-&lt;li&gt;回到原店，发现咖啡味更香。&lt;/li&gt;
-&lt;li&gt;顾客排队打卡“时空特调”。&lt;/li&gt;
-&lt;li&gt;橘猫躺在吧台，尾巴轻摇。&lt;/li&gt;
-&lt;li&gt;尾声：招牌牌匾新增一句——“感谢时光旅者”。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;➡️ &lt;strong&gt;操作&lt;/strong&gt;：作者贴剧本→选“蒸汽朋克油画”风→生成原型小册，再决定是否深化剧本与画面。灵感→成品只差 60 秒。&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;-结语&quot;&gt;🏁 结语&lt;/h2&gt;&lt;a href=&quot;#-结语&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “🏁 结语”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;Story Book = 一键绘本工厂&lt;/strong&gt;。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;爸妈省时间，陪伴更轻松&lt;/li&gt;
-&lt;li&gt;孩子当主角，创造力飞升&lt;/li&gt;
-&lt;li&gt;作者快迭代，市场验证加速&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;动动手，把你的剧本也丢进 Gemini，看看它会端出怎样的惊喜吧！&lt;/p&gt;
-&lt;p&gt;（你觉得哪个场景最实用？留言区聊聊！🎈）&lt;/p&gt;&lt;!-- * [Cinco Días](https://cincodias.elpais.com/smartlife/lifestyle/2025-08-06/gemini-storybook-nueva-funcion-crear-libros-ilustrados.html?utm_source=chatgpt.com)
-* [The Times of India](https://timesofindia.indiatimes.com/technology/artificial-intelligence/google-gemini-can-now-create-ai-generated-bedtime-storybooks-with-custom-art-and-audio/articleshow/123132439.cms?utm_source=chatgpt.com)
-
-[1]: https://gemini.google/overview/storybook/?utm_source=chatgpt.com &quot;Gemini Storybook — your stories, brought to life with AI&quot;
-[2]: https://timesofindia.indiatimes.com/technology/artificial-intelligence/google-gemini-can-now-create-ai-generated-bedtime-storybooks-with-custom-art-and-audio/articleshow/123132439.cms?utm_source=chatgpt.com &quot;Google Gemini can now create AI-generated bedtime storybooks with custom art and audio&quot;
-[3]: https://9to5google.com/2025/08/05/gemini-storybooks/?utm_source=chatgpt.com &quot;Gemini app can now create custom storybooks, comics, more&quot;
-[4]: https://blog.google/products/gemini/storybooks/?utm_source=chatgpt.com &quot;Create AI storybooks with illustrations in the Gemini app&quot;
-[5]: https://www.notebookcheck.net/Google-Gemini-can-now-create-children-s-storybooks-with-illustrations.1081685.0.html?utm_source=chatgpt.com &quot;Google Gemini can now create children&apos;s storybooks with ...&quot;
-[6]: https://cincodias.elpais.com/smartlife/lifestyle/2025-08-06/gemini-storybook-nueva-funcion-crear-libros-ilustrados.html?utm_source=chatgpt.com &quot;Storybook, la nueva función de Gemini que permite crear libros ilustrados&quot; --&gt;</content:encoded><category>AI</category><category>Google Gemini</category><category>Story Book</category></item></channel></rss>
+[21]: https://ui.shadcn.com/?utm_source=chatgpt.com &quot;The Foundation for your Design System - shadcn/ui&quot; --&gt;</content:encoded><category>GPT-5</category><category>OpenAI</category><category>Web</category><category>AI Model</category></item></channel></rss>
