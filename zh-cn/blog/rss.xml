@@ -1339,7 +1339,209 @@ Issue → Owner → 截止时间 → 关联 PR。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;blockquote&gt;
 &lt;p&gt;市场短期是投票机，长期是称重机。Palantir能否匹配估值，终将由创新与业绩给出答案。&lt;/p&gt;
-&lt;/blockquote&gt;</content:encoded><category>Finance</category><category>Palantir</category><category>NYSE: PLTR</category><category>AI</category><category>US Stock Market</category></item><item><title>DeepAgents 开箱即用的股票研究 AI Agent</title><link>https://www.vibesparking.com/zh-cn/blog/ai/quant/deep-agents/2025-08-19-deepagents-stock-research-in-one-agent/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/quant/deep-agents/2025-08-19-deepagents-stock-research-in-one-agent/</guid><pubDate>Tue, 19 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # DeepAgents 开箱即用的股票研究 AI Agent --&gt;
+&lt;/blockquote&gt;</content:encoded><category>Finance</category><category>Palantir</category><category>NYSE: PLTR</category><category>AI</category><category>US Stock Market</category></item><item><title>Excel COPILOT 函数把 AI 塞进单元格</title><link>https://www.vibesparking.com/zh-cn/blog/ai/microsoft/excel/2025-08-19-excel-copilot-formula-playbook/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/microsoft/excel/2025-08-19-excel-copilot-formula-playbook/</guid><pubDate>Tue, 19 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # Excel COPILOT 函数把 AI 塞进单元格 --&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Excel 在格子里总结、分类、写文案、出表格。数据一改，结果自动跟着变。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;引言&quot;&gt;引言&lt;/h2&gt;&lt;a href=&quot;#引言&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “引言”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;我们一直在等的事发生了。
+&lt;strong&gt;Excel 把 Copilot 做成了一个原生函数：&lt;code dir=&quot;auto&quot;&gt;=COPILOT()&lt;/code&gt;&lt;/strong&gt;。
+不用脚本，不用外挂。像用 &lt;code dir=&quot;auto&quot;&gt;IF&lt;/code&gt;、&lt;code dir=&quot;auto&quot;&gt;LAMBDA&lt;/code&gt; 一样写在单元格里，&lt;strong&gt;数据变更自动重算&lt;/strong&gt;。这意味着，AI 终于融进了 Excel 的计算引擎。&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;这到底是个啥&quot;&gt;这到底是个啥？&lt;/h2&gt;&lt;a href=&quot;#这到底是个啥&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “这到底是个啥？”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;原生函数&lt;/strong&gt;：在单元格里输入 &lt;code dir=&quot;auto&quot;&gt;=COPILOT(prompt, [context])&lt;/code&gt;，用自然语言+引用区域，直接拿到 AI 结果。可与 &lt;code dir=&quot;auto&quot;&gt;IF&lt;/code&gt;、&lt;code dir=&quot;auto&quot;&gt;SWITCH&lt;/code&gt;、&lt;code dir=&quot;auto&quot;&gt;LAMBDA&lt;/code&gt; 等无缝组合。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;自动刷新&lt;/strong&gt;：数据一更新，结果自动跟。&lt;strong&gt;不需要&lt;/strong&gt;手动重跑脚本或插件。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;使用门槛低&lt;/strong&gt;：会写公式就会用 AI；不会写也能靠提示词搞定。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;语法一眼懂&quot;&gt;语法一眼懂&lt;/h2&gt;&lt;a href=&quot;#语法一眼懂&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “语法一眼懂”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;excel&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;=COPILOT(prompt_part1, [context1], [prompt_part2], [context2], …)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;prompt_part&lt;/strong&gt;：告诉它要干嘛，比如“总结这些评论”“给出 5 条 SEO 关键词”。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;context&lt;/strong&gt;：引用你的数据范围，比如 &lt;code dir=&quot;auto&quot;&gt;D4:D18&lt;/code&gt;。
+&lt;strong&gt;示例&lt;/strong&gt;：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;excel&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;=COPILOT(&quot;Classify this feedback&quot;, D4:D18)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;p&gt;这行会按情感或类别自动给 D4:D18 的文本打标签。&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;它最适合干的-4-类活&quot;&gt;它最适合干的 4 类活&lt;/h2&gt;&lt;a href=&quot;#它最适合干的-4-类活&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “它最适合干的 4 类活”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3 id=&quot;1-激发创意市场产品&quot;&gt;1) 激发创意（市场/产品）&lt;/h3&gt;&lt;a href=&quot;#1-激发创意市场产品&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1) 激发创意（市场/产品）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;从产品描述生成&lt;strong&gt;卖点、标题、SEO 关键词&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;在表格里&lt;strong&gt;多版本改写&lt;/strong&gt;（正式、口语、幽默）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;直接把结果溢出到行列，马上可筛选/去重。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div&gt;&lt;h3 id=&quot;2-生成摘要分析汇报&quot;&gt;2) 生成摘要（分析/汇报）&lt;/h3&gt;&lt;a href=&quot;#2-生成摘要分析汇报&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2) 生成摘要（分析/汇报）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;把长文本或多列指标，&lt;strong&gt;提炼成一段易懂叙述&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;给复杂计算加**“人话解释”**，做成报告注释。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;3-数据分类运营客服&quot;&gt;3) 数据分类（运营/客服）&lt;/h3&gt;&lt;a href=&quot;#3-数据分类运营客服&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3) 数据分类（运营/客服）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;情感分析&lt;/strong&gt;、&lt;strong&gt;主题聚类&lt;/strong&gt;、&lt;strong&gt;意图识别&lt;/strong&gt;，都在单元格实现。&lt;/li&gt;
+&lt;li&gt;不用导出到外部 NLP 工具，Excel 内闭环。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;4-生成列表表格测试排期&quot;&gt;4) 生成列表/表格（测试/排期）&lt;/h3&gt;&lt;a href=&quot;#4-生成列表表格测试排期&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “4) 生成列表/表格（测试/排期）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;批量&lt;strong&gt;构造测试样本&lt;/strong&gt;、&lt;strong&gt;行业案例清单&lt;/strong&gt;、&lt;strong&gt;项目大纲&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;结果以&lt;strong&gt;多行多列&lt;/strong&gt;形式回填网格。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;上手就能抄的-6-个公式&quot;&gt;上手就能抄的 6 个公式&lt;/h2&gt;&lt;a href=&quot;#上手就能抄的-6-个公式&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “上手就能抄的 6 个公式”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;excel&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;=LET(r, D4:D100,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;     &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;COPILOT(&quot;为每条反馈打情感标签，只输出 Positive/Negative/Neutral。按行返回。&quot;, r))&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;excel&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;=LET(txt, TEXTJOIN(&quot; &quot;, TRUE, B2:B50),&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;     &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;COPILOT(&quot;将以下文本总结为3句话，保留关键数据点：&quot;, txt))&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;excel&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;=LET(desc, A2,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;     &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;COPILOT(&quot;基于以下描述生成5条SEO关键词，英文，逗号分隔：&quot;, desc))&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;excel&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;=LET(tbl, A2:D30,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;     &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;COPILOT(&quot;从以下表提取出 {客户,问题,优先级} 三列，整理为表格：&quot;, tbl))&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;excel&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;=IFERROR(&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;COPILOT(&quot;把这列品类映射为标准类目{数码,家居,服饰,美妆,其他}之一，只输出类目：&quot;, F2:F200),&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;&quot;未识别&quot;)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;excel&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;=LAMBDA(_t, COPILOT(&quot;重写为更口语、更简短的标题：&quot;, _t))(B2)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;提示词要&lt;strong&gt;具体&lt;/strong&gt;，限定范围、输出格式与顺序；动作词用“总结/分类/排序”。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;组合拳把-ai-结果塞进你的模型&quot;&gt;组合拳：把 AI 结果塞进你的模型&lt;/h2&gt;&lt;a href=&quot;#组合拳把-ai-结果塞进你的模型&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “组合拳：把 AI 结果塞进你的模型”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;和 IF/SWITCH&lt;/strong&gt;：按阈值或角色切换提示词，异常用 &lt;code dir=&quot;auto&quot;&gt;IFERROR&lt;/code&gt; 兜底。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;和 LAMBDA&lt;/strong&gt;：把常用提示词封装成可复用函数。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;和 WRAPROWS/TOCOL&lt;/strong&gt;：把自由文本&lt;strong&gt;规整成可透视&lt;/strong&gt;的表。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;限制与边界&quot;&gt;限制与边界&lt;/h2&gt;&lt;a href=&quot;#限制与边界&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “限制与边界”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;调用频率&lt;/strong&gt;：&lt;strong&gt;10 分钟 100 次、1 小时 300 次&lt;/strong&gt;。建议&lt;strong&gt;用数组&lt;/strong&gt;减少并发调用次数。微软后续会提高配额。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;无联网/内网直连&lt;/strong&gt;：&lt;strong&gt;无法直接访问网页或企业文档&lt;/strong&gt;。要先把数据导入工作簿。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;日期输出&lt;/strong&gt;：目前日期以&lt;strong&gt;文本&lt;/strong&gt;返回，不是 Excel 日期序列。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;适用性&lt;/strong&gt;：不适合让 LLM 做&lt;strong&gt;简单算术&lt;/strong&gt;这类已有函数能完美搞定的任务；微软也在探索增加&lt;strong&gt;使用引导&lt;/strong&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;隐私与合规很多人最关心&quot;&gt;隐私与合规（很多人最关心）&lt;/h2&gt;&lt;a href=&quot;#隐私与合规很多人最关心&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “隐私与合规（很多人最关心）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;通过 &lt;code dir=&quot;auto&quot;&gt;=COPILOT()&lt;/code&gt; 发送的数据&lt;strong&gt;不会用于训练&lt;/strong&gt;底层模型，仅用于生成你的结果。&lt;/li&gt;
+&lt;li&gt;微软官方文档也明确：&lt;strong&gt;Microsoft 365 商业数据不用于训练基础模型&lt;/strong&gt;；数据在静态时加密、受组织边界与合规约束。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;可用性与版本要求&quot;&gt;可用性与版本要求&lt;/h2&gt;&lt;a href=&quot;#可用性与版本要求&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “可用性与版本要求”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;现已推送&lt;/strong&gt;：&lt;strong&gt;Beta Channel&lt;/strong&gt; 且拥有 &lt;strong&gt;Microsoft 365 Copilot 许可证&lt;/strong&gt;的用户。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Windows&lt;/strong&gt;：Excel &lt;strong&gt;版本 2509（Build 19212.20000）或更高&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Mac&lt;/strong&gt;：Excel &lt;strong&gt;16.101（Build 25081334）或更高&lt;/strong&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Excel 网页版&lt;/strong&gt;：将通过 &lt;strong&gt;Frontier 计划&lt;/strong&gt;陆续开放。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;版本号参考&lt;/strong&gt;：Office Beta Channel 近期版本节奏见官方发布页。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;实战场景范例带话术&quot;&gt;实战场景范例（带话术）&lt;/h2&gt;&lt;a href=&quot;#实战场景范例带话术&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “实战场景范例（带话术）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;运营部&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“请把 D4:D200 的用户评论按{支付、物流、质量、客服、功能建议、其他}分类，并附一句理由。”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;excel&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;=COPILOT(&quot;将以下评论分类到{支付,物流,质量,客服,功能建议,其他}之一，并给出不超过10字的理由。按行输出两列：类别|理由。&quot;, D4:D200)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;产品经理&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“基于 B 列的痛点，生成 10 条功能点子，按影响力从高到低。”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;excel&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;=COPILOT(&quot;根据这些用户痛点生成10条功能建议，按影响力排序，输出表头{建议,影响力(1-5),说明}：&quot;, B2:B500)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;财务分析&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“把 A2:D100 的预算 vs 实际做成 3 句管理层摘要，强调超支项与原因假设。”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;excel&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;=COPILOT(&quot;基于下表生成3句管理摘要，突出超支项及可能原因，不要重复数字。&quot;, A2:D100)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;客服质检&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“从 F 列工单里抽出关键信息：客户名、问题、紧急度、是否需要升级。”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;excel&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;=COPILOT(&quot;抽取{客户,问题,紧急度(高/中/低),是否升级(是/否)}四列，整理成表：&quot;, F2:F300)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;提升成功率的小技巧&quot;&gt;提升成功率的小技巧&lt;/h2&gt;&lt;a href=&quot;#提升成功率的小技巧&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “提升成功率的小技巧”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;明确输出结构&lt;/strong&gt;：要求“只输出表格/只输出这几列/每行一条”。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;给示例&lt;/strong&gt;：先给 1—2 行示范格式，再让它“继续按此格式完成”。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;用数组&lt;/strong&gt;：一次传更大范围，既省配额，也让结果&lt;strong&gt;成批溢出&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;人工复核&lt;/strong&gt;：关键场景一定要&lt;strong&gt;二次校验&lt;/strong&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;一句话总结&quot;&gt;一句话总结&lt;/h2&gt;&lt;a href=&quot;#一句话总结&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “一句话总结”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code dir=&quot;auto&quot;&gt;=COPILOT()&lt;/code&gt; = “可重算的 AI 模板”。&lt;/strong&gt;
+把灵感、分类、摘要和清单，&lt;strong&gt;收口到一个公式&lt;/strong&gt;里，让数据驱动 + AI 产出闭环。
+对很多人来说，这比“对话面板”更稳定、更可控。&lt;/p&gt;&lt;!-- 
+---
+
+## 参考与延伸阅读
+
+* 微软官方发布：**Bring AI to your formulas with the COPILOT function in Excel**（含语法、配额、可用性、隐私说明）。
+
+- [The Verge](https://www.theverge.com/news/761338/microsoft-excel-ai-copilot-spreadsheet-cell-filling?utm_source=chatgpt.com)
+
+---
+
+## 推荐配图（插画风｜2:1｜英文文案，不含中文）
+
+**封面图 Prompt**
+“An illustration of an Excel grid where a formula bar shows ‘=COPILOT()’, and AI sparks flow into cells turning text into tidy tables; clean minimal lines, modern pastel palette, wide 2:1, text-free.”
+
+**章节配图 1（语法与示例）**
+“An infographic-style illustration of a cell typing ‘=COPILOT(&quot;summarize&quot;, D4\:D18)’ and results spilling into rows and columns; flat vector, soft pastels, 2:1, text-free.”
+
+**章节配图 2（组合拳）**
+“An illustration of puzzle pieces labeled IF, LAMBDA, WRAPROWS snapping around ‘=COPILOT()’ on a spreadsheet; minimal, pastel, 2:1, text-free.”
+
+---
+
+## 3 组多语种标题 &amp; slug
+
+1. **把 AI 变成公式：Excel 新函数 `=COPILOT()` 实战指南**
+   EN: Turn AI into a Formula: Excel’s New `=COPILOT()` Playbook
+   繁體：把 AI 變成公式：Excel 新函數 `=COPILOT()` 實戰指南
+   日本語：AI を数式に。Excel 新関数 `=COPILOT()` 実践ガイド
+   Français : L’IA devient une formule : Guide pratique d’Excel `=COPILOT()`
+   Español: Convierte la IA en fórmula: Guía práctica de `=COPILOT()` en Excel
+   Português: Transforme IA em fórmula: Guia prático do `=COPILOT()` no Excel
+   **slug**: excel-copilot-formula-playbook
+
+2. **在格子里用 AI：`=COPILOT()` 的 12 个高效用法**
+   EN: AI in the Grid: 12 High-Impact Uses for `=COPILOT()`
+   繁體：在格子裡用 AI：`=COPILOT()` 的 12 個高效用法
+   日本語：セルで使うAI：`=COPILOT()` の12の使い方
+   Français : L’IA dans la grille : 12 usages clés de `=COPILOT()`
+   Español: IA en la cuadrícula: 12 usos potentes de `=COPILOT()`
+   Português: IA na grade: 12 usos poderosos do `=COPILOT()`
+   **slug**: ai-in-the-grid-12-uses
+
+3. **别再导来导去：`=COPILOT()` 让分析闭环在 Excel 完成**
+   EN: Stop Exporting: `=COPILOT()` Closes the Analytics Loop in Excel
+   繁體：別再到處導出：`=COPILOT()` 讓分析在 Excel 內閉環
+   日本語：もうエクスポート不要：`=COPILOT()` で分析が完結
+   Français : Fini les exports : `=COPILOT()` boucle l’analyse dans Excel
+   Español: Basta de exportar: `=COPILOT()` cierra el ciclo en Excel
+   Português: Chega de exportar: `=COPILOT()` fecha o ciclo no Excel
+   **slug**: stop-exporting-with-copilot
+
+---
+
+## 朋友圈/评论区推荐文案（3 条）
+
+1. “Excel 这波太狠了，`=COPILOT()` 直接把 AI 写进公式栏。我已经用它给用户评论打了标签，还顺手写了段汇报。爽！”
+2. “数据一改、AI 自动重算，这才是我心中 Copilot 的正确打开方式。给我省了半天活。”
+3. “不会写脚本也能玩 AI，`=COPILOT()` 真把格子变聪明了。配额记得用数组省着点～”
+
+---
+
+需要我把文中的示例做成**一键复制的 Excel 模板**吗？或者按你的业务数据，**定制 5 个可落地的提示词函数**？如果想，我现在就补上。
+
+[1]: https://techcommunity.microsoft.com/blog/microsoft365insiderblog/bring-ai-to-your-formulas-with-the-copilot-function-in-excel/4443487 &quot;Bring AI to your formulas with the COPILOT function in Excel&quot;
+[2]: https://learn.microsoft.com/en-us/copilot/microsoft-365/microsoft-365-copilot-privacy?utm_source=chatgpt.com &quot;Data, Privacy, and Security for Microsoft 365 Copilot&quot;
+[3]: https://learn.microsoft.com/en-us/officeupdates/beta-channel?utm_source=chatgpt.com &quot;Release Notes for Beta Channel - Office ...&quot; --&gt;</content:encoded><category>Excel</category><category>Copilot</category></item><item><title>DeepAgents 开箱即用的股票研究 AI Agent</title><link>https://www.vibesparking.com/zh-cn/blog/ai/quant/deep-agents/2025-08-19-deepagents-stock-research-in-one-agent/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/quant/deep-agents/2025-08-19-deepagents-stock-research-in-one-agent/</guid><pubDate>Tue, 19 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # DeepAgents 开箱即用的股票研究 AI Agent --&gt;
 &lt;p&gt;这是一个基于 LangChain DeepAgents 的开源“深层代理”示例，能把基本面 + 技术面 + 风险评估打包成一份像样的研报，还自带 Gradio 网页界面，落地非常快。&lt;/p&gt;
 &lt;p&gt;&lt;/p&gt;
 &lt;hr&gt;
@@ -2238,7 +2440,146 @@ ResNet 的“捷径”把输入&lt;strong&gt;原样相加&lt;/strong&gt;到输�
 [6]: https://support.anthropic.com/en/articles/11145838-using-claude-code-with-your-pro-or-max-plan?utm_source=chatgpt.com &quot;Using Claude Code with your Pro or Max plan&quot;
 [7]: https://support.apple.com/en-us/118283?utm_source=chatgpt.com &quot;Change your Apple Account country or region&quot;
 [8]: https://www.anthropic.com/max?utm_source=chatgpt.com &quot;Claude Max \ Anthropic&quot;
-[9]: https://www.businessinsider.com/inference-whales-threaten-ai-coding-startups-business-model-2025-8?utm_source=chatgpt.com &quot;&apos;Inference whales&apos; are eating into AI coding startups&apos; business model&quot; --&gt;</content:encoded><category>Ki2API</category><category>Kiro</category></item><item><title>Claude Code 免费使用 Kiro 的 claude-sonnet-4-20250514 模型</title><link>https://www.vibesparking.com/zh-cn/blog/ai/claude-code/kiro/2025-08-16-ccr-ki2api-claude-code-to-sonnet4/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/claude-code/kiro/2025-08-16-ccr-ki2api-claude-code-to-sonnet4/</guid><pubDate>Sat, 16 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # Claude Code 免费使用 Kiro 的 claude-sonnet-4-20250514 模型 --&gt;
+[9]: https://www.businessinsider.com/inference-whales-threaten-ai-coding-startups-business-model-2025-8?utm_source=chatgpt.com &quot;&apos;Inference whales&apos; are eating into AI coding startups&apos; business model&quot; --&gt;</content:encoded><category>Ki2API</category><category>Kiro</category></item><item><title>14 篇就够了：Anthropic 提示工程系列到底牛在哪？</title><link>https://www.vibesparking.com/zh-cn/blog/ai/anthropic/prompt-engineering/2025-08-19-14-bitesize-prompting-80-20/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/anthropic/prompt-engineering/2025-08-19-14-bitesize-prompting-80-20/</guid><pubDate>Sun, 17 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # 14 篇就够了：Anthropic 提示工程系列到底牛在哪？ --&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;每篇 3 分钟，快速上手。&lt;/strong&gt;
+这套“短小精悍”的提示工程系列，把写好 Prompt 变成一套可抄作业的套路。
+适合产品、工程、运营到创业者，&lt;strong&gt;当天学、当天用、当天见效&lt;/strong&gt;。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;为什么值得读&quot;&gt;为什么值得读？&lt;/h2&gt;&lt;a href=&quot;#为什么值得读&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “为什么值得读？”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;1）它不是讲概念，是教你“怎么写”&lt;/strong&gt;
+官方《Prompt Engineering Overview》把“什么问题该用 Prompt 解决、什么该换模型/改架构”说清楚，并给出可直接复制的结构化写法。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2）边学边做的互动教程&lt;/strong&gt;
+Anthropic 的互动式课程把技巧拆成短章：清晰表达、角色设定、数据与指令分离、输出格式、思考步骤、示例驱动……每章都配练习，&lt;strong&gt;几分钟一节，效率很高&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;3）对 Claude 4 的“对症下药”&lt;/strong&gt;
+面向 Opus 4.1 / Sonnet 4 的最佳实践，讲清楚这些模型&lt;strong&gt;更听话&lt;/strong&gt;的触发方式：如何给出目标、约束、风格，怎样让它稳定按模板吐出结果。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;4）有“工程味”的进阶内容&lt;/strong&gt;
+做 Agent、多工具协作时怎么靠 Prompt 降噪、控流程、稳行为？Anthropic 的多 Agent 实战文章把&lt;strong&gt;团队踩坑&lt;/strong&gt;都写了，适合落地复杂工作流。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;5）降本提速有招&lt;/strong&gt;
+长提示要钱又慢？用 Prompt Caching，把公共上下文缓存起来，&lt;strong&gt;长提示成本降到原来的 10% 左右、延迟最多能砍 85%&lt;/strong&gt;。&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;这套系列核心就-5-个招&quot;&gt;这套系列，核心就 5 个招&lt;/h2&gt;&lt;a href=&quot;#这套系列核心就-5-个招&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “这套系列，核心就 5 个招”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;① 清楚到“像带新同事”&lt;/strong&gt;
+把目标、产出格式、读者、评判标准写明白。要点用清单列出来，别靠猜。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;② 角色设定要具体&lt;/strong&gt;
+“你是 B 端产品经理，给老板写周报，200 字内，结尾给 3 项行动”。角色越具体，越稳。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;③ 指令和数据分开&lt;/strong&gt;
+用分隔符把“要求”和“素材”隔开，Claude 会更少误读。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;④ 多给好例子&lt;/strong&gt;
+1–3 个高质量示例，能&lt;strong&gt;瞬间拉齐风格与结构&lt;/strong&gt;，比空讲要求有效。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;⑤ 让它有“思考空间”&lt;/strong&gt;
+要求“逐步推理/先想后答/给出依据”，复杂任务的正确率会明显上来。&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;三个可直接抄走的模板&quot;&gt;三个可直接抄走的模板&lt;/h2&gt;&lt;a href=&quot;#三个可直接抄走的模板&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “三个可直接抄走的模板”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;A. 日报/周报模板（稳定结构）&lt;/strong&gt;&lt;/p&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;plaintext&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;你是【角色】。请输出【受众】可读的【文体】。&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;目标：{业务目标/关键结果}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;约束：{字数上限/语气/禁止内容}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;格式：&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;- 本周进展（3 点）&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;- 风险与阻碍（最多 2 点）&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;- 下周计划（3 条）&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;示例：&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;- 【给 1 个你的好例子】&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;素材：&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;&amp;#x3C;&amp;#x3C;&amp;#x3C;DATA&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;【贴资料】&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;DATA&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;&gt;&gt;&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;button title=&quot;Copy to clipboard&quot; data-copied=&quot;Copied!&quot; data-code=&quot;&quot;&gt;&gt;&gt;&quot;&gt;&lt;div&gt;&lt;/div&gt;&lt;/button&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;用例：项目周报、销售复盘、产品例会记录。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;B. 代码改造提案（Claude Code 友好）&lt;/strong&gt;&lt;/p&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;plaintext&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;角色：资深工程师，给可执行的重构方案。&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;产出：Markdown 提案 + 风险评估 + 粗粒度任务清单。&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;必须：说明收益（性能/可维护性/成本），列出替代方案。&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;边界：不直接写代码，先方案评审通过再开工。&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;适配 Claude Code 的工作流，先“规划”，再“执行”，减少反复。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;C. 多 Agent 协作（控住“内耗”）&lt;/strong&gt;&lt;/p&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;plaintext&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;总控目标：{清晰 KPI}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;子角色：&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;- 研究员：搜集 5 个一手来源 + 可信度评级。&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;- 策划：在限制{预算/时间}内给 2 套可执行方案。&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;- 评审：只做打分与取舍，禁止新增任务。&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;协议：&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;- 任何代理不得创建新子任务，超出配额直接请求人工确认。&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;- 所有输出走同一结构化模板。&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;解决“无限分裂/互相打断”的老毛病。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;3-分钟上手路线建议打卡顺序&quot;&gt;3 分钟上手路线（建议打卡顺序）&lt;/h2&gt;&lt;a href=&quot;#3-分钟上手路线建议打卡顺序&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3 分钟上手路线（建议打卡顺序）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ol&gt;
+&lt;li&gt;读《Overview》，照着它的&lt;strong&gt;目标–受众–格式&lt;/strong&gt;三件套写一个 Prompt。&lt;/li&gt;
+&lt;li&gt;打开互动教程 1–3 章，练“清晰表达/角色/数据分离”。&lt;/li&gt;
+&lt;li&gt;查“Claude 4 Best Practices”，把输出格式和示例补齐。&lt;/li&gt;
+&lt;li&gt;做团队工作流？看“多 Agent 提示原则”，给协作立规矩。&lt;/li&gt;
+&lt;li&gt;长提示、慢？上 Prompt Caching，降本提速。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;适合谁&quot;&gt;适合谁？&lt;/h2&gt;&lt;a href=&quot;#适合谁&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “适合谁？”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;产品/运营&lt;/strong&gt;：需求拆解、复盘、PRD 嵌套模板，&lt;strong&gt;一次规范，处处复用&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;工程团队&lt;/strong&gt;：代码评审、重构提案、Agent 工作流治理，&lt;strong&gt;稳态输出&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;创业者&lt;/strong&gt;：营销物料、多渠道文案、媒体 Pitch，&lt;strong&gt;风格统一可规模化&lt;/strong&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;小结&quot;&gt;小结&lt;/h2&gt;&lt;a href=&quot;#小结&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “小结”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;这套系列的价值在于：把“玄学”变“手册”。&lt;/strong&gt;
+用清晰模板、角色设定、示例驱动、可验证输出，加上工程化的协作与缓存手段，&lt;strong&gt;立刻可用、可复制、可规模化&lt;/strong&gt;。&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;思考题&quot;&gt;思考题&lt;/h2&gt;&lt;a href=&quot;#思考题&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “思考题”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;你现在就能把哪份日常文档，换成结构化 Prompt？&lt;/li&gt;
+&lt;li&gt;你团队里哪一步最耗时，能用 Prompt Caching 省钱省时？&lt;/li&gt;
+&lt;li&gt;多 Agent 协作，你最想先制定哪条“交通规则”？&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;评论区等你来聊～&lt;/p&gt;&lt;!-- 
+---
+
+# 配图（插画式｜2:1｜英文文案，不含中文）
+
+**封面图 Prompt**
+“An illustration of a compact ‘Prompt Toolkit’ on a desk: role cards, checklists, and a template sheet, with a timer showing 3 minutes; clean minimal lines, modern pastel palette, wide 2:1 composition; text-free.”
+
+**配图 1｜结构化输出**
+“An illustration of a blueprint turning into neatly stacked reports labeled ‘Goal’, ‘Audience’, ‘Format’; minimal flat style, wide 2:1, text-free.”
+
+**配图 2｜多 Agent 协作**
+“An illustration of three small robots passing baton on a track marked ‘Research → Plan → Review’; clean pastel palette, wide 2:1, text-free.”
+
+**配图 3｜Prompt Caching**
+“An illustration of a cache drawer storing long prompts while a lightning-fast pipeline serves responses; minimal lines, modern pastel, 2:1, text-free.”
+
+---
+
+# 3 组多语言标题（含 slug）
+
+1.
+
+* 简体：**用 14 篇小短文，拿下提示工程的 80/20**
+* English: *14 Bite-Size Reads to Master Prompting’s 80/20*
+* 繁體：**用 14 篇小短文，拿下提示工程的 80/20**
+* 日本語：**14本のショート記事でプロンプトの8割を掴む**
+* Français : *14 mini-lectures pour maîtriser 80/20 du prompting*
+* Español: *14 microlecturas para dominar el 80/20 del prompting*
+* Português: *14 leituras rápidas para dominar o 80/20 do prompting*
+* slug: `14-bitesize-prompting-80-20`
+
+2.
+
+* 简体：**把 Claude 变成靠谱同事：Anthropic 提示工程实战**
+* English: *Turn Claude into a Reliable Teammate: Anthropic Prompting Playbook*
+* 繁體：**把 Claude 變成可靠同事：Anthropic 提示工程實戰**
+* 日本語：**Claudeを“頼れる同僚”にする：Anthropic実戦プロンプト**
+* Français : *Transformer Claude en collègue fiable : le playbook Anthropic*
+* Español: *Convierte a Claude en un colega fiable: el playbook de Anthropic*
+* Português: *Transforme o Claude em um colega confiável: playbook Anthropic*
+* slug: `claude-reliable-teammate-playbook`
+
+3.
+
+* 简体：**三分钟一篇：Prompt 篇章化训练，稳产出**
+* English: *Three Minutes Each: A Prompting Series for Stable Output*
+* 繁體：**三分鐘一篇：Prompt 章節化訓練，穩產出**
+* 日本語：**1話3分：安定出力のためのプロンプト連載**
+* Français : *3 minutes par chapitre : série de prompts pour sortie stable*
+* Español: *3 minutos por capítulo: serie de prompting para resultados estables*
+* Português: *3 minutos por capítulo: série de prompting para saídas estáveis*
+* slug: `3min-prompting-series-stable-output`
+
+---
+
+# 朋友圈/评论区文案（3 条）
+
+1. “这套提示工程系列太上头了！每篇 3 分钟，抄完模板立刻能用，周报、方案、脚本都稳了。”
+2. “做多 Agent 老打架？按这篇设几条‘交通规则’，瞬间不吵了，还更快！”
+3. “长提示贵又慢？开个缓存，账单直线往下掉，速度还更快，真香。”
+
+---
+
+需要我把**模板做成一页可打印清单**，或按你的业务改成**团队专用规范**吗？
+要不要我**扩写一版**，加上你日常的真实案例？ --&gt;</content:encoded><category>Anthropic</category><category>Prompt Engineering</category></item><item><title>Claude Code 免费使用 Kiro 的 claude-sonnet-4-20250514 模型</title><link>https://www.vibesparking.com/zh-cn/blog/ai/claude-code/kiro/2025-08-16-ccr-ki2api-claude-code-to-sonnet4/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/claude-code/kiro/2025-08-16-ccr-ki2api-claude-code-to-sonnet4/</guid><pubDate>Sat, 16 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # Claude Code 免费使用 Kiro 的 claude-sonnet-4-20250514 模型 --&gt;
 &lt;blockquote&gt;
 &lt;p&gt;本地 Docker 起 &lt;strong&gt;Ki2API&lt;/strong&gt;（OpenAI 兼容网关），再用 &lt;strong&gt;Claude Code Router（CCR）&lt;/strong&gt; 启动 Claude Code，路由到 &lt;code dir=&quot;auto&quot;&gt;claude-sonnet-4-20250514&lt;/code&gt;。Claude Code 几乎零改动，直接吃到 Kiro 的 Sonnet 4 的推理与编码能力。&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -2840,345 +3181,4 @@ Claude Code 官方介绍与安装文档（理解本体与环境要求）。
 [1]: https://github.com/Ido-Levi/claude-code-tamagotchi &quot;GitHub - Ido-Levi/claude-code-tamagotchi: The ultimate productivity companion/destroyer! This Tamagotchi tries its best to help but mostly just wants snacks.&quot;
 [2]: https://docs.anthropic.com/en/docs/claude-code/overview?utm_source=chatgpt.com &quot;Claude Code overview&quot;
 [3]: https://www.anthropic.com/claude-code?utm_source=chatgpt.com &quot;Claude Code: Deep coding at terminal velocity ...&quot;
-[4]: https://github.com/Ido-Levi/claude-code-tamagotchi/commits/main/ &quot;Commits · Ido-Levi/claude-code-tamagotchi · GitHub&quot; --&gt;</content:encoded><category>Claude Code</category><category>Tamagotchi</category></item><item><title>Station 统一管理 Claude / Cursor 的 Agent</title><link>https://www.vibesparking.com/zh-cn/blog/ai/vibe-coding/station/2025-08-15-station-ship-sub-agents-to-prod/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/vibe-coding/station/2025-08-15-station-ship-sub-agents-to-prod/</guid><pubDate>Fri, 15 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # Station 统一管理 Claude / Cursor 的 Agent --&gt;
-&lt;blockquote&gt;
-&lt;p&gt;想要一套&lt;strong&gt;自托管、可版本、可打包&lt;/strong&gt;的 Agent 运行时，让 Claude Code / Cursor 里产出的“小 Agent”真正落地上线？Station 就是为这件事而生的。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;引言&quot;&gt;引言&lt;/h2&gt;&lt;a href=&quot;#引言&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “引言”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;最近这款 &lt;strong&gt;Station&lt;/strong&gt; 在圈里挺火。它不是又一个“应用级”Agent 平台，而是专门给 &lt;strong&gt;可部署子代理（Sub-Agents）&lt;/strong&gt; 准备的&lt;strong&gt;轻量运行时与打包分发体系&lt;/strong&gt;。
-一句话理解：把你在 Claude Code、Cursor 里做出来的“能干活的小 Agent”，打包、上生产、接权限、可审计，还能版本化管理。&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;亮点一览为内部场景而生&quot;&gt;亮点一览（为“内部场景”而生）&lt;/h2&gt;&lt;a href=&quot;#亮点一览为内部场景而生&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “亮点一览（为“内部场景”而生）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;**为什么用 Station？**因为内部自动化不同于普通 App：要拿密钥、要进数据库、要打 CI/CD、要过审计。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;面向内部任务&lt;/strong&gt;：子代理可以连生产库、监控基础设施、走 CI/CD、做安全扫描与应急响应。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;安全内建&lt;/strong&gt;：自托管、机密加密（AES）、多环境隔离（dev/staging/prod）、全量审计轨迹。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;轻量可融入&lt;/strong&gt;：&lt;strong&gt;单一约 45MB 二进制&lt;/strong&gt;、本地 &lt;strong&gt;SQLite&lt;/strong&gt; 即开箱，生产可切 &lt;strong&gt;PostgreSQL&lt;/strong&gt;，天然 &lt;strong&gt;GitOps&lt;/strong&gt;（配置可版本）。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;MCP 原生&lt;/strong&gt;：直接做 &lt;strong&gt;MCP 运行时&lt;/strong&gt;，复用你团队已经批准的 MCP 工具（文件系统、Slack、AWS、K8s、DB…）。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;开发体验&lt;/strong&gt;：提供 &lt;strong&gt;Genkit 驱动的浏览器 Playground&lt;/strong&gt; 与 &lt;code dir=&quot;auto&quot;&gt;stn develop&lt;/code&gt;，可视化调试工具调用与执行流。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;MCP 是什么？简单说就是**让 LLM 用“受控工具”**的统一协议，Claude Desktop 官方教程里有快速上手与 Claude 配置示例。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;station-怎么工作&quot;&gt;Station 怎么工作？&lt;/h2&gt;&lt;a href=&quot;#station-怎么工作&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Station 怎么工作？”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;核心结构&lt;/strong&gt;很简单：
-&lt;strong&gt;一个 &lt;code dir=&quot;auto&quot;&gt;.prompt&lt;/code&gt; 文件 + 一组 MCP 工具 = 一个可部署的子代理&lt;/strong&gt;。
-环境以 &lt;strong&gt;dev/staging/prod&lt;/strong&gt; 组织，工具定义在 &lt;code dir=&quot;auto&quot;&gt;template.json&lt;/code&gt;，环境变量写 &lt;code dir=&quot;auto&quot;&gt;variables.yml&lt;/code&gt;，最终可&lt;strong&gt;打包 Bundle&lt;/strong&gt;并分发安装。&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;安装与接入5-分钟上手&quot;&gt;安装与接入（5 分钟上手）&lt;/h2&gt;&lt;a href=&quot;#安装与接入5-分钟上手&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “安装与接入（5 分钟上手）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;安装 &amp;#x26; 初始化&lt;/strong&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;curl&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;-fsSL&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;https://raw.githubusercontent.com/cloudshipai/station/main/install.sh&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;|&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;bash&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;stn&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;init&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;   &lt;/span&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# 初始化数据库与加密&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;ol start=&quot;2&quot;&gt;
-&lt;li&gt;&lt;strong&gt;接入 Claude Desktop / Claude Code（MCP）&lt;/strong&gt;
-在 Claude 配置里加入：&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;json&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;{&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;mcpServers&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: {&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;station&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: {&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;      &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;command&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;stn&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;      &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;args&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: [&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;stdio&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;]&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;    &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;p&gt;现在，跟 Claude 说“创建一个安全审计代理”，它会自动给这个代理配好需要的工具（如文件扫描 + Slack）。&lt;/p&gt;
-&lt;ol start=&quot;3&quot;&gt;
-&lt;li&gt;&lt;strong&gt;一键打包 &amp;#x26; 安装 Bundle（把环境搬去生产）&lt;/strong&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;stn&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;template&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;create&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;prod-bundle&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;--env&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;default&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;--name&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;Prod Bundle&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;--author&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;Team&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;--description&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;Prod env&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;stn&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;template&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;bundle&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;prod-bundle&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;stn&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;template&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;install&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;prod-bundle.tar.gz&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;production&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;stn&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;sync&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;production&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;p&gt;完成后，一个包含 &lt;strong&gt;多子代理 + 多 MCP 服务器&lt;/strong&gt; 的可部署包就到位了。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;想要&lt;strong&gt;可视化调试&lt;/strong&gt;？本地跑：&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;genkit&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;start&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;--&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;stn&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;develop&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;--env&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;dev&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;p&gt;浏览器里即可测试输入、看实时调用轨迹与日志。&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;推荐使用场景配可复制示例&quot;&gt;推荐使用场景（配可复制示例）&lt;/h2&gt;&lt;a href=&quot;#推荐使用场景配可复制示例&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “推荐使用场景（配可复制示例）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h3 id=&quot;1-安全合规--基线扫描-slack-告警&quot;&gt;1) 安全合规 / 基线扫描（+ Slack 告警）&lt;/h3&gt;&lt;a href=&quot;#1-安全合规--基线扫描-slack-告警&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1) 安全合规 / 基线扫描（+ Slack 告警）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;目标：定时扫描敏感目录，发现异常即时推 Slack。&lt;/li&gt;
-&lt;li&gt;做法：创建 &lt;code dir=&quot;auto&quot;&gt;SecurityScanner.prompt&lt;/code&gt;，挂接 &lt;strong&gt;filesystem MCP&lt;/strong&gt; + &lt;strong&gt;Slack MCP&lt;/strong&gt;；在 Station 里设定执行元数据与步数上限。&lt;/li&gt;
-&lt;li&gt;触发语句（Claude 内）：
-“运行安全扫描，目录 &lt;code dir=&quot;auto&quot;&gt;/etc&lt;/code&gt;，把高危项发到 &lt;code dir=&quot;auto&quot;&gt;#sec-alerts&lt;/code&gt;。”&lt;/li&gt;
-&lt;li&gt;价值：自动化+可追踪，方便审计与回溯。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h3 id=&quot;2-基础设施巡检--成本看板aws-成本&quot;&gt;2) 基础设施巡检 / 成本看板（AWS 成本）&lt;/h3&gt;&lt;a href=&quot;#2-基础设施巡检--成本看板aws-成本&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2) 基础设施巡检 / 成本看板（AWS 成本）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;目标：拉取近 7 天成本，生成日报，发 Slack。&lt;/li&gt;
-&lt;li&gt;做法：Agent 组合 &lt;strong&gt;AWS 成本工具&lt;/strong&gt; + &lt;strong&gt;Slack&lt;/strong&gt;，输出 Markdown 周期推送。&lt;/li&gt;
-&lt;li&gt;价值：把“AI+云成本”变成日常节拍，随手可得。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h3 id=&quot;3-cicd-部署自动化容器k8s&quot;&gt;3) CI/CD 部署自动化（容器/K8s）&lt;/h3&gt;&lt;a href=&quot;#3-cicd-部署自动化容器k8s&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3) CI/CD 部署自动化（容器/K8s）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;目标：小版本上线，自动 &lt;code dir=&quot;auto&quot;&gt;docker exec&lt;/code&gt; + &lt;code dir=&quot;auto&quot;&gt;kubectl apply&lt;/code&gt;，回写变更单链接。&lt;/li&gt;
-&lt;li&gt;做法：Agent 组合 &lt;strong&gt;Docker MCP&lt;/strong&gt; + &lt;strong&gt;Kubernetes MCP&lt;/strong&gt;；上线时只需一句话。&lt;/li&gt;
-&lt;li&gt;价值：开发说人话，Agent 做苦活。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h3 id=&quot;4-生产库只读巡检--慢-sql-抓取&quot;&gt;4) 生产库只读巡检 / 慢 SQL 抓取&lt;/h3&gt;&lt;a href=&quot;#4-生产库只读巡检--慢-sql-抓取&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “4) 生产库只读巡检 / 慢 SQL 抓取”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;目标：连接生产库（只读凭证），抽样检查慢查询与索引命中。&lt;/li&gt;
-&lt;li&gt;做法：Agent 组合 &lt;strong&gt;DB MCP&lt;/strong&gt; 与自定义分析脚本。&lt;/li&gt;
-&lt;li&gt;价值：尽量靠近“问题源头”，减少排障往返。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h3 id=&quot;5-代码评审机器人内部规则版&quot;&gt;5) 代码评审机器人（内部规则版）&lt;/h3&gt;&lt;a href=&quot;#5-代码评审机器人内部规则版&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “5) 代码评审机器人（内部规则版）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;目标：按团队规范（安全/性能/风格）出评审建议。&lt;/li&gt;
-&lt;li&gt;做法：在 &lt;code dir=&quot;auto&quot;&gt;.prompt&lt;/code&gt; 写清评分维度与建议格式，挂 &lt;strong&gt;filesystem MCP&lt;/strong&gt; 读取代码，输出结构化建议。&lt;/li&gt;
-&lt;li&gt;价值：把“规范”产品化，持续一致。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;与应用型-agent-平台的区别&quot;&gt;与应用型 Agent 平台的区别&lt;/h2&gt;&lt;a href=&quot;#与应用型-agent-平台的区别&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “与应用型 Agent 平台的区别”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;Station 默认面向 &lt;strong&gt;“能进你内网、需要权限与审计”&lt;/strong&gt; 的任务；&lt;/li&gt;
-&lt;li&gt;强调 &lt;strong&gt;自托管与数据主权&lt;/strong&gt;；&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;单文件 + SQLite&lt;/strong&gt; 的轻量形态，让它像一件运维工具，而不是一套平台。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;你也可以把 Station 当作 &lt;strong&gt;MCP“中枢”&lt;/strong&gt;：它既能消费别的 MCP 服务器，也能对外暴露“调 Agent、列 Agent、建 Agent”的 MCP 工具给其他客户端使用。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;上线建议团队落地清单&quot;&gt;上线建议（团队落地清单）&lt;/h2&gt;&lt;a href=&quot;#上线建议团队落地清单&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “上线建议（团队落地清单）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;凭证托管&lt;/strong&gt;：密钥与连接串放入 Station 的加密存储，按环境隔离。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;最小权限&lt;/strong&gt;：为每个子代理单独配置只需的 MCP 工具，少即是多。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;GitOps&lt;/strong&gt;：&lt;code dir=&quot;auto&quot;&gt;template.json&lt;/code&gt;、&lt;code dir=&quot;auto&quot;&gt;.prompt&lt;/code&gt;、&lt;code dir=&quot;auto&quot;&gt;variables.yml&lt;/code&gt; 全进仓库，走 MR 审核再发版。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;审计留痕&lt;/strong&gt;：所有执行都有轨迹，出事可回溯。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;结语&quot;&gt;结语&lt;/h2&gt;&lt;a href=&quot;#结语&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “结语”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;Station 把“会干活的小 Agent”从桌面聊到的点子，落成&lt;strong&gt;可部署、可审计、可复制&lt;/strong&gt;的内部自动化。你不用再为平台折腾，只需把 &lt;code dir=&quot;auto&quot;&gt;.prompt&lt;/code&gt; 写好，工具接上，&lt;strong&gt;一打包就能到生产&lt;/strong&gt;。
-这就是我最喜欢它的地方：&lt;strong&gt;简单、可控、能扩散&lt;/strong&gt;。&lt;/p&gt;
-&lt;p&gt;—&lt;/p&gt;
-&lt;p&gt;**你觉得最值得先做的一个子代理是什么？**欢迎在评论区聊聊，也可以把这篇转给团队同事，一起设计你们的“内部 Agent 工厂”。&lt;/p&gt;&lt;!-- ---
-
-## 3 个多语言爆款标题 &amp; slug
-
-1. **把 Claude 的小 Agent 送进生产：Station 自托管子代理运行时指南**
-   EN: Ship Your Claude Sub-Agents to Prod: A Hands-On Guide to Station
-   繁體: 把 Claude 小代理送進生產：Station 自託管子代理運行時指南
-   日本語: Claude の小さなエージェントを本番へ：Station 実践ガイド
-   Fr: Mettez vos sous-agents Claude en prod : guide pratique Station
-   Es: Lleva tus sub-agentes de Claude a producción: guía práctica de Station
-   Pt: Leve os sub-agentes do Claude para produção: guia prático do Station
-   **slug**: station-ship-sub-agents-to-prod
-
-2. **轻量、可审计、能打包：Station 打造你的内部 AI 自动化工厂**
-   EN: Lightweight, Auditable, Packable: Build an Internal AI Automation Factory with Station
-   繁體: 輕量、可稽核、可打包：用 Station 搭建內部 AI 自動化工廠
-   日本語: 軽量・監査可能・パッケージ化：Station で社内AI自動化工場を作る
-   Fr: Léger, traçable, empaquetable : votre usine d’automatisation interne avec Station
-   Es: Ligero, auditable y empaquetable: tu fábrica de automatización interna con Station
-   Pt: Leve, auditável e empacotável: sua fábrica interna de automação com Station
-   **slug**: station-internal-ai-automation-factory
-
-3. **不是平台，是运行时：Station 用 MCP 驱动可部署子代理**
-   EN: Not a Platform—A Runtime: Station Powers Deployable Sub-Agents with MCP
-   繁體: 不是平台，而是運行時：Station 以 MCP 驅動可部署子代理
-   日本語: プラットフォームではなくランタイム：Station が MCP で配備可能なサブエージェントを実現
-   Fr: Pas une plateforme, un runtime : Station active des sous-agents déployables avec MCP
-   Es: No es plataforma, es runtime: Station impulsa sub-agentes desplegables con MCP
-   Pt: Não é plataforma, é runtime: Station viabiliza sub-agentes com MCP
-   **slug**: station-runtime-not-platform
-
----
-
-## 封面与章节配图（插画风｜2:1｜英文文案，不含中文）
-
-**封面图 Prompt**
-“An illustration of a compact control room labeled ‘Station’ orchestrating many small ‘sub-agents’ as tool icons (file, database, Kubernetes, Slack) on conveyor belts; clean minimal lines, modern pastel palette, wide 2:1 composition; no text on image.”
-
-**章节配图 Prompt（“内部自动化工厂”）**
-“An illustration of a developer handing a `.prompt` file to a packaging robot that seals a ‘bundle’ crate, with arrows to ‘dev’, ‘staging’, ‘prod’ bays; modern pastel, minimal style, 2:1 aspect ratio, text-free.”
-
----
-
-## 3 条朋友圈/评论文案
-
-1. “把小 Agent 真正送进生产了！Station 自托管 + 打包分发，搞定权限、审计和多环境，团队自动化马上起飞🚀”
-2. “不是又一个平台，是能落地的运行时。`.prompt` + MCP 工具 = 子代理，打包就能拎包上生产，太爽了😎”
-3. “安全扫描、CI/CD、成本报表…一句话触发，Agent 干完活还留审计痕迹。这才是 AI 在开发团队的正确打开方式✅”
-
----
-
-想不想我再写一篇 **“用 Station 从 0 到 1 做一套团队模板（含示例 .prompt 与 template.json）”** 的实操篇？需要的话我现在就开写。
-
-[1]: https://github.com/cloudshipai/station &quot;GitHub - cloudshipai/station&quot;
-[2]: https://modelcontextprotocol.info/docs/quickstart/quickstart/ &quot;Quickstart – Model Context Protocol （MCP）&quot; --&gt;</content:encoded><category>Station</category><category>Claude Code</category><category>Cursor</category><category>Vibe Coding</category></item><item><title>Claude Code 真省钱用法</title><link>https://www.vibesparking.com/zh-cn/blog/ai/claude-code/2025-08-14-claude-code-save-money-right-model-lean-context-permissions/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/claude-code/2025-08-14-claude-code-save-money-right-model-lean-context-permissions/</guid><pubDate>Thu, 14 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # Claude Code 真省钱用法 --&gt;
-&lt;blockquote&gt;
-&lt;p&gt;把对话瘦身、模型用对、权限管严，Claude Code 的账单能直接腰斩。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;引言&quot;&gt;引言&lt;/h2&gt;&lt;a href=&quot;#引言&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “引言”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;很多人用 Claude Code，账单月月“破防”。
-不是你敲多了，而是&lt;strong&gt;隐形 Token 黑洞&lt;/strong&gt;在吞钱。
-好消息是：&lt;strong&gt;能控&lt;/strong&gt;，而且立刻见效。&lt;/p&gt;
-&lt;p&gt;这篇把省钱术拆成三层：基础、进阶、高阶。
-照做就能省下大头。&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;一钱都花在哪4-个token-黑洞&quot;&gt;一、钱都花在哪？4 个“Token 黑洞”&lt;/h2&gt;&lt;a href=&quot;#一钱都花在哪4-个token-黑洞&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “一、钱都花在哪？4 个“Token 黑洞””&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;1）系统与记忆的“隐形上下文”&lt;/strong&gt;
-Claude Code 会自动加载系统提示与各级 &lt;code dir=&quot;auto&quot;&gt;CLAUDE.md&lt;/code&gt; 记忆（企业/项目/用户）。这些内容&lt;strong&gt;每次对话都会进上下文&lt;/strong&gt;，自然吃 Token。**&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;2）模型价差太大&lt;/strong&gt;
-官方定价：&lt;strong&gt;Sonnet 4 ≈ $3/$15 每百万 输入/输出 Token；Opus 4/4.1 ≈ $15/$75&lt;/strong&gt;。同一段对话，模型一换，&lt;strong&gt;单价就是 5 倍&lt;/strong&gt;。**&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;3）上下文越聊越胖&lt;/strong&gt;
-Claude Code 支持超大上下文（Sonnet 4 最高到 1M Token 测试中）。&lt;strong&gt;对话越长，越容易触发自动压缩与重复“铺垫”&lt;/strong&gt;，Token 跑得飞快。**&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;4）背景与噪音消耗&lt;/strong&gt;
-除了你看得见的回复，&lt;strong&gt;/cost 查询、自动摘要、Haiku 提示&lt;/strong&gt;等后台动作也会花少量 Token。小数怕长计。**&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;小结：&lt;strong&gt;不是你多问了，而是“它每次都把家底搬上台”。&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;二三层省钱心法立刻能用&quot;&gt;二、三层省钱心法（立刻能用）&lt;/h2&gt;&lt;a href=&quot;#二三层省钱心法立刻能用&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “二、三层省钱心法（立刻能用）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h3 id=&quot;a-基础篇人人必会的-4-个动作&quot;&gt;A. 基础篇：人人必会的 4 个动作&lt;/h3&gt;&lt;a href=&quot;#a-基础篇人人必会的-4-个动作&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “A. 基础篇：人人必会的 4 个动作”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;手动瘦身而不是被动压缩&lt;/strong&gt;
-用 &lt;code dir=&quot;auto&quot;&gt;/compact&lt;/code&gt; 主动压缩，并加一句聚焦指令：&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;plaintext&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;/compact Focus on code diffs and failing tests only&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;p&gt;自动压缩是在&lt;strong&gt;95% 容量&lt;/strong&gt;时才触发，等它触发就晚了。**&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;一事一议，做完就清&lt;/strong&gt;
-每个小任务开新会话，完结立刻 &lt;code dir=&quot;auto&quot;&gt;/clear&lt;/code&gt;，避免历史“滚雪球”。**&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;选对默认模型&lt;/strong&gt;
-日常开发用 &lt;strong&gt;Sonnet 4&lt;/strong&gt;。确有“难、长、推理深”的阶段，再 &lt;code dir=&quot;auto&quot;&gt;/model&lt;/code&gt; 切 &lt;strong&gt;Opus&lt;/strong&gt;。现在还支持**“Opus 规划 + Sonnet 执行”的模式**，规划更强、执行更省。**&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;随时查账&lt;/strong&gt;
-每个会话敲 &lt;code dir=&quot;auto&quot;&gt;/cost&lt;/code&gt; 看本次消耗；团队可在控制台看历史与&lt;strong&gt;设置工作区消费上限&lt;/strong&gt;。**&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;配图建议（插画 2:1 | 英文文案）&lt;/strong&gt;
-“A developer squeezing a giant chat bubble into a slim pill, while a tiny receipt shows shrinking token numbers.”&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h3 id=&quot;b-进阶篇流程一收账单就瘦&quot;&gt;B. 进阶篇：流程一收，账单就瘦&lt;/h3&gt;&lt;a href=&quot;#b-进阶篇流程一收账单就瘦&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “B. 进阶篇：流程一收，账单就瘦”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;文档驱动，防上下文爆炸&lt;/strong&gt;
-先让 Claude 产出「TODO 清单 / 方案简述」，确认后再执行。
-反复迭代在**Plan Mode（规划模式）**里完成，确认再切回执行。**&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;把“长期记忆”写进 CLAUDE.md&lt;/strong&gt;
-规范、常用命令、项目约定写入 &lt;code dir=&quot;auto&quot;&gt;CLAUDE.md&lt;/code&gt;，下次直接生效；必要时在会话里 &lt;code dir=&quot;auto&quot;&gt;/memory&lt;/code&gt; 快速编辑。&lt;strong&gt;记忆按层级自动加载&lt;/strong&gt;，减少你每次“复述”的 Token。**&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;小步提交，可随时回滚&lt;/strong&gt;
-让 Claude 每完成一个小块就写一次 commit message。出错回滚，&lt;strong&gt;少走弯路就少花 Token&lt;/strong&gt;。（工程实践，无需额外引用）&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;团队限流 &amp;#x26; 飞行仪表&lt;/strong&gt;
-按组织规模设置合理的&lt;strong&gt;TPM（每分钟 Token）&lt;/strong&gt;，防并发“烧机”。**&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h3 id=&quot;c-高阶篇硬核降本效果最猛&quot;&gt;C. 高阶篇：硬核降本（效果最猛）&lt;/h3&gt;&lt;a href=&quot;#c-高阶篇硬核降本效果最猛&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “C. 高阶篇：硬核降本（效果最猛）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;1）权限白/黑名单，堵住“乱读文件”&lt;/strong&gt;
-用 &lt;code dir=&quot;auto&quot;&gt;/permissions&lt;/code&gt; + &lt;code dir=&quot;auto&quot;&gt;.claude/settings.json&lt;/code&gt;，&lt;strong&gt;禁止读取日志、二进制、大目录&lt;/strong&gt;，只给必要路径。规则支持 &lt;strong&gt;gitignore&lt;/strong&gt; 风格。**&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;json&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;{&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;defaultMode&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;plan&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;readRules&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: [&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;src/**&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;docs/**&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;!**/*.log&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;!**/*.bin&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;!node_modules/**&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;!dist/**&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;!coverage/**&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;],&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;editRules&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: [&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;src/**&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;, &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;docs/**&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;]&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;blockquote&gt;
-&lt;p&gt;说明：&lt;code dir=&quot;auto&quot;&gt;plan&lt;/code&gt; 模式只分析不改动；读/写规则用来&lt;strong&gt;缩小文件面&lt;/strong&gt;，少扫＝少 Token。**&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;2）精确到“几行”而不是“整文件”&lt;/strong&gt;
-不要整段粘贴，把&lt;strong&gt;文件路径 + 需修改的行号 + 5 点摘要&lt;/strong&gt;给 Claude，降低无关扫描。（工程实践）&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;3）模型分工：Opus 只做“贵的部分”&lt;/strong&gt;
-在 &lt;code dir=&quot;auto&quot;&gt;/model&lt;/code&gt; 里把 &lt;strong&gt;Opus&lt;/strong&gt; 用在&lt;strong&gt;方案/重构设计/跨模块依赖分析&lt;/strong&gt;；真正代码生成与改错交给 &lt;strong&gt;Sonnet&lt;/strong&gt;。官方也在推广这一路线。**&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;4）（团队/网关）用 Prompt Caching&lt;/strong&gt;
-做 API 或企业网关接入时，&lt;strong&gt;提示缓存&lt;/strong&gt;对重复大段前缀能省到肉眼可见。官方给出缓存价差（写入/命中价更低）。**&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;三开箱即用的省钱配置清单&quot;&gt;三、开箱即用的省钱配置清单&lt;/h2&gt;&lt;a href=&quot;#三开箱即用的省钱配置清单&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “三、开箱即用的省钱配置清单”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;默认用 Sonnet，必要时临时切 Opus&lt;/strong&gt;：&lt;code dir=&quot;auto&quot;&gt;/model&lt;/code&gt; 一键切。**&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;固定开启 Plan Mode&lt;/strong&gt;：规划期不执行，确认再动手。**&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;每次进入先瘦身&lt;/strong&gt;：&lt;code dir=&quot;auto&quot;&gt;/compact Focus on code diffs and test failures&lt;/code&gt;。**&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;任务闭环就 &lt;code dir=&quot;auto&quot;&gt;/clear&lt;/code&gt;&lt;/strong&gt;：防历史越滚越大。**&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;权限严控&lt;/strong&gt;：用 &lt;code dir=&quot;auto&quot;&gt;/permissions&lt;/code&gt; 和 &lt;code dir=&quot;auto&quot;&gt;readRules/editRules&lt;/code&gt; 限目录与类型。**&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;随时查账&lt;/strong&gt;：&lt;code dir=&quot;auto&quot;&gt;/cost&lt;/code&gt; + 控制台“工作区消费上限”。**&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;记忆写入 CLAUDE.md&lt;/strong&gt;：减少重复铺垫与上下文喂料。**&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;四真金白银为什么这些策略有效&quot;&gt;四、真金白银：为什么这些策略有效？&lt;/h2&gt;&lt;a href=&quot;#四真金白银为什么这些策略有效&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “四、真金白银：为什么这些策略有效？”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;单价差异&lt;/strong&gt;：Opus 单价约为 Sonnet &lt;strong&gt;5 倍&lt;/strong&gt;，把“贵的工作”集中到规划期，执行期用 Sonnet，整体成本&lt;strong&gt;大幅走低&lt;/strong&gt;。**&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;体积成本&lt;/strong&gt;：自动加载记忆 + 长对话让上下文变胖；主动 &lt;code dir=&quot;auto&quot;&gt;/compact&lt;/code&gt;、&lt;code dir=&quot;auto&quot;&gt;/clear&lt;/code&gt; 能&lt;strong&gt;直接减少传输体积&lt;/strong&gt;。**&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;减少无关读写&lt;/strong&gt;：权限与规则像“&lt;strong&gt;成本防火墙&lt;/strong&gt;”，拦住大而无用的目录/文件。**&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;后台开销可控&lt;/strong&gt;：知道哪里在“悄悄花钱”，就能避免无意义的刷新与查询。**&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;结语&quot;&gt;结语&lt;/h2&gt;&lt;a href=&quot;#结语&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “结语”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;Claude Code 的强大，来自“把一切都带上”。
-&lt;strong&gt;省钱的关键&lt;/strong&gt;，就是&lt;strong&gt;只带必要的那一部分&lt;/strong&gt;。&lt;/p&gt;
-&lt;p&gt;今天就把这套清单落到你的项目里：
-从 &lt;code dir=&quot;auto&quot;&gt;/model&lt;/code&gt;、&lt;code dir=&quot;auto&quot;&gt;/compact&lt;/code&gt;、&lt;code dir=&quot;auto&quot;&gt;/clear&lt;/code&gt; 开始，
-再把 &lt;code dir=&quot;auto&quot;&gt;CLAUDE.md&lt;/code&gt; 与权限规则补齐。
-月底账单，会给你惊喜。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;你怎么看？你还踩过哪些“吞钱坑”？评论区见。&lt;/strong&gt;&lt;/p&gt;&lt;!-- ---
-
-## 题图与章节配图（插画式｜2:1｜英文文案，不含中文）
-
-**封面图 Prompt**
-“An illustration of a developer catching leaking tokens with a mesh filter labeled ‘/compact, /clear, /model’, a price tag drops from ‘\$75’ to ‘\$15’, clean lines, modern pastel, wide 2:1, text-free.”
-
-**关键章节配图 Prompt 1（基础篇）**
-“Minimal blueprint of a terminal showing /compact and /clear commands slimming a giant chat history into a thin strip, receipt icon shows fewer tokens, 2:1, pastel, text-free.”
-
-**关键章节配图 Prompt 2（进阶篇）**
-“Kanban-style plan mode board feeding into small git commits on a conveyor belt, a green TPM gauge stays stable, 2:1, pastel, text-free.”
-
-**关键章节配图 Prompt 3（高阶篇）**
-“Permission rules shield blocking folders logs/, node\_modules/, dist/, while a bright path to src/ remains open, 2:1, pastel, text-free.”
-
----
-
-## 多语言标题与 slug（3 组）
-
-1. **中文**：Claude Code 省钱指南：用对模型、瘦身上下文、权限堵洞
-   **English**: Claude Code on a Budget: Right Model, Lean Context, Locked-Down Permissions
-   **繁體**：Claude Code 省錢指南：用對模型、瘦身上下文、權限堵洞
-   **日本語**：Claude Code節約術：モデル最適化・文脈スリム化・権限ロック
-   **Français** : Claude Code à petit budget : bon modèle, contexte allégé, permissions verrouillées
-   **Español**: Claude Code con presupuesto: modelo correcto, contexto ligero y permisos seguros
-   **Português**: Claude Code econômico: modelo certo, contexto enxuto e permissões rígidas
-   **slug**：`claude-code-save-money-right-model-lean-context-permissions`
-
-2. **中文**：别再烧钱了！3 层实战让 Claude Code 账单减半
-   **English**: Stop the Burn! A 3-Layer Playbook to Halve Your Claude Code Bill
-   **繁體**：別再燒錢！三層實戰讓 Claude Code 帳單砍半
-   **日本語**：無駄遣い終了！3層プレイブックで請求を半減
-   **Français** : Fin de l’hémorragie : un guide en 3 niveaux pour diviser la facture
-   **Español**: Basta de derroche: 3 capas para partir la factura a la mitad
-   **Português**: Chega de queimar verba: 3 camadas para cortar a conta pela metade
-   **slug**：`claude-code-3-layer-cost-cut-playbook`
-
-3. **中文**：从 5x 单价到 0 噪音：Claude Code 最强降本术
-   **English**: From 5× Price Gap to Zero Noise: Ultimate Cost Cuts for Claude Code
-   **繁體**：從 5x 單價到零噪音：Claude Code 終極降本術
-   **日本語**：5倍単価の壁を越えろ：Claude Code究極のコスト削減
-   **Français** : De l’écart 5× au zéro bruit : l’optimisation ultime des coûts
-   **Español**: Del precio 5× al ruido cero: el recorte definitivo
-   **Português**: Do preço 5× ao ruído zero: o corte definitivo de custos
-   **slug**：`claude-code-ultimate-cost-cuts`
-
----
-
-## 圈友评论（3 条，直接可发）
-
-1. **“以前以为是我问多了，结果是上下文太胖… 按这篇把 /compact、/clear、/permissions 用起来，账单立减，爽！”**
-2. **“Opus 只负责动脑，Sonnet 动手干活，这组合太省钱了。月底费用第一次没超标🎯。”**
-3. **“把日志、node\_modules 一刀切掉，Claude 不再到处乱看，速度更快、钱也更少，一举两得。”**
-
----
-
-需要我把文中的**配置模板**按你的仓库结构改一版吗？或给你做一套**一键初始化脚本**（含 `CLAUDE.md`、`settings.json`、常用 `/commands` ）？我也可以把全文**扩写成图文版**。
-
-[1]: https://docs.anthropic.com/en/docs/claude-code/memory &quot;Manage Claude&apos;s memory - Anthropic&quot;
-[2]: https://docs.anthropic.com/en/docs/about-claude/pricing?utm_source=chatgpt.com &quot;Pricing&quot;
-[3]: https://www.anthropic.com/news/claude-4?utm_source=chatgpt.com &quot;Introducing Claude 4&quot;
-[4]: https://docs.anthropic.com/en/docs/build-with-claude/context-windows?utm_source=chatgpt.com &quot;Context windows&quot;
-[5]: https://docs.anthropic.com/en/docs/claude-code/costs &quot;Manage costs effectively - Anthropic&quot;
-[6]: https://docs.anthropic.com/en/docs/claude-code/slash-commands &quot;Slash commands - Anthropic&quot;
-[7]: https://www.threads.com/%40boris_cherny/post/DNTYPVMJpPs/claude-code-has-a-new-model-option-opus-for-plan-modethis-setting-uses-claude-op?utm_source=chatgpt.com &quot;Claude Code has a new /model option: Opus for plan mode.&quot;
-[8]: https://x.com/claude_code?utm_source=chatgpt.com &quot;Claude Code Community (@claude_code) / X&quot;
-[9]: https://www.claudelog.com/faqs/what-is-plan-mode/?utm_source=chatgpt.com &quot;What is Plan Mode in Claude Code&quot;
-[10]: https://docs.anthropic.com/en/docs/claude-code/iam &quot;Identity and Access Management - Anthropic&quot;
-[11]: https://www.anthropic.com/pricing?utm_source=chatgpt.com &quot;Pricing&quot; --&gt;</content:encoded><category>Claude Code</category><category>Cursor</category></item></channel></rss>
+[4]: https://github.com/Ido-Levi/claude-code-tamagotchi/commits/main/ &quot;Commits · Ido-Levi/claude-code-tamagotchi · GitHub&quot; --&gt;</content:encoded><category>Claude Code</category><category>Tamagotchi</category></item></channel></rss>

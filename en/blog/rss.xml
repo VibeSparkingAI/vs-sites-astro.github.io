@@ -838,7 +838,136 @@ Yet behind the stock’s multiple expansions, &lt;strong&gt;short sellers (e.g.,
 &lt;/ul&gt;
 &lt;blockquote&gt;
 &lt;p&gt;In the short run, markets are a voting machine; in the long run, a weighing machine. Whether Palantir grows into its valuation will be answered by innovation and results.&lt;/p&gt;
-&lt;/blockquote&gt;</content:encoded><category>Finance</category><category>Palantir</category><category>NYSE: PLTR</category><category>AI</category><category>US Stock Market</category></item><item><title>DeepAgents: An Out‑of‑the‑Box Stock Research AI Agent</title><link>https://www.vibesparking.com/en/blog/ai/quant/deep-agents/2025-08-19-deepagents-stock-research-in-one-agent/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/quant/deep-agents/2025-08-19-deepagents-stock-research-in-one-agent/</guid><pubDate>Tue, 19 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;This is an open‑source “deep agent” example built on LangChain DeepAgents. It bundles fundamentals + technicals + risk into a decent research note and ships with a Gradio web UI, so it’s very fast to try and demo.&lt;/p&gt;
+&lt;/blockquote&gt;</content:encoded><category>Finance</category><category>Palantir</category><category>NYSE: PLTR</category><category>AI</category><category>US Stock Market</category></item><item><title>Turn AI into a Formula: Excel’s New =COPILOT() Playbook</title><link>https://www.vibesparking.com/en/blog/ai/microsoft/excel/2025-08-19-excel-copilot-formula-playbook/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/microsoft/excel/2025-08-19-excel-copilot-formula-playbook/</guid><pubDate>Tue, 19 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+&lt;p&gt;Summarize, categorize, write copy, and produce tables right inside cells. When data changes, results auto‑recalculate.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;&lt;a href=&quot;#introduction&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Introduction”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;The thing we’ve been waiting for finally landed.
+Excel now exposes Copilot as a native function: &lt;code dir=&quot;auto&quot;&gt;=COPILOT()&lt;/code&gt;.
+No scripts, no add‑ins. You write it like &lt;code dir=&quot;auto&quot;&gt;IF&lt;/code&gt; or &lt;code dir=&quot;auto&quot;&gt;LAMBDA&lt;/code&gt;, and results automatically recompute as data changes — AI is now part of Excel’s calculation engine.&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;what-is-it-exactly&quot;&gt;What is it exactly?&lt;/h2&gt;&lt;a href=&quot;#what-is-it-exactly&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “What is it exactly?”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;Native function: enter &lt;code dir=&quot;auto&quot;&gt;=COPILOT(prompt, [context])&lt;/code&gt; in a cell and combine natural language with range references to get AI output. It composes with &lt;code dir=&quot;auto&quot;&gt;IF&lt;/code&gt;, &lt;code dir=&quot;auto&quot;&gt;SWITCH&lt;/code&gt;, &lt;code dir=&quot;auto&quot;&gt;LAMBDA&lt;/code&gt;, and more.&lt;/li&gt;
+&lt;li&gt;Auto refresh: when data updates, results follow — no manual reruns.&lt;/li&gt;
+&lt;li&gt;Low barrier: if you can write formulas, you can use AI. Even if not, prompts can carry you.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;syntax-at-a-glance&quot;&gt;Syntax at a glance&lt;/h2&gt;&lt;a href=&quot;#syntax-at-a-glance&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Syntax at a glance”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;excel&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;=COPILOT(prompt_part1, [context1], [prompt_part2], [context2], …)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;prompt_part: tell it what to do: “summarize these comments”, “give 5 SEO keywords”.&lt;/li&gt;
+&lt;li&gt;context: reference your data, e.g., &lt;code dir=&quot;auto&quot;&gt;D4:D18&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Example&lt;/p&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;excel&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;=COPILOT(&quot;Classify this feedback&quot;, D4:D18)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;p&gt;This labels D4:D18 by sentiment or category.&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;four-categories-its-great-at&quot;&gt;Four categories it’s great at&lt;/h2&gt;&lt;a href=&quot;#four-categories-its-great-at&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Four categories it’s great at”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3 id=&quot;1-idea-generation-marketingproduct&quot;&gt;1) Idea generation (marketing/product)&lt;/h3&gt;&lt;a href=&quot;#1-idea-generation-marketingproduct&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1) Idea generation (marketing/product)”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;From product descriptions, generate selling points, titles, and SEO keywords.&lt;/li&gt;
+&lt;li&gt;Rewrite in multiple styles (formal, conversational, playful) right in the grid.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Outputs can spill into rows/columns — easy to filter/deduplicate.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div&gt;&lt;h3 id=&quot;2-summaries-analysisreporting&quot;&gt;2) Summaries (analysis/reporting)&lt;/h3&gt;&lt;a href=&quot;#2-summaries-analysisreporting&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2) Summaries (analysis/reporting)”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;Distill long text or multi‑column metrics into concise narratives.&lt;/li&gt;
+&lt;li&gt;Add “human‑readable explanations” to complex calcs for report footnotes.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;3-classification-opssupport&quot;&gt;3) Classification (ops/support)&lt;/h3&gt;&lt;a href=&quot;#3-classification-opssupport&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3) Classification (ops/support)”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;Sentiment, topic clustering, and intent detection directly in cells.&lt;/li&gt;
+&lt;li&gt;No need to export to external NLP tools — keep it in Excel.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;4-liststables-testingscheduling&quot;&gt;4) Lists/tables (testing/scheduling)&lt;/h3&gt;&lt;a href=&quot;#4-liststables-testingscheduling&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “4) Lists/tables (testing/scheduling)”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;Bulk‑generate test samples, industry case lists, and project outlines.&lt;/li&gt;
+&lt;li&gt;Return multi‑row, multi‑column results straight into the grid.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;six-copyready-formulas&quot;&gt;Six copy‑ready formulas&lt;/h2&gt;&lt;a href=&quot;#six-copyready-formulas&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Six copy‑ready formulas”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;excel&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;=LET(r, D4:D100,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;     &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;COPILOT(&quot;Label each feedback item with sentiment. Only output Positive/Negative/Neutral. Return row-wise.&quot;, r))&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;excel&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;=LET(txt, TEXTJOIN(&quot; &quot;, TRUE, B2:B50),&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;     &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;COPILOT(&quot;Summarize the following into 3 sentences. Keep key data points:&quot;, txt))&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;excel&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;=LET(desc, A2,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;     &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;COPILOT(&quot;From the description below, generate 5 SEO keywords in English, comma-separated:&quot;, desc))&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;excel&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;=LET(tbl, A2:D30,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;     &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;COPILOT(&quot;From the table below, extract {Customer,Issue,Priority} and return a table:&quot;, tbl))&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;excel&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;=IFERROR(&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;COPILOT(&quot;Map each item to one standard category {Electronics,Home,Apparel,Beauty,Other}. Output category only:&quot;, F2:F200),&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;&quot;Unrecognized&quot;)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;excel&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;=LAMBDA(_t, COPILOT(&quot;Rewrite as a shorter, more conversational title:&quot;, _t))(B2)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Be specific: constrain scope, output format, and order. Use clear action verbs like “summarize/classify/sort”.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;compositions-plug-ai-into-your-model&quot;&gt;Compositions: plug AI into your model&lt;/h2&gt;&lt;a href=&quot;#compositions-plug-ai-into-your-model&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Compositions: plug AI into your model”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;With IF/SWITCH: switch prompts by threshold or role; use &lt;code dir=&quot;auto&quot;&gt;IFERROR&lt;/code&gt; as a guardrail.&lt;/li&gt;
+&lt;li&gt;With LAMBDA: wrap common prompts into reusable functions.&lt;/li&gt;
+&lt;li&gt;With WRAPROWS/TOCOL: normalize free text into pivot‑friendly tables.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;limits-and-boundaries&quot;&gt;Limits and boundaries&lt;/h2&gt;&lt;a href=&quot;#limits-and-boundaries&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Limits and boundaries”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;Rate limits: 100 calls/10 min; 300 calls/hour. Prefer arrays to reduce concurrent calls. Microsoft plans to raise quotas.&lt;/li&gt;
+&lt;li&gt;No web/intranet fetch: cannot access web pages or enterprise docs directly — import data into the workbook first.&lt;/li&gt;
+&lt;li&gt;Date output: dates currently return as text, not Excel date serials.&lt;/li&gt;
+&lt;li&gt;Suitability: don’t ask LLMs to do simple math better handled by native functions; Microsoft is exploring guidance here.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;privacy-and-compliance&quot;&gt;Privacy and compliance&lt;/h2&gt;&lt;a href=&quot;#privacy-and-compliance&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Privacy and compliance”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;Data sent via &lt;code dir=&quot;auto&quot;&gt;=COPILOT()&lt;/code&gt; is not used to train base models — only to generate your result.&lt;/li&gt;
+&lt;li&gt;Microsoft states Microsoft 365 commercial data isn’t used to train foundation models; data is encrypted at rest and governed by org boundaries and compliance.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;availability-and-version-requirements&quot;&gt;Availability and version requirements&lt;/h2&gt;&lt;a href=&quot;#availability-and-version-requirements&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Availability and version requirements”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;Rolling out now to users on the Beta Channel with a Microsoft 365 Copilot license.
+&lt;ul&gt;
+&lt;li&gt;Windows: Excel version 2509 (Build 19212.20000) or later.&lt;/li&gt;
+&lt;li&gt;Mac: Excel 16.101 (Build 25081334) or later.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Excel for the web: gradual access via the Frontier program.&lt;/li&gt;
+&lt;li&gt;See the Office Beta Channel release page for cadence details.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;practical-scenarios-with-prompts&quot;&gt;Practical scenarios (with prompts)&lt;/h2&gt;&lt;a href=&quot;#practical-scenarios-with-prompts&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Practical scenarios (with prompts)”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Operations&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“Classify D4:D200 user comments into {Payments,Logistics,Quality,Support,Feature Requests,Other} and include a one‑line reason.”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;excel&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;=COPILOT(&quot;Classify into {Payments,Logistics,Quality,Support,Feature Requests,Other} and output two columns per row: Category|Reason (≤10 chars).&quot;, D4:D200)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;p&gt;Product management&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“Based on column B pain points, generate 10 feature ideas and rank by impact.”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;excel&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;=COPILOT(&quot;From these user pain points, generate 10 feature suggestions ranked by impact. Output header {Suggestion,Impact(1-5),Notes}:&quot;, B2:B500)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;p&gt;Financial analysis&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“From A2:D100 budget vs actuals, produce a 3‑sentence exec summary emphasizing overspends and hypothesized causes.”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;excel&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;=COPILOT(&quot;Generate a 3-sentence management summary from the table, highlight overspends and likely causes. Don’t repeat raw numbers:&quot;, A2:D100)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;p&gt;Support QA&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“From column F tickets, extract: customer, issue, urgency, escalation needed.”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;excel&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;=COPILOT(&quot;Extract {Customer,Issue,Urgency(High/Medium/Low),Escalate(Yes/No)} into a table:&quot;, F2:F300)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;tips-to-raise-success-rate&quot;&gt;Tips to raise success rate&lt;/h2&gt;&lt;a href=&quot;#tips-to-raise-success-rate&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Tips to raise success rate”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;Define output structure: “only output a table/only these columns/one item per row.”&lt;/li&gt;
+&lt;li&gt;Give examples: provide 1–2 sample rows, then “continue in this format”.&lt;/li&gt;
+&lt;li&gt;Use arrays: pass larger ranges in a single call to save quota and get batch‑spilled results.&lt;/li&gt;
+&lt;li&gt;Human review: double‑check in critical workflows.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;oneline-summary&quot;&gt;One‑line summary&lt;/h2&gt;&lt;a href=&quot;#oneline-summary&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “One‑line summary”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;code dir=&quot;auto&quot;&gt;=COPILOT()&lt;/code&gt; is a “recomputable AI template.”
+It pulls ideation, classification, summarization, and lists into one formula so your data and AI outputs create a tight loop.
+For many, this is more stable and controllable than a chat pane.&lt;/p&gt;</content:encoded><category>Excel</category><category>Copilot</category></item><item><title>DeepAgents: An Out‑of‑the‑Box Stock Research AI Agent</title><link>https://www.vibesparking.com/en/blog/ai/quant/deep-agents/2025-08-19-deepagents-stock-research-in-one-agent/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/quant/deep-agents/2025-08-19-deepagents-stock-research-in-one-agent/</guid><pubDate>Tue, 19 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;This is an open‑source “deep agent” example built on LangChain DeepAgents. It bundles fundamentals + technicals + risk into a decent research note and ships with a Gradio web UI, so it’s very fast to try and demo.&lt;/p&gt;
 &lt;p&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;div&gt;&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;&lt;a href=&quot;#introduction&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Introduction”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
@@ -1425,7 +1554,94 @@ Result: the in-app purchase numbers you see in &lt;strong&gt;different countries
 &lt;p&gt;&lt;strong&gt;Regional pricing + exchange rates&lt;/strong&gt; give heavy developers an option to &lt;strong&gt;save money without downgrading&lt;/strong&gt;.
 Whether it’s stable long-term depends on &lt;strong&gt;policy, exchange rates, risk control&lt;/strong&gt; - three things.
 &lt;strong&gt;Rational evaluation, follow terms&lt;/strong&gt;, and you can truly save money.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Would you change regions to save 35%～48%? What’s your hands-on experience? Let’s chat in the comments.&lt;/strong&gt;&lt;/p&gt;</content:encoded><category>Ki2API</category><category>Kiro</category></item><item><title>Using Kiro&apos;s claude-sonnet-4-20250514 Model for Free with Claude Code</title><link>https://www.vibesparking.com/en/blog/ai/claude-code/kiro/2025-08-16-ccr-ki2api-claude-code-to-sonnet4/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/claude-code/kiro/2025-08-16-ccr-ki2api-claude-code-to-sonnet4/</guid><pubDate>Sat, 16 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Would you change regions to save 35%～48%? What’s your hands-on experience? Let’s chat in the comments.&lt;/strong&gt;&lt;/p&gt;</content:encoded><category>Ki2API</category><category>Kiro</category></item><item><title>14 Bite‑Size Reads to Master Prompting’s 80/20</title><link>https://www.vibesparking.com/en/blog/ai/anthropic/prompt-engineering/2025-08-19-14-bitesize-prompting-80-20/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/anthropic/prompt-engineering/2025-08-19-14-bitesize-prompting-80-20/</guid><pubDate>Sun, 17 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+&lt;p&gt;Each chapter takes about three minutes. This compact Anthropic series turns “write better prompts” into copy‑and‑apply patterns you can use the same day — for product, engineering, ops, or founders.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;why-this-series-is-worth-your-time&quot;&gt;Why this series is worth your time&lt;/h2&gt;&lt;a href=&quot;#why-this-series-is-worth-your-time&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Why this series is worth your time”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;It teaches “how to write,” not just concepts.
+The official Prompt Engineering Overview clarifies which problems to solve with prompting vs. model choice/architecture, and it provides directly reusable structures.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Learn‑by‑doing interactive lessons.
+Anthropic’s interactive course splits techniques into short, focused chapters: clarity, role setup, separating data from instructions, output formats, reasoning steps, example‑driven prompting, and more — each with quick exercises.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Tuned to Claude 4 behavior.
+Best practices targeting Opus 4.1 / Sonnet 4 explain how to make these models more “compliant”: set goals, constraints, and style; reliably enforce templates.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Engineering‑grade depth.
+For agents and multi‑tool flows, the series shows how prompting reduces noise, controls process, and stabilizes behavior — with multi‑agent field notes that reflect real team pitfalls.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Real speed and cost wins.
+Long prompts are slow and pricey? Use Prompt Caching: cache shared context to cut long‑prompt cost to ~10% and reduce latency by up to ~85%.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;the-five-core-moves&quot;&gt;The five core moves&lt;/h2&gt;&lt;a href=&quot;#the-five-core-moves&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “The five core moves”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Be as clear as onboarding a new teammate.
+Spell out goal, output format, audience, and evaluation criteria. Use bullet points — don’t rely on inference.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Make roles concrete.
+“You are a B2B PM writing a weekly update to your VP. ≤200 words. End with 3 actions.” The more specific, the steadier the results.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Separate instructions from data.
+Fence off “requirements” and “materials” with delimiters. Claude misreads less when inputs are cleanly separated.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Provide good examples.
+One to three high‑quality examples instantly align structure and style — more effective than abstract requirements.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Leave room for thinking.
+Ask for step‑by‑step reasoning / think‑then‑answer / justification. Complex tasks become noticeably more accurate.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;three-templates-you-can-copy-now&quot;&gt;Three templates you can copy now&lt;/h2&gt;&lt;a href=&quot;#three-templates-you-can-copy-now&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Three templates you can copy now”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3 id=&quot;a-dailyweekly-report-stable-structure&quot;&gt;A. Daily/weekly report (stable structure)&lt;/h3&gt;&lt;a href=&quot;#a-dailyweekly-report-stable-structure&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “A. Daily/weekly report (stable structure)”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;plaintext&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;Role: [your role]. Write for: [audience]. Style: [tone/register].&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;Goal: {business goal / key results}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;Constraints: {word limit / tone / prohibited content}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;Format:&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;- This week’s progress (3 bullets)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;- Risks &amp;#x26; blockers (max 2)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;- Next week’s plan (3 items)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;Example:&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;- [paste one good example]&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;Materials:&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;&amp;#x3C;&amp;#x3C;&amp;#x3C;DATA&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;[paste notes, links, snippets]&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;DATA&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;&gt;&gt;&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;button title=&quot;Copy to clipboard&quot; data-copied=&quot;Copied!&quot; data-code=&quot;&quot;&gt;&gt;&gt;&quot;&gt;&lt;div&gt;&lt;/div&gt;&lt;/button&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;p&gt;Use for project weeklies, sales retros, and product meeting notes.&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;b-code-change-proposal-claude-codefriendly&quot;&gt;B. Code change proposal (Claude Code‑friendly)&lt;/h3&gt;&lt;a href=&quot;#b-code-change-proposal-claude-codefriendly&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “B. Code change proposal (Claude Code‑friendly)”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;plaintext&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;Role: senior engineer proposing an executable refactor plan.&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;Output: Markdown proposal + risk assessment + coarse task list.&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;Must include: expected benefits (perf/maintainability/cost) and alternatives.&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;Guardrail: do not write code yet; ship plan for review first.&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;p&gt;Pairs well with Claude Code: “plan first, then execute” to reduce rework.&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;c-multiagent-collaboration-control-the-chatter&quot;&gt;C. Multi‑agent collaboration (control the chatter)&lt;/h3&gt;&lt;a href=&quot;#c-multiagent-collaboration-control-the-chatter&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “C. Multi‑agent collaboration (control the chatter)”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;plaintext&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;Controller goal: {clear KPI}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;Sub‑roles:&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;- Researcher: collect 5 primary sources + credibility rating.&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;- Planner: 2 executable options within {budget/time}.&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;- Reviewer: score and choose only; do not add tasks.&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;Protocol:&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;- No agent may spawn new sub‑tasks; if over quota, request human approval.&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;- All outputs use the same structured template.&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;p&gt;Fixes “infinite splitting” and agents interrupting each other.&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;3minute-onboarding-path-suggested-order&quot;&gt;3‑minute onboarding path (suggested order)&lt;/h2&gt;&lt;a href=&quot;#3minute-onboarding-path-suggested-order&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3‑minute onboarding path (suggested order)”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ol&gt;
+&lt;li&gt;Read the Overview and write one prompt using the Goal–Audience–Format trio.&lt;/li&gt;
+&lt;li&gt;Do interactive lessons 1–3 to practice clarity, roles, and data separation.&lt;/li&gt;
+&lt;li&gt;Check “Claude 4 Best Practices” and add output formats and examples.&lt;/li&gt;
+&lt;li&gt;Building team workflows? Read the multi‑agent prompting principles and set collaboration rules.&lt;/li&gt;
+&lt;li&gt;Long prompts slow/expensive? Turn on Prompt Caching to cut cost/latency.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;who-benefits&quot;&gt;Who benefits&lt;/h2&gt;&lt;a href=&quot;#who-benefits&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Who benefits”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;Product/ops: requirement breakdowns, retros, PRD‑embedded templates — standardize once, reuse everywhere.&lt;/li&gt;
+&lt;li&gt;Engineering teams: code review, refactor proposals, agent‑workflow governance — steady outputs.&lt;/li&gt;
+&lt;li&gt;Founders: marketing assets, multi‑channel copy, media pitches — unified style at scale.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;takeaway&quot;&gt;Takeaway&lt;/h2&gt;&lt;a href=&quot;#takeaway&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Takeaway”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;This series turns “prompting mysticism” into a handbook. With clear templates, concrete roles, example‑driven guidance, verifiable outputs, and engineering aids (collab rules, caching), it’s immediately usable, reproducible, and scalable.&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;questions-to-put-into-practice&quot;&gt;Questions to put into practice&lt;/h2&gt;&lt;a href=&quot;#questions-to-put-into-practice&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Questions to put into practice”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;Which routine doc can you convert to a structured prompt today?&lt;/li&gt;
+&lt;li&gt;Which step in your team’s flow is the slowest — and would Prompt Caching save time and cost there?&lt;/li&gt;
+&lt;li&gt;For multi‑agent work, which “traffic rule” will you enforce first?&lt;/li&gt;
+&lt;/ul&gt;</content:encoded><category>Anthropic</category><category>Prompt Engineering</category></item><item><title>Using Kiro&apos;s claude-sonnet-4-20250514 Model for Free with Claude Code</title><link>https://www.vibesparking.com/en/blog/ai/claude-code/kiro/2025-08-16-ccr-ki2api-claude-code-to-sonnet4/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/claude-code/kiro/2025-08-16-ccr-ki2api-claude-code-to-sonnet4/</guid><pubDate>Sat, 16 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
 &lt;p&gt;Run &lt;strong&gt;Ki2API&lt;/strong&gt; (OpenAI-compatible gateway) locally with Docker, then use &lt;strong&gt;Claude Code Router (CCR)&lt;/strong&gt; to launch Claude Code, routing to &lt;code dir=&quot;auto&quot;&gt;claude-sonnet-4-20250514&lt;/code&gt;. Claude Code requires almost zero modifications to directly access Kiro’s Sonnet 4 reasoning and coding capabilities.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Claude Code -&gt; Claude Code Router -&gt; Ki2API -&gt; Kiro (claude-sonnet-4-20250514)&lt;/p&gt;
@@ -1813,340 +2029,4 @@ It lives in Claude Code’s status bar, breathes, pouts, and roasts your TODOs. 
 &lt;p&gt;&lt;strong&gt;Work needs efficiency, your mind needs care.&lt;/strong&gt;
 This little pet won’t write code for you, but it brings back a bit of “human warmth” to collaborating with AI. Install it and give it two days. &lt;strong&gt;You might start to enjoy being “seen while coding.”&lt;/strong&gt;
 (As of &lt;strong&gt;2025-08-15&lt;/strong&gt;, the project has about &lt;strong&gt;36⭐&lt;/strong&gt; and is being updated rapidly.)&lt;/p&gt;&lt;!-- **Question**: Do you want a “chatty coach” or a “silent companion”? Share your persona combo in the comments. --&gt;
-</content:encoded><category>Claude Code</category><category>Tamagotchi</category></item><item><title>Station: Unified Management for Claude/Cursor Agents</title><link>https://www.vibesparking.com/en/blog/ai/vibe-coding/station/2025-08-15-station-ship-sub-agents-to-prod/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/vibe-coding/station/2025-08-15-station-ship-sub-agents-to-prod/</guid><pubDate>Fri, 15 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # Station: Unified Management for Claude/Cursor Agents --&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Want a self‑hosted, versionable, packable agent runtime so the “mini‑agents” you build in Claude Code or Cursor can actually go live? Station was built exactly for that.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;&lt;a href=&quot;#introduction&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Introduction”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;The tool called &lt;strong&gt;Station&lt;/strong&gt; has been making the rounds lately. It’s not yet another “application‑level” agent platform. Instead, it’s a &lt;strong&gt;lightweight runtime and packaging/distribution system&lt;/strong&gt; purpose‑built for &lt;strong&gt;deployable sub‑agents&lt;/strong&gt;.
-In one sentence: take the “small but capable agents” you create in Claude Code or Cursor, then package them, ship to production, connect permissions, audit every run, and manage versions cleanly.&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;highlights-at-a-glance-built-for-internal-use&quot;&gt;Highlights at a Glance (Built for Internal Use)&lt;/h2&gt;&lt;a href=&quot;#highlights-at-a-glance-built-for-internal-use&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Highlights at a Glance (Built for Internal Use)”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;Why Station?&lt;/strong&gt; Because internal automation isn’t a normal app: you need secrets, database access, CI/CD, and auditability.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Internal‑task first&lt;/strong&gt;: Sub‑agents can read production databases (with proper controls), monitor infrastructure, drive CI/CD, run security scans, and handle incident response.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Security built‑in&lt;/strong&gt;: Self‑hosted, secret encryption (AES), multi‑environment isolation (dev/staging/prod), and full audit trails.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Lightweight and pluggable&lt;/strong&gt;: A &lt;strong&gt;single ~45MB binary&lt;/strong&gt; with local &lt;strong&gt;SQLite&lt;/strong&gt; out of the box; switch to &lt;strong&gt;PostgreSQL&lt;/strong&gt; in production; natural &lt;strong&gt;GitOps&lt;/strong&gt; (config is versionable).&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;MCP‑native&lt;/strong&gt;: Acts directly as an &lt;strong&gt;MCP runtime&lt;/strong&gt;, reusing your team‑approved MCP tools (filesystem, Slack, AWS, K8s, DB, and more).&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Great DX&lt;/strong&gt;: A &lt;strong&gt;Genkit‑powered browser playground&lt;/strong&gt; plus &lt;code dir=&quot;auto&quot;&gt;stn develop&lt;/code&gt; for visualizing tool calls and execution flows.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;What’s MCP? In short, it’s a &lt;strong&gt;unified protocol for letting LLMs use “controlled tools.”&lt;/strong&gt; Claude Desktop’s official tutorial includes a quickstart and configuration examples.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;how-does-station-work&quot;&gt;How Does Station Work?&lt;/h2&gt;&lt;a href=&quot;#how-does-station-work&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “How Does Station Work?”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;The &lt;strong&gt;core structure&lt;/strong&gt; is simple:
-&lt;strong&gt;One &lt;code dir=&quot;auto&quot;&gt;.prompt&lt;/code&gt; file + a set of MCP tools = a deployable sub‑agent&lt;/strong&gt;.
-Environments are organized as &lt;strong&gt;dev/staging/prod&lt;/strong&gt;. Tool definitions live in &lt;code dir=&quot;auto&quot;&gt;template.json&lt;/code&gt;; environment variables in &lt;code dir=&quot;auto&quot;&gt;variables.yml&lt;/code&gt;. Finally, everything can be &lt;strong&gt;bundled&lt;/strong&gt; and installed elsewhere.&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;installation-and-integration-up-and-running-in-5-minutes&quot;&gt;Installation and Integration (Up and Running in 5 Minutes)&lt;/h2&gt;&lt;a href=&quot;#installation-and-integration-up-and-running-in-5-minutes&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Installation and Integration (Up and Running in 5 Minutes)”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Install &amp;#x26; initialize&lt;/strong&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;curl&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;-fsSL&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;https://raw.githubusercontent.com/cloudshipai/station/main/install.sh&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;|&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;bash&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;stn&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;init&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;   &lt;/span&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# initialize DB and encryption&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;ol start=&quot;2&quot;&gt;
-&lt;li&gt;&lt;strong&gt;Connect to Claude Desktop / Claude Code (MCP)&lt;/strong&gt;
-Add this to your Claude config:&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;json&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;{&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;mcpServers&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: {&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;station&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: {&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;      &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;command&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;stn&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;      &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;args&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: [&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;stdio&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;]&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;    &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;p&gt;Now tell Claude “Create a security‑audit agent,” and it will automatically equip that agent with the necessary tools (e.g., file scan + Slack).&lt;/p&gt;
-&lt;ol start=&quot;3&quot;&gt;
-&lt;li&gt;&lt;strong&gt;One‑click bundle &amp;#x26; install (promote environment to prod)&lt;/strong&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;stn&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;template&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;create&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;prod-bundle&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;--env&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;default&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;--name&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;Prod Bundle&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;--author&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;Team&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;--description&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;Prod env&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;stn&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;template&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;bundle&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;prod-bundle&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;stn&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;template&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;install&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;prod-bundle.tar.gz&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;production&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;stn&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;sync&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;production&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;p&gt;You’ll now have a deployable package containing &lt;strong&gt;multiple sub‑agents + multiple MCP servers&lt;/strong&gt;.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Want &lt;strong&gt;visual debugging&lt;/strong&gt;? Run locally:&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;genkit&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;start&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;--&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;stn&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;develop&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;--env&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;dev&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;p&gt;Test inputs in the browser and watch live traces and logs.&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;recommended-use-cases-copyready-examples-included&quot;&gt;Recommended Use Cases (Copy‑Ready Examples Included)&lt;/h2&gt;&lt;a href=&quot;#recommended-use-cases-copyready-examples-included&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Recommended Use Cases (Copy‑Ready Examples Included)”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h3 id=&quot;1-security--compliance-baselines--slack-alerts&quot;&gt;1) Security &amp;#x26; Compliance Baselines (+ Slack alerts)&lt;/h3&gt;&lt;a href=&quot;#1-security--compliance-baselines--slack-alerts&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1) Security &amp;#x26; Compliance Baselines (+ Slack alerts)”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;Goal: Periodically scan sensitive directories; push high‑risk findings to Slack immediately.&lt;/li&gt;
-&lt;li&gt;How: Create &lt;code dir=&quot;auto&quot;&gt;SecurityScanner.prompt&lt;/code&gt;; attach &lt;strong&gt;filesystem MCP&lt;/strong&gt; + &lt;strong&gt;Slack MCP&lt;/strong&gt;; set execution metadata and step limits in Station.&lt;/li&gt;
-&lt;li&gt;Trigger (inside Claude):
-“Run a security scan on &lt;code dir=&quot;auto&quot;&gt;/etc&lt;/code&gt; and post critical findings to &lt;code dir=&quot;auto&quot;&gt;#sec-alerts&lt;/code&gt;.”&lt;/li&gt;
-&lt;li&gt;Value: Automation + traceability makes audits and retrospectives easier.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h3 id=&quot;2-infra-health-checks--cost-dashboards-aws-cost&quot;&gt;2) Infra Health Checks / Cost Dashboards (AWS cost)&lt;/h3&gt;&lt;a href=&quot;#2-infra-health-checks--cost-dashboards-aws-cost&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2) Infra Health Checks / Cost Dashboards (AWS cost)”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;Goal: Pull the last 7 days of AWS costs, generate a daily report, and send it via Slack.&lt;/li&gt;
-&lt;li&gt;How: Combine &lt;strong&gt;AWS cost tools&lt;/strong&gt; + &lt;strong&gt;Slack&lt;/strong&gt;; output Markdown on a schedule.&lt;/li&gt;
-&lt;li&gt;Value: Turn “AI + cloud cost” into a steady rhythm your team can rely on.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h3 id=&quot;3-cicd-deployment-automation-containersk8s&quot;&gt;3) CI/CD Deployment Automation (containers/K8s)&lt;/h3&gt;&lt;a href=&quot;#3-cicd-deployment-automation-containersk8s&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3) CI/CD Deployment Automation (containers/K8s)”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;Goal: For a small release, run &lt;code dir=&quot;auto&quot;&gt;docker exec&lt;/code&gt; + &lt;code dir=&quot;auto&quot;&gt;kubectl apply&lt;/code&gt;, and write back the change‑request link.&lt;/li&gt;
-&lt;li&gt;How: Combine &lt;strong&gt;Docker MCP&lt;/strong&gt; + &lt;strong&gt;Kubernetes MCP&lt;/strong&gt;; deployments become one‑sentence operations.&lt;/li&gt;
-&lt;li&gt;Value: Humans speak intention; agents do the grunt work.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h3 id=&quot;4-readonly-prod-db-checks--slow-sql-sampling&quot;&gt;4) Read‑only Prod DB Checks / Slow SQL Sampling&lt;/h3&gt;&lt;a href=&quot;#4-readonly-prod-db-checks--slow-sql-sampling&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “4) Read‑only Prod DB Checks / Slow SQL Sampling”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;Goal: Connect to production (read‑only credentials), sample slow queries and index hits.&lt;/li&gt;
-&lt;li&gt;How: Combine &lt;strong&gt;DB MCP&lt;/strong&gt; with custom analysis scripts.&lt;/li&gt;
-&lt;li&gt;Value: Inspect issues close to the source to cut down back‑and‑forth firefighting.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h3 id=&quot;5-codereview-bot-with-internal-rules&quot;&gt;5) Code‑Review Bot (with internal rules)&lt;/h3&gt;&lt;a href=&quot;#5-codereview-bot-with-internal-rules&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “5) Code‑Review Bot (with internal rules)”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;Goal: Produce review suggestions aligned with team rules (security/performance/style).&lt;/li&gt;
-&lt;li&gt;How: Define scoring dimensions and output format in &lt;code dir=&quot;auto&quot;&gt;.prompt&lt;/code&gt;; attach &lt;strong&gt;filesystem MCP&lt;/strong&gt; to read code; emit structured suggestions.&lt;/li&gt;
-&lt;li&gt;Value: Productize “coding standards” for consistent enforcement.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;how-it-differs-from-appstyle-agent-platforms&quot;&gt;How It Differs from App‑Style Agent Platforms&lt;/h2&gt;&lt;a href=&quot;#how-it-differs-from-appstyle-agent-platforms&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “How It Differs from App‑Style Agent Platforms”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;Station targets tasks that &lt;strong&gt;“enter your intranet and require permissions and auditing.”&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;Emphasis on &lt;strong&gt;self‑hosting and data sovereignty&lt;/strong&gt;.&lt;/li&gt;
-&lt;li&gt;The &lt;strong&gt;single‑binary + SQLite&lt;/strong&gt; lightweight form makes it feel like an ops tool, not a platform.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;You can also treat Station as an &lt;strong&gt;MCP “hub.”&lt;/strong&gt; It can consume other MCP servers, and also expose MCP tools to others for “list agents / create agents / invoke agents.”&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;rollout-checklist-team-adoption&quot;&gt;Rollout Checklist (Team Adoption)&lt;/h2&gt;&lt;a href=&quot;#rollout-checklist-team-adoption&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Rollout Checklist (Team Adoption)”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Secret management&lt;/strong&gt;: Store keys and connection strings in Station’s encrypted vault, isolated per environment.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Least privilege&lt;/strong&gt;: Equip each sub‑agent with only the MCP tools it needs — less is more.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;GitOps&lt;/strong&gt;: Put &lt;code dir=&quot;auto&quot;&gt;template.json&lt;/code&gt;, &lt;code dir=&quot;auto&quot;&gt;.prompt&lt;/code&gt;, and &lt;code dir=&quot;auto&quot;&gt;variables.yml&lt;/code&gt; in git; land via MR and then cut a release.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Audit trails&lt;/strong&gt;: Every execution has a trace; incidents are fully reconstructable.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;&lt;a href=&quot;#conclusion&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Conclusion”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;Station turns those “small, capable agents” from ideas discussed at your desktop into &lt;strong&gt;deployable, auditable, and replicable&lt;/strong&gt; internal automation. No need to wrangle another platform — write a good &lt;code dir=&quot;auto&quot;&gt;.prompt&lt;/code&gt;, attach the right tools, and &lt;strong&gt;ship the bundle to production&lt;/strong&gt;.
-That’s what I like most about it: &lt;strong&gt;simple, controlled, and easy to propagate&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;—&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;What’s the very first sub‑agent your team should build?&lt;/strong&gt; Share in the comments, or pass this along to your teammates and design your own “internal agent factory.”&lt;/p&gt;&lt;!-- ---
-
-## 3 Multilingual Title Options &amp; Slugs
-
-1. **Ship Your Claude Sub‑Agents to Production: A Hands‑On Guide to Station**
-   EN: Ship Your Claude Sub-Agents to Prod: A Hands-On Guide to Station
-   繁體: 把 Claude 小代理送進生產：Station 自託管子代理運行時指南
-   日本語: Claude の小さなエージェントを本番へ：Station 実践ガイド
-   Fr: Mettez vos sous-agents Claude en prod : guide pratique Station
-   Es: Lleva tus sub-agentes de Claude a producción: guía práctica de Station
-   Pt: Leve os sub-agentes do Claude para produção: guia prático do Station
-   **slug**: station-ship-sub-agents-to-prod
-
-2. **Lightweight, Auditable, Packable: Build an Internal AI Automation Factory with Station**
-   EN: Lightweight, Auditable, Packable: Build an Internal AI Automation Factory with Station
-   繁體: 輕量、可稽核、可打包：用 Station 搭建內部 AI 自動化工廠
-   日本語: 軽量・監査可能・パッケージ化：Station で社内AI自動化工場を作る
-   Fr: Léger, traçable, empaquetable : votre usine d’automatisation interne avec Station
-   Es: Ligero, auditable y empaquetable: tu fábrica de automatización interna con Station
-   Pt: Leve, auditável e empacotável: sua fábrica interna de automação com Station
-   **slug**: station-internal-ai-automation-factory
-
-3. **Not a Platform — a Runtime: Station Powers Deployable Sub‑Agents with MCP**
-   EN: Not a Platform—A Runtime: Station Powers Deployable Sub-Agents with MCP
-   繁體: 不是平台，而是運行時：Station 以 MCP 驅動可部署子代理
-   日本語: プラットフォームではなくランタイム：Station が MCP で配備可能なサブエージェントを実現
-   Fr: Pas une plateforme, un runtime : Station active des sous-agents déployables avec MCP
-   Es: No es plataforma, es runtime: Station impulsa sub-agentes desplegables con MCP
-   Pt: Não é plataforma, é runtime: Station viabiliza sub-agentes com MCP
-   **slug**: station-runtime-not-platform
-
----
-
-## Cover &amp; Section Art (Illustration style | 2:1 | English‑only captions)
-
-**Cover prompt**
-“An illustration of a compact control room labeled ‘Station’ orchestrating many small ‘sub-agents’ as tool icons (file, database, Kubernetes, Slack) on conveyor belts; clean minimal lines, modern pastel palette, wide 2:1 composition; no text on image.”
-
-**Section art prompt (“Internal Automation Factory”)**
-“An illustration of a developer handing a `.prompt` file to a packaging robot that seals a ‘bundle’ crate, with arrows to ‘dev’, ‘staging’, ‘prod’ bays; modern pastel, minimal style, 2:1 aspect ratio, text-free.”
-
----
-
-## 3 Social/Comment Snippets
-
-1. “We actually shipped mini‑agents to prod! Station is self‑hosted + bundle distribution, with permissions, auditing, and multi‑env baked in. Our team automation just took off 🚀”
-2. “Not another platform — a runtime you can deploy. `.prompt` + MCP tools = sub‑agent. Package it and carry it to production. Love it 😎”
-3. “Security scans, CI/CD, cost reports… one‑sentence triggers. Agents leave full audit trails when the job is done. This is the right way to do AI for engineering teams ✅”
-
----
-
-Want me to write a **hands‑on guide to building a team template with Station from scratch** (including sample `.prompt` and `template.json`)? If so, I can start now.
-
-[1]: https://github.com/cloudshipai/station &quot;GitHub - cloudshipai/station&quot;
-[2]: https://modelcontextprotocol.info/docs/quickstart/quickstart/ &quot;Quickstart – Model Context Protocol (MCP)&quot; --&gt;</content:encoded><category>Station</category><category>Claude Code</category><category>Cursor</category><category>Vibe Coding</category></item><item><title>Claude Code on a Budget</title><link>https://www.vibesparking.com/en/blog/ai/claude-code/2025-08-14-claude-code-save-money-right-model-lean-context-permissions/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/claude-code/2025-08-14-claude-code-save-money-right-model-lean-context-permissions/</guid><pubDate>Thu, 14 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # Claude Code on a Budget --&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Trim conversations, pick the right model, lock down permissions — and your Claude Code bill can drop by half.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;&lt;a href=&quot;#introduction&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Introduction”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;Many teams use Claude Code and feel “budget pain” every month.
-It’s not that you typed too much — it’s the &lt;strong&gt;invisible token sink&lt;/strong&gt; eating the bill.
-The good news: you can &lt;strong&gt;control it&lt;/strong&gt;, and the effect is immediate.&lt;/p&gt;
-&lt;p&gt;This guide breaks cost‑saving into three tiers: basic, intermediate, advanced.
-Follow them and you’ll save the bulk of your spend.&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;i-where-does-the-money-go-4-token-sinks&quot;&gt;I. Where Does the Money Go? 4 “Token Sinks”&lt;/h2&gt;&lt;a href=&quot;#i-where-does-the-money-go-4-token-sinks&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “I. Where Does the Money Go? 4 “Token Sinks””&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;1) Invisible context from system and memory&lt;/strong&gt;
-Claude Code automatically loads the system prompt and layered &lt;code dir=&quot;auto&quot;&gt;CLAUDE.md&lt;/code&gt; memory (org/project/user). This content &lt;strong&gt;enters context on every turn&lt;/strong&gt;, naturally consuming tokens.**&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;2) Big price gaps across models&lt;/strong&gt;
-Official pricing: &lt;strong&gt;Sonnet 4 ≈ $3/$15 per million input/output tokens; Opus 4/4.1 ≈ $15/$75&lt;/strong&gt;. For the same conversation, switching models means &lt;strong&gt;~5× unit price&lt;/strong&gt;.**&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;3) Context gets fatter as you chat&lt;/strong&gt;
-Claude Code supports very large contexts (Sonnet 4 up to 1M tokens in testing). &lt;strong&gt;Longer chats trigger auto‑compression and repeated “setup”&lt;/strong&gt;, making tokens fly.**&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;4) Background and noise spending&lt;/strong&gt;
-Beyond visible replies, &lt;strong&gt;&lt;code dir=&quot;auto&quot;&gt;/cost&lt;/code&gt; queries, auto‑summaries, Haiku prompts&lt;/strong&gt;, etc., also burn small amounts of tokens. Pennies add up.**&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Summary: &lt;strong&gt;It’s not that you ask too much — it’s that “everything gets hauled on stage every time.”&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;ii-three-tiers-of-savings-use-now&quot;&gt;II. Three Tiers of Savings (Use Now)&lt;/h2&gt;&lt;a href=&quot;#ii-three-tiers-of-savings-use-now&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “II. Three Tiers of Savings (Use Now)”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h3 id=&quot;a-basics-4-moves-everyone-should-use&quot;&gt;A. Basics: 4 Moves Everyone Should Use&lt;/h3&gt;&lt;a href=&quot;#a-basics-4-moves-everyone-should-use&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “A. Basics: 4 Moves Everyone Should Use”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Manual slimming beats passive compression&lt;/strong&gt;
-Use &lt;code dir=&quot;auto&quot;&gt;/compact&lt;/code&gt; proactively, and add a focus directive:&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;plaintext&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;/compact Focus on code diffs and failing tests only&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;p&gt;Auto‑compression triggers near &lt;strong&gt;95% capacity&lt;/strong&gt; — waiting is too late.**&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;One task per thread; clear when done&lt;/strong&gt;
-Start a new session for each small task; once finished, run &lt;code dir=&quot;auto&quot;&gt;/clear&lt;/code&gt; to avoid a ballooning history.**&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Pick the right default model&lt;/strong&gt;
-Use &lt;strong&gt;Sonnet 4&lt;/strong&gt; for day‑to‑day development. When you truly hit “hard/long/deep reasoning,” switch to &lt;strong&gt;Opus&lt;/strong&gt; via &lt;code dir=&quot;auto&quot;&gt;/model&lt;/code&gt;. You can also use &lt;strong&gt;“Opus for planning + Sonnet for execution”&lt;/strong&gt; — stronger planning, cheaper execution.**&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Check the bill anytime&lt;/strong&gt;
-In any session, run &lt;code dir=&quot;auto&quot;&gt;/cost&lt;/code&gt; to see current spend; teams can check history in the console and &lt;strong&gt;set workspace spend limits&lt;/strong&gt;.**&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;Figure idea (illustration 2:1 | English copy)&lt;/strong&gt;
-“A developer squeezing a giant chat bubble into a slim pill, while a tiny receipt shows shrinking token numbers.”&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h3 id=&quot;b-intermediate-tighten-the-flow-shrink-the-bill&quot;&gt;B. Intermediate: Tighten the Flow, Shrink the Bill&lt;/h3&gt;&lt;a href=&quot;#b-intermediate-tighten-the-flow-shrink-the-bill&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “B. Intermediate: Tighten the Flow, Shrink the Bill”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Docs‑first to prevent context blowups&lt;/strong&gt;
-First have Claude produce a “TODO list / brief plan,” confirm, then execute.
-Iterate in &lt;strong&gt;Plan Mode (planning mode)&lt;/strong&gt;; confirm and switch back to execution.**&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Put “long‑term memory” into CLAUDE.md&lt;/strong&gt;
-Put standards, common commands, and project conventions into &lt;code dir=&quot;auto&quot;&gt;CLAUDE.md&lt;/code&gt;; next time it applies automatically. Use &lt;code dir=&quot;auto&quot;&gt;/memory&lt;/code&gt; to edit quickly in a chat when needed. &lt;strong&gt;Memory loads by layer automatically&lt;/strong&gt;, reducing the tokens you spend “repeating yourself.”**&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Small commits, easy to roll back&lt;/strong&gt;
-Ask Claude to produce a commit message after each small chunk. If something goes wrong, roll back — &lt;strong&gt;fewer wrong turns means fewer tokens&lt;/strong&gt;. (Engineering practice)&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Team rate‑limits &amp;#x26; flight instruments&lt;/strong&gt;
-Set sane &lt;strong&gt;TPM (tokens per minute)&lt;/strong&gt; based on org size to avoid costly concurrency “meltdowns.”**&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h3 id=&quot;c-advanced-hardcore-cost-downs-biggest-gains&quot;&gt;C. Advanced: Hard‑Core Cost Downs (Biggest Gains)&lt;/h3&gt;&lt;a href=&quot;#c-advanced-hardcore-cost-downs-biggest-gains&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “C. Advanced: Hard‑Core Cost Downs (Biggest Gains)”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;1) Permission allow/deny lists to stop “random file reads”&lt;/strong&gt;
-Use &lt;code dir=&quot;auto&quot;&gt;/permissions&lt;/code&gt; + &lt;code dir=&quot;auto&quot;&gt;.claude/settings.json&lt;/code&gt; to &lt;strong&gt;forbid logs, binaries, and huge directories&lt;/strong&gt;, and allow only necessary paths. Rules support &lt;strong&gt;gitignore&lt;/strong&gt; patterns.**&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;json&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;{&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;defaultMode&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;plan&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;readRules&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: [&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;src/**&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;docs/**&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;!**/*.log&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;!**/*.bin&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;!node_modules/**&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;!dist/**&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;!coverage/**&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;],&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;editRules&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: [&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;src/**&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;, &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;docs/**&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;]&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Note: &lt;code dir=&quot;auto&quot;&gt;plan&lt;/code&gt; mode analyzes without changing files; read/write rules &lt;strong&gt;shrink the file surface&lt;/strong&gt; — less scanning = fewer tokens.**&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;2) Be precise to “lines,” not whole files&lt;/strong&gt;
-Don’t paste entire blocks. Provide &lt;strong&gt;file path + target line ranges + 5 key bullets&lt;/strong&gt; to minimize irrelevant scanning. (Engineering practice)&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;3) Model split: let Opus handle only the “expensive parts”&lt;/strong&gt;
-In &lt;code dir=&quot;auto&quot;&gt;/model&lt;/code&gt;, use &lt;strong&gt;Opus&lt;/strong&gt; for &lt;strong&gt;plans/architecture/cross‑module dependency analysis&lt;/strong&gt;; hand off code generation and fixes to &lt;strong&gt;Sonnet&lt;/strong&gt;. This is the recommended direction from official guidance.**&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;4) (Team/Gateway) Use Prompt Caching&lt;/strong&gt;
-For API or enterprise gateways, &lt;strong&gt;prompt caching&lt;/strong&gt; saves visibly on repeated large prefixes. Official pricing offers cheaper write/hit rates for cached prompts.**&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;iii-readytouse-costsaving-checklist&quot;&gt;III. Ready‑to‑Use Cost‑Saving Checklist&lt;/h2&gt;&lt;a href=&quot;#iii-readytouse-costsaving-checklist&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “III. Ready‑to‑Use Cost‑Saving Checklist”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Default to Sonnet; switch to Opus only when needed&lt;/strong&gt;: flip with &lt;code dir=&quot;auto&quot;&gt;/model&lt;/code&gt;.**&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Keep Plan Mode on by default&lt;/strong&gt;: plan first, execute after confirmation.**&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Start every session by slimming&lt;/strong&gt;: &lt;code dir=&quot;auto&quot;&gt;/compact Focus on code diffs and test failures&lt;/code&gt;.**&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Close the loop with &lt;code dir=&quot;auto&quot;&gt;/clear&lt;/code&gt;&lt;/strong&gt;: prevent ever‑growing history.**&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Strict permissions&lt;/strong&gt;: use &lt;code dir=&quot;auto&quot;&gt;/permissions&lt;/code&gt; and &lt;code dir=&quot;auto&quot;&gt;readRules/editRules&lt;/code&gt; to restrict directories and types.**&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Audit anytime&lt;/strong&gt;: &lt;code dir=&quot;auto&quot;&gt;/cost&lt;/code&gt; + console “workspace spend limit.”**&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Write memory into CLAUDE.md&lt;/strong&gt;: reduce repeated priming and context stuffing.**&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;iv-real-savings-why-these-work&quot;&gt;IV. Real Savings: Why These Work&lt;/h2&gt;&lt;a href=&quot;#iv-real-savings-why-these-work&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “IV. Real Savings: Why These Work”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Unit price spread&lt;/strong&gt;: Opus costs about &lt;strong&gt;5×&lt;/strong&gt; Sonnet. Concentrate “expensive thinking” in planning; use Sonnet for execution — total cost &lt;strong&gt;drops significantly&lt;/strong&gt;.**&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Size costs&lt;/strong&gt;: auto‑loaded memory + long threads fatten context; proactive &lt;code dir=&quot;auto&quot;&gt;/compact&lt;/code&gt; and &lt;code dir=&quot;auto&quot;&gt;/clear&lt;/code&gt; &lt;strong&gt;shrink transfer volume directly&lt;/strong&gt;.**&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Less irrelevant I/O&lt;/strong&gt;: permissions and rules act as a &lt;strong&gt;cost firewall&lt;/strong&gt;, blocking large, low‑value dirs/files.**&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Background overhead under control&lt;/strong&gt;: knowing what “quietly spends” helps you avoid pointless refreshes and queries.**&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;&lt;a href=&quot;#conclusion&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Conclusion”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;Claude Code’s power comes from “bringing everything along.”
-The &lt;strong&gt;key to saving&lt;/strong&gt; is to &lt;strong&gt;bring only what’s necessary&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;Apply this checklist to your project today:
-start with &lt;code dir=&quot;auto&quot;&gt;/model&lt;/code&gt;, &lt;code dir=&quot;auto&quot;&gt;/compact&lt;/code&gt;, &lt;code dir=&quot;auto&quot;&gt;/clear&lt;/code&gt;,
-then add &lt;code dir=&quot;auto&quot;&gt;CLAUDE.md&lt;/code&gt; and permission rules.
-By month’s end, your bill should surprise you — in a good way.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;What do you think? What other money pits have you hit? Share in the comments.&lt;/strong&gt;&lt;/p&gt;&lt;!-- ---
-
-## Cover and Section Figures (illustrative | 2:1 | English copy, no Chinese)
-
-**Cover Prompt**
-“An illustration of a developer catching leaking tokens with a mesh filter labeled ‘/compact, /clear, /model’, a price tag drops from ‘$75’ to ‘$15’, clean lines, modern pastel, wide 2:1, text-free.”
-
-**Key Figure 1 (Basics)**
-“Minimal blueprint of a terminal showing /compact and /clear commands slimming a giant chat history into a thin strip, receipt icon shows fewer tokens, 2:1, pastel, text-free.”
-
-**Key Figure 2 (Intermediate)**
-“Kanban-style plan mode board feeding into small git commits on a conveyor belt, a green TPM gauge stays stable, 2:1, pastel, text-free.”
-
-**Key Figure 3 (Advanced)**
-“Permission rules shield blocking folders logs/, node_modules/, dist/, while a bright path to src/ remains open, 2:1, pastel, text-free.”
-
----
-
-## Multilingual Titles and Slugs (3 sets)
-
-1. **中文**：Claude Code 省钱指南：用对模型、瘦身上下文、权限堵洞
-   **English**: Claude Code on a Budget: Right Model, Lean Context, Locked-Down Permissions
-   **繁體**：Claude Code 省錢指南：用對模型、瘦身上下文、權限堵洞
-   **日本語**：Claude Code節約術：モデル最適化・文脈スリム化・権限ロック
-   **Français** : Claude Code à petit budget : bon modèle, contexte allégé, permissions verrouillées
-   **Español**: Claude Code con presupuesto: modelo correcto, contexto ligero y permisos seguros
-   **Português**: Claude Code econômico: modelo certo, contexto enxuto e permissões rígidas
-   **slug**: `claude-code-save-money-right-model-lean-context-permissions`
-
-2. **中文**：别再烧钱了！3 层实战让 Claude Code 账单减半
-   **English**: Stop the Burn! A 3-Layer Playbook to Halve Your Claude Code Bill
-   **繁體**：別再燒錢！三層實戰讓 Claude Code 帳單砍半
-   **日本語**：無駄遣い終了！3層プレイブックで請求を半減
-   **Français** : Fin de l’hémorragie : un guide en 3 niveaux pour diviser la facture
-   **Español**: Basta de derroche: 3 capas para partir la factura a la mitad
-   **Português**: Chega de queimar verba: 3 camadas para cortar a conta pela metade
-   **slug**: `claude-code-3-layer-cost-cut-playbook`
-
-3. **中文**：从 5x 单价到 0 噪音：Claude Code 最强降本术
-   **English**: From 5× Price Gap to Zero Noise: Ultimate Cost Cuts for Claude Code
-   **繁體**：從 5x 單價到零噪音：Claude Code 終極降本術
-   **日本語**：5倍単価の壁を越えろ：Claude Code究極のコスト削減
-   **Français** : De l’écart 5× au zéro bruit : l’optimisation ultime des coûts
-   **Español**: Del precio 5× al ruido cero: el recorte definitivo
-   **Português**: Do preço 5× ao ruído zero: o corte definitivo de custos
-   **slug**: `claude-code-ultimate-cost-cuts`
-
----
-
-## Community Comments (3 lines, ready to post)
-
-1. **“I thought I was asking too much — turns out the context was too fat… Enable `/compact`, `/clear`, and `/permissions` per this guide and the bill drops. Bliss!”**
-2. **“Opus does the thinking, Sonnet does the doing — this combo saved our budget. First month under target 🎯.”**
-3. **“Cut logs and node_modules outright — Claude stops peeking everywhere. Faster and cheaper — win‑win.”**
-
----
-
-Want me to adapt the **config templates** to your repo layout? Or ship a **one‑shot init script** (includes `CLAUDE.md`, `settings.json`, common `/commands`)? I can also expand this into a full illustrated doc.
-
-[1]: https://docs.anthropic.com/en/docs/claude-code/memory &quot;Manage Claude&apos;s memory - Anthropic&quot;
-[2]: https://docs.anthropic.com/en/docs/about-claude/pricing?utm_source=chatgpt.com &quot;Pricing&quot;
-[3]: https://www.anthropic.com/news/claude-4?utm_source=chatgpt.com &quot;Introducing Claude 4&quot;
-[4]: https://docs.anthropic.com/en/docs/build-with-claude/context-windows?utm_source=chatgpt.com &quot;Context windows&quot;
-[5]: https://docs.anthropic.com/en/docs/claude-code/costs &quot;Manage costs effectively - Anthropic&quot;
---&gt;</content:encoded><category>Claude Code</category><category>Cursor</category></item></channel></rss>
+</content:encoded><category>Claude Code</category><category>Tamagotchi</category></item></channel></rss>
