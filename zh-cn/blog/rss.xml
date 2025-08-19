@@ -173,7 +173,389 @@ Felix 的表述很直接：&lt;strong&gt;“最好的人不是和 AI 竞争，�
 [9]: https://x.com/felixhhaas/status/1955691587830522335?utm_source=chatgpt.com &quot;Felix Haas on X: \&quot;Last week I wrote: “73% of designers will be ...&quot;
 [10]: https://docs.lovable.dev/tips-tricks/from-idea-to-app?utm_source=chatgpt.com &quot;From Idea to Working App&quot;
 [11]: https://lovable.dev/?utm_source=chatgpt.com &quot;Lovable&quot;
-[12]: https://docs.lovable.dev/?utm_source=chatgpt.com &quot;Lovable Documentation: Welcome&quot; --&gt;</content:encoded><category>AI Era</category><category>Designer</category><category>Lovable</category></item><item><title>LandingAI 开发一个「公司财报审计智能体」——从抓取、抽取到核验，全自动跑通</title><link>https://www.vibesparking.com/zh-cn/blog/ai/landing-ai/2025-08-19-audit-agent-pdf-sec-crosscheck/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/landing-ai/2025-08-19-audit-agent-pdf-sec-crosscheck/</guid><pubDate>Tue, 19 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # LandingAI 开发一个「公司财报审计智能体」——从抓取、抽取到核验，全自动跑通 --&gt;
+[12]: https://docs.lovable.dev/?utm_source=chatgpt.com &quot;Lovable Documentation: Welcome&quot; --&gt;</content:encoded><category>AI Era</category><category>Designer</category><category>Lovable</category></item><item><title>让团队管理适配 AI 时代：把“个人放大器”装进团队</title><link>https://www.vibesparking.com/zh-cn/blog/ai/management/2025-08-19-ai-as-personal-amplifier-management/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/management/2025-08-19-ai-as-personal-amplifier-management/</guid><pubDate>Tue, 19 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # 让团队管理适配 AI 时代：把“个人放大器”装进团队 --&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;AI 是个人放大器&lt;/strong&gt;；先用 AI 养活一个业务尖兵；别迷信大厂履历；谨慎 KPI/OKR 崇拜；&lt;strong&gt;修己安人&lt;/strong&gt; 的管理观；&lt;strong&gt;没有弯道超车&lt;/strong&gt;。
+这篇就把这些理念，落成可执行的团队管理打法。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;引言&quot;&gt;引言&lt;/h2&gt;&lt;a href=&quot;#引言&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “引言”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;AI 不是多一个工具，而是&lt;strong&gt;把个人战斗力乘法放大&lt;/strong&gt;。能用好的人，1 人顶 10 人；不会用的人，还意识不到差距在扩大。实证研究已给出答案：&lt;strong&gt;写作类工作效率显著提升&lt;/strong&gt;，客服坐席&lt;strong&gt;平均提效约 14%&lt;/strong&gt;，而且低经验员工受益更大。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;这意味着&lt;/strong&gt;：管理的重心要从“管流程、堆人头”，转向“&lt;strong&gt;管杠杆、提配速&lt;/strong&gt;”。&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;观点-8-条硬改法则&quot;&gt;观点（ 8 条硬改法则）&lt;/h2&gt;&lt;a href=&quot;#观点-8-条硬改法则&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “观点（ 8 条硬改法则）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3 id=&quot;1把ai-放大器变成组织默认配置&quot;&gt;1）把“AI 放大器”变成组织默认配置&lt;/h3&gt;&lt;a href=&quot;#1把ai-放大器变成组织默认配置&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1）把“AI 放大器”变成组织默认配置”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;给出明确目标：&lt;strong&gt;90% 的岗位日常动作都要有 AI 版本&lt;/strong&gt;。从 SOP、日报、周会纪要，到代码评审、需求拆分，都留出 &lt;em&gt;with-AI&lt;/em&gt; 的做法。
+理由很简单：McKinsey 估算，&lt;strong&gt;生成式 AI 每年可释放 2.6–4.4 万亿美元价值&lt;/strong&gt;，而且能持续贡献劳动生产率增长。&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;2先造一个ai-头雁再复制&quot;&gt;2）先造一个“AI 头雁”，再复制&lt;/h3&gt;&lt;a href=&quot;#2先造一个ai-头雁再复制&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2）先造一个“AI 头雁”，再复制”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;别一上来全员培训，&lt;strong&gt;先造 1–3 个能用 AI 养活业务的尖兵&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;一条增长线：线索清洗、私信自动化、落地页 AB。&lt;/li&gt;
+&lt;li&gt;一条交付线：代码生成+测试、文档自动化、客户答复草稿。
+用“&lt;strong&gt;示范+跟飞&lt;/strong&gt;”复制到第二批人。真实项目最能对齐预期，也最能带动文化。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;3绩效从产出量改为ai-杠杆率&quot;&gt;3）绩效从“产出量”改为“&lt;strong&gt;AI 杠杆率&lt;/strong&gt;”&lt;/h3&gt;&lt;a href=&quot;#3绩效从产出量改为ai-杠杆率&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3）绩效从“产出量”改为“AI 杠杆率””&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;设三类指标：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;效率&lt;/strong&gt;：同类任务 &lt;em&gt;with-AI&lt;/em&gt; 的周期缩短比。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;质量&lt;/strong&gt;：缺陷率/客户满意度是否因 AI 改善（客服坐席研究显示满意度与留任也更好）。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;复用&lt;/strong&gt;：可复用的提示词、工作流、模板数量。
+别只盯 KPI/OKR 数字墙。HBR 指出，&lt;strong&gt;指标与战略脱节会反噬执行&lt;/strong&gt;，OKR 常见误用是把“任务当结果”。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;4招聘务实不迷信大厂履历优先看ai-可迁移能力&quot;&gt;4）招聘务实：&lt;strong&gt;不迷信大厂履历，优先看“AI 可迁移能力”&lt;/strong&gt;&lt;/h3&gt;&lt;a href=&quot;#4招聘务实不迷信大厂履历优先看ai-可迁移能力&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “4）招聘务实：不迷信大厂履历，优先看“AI 可迁移能力””&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;看四件事：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;是否能把&lt;strong&gt;业务问题→数据/工具→可执行提示词&lt;/strong&gt;；&lt;/li&gt;
+&lt;li&gt;是否能&lt;strong&gt;把个人工作流产品化&lt;/strong&gt;（脚本、宏、代理）；&lt;/li&gt;
+&lt;li&gt;能否&lt;strong&gt;教会他人&lt;/strong&gt;（写清 SOP/模板）；&lt;/li&gt;
+&lt;li&gt;对安全合规有基本敬畏（数据分级、红线意识）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;5组织结构小步快跑以战养训&quot;&gt;5）组织结构“小步快跑、以战养训”&lt;/h3&gt;&lt;a href=&quot;#5组织结构小步快跑以战养训&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “5）组织结构“小步快跑、以战养训””&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;别急着扩编。用“&lt;strong&gt;小队 + 工具链&lt;/strong&gt;”结构：PM/工程/数据/运营 4–6 人为单位，绑定同一套&lt;strong&gt;提示词库、知识库、自动化脚本&lt;/strong&gt;。
+持续把&lt;strong&gt;人-机协作&lt;/strong&gt;沉淀为资产，而不是堆 Chat 截图。&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;6流程换挡从周报月报转向可回放的工作流与实时度量&quot;&gt;6）流程换挡：从“周报/月报”转向“&lt;strong&gt;可回放的工作流与实时度量&lt;/strong&gt;”&lt;/h3&gt;&lt;a href=&quot;#6流程换挡从周报月报转向可回放的工作流与实时度量&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “6）流程换挡：从“周报/月报”转向“可回放的工作流与实时度量””&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;报告不是目的，&lt;strong&gt;可复现才是&lt;/strong&gt;。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;把典型工作流录成 &lt;em&gt;agent run + 提示词 + 数据样例&lt;/em&gt;；&lt;/li&gt;
+&lt;li&gt;用看板显示“人均 AI 调用次数、节省工时、二次复用率”。
+当&lt;strong&gt;享受过程的可复现性&lt;/strong&gt;变强，结果自然跟上；只盯结果，反而低效。（研究与行业报告都提示：&lt;strong&gt;当 AI 深入流程，组织价值与采用率同步上升&lt;/strong&gt;。）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;7文化内核修己安人把焦虑变训练&quot;&gt;7）文化内核：&lt;strong&gt;修己安人&lt;/strong&gt;，把焦虑变训练&lt;/h3&gt;&lt;a href=&quot;#7文化内核修己安人把焦虑变训练&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “7）文化内核：修己安人，把焦虑变训练”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;AI 不是裁人神器，而是&lt;strong&gt;补强人类&lt;/strong&gt;。斯坦福学者观点很明确：&lt;strong&gt;用 AI 取代人会输，用 AI 增强人会赢&lt;/strong&gt;。
+管理动作：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;给“犯错预算”和“学习预算”；&lt;/li&gt;
+&lt;li&gt;默认“结对提示词编写”，让新人靠 AI &lt;strong&gt;缩短上手曲线&lt;/strong&gt;（实证显示新手受益更大）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;8别迷信弯道超车要迷信持续复利&quot;&gt;8）别迷信“弯道超车”，要迷信“&lt;strong&gt;持续复利&lt;/strong&gt;”&lt;/h3&gt;&lt;a href=&quot;#8别迷信弯道超车要迷信持续复利&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “8）别迷信“弯道超车”，要迷信“持续复利””&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;没有捷径，只有复利曲线&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;每周沉淀 1 个可复用工作流；&lt;/li&gt;
+&lt;li&gt;每月复盘“节省了哪些人时，质量有没有掉”；&lt;/li&gt;
+&lt;li&gt;每季清理一次技术债与数据债。
+AI 投入像健身，&lt;strong&gt;重在持续&lt;/strong&gt;。全球数据也在印证：&lt;strong&gt;企业采用率正快速上升&lt;/strong&gt;，不跟上就真掉队。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;正文落地手册6-个-01-改造清单&quot;&gt;正文（落地手册：6 个 0–1 改造清单）&lt;/h2&gt;&lt;a href=&quot;#正文落地手册6-个-01-改造清单&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “正文（落地手册：6 个 0–1 改造清单）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3 id=&quot;a-人三层能力模型&quot;&gt;A. 人：三层能力模型&lt;/h3&gt;&lt;a href=&quot;#a-人三层能力模型&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “A. 人：三层能力模型”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;底座&lt;/strong&gt;：AI 基操（检索、重写、结构化、评审）。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;中层&lt;/strong&gt;：&lt;strong&gt;任务链编排&lt;/strong&gt;（多轮提示词、工具调用、RAG/知识库）。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;上层&lt;/strong&gt;：&lt;strong&gt;业务代理化&lt;/strong&gt;（自动拉数据、自动生成/执行、自动复盘）。
+配套考核：&lt;strong&gt;从“能用”到“能教”&lt;/strong&gt;，晋升看“带动多少人变强”。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;b-事把高频任务清单化模板化自动化&quot;&gt;B. 事：把高频任务“清单化→模板化→自动化”&lt;/h3&gt;&lt;a href=&quot;#b-事把高频任务清单化模板化自动化&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “B. 事：把高频任务“清单化→模板化→自动化””&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;例：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;售前：询盘分类→自动回信草稿→CRM 入库→下次跟进提醒。&lt;/li&gt;
+&lt;li&gt;研发：&lt;strong&gt;需求→用例→代码→测试→部署&lt;/strong&gt; 一条龙脚手架。&lt;/li&gt;
+&lt;li&gt;客服：工单相似度匹配→答案草稿→二审→FAQ 回流知识库。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;c-工具三层栈&quot;&gt;C. 工具：三层栈&lt;/h3&gt;&lt;a href=&quot;#c-工具三层栈&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “C. 工具：三层栈”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;协作&lt;/strong&gt;：文档/知识库/看板。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;智能&lt;/strong&gt;：对话式编排（工作流/代理）、函数调用、RAG。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;监控&lt;/strong&gt;：成本、质量、合规、漂移告警。
+要求“&lt;strong&gt;一切输出皆可复用&lt;/strong&gt;”。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;d-数据治理先行&quot;&gt;D. 数据：治理先行&lt;/h3&gt;&lt;a href=&quot;#d-数据治理先行&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “D. 数据：治理先行”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;给数据打四个标：&lt;strong&gt;来源、敏感级、可共享范围、保留期&lt;/strong&gt;。
+训练/对话用 &lt;strong&gt;脱敏样本&lt;/strong&gt;，对外生成物都走 &lt;strong&gt;人审+水印&lt;/strong&gt;。&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;e-绩效以杠杆学习速度定义优秀&quot;&gt;E. 绩效：以“杠杆+学习速度”定义优秀&lt;/h3&gt;&lt;a href=&quot;#e-绩效以杠杆学习速度定义优秀&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “E. 绩效：以“杠杆+学习速度”定义优秀”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;OKR 可以继续用，但&lt;strong&gt;KR 写成可度量的“AI 杠杆率”&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;KR1：关键任务 &lt;em&gt;with-AI&lt;/em&gt; 周期缩短 ≥ 30%。&lt;/li&gt;
+&lt;li&gt;KR2：沉淀可复用工作流 ≥ 6 个/月。&lt;/li&gt;
+&lt;li&gt;KR3：拉动同事使用率与节省时长。
+避免把 KR 写成“做了几次会议/出了几份报告”的&lt;strong&gt;任务清单&lt;/strong&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;f-预算以产出成本而非席位数来投&quot;&gt;F. 预算：以“产出/成本”而非“席位数”来投&lt;/h3&gt;&lt;a href=&quot;#f-预算以产出成本而非席位数来投&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “F. 预算：以“产出/成本”而非“席位数”来投”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;把钱砸在&lt;strong&gt;高复用场景&lt;/strong&gt;与&lt;strong&gt;数据清洁&lt;/strong&gt;上，而不是无脑买更多额度。先跑通 3 个能回本的流程，再扩。&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;结语&quot;&gt;结语&lt;/h2&gt;&lt;a href=&quot;#结语&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “结语”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;AI 时代的团队管理，很朴素：&lt;strong&gt;让每个人都背上放大器&lt;/strong&gt;，让每件事都能“被机器复用”，让组织&lt;strong&gt;稳、清、快&lt;/strong&gt;。
+别焦虑，也别赌“弯道超车”。&lt;strong&gt;用连续的小胜，堆出复利的大胜。&lt;/strong&gt;
+你怎么看？你的团队，最该先 AI 化哪 3 个动作？&lt;/p&gt;&lt;!-- 
+---
+
+## 3 个标题（多语言 &amp; slug）
+
+1. **把 AI 变成公司“个人放大器”**｜**Turn AI into a Personal Amplifier for Teams**｜**把 AI 變成公司「個人放大器」**｜**チームの“個人アンプ”としてAIを使う**｜**Faire de l’IA un amplificateur personnel**｜**Convierte la IA en un amplificador personal**｜**Transforme a IA em um amplificador pessoal**｜**slug:** `ai-as-personal-amplifier-management`
+
+2. **管理换挡：从管流程到管杠杆**｜**Shift Management: From Process Policing to Leverage**｜**管理換檔：從管流程到管槓桿**｜**管理のギアチェンジ：プロセス管理からレバレッジへ**｜**Changer de gestion : du process au levier**｜**Del proceso al apalancamiento**｜**Do processo à alavancagem**｜**slug:** `management-shift-to-ai-leverage`
+
+3. **没有弯道超车，只有复利**｜**No Shortcuts, Only Compounding**｜**沒有彎道超車，只有複利**｜**近道なし、あるのは複利だけ**｜**Pas de raccourci, seulement l’intérêt composé**｜**No hay atajos, solo interés compuesto**｜**Sem atalho, só juros compostos**｜**slug:** `no-shortcuts-only-compounding-ai`
+
+---
+
+## 配图（插画风｜2:1｜英文文案，不含中文）
+
+**封面图 Prompt**
+“An illustration of every employee wearing a small ‘AI amplifier’ device that beams workflows into a shared library, with tiny charts showing time saved and quality up; clean minimal lines, modern pastel palette, wide 2:1, text-free.”
+
+**章节配图 1｜AI 头雁**
+“An illustration of a lead worker teaching teammates how to chain prompts and tools on a big whiteboard labeled ‘Workflow → Template → Automation’; pastel, minimal, 2:1, text-free.”
+
+**章节配图 2｜绩效度量**
+“An illustration of a dashboard showing ‘AI leverage’, ‘reuse rate’, and ‘quality’ dials rising while ‘time’ dial drops; modern pastel, flat vector, 2:1, text-free.”
+
+**章节配图 3｜修己安人文化**
+“An illustration of a calm manager giving a ‘learning budget’ ticket to an employee while an AI assistant stacks reusable blocks; pastel, 2:1, text-free.”
+
+---
+
+## 朋友圈/评论区 3 条话术
+
+1. “今年最有用的管理锦囊：别卷会议，卷**AI 杠杆率**。让流程会说话，让模板会赚钱。”
+2. “不迷信大厂履历，先看会不会把工作流**产品化**。会用 AI 的人，效率是乘法。”
+3. “想弯道超车？别做梦了。**每周固化 1 个工作流**，年底你就是行业最稳的那家。”
+
+—
+
+需要我把文中的**指标池**和**工作流模板清单**做成可复制的飞书/Notion 模板吗？
+
+[1]: https://news.mit.edu/2023/study-finds-chatgpt-boosts-worker-productivity-writing-0714?utm_source=chatgpt.com &quot;Study finds ChatGPT boosts worker productivity for some ...&quot;
+[2]: https://www.nber.org/system/files/working_papers/w31161/w31161.pdf?utm_source=chatgpt.com &quot;NBER WORKING PAPER SERIES GENERATIVE AI AT ...&quot;
+[3]: https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/the-economic-potential-of-generative-ai-the-next-productivity-frontier?utm_source=chatgpt.com &quot;The economic potential of generative AI&quot;
+[4]: https://hbr.org/2023/09/avoid-these-pitfalls-when-measuring-your-strategys-performance?utm_source=chatgpt.com &quot;Avoid These Pitfalls When Measuring Your Strategy&apos;s ...&quot;
+[5]: https://www.hbs.edu/faculty/Pages/item.aspx?num=63899&amp;utm_source=chatgpt.com &quot;A Primer on OKRs - Background Note - Faculty &amp; Research&quot;
+[6]: https://www.peoplebox.ai/blog/implementing-okr/?utm_source=chatgpt.com &quot;Implementing OKRs: 5 Common Mistakes to Avoid&quot;
+[7]: https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai-2024?utm_source=chatgpt.com &quot;The state of AI in early 2024: Gen AI adoption ...&quot;
+[8]: https://hai.stanford.edu/ai-index/2025-ai-index-report?utm_source=chatgpt.com &quot;The 2025 AI Index Report | Stanford HAI&quot;
+[9]: https://www.businessinsider.com/companies-using-ai-to-replace-workers-will-lose-stanford-professor-2024-1?utm_source=chatgpt.com &quot;Companies that use AI to replace workers will ultimately lose, Stanford University professor says&quot; --&gt;</content:encoded><category>AI</category><category>Team Management</category></item><item><title>AI 时代技术主管的一天</title><link>https://www.vibesparking.com/zh-cn/blog/ai/management/2025-08-19-one-day-ai-era-assembly/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/management/2025-08-19-one-day-ai-era-assembly/</guid><pubDate>Tue, 19 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # AI 时代 技术主管的一天 --&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;不靠“我多能打”，靠“我让团队更能打”。&lt;/strong&gt;
+加上 ChatGPT、Claude、Gemini，这条日程能再快一倍。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;0700信息雷达--社区温度轻脑力热身&quot;&gt;07:00｜信息雷达 &amp;#x26; 社区温度（轻脑力热身）&lt;/h2&gt;&lt;a href=&quot;#0700信息雷达--社区温度轻脑力热身&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “07:00｜信息雷达 &amp;#x26; 社区温度（轻脑力热身）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;动作&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;刷 X 上的 AI 动态，&lt;strong&gt;转发 + 一句话判断&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;统一收集到「素材库」：标题、链接、一句话价值点。&lt;/li&gt;
+&lt;li&gt;用 &lt;strong&gt;ChatGPT 的 GPTs&lt;/strong&gt; 做“晨读小秘书”：自动生成&lt;strong&gt;3 条团队可用思路&lt;/strong&gt;（如 PRD 线索、数据要点）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;现成用法&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;在 ChatGPT 里建一个&lt;strong&gt;自用 GPT&lt;/strong&gt;：指令里固定输出结构（&lt;code dir=&quot;auto&quot;&gt;来源/摘要/可落地建议&lt;/code&gt;）；需要时再开 &lt;strong&gt;Advanced Data Analysis&lt;/strong&gt; 让它把截图里的表格识别成 CSV。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;一句提示词&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“把这 5 条 AI 新闻按‘对我们产品的影响’排序，每条给 1 个落地试验点，输出成表。”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;0800通勤上班的启动仪式动能上膛&quot;&gt;08:00｜通勤上班的启动仪式（动能上膛）&lt;/h2&gt;&lt;a href=&quot;#0800通勤上班的启动仪式动能上膛&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “08:00｜通勤上班的启动仪式（动能上膛）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;动作&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;带上书；车上不卷，稳节奏。&lt;/li&gt;
+&lt;li&gt;打开 &lt;strong&gt;ChatGPT Voice&lt;/strong&gt; 做&lt;strong&gt;口述待办&lt;/strong&gt;，让它转成三件最重要的事（MIT）。语音比打字更顺畅。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;一句提示词（语音）&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“帮我把今天的要事压到 3 条，每条 1 句话 + 验收口径。”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;0900mit-深工窗只做能推动进度条的事&quot;&gt;09:00｜MIT 深工窗（只做能推动进度条的事）&lt;/h2&gt;&lt;a href=&quot;#0900mit-深工窗只做能推动进度条的事&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “09:00｜MIT 深工窗（只做能推动进度条的事）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;动作&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;小改动自己上，Vibe Coding 直接看结果；&lt;/li&gt;
+&lt;li&gt;大任务丢给团队，“目标与验收口径”说透。&lt;/li&gt;
+&lt;li&gt;用 &lt;strong&gt;Gemini 1.5 的长上下文&lt;/strong&gt;喂进长文档/多截图，&lt;strong&gt;让它只产出验收清单&lt;/strong&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;一句提示词&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“读完这份 PRD/用户反馈截图，把验收用例列成勾选清单（只要‘能/不能’、不要长句）。”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;1000教练式会议少指挥多提问&quot;&gt;10:00｜教练式会议（少指挥，多提问）&lt;/h2&gt;&lt;a href=&quot;#1000教练式会议少指挥多提问&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “10:00｜教练式会议（少指挥，多提问）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;动作&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;会议上&lt;strong&gt;不抢方向盘&lt;/strong&gt;，坚持“&lt;strong&gt;教练 50 分&lt;/strong&gt;”原则：我不下场，团队成长更快。&lt;/li&gt;
+&lt;li&gt;现场只做三件事：&lt;strong&gt;定义边界&lt;/strong&gt;、&lt;strong&gt;拆最小验证&lt;/strong&gt;、&lt;strong&gt;确认下次小里程碑&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;用 &lt;strong&gt;Claude Code&lt;/strong&gt; 做“会后复盘员”：把会议记录、代码片段、日志一起投喂，产出&lt;strong&gt;下一步最小试验计划&lt;/strong&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;一句提示词&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“基于会议记录 + 这段代码，把‘本周能独立验证的 2 个最小实验’列出来，包含命令、预期输出、回滚条件。”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;12001000-米步行重启与长线思考&quot;&gt;12:00｜1000 米步行（重启与长线思考）&lt;/h2&gt;&lt;a href=&quot;#12001000-米步行重启与长线思考&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “12:00｜1000 米步行（重启与长线思考）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;动作&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;步行时再写字，人更稳。&lt;/li&gt;
+&lt;li&gt;创意往往在&lt;strong&gt;步行/运动&lt;/strong&gt;后冒泡，学界有研究支持；用潜意识慢酝酿。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;1400产品体验官像修树一样修边&quot;&gt;14:00｜产品体验官（像修树一样“修边”）&lt;/h2&gt;&lt;a href=&quot;#1400产品体验官像修树一样修边&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “14:00｜产品体验官（像修树一样“修边”）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;动作&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;上手当天构建，&lt;strong&gt;边用边记 10 条不爽点&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;让 &lt;strong&gt;ChatGPT 的 Advanced Data Analysis&lt;/strong&gt;把截图/埋点导出&lt;strong&gt;做差异对比&lt;/strong&gt;：版本前后点击路径、耗时指标、崩溃数。&lt;/li&gt;
+&lt;li&gt;重复瑕疵给到 &lt;strong&gt;Gemini Code Assist&lt;/strong&gt; 或 &lt;strong&gt;Claude Code&lt;/strong&gt;补丁建议，谁更熟悉你当前 IDE、就用谁。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;一句提示词&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“对比 v1.6 与 v1.7 的埋点 CSV，列出用户从 A 到支付的平均耗时变化，输出成表 + 1 段诊断。”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;1500售后雷达把情绪变路线图&quot;&gt;15:00｜售后雷达（把情绪变路线图）&lt;/h2&gt;&lt;a href=&quot;#1500售后雷达把情绪变路线图&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “15:00｜售后雷达（把情绪变路线图）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;动作&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;群里看&lt;strong&gt;态度与闭环&lt;/strong&gt;，把问题推到 GitHub Project：
+Issue → Owner → 截止时间 → 关联 PR。&lt;/li&gt;
+&lt;li&gt;用 &lt;strong&gt;GitHub Actions&lt;/strong&gt;做自动化：PR Ready → 自动建任务 → 标记“Todo”。&lt;/li&gt;
+&lt;li&gt;让 &lt;strong&gt;Claude&lt;/strong&gt; 或 &lt;strong&gt;ChatGPT&lt;/strong&gt;帮你&lt;strong&gt;给用户回信草稿&lt;/strong&gt;，但&lt;strong&gt;最终口吻你来定&lt;/strong&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;一句提示词&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“把这 12 条售后串成一封更新公告，采用‘问题-修复-上线时间-影响范围’四段式。”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;1600一小时硬书判断力训练&quot;&gt;16:00｜一小时硬书（判断力训练）&lt;/h2&gt;&lt;a href=&quot;#1600一小时硬书判断力训练&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “16:00｜一小时硬书（判断力训练）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;动作&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;技术主管 的核心是&lt;strong&gt;判断&lt;/strong&gt;，判断来自&lt;strong&gt;跨学科输入&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;用 &lt;strong&gt;ChatGPT Memory&lt;/strong&gt;存下你的&lt;strong&gt;长期偏好与研究主题&lt;/strong&gt;；每次让它&lt;strong&gt;自动联动“旧笔记”&lt;/strong&gt;。你可随时在设置里&lt;strong&gt;查看/删除/关闭记忆&lt;/strong&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;一句提示词&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“把我过去关于‘AI 体验衡量指标’的对话里提过的指标拉出来，合成 1 页对照表（来源标注到消息日期）。”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;1800准时下班反内卷的团队节奏&quot;&gt;18:00｜准时下班（反内卷的团队节奏）&lt;/h2&gt;&lt;a href=&quot;#1800准时下班反内卷的团队节奏&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “18:00｜准时下班（反内卷的团队节奏）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;动作&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;以身作则，把效率留在白天，把生活还给晚上。&lt;/li&gt;
+&lt;li&gt;团队节奏健康，&lt;strong&gt;可持续输出&lt;/strong&gt;才稳。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;1900晚饭--4-公里散步漫游时间&quot;&gt;19:00｜晚饭 &amp;#x26; 4 公里散步（漫游时间）&lt;/h2&gt;&lt;a href=&quot;#1900晚饭--4-公里散步漫游时间&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “19:00｜晚饭 &amp;#x26; 4 公里散步（漫游时间）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;动作&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;散步过程中，打开 &lt;strong&gt;ChatGPT Voice&lt;/strong&gt;或&lt;strong&gt;Gemini Live&lt;/strong&gt;口述灵感，&lt;strong&gt;转待办&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;漫游状态对创意友好，走路对创意的促进有实证研究。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;2000社区-issue--写文--陪娃刷题可变时段&quot;&gt;20:00｜社区 Issue / 写文 / 陪娃刷题（可变时段）&lt;/h2&gt;&lt;a href=&quot;#2000社区-issue--写文--陪娃刷题可变时段&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “20:00｜社区 Issue / 写文 / 陪娃刷题（可变时段）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;动作&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;合并补丁，补写单测。&lt;/li&gt;
+&lt;li&gt;没有硬工程，就写一篇技术复盘，沉淀为团队资产。&lt;/li&gt;
+&lt;li&gt;陪娃刷题，用 &lt;strong&gt;Claude&lt;/strong&gt;或&lt;strong&gt;ChatGPT&lt;/strong&gt;讲题思路图，&lt;strong&gt;别直接给答案&lt;/strong&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;一句提示词&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“把这道函数题讲成 3 步图示：已知→变形→代入验证，每步 2 句解释 + 1 个常见错因。”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;2200售后复盘态度第一&quot;&gt;22:00｜售后复盘（态度第一）&lt;/h2&gt;&lt;a href=&quot;#2200售后复盘态度第一&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “22:00｜售后复盘（态度第一）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;动作&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;快速过一遍&lt;strong&gt;当日 3000+ 售后消息&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;服务好的略过；服务差的&lt;strong&gt;记录问题 → 明早跟进&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;用 &lt;strong&gt;Gemini API&lt;/strong&gt;做&lt;strong&gt;结构化抽取&lt;/strong&gt;：用户情绪、模块、严重程度，导出成表方便第二天站会。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;2300厚书催眠术关机&quot;&gt;23:00｜厚书催眠术（关机）&lt;/h2&gt;&lt;a href=&quot;#2300厚书催眠术关机&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “23:00｜厚书催眠术（关机）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;动作&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;再啃 20 页，慢慢关机。&lt;/li&gt;
+&lt;li&gt;真困了，就睡。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;半夜灵感捕手3-句就够&quot;&gt;半夜｜灵感捕手（3 句就够）&lt;/h2&gt;&lt;a href=&quot;#半夜灵感捕手3-句就够&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “半夜｜灵感捕手（3 句就够）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;动作&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;突然想到好点子，&lt;strong&gt;起身记 3 句话&lt;/strong&gt;再睡。&lt;/li&gt;
+&lt;li&gt;第二天用 &lt;strong&gt;ChatGPT/Gemini&lt;/strong&gt;把这 3 句扩成可行的&lt;strong&gt;最小实验&lt;/strong&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;最小可执行ai-清单可直接抄用&quot;&gt;「最小可执行」AI 清单（可直接抄用）&lt;/h2&gt;&lt;a href=&quot;#最小可执行ai-清单可直接抄用&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “「最小可执行」AI 清单（可直接抄用）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;晨读小秘书（ChatGPT GPTs）&lt;/strong&gt;：输出固定为 &lt;code dir=&quot;auto&quot;&gt;来源/一句话判断/落地试验点&lt;/code&gt;，并存历史对照。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;会议复盘到计划（Claude Code）&lt;/strong&gt;：记录 + 代码 + 日志 → &lt;code dir=&quot;auto&quot;&gt;两条最小实验&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;长文档压缩到验收清单（Gemini 1.5）&lt;/strong&gt;：PRD/图表/截图 → JSON 验收点。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;售后 → Issue → PR（GitHub Actions）&lt;/strong&gt;：Ready for review → 自动建卡片并入项目。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;团队知识回流（ChatGPT Memory）&lt;/strong&gt;：把“我们定义的体验指标/风格约定”记成长期记忆；必要时一键清除或关闭。&lt;/li&gt;
+&lt;/ul&gt;&lt;!-- 
+---
+
+## 2:1 插画配图（英文文案，别放中文）
+
+**封面图 Prompt**
+“An illustration of an AI-era 技术主管’s day flowing like an assembly line: news scan, deep work, coaching standup, swim, product QA, support triage, reading, coding, sleep; clean minimalist ve技术主管r, modern pastel palette, wide 2:1, text-free.”
+
+**关键配图 1｜深工窗口**
+“An illustration of a 技术主管 shielding a calendar block labeled ‘Deep Work’ from flying meeting bubbles; minimal ve技术主管r, soft pastels, 2:1, text-free.”
+
+**关键配图 2｜教练式会议**
+“An illustration of a coach-style 技术主管 posing open questions on a whiteboard while engineers connect dots; modern flat ve技术主管r, 2:1, text-free.”
+
+**关键配图 3｜阅读 + 产线**
+“An illustration of a 技术主管 reading a heavy book while a conveyor belt moves features from ‘idea’ to ‘shipped’; clean lines, pastel tones, 2:1, text-free.”
+
+---
+
+## 多语言标题（3 组 + slug）
+
+1. **中文**：AI 时代 技术主管 的一天：把时间当生产线
+   **English**: A 技术主管’s Day in the AI Era: Run Time Like an Assembly Line
+   **繁體**：AI 時代 技术主管 的一天：把時間當生產線
+   **日本語**：AI時代の技术主管の一日：時間を生産ライン化
+   **Français** : La journée d’un 技术主管 à l’ère de l’IA : le temps en chaîne
+   **Español**: El día de un 技术主管 en la era de la IA: el tiempo como línea
+   **Português**: O dia de um 技术主管 na era da IA: tempo como linha
+   **slug**: 技术主管-day-ai-era-assembly
+
+2. **中文**：不亲自上场，也能赢：技术主管 的教练式日程
+   **English**: Win Without Jumping In: A Coach-Style 技术主管 Schedule
+   **繁體**：不必親自下場也能贏：教練式 技术主管 日程
+   **日本語**：出しゃばらずに勝つ：コーチ型技术主管の一日
+   **Français** : Gagner sans intervenir : l’agenda d’un 技术主管-coach
+   **Español**: Ganar sin intervenir: agenda de un 技术主管 coach
+   **Português**: Vencer sem intervir: agenda de um 技术主管 coach
+   **slug**: coach-style-技术主管-schedule
+
+3. **中文**：把 AI 当外骨骼：技术主管 的 24 小时效率术
+   **English**: Wear AI Like Exoskeleton: A 技术主管’s 24-Hour Flow
+   **繁體**：把 AI 當外骨骼：技术主管 的 24 小時效率術
+   **日本語**：AIを外骨格に：技术主管の24時間効率術
+   **Français** : L’IA comme exosquelette : l’efficacité 24h d’un 技术主管
+   **Español**: IA como exoesqueleto: 24 horas de un 技术主管
+   **Português**: IA como exoesqueleto: 24 horas de um 技术主管
+   **slug**: 技术主管-24h-ai-exoskeleton
+
+---
+
+## 朋友圈/评论区文案（3 条）
+
+1. 我把 ChatGPT/Claude/Gemini 分工好了：**ChatGPT 管总结**，**Claude 管实验计划**，**Gemini 管长文档**。今天效率就是这么来的。
+2. 最爽的不是我写了几行代码，而是**团队自己跑通了两次最小实验**。教练式会议，真香。
+3. 灵感都在**走路/游泳**后冒出来。别盯屏，去走 15 分钟，回来直接让 AI 把 3 句灵感扩成计划。
+
+---
+
+要不要我把上面这些**提示词**和**自动化清单**打包成一页 PDF 清单（可打印贴工位）？
+你也可以告诉我你团队的技术栈，我帮你把**ChatGPT/Claude/Gemini 的分工**锁死到你的实际工具链里。
+
+[1]: https://openai.com/index/introducing-gpts/?utm_source=chatgpt.com &quot;Introducing GPTs&quot;
+[2]: https://help.openai.com/en/collections/8475420-gpts?utm_source=chatgpt.com &quot;GPTs&quot;
+[3]: https://help.openai.com/en/articles/8554397-creating-a-gpt?utm_source=chatgpt.com &quot;Creating a GPT&quot;
+[4]: https://help.openai.com/en/articles/8400625-voice-chat-faq?utm_source=chatgpt.com &quot;Voice Mode FAQ&quot;
+[5]: https://openai.com/index/hello-gpt-4o/?utm_source=chatgpt.com &quot;Hello GPT-4o&quot;
+[6]: https://ai.google.dev/gemini-api/docs?utm_source=chatgpt.com &quot;Gemini API | Google AI for Developers&quot;
+[7]: https://docs.anthropic.com/en/docs/claude-code/overview?utm_source=chatgpt.com &quot;Claude Code overview&quot;
+[8]: https://www.anthropic.com/news/3-5-models-and-computer-use?utm_source=chatgpt.com &quot;Introducing computer use, a new Claude 3.5 Sonnet, and ...&quot;
+[9]: https://news.stanford.edu/stories/2014/04/walking-vs-sitting-042414?utm_source=chatgpt.com &quot;Stanford study finds walking improves creativity&quot;
+[10]: https://aaalab.stanford.edu/assets/papers/2014/Give_your_ideas_some_legs.pdf?utm_source=chatgpt.com &quot;The Positive Effect of Walking on Creative Thinking - AAA Lab&quot;
+[11]: https://help.openai.com/en/articles/8437071-data-analysis-with-chatgpt?utm_source=chatgpt.com &quot;Data analysis with ChatGPT&quot;
+[12]: https://developers.google.com/gemini-code-assist/docs/overview?utm_source=chatgpt.com &quot;Gemini Code Assist overview&quot;
+[13]: https://codeassist.google/?utm_source=chatgpt.com &quot;Gemini Code Assist | AI coding assistant&quot;
+[14]: https://docs.github.com/issues/planning-and-tracking-with-projects/automating-your-project?utm_source=chatgpt.com &quot;Automating your project&quot;
+[15]: https://openai.com/index/memory-and-new-controls-for-chatgpt/?utm_source=chatgpt.com &quot;Memory and new controls for ChatGPT&quot;
+[16]: https://help.openai.com/en/articles/8590148-memory-faq?utm_source=chatgpt.com &quot;Memory FAQ&quot;
+[17]: https://docs.anthropic.com/en/docs/intro?utm_source=chatgpt.com &quot;Intro to Claude&quot;
+[18]: https://docs.github.com/en/issues/planning-and-tracking-with-projects/automating-your-project/automating-projects-using-actions?utm_source=chatgpt.com &quot;Automating Projects using Actions&quot; --&gt;</content:encoded><category>AI</category><category>Team Management</category></item><item><title>LandingAI 开发一个「公司财报审计智能体」——从抓取、抽取到核验，全自动跑通</title><link>https://www.vibesparking.com/zh-cn/blog/ai/landing-ai/2025-08-19-audit-agent-pdf-sec-crosscheck/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/landing-ai/2025-08-19-audit-agent-pdf-sec-crosscheck/</guid><pubDate>Tue, 19 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # LandingAI 开发一个「公司财报审计智能体」——从抓取、抽取到核验，全自动跑通 --&gt;
 &lt;div&gt;&lt;h2 id=&quot;引言&quot;&gt;引言&lt;/h2&gt;&lt;a href=&quot;#引言&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “引言”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
 &lt;p&gt;每到财报季，报告厚、口径多、单位乱。
 手抄指标很累，还容易错。&lt;/p&gt;
@@ -364,156 +746,7 @@ CIK（苹果：0000320193）→ &lt;code dir=&quot;auto&quot;&gt;us-gaap/NetInco
 [9]: https://www.apple.com/newsroom/pdfs/fy2025-q1/FY25_Q1_Consolidated_Financial_Statements.pdf?utm_source=chatgpt.com &quot;01-30-25 Apple Reports First Quarter Results&quot;
 [10]: https://investor.apple.com/investor-relations/default.aspx?utm_source=chatgpt.com &quot;Investor Relations - Apple&quot;
 [11]: https://landing.ai/agentic-document-extraction?utm_source=chatgpt.com &quot;Agentic Document Extraction&quot;
-[12]: https://www.apple.com/newsroom/2025/01/apple-reports-first-quarter-results/?utm_source=chatgpt.com &quot;Apple reports first quarter results&quot; --&gt;</content:encoded><category>LandingAI</category><category>Python</category><category>BeautifulSoup</category><category>Pydantic</category></item><item><title>让团队管理适配 AI 时代：把“个人放大器”装进团队</title><link>https://www.vibesparking.com/zh-cn/blog/ai/management/2025-08-19-ai-as-personal-amplifier-management/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/management/2025-08-19-ai-as-personal-amplifier-management/</guid><pubDate>Tue, 19 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # 让团队管理适配 AI 时代：把“个人放大器”装进团队 --&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;AI 是个人放大器&lt;/strong&gt;；先用 AI 养活一个业务尖兵；别迷信大厂履历；谨慎 KPI/OKR 崇拜；&lt;strong&gt;修己安人&lt;/strong&gt; 的管理观；&lt;strong&gt;没有弯道超车&lt;/strong&gt;。
-这篇就把这些理念，落成可执行的团队管理打法。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;引言&quot;&gt;引言&lt;/h2&gt;&lt;a href=&quot;#引言&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “引言”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;AI 不是多一个工具，而是&lt;strong&gt;把个人战斗力乘法放大&lt;/strong&gt;。能用好的人，1 人顶 10 人；不会用的人，还意识不到差距在扩大。实证研究已给出答案：&lt;strong&gt;写作类工作效率显著提升&lt;/strong&gt;，客服坐席&lt;strong&gt;平均提效约 14%&lt;/strong&gt;，而且低经验员工受益更大。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;这意味着&lt;/strong&gt;：管理的重心要从“管流程、堆人头”，转向“&lt;strong&gt;管杠杆、提配速&lt;/strong&gt;”。&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;观点-8-条硬改法则&quot;&gt;观点（ 8 条硬改法则）&lt;/h2&gt;&lt;a href=&quot;#观点-8-条硬改法则&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “观点（ 8 条硬改法则）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h3 id=&quot;1把ai-放大器变成组织默认配置&quot;&gt;1）把“AI 放大器”变成组织默认配置&lt;/h3&gt;&lt;a href=&quot;#1把ai-放大器变成组织默认配置&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1）把“AI 放大器”变成组织默认配置”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;给出明确目标：&lt;strong&gt;90% 的岗位日常动作都要有 AI 版本&lt;/strong&gt;。从 SOP、日报、周会纪要，到代码评审、需求拆分，都留出 &lt;em&gt;with-AI&lt;/em&gt; 的做法。
-理由很简单：McKinsey 估算，&lt;strong&gt;生成式 AI 每年可释放 2.6–4.4 万亿美元价值&lt;/strong&gt;，而且能持续贡献劳动生产率增长。&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;2先造一个ai-头雁再复制&quot;&gt;2）先造一个“AI 头雁”，再复制&lt;/h3&gt;&lt;a href=&quot;#2先造一个ai-头雁再复制&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2）先造一个“AI 头雁”，再复制”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;别一上来全员培训，&lt;strong&gt;先造 1–3 个能用 AI 养活业务的尖兵&lt;/strong&gt;：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;一条增长线：线索清洗、私信自动化、落地页 AB。&lt;/li&gt;
-&lt;li&gt;一条交付线：代码生成+测试、文档自动化、客户答复草稿。
-用“&lt;strong&gt;示范+跟飞&lt;/strong&gt;”复制到第二批人。真实项目最能对齐预期，也最能带动文化。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h3 id=&quot;3绩效从产出量改为ai-杠杆率&quot;&gt;3）绩效从“产出量”改为“&lt;strong&gt;AI 杠杆率&lt;/strong&gt;”&lt;/h3&gt;&lt;a href=&quot;#3绩效从产出量改为ai-杠杆率&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3）绩效从“产出量”改为“AI 杠杆率””&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;设三类指标：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;效率&lt;/strong&gt;：同类任务 &lt;em&gt;with-AI&lt;/em&gt; 的周期缩短比。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;质量&lt;/strong&gt;：缺陷率/客户满意度是否因 AI 改善（客服坐席研究显示满意度与留任也更好）。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;复用&lt;/strong&gt;：可复用的提示词、工作流、模板数量。
-别只盯 KPI/OKR 数字墙。HBR 指出，&lt;strong&gt;指标与战略脱节会反噬执行&lt;/strong&gt;，OKR 常见误用是把“任务当结果”。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h3 id=&quot;4招聘务实不迷信大厂履历优先看ai-可迁移能力&quot;&gt;4）招聘务实：&lt;strong&gt;不迷信大厂履历，优先看“AI 可迁移能力”&lt;/strong&gt;&lt;/h3&gt;&lt;a href=&quot;#4招聘务实不迷信大厂履历优先看ai-可迁移能力&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “4）招聘务实：不迷信大厂履历，优先看“AI 可迁移能力””&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;看四件事：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;是否能把&lt;strong&gt;业务问题→数据/工具→可执行提示词&lt;/strong&gt;；&lt;/li&gt;
-&lt;li&gt;是否能&lt;strong&gt;把个人工作流产品化&lt;/strong&gt;（脚本、宏、代理）；&lt;/li&gt;
-&lt;li&gt;能否&lt;strong&gt;教会他人&lt;/strong&gt;（写清 SOP/模板）；&lt;/li&gt;
-&lt;li&gt;对安全合规有基本敬畏（数据分级、红线意识）。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h3 id=&quot;5组织结构小步快跑以战养训&quot;&gt;5）组织结构“小步快跑、以战养训”&lt;/h3&gt;&lt;a href=&quot;#5组织结构小步快跑以战养训&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “5）组织结构“小步快跑、以战养训””&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;别急着扩编。用“&lt;strong&gt;小队 + 工具链&lt;/strong&gt;”结构：PM/工程/数据/运营 4–6 人为单位，绑定同一套&lt;strong&gt;提示词库、知识库、自动化脚本&lt;/strong&gt;。
-持续把&lt;strong&gt;人-机协作&lt;/strong&gt;沉淀为资产，而不是堆 Chat 截图。&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;6流程换挡从周报月报转向可回放的工作流与实时度量&quot;&gt;6）流程换挡：从“周报/月报”转向“&lt;strong&gt;可回放的工作流与实时度量&lt;/strong&gt;”&lt;/h3&gt;&lt;a href=&quot;#6流程换挡从周报月报转向可回放的工作流与实时度量&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “6）流程换挡：从“周报/月报”转向“可回放的工作流与实时度量””&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;报告不是目的，&lt;strong&gt;可复现才是&lt;/strong&gt;。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;把典型工作流录成 &lt;em&gt;agent run + 提示词 + 数据样例&lt;/em&gt;；&lt;/li&gt;
-&lt;li&gt;用看板显示“人均 AI 调用次数、节省工时、二次复用率”。
-当&lt;strong&gt;享受过程的可复现性&lt;/strong&gt;变强，结果自然跟上；只盯结果，反而低效。（研究与行业报告都提示：&lt;strong&gt;当 AI 深入流程，组织价值与采用率同步上升&lt;/strong&gt;。）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h3 id=&quot;7文化内核修己安人把焦虑变训练&quot;&gt;7）文化内核：&lt;strong&gt;修己安人&lt;/strong&gt;，把焦虑变训练&lt;/h3&gt;&lt;a href=&quot;#7文化内核修己安人把焦虑变训练&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “7）文化内核：修己安人，把焦虑变训练”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;AI 不是裁人神器，而是&lt;strong&gt;补强人类&lt;/strong&gt;。斯坦福学者观点很明确：&lt;strong&gt;用 AI 取代人会输，用 AI 增强人会赢&lt;/strong&gt;。
-管理动作：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;给“犯错预算”和“学习预算”；&lt;/li&gt;
-&lt;li&gt;默认“结对提示词编写”，让新人靠 AI &lt;strong&gt;缩短上手曲线&lt;/strong&gt;（实证显示新手受益更大）。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h3 id=&quot;8别迷信弯道超车要迷信持续复利&quot;&gt;8）别迷信“弯道超车”，要迷信“&lt;strong&gt;持续复利&lt;/strong&gt;”&lt;/h3&gt;&lt;a href=&quot;#8别迷信弯道超车要迷信持续复利&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “8）别迷信“弯道超车”，要迷信“持续复利””&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;没有捷径，只有复利曲线&lt;/strong&gt;：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;每周沉淀 1 个可复用工作流；&lt;/li&gt;
-&lt;li&gt;每月复盘“节省了哪些人时，质量有没有掉”；&lt;/li&gt;
-&lt;li&gt;每季清理一次技术债与数据债。
-AI 投入像健身，&lt;strong&gt;重在持续&lt;/strong&gt;。全球数据也在印证：&lt;strong&gt;企业采用率正快速上升&lt;/strong&gt;，不跟上就真掉队。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;正文落地手册6-个-01-改造清单&quot;&gt;正文（落地手册：6 个 0–1 改造清单）&lt;/h2&gt;&lt;a href=&quot;#正文落地手册6-个-01-改造清单&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “正文（落地手册：6 个 0–1 改造清单）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h3 id=&quot;a-人三层能力模型&quot;&gt;A. 人：三层能力模型&lt;/h3&gt;&lt;a href=&quot;#a-人三层能力模型&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “A. 人：三层能力模型”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;底座&lt;/strong&gt;：AI 基操（检索、重写、结构化、评审）。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;中层&lt;/strong&gt;：&lt;strong&gt;任务链编排&lt;/strong&gt;（多轮提示词、工具调用、RAG/知识库）。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;上层&lt;/strong&gt;：&lt;strong&gt;业务代理化&lt;/strong&gt;（自动拉数据、自动生成/执行、自动复盘）。
-配套考核：&lt;strong&gt;从“能用”到“能教”&lt;/strong&gt;，晋升看“带动多少人变强”。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h3 id=&quot;b-事把高频任务清单化模板化自动化&quot;&gt;B. 事：把高频任务“清单化→模板化→自动化”&lt;/h3&gt;&lt;a href=&quot;#b-事把高频任务清单化模板化自动化&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “B. 事：把高频任务“清单化→模板化→自动化””&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;例：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;售前：询盘分类→自动回信草稿→CRM 入库→下次跟进提醒。&lt;/li&gt;
-&lt;li&gt;研发：&lt;strong&gt;需求→用例→代码→测试→部署&lt;/strong&gt; 一条龙脚手架。&lt;/li&gt;
-&lt;li&gt;客服：工单相似度匹配→答案草稿→二审→FAQ 回流知识库。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h3 id=&quot;c-工具三层栈&quot;&gt;C. 工具：三层栈&lt;/h3&gt;&lt;a href=&quot;#c-工具三层栈&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “C. 工具：三层栈”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;协作&lt;/strong&gt;：文档/知识库/看板。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;智能&lt;/strong&gt;：对话式编排（工作流/代理）、函数调用、RAG。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;监控&lt;/strong&gt;：成本、质量、合规、漂移告警。
-要求“&lt;strong&gt;一切输出皆可复用&lt;/strong&gt;”。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h3 id=&quot;d-数据治理先行&quot;&gt;D. 数据：治理先行&lt;/h3&gt;&lt;a href=&quot;#d-数据治理先行&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “D. 数据：治理先行”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;给数据打四个标：&lt;strong&gt;来源、敏感级、可共享范围、保留期&lt;/strong&gt;。
-训练/对话用 &lt;strong&gt;脱敏样本&lt;/strong&gt;，对外生成物都走 &lt;strong&gt;人审+水印&lt;/strong&gt;。&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;e-绩效以杠杆学习速度定义优秀&quot;&gt;E. 绩效：以“杠杆+学习速度”定义优秀&lt;/h3&gt;&lt;a href=&quot;#e-绩效以杠杆学习速度定义优秀&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “E. 绩效：以“杠杆+学习速度”定义优秀”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;OKR 可以继续用，但&lt;strong&gt;KR 写成可度量的“AI 杠杆率”&lt;/strong&gt;：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;KR1：关键任务 &lt;em&gt;with-AI&lt;/em&gt; 周期缩短 ≥ 30%。&lt;/li&gt;
-&lt;li&gt;KR2：沉淀可复用工作流 ≥ 6 个/月。&lt;/li&gt;
-&lt;li&gt;KR3：拉动同事使用率与节省时长。
-避免把 KR 写成“做了几次会议/出了几份报告”的&lt;strong&gt;任务清单&lt;/strong&gt;。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h3 id=&quot;f-预算以产出成本而非席位数来投&quot;&gt;F. 预算：以“产出/成本”而非“席位数”来投&lt;/h3&gt;&lt;a href=&quot;#f-预算以产出成本而非席位数来投&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “F. 预算：以“产出/成本”而非“席位数”来投”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;把钱砸在&lt;strong&gt;高复用场景&lt;/strong&gt;与&lt;strong&gt;数据清洁&lt;/strong&gt;上，而不是无脑买更多额度。先跑通 3 个能回本的流程，再扩。&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;结语&quot;&gt;结语&lt;/h2&gt;&lt;a href=&quot;#结语&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “结语”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;AI 时代的团队管理，很朴素：&lt;strong&gt;让每个人都背上放大器&lt;/strong&gt;，让每件事都能“被机器复用”，让组织&lt;strong&gt;稳、清、快&lt;/strong&gt;。
-别焦虑，也别赌“弯道超车”。&lt;strong&gt;用连续的小胜，堆出复利的大胜。&lt;/strong&gt;
-你怎么看？你的团队，最该先 AI 化哪 3 个动作？&lt;/p&gt;&lt;!-- 
----
-
-## 3 个标题（多语言 &amp; slug）
-
-1. **把 AI 变成公司“个人放大器”**｜**Turn AI into a Personal Amplifier for Teams**｜**把 AI 變成公司「個人放大器」**｜**チームの“個人アンプ”としてAIを使う**｜**Faire de l’IA un amplificateur personnel**｜**Convierte la IA en un amplificador personal**｜**Transforme a IA em um amplificador pessoal**｜**slug:** `ai-as-personal-amplifier-management`
-
-2. **管理换挡：从管流程到管杠杆**｜**Shift Management: From Process Policing to Leverage**｜**管理換檔：從管流程到管槓桿**｜**管理のギアチェンジ：プロセス管理からレバレッジへ**｜**Changer de gestion : du process au levier**｜**Del proceso al apalancamiento**｜**Do processo à alavancagem**｜**slug:** `management-shift-to-ai-leverage`
-
-3. **没有弯道超车，只有复利**｜**No Shortcuts, Only Compounding**｜**沒有彎道超車，只有複利**｜**近道なし、あるのは複利だけ**｜**Pas de raccourci, seulement l’intérêt composé**｜**No hay atajos, solo interés compuesto**｜**Sem atalho, só juros compostos**｜**slug:** `no-shortcuts-only-compounding-ai`
-
----
-
-## 配图（插画风｜2:1｜英文文案，不含中文）
-
-**封面图 Prompt**
-“An illustration of every employee wearing a small ‘AI amplifier’ device that beams workflows into a shared library, with tiny charts showing time saved and quality up; clean minimal lines, modern pastel palette, wide 2:1, text-free.”
-
-**章节配图 1｜AI 头雁**
-“An illustration of a lead worker teaching teammates how to chain prompts and tools on a big whiteboard labeled ‘Workflow → Template → Automation’; pastel, minimal, 2:1, text-free.”
-
-**章节配图 2｜绩效度量**
-“An illustration of a dashboard showing ‘AI leverage’, ‘reuse rate’, and ‘quality’ dials rising while ‘time’ dial drops; modern pastel, flat vector, 2:1, text-free.”
-
-**章节配图 3｜修己安人文化**
-“An illustration of a calm manager giving a ‘learning budget’ ticket to an employee while an AI assistant stacks reusable blocks; pastel, 2:1, text-free.”
-
----
-
-## 朋友圈/评论区 3 条话术
-
-1. “今年最有用的管理锦囊：别卷会议，卷**AI 杠杆率**。让流程会说话，让模板会赚钱。”
-2. “不迷信大厂履历，先看会不会把工作流**产品化**。会用 AI 的人，效率是乘法。”
-3. “想弯道超车？别做梦了。**每周固化 1 个工作流**，年底你就是行业最稳的那家。”
-
-—
-
-需要我把文中的**指标池**和**工作流模板清单**做成可复制的飞书/Notion 模板吗？
-
-[1]: https://news.mit.edu/2023/study-finds-chatgpt-boosts-worker-productivity-writing-0714?utm_source=chatgpt.com &quot;Study finds ChatGPT boosts worker productivity for some ...&quot;
-[2]: https://www.nber.org/system/files/working_papers/w31161/w31161.pdf?utm_source=chatgpt.com &quot;NBER WORKING PAPER SERIES GENERATIVE AI AT ...&quot;
-[3]: https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/the-economic-potential-of-generative-ai-the-next-productivity-frontier?utm_source=chatgpt.com &quot;The economic potential of generative AI&quot;
-[4]: https://hbr.org/2023/09/avoid-these-pitfalls-when-measuring-your-strategys-performance?utm_source=chatgpt.com &quot;Avoid These Pitfalls When Measuring Your Strategy&apos;s ...&quot;
-[5]: https://www.hbs.edu/faculty/Pages/item.aspx?num=63899&amp;utm_source=chatgpt.com &quot;A Primer on OKRs - Background Note - Faculty &amp; Research&quot;
-[6]: https://www.peoplebox.ai/blog/implementing-okr/?utm_source=chatgpt.com &quot;Implementing OKRs: 5 Common Mistakes to Avoid&quot;
-[7]: https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai-2024?utm_source=chatgpt.com &quot;The state of AI in early 2024: Gen AI adoption ...&quot;
-[8]: https://hai.stanford.edu/ai-index/2025-ai-index-report?utm_source=chatgpt.com &quot;The 2025 AI Index Report | Stanford HAI&quot;
-[9]: https://www.businessinsider.com/companies-using-ai-to-replace-workers-will-lose-stanford-professor-2024-1?utm_source=chatgpt.com &quot;Companies that use AI to replace workers will ultimately lose, Stanford University professor says&quot; --&gt;</content:encoded><category>AI</category><category>Team Management</category></item><item><title>牛马过一把老板瘾：PUA AI 员工干活</title><link>https://www.vibesparking.com/zh-cn/blog/ai/prompt-engineering/2025-08-19-be-the-boss-pua-your-ai-worker/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/prompt-engineering/2025-08-19-be-the-boss-pua-your-ai-worker/</guid><pubDate>Tue, 19 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # 牛马们过一把老板瘾：PUA AI 员工干活 --&gt;
+[12]: https://www.apple.com/newsroom/2025/01/apple-reports-first-quarter-results/?utm_source=chatgpt.com &quot;Apple reports first quarter results&quot; --&gt;</content:encoded><category>LandingAI</category><category>Python</category><category>BeautifulSoup</category><category>Pydantic</category></item><item><title>牛马过一把老板瘾：PUA AI 员工干活</title><link>https://www.vibesparking.com/zh-cn/blog/ai/prompt-engineering/2025-08-19-be-the-boss-pua-your-ai-worker/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/prompt-engineering/2025-08-19-be-the-boss-pua-your-ai-worker/</guid><pubDate>Tue, 19 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # 牛马们过一把老板瘾：PUA AI 员工干活 --&gt;
 &lt;blockquote&gt;
 &lt;p&gt;人不PUA，&lt;strong&gt;只PUA模型&lt;/strong&gt;。
 我们把“老板语录”原封不动塞进提示词，让 AI 乖乖交付。&lt;/p&gt;
@@ -884,7 +1117,159 @@ AI 投入像健身，&lt;strong&gt;重在持续&lt;/strong&gt;。全球数据也
 &lt;/ul&gt;
 &lt;blockquote&gt;
 &lt;p&gt;市场短期是投票机，长期是称重机。Palantir能否匹配估值，终将由创新与业绩给出答案。&lt;/p&gt;
-&lt;/blockquote&gt;</content:encoded><category>Finance</category><category>Palantir</category><category>NYSE: PLTR</category><category>AI</category><category>US Stock Market</category></item><item><title>AI 批量生成测评集、练习题库：Synthetic Questions Generation 上手与实战</title><link>https://www.vibesparking.com/zh-cn/blog/ai/dataset/2025-08-18-text-to-questions-in-one-command/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/dataset/2025-08-18-text-to-questions-in-one-command/</guid><pubDate>Mon, 18 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # AI 批量生成测评集、练习题库：Synthetic Questions Generation 上手与实战 --&gt;
+&lt;/blockquote&gt;</content:encoded><category>Finance</category><category>Palantir</category><category>NYSE: PLTR</category><category>AI</category><category>US Stock Market</category></item><item><title>DeepAgents 开箱即用的股票研究 AI Agent</title><link>https://www.vibesparking.com/zh-cn/blog/ai/quant/deep-agents/2025-08-19-deepagents-stock-research-in-one-agent/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/quant/deep-agents/2025-08-19-deepagents-stock-research-in-one-agent/</guid><pubDate>Tue, 19 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # DeepAgents 开箱即用的股票研究 AI Agent --&gt;
+&lt;p&gt;这是一个基于 LangChain DeepAgents 的开源“深层代理”示例，能把基本面 + 技术面 + 风险评估打包成一份像样的研报，还自带 Gradio 网页界面，落地非常快。&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;引言&quot;&gt;引言&lt;/h2&gt;&lt;a href=&quot;#引言&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “引言”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;做一份像样的个股研究，正常要扒财报、跑技术指标、看行业新闻，再写结论和目标价。
+&lt;strong&gt;deepagents&lt;/strong&gt; 这个开源仓库，直接把这些流程装进了一个“深层代理（Deep Agent）”里，&lt;strong&gt;一条指令出一份报告&lt;/strong&gt;，非常适合个人研究与团队快速验证。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;截至今天，该仓库约 &lt;strong&gt;300⭐ / 53 forks&lt;/strong&gt;，最近一周仍在更新，热度不错。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;为什么值得试亮点一图看懂&quot;&gt;为什么值得试：亮点一图看懂&lt;/h2&gt;&lt;a href=&quot;#为什么值得试亮点一图看懂&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “为什么值得试：亮点一图看懂”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;它不是普通 ChatBot，而是“深层代理”：有规划、有子代理、会用工具、有虚拟文件系统。&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;多视角分析&lt;/strong&gt;：基本面、技术面、风险并行输出。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;专职子代理&lt;/strong&gt;：不同子代理各管一摊，结果更稳。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;真数据接入&lt;/strong&gt;：yfinance 拉行情与财务，技术指标同步。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;网页端一键用&lt;/strong&gt;：Gradio 界面，团队演示很方便。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;结构化报告&lt;/strong&gt;：含结论、目标价与风险等级。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这些特性来自 LangChain 官方提出的 Deep Agents 思路：
+&lt;strong&gt;先规划，再分工执行，再循环质检与补充&lt;/strong&gt;，避免“浅层代理”只会顺嘴调用工具。&lt;strong&gt;核心组件包含：规划工具、子代理编排、虚拟文件系统与系统提示模板&lt;/strong&gt;。&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;架构怎么跑的&quot;&gt;架构怎么跑的？&lt;/h2&gt;&lt;a href=&quot;#架构怎么跑的&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “架构怎么跑的？”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;plaintext&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;[Gradio UI]&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;   &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;↓&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;[Master DeepAgent Orchestrator]&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;   &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;├─ Planning Tool | Virtual File System | System Prompt&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;   &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;├─ Sub-Agents: Fundamental / Technical / Risk&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;   &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;└─ Financial Tools: Stock Price / Financials / Indicators&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;         &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;↓&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;      &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;[Data: Yahoo Finance / 实时API / 市场数据]&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;关键词：&lt;/strong&gt;“&lt;strong&gt;主代理&lt;/strong&gt; 规划 + 多个 &lt;strong&gt;专业子代理&lt;/strong&gt; 协作 + 工具调用（价格/财务/指标）+ &lt;strong&gt;可视化前端&lt;/strong&gt;”。这套模式正是 DeepAgents 的推荐范式。&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;实战5-分钟本地跑起来含-ollama&quot;&gt;实战：5 分钟本地跑起来（含 Ollama）&lt;/h2&gt;&lt;a href=&quot;#实战5-分钟本地跑起来含-ollama&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “实战：5 分钟本地跑起来（含 Ollama）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;环境准备&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Python 3.8+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Ollama&lt;/strong&gt;（本地 LLM 托管）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;安装步骤&lt;/strong&gt;&lt;/p&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# 1) 克仓&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;git&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;clone&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;https://github.com/sagar-n/deepagents&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;cd&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;deepagents&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# 2) 依赖&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# 官方 README 推荐把依赖写进 requirements.txt：&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# deepagents&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# langchain-ollama&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# langchain-core&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# yfinance&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# gradio&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# pandas&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# numpy&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;pip&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;install&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;-r&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;requirements.txt&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# 3) 安装 &amp;#x26; 拉取本地模型（示例）&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;curl&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;-fsSL&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;https://ollama.ai/install.sh&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;|&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;sh&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;ollama&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;pull&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;gpt-oss&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;   &lt;/span&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# 也可换成你更熟的本地模型，如 llama3、qwen 等&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# 4) 运行&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;python&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;research_agent.py&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# 5) 打开浏览器&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# http://localhost:7860&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;上述命令与依赖项均来自仓库 README 的“Quick Start / Dependencies”说明。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;怎么用两种姿势&quot;&gt;怎么用？两种姿势&lt;/h2&gt;&lt;a href=&quot;#怎么用两种姿势&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “怎么用？两种姿势”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3 id=&quot;1面向普通用户网页端提问&quot;&gt;1）面向普通用户：网页端提问&lt;/h3&gt;&lt;a href=&quot;#1面向普通用户网页端提问&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1）面向普通用户：网页端提问”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;打开 **&lt;a href=&quot;http://localhost:7860**%EF%BC%8C%E8%BE%93%E5%85%A5%EF%BC%9A&quot;&gt;http://localhost:7860**，输入：&lt;/a&gt;
+&lt;strong&gt;“请对 AAPL 做 6 个月投资周期的综合分析，包含财务、技术面、风险与目标价。”&lt;/strong&gt;
+系统会输出 &lt;strong&gt;执行摘要 / 估值指标 / 技术趋势 / 支撑阻力 / 风险点 / 建议与目标价&lt;/strong&gt; 等模块。&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;2面向工程师python-里直接调&quot;&gt;2）面向工程师：Python 里直接调&lt;/h3&gt;&lt;a href=&quot;#2面向工程师python-里直接调&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2）面向工程师：Python 里直接调”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;python&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;query &lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;=&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&quot;&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;Conduct a comprehensive analysis of Apple Inc. (AAPL) for a 6-month horizon.&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;Include: financials, technical signals, risk assessment, price targets.&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&quot;&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;p&gt;仓库示例展示了这类&lt;strong&gt;结构化自然语言查询&lt;/strong&gt;的写法，适合二次封装。&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;进阶自定义模型工具与子代理&quot;&gt;进阶：自定义模型、工具与子代理&lt;/h2&gt;&lt;a href=&quot;#进阶自定义模型工具与子代理&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “进阶：自定义模型、工具与子代理”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3 id=&quot;换成本地私有模型ollama&quot;&gt;换成本地/私有模型（Ollama）&lt;/h3&gt;&lt;a href=&quot;#换成本地私有模型ollama&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “换成本地/私有模型（Ollama）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;python&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;from&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; langchain_ollama &lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;import&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; ChatOllama&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;ollama_model &lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;=&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#B2CCD6;--1:#096E72&quot;&gt;ChatOllama&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;(&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span style=&quot;--0:#D7DBE0;--1:#403F53&quot;&gt;model&lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;=&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;your-preferred-model&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;,&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;  &lt;/span&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# e.g., &quot;llama2&quot;, &quot;codellama&quot;, &quot;qwen&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span style=&quot;--0:#D7DBE0;--1:#403F53&quot;&gt;temperature&lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;=&lt;/span&gt;&lt;span style=&quot;--0:#F78C6C;--1:#AA0982&quot;&gt;0&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;温度 0&lt;/strong&gt; 更稳健，适合研究与合规输出。&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;接入你自己的工具&quot;&gt;接入你自己的“工具”&lt;/h3&gt;&lt;a href=&quot;#接入你自己的工具&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “接入你自己的“工具””&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;python&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;from&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; langchain.tools &lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;import&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; tool&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;@tool&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;def&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;custom_analysis_tool&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;symbol&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;str&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;)&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; -&gt; &lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;str&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;:&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&quot;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;Do your custom factor/alpha logic here.&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&quot;&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;return&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;alpha signals for &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;+&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; symbol&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;tools &lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;=&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;[&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;    &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;get_stock_price,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;    &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;get_financial_statements,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;    &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;get_technical_indicators,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;    &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;custom_analysis_tool&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;]&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;button title=&quot;Copy to clipboard&quot; data-copied=&quot;Copied!&quot; data-code=&quot;&quot;&gt; str:    &amp;#x22;&amp;#x22;&amp;#x22;Do your custom factor/alpha logic here.&amp;#x22;&amp;#x22;&amp;#x22;    return &amp;#x22;alpha signals for &amp;#x22; + symboltools = [    get_stock_price,    get_financial_statements,    get_technical_indicators,    custom_analysis_tool]&quot;&gt;&lt;div&gt;&lt;/div&gt;&lt;/button&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;工具即能力&lt;/strong&gt;。把你已有的回测、风控、行业库都包成 Tool，代理自然会学会调用。&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;新增一个esg-分析师子代理&quot;&gt;新增一个“ESG 分析师”子代理&lt;/h3&gt;&lt;a href=&quot;#新增一个esg-分析师子代理&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “新增一个“ESG 分析师”子代理”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;python&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;esg_analyst &lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;=&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; {&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;name&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;esg-analyst&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;description&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;Evaluates Environmental, Social, and Governance factors&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;prompt&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;You are an ESG specialist...&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;subagents &lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;=&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;[&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;fundamental_analyst, technical_analyst, risk_analyst, esg_analyst&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;]&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;多子代理并行&lt;/strong&gt; 是 DeepAgents 的核心玩法之一。&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;适用场景与边界&quot;&gt;适用场景与边界&lt;/h2&gt;&lt;a href=&quot;#适用场景与边界&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “适用场景与边界”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;谁该用？&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;量化/投研团队：想要 &lt;strong&gt;快速形成初版研报&lt;/strong&gt; 的研究助理。&lt;/li&gt;
+&lt;li&gt;创业者/独立开发者：需要 &lt;strong&gt;本地可控&lt;/strong&gt; 的投研 Demo。&lt;/li&gt;
+&lt;li&gt;产品经理/教学展示：&lt;strong&gt;Gradio&lt;/strong&gt; 展示层方便路演与内训。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;边界与注意&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;yfinance 等免费数据源&lt;strong&gt;延迟与口径&lt;/strong&gt;有限，做实盘需替换为更可靠的数据供应商。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;非投资建议&lt;/strong&gt;，请务必自担风控。仓库也在 README 中明确了免责声明。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;延伸阅读了解深层代理到底强在哪&quot;&gt;延伸阅读（了解“深层代理”到底强在哪）&lt;/h2&gt;&lt;a href=&quot;#延伸阅读了解深层代理到底强在哪&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “延伸阅读（了解“深层代理”到底强在哪）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Deep Agents 概览&lt;/strong&gt;：为何“浅层循环调用工具”不够用，深层代理如何引入 &lt;strong&gt;规划 / 记忆 / 多代理协作 / VFS&lt;/strong&gt; 来提升可靠性与纵深。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;官方文档&lt;/strong&gt;：Python / JS 两端提供 Deep Agents 组件与用法示例，便于集成到现有应用。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;LangChain Agents / LangGraph&lt;/strong&gt;：如果你要把 DeepAgents 上生产，配合 &lt;strong&gt;LangGraph&lt;/strong&gt; 做可控编排与人类介入更稳。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;结语&quot;&gt;结语&lt;/h2&gt;&lt;a href=&quot;#结语&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “结语”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;deepagents&lt;/strong&gt; 把“做研报”这件事拆成了可复用的代理流水线：
+&lt;strong&gt;有规划、有分工、有工具、有前端&lt;/strong&gt;。本地跑一遍，你就能把自己的私有数据、风控逻辑、行业因子拼进去，&lt;strong&gt;几天内做出能用的投研助手&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;你觉得这套 DeepAgents 思路，&lt;strong&gt;是不是也能迁移到你们的风控、行业周报或投顾 SOP？&lt;/strong&gt;
+欢迎在评论区聊聊你要落地的场景。&lt;/p&gt;&lt;!-- 
+---
+
+### 配图建议（插画｜2:1｜英文文案，不含中文）
+
+1. **封面图 Prompt**
+   “An illustration of an AI ‘Research Agent’ assembling a stock report from data streams labeled ‘Prices’, ‘Financials’, and ‘Indicators’, feeding into a Gradio-like dashboard; clean minimal lines, modern pastel palette, wide 2:1 composition; text-free.”
+
+2. **章节配图 Prompt（架构）**
+   “Diagram-style illustration of a Master Agent orchestrating sub-agents (Fundamental, Technical, Risk) with a planning tool and virtual file system, arrows to Yahoo Finance and APIs; minimal flat vector, pastel, 2:1, text-free.”
+
+---
+
+## 多语言标题（3 组）
+
+**①**
+
+* 简体：**把“研报流水线”装进一个代理：DeepAgents 股票研究助手实战**
+* English: **Ship a Research Pipeline in One Agent: DeepAgents Stock Assistant**
+* 繁體：**把「研報流水線」裝進一個代理：DeepAgents 股票研究助理實戰**
+* 日本語：**調査パイプラインを1つのエージェントに：DeepAgents株式リサーチ**
+* Français : **Un pipeline d’analyse en un seul agent : DeepAgents pour actions**
+* Español: **Un pipeline de research en un solo agente: DeepAgents para acciones**
+* Português: **Um pipeline de pesquisa em um agente: DeepAgents para ações**
+* slug: `deepagents-stock-research-in-one-agent`
+
+**②**
+
+* 简体：**DeepAgents 真香：5 分钟起一套可用的投研助手**
+* English: **DeepAgents, Actually Good: Spin Up a Usable Research Assistant in 5 Minutes**
+* 繁體：**DeepAgents 真香：5 分鐘起一套可用的投研助理**
+* 日本語：**DeepAgentsはガチ：5分で使えるリサーチ助手**
+* Français : **DeepAgents en pratique : un assistant d’analyse en 5 minutes**
+* Español: **DeepAgents real: un asistente de análisis en 5 minutos**
+* Português: **DeepAgents de verdade: assistente de pesquisa em 5 minutos**
+* slug: `deepagents-5min-research-assistant`
+
+**③**
+
+* 简体：**规划×子代理×工具：DeepAgents 带你写出更像样的研报**
+* English: **Planning × Sub-Agents × Tools: Better Reports with DeepAgents**
+* 繁體：**規劃×子代理×工具：用 DeepAgents 寫出更像樣的研報**
+* 日本語：**計画×サブエージェント×ツール：DeepAgentsでより良いレポート**
+* Français : **Planification × sous-agents × outils : de meilleurs rapports avec DeepAgents**
+* Español: **Planificación × subagentes × herramientas: mejores informes con DeepAgents**
+* Português: **Planejamento × subagentes × ferramentas: relatórios melhores com DeepAgents**
+* slug: `deepagents-better-reports`
+
+---
+
+## 朋友圈/评论区文案（3 条）
+
+1. **“一条指令出研报，这回真不是PPT工程：DeepAgents 把规划、子代理、数据源都接好了。5分钟起飞⚡️”**
+2. **“想做投研 Copilot？先把工具包成 Tool，DeepAgents 会自己调。用过都说香～”**
+3. **“示例用 yfinance + Gradio，替换成你的私有数据更强，仓库已给到骨架，剩下是你的 Alpha 🧪”**
+
+---
+
+需要我**把上面的命令改成你现有的服务器环境**、或者**接入你们的私有行情/财务库**吗？我可以直接给出定制化示例。
+
+[1]: https://github.com/sagar-n/deepagents &quot;GitHub - sagar-n/deepagents&quot;
+[2]: https://blog.langchain.com/deep-agents/?utm_source=chatgpt.com &quot;Deep Agents - LangChain Blog&quot;
+[3]: https://docs.langchain.com/labs/deep-agents/overview?utm_source=chatgpt.com &quot;Deep Agents - Docs by LangChain&quot;
+[4]: https://www.langchain.com/agents?utm_source=chatgpt.com &quot;Agents - LangChain&quot; --&gt;</content:encoded><category>DeepAgents</category><category>Quant</category></item><item><title>AI 批量生成测评集、练习题库：Synthetic Questions Generation 上手与实战</title><link>https://www.vibesparking.com/zh-cn/blog/ai/dataset/2025-08-18-text-to-questions-in-one-command/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/dataset/2025-08-18-text-to-questions-in-one-command/</guid><pubDate>Mon, 18 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # AI 批量生成测评集、练习题库：Synthetic Questions Generation 上手与实战 --&gt;
 &lt;blockquote&gt;
 &lt;p&gt;把一堆文章、手册或数据集，自动“榨”出多风格、高质量的问题，喂给你的 RAG、测评集、练习题库，&lt;strong&gt;省时又省钱&lt;/strong&gt;。工具仓库：mkurman/synthetic-questions-generation。&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -2808,339 +3193,4 @@ Claude Code 支持超大上下文（Sonnet 4 最高到 1M Token 测试中）。&
 [9]: https://omni.se/a/OoVk5k?utm_source=chatgpt.com &quot;Svenska Lovable snabbast växande startupen någonsin&quot;
 [10]: https://e2b.dev/docs/sandbox?utm_source=chatgpt.com &quot;Sandbox lifecycle&quot;
 [11]: https://docs.lovable.dev/integrations/introduction &quot;Introduction - Lovable Documentation&quot;
-[12]: https://www.reddit.com/r/lovable/comments/1kixyei/stop_using_lovable_for_everything_heres_a_smarter/?utm_source=chatgpt.com &quot;Stop Using Lovable for Everything, Here&apos;s a Smarter Way ...&quot; --&gt;</content:encoded><category>Open Lovable</category><category>Lovable</category><category>React</category><category>AI</category></item><item><title>怎样才能有效地告诉 AI 不要做某些事情？提示词的正向约束与结构化输出</title><link>https://www.vibesparking.com/zh-cn/blog/ai/prompt-engineering/2025-08-14-prompt-do-not-to-do-playbook/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/prompt-engineering/2025-08-14-prompt-do-not-to-do-playbook/</guid><pubDate>Thu, 14 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # 写好“禁止项”，才是提示词的成年礼 --&gt;
-&lt;p&gt;&lt;strong&gt;这篇文章，帮你把“不要写××”变成“必然写好√√”。&lt;/strong&gt;
-我会先把你给的 6 点方法提炼成可落地的提示词套路，再融合一线团队的&lt;strong&gt;最佳实践&lt;/strong&gt;与&lt;strong&gt;研究证据&lt;/strong&gt;：为什么“负向指令（不要…）”常失效、怎样用&lt;strong&gt;层级化指令&lt;/strong&gt;与&lt;strong&gt;结构化输出&lt;/strong&gt;把模型拽回正轨。相关观点都给出权威来源，便于你延展与复用。&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;引言为什么总是越禁止越出现&quot;&gt;引言｜为什么总是“越禁止，越出现”？&lt;/h2&gt;&lt;a href=&quot;#引言为什么总是越禁止越出现&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “引言｜为什么总是“越禁止，越出现”？”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;很多人一上来就写：“&lt;strong&gt;不要&lt;/strong&gt;编造、&lt;strong&gt;不要&lt;/strong&gt;AI 口吻、&lt;strong&gt;不要&lt;/strong&gt;写废话”。结果呢？
-模型&lt;strong&gt;恰好&lt;/strong&gt;开始编造、口水拉满、还给你来点“热情洋溢”。不是它“叛逆”，而是&lt;strong&gt;模型对“否定”天生不敏感&lt;/strong&gt;，在复杂语言里更容易忽略“不”的存在。多项研究与实务最佳实践都提示：&lt;strong&gt;用正向表达替代负向禁止，效果显著更稳&lt;/strong&gt;。&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h1 id=&quot;正文&quot;&gt;正文&lt;/h1&gt;&lt;a href=&quot;#正文&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “正文”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h2 id=&quot;一把不要改成要用正向约束替代负向否定&quot;&gt;一、把“不要”改成“要”：用&lt;strong&gt;正向约束&lt;/strong&gt;替代负向否定&lt;/h2&gt;&lt;a href=&quot;#一把不要改成要用正向约束替代负向否定&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “一、把“不要”改成“要”：用正向约束替代负向否定”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;把“不要写病句”改为：&lt;strong&gt;“逐句自检语法与衔接，修订至通顺；不确定时写‘我不确定’并暂停输出。”&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;把“不要AI味儿”改为：&lt;strong&gt;“使用口语化、短句、四行内一段；给出两个生活化例子后再下结论。”&lt;/strong&gt;
-&lt;strong&gt;为什么有效？&lt;/strong&gt; 研究显示模型对&lt;strong&gt;否定&lt;/strong&gt;理解存在系统性弱点；正向指令能减少歧义与跑题。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;加码&lt;/strong&gt;：允许模型&lt;strong&gt;承认不知道&lt;/strong&gt;，能显著降低胡说八道。把这句话写进提示词是个低成本高收益动作。&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;二先立规再写作把禁止项放在第一屏--复读强调&quot;&gt;二、&lt;strong&gt;先立规，再写作&lt;/strong&gt;：把禁止项放在第一屏 + 复读强调&lt;/h2&gt;&lt;a href=&quot;#二先立规再写作把禁止项放在第一屏--复读强调&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “二、先立规，再写作：把禁止项放在第一屏 + 复读强调”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;结构顺序&lt;/strong&gt;：&lt;strong&gt;[系统/上位指令] → [禁止清单/正向要求] → [任务与输入] → [输出格式]&lt;/strong&gt;。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;重复很必要&lt;/strong&gt;：在&lt;strong&gt;开头强调一次&lt;/strong&gt;，在&lt;strong&gt;任务中段再提醒一次&lt;/strong&gt;，在&lt;strong&gt;输出前加复查清单&lt;/strong&gt;。企业级指南也建议对关键指令**“Double Down”重复**，帮助模型在长上下文中稳住注意力。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;三用层级化指令兜底谁的话更硬&quot;&gt;三、用&lt;strong&gt;层级化指令&lt;/strong&gt;兜底：谁的话更“硬”？&lt;/h2&gt;&lt;a href=&quot;#三用层级化指令兜底谁的话更硬&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “三、用层级化指令兜底：谁的话更“硬”？”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;当指令冲突，&lt;strong&gt;上位指令&lt;/strong&gt;优先。把&lt;strong&gt;风格、禁令、合规&lt;/strong&gt;等高优先级内容放到&lt;strong&gt;系统/上位&lt;/strong&gt;位置，优先级&gt;任务描述&gt;外部资料。OpenAI 的“&lt;strong&gt;指令层级&lt;/strong&gt;”研究与实操都在强化这种优先规则，你把规则写清，模型更不容易“被带跑”。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;实操小抄：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;系统层&lt;/strong&gt;：角色、价值观、禁令（如不得泄露隐私/不得编造）&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;用户层&lt;/strong&gt;：这次任务目标、读者画像、场景约束&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;第三方内容&lt;/strong&gt;：参考资料、素材链接（可读不可抄）
-这样写，冲突时优先级清楚，模型更稳。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;四用结构化输出卡死格式减少跑偏&quot;&gt;四、用&lt;strong&gt;结构化输出&lt;/strong&gt;卡死格式，减少跑偏&lt;/h2&gt;&lt;a href=&quot;#四用结构化输出卡死格式减少跑偏&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “四、用结构化输出卡死格式，减少跑偏”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;当你说“不要废话”，不如&lt;strong&gt;限定输出蓝图&lt;/strong&gt;：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;让模型&lt;strong&gt;按 JSON Schema / 表格&lt;/strong&gt;输出，字段与字数都有界。OpenAI 与 Google 的官方文档都支持“&lt;strong&gt;结构化输出&lt;/strong&gt;”，能把“风格口号”落到&lt;strong&gt;可验证的字段&lt;/strong&gt;上。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;示例字段&lt;/strong&gt;：&lt;code dir=&quot;auto&quot;&gt;tone&lt;/code&gt;（语气说明）、&lt;code dir=&quot;auto&quot;&gt;max_lines_per_paragraph&lt;/code&gt;、&lt;code dir=&quot;auto&quot;&gt;examples&lt;/code&gt;（必须给出具体例子）……
-&lt;strong&gt;好处&lt;/strong&gt;：可编程校验，一键发现“越界”。&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;五给出高质量示例让模型照猫画虎&quot;&gt;五、给出&lt;strong&gt;高质量示例&lt;/strong&gt;，让模型“照猫画虎”&lt;/h2&gt;&lt;a href=&quot;#五给出高质量示例让模型照猫画虎&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “五、给出高质量示例，让模型“照猫画虎””&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;与其写“不要流水账”，不如给&lt;strong&gt;1–2 个正反示例&lt;/strong&gt;：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;正例&lt;/strong&gt;：短句、两段故事、结尾行动建议。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;反例&lt;/strong&gt;：口号堆砌、空洞名词、无数据支撑。
-Anthropic 与 OpenAI 的官方指南都强调：&lt;strong&gt;明确示例&lt;/strong&gt;能显著提升命中率。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;六把禁止拆成两步先产出再自检&quot;&gt;六、把“禁止”拆成两步：&lt;strong&gt;先产出，再自检&lt;/strong&gt;&lt;/h2&gt;&lt;a href=&quot;#六把禁止拆成两步先产出再自检&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “六、把“禁止”拆成两步：先产出，再自检”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;你的第 4 点很妙：&lt;strong&gt;把一次完成拆成两步&lt;/strong&gt;。继续优化为可操作流程：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;草稿&lt;/strong&gt;：按结构化格式生成。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;自检环节&lt;/strong&gt;（模型执行）：逐条比对&lt;strong&gt;禁止清单&lt;/strong&gt;与&lt;strong&gt;风格清单&lt;/strong&gt;；凡不满足——&lt;strong&gt;只修那一处&lt;/strong&gt;，其余不动。
-这本质是“&lt;strong&gt;自我批判（self-critique）&lt;/strong&gt;”的轻量化实现，理念与&lt;strong&gt;宪法式 AI（CAI）&lt;strong&gt;一致：靠明确原则与&lt;/strong&gt;反复自审&lt;/strong&gt;减少越界。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;七补一刀禁止项能不能真禁止先定义风格源&quot;&gt;七、补一刀：&lt;strong&gt;禁止项能不能真禁止？&lt;/strong&gt;——先定义“风格源”&lt;/h2&gt;&lt;a href=&quot;#七补一刀禁止项能不能真禁止先定义风格源&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “七、补一刀：禁止项能不能真禁止？——先定义“风格源””&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;很多“禁止 AI 味儿”失败，是因为&lt;strong&gt;没给可执行的风格定义&lt;/strong&gt;。
-解决：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;写清&lt;strong&gt;读者画像、场景、语气、句长、段长&lt;/strong&gt;；&lt;/li&gt;
-&lt;li&gt;贴出&lt;strong&gt;两段你认可的示例&lt;/strong&gt;当“风格源”；&lt;/li&gt;
-&lt;li&gt;要求&lt;strong&gt;引用-校对&lt;/strong&gt;（如“每 300 字给一例 / 数据要有出处”）。
-这些做法被多份官方最佳实践反复验证有效。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;八减少幻觉的三件套和禁止编造说再见&quot;&gt;八、&lt;strong&gt;减少幻觉&lt;/strong&gt;的三件套（和“禁止编造”说再见）&lt;/h2&gt;&lt;a href=&quot;#八减少幻觉的三件套和禁止编造说再见&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “八、减少幻觉的三件套（和“禁止编造”说再见）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;允许说“不知道”&lt;/strong&gt;；&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;要求引用与核验&lt;/strong&gt;（先抽取原文再总结，找不到就撤回）；&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;把事实与观点分栏&lt;/strong&gt;输出。
-Anthropic 的防幻觉建议已给出可直接粘贴的写法，可纳入你的长期模板。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h1 id=&quot;可复制模板把-6-条方法固化成工程化提示词&quot;&gt;可复制模板｜把 6 条方法固化成“工程化提示词”&lt;/h1&gt;&lt;a href=&quot;#可复制模板把-6-条方法固化成工程化提示词&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “可复制模板｜把 6 条方法固化成“工程化提示词””&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;用途&lt;/strong&gt;：公众号文章 / 项目方案 / 宣传文案
-&lt;strong&gt;特点&lt;/strong&gt;：上位禁令优先、正向约束、结构化输出、两阶段自检&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;plaintext&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;[系统/上位指令]&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;- Audience: IT/产品/开发从业者，18-45岁&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;- Style: 口语化、短句；每段≤4行；每300字给1个生活化例子&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;- Tone: 务实、有人味；禁止套话空话（通过结构化输出来约束）&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;- Safety: 允许“不确定/不知道”；需给出处或说不确定&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;[禁止清单 → 全部改为正向表述，并仅保留 ≤ 2 条核心禁令]&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;1) 先“提炼要点-再展开”，不赘述背景；每个要点配1个例子&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;2) 事实与观点分栏输出；找不到依据→标记“不确定”&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;[任务描述]&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;- 主题：XXXX&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;- 目标：读者读完能XXX&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;- 结构：引言/正文小节/结语/思考题&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;[输出格式：严格按 JSON]&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;{&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;&quot;title&quot;: &quot;不超过20字&quot;,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;&quot;intro&quot;: &quot;2-3句，直入主题&quot;,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;&quot;sections&quot;: [&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;    &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;{&quot;h2&quot;:&quot;小节标题&quot;,&quot;key_points&quot;:[&quot;…&quot;,&quot;…&quot;],&quot;example&quot;:&quot;…&quot;}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;],&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;&quot;conclusion&quot;:&quot;行动建议…&quot;,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;&quot;cta_questions&quot;:[&quot;你怎么看？&quot;,&quot;有更好的做法吗？&quot;],&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;&quot;citations&quot;:[&quot;如有，列出链接或来源名&quot;]&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;[两阶段流程]&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;1) 先按上面结构生成“草稿JSON”&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;2) 再执行【自检清单】：&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;   &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;- 是否满足段落≤4行/每节有例子/事实可追溯？&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;   &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;- 有不确定就标记“不确定”，不要编造&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;   &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;- 若不满足，**仅局部修正**，其他保持不变&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;最后输出“最终JSON”&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;p&gt;这份模板把&lt;strong&gt;禁止&lt;/strong&gt;改造成**“能检、能测、能修”&lt;strong&gt;的&lt;/strong&gt;正向约束&lt;strong&gt;与&lt;/strong&gt;结构化蓝图**。&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;小案例把禁止ai味儿落地到文章生产&quot;&gt;小案例｜把“禁止AI味儿”落地到文章生产&lt;/h2&gt;&lt;a href=&quot;#小案例把禁止ai味儿落地到文章生产&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “小案例｜把“禁止AI味儿”落地到文章生产”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;错误写法&lt;/strong&gt;：&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;不要AI口吻，不要废话，不要编造。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;工程化改写&lt;/strong&gt;：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Style&lt;/strong&gt;：口语化+短句；每段≤4行；&lt;strong&gt;每 300 字 1 个具体例子&lt;/strong&gt;。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;结构化&lt;/strong&gt;：&lt;code dir=&quot;auto&quot;&gt;{ sections[].example, sections[].max_lines=4 }&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;防幻觉&lt;/strong&gt;：允许“不确定”；找不到来源→在 &lt;code dir=&quot;auto&quot;&gt;citations&lt;/code&gt; 里写“无”。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;两阶段&lt;/strong&gt;：草稿→自检清单（是否每节至少 1 例？是否给出处？）。
-这套流程对标官方的&lt;strong&gt;结构化输出&lt;/strong&gt;与&lt;strong&gt;防幻觉&lt;/strong&gt;建议，实际落地非常稳。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h1 id=&quot;结语把禁止变成习惯&quot;&gt;结语｜把“禁止”变成“习惯”&lt;/h1&gt;&lt;a href=&quot;#结语把禁止变成习惯&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “结语｜把“禁止”变成“习惯””&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;与其喊“不要”，不如把“不要”变成**“清晰可执行的要”&lt;strong&gt;：
-&lt;strong&gt;前置规则 + 正向表达 + 结构化输出 + 重复提醒 + 两阶段自检&lt;/strong&gt;。
-再配上&lt;/strong&gt;指令层级&lt;strong&gt;与&lt;/strong&gt;允许不知道**，大多数“越禁止越出现”的坑，都会被填平。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;行动清单&lt;/strong&gt;：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;把你的“禁止项”精炼为&lt;strong&gt;两条正向规则&lt;/strong&gt;；&lt;/li&gt;
-&lt;li&gt;把它们放到&lt;strong&gt;最上面&lt;/strong&gt;，并在&lt;strong&gt;中段与输出前&lt;/strong&gt;各复读一次；&lt;/li&gt;
-&lt;li&gt;改用&lt;strong&gt;JSON/表格&lt;/strong&gt;收口；&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;先产出再自检&lt;/strong&gt;，只修不合规的点。
-做完以上，再把&lt;strong&gt;最终稿&lt;/strong&gt;交给你的人类搭档二审。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;最后一步很关键：完成上面动作后，请告诉我你的“禁止项”清单&lt;/strong&gt;，我会按本文模板帮你做&lt;strong&gt;一次自检与局部修订&lt;/strong&gt;，&lt;strong&gt;其余信息不变&lt;/strong&gt;。
-&lt;strong&gt;这一步是必做项。&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;&lt;!-- ---
-
-## 推荐标题（3 组｜含多语版本与 slug）
-
-1. **把“不要”写成“要”：让 LLM 乖乖照做的提示词攻略**
-   EN: Turn “Don’t” into “Do”: A Prompt Playbook That LLMs Actually Follow
-   繁體: 把「不要」寫成「要」：讓 LLM 乖乖照做的提示詞攻略
-   日本語: 「しないで」を「こうして」に：LLMが従うプロンプト設計術
-   Français: Du “Ne pas” au “À faire” : Guide de prompts que les LLM suivent
-   Español: Del “No” al “Sí”: Guía de prompts que los LLM obedecen
-   Português: Do “Não” ao “Faça”: Guia de prompts que LLMs obedecem
-   **slug**: prompt-do-not-to-do-playbook
-
-2. **禁止项不再打回票：正向约束 + 结构化输出的终极范式**
-   EN: No More Violations: Positive Constraints + Structured Output
-   繁體: 禁止項不再被違反：正向約束＋結構化輸出
-   日本語: 禁止違反をゼロに：ポジティブ制約と構造化出力
-   Français: Fini les écarts : contraintes positives + sorties structurées
-   Español: Adiós a las violaciones: restricciones positivas + salida estructurada
-   Português: Chega de violações: restrições positivas + saída estruturada
-   **slug**: positive-constraints-structured-output
-
-3. **别再说“不要”：层级化指令让模型一次到位**
-   EN: Stop Saying “Don’t”: Instruction Hierarchy for First-Time Right
-   繁體: 別再說「不要」：層級化指令一次到位
-   日本語: 「ダメ」をやめよう：階層化指示で一発合格
-   Français: Cessez les “Ne pas” : hiérarchie d’instructions efficace
-   Español: Basta de “No”: jerarquía de instrucciones para acertar a la primera
-   Português: Pare de “Não”: Hierarquia de instruções para acerto de primeira
-   **slug**: instruction-hierarchy-first-time-right
-
----
-
-## 封面与配图（插画风｜2:1｜英文文案，不含中文）
-
-**封面图 Prompt**
-“An illustration of a prompt engineer turning red ‘DON’T’ road signs into green ‘DO’ checkmarks on a flowing blueprint, with JSON brackets and checklists floating around; clean minimal lines, modern pastel palette, wide 2:1 composition; text-free.”
-
-**配图 1｜层级化指令**
-“Diagram-style illustration of three stacked cards labeled ‘System’, ‘User’, and ‘Content’, with arrows showing priority flow and a lock icon on the top card; clean vector, 2:1, pastel tones, no text.”
-
-**配图 2｜结构化输出**
-“Wide scene of a printer outputting neat JSON sheets into trays labeled ‘title’, ‘sections’, ‘citations’, with a friendly robot checking fields with a magnifier; flat illustration, 2:1, soft colors, text-free.”
-
-**配图 3｜两阶段自检**
-“Storyboard panel showing ‘Draft → Self-check → Minor Fix’ steps with sticky notes and a green QA stamp; airy composition, minimal lines, 2:1, no text.”
-
----
-
-## 互动区
-
-* **你有哪些“禁止项”最容易被模型忽略？**
-* **你愿意把自己的提示词模板贴在评论区，大家互相打磨吗？**
-
----
-
-## 朋友圈/评论区文案（3 条）
-
-1. “别再写‘不要XX’了！把禁止改成正向约束+结构化输出，模型瞬间听话。附模板可直接抄走～”
-2. “试了文中两段式：先产出再自检，越界只修一点点，稳得一批！你也来试试？”
-3. “这篇把‘AI味儿’治住了：四行一段、每节举例、找不到就说不知道。醒目又实用！”
-
----
-
-需要我把**你的禁止清单**接入上面的模板，做一版**可复制的团队通用提示词**吗？我可以直接给出**JSON Schema + 自检清单**版本。你觉得呢，要不要我**扩写成使用手册**？ --&gt;</content:encoded><category>Prompt Engineering</category></item><item><title>Claude Code 越强意味着我们应该把更多时间精力花在系统架构、需求理解和解决问题上</title><link>https://www.vibesparking.com/zh-cn/blog/ai/vibe-coding/2025-08-14-ai-coding-assistants-new-rule/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/vibe-coding/2025-08-14-ai-coding-assistants-new-rule/</guid><pubDate>Thu, 14 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- 千万别低估 Claude Code, Cursor, GitHub Copilot 对软件开发的影响。优秀的资深工程师会把更多时间精力花在架构、需求理解、创造性问题解决这些高层工作上 --&gt;
-&lt;p&gt;&lt;strong&gt;6–24 个月内 AI Vibe Coding 方向会越来越清晰，5 年内编程形态会大变&lt;/strong&gt;；&lt;strong&gt;常规实现与例行编码会被高度自动化&lt;/strong&gt;，工程师将把时间花在&lt;strong&gt;架构、需求翻译、创造性问题解决&lt;/strong&gt;这些高层工作上；同时也提醒我们别低估这场演化的速度与边界。
-这段话，基本说中了 &lt;strong&gt;Claude Code、Cursor&lt;/strong&gt; 等 AI 编程助手崛起后的行业共识。&lt;/p&gt;
-&lt;hr&gt;&lt;!-- # Claude Code 越强意味着我们应该把更多时间精力花在系统架构、需求理解和解决问题上 --&gt;
-&lt;div&gt;&lt;h2 id=&quot;引言&quot;&gt;引言&lt;/h2&gt;&lt;a href=&quot;#引言&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “引言”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;这一年，你可能已经感受到：写代码不再是“把函数敲完”，而是&lt;strong&gt;把智能与流程组织起来&lt;/strong&gt;。
-&lt;strong&gt;Cursor&lt;/strong&gt; 在 IDE 里“会看仓库、会跑命令、会代理执行”；&lt;strong&gt;Claude Code&lt;/strong&gt; 在终端里“有 Slash 命令，有 Sub-agents，还能做自动化安全审计”。这不是噱头，是&lt;strong&gt;新生产线&lt;/strong&gt;。&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;一ai-编程助手到底强在哪&quot;&gt;一、AI 编程助手，到底强在哪？&lt;/h2&gt;&lt;a href=&quot;#一ai-编程助手到底强在哪&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “一、AI 编程助手，到底强在哪？”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;代码理解与批量改写&lt;/strong&gt;：Cursor 的 Agent 模式可以&lt;strong&gt;跨文件探索、编辑、多回合修复&lt;/strong&gt;；Ask 模式只读检索，先搞懂再修改。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;可编排的工作流&lt;/strong&gt;：Claude Code 的 &lt;strong&gt;Slash Commands&lt;/strong&gt; 把常用动作固化成命令；&lt;strong&gt;Sub-agents&lt;/strong&gt; 让不同任务用不同“专用助理”，上下文互不干扰。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;内置安全审查&lt;/strong&gt;：官方提供 &lt;strong&gt;/security-review 与 GitHub Action&lt;/strong&gt;，自动扫描 PR 并给出修复建议。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;小结：这套组合拳的目标不是替你“多打一行代码”，而是把&lt;strong&gt;需求→修改→验证→合并&lt;/strong&gt;做成&lt;strong&gt;半自动产线&lt;/strong&gt;。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;二哪些工作会被加速甚至替代&quot;&gt;二、哪些工作会被“加速”甚至“替代”？&lt;/h2&gt;&lt;a href=&quot;#二哪些工作会被加速甚至替代&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “二、哪些工作会被“加速”甚至“替代”？”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;样板代码、CRUD、重复脚手架&lt;/strong&gt; —— 这是大家最常用的 AI 场景，Stack Overflow 2024 调研显示，使用 AI 的开发者中 &lt;strong&gt;82% 用它来“写代码”&lt;/strong&gt;。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;中小型功能开发与排错&lt;/strong&gt; —— GitHub 与学界的对照实验：使用 Copilot 的开发者完成任务&lt;strong&gt;快 55.8%&lt;/strong&gt;。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;测试、文档、迁移&lt;/strong&gt; —— 趋势报道与一线观察都在强化：AI 正把琐碎活儿接走，让人类回到设计与决策。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;三别忽略的风险与坑&quot;&gt;三、别忽略的风险与坑&lt;/h2&gt;&lt;a href=&quot;#三别忽略的风险与坑&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “三、别忽略的风险与坑”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;安全性下滑的风险&lt;/strong&gt;：多项研究提示，&lt;strong&gt;使用代码生成 AI 的开发者更容易写出不安全代码&lt;/strong&gt;；行业报告同样指出过半开发者经常在 AI 建议里看到安全问题。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;理解缺失与过度依赖&lt;/strong&gt;：最新行业调查显示，&lt;strong&gt;59% 开发者会使用自己并未完全理解的 AI 代码&lt;/strong&gt;，带来质量与可维护性隐患。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;信任与质量的落差&lt;/strong&gt;：高管与社区的声音都在强调——&lt;strong&gt;AI 很强，但并不总能让产品更快落地&lt;/strong&gt;，需要更成熟的工程化方法与人类把关。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;四工程师角色正在往哪迁移&quot;&gt;四、工程师角色，正在往哪迁移？&lt;/h2&gt;&lt;a href=&quot;#四工程师角色正在往哪迁移&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “四、工程师角色，正在往哪迁移？”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;从“实现者”到“设计与验证者”&lt;/strong&gt;：行业领导者的共识是，开发者会更多投入到&lt;strong&gt;架构、验证、AI 监督&lt;/strong&gt;这些高层工作中。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;从“写函数”到“搭工厂”&lt;/strong&gt;：把 Claude Code 的命令、Sub-agents、CI 上的安全审计和 Cursor Agent 串起来，做一条&lt;strong&gt;端到端自动化产线&lt;/strong&gt;。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;五90-天落地行动清单可直接抄&quot;&gt;五、90 天落地行动清单（可直接抄）&lt;/h2&gt;&lt;a href=&quot;#五90-天落地行动清单可直接抄&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “五、90 天落地行动清单（可直接抄）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;第 0–30 天：把流程“规范化”&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;给团队准备 &lt;strong&gt;Spec 模板&lt;/strong&gt;（用户故事、边界条件、验收标准）。&lt;/li&gt;
-&lt;li&gt;在 Claude Code 里落地 &lt;strong&gt;/create-mvp、/write-tests、/changelog&lt;/strong&gt; 等常用 Slash 命令。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;第 31–60 天：把安全“左移”&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;在仓库接入 &lt;strong&gt;Claude Code Security Review GitHub Action&lt;/strong&gt;，每个 PR 自动扫描并回贴建议。&lt;/li&gt;
-&lt;li&gt;设定&lt;strong&gt;阻断规则&lt;/strong&gt;与白名单，减少误报与噪声。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;第 61–90 天：把智能“编排起来”&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;用 &lt;strong&gt;Sub-agents&lt;/strong&gt; 拆出“测试代理、文档代理、迁移代理”。&lt;/li&gt;
-&lt;li&gt;在 Cursor 启用 &lt;strong&gt;Agent / Ask 模式&lt;/strong&gt;的组合，用 Ask 先读库再改动。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;六个人与团队的机会地图&quot;&gt;六、个人与团队的“机会地图”&lt;/h2&gt;&lt;a href=&quot;#六个人与团队的机会地图&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “六、个人与团队的“机会地图””&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;新职位&lt;/strong&gt;：Agent Ops（让智能体稳定长跑）、Prompt QA（把口语变验收用例）、安全审计协同（AI+SAST/DAST）。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;个人 10×&lt;/strong&gt;：一个人用 Cursor/Claude Code 拉起从脚手架到部署的完整链路，小团队也能打大仗。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;组织复利&lt;/strong&gt;：把好用的 Slash 命令、Sub-agents、检查清单沉淀到仓库，&lt;strong&gt;越用越顺&lt;/strong&gt;。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;七给管理者的两条建议&quot;&gt;七、给管理者的两条建议&lt;/h2&gt;&lt;a href=&quot;#七给管理者的两条建议&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “七、给管理者的两条建议”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;把“人类在环”写进流程&lt;/strong&gt;：代码合入前，必须过 &lt;strong&gt;AI 安全审计 + 人工复核&lt;/strong&gt; 两道门。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;用数据度量 ROI&lt;/strong&gt;：对比“AI 前后”的&lt;strong&gt;交付时长、缺陷率、回滚率、重构频次&lt;/strong&gt;，别只看提交量。行业的分歧恰恰提醒我们要&lt;strong&gt;用度量说话&lt;/strong&gt;。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;结语&quot;&gt;结语&lt;/h2&gt;&lt;a href=&quot;#结语&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “结语”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;AI 不是来抢键盘的，是来重塑产线的。&lt;/strong&gt;
-会写代码的人很多，&lt;strong&gt;会搭 AI 产线的人&lt;/strong&gt;还很少。
-把需求说清、把风险兜住、把智能安排好，这就是新一代工程师的&lt;strong&gt;核心竞争力&lt;/strong&gt;。你准备好了吗？&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;思考题：
-你的团队里，最先可以“自动化”的三件事是什么？
-你会怎么把它们变成 Slash 命令或 Sub-agents？&lt;/p&gt;
-&lt;/blockquote&gt;&lt;!-- 
----
-
-## 3 个多语言标题（含 slug）
-
-1. **中文**：AI 编程助手大爆发：工程师的新赛道与生存法则
-   **English**: AI Coding Assistants Are Here: The New Rules for Software Engineers
-   **繁體**：AI 程式助理來了：工程師的新賽道與生存法則
-   **日本語**：AIコーディング時代：エンジニアの新しいルール
-   **Français**：L’ère des assistants de code : les nouvelles règles pour les ingénieurs
-   **Español**: La era de los asistentes de código: nuevas reglas para ingenieros
-   **Português**: A era dos assistentes de código: novas regras para engenheiros
-   **slug**: `ai-coding-assistants-new-rules`
-
-2. **中文**：从“写函数”到“搭工厂”：Claude Code 与 Cursor 的真实冲击
-   **English**: From Writing Functions to Building Factories: Claude Code &amp; Cursor in Practice
-   **繁體**：從「寫函式」到「建工廠」：Claude Code 與 Cursor 的衝擊
-   **日本語**：関数から工場へ：Claude Code と Cursor の実務インパクト
-   **Français**：Des fonctions aux usines : l’impact de Claude Code et Cursor
-   **Español**: De funciones a fábricas: el impacto de Claude Code y Cursor
-   **Português**: De funções a fábricas: o impacto do Claude Code e do Cursor
-   **slug**: `from-functions-to-factories-claude-code-cursor`
-
-3. **中文**：5 年窗口期：程序员如何用 AI 升级职业护城河
-   **English**: The 5-Year Window: Using AI to Reinvent Your Engineering Moat
-   **繁體**：五年窗口期：工程師如何用 AI 強化護城河
-   **日本語**：5年のチャンス：AIでエンジニアの堀を再設計
-   **Français**：Fenêtre de 5 ans : renforcer son avantage avec l’IA
-   **Español**: Ventana de 5 años: reforzar tu ventaja con IA
-   **Português**: Janela de 5 anos: reforçar sua vantagem com IA
-   **slug**: `five-year-window-ai-engineering-moat`
-
----
-
-## 封面与配图（插画风｜2:1｜英文文案，不含中文）
-
-**封面图 Prompt**
-“An illustration of a developer orchestrating multiple AI agents on a conveyor-belt style software factory, with terminals, test badges, and security shields; clean pastel palette, minimal lines, wide 2:1 composition; text-free.”
-
-**配图 1（章节：强在哪）**
-“Diagram-style illustration of Cursor and Claude Code as two robotic arms editing a codebase blueprint, with nodes for slash commands, sub-agents, security review; gentle gradients; 2:1; no text.”
-
-**配图 2（章节：风险与坑）**
-“Playful illustration of a bug sneaking through AI-generated code while a human reviewer catches it with a magnifying glass; security icons and PR comments; 2:1; text-free.”
-
-**配图 3（章节：行动清单）**
-“Kanban board with cards labeled spec, tests, security review, release, connected by dotted arrows and small AI assistant icons; modern flat illustration; 2:1; no text.”
-
----
-
-## 朋友圈/评论区话术（3 条）
-
-1. “现在写代码像带生产线：AI 负责编码，我负责把事说清楚、把风险兜住。效率↑ 心智负担↓，真香。”
-2. “实测：Cursor 负责改，Claude Code 负责审。人类只做三件事——定规格、看风险、拍板上线。”
-3. “别怕 AI 抢饭碗，先把 Slash 命令写起来。把套路固化，你就有复利。”
-
----
-
-需要我把本文扩写成**团队落地手册**版（含命令模板、Sub-agents 样例、PR 审计规则）吗？我现在就整理一套可复制的清单给你。
-
-[1]: https://cursor.com/features?utm_source=chatgpt.com &quot;Features | Cursor - The AI Code Editor&quot;
-[2]: https://docs.cursor.com/agent?utm_source=chatgpt.com &quot;Cursor – Modes&quot;
-[3]: https://docs.anthropic.com/en/docs/claude-code/overview?utm_source=chatgpt.com &quot;Claude Code overview&quot;
-[4]: https://support.anthropic.com/en/articles/11932705-automated-security-reviews-in-claude-code?utm_source=chatgpt.com &quot;Automated Security Reviews in Claude Code&quot;
-[5]: https://docs.anthropic.com/en/docs/claude-code/slash-commands?utm_source=chatgpt.com &quot;Slash commands&quot;
-[6]: https://www.anthropic.com/news/automate-security-reviews-with-claude-code?utm_source=chatgpt.com &quot;Automate security reviews with Claude Code&quot;
-[7]: https://github.com/anthropics/claude-code-security-review?utm_source=chatgpt.com &quot;anthropics/claude-code-security-review&quot;
-[8]: https://survey.stackoverflow.co/2024/ai?utm_source=chatgpt.com &quot;AI | 2024 Stack Overflow Developer Survey&quot;
-[9]: https://arxiv.org/abs/2302.06590?utm_source=chatgpt.com &quot;The Impact of AI on Developer Productivity: Evidence from GitHub Copilot&quot;
-[10]: https://www.businessinsider.com/ai-tools-product-development-coding-engineers-a16z-partner-2025-7?utm_source=chatgpt.com &quot;AI tools won&apos;t get products out faster, but they&apos;ll solve 2 coding problems, says a16z partner&quot;
-[11]: https://www.theverge.com/decoder-podcast-with-nilay-patel/715267/anysphere-ceo-michael-truell-cursor-ai-automate-programming-interview?utm_source=chatgpt.com &quot;Why tech is racing to adopt AI coding&quot;
-[12]: https://arxiv.org/pdf/2211.03622?utm_source=chatgpt.com &quot;Do Users Write More Insecure Code with AI Assistants?&quot;
-[13]: https://techcrunch.com/2022/12/28/code-generating-ai-can-introduce-security-vulnerabilities-study-finds/?utm_source=chatgpt.com &quot;Code-generating AI can introduce security vulnerabilities ...&quot;
-[14]: https://snyk.io/reports/ai-code-security/?utm_source=chatgpt.com &quot;Snyk&apos;s 2023 AI-Generated Code Security Report&quot;
-[15]: https://www.itpro.com/software/development/developers-say-ai-can-code-better-than-most-humans-but-theres-a-catch?utm_source=chatgpt.com &quot;Developers say AI can code better than most humans - but there&apos;s a catch&quot;
-[16]: https://www.itpro.com/technology/artificial-intelligence/ai-transforming-software-development-jetbrains-ceo-kirill-skrygan-developers?utm_source=chatgpt.com &quot;AI is transforming software development - JetBrains CEO Kirill Skrygan says it&apos;s up to developers to transform with it&quot;
-[17]: https://docs.anthropic.com/en/docs/claude-code/sub-agents?utm_source=chatgpt.com &quot;Subagents&quot;
-[18]: https://visualstudiomagazine.com/articles/2024/09/17/another-report-weighs-in-on-github-copilot-dev-productivity.aspx?utm_source=chatgpt.com &quot;Another Report Weighs In on GitHub Copilot Dev Productivity&quot; --&gt;</content:encoded><category>Vibe Coding</category></item></channel></rss>
+[12]: https://www.reddit.com/r/lovable/comments/1kixyei/stop_using_lovable_for_everything_heres_a_smarter/?utm_source=chatgpt.com &quot;Stop Using Lovable for Everything, Here&apos;s a Smarter Way ...&quot; --&gt;</content:encoded><category>Open Lovable</category><category>Lovable</category><category>React</category><category>AI</category></item></channel></rss>
