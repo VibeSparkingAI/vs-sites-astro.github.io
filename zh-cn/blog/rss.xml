@@ -115,7 +115,277 @@
 &lt;li&gt;&lt;strong&gt;等待官方确认&lt;/strong&gt;，再作投资判断。&lt;/li&gt;
 &lt;/ol&gt;
 &lt;hr&gt;
-&lt;p&gt;通过这次深度分析，我们看到在AI投资热潮中，&lt;strong&gt;媒体报道、公司宣传与实际情况之间往往存在显著差距&lt;/strong&gt;。狂热之下泥沙俱下，唯有保持理性、勤于求证，才能看清真相，不被市场情绪裹挟。&lt;/p&gt;</content:encoded><category>Claude</category><category>Claude Code</category><category>Anthropic</category><category>OpenAI</category></item><item><title>MIT 调研报告 95% AI项目为何失败？美股上市公司 Palantir 凭什么逆势成功？</title><link>https://www.vibesparking.com/zh-cn/blog/ai/trends/2025-08-24-95-ai-projects-fail-palantir-success/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/trends/2025-08-24-95-ai-projects-fail-palantir-success/</guid><pubDate>Sun, 24 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;最近麻省理工学院(MIT)发布的一份调研报告指出，在企业内部试点的生成式人工智能项目中，&lt;strong&gt;95%都未能产生实质业务价值&lt;/strong&gt;。这个惊人的失败率引发了人们对“AI泡沫”的担忧。表面看，企业争相上马最先进的AI模型，但多数项目仍停留在概念验证阶段，对利润表几乎没有贡献。究其原因，并非AI模型本身不够强大，而是&lt;strong&gt;工具与组织之间存在“学习鸿沟”&lt;/strong&gt;——AI系统无法融入企业的工作流，无法获取并学习企业自身的数据和知识。换言之，失败的根源在于&lt;strong&gt;集成和应用方式的欠缺&lt;/strong&gt;，而不在于模型好坏。&lt;/p&gt;
+&lt;p&gt;通过这次深度分析，我们看到在AI投资热潮中，&lt;strong&gt;媒体报道、公司宣传与实际情况之间往往存在显著差距&lt;/strong&gt;。狂热之下泥沙俱下，唯有保持理性、勤于求证，才能看清真相，不被市场情绪裹挟。&lt;/p&gt;</content:encoded><category>Claude</category><category>Claude Code</category><category>Anthropic</category><category>OpenAI</category></item><item><title>产品经理的 AI 原型设计路线图</title><link>https://www.vibesparking.com/zh-cn/blog/ai/management/2025-08-24-ai-prototyping-pm-10min-shipping/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/management/2025-08-24-ai-prototyping-pm-10min-shipping/</guid><pubDate>Sun, 24 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # 产品经理的 AI 原型设计：v0、Bolt.new、Lovable、Replit Agent、Claude Artifacts、Cursor、Copilot、Windsurf、Zed --&gt;
+&lt;div&gt;&lt;h2 id=&quot;引言&quot;&gt;引言&lt;/h2&gt;&lt;a href=&quot;#引言&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “引言”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;别再等排期了。&lt;strong&gt;现在，一个 PM 也能用 AI 在 10 分钟内把 Figma 图、手绘草图、甚至一段 PRD，跑成可交互原型&lt;/strong&gt;。
+更妙的是：还能一键部署、连上数据库、收集用户反馈，&lt;strong&gt;当天验证、当天迭代&lt;/strong&gt;。你的对手可能已经这么干了。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;这篇文章给你一条“&lt;strong&gt;从想法 → 原型 → 用户反馈 → 上线&lt;/strong&gt;”的&lt;strong&gt;实战路径&lt;/strong&gt;，配齐工具清单、Prompt 模版和避坑建议，照抄就跑。
+里面涉及：v0、Bolt.new、Lovable、Replit Agent、Claude Artifacts、Cursor、Copilot、Windsurf、Zed 等。
+&lt;strong&gt;参考与事实校验&lt;/strong&gt;都在文内标注。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;大纲速览给忙人&quot;&gt;大纲速览（给忙人）&lt;/h2&gt;&lt;a href=&quot;#大纲速览给忙人&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “大纲速览（给忙人）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;两条快路&lt;/strong&gt;：
+&lt;strong&gt;A. 设计先行&lt;/strong&gt;：Figma → v0/Bolt/Lovable → 可交互原型 → 走查 → 用户测试。
+&lt;strong&gt;B. 想法直达&lt;/strong&gt;：PRD/草图 → v0/Bolt/Lovable/Replit → 直出全栈 Demo。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;本地助手兜底&lt;/strong&gt;：Cursor/Copilot/Windsurf/Zed 负责多文件修改、Debug、补丁和重构。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;10 分钟脚手架&lt;/strong&gt;：文末有 Prompt 套餐，复制即用。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;1工具怎么选一句话分流&quot;&gt;1）工具怎么选？一句话分流&lt;/h2&gt;&lt;a href=&quot;#1工具怎么选一句话分流&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1）工具怎么选？一句话分流”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;要“像设计稿一样还原 UI”&lt;/strong&gt; → v0（天然 Next.js + shadcn/ui，美观默认强；支持 Figma 集成）。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;要“浏览器里极速起盘、改就见效”&lt;/strong&gt; → Bolt.new（WebContainers 在浏览器跑 Node 进程，零安装；更适合前端/JS 栈）。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;要“集成账号、数据库、AI 接口，直接做成可用的小产品”&lt;/strong&gt; → Lovable（连 GitHub、Supabase，支持可视/代码双改）。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;要“数据加工、脚本、后端能力强”&lt;/strong&gt; → Replit（Agent/Docs 支持建全栈、部署、数据库）。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;要“聊天里直接跑原型”&lt;/strong&gt; → Claude Artifacts（对话里生成并运行，可分享链接，适合单页/轻交互）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;备注：Bolt 基于 WebContainers 在&lt;strong&gt;浏览器沙箱&lt;/strong&gt;中跑 Node，适合 JS/TS 技术栈；复杂权限、多用户会话、长期存储，常配 Supabase/Firebase 等云后端来补齐。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;210-分钟原型流水线两条路线&quot;&gt;2）10 分钟原型流水线（两条路线）&lt;/h2&gt;&lt;a href=&quot;#210-分钟原型流水线两条路线&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2）10 分钟原型流水线（两条路线）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3 id=&quot;路线-afigma--高保真可交互&quot;&gt;路线 A：&lt;strong&gt;Figma → 高保真可交互&lt;/strong&gt;&lt;/h3&gt;&lt;a href=&quot;#路线-afigma--高保真可交互&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “路线 A：Figma → 高保真可交互”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;在 v0 导入 Figma&lt;/strong&gt;：它会读取设计文件的视觉/结构上下文，生成高保真 UI。
+Prompt：&lt;code dir=&quot;auto&quot;&gt;按设计1:1还原，保留字体/间距/颜色，使用 shadcn/ui 组件&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;补交互与状态&lt;/strong&gt;：让 v0 补搜索条、筛选弹层、分页等。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;发布/分享&lt;/strong&gt;：用于可用性测试或内部评审。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;需要云能力&lt;/strong&gt;：转 Lovable 接 Supabase 做鉴权/持久化；或直接 Replit 做后端。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;v0 的定位是“AI 结对编程 + 生成式 UI”，对设计还原很友好，且有平台 API 可自动化生成应用流水线。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div&gt;&lt;h3 id=&quot;路线-bprd草图--全栈-demo&quot;&gt;路线 B：&lt;strong&gt;PRD/草图 → 全栈 Demo&lt;/strong&gt;&lt;/h3&gt;&lt;a href=&quot;#路线-bprd草图--全栈-demo&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “路线 B：PRD/草图 → 全栈 Demo”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Bolt.new 起盘&lt;/strong&gt;：一句话生成 CRM/看板/表单向导，浏览器内即跑即改。
+Prompt：&lt;code dir=&quot;auto&quot;&gt;创建一个CRM：客户列表/详情、搜索筛选、导出CSV、假数据填充&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;接入账户/数据&lt;/strong&gt;：若需登录/多用户/持久化，用 Lovable+Supabase 或 Replit 后端服务。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;部署/分享&lt;/strong&gt;：让真实用户上手点几下，收集定量/定性反馈。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Bolt 之所以“秒起飞”，关键在 WebContainers &lt;strong&gt;把 Node 跑进了浏览器&lt;/strong&gt;，毫无本地环境痛点。但这也意味着某些后端场景要交给外部服务。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;3本地助手兜底把原型打磨到能用&quot;&gt;3）本地助手兜底：&lt;strong&gt;把原型打磨到能用&lt;/strong&gt;&lt;/h2&gt;&lt;a href=&quot;#3本地助手兜底把原型打磨到能用&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3）本地助手兜底：把原型打磨到能用”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Cursor&lt;/strong&gt;：多文件编辑、跨文件改动、PR/Issue/Commit 语义检索，修 Bug 很能打。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;GitHub Copilot Edits&lt;/strong&gt;：一条指令，跨多文件修改；企业环境接受度高。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Windsurf&lt;/strong&gt;：支持 MCP 工具接入，适合大仓与流程化“代理式”开发。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Zed&lt;/strong&gt;：轻快、命令/Prompt 库、斜杠指令，团队上手成本低。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;设计到代码的桥也在升级：&lt;strong&gt;Figma Make GA&lt;/strong&gt; 与 &lt;strong&gt;Dev Mode MCP Server&lt;/strong&gt; 让 AI/代理直接读设计数据，生成更贴近设计意图的代码。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;4claude-artifacts聊天里跑出来的原型&quot;&gt;4）Claude Artifacts：&lt;strong&gt;聊天里跑出来的原型&lt;/strong&gt;&lt;/h2&gt;&lt;a href=&quot;#4claude-artifacts聊天里跑出来的原型&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “4）Claude Artifacts：聊天里跑出来的原型”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;当你只需要&lt;strong&gt;单页/轻交互&lt;/strong&gt;（计算器、图表、卡片翻转），Artifacts 很省事：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;对话里生成、实时预览、可分享。&lt;/li&gt;
+&lt;li&gt;支持“选中元素 → Improve”微调，或用追加指令改版。&lt;/li&gt;
+&lt;li&gt;限于“非 IDE 级”代码编辑，复杂项目建议导出到 v0/Lovable/Cursor。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;5工具速对比&quot;&gt;5）工具速对比&lt;/h2&gt;&lt;a href=&quot;#5工具速对比&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “5）工具速对比”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;工具&lt;/th&gt;&lt;th&gt;类型&lt;/th&gt;&lt;th&gt;强项&lt;/th&gt;&lt;th&gt;是否托管/部署&lt;/th&gt;&lt;th&gt;后端/数据库&lt;/th&gt;&lt;th&gt;典型场景&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;v0&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;云端生成式 UI&lt;/td&gt;&lt;td&gt;设计还原、默认美观、Figma 集成&lt;/td&gt;&lt;td&gt;支持&lt;/td&gt;&lt;td&gt;可接框架/API，自行扩展&lt;/td&gt;&lt;td&gt;Figma→交互原型、营销页/后台&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Bolt.new&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;浏览器 AI 开发&lt;/td&gt;&lt;td&gt;0 安装、即改即看、JS/TS 快速迭代&lt;/td&gt;&lt;td&gt;可预览/部署&lt;/td&gt;&lt;td&gt;需外部服务补鉴权/持久化&lt;/td&gt;&lt;td&gt;快速 PoC、内部演示&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Lovable&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;云端 AI App Builder&lt;/td&gt;&lt;td&gt;一体化：GitHub+Supabase+可视/代码编辑&lt;/td&gt;&lt;td&gt;支持&lt;/td&gt;&lt;td&gt;原生 Supabase 鉴权/DB/函数&lt;/td&gt;&lt;td&gt;MVP/内部工具/小型线上应用&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Replit (Agent)&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;云端全栈&lt;/td&gt;&lt;td&gt;建前后端、接数据库、直接部署&lt;/td&gt;&lt;td&gt;支持&lt;/td&gt;&lt;td&gt;内置/外接数据库&lt;/td&gt;&lt;td&gt;数据处理工具、脚本服务&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Claude Artifacts&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;聊天+运行&lt;/td&gt;&lt;td&gt;单页/轻交互原型、分享便捷&lt;/td&gt;&lt;td&gt;分享为主&lt;/td&gt;&lt;td&gt;非长驻后端&lt;/td&gt;&lt;td&gt;计算器、图表、轻交互演示&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;p&gt;&lt;em&gt;依据：v0 文档与平台 API、Bolt/WebContainers 官方资料、Lovable GitHub/Supabase 文档与编辑能力、Replit Agent/Docs、Artifacts 官方指南。&lt;/em&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;6去抄就能跑的-prompt-套餐&quot;&gt;6）去抄就能跑的 Prompt 套餐&lt;/h2&gt;&lt;a href=&quot;#6去抄就能跑的-prompt-套餐&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “6）去抄就能跑的 Prompt 套餐”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3 id=&quot;a-设计--原型v0bolt-通用&quot;&gt;A. 设计 → 原型（v0/Bolt 通用）&lt;/h3&gt;&lt;a href=&quot;#a-设计--原型v0bolt-通用&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “A. 设计 → 原型（v0/Bolt 通用）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;「精确还原」&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code dir=&quot;auto&quot;&gt;按设计1:1搭建页面，使用 Tailwind + shadcn/ui。保持字体、字号、行高、间距与颜色一致。把导航、搜索、卡片、分页做成可复用组件，导出 Next.js 页面。&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;「功能补齐」&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code dir=&quot;auto&quot;&gt;在搜索栏右侧加入“价格区间”内联筛选。点击后弹出白底浮层，包含最小/最大值输入与滑杆。滑动时更新列表数据（先用假数据）。&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div&gt;&lt;h3 id=&quot;b-prd--全栈-demoboltlovablereplit&quot;&gt;B. PRD → 全栈 Demo（Bolt/Lovable/Replit）&lt;/h3&gt;&lt;a href=&quot;#b-prd--全栈-demoboltlovablereplit&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “B. PRD → 全栈 Demo（Bolt/Lovable/Replit）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;「起盘应用」&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code dir=&quot;auto&quot;&gt;创建一个“面试管理”系统：候选人列表/详情页、状态看板、评论流、标签筛选。预置10条模拟数据。支持 CSV 导入导出。&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;「加登录&amp;#x26;持久化」（Lovable + Supabase）&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code dir=&quot;auto&quot;&gt;接入 Supabase 鉴权，开启 Email 与 GitHub 登录。为候选人、评论建表并落库，列表分页、详情懒加载。生成最小可用权限策略（RLS）。&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;「上线前检查」&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code dir=&quot;auto&quot;&gt;生成一份发布前自查清单：性能（Lighthouse&gt;85）、基础 SEO、移动端兼容、错误监控、日志、回滚方案。&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div&gt;&lt;h3 id=&quot;c-单页轻原型claude-artifacts&quot;&gt;C. 单页轻原型（Claude Artifacts）&lt;/h3&gt;&lt;a href=&quot;#c-单页轻原型claude-artifacts&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “C. 单页轻原型（Claude Artifacts）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;「运行在 Artifact」&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code dir=&quot;auto&quot;&gt;做一个“融资计算器”：输入融资额、出让比例、期权池、投资人数量，输出投后估值与 cap table。支持导出 CSV。&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;这些模板都基于各工具官方能力：v0/shadcn、Bolt/WebContainers、Lovable+Supabase、Artifacts。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;7从原型到上线一条当天闭环的动作清单&quot;&gt;7）从原型到上线：一条“当天闭环”的动作清单&lt;/h2&gt;&lt;a href=&quot;#7从原型到上线一条当天闭环的动作清单&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “7）从原型到上线：一条“当天闭环”的动作清单”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;10–30 人可用性走查&lt;/strong&gt;：发给同事/目标用户，收集“完成率、误操作、停顿点”。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;记录 3 类问题&lt;/strong&gt;：&lt;strong&gt;看不懂&lt;/strong&gt;（文案/信息架构）、&lt;strong&gt;点不到&lt;/strong&gt;（交互稠密度）、&lt;strong&gt;跑不动&lt;/strong&gt;（性能/网络/端能力）。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;用 Cursor/Copilot 批量改&lt;/strong&gt;：跨多文件快速修复、重构命名、补测试。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;接入数据库与鉴权&lt;/strong&gt;：Lovable+Supabase 或 Replit 后端，做简单持久化与权限。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;灰度发布&lt;/strong&gt;：限制路由或白名单；收集日志与埋点，滚动修复。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;评审是否“保留/合并/转正”&lt;/strong&gt;：保留为原型库？合并进主应用？还是单独转正上线？&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;8常见坑位与避坑法&quot;&gt;8）常见坑位与避坑法&lt;/h2&gt;&lt;a href=&quot;#8常见坑位与避坑法&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “8）常见坑位与避坑法”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;“浏览器里跑后端”的边界&lt;/strong&gt;：Bolt 项目偏前端/JS，&lt;strong&gt;多用户鉴权、支付、长久存储&lt;/strong&gt;交给 Supabase/Firebase 更稳。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;设计还原创伤&lt;/strong&gt;：Figma 图拆块导入，组件化命名，减少“一屏塞满”的复杂度。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;复杂仓的 Debug&lt;/strong&gt;：把 Lovable 代码同步到 GitHub → 用 Cursor/Copilot 修 Bug → 回推同步。社区有成熟实践。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;聊天原型的上限&lt;/strong&gt;：Artifacts 很快，但不是 IDE。复杂项目尽早转 v0/Lovable/Cursor。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;结语&quot;&gt;结语&lt;/h2&gt;&lt;a href=&quot;#结语&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “结语”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;这套方法的本质是：&lt;strong&gt;把“造轮子”外包给 AI，把“定义价值”留给你&lt;/strong&gt;。
+今天起，每个 PM 都可以&lt;strong&gt;一周跑 3 个原型&lt;/strong&gt;，用数据和用户反馈说话。
+&lt;strong&gt;从想法到上线，速度就是护城河。你觉得呢？&lt;/strong&gt;&lt;/p&gt;&lt;!-- 
+---
+
+## 推荐标题（3 个 × 7 语种 + slug）
+
+1. **10分钟跑出原型：PM的AI上线路线图**
+
+   * EN: *Ship in 10 Minutes: An AI Playbook for PMs*
+   * 繁体: 10分鐘跑出原型：PM的AI上線路線圖
+   * 日本語: 10分で動くプロトタイプ：PMのAI出荷ルート
+   * Français: *Prototyper en 10 min : la route AI du PM*
+   * Español: *Prototipos en 10 min: ruta de IA para PMs*
+   * Português: *Protótipo em 10 min: rota de IA para PMs*
+   * **slug:** `ai-prototyping-pm-10min-shipping`
+
+2. **别排期了：Figma→上线，一条AI快车道**
+
+   * EN: *Skip the Queue: Figma to Production on the AI Fast Lane*
+   * 繁体: 別排期了：Figma→上線，一條AI快車道
+   * 日本語: 並ぶの禁止：Figmaから本番までAI特急
+   * Français: *Figma → Prod : voie express avec l’IA*
+   * Español: *De Figma a producción: vía rápida con IA*
+   * Português: *De Figma à produção: via rápida com IA*
+   * **slug:** `figma-to-prod-ai-fastlane`
+
+3. **从点子到真用户：PM的AI原型闭环**
+
+   * EN: *From Idea to Users: The PM’s AI Prototype Loop*
+   * 繁体: 從點子到真用戶：PM的AI原型閉環
+   * 日本語: アイデアからユーザーへ：PMのAIプロトタイプ循環
+   * Français: *De l’idée aux utilisateurs : le cycle IA du PM*
+   * Español: *De la idea al usuario: ciclo de prototipos con IA*
+   * Português: *Da ideia ao usuário: ciclo de protótipo com IA*
+   * **slug:** `pm-ai-prototype-loop`
+
+---
+
+## 配图（插画式｜2:1｜英文文案｜不含中文）
+
+**封面图 Prompt**
+
+&gt; *An illustration of a product manager riding an express rail labeled “AI Fast Lane”, stations named “Idea”, “Prototype”, “User Feedback”, and “Launch”. Minimal lines, modern pastel palette, clean 2:1 composition, no text overlay.*
+
+**章节配图 1（工具分流）**
+
+&gt; *A tidy workbench of AI dev tools: v0 (spark icon), Bolt.new (bolt icon), Lovable (heart icon), Replit (infinity icon), Claude Artifacts (window icon). Pastel, flat illustration, 2:1, no text.*
+
+**章节配图 2（Figma 路线）**
+
+&gt; *A blueprint morphing into a live web app on a laptop, small tags reading “Figma → v0”. Gentle gradients, 2:1, no text.*
+
+**章节配图 3（PRD 路线）**
+
+&gt; *A checklist (PRD) transforming into a dashboard with charts and a login badge, hinting “Supabase/Auth”. Clean pastel, 2:1, no text.*
+
+---
+
+## 朋友圈/评论文案（3 条）
+
+1. **“不等排期了，我用 AI 10 分钟把 Figma 跑成可交互原型，老板看完直接定版本，爽！”**
+2. **“试了下 v0 + Lovable + Supabase，这条路真丝滑。晚上做的原型，第二天早上就能让真用户玩。”**
+3. **“PM 的快乐回来了：先验证价值，再补工程。速度才是护城河，你认同吗？”**
+
+---
+
+需要我把这篇文章**扩写成「项目落地检查清单」或「一周三原型行动手册」**吗？我可以把每个 Prompt 做成**可复制的命令卡**，顺手送你一张**工具选择树**挂图。
+
+[1]: https://vercel.com/blog/transforming-how-you-work-with-v0?utm_source=chatgpt.com &quot;Transforming how you work with v0&quot;
+[2]: https://v0.dev/docs/figma?utm_source=chatgpt.com &quot;Figma | v0 Docs&quot;
+[3]: https://ui.shadcn.com/docs/v0?utm_source=chatgpt.com &quot;Open in v0 - shadcn/ui&quot;
+[4]: https://docs.replit.com/?utm_source=chatgpt.com &quot;Replit Docs&quot;
+[5]: https://cursor.com/features?utm_source=chatgpt.com &quot;Features | Cursor - The AI Code Editor&quot;
+[6]: https://docs.github.com/copilot/using-github-copilot/asking-github-copilot-questions-in-your-ide?utm_source=chatgpt.com &quot;Asking GitHub Copilot questions in your IDE&quot;
+[7]: https://windsurf.com/?utm_source=chatgpt.com &quot;Windsurf - The most powerful AI Code Editor&quot;
+[8]: https://zed.dev/docs/ai/text-threads?utm_source=chatgpt.com &quot;Text Threads | Zed Code Editor Documentation&quot;
+[9]: https://bolt.new/?utm_source=chatgpt.com &quot;Bolt.new&quot;
+[10]: https://blog.stackblitz.com/posts/introducing-webcontainers/?utm_source=chatgpt.com &quot;Introducing WebContainers: Run Node.js natively in your browser&quot;
+[11]: https://github.com/stackblitz/bolt.new?utm_source=chatgpt.com &quot;stackblitz/bolt.new: Prompt, run, edit, and deploy full-stack ... - GitHub&quot;
+[12]: https://blog.openreplay.com/bolt-new-vs-firebase-studio-browser-ide-fast-app-prototyping/?utm_source=chatgpt.com &quot;Bolt.new vs Firebase Studio: Browser IDEs for fast app prototyping&quot;
+[13]: https://docs.lovable.dev/integrations/git-integration?utm_source=chatgpt.com &quot;GitHub Integration&quot;
+[14]: https://docs.replit.com/replitai/agent?utm_source=chatgpt.com &quot;Replit Agent documentation&quot;
+[15]: https://support.anthropic.com/en/articles/9487310-what-are-artifacts-and-how-do-i-use-them?utm_source=chatgpt.com &quot;What are artifacts and how do I use them?&quot;
+[16]: https://docs.lovable.dev/integrations/supabase?utm_source=chatgpt.com &quot;Supabase Integration&quot;
+[17]: https://www.theverge.com/news/712995/figma-make-ai-general-availability-announcement?utm_source=chatgpt.com &quot;Figma&apos;s AI app building tool is now available for everyone&quot;
+[18]: https://zapier.com/blog/claude-artifacts/?utm_source=chatgpt.com &quot;How to use Claude Artifacts&quot;
+[19]: https://vercel.com/blog/build-your-own-ai-app-builder-with-the-v0-platform-api?utm_source=chatgpt.com &quot;Build your own AI app builder with the v0 Platform API&quot;
+[20]: https://www.reddit.com/r/lovable/comments/1jyfrjm/sync_your_lovable_projects_with_github_and_cursor/?utm_source=chatgpt.com &quot;Sync your Lovable projects with GitHub and Cursor&quot; --&gt;</content:encoded><category>AI</category><category>Team Management</category><category>Product Management</category><category>V0</category><category>Bolt.new</category><category>Lovable</category><category>Replit Agent</category><category>Claude Artifacts</category><category>Cursor</category><category>Copilot</category><category>Windsurf</category><category>Zed</category></item><item><title>MIT 调研报告 95% AI项目为何失败？美股上市公司 Palantir 凭什么逆势成功？</title><link>https://www.vibesparking.com/zh-cn/blog/ai/trends/2025-08-24-95-ai-projects-fail-palantir-success/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/trends/2025-08-24-95-ai-projects-fail-palantir-success/</guid><pubDate>Sun, 24 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;最近麻省理工学院(MIT)发布的一份调研报告指出，在企业内部试点的生成式人工智能项目中，&lt;strong&gt;95%都未能产生实质业务价值&lt;/strong&gt;。这个惊人的失败率引发了人们对“AI泡沫”的担忧。表面看，企业争相上马最先进的AI模型，但多数项目仍停留在概念验证阶段，对利润表几乎没有贡献。究其原因，并非AI模型本身不够强大，而是&lt;strong&gt;工具与组织之间存在“学习鸿沟”&lt;/strong&gt;——AI系统无法融入企业的工作流，无法获取并学习企业自身的数据和知识。换言之，失败的根源在于&lt;strong&gt;集成和应用方式的欠缺&lt;/strong&gt;，而不在于模型好坏。&lt;/p&gt;
 &lt;p&gt;举个简单的例子：假如一家零售公司希望利用生成式AI来决策“增加哪些商品库存”。一个通用的大模型也许可以根据行业公开数据给出建议，但如果缺乏该公司内部实时、全面的商品销售和顾客数据，这些建议大概率并不靠谱。&lt;strong&gt;数据不相关、接不上业务实际，AI的聪明才智也无从发挥&lt;/strong&gt;。因此，真正决定AI项目成败的是&lt;strong&gt;有没有把AI用对地方、有没有把企业自身的数据用起来&lt;/strong&gt;。&lt;/p&gt;
 &lt;p&gt;正因如此，新一代被称为“企业AI操作系统”的公司开始扮演关键角色，将企业和AI连接起来。其中的佼佼者——Palantir（柏兰蒂尔）公司——以在军队、政府和大型企业成功部署AI项目而闻名。它的实践表明：只要解决了信任和工程落地这两大难题，AI完全可以创造真实价值。下面我们就从**“信任”和“工程能力”**两个方面，来看看Palantir是如何填补MIT报告揭示的那些AI失败因素的。&lt;/p&gt;
 &lt;p&gt;&lt;/p&gt;
@@ -311,174 +581,7 @@
 [3]: https://docs.github.com/en/rest/issues/sub-issues?utm_source=chatgpt.com &quot;REST API endpoints for sub-issues&quot;
 [4]: https://aroussi.com/post/ccpm-claude-code-project-management?utm_source=chatgpt.com &quot;How we fixed the context problem in AI-driven development&quot;
 [5]: https://news.ycombinator.com/item?id=44960594&amp;utm_source=chatgpt.com &quot;Show HN: Project management system for Claude Code&quot;
-[6]: https://github.com/orgs/community/discussions/148714?utm_source=chatgpt.com &quot;Sub-issues Public Preview #148714&quot; --&gt;</content:encoded><category>ccpm</category><category>Claude Code</category><category>Git Worktree</category><category>GitHub</category></item><item><title>Uzi 把 Claude Code、Codex、Cursor CLI、aider 等多 AI Agent 并行跑起来</title><link>https://www.vibesparking.com/zh-cn/blog/ai/claude-code/uzi/2025-08-23-uzi-parallel-ai-coders-git-worktrees-tmux/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/claude-code/uzi/2025-08-23-uzi-parallel-ai-coders-git-worktrees-tmux/</guid><pubDate>Sat, 23 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # Uzi 把 Claude Code、Codex、Cursor CLI、aider 等多 AI Agent 并行跑起来 --&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Uzi 是一个命令行工具，用 &lt;strong&gt;Git worktree + tmux&lt;/strong&gt; 把多个 AI 编码代理并行跑起来，每个代理各自一套依赖、各开一个开发端口，写完用 &lt;code dir=&quot;auto&quot;&gt;checkpoint&lt;/code&gt; 一键合到主分支。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;引言&quot;&gt;引言&lt;/h2&gt;&lt;a href=&quot;#引言&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “引言”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;一个代理慢悠悠改页面，另一个代理同时重构后端，再来一个代理写测试。
-&lt;strong&gt;多线推进的效率，远超“排队等模型”&lt;/strong&gt;。这就是 Uzi 的工作方式：同一仓库，&lt;strong&gt;分枝隔离&lt;/strong&gt;、&lt;strong&gt;并行执行&lt;/strong&gt;、&lt;strong&gt;可视化监控&lt;/strong&gt;、&lt;strong&gt;一键合流&lt;/strong&gt;。官方 README 给到了完整的安装、配置与工作流示例，且在 2025-06-03 发布了 &lt;code dir=&quot;auto&quot;&gt;v0.0.2&lt;/code&gt; 版本。&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;为什么值得上手-uzi&quot;&gt;为什么值得上手 Uzi？&lt;/h2&gt;&lt;a href=&quot;#为什么值得上手-uzi&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “为什么值得上手 Uzi？”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;高并发试错&lt;/strong&gt;：一次起 3～5 个代理，各自探索不同实现或风格，挑最优解合并。
-&lt;strong&gt;真正的“隔离”&lt;/strong&gt;：用 &lt;strong&gt;Git worktree&lt;/strong&gt; 给每个代理开独立分支与目录，不互相污染。
-&lt;strong&gt;自动开发环境&lt;/strong&gt;：每个代理自动起 dev server，并分配端口，方便你即时预览。
-&lt;strong&gt;全程托管&lt;/strong&gt;：tmux 管会话、&lt;code dir=&quot;auto&quot;&gt;uzi auto&lt;/code&gt; 自动“回车确认”工具调用、&lt;code dir=&quot;auto&quot;&gt;ls -w&lt;/code&gt; 实时看进度和 diff。
-&lt;strong&gt;一键收官&lt;/strong&gt;：&lt;code dir=&quot;auto&quot;&gt;checkpoint&lt;/code&gt; 把选中的代理分支 rebase+commit 回当前分支。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;行业观察：也有用容器把代理隔离并行的方案；&lt;strong&gt;Uzi 走的是 worktree 路线&lt;/strong&gt;，在 monorepo 里也很顺手。InfoQ 近期报道也点名对比了这两类思路。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;安装与先决条件3-分钟开箱&quot;&gt;安装与先决条件（3 分钟开箱）&lt;/h2&gt;&lt;a href=&quot;#安装与先决条件3-分钟开箱&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “安装与先决条件（3 分钟开箱）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;依赖&lt;/strong&gt;：Git、tmux、Go，以及你常用的 AI 工具（如 Claude、Codex、Cursor、aider 等）。&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# 安装&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;go&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;install&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;github.com/devflowinc/uzi@latest&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# 确保 GOBIN 在 PATH 里&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;export&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;PATH&lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;=&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;$PATH&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;$HOME&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;/go/bin&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;1-个最小可用配置mvp&quot;&gt;1 个最小可用配置（MVP）&lt;/h2&gt;&lt;a href=&quot;#1-个最小可用配置mvp&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1 个最小可用配置（MVP）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;根目录新建 &lt;code dir=&quot;auto&quot;&gt;uzi.yaml&lt;/code&gt;：&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;yaml&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#111111&quot;&gt;devCommand&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;cd astrobits &amp;#x26;&amp;#x26; yarn &amp;#x26;&amp;#x26; yarn dev --port $PORT&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#111111&quot;&gt;portRange&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;3000-3010&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;写法要点&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;devCommand&lt;/code&gt; 里把依赖安装也写上，因为&lt;strong&gt;每个代理在独立 worktree&lt;/strong&gt;，需要自己装依赖。&lt;/li&gt;
-&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;$PORT&lt;/code&gt; 必须留作占位，Uzi 会自动分配端口。&lt;/li&gt;
-&lt;li&gt;官方还给了 Next.js / Vite / Django 的示例行。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;推荐工作流从任务到合并5-步走&quot;&gt;推荐工作流：从任务到合并，5 步走&lt;/h2&gt;&lt;a href=&quot;#推荐工作流从任务到合并5-步走&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “推荐工作流：从任务到合并，5 步走”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;1）并行开工&lt;/strong&gt;&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;uzi&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;prompt&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;--agents&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;claude:3,codex:2&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;Implement a REST API for user management with authentication&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;blockquote&gt;
-&lt;p&gt;指定多代理与数量，也支持 &lt;code dir=&quot;auto&quot;&gt;random&lt;/code&gt; 随机命名。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;2）无人值守&lt;/strong&gt;&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;uzi&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;auto&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;blockquote&gt;
-&lt;p&gt;自动“回车确认”工具调用与续写提示，跑着就行。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;3）盯盘看进度&lt;/strong&gt;&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;uzi&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;ls&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;-w&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;blockquote&gt;
-&lt;p&gt;watch 模式每秒刷新，能看到 &lt;strong&gt;AGENT/MODEL/DIFF/ADDR/PROMPT&lt;/strong&gt; 等。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;4）中途指挥&lt;/strong&gt;&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;uzi&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;broadcast&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;Make sure to add input validation&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;uzi&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;run&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;npm test&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;blockquote&gt;
-&lt;p&gt;广播额外指令；也能在所有代理里跑同一命令（带 &lt;code dir=&quot;auto&quot;&gt;--delete&lt;/code&gt; 跑完关窗）。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;5）选优合入&lt;/strong&gt;&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;uzi&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;checkpoint&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;funny-elephant&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;feat: add user management API&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;blockquote&gt;
-&lt;p&gt;把命中的代理分支 rebase 到当前分支并提交信息。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;开发者实战文章里也给过类似 &lt;code dir=&quot;auto&quot;&gt;checkpoint/kill&lt;/code&gt; 的用法推演，便于你按需裁剪。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;3-个落地场景&quot;&gt;3 个落地场景&lt;/h2&gt;&lt;a href=&quot;#3-个落地场景&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3 个落地场景”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h3 id=&quot;场景-a前端多风格探索&quot;&gt;场景 A｜前端多风格探索&lt;/h3&gt;&lt;a href=&quot;#场景-a前端多风格探索&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “场景 A｜前端多风格探索”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;一个界面组件给 3 个代理：&lt;strong&gt;极简风 / Material 风 / 企业风&lt;/strong&gt;。
-每个代理都起了本地端口，你直接多窗口对比，挑最好的一键 &lt;code dir=&quot;auto&quot;&gt;checkpoint&lt;/code&gt;。&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;场景-b重构路线博弈&quot;&gt;场景 B｜重构路线博弈&lt;/h3&gt;&lt;a href=&quot;#场景-b重构路线博弈&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “场景 B｜重构路线博弈”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;后端认证要不要换库？要不要分层？把 2～3 条方案平行跑，读 diff 看复杂度、读端口看性能感知，选更稳的路线。&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;场景-c端到端联动&quot;&gt;场景 C｜端到端联动&lt;/h3&gt;&lt;a href=&quot;#场景-c端到端联动&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “场景 C｜端到端联动”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;一个代理写 API，一个写 e2e 测试，另一个写文档与示例。最后只把“都跑通”的那个合入，其它分支随时 &lt;code dir=&quot;auto&quot;&gt;kill&lt;/code&gt; 清理。&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;与容器并行的差异小抄&quot;&gt;与容器并行的差异小抄&lt;/h2&gt;&lt;a href=&quot;#与容器并行的差异小抄&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “与容器并行的差异小抄”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Uzi（worktree）&lt;/strong&gt;：轻、快、&lt;strong&gt;Git 原生&lt;/strong&gt;，适合同仓多实验；对 tmux 友好。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;容器方案&lt;/strong&gt;：更强隔离、更重运维、适合跨语言/系统依赖的极端场景。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;行业观点&lt;/strong&gt;：InfoQ 指出 Uzi 的 worktree 隔离在 monorepo 场景能避免代理互相干扰。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;常见坑与避雷&quot;&gt;常见坑与避雷&lt;/h2&gt;&lt;a href=&quot;#常见坑与避雷&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “常见坑与避雷”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;端口冲突&lt;/strong&gt;：&lt;code dir=&quot;auto&quot;&gt;portRange&lt;/code&gt; 够大，且别被占用。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;依赖重复安装&lt;/strong&gt;：把 &lt;code dir=&quot;auto&quot;&gt;npm/pip install&lt;/code&gt; 写进 &lt;code dir=&quot;auto&quot;&gt;devCommand&lt;/code&gt;，每个代理自己装。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;tmux 不熟&lt;/strong&gt;：建议学会基本窗口/面板切换，提高可见性。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;成本与噪音&lt;/strong&gt;：并行=更多 tokens；建议小任务先试 2～3 个代理，再扩大编队。（经验法，结合社区讨论的“并行心智负担”提醒。）&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;安全与密钥&lt;/strong&gt;：不要把敏感 env 硬编码进 prompt，按环境变量注入。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;一页速查表收藏&quot;&gt;一页速查表（收藏）&lt;/h2&gt;&lt;a href=&quot;#一页速查表收藏&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “一页速查表（收藏）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# 安装&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;go&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;install&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;github.com/devflowinc/uzi@latest&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;export&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;PATH&lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;=&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;$PATH&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;$HOME&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;/go/bin&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# 配置&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# uzi.yaml: devCommand + portRange&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# 并行开工&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;uzi&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;prompt&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;--agents&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;claude:2,random:2&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;Build a todo app with React&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# 无人值守&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;uzi&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;auto&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# 监控/广播/批量命令&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;uzi&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;ls&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;-w&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;uzi&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;broadcast&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;Add error handling&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;uzi&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;run&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;npm test&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# 合并/清理&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;uzi&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;checkpoint&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;agent-name&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;feat: ...&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;uzi&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;kill&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;agent-name&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;|&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;uzi&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;kill&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;all&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;结语&quot;&gt;结语&lt;/h2&gt;&lt;a href=&quot;#结语&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “结语”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;并行不是炫技。&lt;strong&gt;它是让团队“同时走多条正确路”的生产力工具&lt;/strong&gt;。
-把 Uzi 接入你的日常流，&lt;strong&gt;先小规模试点&lt;/strong&gt;，再扩到复杂项目。走通一次，你很难回去排队等模型的旧节奏。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;思考题&lt;/strong&gt;：你会先把哪个项目拆成 3 条并行路线？为什么？&lt;/p&gt;&lt;!-- **预告**：下一篇我会分享“并行代理 + 评审准则”模板，评论区集齐 20 个👍就发。
-
----
-
-# 生成推荐标题（3 组）
-
-1. **并行 5 个 AI 码农，Uzi 把效率拉满：Git worktree + tmux 实战**
-
-* EN: Parallel 5 AI Coders with Uzi: Git Worktrees + tmux in Action
-* 繁体：並行 5 個 AI 碼農，Uzi 把效率拉滿：Git worktree + tmux 實戰
-* 日语：UziでAIコーダーを並列稼働：Git worktreeとtmux実践
-* 法语：UziでAIコーダーを並列稼働：Git worktreeとtmux実践 → *(法语)* Parallélisez 5 codeurs IA avec Uzi : Git worktrees + tmux
-* 西语：Paraleliza 5 coders IA con Uzi: Git worktrees + tmux
-* 葡语：Paralelize 5 coders IA com Uzi: Git worktrees + tmux
-* **slug**：`uzi-parallel-ai-coders-git-worktrees-tmux`
-
-2. **别排队等模型了：Uzi 带你一把梭多代理，选优一键合并**
-
-* EN: Stop Queuing Your Model: Run Many Agents with Uzi and Merge the Best
-* 繁体：別排隊等模型了：Uzi 一把梭多代理，選優一鍵合併
-* 日语：もう待たない：Uziで複数エージェント同時実行、ベストだけマージ
-* 法语：Fini la file d’attente : Uzi lance plusieurs agents et ne fusionne que le meilleur
-* 西语：Se acabó esperar: Uzi ejecuta varios agentes y fusiona el mejor
-* 葡语：Chega de fila: Uzi roda vários agentes e faz merge do melhor
-* **slug**：`uzi-stop-queue-run-many-agents-merge-best`
-
-3. **从 1 到 N：用 Uzi 做多路线并行开发，前后端一起飞**
-
-* EN: From 1 to N: Uzi for Multi-Path Parallel Dev Across Frontend &amp; Backend
-* 繁体：從 1 到 N：用 Uzi 做多路線並行開發，前後端一起飛
-* 日语：1からNへ：Uziでマルチルート並列開発、フロントもバックも加速
-* 法语：De 1 à N : Uzi pour un développement parallèle multi-pistes, front et back
-* 西语：De 1 a N: Uzi para desarrollo paralelo multi-ruta en front y back
-* 葡语：De 1 a N: Uzi para desenvolvimento paralelo multi-rota no front e back
-* **slug**：`uzi-multi-path-parallel-dev-frontend-backend`
-
----
-
-# 生成图片（插画式｜2:1｜英文文案｜不含中文）
-
-**封面图 Prompt**
-“A wide 2:1 illustration of a command center orchestrating multiple AI coding agents in parallel. Each agent works in its own terminal window labeled with branch names, while a Git worktree tree and tmux panes form the background. Clean minimal lines, modern pastel palette, no text.”
-
-**配图 1（工作流）**
-“A 2:1 storyboard illustration: 1) create agents, 2) auto confirm, 3) watch progress, 4) broadcast commands, 5) checkpoint merge. Each step shown as a simple panel with terminals and arrows. Minimalist, pastel, no text.”
-
-**配图 2（对比）**
-“A 2:1 split-screen illustration: left shows worktree-based isolation (branches on a tree with folders); right shows container-based isolation (containers with ports). Subtle icons for speed vs isolation. Minimal lines, pastel, no text.”
-
----
-
-# 朋友圈/评论区文案（3 条）
-
-1. **并行 5 个代理同时开干**，Uzi 把效率拉到爆表！我试了下，`checkpoint` 合流真的香～有用的举个手👋
-2. 还在排队等模型回复？**多代理一把梭**，谁做得好就合谁，打工人也能当“技术导演”。
-3. Uzi+tmux+worktree，这套组合拳有点上头…谁用谁知道。**评论区攒到 20 个赞我出上手视频**。
-
----
-
-需要我把这篇改成你公众号的排版模板，或加上你项目的具体命令示例吗？要不要再扩写一版“团队并行评审”玩法？
-
-[1]: https://github.com/devflowinc/uzi &quot;GitHub - devflowinc/uzi: CLI for running large numbers of coding agents in parallel with git worktrees&quot;
-[2]: https://www.infoq.com/news/2025/08/container-use/?utm_source=chatgpt.com &quot;Container Use: A New Tool for Isolated, Parallel Coding ...&quot;
-[3]: https://www.marktechpost.com/2025/06/12/run-multiple-ai-coding-agents-in-parallel-with-container-use-from-dagger/?utm_source=chatgpt.com &quot;Run Multiple AI Coding Agents in Parallel with Container- ...&quot;
-[4]: https://dev.to/skeptrune/llm-codegen-go-brrr-parallelization-with-git-worktrees-and-tmux-2gop?utm_source=chatgpt.com &quot;LLM Codegen go Brrr – Parallelization with Git Worktrees ...&quot;
-[5]: https://www.skeptrune.com/posts/git-worktrees-agents-and-tmux/?utm_source=chatgpt.com &quot;LLM Codegen go Brrr – Parallelization with Git Worktrees and ...&quot;
-[6]: https://ainativedev.io/news/how-to-parallelize-ai-coding-agents?utm_source=chatgpt.com &quot;Parallelizing AI Coding Agents&quot;
-[7]: https://news.ycombinator.com/item?id=44116872&amp;utm_source=chatgpt.com &quot;LLM codegen go brrr – Parallelization with Git worktrees ...&quot; --&gt;</content:encoded><category>uzi</category><category>Claude Code</category><category>Git worktree</category><category>Tmux</category></item><item><title>VibeTree 把 Claude Code、Codex、Cursor CLI、aider 等多 AI Agent 并行跑起来</title><link>https://www.vibesparking.com/zh-cn/blog/ai/claude-code/vibe-tree/2025-08-23-vibetree-parallel-git-worktrees-with-claude/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/claude-code/vibe-tree/2025-08-23-vibetree-parallel-git-worktrees-with-claude/</guid><pubDate>Sat, 23 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # VibeTree 把 Claude + Git Worktree 装进桌面 --&gt;
+[6]: https://github.com/orgs/community/discussions/148714?utm_source=chatgpt.com &quot;Sub-issues Public Preview #148714&quot; --&gt;</content:encoded><category>ccpm</category><category>Claude Code</category><category>Git Worktree</category><category>GitHub</category></item><item><title>VibeTree 把 Claude Code、Codex、Cursor CLI、aider 等多 AI Agent 并行跑起来</title><link>https://www.vibesparking.com/zh-cn/blog/ai/claude-code/vibe-tree/2025-08-23-vibetree-parallel-git-worktrees-with-claude/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/claude-code/vibe-tree/2025-08-23-vibetree-parallel-git-worktrees-with-claude/</guid><pubDate>Sat, 23 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # VibeTree 把 Claude + Git Worktree 装进桌面 --&gt;
 &lt;blockquote&gt;
 &lt;p&gt;VibeTree = &lt;strong&gt;多 Git worktree 并行开发&lt;/strong&gt; + &lt;strong&gt;持久终端&lt;/strong&gt; + &lt;strong&gt;Claude Code 一键接入&lt;/strong&gt;，不切分支、不丢上下文，效率起飞。&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -670,7 +773,174 @@ VibeTree 这款开源桌面应用，把 &lt;strong&gt;并行 git worktree&lt;/st
 [8]: https://docs.anthropic.com/en/docs/claude-code/quickstart?utm_source=chatgpt.com &quot;Quickstart&quot;
 [9]: https://docs.anthropic.com/en/docs/claude-code/overview?utm_source=chatgpt.com &quot;Claude Code overview&quot;
 [10]: https://docs.anthropic.com/en/docs/claude-code/terminal-config?utm_source=chatgpt.com &quot;Optimize your terminal setup&quot;
-[11]: https://docs.anthropic.com/en/docs/claude-code/cli-reference?utm_source=chatgpt.com &quot;CLI reference&quot; --&gt;</content:encoded><category>VibeTree</category><category>Claude Code</category><category>Git worktree</category><category>Tmux</category></item><item><title>Claude Code 伴侣：一键号池切换、第三方模型接入、日志可观测</title><link>https://www.vibesparking.com/zh-cn/blog/ai/claude-code-companion/2025-08-22-claude-code-companion-auto-failover-observability/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/claude-code-companion/2025-08-22-claude-code-companion-auto-failover-observability/</guid><pubDate>Fri, 22 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # Claude Code 伴侣：一键号池切换、第三方模型接入、日志可观测 --&gt;
+[11]: https://docs.anthropic.com/en/docs/claude-code/cli-reference?utm_source=chatgpt.com &quot;CLI reference&quot; --&gt;</content:encoded><category>VibeTree</category><category>Claude Code</category><category>Git worktree</category><category>Tmux</category></item><item><title>Uzi 把 Claude Code、Codex、Cursor CLI、aider 等多 AI Agent 并行跑起来</title><link>https://www.vibesparking.com/zh-cn/blog/ai/claude-code/uzi/2025-08-23-uzi-parallel-ai-coders-git-worktrees-tmux/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/claude-code/uzi/2025-08-23-uzi-parallel-ai-coders-git-worktrees-tmux/</guid><pubDate>Sat, 23 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # Uzi 把 Claude Code、Codex、Cursor CLI、aider 等多 AI Agent 并行跑起来 --&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Uzi 是一个命令行工具，用 &lt;strong&gt;Git worktree + tmux&lt;/strong&gt; 把多个 AI 编码代理并行跑起来，每个代理各自一套依赖、各开一个开发端口，写完用 &lt;code dir=&quot;auto&quot;&gt;checkpoint&lt;/code&gt; 一键合到主分支。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;引言&quot;&gt;引言&lt;/h2&gt;&lt;a href=&quot;#引言&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “引言”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;一个代理慢悠悠改页面，另一个代理同时重构后端，再来一个代理写测试。
+&lt;strong&gt;多线推进的效率，远超“排队等模型”&lt;/strong&gt;。这就是 Uzi 的工作方式：同一仓库，&lt;strong&gt;分枝隔离&lt;/strong&gt;、&lt;strong&gt;并行执行&lt;/strong&gt;、&lt;strong&gt;可视化监控&lt;/strong&gt;、&lt;strong&gt;一键合流&lt;/strong&gt;。官方 README 给到了完整的安装、配置与工作流示例，且在 2025-06-03 发布了 &lt;code dir=&quot;auto&quot;&gt;v0.0.2&lt;/code&gt; 版本。&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;为什么值得上手-uzi&quot;&gt;为什么值得上手 Uzi？&lt;/h2&gt;&lt;a href=&quot;#为什么值得上手-uzi&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “为什么值得上手 Uzi？”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;高并发试错&lt;/strong&gt;：一次起 3～5 个代理，各自探索不同实现或风格，挑最优解合并。
+&lt;strong&gt;真正的“隔离”&lt;/strong&gt;：用 &lt;strong&gt;Git worktree&lt;/strong&gt; 给每个代理开独立分支与目录，不互相污染。
+&lt;strong&gt;自动开发环境&lt;/strong&gt;：每个代理自动起 dev server，并分配端口，方便你即时预览。
+&lt;strong&gt;全程托管&lt;/strong&gt;：tmux 管会话、&lt;code dir=&quot;auto&quot;&gt;uzi auto&lt;/code&gt; 自动“回车确认”工具调用、&lt;code dir=&quot;auto&quot;&gt;ls -w&lt;/code&gt; 实时看进度和 diff。
+&lt;strong&gt;一键收官&lt;/strong&gt;：&lt;code dir=&quot;auto&quot;&gt;checkpoint&lt;/code&gt; 把选中的代理分支 rebase+commit 回当前分支。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;行业观察：也有用容器把代理隔离并行的方案；&lt;strong&gt;Uzi 走的是 worktree 路线&lt;/strong&gt;，在 monorepo 里也很顺手。InfoQ 近期报道也点名对比了这两类思路。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;安装与先决条件3-分钟开箱&quot;&gt;安装与先决条件（3 分钟开箱）&lt;/h2&gt;&lt;a href=&quot;#安装与先决条件3-分钟开箱&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “安装与先决条件（3 分钟开箱）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;依赖&lt;/strong&gt;：Git、tmux、Go，以及你常用的 AI 工具（如 Claude、Codex、Cursor、aider 等）。&lt;/p&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# 安装&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;go&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;install&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;github.com/devflowinc/uzi@latest&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# 确保 GOBIN 在 PATH 里&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;export&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;PATH&lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;=&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;$PATH&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;$HOME&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;/go/bin&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;1-个最小可用配置mvp&quot;&gt;1 个最小可用配置（MVP）&lt;/h2&gt;&lt;a href=&quot;#1-个最小可用配置mvp&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1 个最小可用配置（MVP）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;根目录新建 &lt;code dir=&quot;auto&quot;&gt;uzi.yaml&lt;/code&gt;：&lt;/p&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;yaml&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#111111&quot;&gt;devCommand&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;cd astrobits &amp;#x26;&amp;#x26; yarn &amp;#x26;&amp;#x26; yarn dev --port $PORT&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#111111&quot;&gt;portRange&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;3000-3010&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;写法要点&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;devCommand&lt;/code&gt; 里把依赖安装也写上，因为&lt;strong&gt;每个代理在独立 worktree&lt;/strong&gt;，需要自己装依赖。&lt;/li&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;$PORT&lt;/code&gt; 必须留作占位，Uzi 会自动分配端口。&lt;/li&gt;
+&lt;li&gt;官方还给了 Next.js / Vite / Django 的示例行。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;推荐工作流从任务到合并5-步走&quot;&gt;推荐工作流：从任务到合并，5 步走&lt;/h2&gt;&lt;a href=&quot;#推荐工作流从任务到合并5-步走&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “推荐工作流：从任务到合并，5 步走”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;1）并行开工&lt;/strong&gt;&lt;/p&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;uzi&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;prompt&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;--agents&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;claude:3,codex:2&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;Implement a REST API for user management with authentication&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;指定多代理与数量，也支持 &lt;code dir=&quot;auto&quot;&gt;random&lt;/code&gt; 随机命名。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;2）无人值守&lt;/strong&gt;&lt;/p&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;uzi&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;auto&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;自动“回车确认”工具调用与续写提示，跑着就行。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;3）盯盘看进度&lt;/strong&gt;&lt;/p&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;uzi&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;ls&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;-w&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;watch 模式每秒刷新，能看到 &lt;strong&gt;AGENT/MODEL/DIFF/ADDR/PROMPT&lt;/strong&gt; 等。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;4）中途指挥&lt;/strong&gt;&lt;/p&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;uzi&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;broadcast&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;Make sure to add input validation&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;uzi&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;run&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;npm test&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;广播额外指令；也能在所有代理里跑同一命令（带 &lt;code dir=&quot;auto&quot;&gt;--delete&lt;/code&gt; 跑完关窗）。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;5）选优合入&lt;/strong&gt;&lt;/p&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;uzi&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;checkpoint&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;funny-elephant&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;feat: add user management API&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;把命中的代理分支 rebase 到当前分支并提交信息。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;开发者实战文章里也给过类似 &lt;code dir=&quot;auto&quot;&gt;checkpoint/kill&lt;/code&gt; 的用法推演，便于你按需裁剪。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;3-个落地场景&quot;&gt;3 个落地场景&lt;/h2&gt;&lt;a href=&quot;#3-个落地场景&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3 个落地场景”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3 id=&quot;场景-a前端多风格探索&quot;&gt;场景 A｜前端多风格探索&lt;/h3&gt;&lt;a href=&quot;#场景-a前端多风格探索&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “场景 A｜前端多风格探索”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;一个界面组件给 3 个代理：&lt;strong&gt;极简风 / Material 风 / 企业风&lt;/strong&gt;。
+每个代理都起了本地端口，你直接多窗口对比，挑最好的一键 &lt;code dir=&quot;auto&quot;&gt;checkpoint&lt;/code&gt;。&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;场景-b重构路线博弈&quot;&gt;场景 B｜重构路线博弈&lt;/h3&gt;&lt;a href=&quot;#场景-b重构路线博弈&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “场景 B｜重构路线博弈”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;后端认证要不要换库？要不要分层？把 2～3 条方案平行跑，读 diff 看复杂度、读端口看性能感知，选更稳的路线。&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;场景-c端到端联动&quot;&gt;场景 C｜端到端联动&lt;/h3&gt;&lt;a href=&quot;#场景-c端到端联动&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “场景 C｜端到端联动”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;一个代理写 API，一个写 e2e 测试，另一个写文档与示例。最后只把“都跑通”的那个合入，其它分支随时 &lt;code dir=&quot;auto&quot;&gt;kill&lt;/code&gt; 清理。&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;与容器并行的差异小抄&quot;&gt;与容器并行的差异小抄&lt;/h2&gt;&lt;a href=&quot;#与容器并行的差异小抄&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “与容器并行的差异小抄”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Uzi（worktree）&lt;/strong&gt;：轻、快、&lt;strong&gt;Git 原生&lt;/strong&gt;，适合同仓多实验；对 tmux 友好。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;容器方案&lt;/strong&gt;：更强隔离、更重运维、适合跨语言/系统依赖的极端场景。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;行业观点&lt;/strong&gt;：InfoQ 指出 Uzi 的 worktree 隔离在 monorepo 场景能避免代理互相干扰。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;常见坑与避雷&quot;&gt;常见坑与避雷&lt;/h2&gt;&lt;a href=&quot;#常见坑与避雷&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “常见坑与避雷”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;端口冲突&lt;/strong&gt;：&lt;code dir=&quot;auto&quot;&gt;portRange&lt;/code&gt; 够大，且别被占用。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;依赖重复安装&lt;/strong&gt;：把 &lt;code dir=&quot;auto&quot;&gt;npm/pip install&lt;/code&gt; 写进 &lt;code dir=&quot;auto&quot;&gt;devCommand&lt;/code&gt;，每个代理自己装。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;tmux 不熟&lt;/strong&gt;：建议学会基本窗口/面板切换，提高可见性。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;成本与噪音&lt;/strong&gt;：并行=更多 tokens；建议小任务先试 2～3 个代理，再扩大编队。（经验法，结合社区讨论的“并行心智负担”提醒。）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;安全与密钥&lt;/strong&gt;：不要把敏感 env 硬编码进 prompt，按环境变量注入。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;一页速查表收藏&quot;&gt;一页速查表（收藏）&lt;/h2&gt;&lt;a href=&quot;#一页速查表收藏&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “一页速查表（收藏）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# 安装&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;go&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;install&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;github.com/devflowinc/uzi@latest&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;export&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;PATH&lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;=&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;$PATH&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;$HOME&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;/go/bin&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# 配置&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# uzi.yaml: devCommand + portRange&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# 并行开工&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;uzi&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;prompt&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;--agents&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;claude:2,random:2&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;Build a todo app with React&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# 无人值守&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;uzi&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;auto&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# 监控/广播/批量命令&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;uzi&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;ls&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;-w&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;uzi&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;broadcast&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;Add error handling&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;uzi&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;run&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;npm test&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# 合并/清理&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;uzi&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;checkpoint&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;agent-name&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;feat: ...&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;uzi&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;kill&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;agent-name&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;|&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;uzi&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;kill&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;all&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;结语&quot;&gt;结语&lt;/h2&gt;&lt;a href=&quot;#结语&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “结语”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;并行不是炫技。&lt;strong&gt;它是让团队“同时走多条正确路”的生产力工具&lt;/strong&gt;。
+把 Uzi 接入你的日常流，&lt;strong&gt;先小规模试点&lt;/strong&gt;，再扩到复杂项目。走通一次，你很难回去排队等模型的旧节奏。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;思考题&lt;/strong&gt;：你会先把哪个项目拆成 3 条并行路线？为什么？&lt;/p&gt;&lt;!-- **预告**：下一篇我会分享“并行代理 + 评审准则”模板，评论区集齐 20 个👍就发。
+
+---
+
+# 生成推荐标题（3 组）
+
+1. **并行 5 个 AI 码农，Uzi 把效率拉满：Git worktree + tmux 实战**
+
+* EN: Parallel 5 AI Coders with Uzi: Git Worktrees + tmux in Action
+* 繁体：並行 5 個 AI 碼農，Uzi 把效率拉滿：Git worktree + tmux 實戰
+* 日语：UziでAIコーダーを並列稼働：Git worktreeとtmux実践
+* 法语：UziでAIコーダーを並列稼働：Git worktreeとtmux実践 → *(法语)* Parallélisez 5 codeurs IA avec Uzi : Git worktrees + tmux
+* 西语：Paraleliza 5 coders IA con Uzi: Git worktrees + tmux
+* 葡语：Paralelize 5 coders IA com Uzi: Git worktrees + tmux
+* **slug**：`uzi-parallel-ai-coders-git-worktrees-tmux`
+
+2. **别排队等模型了：Uzi 带你一把梭多代理，选优一键合并**
+
+* EN: Stop Queuing Your Model: Run Many Agents with Uzi and Merge the Best
+* 繁体：別排隊等模型了：Uzi 一把梭多代理，選優一鍵合併
+* 日语：もう待たない：Uziで複数エージェント同時実行、ベストだけマージ
+* 法语：Fini la file d’attente : Uzi lance plusieurs agents et ne fusionne que le meilleur
+* 西语：Se acabó esperar: Uzi ejecuta varios agentes y fusiona el mejor
+* 葡语：Chega de fila: Uzi roda vários agentes e faz merge do melhor
+* **slug**：`uzi-stop-queue-run-many-agents-merge-best`
+
+3. **从 1 到 N：用 Uzi 做多路线并行开发，前后端一起飞**
+
+* EN: From 1 to N: Uzi for Multi-Path Parallel Dev Across Frontend &amp; Backend
+* 繁体：從 1 到 N：用 Uzi 做多路線並行開發，前後端一起飛
+* 日语：1からNへ：Uziでマルチルート並列開発、フロントもバックも加速
+* 法语：De 1 à N : Uzi pour un développement parallèle multi-pistes, front et back
+* 西语：De 1 a N: Uzi para desarrollo paralelo multi-ruta en front y back
+* 葡语：De 1 a N: Uzi para desenvolvimento paralelo multi-rota no front e back
+* **slug**：`uzi-multi-path-parallel-dev-frontend-backend`
+
+---
+
+# 生成图片（插画式｜2:1｜英文文案｜不含中文）
+
+**封面图 Prompt**
+“A wide 2:1 illustration of a command center orchestrating multiple AI coding agents in parallel. Each agent works in its own terminal window labeled with branch names, while a Git worktree tree and tmux panes form the background. Clean minimal lines, modern pastel palette, no text.”
+
+**配图 1（工作流）**
+“A 2:1 storyboard illustration: 1) create agents, 2) auto confirm, 3) watch progress, 4) broadcast commands, 5) checkpoint merge. Each step shown as a simple panel with terminals and arrows. Minimalist, pastel, no text.”
+
+**配图 2（对比）**
+“A 2:1 split-screen illustration: left shows worktree-based isolation (branches on a tree with folders); right shows container-based isolation (containers with ports). Subtle icons for speed vs isolation. Minimal lines, pastel, no text.”
+
+---
+
+# 朋友圈/评论区文案（3 条）
+
+1. **并行 5 个代理同时开干**，Uzi 把效率拉到爆表！我试了下，`checkpoint` 合流真的香～有用的举个手👋
+2. 还在排队等模型回复？**多代理一把梭**，谁做得好就合谁，打工人也能当“技术导演”。
+3. Uzi+tmux+worktree，这套组合拳有点上头…谁用谁知道。**评论区攒到 20 个赞我出上手视频**。
+
+---
+
+需要我把这篇改成你公众号的排版模板，或加上你项目的具体命令示例吗？要不要再扩写一版“团队并行评审”玩法？
+
+[1]: https://github.com/devflowinc/uzi &quot;GitHub - devflowinc/uzi: CLI for running large numbers of coding agents in parallel with git worktrees&quot;
+[2]: https://www.infoq.com/news/2025/08/container-use/?utm_source=chatgpt.com &quot;Container Use: A New Tool for Isolated, Parallel Coding ...&quot;
+[3]: https://www.marktechpost.com/2025/06/12/run-multiple-ai-coding-agents-in-parallel-with-container-use-from-dagger/?utm_source=chatgpt.com &quot;Run Multiple AI Coding Agents in Parallel with Container- ...&quot;
+[4]: https://dev.to/skeptrune/llm-codegen-go-brrr-parallelization-with-git-worktrees-and-tmux-2gop?utm_source=chatgpt.com &quot;LLM Codegen go Brrr – Parallelization with Git Worktrees ...&quot;
+[5]: https://www.skeptrune.com/posts/git-worktrees-agents-and-tmux/?utm_source=chatgpt.com &quot;LLM Codegen go Brrr – Parallelization with Git Worktrees and ...&quot;
+[6]: https://ainativedev.io/news/how-to-parallelize-ai-coding-agents?utm_source=chatgpt.com &quot;Parallelizing AI Coding Agents&quot;
+[7]: https://news.ycombinator.com/item?id=44116872&amp;utm_source=chatgpt.com &quot;LLM codegen go brrr – Parallelization with Git worktrees ...&quot; --&gt;</content:encoded><category>uzi</category><category>Claude Code</category><category>Git worktree</category><category>Tmux</category></item><item><title>Claude Code 伴侣：一键号池切换、第三方模型接入、日志可观测</title><link>https://www.vibesparking.com/zh-cn/blog/ai/claude-code-companion/2025-08-22-claude-code-companion-auto-failover-observability/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/claude-code-companion/2025-08-22-claude-code-companion-auto-failover-observability/</guid><pubDate>Fri, 22 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # Claude Code 伴侣：一键号池切换、第三方模型接入、日志可观测 --&gt;
 &lt;blockquote&gt;
 &lt;p&gt;给常年折腾 Claude Code 的你，一个更稳、更透明的“中控台”。&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -3242,99 +3512,4 @@ A：有。DeepSeek 列出了&lt;strong&gt;忽略/不支持&lt;/strong&gt;的一�
 [6]: https://www.anthropic.com/news/1m-context?utm_source=chatgpt.com &quot;Claude Sonnet 4 now supports 1M tokens of context&quot;
 [7]: https://docs.anthropic.com/en/docs/about-claude/pricing?utm_source=chatgpt.com &quot;Pricing&quot;
 [8]: https://docs.anthropic.com/en/docs/claude-code/setup?utm_source=chatgpt.com &quot;Set up Claude Code&quot;
-[9]: https://docs.anthropic.com/en/docs/claude-code/llm-gateway &quot;LLM gateway configuration - Anthropic&quot; --&gt;</content:encoded><category>DeepSeek v3.1</category><category>DeepSeek</category><category>Claude Code</category></item><item><title>AI 让你更快入门，却无法替你登顶</title><link>https://www.vibesparking.com/zh-cn/blog/ai/trends/2025-08-20-ai-floor-raiser-ceiling-breaker/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/trends/2025-08-20-ai-floor-raiser-ceiling-breaker/</guid><pubDate>Wed, 20 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # AI 让你更快入门，却无法替你登顶 --&gt;
-&lt;div&gt;&lt;h2 id=&quot;引言垫高下限-vs-抬升上限&quot;&gt;引言：垫高下限 vs 抬升上限&lt;/h2&gt;&lt;a href=&quot;#引言垫高下限-vs-抬升上限&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “引言：垫高下限 vs 抬升上限”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;在人工智能（AI）时代，我们常听到一种说法：&lt;strong&gt;AI 更擅长“垫高下限”，而不太能“抬升上限”&lt;/strong&gt;。&lt;br&gt;
-简单来说，AI 正在大幅降低各领域的入门门槛，让更多人更容易上手新技能或完成基本工作；&lt;br&gt;
-但要突破人类能力的天花板，达到创意和专业的巅峰水平，AI 却显得心有余而力不足。&lt;/p&gt;
-&lt;p&gt;这种“下限提高、上限未变”的现象在不同领域表现各异。&lt;br&gt;
-本文将深入分析 AI 如何降低学习和工作的门槛，以及为何突破上限依然困难，并结合编程、写作、创意、设计等领域的实例进行对比分析。&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;ai-降低门槛学习曲线被重新塑造&quot;&gt;AI 降低门槛：学习曲线被重新塑造&lt;/h2&gt;&lt;a href=&quot;#ai-降低门槛学习曲线被重新塑造&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “AI 降低门槛：学习曲线被重新塑造”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;学习资源匹配难题正在消解。&lt;/strong&gt; 在 AI 出现之前，学习者常常面临“资源匹配”的难题：市面上的教学资料是为“大众”或某个固定水平的受众编写的，未必适合你的具体情况。比如：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;你是某新领域的新人，却在相关领域有一定知识积累；但几乎没有教程能把两者联系起来。&lt;/li&gt;
-&lt;li&gt;学习某技能其实需要先修知识，但初学者往往不清楚这一点，结果直接硬啃，效率低下。&lt;/li&gt;
-&lt;li&gt;达到中级水平后，常常会遇到瓶颈，却很难找到针对性的进阶资源。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;p&gt;如今，有了 AI，这些问题迎刃而解。&lt;strong&gt;AI 可以因材施教，按需定制内容&lt;/strong&gt;：无论你提出多“小白”或多冷门的问题，AI 都能根据你的理解水平给予解答，甚至帮你完成一些枯燥的基础练习。&lt;br&gt;
-这使得学习曲线发生显著变化——起步阶段不再陡峭，而是被大大抬升了。&lt;/p&gt;
-&lt;p&gt;
-&lt;em&gt;绿色曲线表示在 AI 辅助下技能掌握的进度，相比黑色曲线（无 AI），初学者能更快跨过基础门槛。随着技能深入，两条曲线趋近，说明 AI 对精通的帮助有限。&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;AI 的典型作用：&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;像私人导师一样，随时解答问题；&lt;/li&gt;
-&lt;li&gt;提供示例代码、案例，帮助快速突破新手期；&lt;/li&gt;
-&lt;li&gt;在重复性工作上代劳，让学习者专注于理解。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;例如，很多程序员发现：过去学习新框架时，要花大量时间查文档；现在直接问 AI，就能即时获得解释和代码示例。正如有人调侃：“AI 几乎知道每一个菜鸟错误的解决办法，就像打了类固醇的 Stack Overflow。”&lt;/p&gt;
-&lt;p&gt;研究也表明：新手程序员借助 GitHub Copilot，完成任务的速度提高了 &lt;strong&gt;55%&lt;/strong&gt;，而且&lt;strong&gt;越缺经验的人，从 AI 获得的提升越大&lt;/strong&gt;。&lt;/p&gt;
-&lt;p&gt;不仅是学习，&lt;strong&gt;工作中的门槛也显著降低&lt;/strong&gt;。过去需要专业技能的任务，如代码编写、文案撰写、制图建模，如今新人也能靠 AI 工具快速产出“能用”的成果。&lt;br&gt;
-这意味着更多人可以进入过去的专业领域，知识工作参与面正在扩大。调研称之为“raising the floor”——提高地板，提供更高的起点默认值。&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;突破上限依然困难认知边界与数据瓶颈&quot;&gt;突破上限依然困难：认知边界与数据瓶颈&lt;/h2&gt;&lt;a href=&quot;#突破上限依然困难认知边界与数据瓶颈&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “突破上限依然困难：认知边界与数据瓶颈”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;高手对 AI 的评价往往更冷静。&lt;/strong&gt;&lt;br&gt;
-他们直言：AI 的知识浅薄，研究得越深，越发现它帮不上忙。&lt;/p&gt;
-&lt;p&gt;原因主要有两方面：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;训练数据局限&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;常见、普及的主题 → AI 答案可靠。&lt;/li&gt;
-&lt;li&gt;前沿或高深主题 → 数据稀缺，AI 容易出错或模棱两可。&lt;/li&gt;
-&lt;li&gt;有争议的主题 → 数据矛盾，AI 输出缺乏深度。&lt;/li&gt;
-&lt;li&gt;本质上，AI 更倾向于给出“平均化的回答”，而非突破性洞见。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;认知与推理瓶颈&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;生成式 AI 本质是模式匹配器，而不是推理机器。&lt;/li&gt;
-&lt;li&gt;缺乏因果逻辑和跨领域洞察力。&lt;/li&gt;
-&lt;li&gt;在复杂推理题和创新探索中，AI 经常力不从心。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;strong&gt;“捷径”思维导致停滞。&lt;/strong&gt;&lt;br&gt;
-很多人只想直接问 AI 要答案，而不愿意自己思考。短期内似乎进步飞快，但很快进入平台期，最终被坚持自主学习的人超越。&lt;/p&gt;
-&lt;p&gt;
-&lt;em&gt;红线：依赖 AI 捷径的学习者，早早停滞；黑线：自主学习者，后劲更足。&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;归根结底，&lt;strong&gt;精通仍然困难&lt;/strong&gt;。AI 虽然降低了“入门难度”，却没能降低“登顶难度”。真正的理解、创新、经验积累，依然需要靠自己完成。&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;分领域剖析ai-的影响差异&quot;&gt;分领域剖析：AI 的影响差异&lt;/h2&gt;&lt;a href=&quot;#分领域剖析ai-的影响差异&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “分领域剖析：AI 的影响差异”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h3 id=&quot;编程新手如虎添翼复杂项目仍靠老鸟&quot;&gt;编程：新手如虎添翼，复杂项目仍靠老鸟&lt;/h3&gt;&lt;a href=&quot;#编程新手如虎添翼复杂项目仍靠老鸟&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “编程：新手如虎添翼，复杂项目仍靠老鸟”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;优势：&lt;/strong&gt; 帮助新手快速掌握语言和框架，提升生产力。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;局限：&lt;/strong&gt; 在大型项目中，AI 缺乏上下文理解，难以输出高质量方案。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;隐忧：&lt;/strong&gt; 新人可能跳过基础训练，削弱独立解决问题的能力。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h3 id=&quot;写作生成初稿轻而易举优质创作不容懈怠&quot;&gt;写作：生成初稿轻而易举，优质创作不容懈怠&lt;/h3&gt;&lt;a href=&quot;#写作生成初稿轻而易举优质创作不容懈怠&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “写作：生成初稿轻而易举，优质创作不容懈怠”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;优势：&lt;/strong&gt; 文案、摘要、新闻稿的生成效率极高。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;局限：&lt;/strong&gt; 风格趋同，缺乏原创突破。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;结论：&lt;/strong&gt; AI 是二稿助手，但独特表达仍靠作者。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h3 id=&quot;创意艺术模仿触手可及新意难以企及&quot;&gt;创意艺术：模仿触手可及，新意难以企及&lt;/h3&gt;&lt;a href=&quot;#创意艺术模仿触手可及新意难以企及&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “创意艺术：模仿触手可及，新意难以企及”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;优势：&lt;/strong&gt; 人人都能生成像样的插画、音乐。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;局限：&lt;/strong&gt; 真正的新颖创意依然稀缺。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;现象：&lt;/strong&gt; “吉卜力风”头像火过一阵，但无法替代经典原创作品。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h3 id=&quot;设计工具智能进步创意仍需巧思&quot;&gt;设计：工具智能进步，创意仍需巧思&lt;/h3&gt;&lt;a href=&quot;#设计工具智能进步创意仍需巧思&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “设计：工具智能进步，创意仍需巧思”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;优势：&lt;/strong&gt; Photoshop、Figma 等 AI 功能降低了操作门槛。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;局限：&lt;/strong&gt; 品牌调性、用户体验的把控，仍需人来决策。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;趋势：&lt;/strong&gt; 设计师角色转向“AI 筛选师”和“创意总监”。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;结语机遇与挑战并存因人而异的-ai-时代&quot;&gt;结语：机遇与挑战并存，因人而异的 AI 时代&lt;/h2&gt;&lt;a href=&quot;#结语机遇与挑战并存因人而异的-ai-时代&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “结语：机遇与挑战并存，因人而异的 AI 时代”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;AI 正在&lt;strong&gt;垫高下限&lt;/strong&gt;，让更多人进入知识和创意的舞台。&lt;br&gt;
-但&lt;strong&gt;突破上限仍靠人类&lt;/strong&gt;，AI 提供的是更高的起点，而非更高的终点。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;对学习者：&lt;/strong&gt; AI 是加速器，但不能替代努力。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;对创作者：&lt;/strong&gt; AI 是助手，但原创性依旧稀缺。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;对行业：&lt;/strong&gt; AI 打破准入门槛，但巅峰依旧属于少数。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;在一个人人都有 AI 工具的时代，&lt;strong&gt;真正拉开差距的，是使用工具的智慧&lt;/strong&gt;。&lt;/p&gt;
-&lt;hr&gt;</content:encoded><category>AI Era</category></item></channel></rss>
+[9]: https://docs.anthropic.com/en/docs/claude-code/llm-gateway &quot;LLM gateway configuration - Anthropic&quot; --&gt;</content:encoded><category>DeepSeek v3.1</category><category>DeepSeek</category><category>Claude Code</category></item></channel></rss>
