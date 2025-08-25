@@ -112,7 +112,172 @@
 &lt;li&gt;Wait for official confirmation before anchoring decisions.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;hr&gt;
-&lt;p&gt;In today’s AI investment cycle, media narratives, corporate signaling, and on‑the‑ground reality often diverge. In moments of mania, noise overwhelms signal. Only disciplined verification and clear‑eyed analysis can keep decisions grounded in truth instead of sentiment.&lt;/p&gt;</content:encoded><category>Claude</category><category>Claude Code</category><category>Anthropic</category><category>OpenAI</category></item><item><title>Product Manager&apos;s AI Prototyping Roadmap</title><link>https://www.vibesparking.com/en/blog/ai/management/2025-08-24-ai-prototyping-pm-10min-shipping/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/management/2025-08-24-ai-prototyping-pm-10min-shipping/</guid><pubDate>Sun, 24 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # Product Manager&apos;s AI Prototyping: v0, Bolt.new, Lovable, Replit Agent, Claude Artifacts, Cursor, Copilot, Windsurf, Zed --&gt;
+&lt;p&gt;In today’s AI investment cycle, media narratives, corporate signaling, and on‑the‑ground reality often diverge. In moments of mania, noise overwhelms signal. Only disciplined verification and clear‑eyed analysis can keep decisions grounded in truth instead of sentiment.&lt;/p&gt;</content:encoded><category>Claude</category><category>Claude Code</category><category>Anthropic</category><category>OpenAI</category></item><item><title>Claude Code 1.0.88: Customizable Sonnet / Opus / Opus Plan Models</title><link>https://www.vibesparking.com/en/blog/ai/claude-code/changelog/2025-08-25-claude-code-1088-alias-control/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/claude-code/changelog/2025-08-25-claude-code-1088-alias-control/</guid><pubDate>Mon, 25 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # Claude Code 1.0.88: Customizable **sonnet / opus / opusplan** models --&gt;
+&lt;blockquote&gt;
+&lt;p&gt;You can now use two environment variables to precisely map the alias names under &lt;code dir=&quot;auto&quot;&gt;/model&lt;/code&gt; — “sonnet”, “opus”, and “opusplan” — to the exact model versions you want. This gives teams tighter control and smoother staged rollouts.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;&lt;a href=&quot;#introduction&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Introduction”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;The recent &lt;strong&gt;Claude Code 1.0.88&lt;/strong&gt; is a small but pivotal update.
+It didn’t make a lot of noise, yet it directly solves a common “&lt;strong&gt;alias drift&lt;/strong&gt;” pain: &lt;strong&gt;when Sonnet/Opus release a new version, which concrete model does &lt;code dir=&quot;auto&quot;&gt;/model sonnet&lt;/code&gt; or &lt;code dir=&quot;auto&quot;&gt;/model opus&lt;/code&gt; actually point to?&lt;/strong&gt; Now, you can decide.&lt;/p&gt;
+&lt;p&gt;This is extremely helpful for teams that need stable reproducibility, staged upgrades, and compliance audits.
+Especially when mixing environments (Console / Bedrock / Vertex), you can finally pin aliases reliably.&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;whats-new&quot;&gt;What’s New?&lt;/h2&gt;&lt;a href=&quot;#whats-new&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “What’s New?”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3 id=&quot;1-two-new-default-alias-variables&quot;&gt;1) Two new default alias variables&lt;/h3&gt;&lt;a href=&quot;#1-two-new-default-alias-variables&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1) Two new default alias variables”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;ANTHROPIC_DEFAULT_SONNET_MODEL&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;ANTHROPIC_DEFAULT_OPUS_MODEL&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Purpose&lt;/strong&gt;: Control which concrete model strings (e.g., &lt;code dir=&quot;auto&quot;&gt;claude-sonnet-4-20250514&lt;/code&gt;, &lt;code dir=&quot;auto&quot;&gt;claude-opus-4-1-20250805&lt;/code&gt;, etc.) the three &lt;strong&gt;aliases&lt;/strong&gt; — &lt;code dir=&quot;auto&quot;&gt;/model sonnet&lt;/code&gt;, &lt;code dir=&quot;auto&quot;&gt;/model opus&lt;/code&gt;, and &lt;code dir=&quot;auto&quot;&gt;/model opusplan&lt;/code&gt; — will finally resolve to.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Note: The official CLI docs explicitly support using an &lt;strong&gt;alias or a full model name&lt;/strong&gt;. The “opusplan (planning only) + sonnet execution” mode has been toggleable since 1.0.73. The new 1.0.88 variables make these aliases &lt;strong&gt;configurable&lt;/strong&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div&gt;&lt;h3 id=&quot;2-why-it-matters&quot;&gt;2) Why it matters&lt;/h3&gt;&lt;a href=&quot;#2-why-it-matters&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2) Why it matters”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Stable reproducibility&lt;/strong&gt;: Lock alias targets so PRs, CI, and production stay consistent.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Rollout-friendly&lt;/strong&gt;: Temporarily map &lt;code dir=&quot;auto&quot;&gt;sonnet&lt;/code&gt; to “the latest” on a small set of machines; flip to full rollout after validation.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Multi-cloud consistency&lt;/strong&gt;: Keep the same alias-mapping strategy across Console / Bedrock / Vertex providers.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;how-to-use-copy-and-run&quot;&gt;How to use (copy and run)&lt;/h2&gt;&lt;a href=&quot;#how-to-use-copy-and-run&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “How to use (copy and run)”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3 id=&quot;option-a-shell-personalsingle-machine&quot;&gt;Option A: Shell (personal/single machine)&lt;/h3&gt;&lt;a href=&quot;#option-a-shell-personalsingle-machine&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Option A: Shell (personal/single machine)”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# Pin the sonnet alias to Sonnet 4 (2025‑05‑14)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;export&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;ANTHROPIC_DEFAULT_SONNET_MODEL&lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;=&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;claude-sonnet-4-20250514&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# Pin the opus alias to Opus 4.1 (2025‑08‑05)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;export&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;ANTHROPIC_DEFAULT_OPUS_MODEL&lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;=&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;claude-opus-4-1-20250805&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# (Optional) You can still switch manually: /model sonnet | /model opus | /model opusplan&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code dir=&quot;auto&quot;&gt;/model&lt;/code&gt; supports both aliases and full model names. &lt;code dir=&quot;auto&quot;&gt;opusplan&lt;/code&gt; makes Opus handle “planning only” while Sonnet executes; this mode was added around 1.0.73.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div&gt;&lt;h3 id=&quot;option-b-project-level-claudesettingsjson-teamrepo&quot;&gt;Option B: Project-level &lt;code dir=&quot;auto&quot;&gt;.claude/settings.json&lt;/code&gt; (team/repo)&lt;/h3&gt;&lt;a href=&quot;#option-b-project-level-claudesettingsjson-teamrepo&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Option B: Project-level .claude/settings.json (team/repo)”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;json&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;{&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;env&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: {&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;ANTHROPIC_DEFAULT_SONNET_MODEL&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;claude-sonnet-4-20250514&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;ANTHROPIC_DEFAULT_OPUS_MODEL&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;claude-opus-4-1-20250805&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Claude Code supports injecting environment variables via &lt;code dir=&quot;auto&quot;&gt;settings.json&lt;/code&gt;, making it easy to distribute consistent configs and track versions across a team.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div&gt;&lt;h3 id=&quot;option-c-multiple-providers-bedrockvertex&quot;&gt;Option C: Multiple providers (Bedrock/Vertex)&lt;/h3&gt;&lt;a href=&quot;#option-c-multiple-providers-bedrockvertex&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Option C: Multiple providers (Bedrock/Vertex)”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Set the two variables in each environment to keep &lt;strong&gt;aliases uniform&lt;/strong&gt;; combine with regional settings and Bedrock/Vertex configuration as needed.&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;7-recommended-realworld-scenarios&quot;&gt;7 recommended real‑world scenarios&lt;/h2&gt;&lt;a href=&quot;#7-recommended-realworld-scenarios&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “7 recommended real‑world scenarios”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Stable replay/audit&lt;/strong&gt;
+When security or legal needs to review, they must know “exactly which model a given alias resolved to at the time.” Pinning aliases makes &lt;strong&gt;logs clearer and accountability simpler&lt;/strong&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Staged rollout&lt;/strong&gt;
+Point &lt;code dir=&quot;auto&quot;&gt;sonnet&lt;/code&gt; to the newest Sonnet on canary machines (e.g., 4 or 3.7). If it passes, switch uniformly — &lt;strong&gt;no command‑habit changes&lt;/strong&gt;. If unstable, roll back the variables immediately.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Plan‑execute dual model&lt;/strong&gt;
+Map &lt;code dir=&quot;auto&quot;&gt;opusplan&lt;/code&gt; → Opus 4.1 (careful planner), &lt;code dir=&quot;auto&quot;&gt;sonnet&lt;/code&gt; → Sonnet 4 (fast executor). For &lt;strong&gt;long workflows&lt;/strong&gt;, this is more robust and higher throughput.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Multi‑cloud consistency&lt;/strong&gt;
+Console for dev machines, Bedrock in production. Apply the same alias policy to both to &lt;strong&gt;avoid “same name, different model.”&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;CI / bot accounts&lt;/strong&gt;
+Inject both variables in CI so PR bots share the same “alias → concrete model” mapping — &lt;strong&gt;consistent review standards&lt;/strong&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Education/bootcamps&lt;/strong&gt;
+In class, only require “/model sonnet”; behind the scenes, point &lt;code dir=&quot;auto&quot;&gt;sonnet&lt;/code&gt; to your preferred stable release for a &lt;strong&gt;uniform learner experience&lt;/strong&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Cost and quota governance&lt;/strong&gt;
+Need to prevent certain scenarios from using &lt;strong&gt;Opus&lt;/strong&gt;? Map &lt;code dir=&quot;auto&quot;&gt;opus&lt;/code&gt; to an older version or don’t configure it at all; combine with permissions and &lt;code dir=&quot;auto&quot;&gt;/permissions&lt;/code&gt; to control usage paths.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;verification--troubleshooting-cheatsheet&quot;&gt;Verification &amp;#x26; troubleshooting cheatsheet&lt;/h2&gt;&lt;a href=&quot;#verification--troubleshooting-cheatsheet&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Verification &amp;#x26; troubleshooting cheatsheet”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;claude /status&lt;/code&gt; to view current account and model info.&lt;/li&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;claude /model&lt;/code&gt; to open the interactive menu and confirm where aliases resolve.&lt;/li&gt;
+&lt;li&gt;If you are on &lt;strong&gt;Pro&lt;/strong&gt;: The &lt;strong&gt;official notes say Pro cannot use Opus&lt;/strong&gt;. Mapping an alias to Opus will still be unavailable (use Sonnet instead).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;version-facts--sources&quot;&gt;Version facts &amp;#x26; sources&lt;/h2&gt;&lt;a href=&quot;#version-facts--sources&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Version facts &amp;#x26; sources”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;1.0.88&lt;/strong&gt; is listed on the NPM releases page (with 1.0.87/86/… around it) as a recent release.&lt;/li&gt;
+&lt;li&gt;Multiple community changelog notes and weeklies mention the new &lt;code dir=&quot;auto&quot;&gt;ANTHROPIC_DEFAULT_SONNET_MODEL&lt;/code&gt; / &lt;code dir=&quot;auto&quot;&gt;ANTHROPIC_DEFAULT_OPUS_MODEL&lt;/code&gt; for controlling &lt;strong&gt;opusplan / opus / sonnet&lt;/strong&gt; aliases. The official docs may be &lt;strong&gt;slightly lagging&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;The CLI docs confirm &lt;code dir=&quot;auto&quot;&gt;/model&lt;/code&gt; supports &lt;strong&gt;aliases&lt;/strong&gt; (&lt;code dir=&quot;auto&quot;&gt;sonnet&lt;/code&gt;/&lt;code dir=&quot;auto&quot;&gt;opus&lt;/code&gt;) or &lt;strong&gt;full model names&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;The “Opus Plan Mode” separation of planning vs. execution appeared earlier in &lt;strong&gt;1.0.73&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Note: Upstream information is often spread across &lt;strong&gt;Docs / Help Center / NPM / GitHub / community notes&lt;/strong&gt;. Before rollout, verify alias mappings with &lt;code dir=&quot;auto&quot;&gt;/model&lt;/code&gt; and &lt;code dir=&quot;auto&quot;&gt;/status&lt;/code&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;quickstart-in-3-steps&quot;&gt;Quickstart in 3 steps&lt;/h2&gt;&lt;a href=&quot;#quickstart-in-3-steps&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Quickstart in 3 steps”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ol&gt;
+&lt;li&gt;Update: &lt;code dir=&quot;auto&quot;&gt;claude update&lt;/code&gt; (or reinstall the latest version).&lt;/li&gt;
+&lt;li&gt;Set the variables (Shell or &lt;code dir=&quot;auto&quot;&gt;.claude/settings.json&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;Verify: use &lt;code dir=&quot;auto&quot;&gt;/model&lt;/code&gt; → choose &lt;code dir=&quot;auto&quot;&gt;sonnet&lt;/code&gt;/&lt;code dir=&quot;auto&quot;&gt;opus&lt;/code&gt;/&lt;code dir=&quot;auto&quot;&gt;opusplan&lt;/code&gt;, then &lt;code dir=&quot;auto&quot;&gt;/status&lt;/code&gt; to confirm the exact models you configured are in effect.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;closing&quot;&gt;Closing&lt;/h2&gt;&lt;a href=&quot;#closing&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Closing”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Small change, big gain.&lt;/strong&gt;
+Keep your “aliases” in your own hands for &lt;strong&gt;stronger reproducibility, lighter rollouts, and smoother collaboration&lt;/strong&gt;. Standardize your team’s &lt;code dir=&quot;auto&quot;&gt;sonnet / opus / opusplan&lt;/code&gt; today.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Where will you use &lt;code dir=&quot;auto&quot;&gt;opusplan&lt;/code&gt; in long workflows?&lt;/strong&gt;
+Share your practices and pitfalls in the comments.&lt;/p&gt;&lt;!-- 
+---
+
+## 🏷️ Multi‑language title suggestions (3 sets &amp; slug)
+
+1. **Own your aliases: Claude Code 1.0.88 makes rollout and reproducibility steadier**
+
+   * EN: Own your model aliases: Claude Code 1.0.88 makes rollout &amp; reproducibility rock solid
+   * TC: 把模型別名握在手裡：1.0.88 灰度與復現更穩
+   * JA: モデル別名を手中に：Claude Code 1.0.88で展開と再現性が安定
+   * FR: Maîtrisez vos alias de modèles : Claude Code 1.0.88 fiabilise déploiements et reproductibilité
+   * ES: Controla tus alias de modelos: Claude Code 1.0.88 asegura despliegue y reproducibilidad
+   * PT: Domine os aliases de modelos: Claude Code 1.0.88 reforça rollout e reprodutibilidade
+   * **slug**: `claude-code-1088-alias-control`
+
+2. **No more alias drift: lock sonnet / opus / opusplan with two lines**
+
+   * EN: No more alias drift: lock sonnet / opus / opusplan with two lines
+   * TC: 別名不再漂移：兩行設定鎖死 sonnet / opus / opusplan
+   * JA: エイリアス漂流に終止符：2行設定で固定
+   * FR: Fini la dérive des alias : figez-les en deux lignes
+   * ES: Adiós a la deriva de alias: fíjalos con dos líneas
+   * PT: Chega de alias flutuando: fixe com duas linhas
+   * **slug**: `stop-alias-drift-with-2-lines`
+
+3. **Plan with Opus, execute with Sonnet—1.0.88 makes it easy**
+
+   * EN: Plan with Opus, execute with Sonnet—1.0.88 makes it easy
+   * TC: 計畫用 Opus，執行交給 Sonnet：1.0.88 更簡單
+   * JA: 計画はOpus・実行はSonnet：1.0.88で簡単に
+   * FR: Planifier avec Opus, exécuter avec Sonnet—1.0.88 simplifie tout
+   * ES: Planifica con Opus, ejecuta con Sonnet—1.0.88 lo simplifica
+   * PT: Planeje com Opus, execute com Sonnet—1.0.88 facilita
+   * **slug**: `opus-plan-sonnet-execute-1088`
+
+---
+
+## 🎨 Image prompts (2:1 illustration, no Chinese text)
+
+**Cover image**
+
+&gt; *A developer pinning three model name tags “sonnet / opus / opusplan” onto a control board, toggling switches for rollout and stability; pastel colors, clean vector illustration, wide 2:1 layout, minimal UI dials and pipeline lines, no text on image.*
+
+**Key section images**
+1) “Alias drift vs. locked” comparison
+
+&gt; *Split-screen illustration: on the left, floating drifting tags “sonnet/opus”; on the right, tags neatly locked to specific model cards; 2:1 ratio, flat illustration.*
+
+2) “Staged rollout”
+
+&gt; *A conveyor belt rolling versions from canary to stable, with alias labels above; subtle checkmarks and warning icons; 2:1.*
+
+3) “Plan‑execute dual model”
+
+&gt; *Two coordinated robots: a planner (Opus) with blueprint, an executor (Sonnet) with wrench; working on the same code module; 2:1.*
+
+---
+
+## Three curated one‑liners for socials/comments
+
+--&gt;</content:encoded><category>Ki2API</category><category>Kiro</category></item><item><title>Product Manager&apos;s AI Prototyping Roadmap</title><link>https://www.vibesparking.com/en/blog/ai/management/2025-08-24-ai-prototyping-pm-10min-shipping/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/management/2025-08-24-ai-prototyping-pm-10min-shipping/</guid><pubDate>Sun, 24 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # Product Manager&apos;s AI Prototyping: v0, Bolt.new, Lovable, Replit Agent, Claude Artifacts, Cursor, Copilot, Windsurf, Zed --&gt;
 &lt;div&gt;&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;&lt;a href=&quot;#introduction&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Introduction”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
 &lt;p&gt;Stop waiting for development sprints. &lt;strong&gt;Now, a PM can use AI to turn Figma designs, hand-drawn sketches, or even a PRD into interactive prototypes in 10 minutes&lt;/strong&gt;.
 Even better: you can deploy with one click, connect to databases, collect user feedback, &lt;strong&gt;validate same-day, iterate same-day&lt;/strong&gt;. Your competitors might already be doing this.&lt;/p&gt;
@@ -316,7 +481,151 @@ Starting today, every PM can &lt;strong&gt;run 3 prototypes per week&lt;/strong&
 &lt;hr&gt;
 &lt;div&gt;&lt;h2 id=&quot;conclusion-from-failure-lessons-to-future-paradigms&quot;&gt;Conclusion: From Failure Lessons to Future Paradigms&lt;/h2&gt;&lt;a href=&quot;#conclusion-from-failure-lessons-to-future-paradigms&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Conclusion: From Failure Lessons to Future Paradigms”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
 &lt;p&gt;When we look back at those 95% failed AI projects, it’s clear that Palantir’s principles directly address those lessons: &lt;strong&gt;use appropriate scenarios (focus on pain points rather than blindly chasing trends), data is king (integrate internal data rather than relying only on general models), human-machine collaboration (involve frontline personnel rather than parachuting in black-box tools), and long-term evolution (accumulate common products rather than one-time assemblies)&lt;/strong&gt;. Palantir has proven through real combat that for AI to create value in enterprises, technical strength is certainly important, but more critical is earning trust and deep integration. As CEO Karp puts it: “AI alone can’t give you answers; the key lies in human-AI collaboration.”&lt;/p&gt;
-&lt;p&gt;For those worried about the AI bubble, Palantir’s successful experience provides a shot in the arm: truly valuable AI implementation isn’t a pipe dream, provided we &lt;strong&gt;face those “invisible foundational tasks”&lt;/strong&gt;—building trust, integrating data, transforming processes, and refining products. Only by addressing these shortcomings can AI’s magic be unleashed and transformed into tangible business results and social value. In the future, as more enterprises adopt such paradigms, we have reason to expect that today’s 95% failure rate will eventually be reversed, and AI will no longer be a mirage but become a solid engine driving transformation across all industries.&lt;/p&gt;</content:encoded><category>AI Era</category></item><item><title>ccpm Enables Claude Code: PRD → Epic → GitHub Issues → Production Code</title><link>https://www.vibesparking.com/en/blog/ai/claude-code/ccpm/2025-08-24-ccpm-prd-to-code/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/claude-code/ccpm/2025-08-24-ccpm-prd-to-code/</guid><pubDate>Sun, 24 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # ccpm Enables Claude Code: PRD → Epic → GitHub Issues → Production Code --&gt;&lt;!-- # &apos;Turn PRDs Directly into Code&apos;: ccpm Equips Claude Code with a Working PM System --&gt;
+&lt;p&gt;For those worried about the AI bubble, Palantir’s successful experience provides a shot in the arm: truly valuable AI implementation isn’t a pipe dream, provided we &lt;strong&gt;face those “invisible foundational tasks”&lt;/strong&gt;—building trust, integrating data, transforming processes, and refining products. Only by addressing these shortcomings can AI’s magic be unleashed and transformed into tangible business results and social value. In the future, as more enterprises adopt such paradigms, we have reason to expect that today’s 95% failure rate will eventually be reversed, and AI will no longer be a mirage but become a solid engine driving transformation across all industries.&lt;/p&gt;</content:encoded><category>AI Era</category></item><item><title>Do Vibe Coding Right with Claude Code: A FAANG Engineer’s Practical Pipeline</title><link>https://www.vibesparking.com/en/blog/ai/vibe-coding/2025-08-24-claude-code-vibe-coding-faang-playbook/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/vibe-coding/2025-08-24-claude-code-vibe-coding-faang-playbook/</guid><pubDate>Sun, 24 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # Do Vibe Coding Right with Claude Code: A FAANG Engineer’s Practical Pipeline --&gt;
+&lt;div&gt;&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;&lt;a href=&quot;#introduction&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Introduction”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;This year, Silicon Valley gave a name to a style of coding: &lt;strong&gt;Vibe Coding&lt;/strong&gt;.
+It’s not slacking off, and it’s not “let the AI do everything.”
+It’s using &lt;strong&gt;Claude Code&lt;/strong&gt; as a “disciplined junior engineer” so teams ship faster and more reliably.&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;what-is-claude-code&quot;&gt;What is Claude Code?&lt;/h2&gt;&lt;a href=&quot;#what-is-claude-code&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “What is Claude Code?”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;An &lt;strong&gt;agentic coding assistant in your terminal&lt;/strong&gt;: it plans, reads/writes your project, runs commands, and uses &lt;strong&gt;slash commands&lt;/strong&gt; to codify your workflow.&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;faangstyle-vibe-coding-best-practices-copy-straight-into-your-team&quot;&gt;FAANG‑Style “Vibe Coding” Best Practices (copy straight into your team)&lt;/h2&gt;&lt;a href=&quot;#faangstyle-vibe-coding-best-practices-copy-straight-into-your-team&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “FAANG‑Style “Vibe Coding” Best Practices (copy straight into your team)”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Goal&lt;/strong&gt;: Treat Claude as an orchestratable junior engineer. Humans own architecture and decisions; AI executes and reports progress.&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;1-design-and-reviews-first&quot;&gt;1) Design and reviews first&lt;/h3&gt;&lt;a href=&quot;#1-design-and-reviews-first&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1) Design and reviews first”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;Write a design doc covering architecture, boundaries, integration points.&lt;/li&gt;
+&lt;li&gt;Do a senior‑engineer review to &lt;strong&gt;front‑load the pain&lt;/strong&gt;. This prevents the AI from “speeding you off course” later. (Pattern lifted from FAANG workflows.)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;2-use-planmode-for-a-onetime-plan&quot;&gt;2) Use &lt;strong&gt;plan‑mode&lt;/strong&gt; for a one‑time plan&lt;/h3&gt;&lt;a href=&quot;#2-use-planmode-for-a-onetime-plan&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2) Use plan‑mode for a one‑time plan”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;For each feature, &lt;strong&gt;enter plan‑mode once&lt;/strong&gt;, generate a task list, then execute against that list. Stability improves dramatically. Community experience shows this “rigid sequence” shifts Claude from “occasionally off the rails” to “reliably intern‑like.”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;3-tdd-have-claude-write-tests-first&quot;&gt;3) &lt;strong&gt;TDD: have Claude write tests first&lt;/strong&gt;&lt;/h3&gt;&lt;a href=&quot;#3-tdd-have-claude-write-tests-first&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3) TDD: have Claude write tests first”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;Give Claude your business rules → generate unit/integration tests → human review → then let it implement code.&lt;/li&gt;
+&lt;li&gt;Multiple write‑ups emphasize: &lt;strong&gt;tests first&lt;/strong&gt; slashes hallucinations and regressions.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;4-codify-your-workflow-with-slash-commands&quot;&gt;4) Codify your workflow with &lt;strong&gt;slash commands&lt;/strong&gt;&lt;/h3&gt;&lt;a href=&quot;#4-codify-your-workflow-with-slash-commands&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “4) Codify your workflow with slash commands”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Turn frequent actions into reusable commands:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;/spec&lt;/code&gt; to generate a feature spec&lt;/li&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;/tests &amp;#x3C;feature&gt;&lt;/code&gt; to produce TDD tests&lt;/li&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;/implement &amp;#x3C;feature&gt;&lt;/code&gt; to commit a PR strictly by the task list&lt;/li&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;/context&lt;/code&gt; to inspect context usage and tool calls
+Official support includes custom commands and namespaces, so you can &lt;strong&gt;bake the team process into the repo&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;5-context-hygiene&quot;&gt;5) Context hygiene&lt;/h3&gt;&lt;a href=&quot;#5-context-hygiene&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “5) Context hygiene”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Do one thing at a time&lt;/strong&gt;; constrain directories and files; pipe logs/CSVs to Claude when needed; let it fetch data or read links when appropriate.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;6-review-and-safety-gates&quot;&gt;6) Review and safety gates&lt;/h3&gt;&lt;a href=&quot;#6-review-and-safety-gates&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “6) Review and safety gates”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Two‑person review&lt;/strong&gt; plus staging verification, as used in FAANG.&lt;/li&gt;
+&lt;li&gt;Run &lt;strong&gt;/security-review&lt;/strong&gt; in the terminal for an ad‑hoc security scan before you submit.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;7-quantify-improvements&quot;&gt;7) Quantify improvements&lt;/h3&gt;&lt;a href=&quot;#7-quantify-improvements&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “7) Quantify improvements”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;Track lead time from proposal → production and your regression rate. Many report &lt;strong&gt;~30% faster&lt;/strong&gt;, but measure against your own baseline.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;our-minimal-rollout-pack-copy-into-your-repo&quot;&gt;Our minimal rollout pack (copy into your repo)&lt;/h2&gt;&lt;a href=&quot;#our-minimal-rollout-pack-copy-into-your-repo&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Our minimal rollout pack (copy into your repo)”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Create &lt;code dir=&quot;auto&quot;&gt;.claude/commands/&lt;/code&gt; in the repo root:&lt;/strong&gt;&lt;/p&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;.claude/commands/spec.md&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;md&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;You are a Staff Engineer. Convert the user story into a crisp spec:&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;-&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; Problem, Scope, Non-goals&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;-&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; Architecture sketch &amp;#x26; interfaces&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;-&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; Risks &amp;#x26; open questions&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;Return Markdown only.&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;.claude/commands/tests.md&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;md&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;You are a TDD coach. For &lt;/span&gt;&lt;span style=&quot;--1:#8844AE&quot;&gt;&lt;span style=&quot;--0:#7FDBCA&quot;&gt;&amp;#x3C;&lt;/span&gt;&lt;span style=&quot;--0:#CAECE6&quot;&gt;feature&lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;, generate unit &amp;#x26; integration tests first.&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;-&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; Cover edge cases, error handling, contracts&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;-&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; Use the project’s test framework&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;-&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; Do NOT implement code yet&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;button title=&quot;Copy to clipboard&quot; data-copied=&quot;Copied!&quot; data-code=&quot;&quot;&gt;, generate unit &amp;#x26; integration tests first.- Cover edge cases, error handling, contracts- Use the project’s test framework- Do NOT implement code yet&quot;&gt;&lt;div&gt;&lt;/div&gt;&lt;/button&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;.claude/commands/implement.md&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;md&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;Follow the approved plan. Implement &lt;/span&gt;&lt;span style=&quot;--1:#8844AE&quot;&gt;&lt;span style=&quot;--0:#7FDBCA&quot;&gt;&amp;#x3C;&lt;/span&gt;&lt;span style=&quot;--0:#CAECE6&quot;&gt;feature&lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; with tiny commits.&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;-&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; Reference related tests&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;-&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; Explain changes in the PR body&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;-&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; Ask before migrating schemas&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;button title=&quot;Copy to clipboard&quot; data-copied=&quot;Copied!&quot; data-code=&quot;&quot;&gt; with tiny commits.- Reference related tests- Explain changes in the PR body- Ask before migrating schemas&quot;&gt;&lt;div&gt;&lt;/div&gt;&lt;/button&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Combine with &lt;code dir=&quot;auto&quot;&gt;/context&lt;/code&gt; to watch tokens and tool usage; split work when needed.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;common-pitfalls&quot;&gt;Common pitfalls&lt;/h2&gt;&lt;a href=&quot;#common-pitfalls&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Common pitfalls”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Treating Claude as a black box&lt;/strong&gt;, dumping a huge blob of requirements in one go.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Skipping tests&lt;/strong&gt; and reviews, shipping on “it runs on my machine.” Quality drifts, and orgs fall into the “AI speed trap.”&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Running plan‑mode in parallel for multiple features&lt;/strong&gt; → context drift and rework.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;why-this-approach-works&quot;&gt;Why this approach works&lt;/h2&gt;&lt;a href=&quot;#why-this-approach-works&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Why this approach works”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;The direction is clear: developers are rapidly embracing AI, and automation in coding/testing is rising. &lt;strong&gt;Teams who wield AI well will compound their advantage.&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;To win on quality, you must &lt;strong&gt;bake engineering process&lt;/strong&gt; into Claude’s commands and plans — not “chat casually and let it write.”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;&lt;a href=&quot;#conclusion&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Conclusion”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Vibe Coding isn’t laziness.&lt;/strong&gt;
+It’s “human judgment + Claude execution” assembled into a measurable, auditable, reusable pipeline.
+Starting today, give your team: &lt;strong&gt;design first → one‑time plan‑mode → tests first → slash‑command codification → security + review to close&lt;/strong&gt;. Fast and steady.&lt;/p&gt;
+&lt;p&gt;What’s missing from this pipeline for your team? Share your experience in the comments.&lt;/p&gt;&lt;!-- 
+---
+
+## 3 multilingual title options (with slug)
+
+1. Train Claude Code into a “Disciplined Intern”: FAANG-Style Vibe Coding in Practice
+* zh-Hans: 把 Claude Code 训练成“听话的实习生”：FAANG 团队的 Vibe Coding 实战
+* zh-Hant: 把 Claude Code 訓練成「聽話的實習生」：FAANG 團隊的 Vibe Coding 實戰
+* ja: 「従順なインターン」に育てるClaude Code：FAANG流Vibe Coding実践
+* fr: Transformer Claude Code en « stagiaire discipliné » : Vibe Coding à la FAANG
+* es: Convierte Claude Code en un “becario disciplinado”: Vibe Coding al estilo FAANG
+* pt: Transforme o Claude Code em um “estagiário disciplinado”: Vibe Coding estilo FAANG
+* slug: claude-code-vibe-coding-faang-playbook
+
+2. Fast and Safe: Nailing Vibe Coding with TDD + Plan-Mode
+* zh-Hans: 快，还要稳：用 TDD + plan-mode 做对 Vibe Coding
+* zh-Hant: 快又穩：用 TDD + plan-mode 正確做 Vibe Coding
+* ja: 速さも品質も：TDD＋Plan-Modeで極めるVibe Coding
+* fr: Vite et fiable : Vibe Coding avec TDD + Plan-Mode
+* es: Rápido y seguro: Vibe Coding con TDD + Plan-Mode
+* pt: Rápido e seguro: Vibe Coding com TDD + Plan-Mode
+* slug: tdd-plan-mode-vibe-coding
+
+3. 7 Steps from Design Doc to Prod: Shipping with Claude
+* zh-Hans: 从设计文档到上线 7 步走：Claude 带队落地产线
+* zh-Hant: 從設計文件到上線 7 步走：Claude 帶隊落地
+* ja: 設計書から本番まで7ステップ：Claudeで出荷
+* fr: Du design à la prod en 7 étapes : livrer avec Claude
+* es: 7 pasos del diseño a producción: entregas con Claude
+* pt: 7 passos do design à produção: entregando com Claude
+* slug: 7-steps-ship-with-claude
+
+---
+
+## Illustrations (2:1, English copy)
+
+Cover prompt:
+“An illustration of a tech lead guiding a friendly robot (Claude) across a conveyor-belt style software factory; whiteboards with architecture, green check marks on tests, pull-request gates with two reviewers; clean pastel palette, wide 2:1 canvas, crisp lines, no Chinese text.”
+
+Flow overview:
+“A 2:1 infographic showing a 7-step pipeline: Design Doc → Review → Plan-Mode → TDD Tests → Implementation → Security Review → Staging &amp; Ship; simple icons, pastel colors, no Chinese text.”
+
+TDD first:
+“An illustration of test files being written first, then code modules snapping into place; unit and integration icons, green test runner badges; 2:1 ratio, minimalist style.”
+
+Slash commands:
+“A terminal window with slash commands like /spec, /tests, /implement, /security-review; command cards floating around; 2:1, illustration, no Chinese text.”
+
+---
+
+## 3 short social blurbs
+
+1. “Stop gambling with AI. Make Claude work from a checklist. Tests first, faster pace without quality loss — it works.”
+2. “Put slash commands in the repo and new hires learn your workflow in a day. Efficiency, locked in.”
+3. “Vibe Coding isn’t slacking — it’s tightening human judgment + AI execution into a production pipeline. Is your company on board?”
+
+---
+
+Need me to bundle the **slash commands** above into a `.claude/commands` sample repo? I can also tailor TDD templates for your stack (Java/Rails/Node/Go).
+
+[1]: https://www.itpro.com/technology/artificial-intelligence/how-ai-coding-is-transforming-the-it-industry-in-2025
+[2]: https://www.techradar.com/pro/the-ai-speed-trap-why-software-quality-is-falling-behind-in-the-race-to-release
+[3]: https://www.reddit.com/r/vibecoding/comments/1myakhd/how_we_vibe_code_at_a_faang/
+[4]: https://docs.anthropic.com/en/docs/claude-code/overview
+[5]: https://www.reddit.com/r/ClaudeAI/comments/1m7zlot/how_planmode_and_four_slash_commands_turned/
+[6]: https://www.readysetcloud.io/blog/allen.helton/tdd-with-ai/
+[7]: https://javascript.plainenglish.io/using-test-driven-development-to-get-better-ai-generated-code-ebcc7f7fd107
+[8]: https://www.qodo.ai/blog/ai-code-assistants-test-driven-development/
+[9]: https://docs.anthropic.com/en/docs/claude-code/slash-commands
+[10]: https://www.anthropic.com/engineering/claude-code-best-practices-for-agentic-coding
+[11]: https://www.anthropic.com/news/automate-security-reviews-with-claude-code
+--&gt;</content:encoded><category>Vibe Coding</category><category>Claude Code</category><category>FAANG</category></item><item><title>ccpm Enables Claude Code: PRD → Epic → GitHub Issues → Production Code</title><link>https://www.vibesparking.com/en/blog/ai/claude-code/ccpm/2025-08-24-ccpm-prd-to-code/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/claude-code/ccpm/2025-08-24-ccpm-prd-to-code/</guid><pubDate>Sun, 24 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # ccpm Enables Claude Code: PRD → Epic → GitHub Issues → Production Code --&gt;&lt;!-- # &apos;Turn PRDs Directly into Code&apos;: ccpm Equips Claude Code with a Working PM System --&gt;
 &lt;blockquote&gt;
 &lt;p&gt;ccpm (Claude Code PM) connects &lt;strong&gt;PRD → Epic → GitHub Issues → Production Code&lt;/strong&gt; in a closed loop, paired with Git worktree and parallel sub-agents to ensure you &lt;strong&gt;don’t lose context, don’t block tasks, don’t bury landmines&lt;/strong&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -418,7 +727,129 @@ All built into ccpm’s command set, type &lt;code dir=&quot;auto&quot;&gt;/pm:h
 &lt;p&gt;I summarize ccpm’s definition in 8 characters: &lt;strong&gt;specifications grounded, parallelism ordered&lt;/strong&gt;.
 Not relying on slogans, but on commands and deliverables, speaking through action.&lt;/p&gt;
 &lt;p&gt;If you’re stuck with “lost context, parallel conflicts, invisible progress,” it’s worth trying immediately.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Which type of problem do you most want to solve with ccpm? Let’s chat in the comments.&lt;/strong&gt;&lt;/p&gt;</content:encoded><category>ccpm</category><category>Claude Code</category><category>Git Worktree</category><category>GitHub</category></item><item><title>Codex 0.23.0: One‑Tap /model to OpenAI GPT‑5 High Reasoning</title><link>https://www.vibesparking.com/en/blog/ai/openai/codex/2025-08-24-codex-0230-model-gpt5-high-reasoning/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/openai/codex/2025-08-24-codex-0230-model-gpt5-high-reasoning/</guid><pubDate>Sun, 24 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # Codex 0.23.0: One‑Tap /model to OpenAI GPT‑5 High Reasoning --&gt;
+&lt;p&gt;&lt;strong&gt;Which type of problem do you most want to solve with ccpm? Let’s chat in the comments.&lt;/strong&gt;&lt;/p&gt;</content:encoded><category>ccpm</category><category>Claude Code</category><category>Git Worktree</category><category>GitHub</category></item><item><title>Wire Claude Code into Cursor, VS Code, and JetBrains</title><link>https://www.vibesparking.com/en/blog/ai/claude-code/ide/2025-08-24-claude-code-ide-integration-vscode-cursor-jetbrains/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/claude-code/ide/2025-08-24-claude-code-ide-integration-vscode-cursor-jetbrains/</guid><pubDate>Sun, 24 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # Wire Claude Code into Cursor, VS Code, and JetBrains --&gt;
+&lt;div&gt;&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;&lt;a href=&quot;#introduction&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Introduction”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Many people install Claude Code but only use it from an external terminal.
+In fact, it already integrates with mainstream IDEs: &lt;strong&gt;Cursor / VS Code / Windsurf / VSCodium / the JetBrains family&lt;/strong&gt;.
+The benefits are immediate: &lt;strong&gt;one‑key summon, in‑IDE diff view, automatic sharing of selections and diagnostics&lt;/strong&gt; — and after changes, you can review them with the IDE’s native comparison tools.&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;what-you-get&quot;&gt;What You Get&lt;/h2&gt;&lt;a href=&quot;#what-you-get&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “What You Get”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Quick summon&lt;/strong&gt;: &lt;code dir=&quot;auto&quot;&gt;Cmd+Esc&lt;/code&gt; (macOS) or &lt;code dir=&quot;auto&quot;&gt;Ctrl+Esc&lt;/code&gt; (Windows/Linux).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;In‑IDE diff&lt;/strong&gt;: cleaner before/after comparisons — no more scrolling terminals.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Auto‑share selection/current file context&lt;/strong&gt;: Claude understands exactly what you’re looking at.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Auto‑share diagnostics (lint/syntax errors)&lt;/strong&gt;: Claude follows those red squiggles.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Insert file references&lt;/strong&gt;: &lt;code dir=&quot;auto&quot;&gt;Cmd+Option+K&lt;/code&gt; (macOS) or &lt;code dir=&quot;auto&quot;&gt;Alt+Ctrl+K&lt;/code&gt; (Win/Linux) to insert &lt;code dir=&quot;auto&quot;&gt;@File#L1-99&lt;/code&gt; quickly.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;All of the above comes from the official IDE integrations.&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;vs-code-cursorwindsurfvscodium-onestep-setup&quot;&gt;VS Code (Cursor/Windsurf/VSCodium) One‑Step Setup&lt;/h2&gt;&lt;a href=&quot;#vs-code-cursorwindsurfvscodium-onestep-setup&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “VS Code (Cursor/Windsurf/VSCodium) One‑Step Setup”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Install and connect&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Open the IDE’s &lt;strong&gt;integrated terminal&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;At the project root, run:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;claude&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;p&gt;VS Code and its variants will &lt;strong&gt;auto‑install the extension&lt;/strong&gt;, then you can use everything listed above inside the IDE. If you start from an &lt;strong&gt;external terminal&lt;/strong&gt;, type &lt;code dir=&quot;auto&quot;&gt;/ide&lt;/code&gt; to connect Claude Code to the current IDE.&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Make sure the CLI works&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;VS Code: run &lt;strong&gt;Shell Command: Install ‘code’ command in PATH&lt;/strong&gt; from the command palette. This stabilizes &lt;code dir=&quot;auto&quot;&gt;code .&lt;/code&gt; and IDE detection for Claude.&lt;/li&gt;
+&lt;li&gt;Cursor: run &lt;strong&gt;Install ‘cursor’ to shell&lt;/strong&gt; from the command palette (you can also install &lt;code dir=&quot;auto&quot;&gt;code&lt;/code&gt;). If PATH ordering looks off, adjust priority.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Common config&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Run &lt;code dir=&quot;auto&quot;&gt;/config&lt;/code&gt; → set &lt;strong&gt;Diff tool&lt;/strong&gt; to &lt;code dir=&quot;auto&quot;&gt;auto&lt;/code&gt; to use the IDE’s diff view automatically.&lt;/li&gt;
+&lt;li&gt;From any external terminal, you can still use &lt;code dir=&quot;auto&quot;&gt;/ide&lt;/code&gt; to bind to the IDE session.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;jetbrains-intellij--pycharm--webstorm--goland&quot;&gt;JetBrains (IntelliJ / PyCharm / WebStorm / GoLand…)&lt;/h2&gt;&lt;a href=&quot;#jetbrains-intellij--pycharm--webstorm--goland&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “JetBrains (IntelliJ / PyCharm / WebStorm / GoLand…)”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;How to use&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Open a terminal at the &lt;strong&gt;project root&lt;/strong&gt; and run &lt;code dir=&quot;auto&quot;&gt;claude&lt;/code&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Go to &lt;strong&gt;Settings → Tools → Claude Code [Beta]&lt;/strong&gt; and adjust:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Claude command&lt;/strong&gt; (e.g., &lt;code dir=&quot;auto&quot;&gt;claude&lt;/code&gt;, &lt;code dir=&quot;auto&quot;&gt;/usr/local/bin/claude&lt;/code&gt;, or &lt;code dir=&quot;auto&quot;&gt;npx @anthropic/claude&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;WSL users&lt;/strong&gt; can set: &lt;code dir=&quot;auto&quot;&gt;wsl -d Ubuntu -- bash -lic &quot;claude&quot;&lt;/code&gt; (replace Ubuntu with your distro).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Supports &lt;code dir=&quot;auto&quot;&gt;Cmd+Esc&lt;/code&gt;/&lt;code dir=&quot;auto&quot;&gt;Ctrl+Esc&lt;/code&gt; quick summon, diagnostics sharing, and in‑IDE diff.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;ESC doesn’t interrupt?&lt;/strong&gt;
+In JetBrains, ESC may be bound to “switch focus back to editor”:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Settings → Tools → Terminal&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Uncheck “Move focus to the editor with Escape,” or remove the “Switch focus to Editor” keybinding.&lt;/li&gt;
+&lt;li&gt;Apply
+Now ESC can properly interrupt Claude’s actions.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;Remote Dev tips&lt;/strong&gt;
+For JetBrains Remote Dev, install the &lt;strong&gt;Claude Code plugin on the remote host&lt;/strong&gt; and restart the IDE.&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;common-pitfalls-and-quick-fixes&quot;&gt;Common Pitfalls and Quick Fixes&lt;/h2&gt;&lt;a href=&quot;#common-pitfalls-and-quick-fixes&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Common Pitfalls and Quick Fixes”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;VS Code extension didn’t install&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Make sure you ran &lt;code dir=&quot;auto&quot;&gt;claude&lt;/code&gt; inside the &lt;strong&gt;VS Code integrated terminal&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Ensure &lt;code dir=&quot;auto&quot;&gt;code&lt;/code&gt;/&lt;code dir=&quot;auto&quot;&gt;cursor&lt;/code&gt;/&lt;code dir=&quot;auto&quot;&gt;windsurf&lt;/code&gt;/&lt;code dir=&quot;auto&quot;&gt;codium&lt;/code&gt; CLIs are available and allowed to install extensions.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;JetBrains plugin “does nothing”&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Ensure you started &lt;code dir=&quot;auto&quot;&gt;claude&lt;/code&gt; from the &lt;strong&gt;project root&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Check the plugin status and &lt;strong&gt;fully restart the IDE&lt;/strong&gt; (restart twice if needed).&lt;/li&gt;
+&lt;li&gt;For Remote Dev, confirm the plugin is installed on the &lt;strong&gt;remote&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Workflow tips&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Open your IDE and run &lt;code dir=&quot;auto&quot;&gt;claude&lt;/code&gt; from the &lt;strong&gt;same project root&lt;/strong&gt; to share paths and file context.&lt;/li&gt;
+&lt;li&gt;Use &lt;code dir=&quot;auto&quot;&gt;/config&lt;/code&gt; to set &lt;code dir=&quot;auto&quot;&gt;diff=auto&lt;/code&gt;, and enable &lt;code dir=&quot;auto&quot;&gt;/vim&lt;/code&gt; mode if you like; both are recommended by the official “best practices.”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;your-quick-integration-checklist-save-this&quot;&gt;Your Quick Integration Checklist (Save This)&lt;/h2&gt;&lt;a href=&quot;#your-quick-integration-checklist-save-this&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Your Quick Integration Checklist (Save This)”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;VS Code/Cursor&lt;/strong&gt;&lt;/p&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# 1) Use the integrated terminal&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;claude&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# 2) From an external terminal, attach to IDE&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;/ide&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# 3) VS Code: install &apos;code&apos; into PATH (command palette)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;Shell&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;Command:&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;Install&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&apos;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;code&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&apos;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;command&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;in&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;PATH&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# 4) Cursor: install &apos;cursor&apos; into shell (command palette)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;Install&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&apos;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;cursor&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&apos;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;to&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;shell&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;JetBrains&lt;/strong&gt;&lt;/p&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;text&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;Settings → Tools → Claude Code [Beta]&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;- Claude command: claude or npx @anthropic/claude&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;- WSL: wsl -d Ubuntu -- bash -lic &quot;claude&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;Settings → Tools → Terminal&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;- Disable ESC focus steal: uncheck “Move focus to the editor with Escape,”&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;or remove the “Switch focus to Editor” binding&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;a-smallteam-rollout-pattern-battletested&quot;&gt;A Small‑Team Rollout Pattern (Battle‑Tested)&lt;/h2&gt;&lt;a href=&quot;#a-smallteam-rollout-pattern-battletested&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “A Small‑Team Rollout Pattern (Battle‑Tested)”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;PR‑driven&lt;/strong&gt;: define the requirement → run &lt;code dir=&quot;auto&quot;&gt;claude&lt;/code&gt; on a branch to plan and make changes → review diffs in the IDE → test locally → open a PR.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Pair‑Agent&lt;/strong&gt;: humans steer the plan; Claude executes; the IDE shows diffs and diagnostics in real time.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Same root, same context&lt;/strong&gt;: always start from the &lt;strong&gt;project root&lt;/strong&gt; so everyone shares identical paths and context.
+The above blends official “best practices” with our daily experience.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;&lt;a href=&quot;#conclusion&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Conclusion”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Installing the tool isn’t the goal — &lt;strong&gt;closing the human‑AI loop inside the IDE is&lt;/strong&gt;.
+Today, connect Claude Code to your Cursor/VS Code/JetBrains and try the full loop: &lt;strong&gt;quick summon → in‑IDE diff → diagnostics sharing → PR&lt;/strong&gt;.
+You’ll likely find: &lt;strong&gt;cleaner changes, fewer words, faster cadence&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Question&lt;/strong&gt;: Where does your team struggle more — “understanding legacy code” or “safely changing a big module”? Which extra step would you want Claude to take inside the IDE? Share your thoughts.&lt;/p&gt;</content:encoded><category>Claude Code</category><category>Cursor</category><category>VS Code</category><category>JetBrains</category></item><item><title>Codex 0.23.0: One‑Tap /model to OpenAI GPT‑5 High Reasoning</title><link>https://www.vibesparking.com/en/blog/ai/openai/codex/2025-08-24-codex-0230-model-gpt5-high-reasoning/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/openai/codex/2025-08-24-codex-0230-model-gpt5-high-reasoning/</guid><pubDate>Sun, 24 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # Codex 0.23.0: One‑Tap /model to OpenAI GPT‑5 High Reasoning --&gt;
 &lt;blockquote&gt;
 &lt;p&gt;With &lt;strong&gt;Codex CLI 0.23.0&lt;/strong&gt;, &lt;strong&gt;model selection and reasoning strength&lt;/strong&gt; become a one‑step toggle. Type &lt;code dir=&quot;auto&quot;&gt;/model&lt;/code&gt;, pick &lt;strong&gt;GPT‑5 + High reasoning&lt;/strong&gt;, and complex tasks become a lot more stable.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -2030,414 +2461,4 @@ Starting today, try refactoring your three most common tasks into this structure
 &lt;/ul&gt;
 &lt;p&gt;For global investors, the list is a useful lens on durable competitive strategy. In an era of structural shifts and technological upgrades, identifying firms with lasting moats is key to long‑term returns.&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;Disclaimer: This article summarizes public research for reference only and does not constitute investment advice. Markets involve risk; invest prudently.&lt;/p&gt;</content:encoded><category>Morgan Stanley</category></item><item><title>Subscribe to Claude on iOS at Nigeria Pricing: Step‑by‑Step Guide</title><link>https://www.vibesparking.com/en/blog/ai/anthropic/ios/2025-08-21-claude-subscription-nigeria-guide/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/anthropic/ios/2025-08-21-claude-subscription-nigeria-guide/</guid><pubDate>Thu, 21 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- Chinese original: 用苹果 iOS 订阅 Claude Code 的独享会员账号，享受尼日利亚区 6 折优惠价 --&gt;
-&lt;p&gt;Recently, many folks asked: “Claude Code is amazing, but I don’t have an overseas card, or the price feels high. Any easy, cheaper route?”&lt;br&gt;
-Yes. This is a practical, step‑by‑step guide to switch your Apple ID to the Nigeria region and top up with a gift card to subscribe to Claude at a lower price.&lt;/p&gt;
-&lt;p&gt;Get your phone and a little patience — follow along.&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;01-why-choose-the-nigeria-region&quot;&gt;01. Why choose the Nigeria region?&lt;/h2&gt;&lt;a href=&quot;#01-why-choose-the-nigeria-region&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “01. Why choose the Nigeria region?”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;In one word: &lt;strong&gt;price&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;App Store pricing differs by country/region. Nigeria’s in‑app prices for Claude are significantly lower than US and many other regions. With a region switch plus gift card top‑up, it’s very cost‑effective.&lt;/p&gt;
-&lt;p&gt;Prices converted at an example rate of &lt;strong&gt;1 USD ≈ 7.25 RMB&lt;/strong&gt;:&lt;/p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Plan&lt;/th&gt;&lt;th align=&quot;right&quot;&gt;Official (USD)&lt;/th&gt;&lt;th align=&quot;right&quot;&gt;US iOS (USD)&lt;/th&gt;&lt;th align=&quot;right&quot;&gt;Nigeria iOS (NGN)&lt;/th&gt;&lt;th align=&quot;right&quot;&gt;Nigeria ≈ (USD)&lt;/th&gt;&lt;th align=&quot;right&quot;&gt;Nigeria ≈ (RMB)&lt;/th&gt;&lt;th align=&quot;right&quot;&gt;vs US iOS Savings&lt;/th&gt;&lt;th align=&quot;right&quot;&gt;vs Official Savings&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Pro&lt;/strong&gt;&lt;/td&gt;&lt;td align=&quot;right&quot;&gt;$20&lt;/td&gt;&lt;td align=&quot;right&quot;&gt;$20&lt;/td&gt;&lt;td align=&quot;right&quot;&gt;₦14,900&lt;/td&gt;&lt;td align=&quot;right&quot;&gt;&lt;strong&gt;$9.68&lt;/strong&gt;&lt;/td&gt;&lt;td align=&quot;right&quot;&gt;&lt;strong&gt;¥70.2&lt;/strong&gt;&lt;/td&gt;&lt;td align=&quot;right&quot;&gt;&lt;strong&gt;$10.32 (-51.6%)&lt;/strong&gt;&lt;/td&gt;&lt;td align=&quot;right&quot;&gt;&lt;strong&gt;$10.32 (-51.6%)&lt;/strong&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Max (5x)&lt;/strong&gt;&lt;/td&gt;&lt;td align=&quot;right&quot;&gt;$100&lt;/td&gt;&lt;td align=&quot;right&quot;&gt;$124.99&lt;/td&gt;&lt;td align=&quot;right&quot;&gt;₦100,000&lt;/td&gt;&lt;td align=&quot;right&quot;&gt;&lt;strong&gt;$64.94&lt;/strong&gt;&lt;/td&gt;&lt;td align=&quot;right&quot;&gt;&lt;strong&gt;¥471.8&lt;/strong&gt;&lt;/td&gt;&lt;td align=&quot;right&quot;&gt;&lt;strong&gt;$60.05 (-48.0%)&lt;/strong&gt;&lt;/td&gt;&lt;td align=&quot;right&quot;&gt;&lt;strong&gt;$35.06 (-35.1%)&lt;/strong&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Max (20x)&lt;/strong&gt;&lt;/td&gt;&lt;td align=&quot;right&quot;&gt;$200&lt;/td&gt;&lt;td align=&quot;right&quot;&gt;$249.99&lt;/td&gt;&lt;td align=&quot;right&quot;&gt;₦200,000&lt;/td&gt;&lt;td align=&quot;right&quot;&gt;&lt;strong&gt;$129.87&lt;/strong&gt;&lt;/td&gt;&lt;td align=&quot;right&quot;&gt;&lt;strong&gt;¥942.6&lt;/strong&gt;&lt;/td&gt;&lt;td align=&quot;right&quot;&gt;&lt;strong&gt;$120.12 (-48.0%)&lt;/strong&gt;&lt;/td&gt;&lt;td align=&quot;right&quot;&gt;&lt;strong&gt;$70.13 (-35.1%)&lt;/strong&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
-&lt;p&gt;Notes:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Pro: $9.68 × 7.25 ≈ ¥70.2&lt;/li&gt;
-&lt;li&gt;Max (5x): $64.94 × 7.25 ≈ ¥471.8&lt;/li&gt;
-&lt;li&gt;Max (20x): $129.87 × 7.25 ≈ ¥942.6&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Actual rates fluctuate; check the store display on your date of purchase.&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;02-what-you-need&quot;&gt;02. What you need&lt;/h2&gt;&lt;a href=&quot;#02-what-you-need&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “02. What you need”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;An iPhone or iPad.&lt;/li&gt;
-&lt;li&gt;A spare Apple ID (ideally newly registered; don’t disturb your main account to avoid affecting existing subscriptions/library).&lt;/li&gt;
-&lt;li&gt;Nigeria‑region Apple Gift Card (buy from a reliable seller).&lt;/li&gt;
-&lt;li&gt;An email and phone number from a &lt;strong&gt;Claude‑supported region&lt;/strong&gt; (required for Claude registration/verification).&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;03-switch-your-apple-id-to-nigeria&quot;&gt;03. Switch your Apple ID to Nigeria&lt;/h2&gt;&lt;a href=&quot;#03-switch-your-apple-id-to-nigeria&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “03. Switch your Apple ID to Nigeria”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ol&gt;
-&lt;li&gt;Open &lt;strong&gt;Settings&lt;/strong&gt; → tap your profile.&lt;/li&gt;
-&lt;li&gt;Go to &lt;strong&gt;Media &amp;#x26; Purchases&lt;/strong&gt; → &lt;strong&gt;View Account&lt;/strong&gt;.&lt;/li&gt;
-&lt;li&gt;Tap &lt;strong&gt;Country/Region&lt;/strong&gt; → choose &lt;strong&gt;Nigeria&lt;/strong&gt;.&lt;/li&gt;
-&lt;li&gt;Enter an address (e.g., a common Lagos address); set payment method to &lt;strong&gt;None&lt;/strong&gt;.&lt;/li&gt;
-&lt;li&gt;After success, your Apple ID store is now Nigeria.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Apple may require zero balance, no blocking subscriptions, and leaving Family Sharing before switching. Follow on‑screen prompts.&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;04-redeem-a-nigeria-gift-card&quot;&gt;04. Redeem a Nigeria gift card&lt;/h2&gt;&lt;a href=&quot;#04-redeem-a-nigeria-gift-card&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “04. Redeem a Nigeria gift card”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ol&gt;
-&lt;li&gt;Obtain the &lt;strong&gt;Nigeria App Store&lt;/strong&gt; gift card code you purchased.&lt;/li&gt;
-&lt;li&gt;Open &lt;strong&gt;App Store&lt;/strong&gt; → avatar → &lt;strong&gt;Redeem Gift Card or Code&lt;/strong&gt;.&lt;/li&gt;
-&lt;li&gt;Enter the code → confirm → check balance credited to your Apple Account.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;This is effectively your Nigeria store spending balance.&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;05-register-a-claude-account&quot;&gt;05. Register a Claude account&lt;/h2&gt;&lt;a href=&quot;#05-register-a-claude-account&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “05. Register a Claude account”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ol&gt;
-&lt;li&gt;Go to claude.ai or the app and register.&lt;/li&gt;
-&lt;li&gt;Use an email from a supported region.&lt;/li&gt;
-&lt;li&gt;If SMS verification fails, use a phone number from a supported region (temporary numbers often fail fraud checks).&lt;/li&gt;
-&lt;li&gt;After verification, you can sign in.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;06-install-claude-and-subscribe-inapp&quot;&gt;06. Install Claude and subscribe in‑app&lt;/h2&gt;&lt;a href=&quot;#06-install-claude-and-subscribe-inapp&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “06. Install Claude and subscribe in‑app”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ol&gt;
-&lt;li&gt;In the Nigeria App Store, search “Claude” and install.&lt;/li&gt;
-&lt;li&gt;Sign in with your Claude account.&lt;/li&gt;
-&lt;li&gt;Open the subscription screen and choose a plan.&lt;/li&gt;
-&lt;li&gt;Pay with your &lt;strong&gt;gift‑card balance&lt;/strong&gt; via Apple IAP.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Done 🎉 — you’re now on the discounted Nigeria pricing.&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;07-notes-and-common-pitfalls&quot;&gt;07. Notes and common pitfalls&lt;/h2&gt;&lt;a href=&quot;#07-notes-and-common-pitfalls&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “07. Notes and common pitfalls”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;Use a &lt;strong&gt;spare Apple ID&lt;/strong&gt;: avoid disrupting your main account’s existing subscriptions/apps.&lt;/li&gt;
-&lt;li&gt;Buy gift cards from &lt;strong&gt;reputable sellers&lt;/strong&gt;: avoid invalid/blocked cards.&lt;/li&gt;
-&lt;li&gt;Cross‑region always has &lt;strong&gt;policy and risk‑control&lt;/strong&gt; considerations; Apple may change rules, taxes, or exchange handling.&lt;/li&gt;
-&lt;li&gt;Availability varies by region; if the app doesn’t appear or connect reliably, you may need a stable network/VPN.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;closing&quot;&gt;Closing&lt;/h2&gt;&lt;a href=&quot;#closing&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Closing”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;Despite many steps on paper, the flow is quick: in about &lt;strong&gt;10 minutes&lt;/strong&gt; you can set it up — and &lt;strong&gt;save real money&lt;/strong&gt;.&lt;br&gt;
-After subscribing, Claude becomes a powerful helper for coding, writing, summarizing, and ideation.&lt;/p&gt;
-&lt;p&gt;Give it a try and see how much you save each month.&lt;/p&gt;</content:encoded><category>Claude</category><category>Claude Code</category><category>Anthropic</category><category>iOS</category></item><item><title>Subscribe to Claude on iOS: Region Switch, Gift Cards, and In‑App Purchase Guide</title><link>https://www.vibesparking.com/en/blog/ai/anthropic/ios/2025-08-21-ios-claude-subscription-region-giftcard-iap-guide/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/anthropic/ios/2025-08-21-ios-claude-subscription-region-giftcard-iap-guide/</guid><pubDate>Thu, 21 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # iOS 苹果订阅 Claude Code 会员服务 --&gt;
-&lt;p&gt;&lt;strong&gt;Goal&lt;/strong&gt;: Successfully subscribe to Claude (Pro/Max) via the App Store on iPhone/iPad, with support for renewals and upgrades.&lt;br&gt;
-&lt;strong&gt;Who&lt;/strong&gt;: Users in a Claude‑supported region who prefer &lt;strong&gt;Apple in‑app purchases&lt;/strong&gt;.&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;introduction--why-subscribe-via-apple&quot;&gt;Introduction | Why “Subscribe via Apple”&lt;/h2&gt;&lt;a href=&quot;#introduction--why-subscribe-via-apple&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Introduction | Why “Subscribe via Apple””&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;Peace of mind: manage plans and cancellations in one place with Apple billing.&lt;/li&gt;
-&lt;li&gt;Safety: pay with Gift Cards/Apple Account balance without exposing your card number.&lt;/li&gt;
-&lt;li&gt;Sync: native iOS app with data unified with the web version.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h1 id=&quot;five-practical-steps&quot;&gt;Five Practical Steps&lt;/h1&gt;&lt;a href=&quot;#five-practical-steps&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Five Practical Steps”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h2 id=&quot;1-register-a-claude-account-overseas-email--supportedregion-phone-number&quot;&gt;1) Register a Claude account (overseas email + supported‑region phone number)&lt;/h2&gt;&lt;a href=&quot;#1-register-a-claude-account-overseas-email--supportedregion-phone-number&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1) Register a Claude account (overseas email + supported‑region phone number)”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;Open claude.ai, register and sign in with your &lt;strong&gt;email&lt;/strong&gt;. You will then be asked to &lt;strong&gt;verify your phone&lt;/strong&gt;.&lt;/li&gt;
-&lt;li&gt;You &lt;strong&gt;must&lt;/strong&gt; use a &lt;strong&gt;phone number from a Claude‑supported region&lt;/strong&gt;; the official policy explicitly requires “a supported‑region phone number” to log in. (Avoid temporary numbers — they trigger fraud controls.)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Tip: Gmail/Outlook work fine. If the phone number was previously bound to another account, contact support to &lt;strong&gt;un‑bind the old number&lt;/strong&gt; before re‑binding.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;2-switch-your-apple-id-countryregion-to-a-claudesupported-region-eg-uscanada&quot;&gt;2) Switch your Apple ID country/region to a Claude‑supported region (e.g., US/Canada)&lt;/h2&gt;&lt;a href=&quot;#2-switch-your-apple-id-countryregion-to-a-claudesupported-region-eg-uscanada&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2) Switch your Apple ID country/region to a Claude‑supported region (e.g., US/Canada)”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Go to &lt;strong&gt;Settings → your name → Media &amp;#x26; Purchases → View Account → Country/Region&lt;/strong&gt; and follow the flow.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Ensure these prerequisites &lt;strong&gt;before switching&lt;/strong&gt;:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Zero remaining balance&lt;/strong&gt;;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Cancel subscriptions that block region change&lt;/strong&gt; and wait for the billing period to end;&lt;/li&gt;
-&lt;li&gt;Prepare a &lt;strong&gt;payment method valid in the new region&lt;/strong&gt; (Apple Account balance/Gift Card works).&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;If you are in &lt;strong&gt;Family Sharing&lt;/strong&gt;, you may be unable to switch; leave the family group first.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Check accepted payment methods for the new region: see Apple’s official list (most regions accept &lt;strong&gt;Apple Account balance/Gift Cards&lt;/strong&gt;).&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;3-buy-an-apple-gift-card-for-that-region-commonly-the-us&quot;&gt;3) Buy an Apple Gift Card for that region (commonly the US)&lt;/h2&gt;&lt;a href=&quot;#3-buy-an-apple-gift-card-for-that-region-commonly-the-us&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3) Buy an Apple Gift Card for that region (commonly the US)”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Gift Cards are strictly region‑locked&lt;/strong&gt;: redeemable only in the &lt;strong&gt;country/region of purchase&lt;/strong&gt;; cross‑region redemption is not supported.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Don’t buy the wrong card type&lt;/strong&gt;: an &lt;strong&gt;Apple Store (retail) gift card&lt;/strong&gt; cannot be redeemed in the App Store; buy an &lt;strong&gt;Apple Gift Card / App Store &amp;#x26; iTunes&lt;/strong&gt; card.&lt;/li&gt;
-&lt;li&gt;Double‑check &lt;strong&gt;denomination/region/card type&lt;/strong&gt; match your Apple ID exactly; prioritize &lt;strong&gt;authorized channels&lt;/strong&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;4-redeem-the-gift-card-on-your-iphone&quot;&gt;4) Redeem the Gift Card on your iPhone&lt;/h2&gt;&lt;a href=&quot;#4-redeem-the-gift-card-on-your-iphone&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “4) Redeem the Gift Card on your iPhone”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;Open &lt;strong&gt;App Store&lt;/strong&gt; → avatar → &lt;strong&gt;Redeem Gift Card or Code&lt;/strong&gt; → enter/scan the &lt;strong&gt;16‑digit code&lt;/strong&gt;. After redemption, your &lt;strong&gt;Apple Account balance&lt;/strong&gt; will show.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Balance notes: certain subscriptions/contexts have exceptions for balance usage; local rules prevail (most in‑app purchases can be charged to balance).&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;5-download-the-claude-app-and-subscribe-inapp&quot;&gt;5) Download the &lt;strong&gt;Claude&lt;/strong&gt; app and subscribe in‑app&lt;/h2&gt;&lt;a href=&quot;#5-download-the-claude-app-and-subscribe-inapp&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “5) Download the Claude app and subscribe in‑app”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Search &lt;strong&gt;“Claude by Anthropic”&lt;/strong&gt; in the App Store and install.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Open the app, sign in with your Claude account, choose a plan at the &lt;strong&gt;subscription screen&lt;/strong&gt;, and pay via &lt;strong&gt;Apple IAP&lt;/strong&gt;.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;US pricing (subject to the store display)&lt;/strong&gt;:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Claude Pro monthly&lt;/strong&gt; $20&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Claude Pro yearly&lt;/strong&gt; $214.99&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Claude Max 5x monthly&lt;/strong&gt; $124.99&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Claude Max 20x monthly&lt;/strong&gt; $249.99&lt;br&gt;
-(Taxes/prices vary by country.)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;one-table-of-key-points&quot;&gt;One Table of Key Points&lt;/h2&gt;&lt;a href=&quot;#one-table-of-key-points&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “One Table of Key Points”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Step&lt;/th&gt;&lt;th&gt;Key Point&lt;/th&gt;&lt;th&gt;Common Pitfall&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;Register Claude&lt;/td&gt;&lt;td&gt;&lt;strong&gt;Supported region + phone verification&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Temp/non‑supported numbers rejected; multiple binds require &lt;strong&gt;un‑bind&lt;/strong&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Apple ID switch&lt;/td&gt;&lt;td&gt;&lt;strong&gt;Zero balance, cancel subs, payment ready&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Family Sharing blocks; leftover balance below one item’s price&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Buy Gift Card&lt;/td&gt;&lt;td&gt;&lt;strong&gt;Exact region and card type&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Buying an &lt;strong&gt;Apple Store&lt;/strong&gt; (retail) card for App Store; wrong region&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Redeem&lt;/td&gt;&lt;td&gt;&lt;strong&gt;App Store → avatar → Redeem…&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;16‑digit code mis‑typed/damaged; “redeem in another store” message&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Subscribe&lt;/td&gt;&lt;td&gt;&lt;strong&gt;In‑app IAP, prefer balance&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;In a few regions, balance limits on some subs — follow local rules&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
-&lt;p&gt;(Official references: supported regions/phone requirements; region‑switch prerequisites; Gift Card region locking; redemption steps; payment methods and pricing.)&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h1 id=&quot;risk-and-compliance-notes-read-first&quot;&gt;Risk and Compliance Notes (Read First)&lt;/h1&gt;&lt;a href=&quot;#risk-and-compliance-notes-read-first&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Risk and Compliance Notes (Read First)”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Follow terms&lt;/strong&gt;: Claude is available only to users in &lt;strong&gt;officially supported countries/regions&lt;/strong&gt;; registration/login must comply with location and phone requirements.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;No cross‑region Gift Card use&lt;/strong&gt;: cards from the wrong &lt;strong&gt;region/type&lt;/strong&gt; cannot be redeemed; Apple does not transfer balances across regions.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Region‑switch prerequisites&lt;/strong&gt;: outstanding balance, active subscriptions, and Family Sharing can &lt;strong&gt;block&lt;/strong&gt; switching. Follow Apple’s official flow.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h1 id=&quot;faq--you-might-ask&quot;&gt;FAQ | You Might Ask…&lt;/h1&gt;&lt;a href=&quot;#faq--you-might-ask&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “FAQ | You Might Ask…”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;Q: I’m stuck with leftover balance when switching regions — what now?&lt;/strong&gt;&lt;br&gt;
-A: Purchase digital items to &lt;strong&gt;zero out exactly&lt;/strong&gt;; if the balance is &lt;strong&gt;below one item’s price&lt;/strong&gt;, contact Apple Support.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Q: Can I pay for Claude with balance?&lt;/strong&gt;&lt;br&gt;
-A: In most regions, in‑app purchases support &lt;strong&gt;Apple Account balance&lt;/strong&gt;; a few regions/subscriptions have exceptions — follow local terms.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Q: Is the app available in my chosen store?&lt;/strong&gt;&lt;br&gt;
-A: The Claude iOS app is available in supported regions’ App Stores, under &lt;strong&gt;Claude by Anthropic&lt;/strong&gt;.&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h1 id=&quot;closing--make-claude-your-pocket-workbench&quot;&gt;Closing | Make Claude Your “Pocket Workbench”&lt;/h1&gt;&lt;a href=&quot;#closing--make-claude-your-pocket-workbench&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Closing | Make Claude Your “Pocket Workbench””&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;By now you’ve completed: &lt;strong&gt;supported‑region account → Apple region switch → Gift Card top‑up → in‑app subscription&lt;/strong&gt;.&lt;br&gt;
-Next, turn Claude into your on‑the‑go copilot — writing, translation, notes, and image understanding all in one.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;What do you think?&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Which region will you set your Apple ID to, and why?&lt;/li&gt;
-&lt;li&gt;If you’ve tried Pro/Max, how does it feel in real use?&lt;/li&gt;
-&lt;/ul&gt;&lt;!--
-Recommended titles (multi‑lang &amp; slug)
-
-EN: Subscribe to Claude on iOS: Region Switch, Gift Cards, and In‑App Purchase Guide
-slug: ios-claude-subscription-region-giftcard-iap-guide
---&gt;</content:encoded><category>Claude</category><category>Claude Code</category><category>Anthropic</category><category>iOS</category></item><item><title>Claude Code `/context` Visualizes Context Window, Token Usage, MCP Calls, and Memory Files</title><link>https://www.vibesparking.com/en/blog/ai/claude-code/commands/2025-08-21-context-claude-code-context-tokens-visualizer/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/claude-code/commands/2025-08-21-context-claude-code-context-tokens-visualizer/</guid><pubDate>Thu, 21 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
-&lt;p&gt;TL;DR: &lt;code dir=&quot;auto&quot;&gt;/context&lt;/code&gt; renders a visual snapshot of your current session’s context window, token usage, MCP tool traces, and loaded memory files (CLAUDE.md), so you can “trim, control, and detect leaks” with confidence. This feature appeared around Claude Code v1.0.86 based on community feedback and testing.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;&lt;a href=&quot;#introduction&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Introduction”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;Ever had a conversation suddenly get “auto-compacted,” scattering key info into folded chunks?&lt;/p&gt;
-&lt;p&gt;&lt;code dir=&quot;auto&quot;&gt;/context&lt;/code&gt; is like a “body-fat scale” for your conversation. It lays out what’s actually in the context, which parts are overweight, and why compaction triggered. It also highlights which MCP tools were used and which CLAUDE.md memory files were pulled in—perfect for targeted optimization.&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;why-use-context-quick-highlights&quot;&gt;Why use &lt;code dir=&quot;auto&quot;&gt;/context&lt;/code&gt;? (Quick highlights)&lt;/h2&gt;&lt;a href=&quot;#why-use-context-quick-highlights&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Why use /context? (Quick highlights)”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;One-glance context view: See which segments are in the window, how many tokens each consumes, and how close you are to the limit. (Community notes: for a 200k window, auto-compaction often triggers around ~80% usage.)&lt;/li&gt;
-&lt;li&gt;Find the “heavy hitters”: Shows MCP usage and large files read via tools so you can slim down.&lt;/li&gt;
-&lt;li&gt;Verify memory: Surfaces loaded &lt;code dir=&quot;auto&quot;&gt;CLAUDE.md&lt;/code&gt; / &lt;code dir=&quot;auto&quot;&gt;CLAUDE.local.md&lt;/code&gt; so you can avoid overstuffed memory.&lt;/li&gt;
-&lt;li&gt;Cost awareness: Cross-check &lt;code dir=&quot;auto&quot;&gt;/context&lt;/code&gt; with a status bar or third-party tools (like &lt;code dir=&quot;auto&quot;&gt;ccusage&lt;/code&gt;) to spot silent drains. (Rough guidance seen: average daily cost around $6; 90% of users under $12.)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Note: &lt;code dir=&quot;auto&quot;&gt;/context&lt;/code&gt; metrics may differ slightly from other sources (auto-compaction prompts, &lt;code dir=&quot;auto&quot;&gt;ccusage&lt;/code&gt;, custom status bars). Treat it as a diagnostic view.&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;five-practical-scenarios&quot;&gt;Five practical scenarios&lt;/h2&gt;&lt;a href=&quot;#five-practical-scenarios&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Five practical scenarios”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h3 id=&quot;1-midlate-stage-health-check-for-long-threads&quot;&gt;1) Mid/late-stage “health check” for long threads&lt;/h3&gt;&lt;a href=&quot;#1-midlate-stage-health-check-for-long-threads&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1) Mid/late-stage “health check” for long threads”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;During a long-running task, run &lt;code dir=&quot;auto&quot;&gt;/context&lt;/code&gt; to see which passages consume the most tokens. Pair with &lt;code dir=&quot;auto&quot;&gt;/compact focus: {this week’s goals and deltas}&lt;/code&gt; for targeted slimming, so old detours don’t keep riding along. (Slash commands including &lt;code dir=&quot;auto&quot;&gt;/compact&lt;/code&gt; are officially supported workflows.)&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;2-memory-hygiene&quot;&gt;2) Memory hygiene&lt;/h3&gt;&lt;a href=&quot;#2-memory-hygiene&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2) Memory hygiene”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;If &lt;code dir=&quot;auto&quot;&gt;/context&lt;/code&gt; shows an oversized &lt;code dir=&quot;auto&quot;&gt;CLAUDE.md&lt;/code&gt; in your home or project, split wisely: keep standards and conventions in the project-level &lt;code dir=&quot;auto&quot;&gt;CLAUDE.md&lt;/code&gt;; put temporary preferences in &lt;code dir=&quot;auto&quot;&gt;CLAUDE.local.md&lt;/code&gt;; and reference large docs via excerpts instead of dumping them all in at once.&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;3-mcp-auditing&quot;&gt;3) MCP auditing&lt;/h3&gt;&lt;a href=&quot;#3-mcp-auditing&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3) MCP auditing”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;Use &lt;code dir=&quot;auto&quot;&gt;/context&lt;/code&gt; to see which MCP calls hit search/DB/external APIs. Identify the most token-expensive call chains, then apply allowlists or rate limits. MCP is a first-class integration in Claude, ideal for connecting external tools at scale.&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;4-travel-light-before-a-sprint-or-release&quot;&gt;4) “Travel light” before a sprint or release&lt;/h3&gt;&lt;a href=&quot;#4-travel-light-before-a-sprint-or-release&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “4) “Travel light” before a sprint or release”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;Before merging or releasing, run &lt;code dir=&quot;auto&quot;&gt;/context&lt;/code&gt; to confirm there’s no irrelevant conversation history or bloated memory inflating the window. Reducing clutter lowers the chance of auto-compaction and improves response stability. The “~80% triggers compaction” heuristic is a helpful reference.&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;5-cost-tracking-with-visual-feedback&quot;&gt;5) Cost tracking with visual feedback&lt;/h3&gt;&lt;a href=&quot;#5-cost-tracking-with-visual-feedback&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “5) Cost tracking with visual feedback”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;Mount &lt;code dir=&quot;auto&quot;&gt;ccusage&lt;/code&gt; in your status bar to watch current session/today/5‑hour block consumption. If you see a spike, open &lt;code dir=&quot;auto&quot;&gt;/context&lt;/code&gt; and line things up.&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;context-vs-other-signals-at-a-glance&quot;&gt;&lt;code dir=&quot;auto&quot;&gt;/context&lt;/code&gt; vs. other signals (at a glance)&lt;/h2&gt;&lt;a href=&quot;#context-vs-other-signals-at-a-glance&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “/context vs. other signals (at a glance)”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Capability&lt;/th&gt;&lt;th&gt;&lt;code dir=&quot;auto&quot;&gt;/context&lt;/code&gt;&lt;/th&gt;&lt;th&gt;Auto-compaction prompts&lt;/th&gt;&lt;th&gt;&lt;code dir=&quot;auto&quot;&gt;ccusage&lt;/code&gt; (status bar)&lt;/th&gt;&lt;th&gt;Custom status bar&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;Granularity&lt;/td&gt;&lt;td&gt;Fine: segments/MCP/memory visible&lt;/td&gt;&lt;td&gt;Coarse: threshold only&lt;/td&gt;&lt;td&gt;Fine: real-time cost/tokens&lt;/td&gt;&lt;td&gt;Depends on script&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Memory visibility&lt;/td&gt;&lt;td&gt;Yes: shows CLAUDE.md sources&lt;/td&gt;&lt;td&gt;No&lt;/td&gt;&lt;td&gt;No&lt;/td&gt;&lt;td&gt;Possible&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;MCP visibility&lt;/td&gt;&lt;td&gt;Yes&lt;/td&gt;&lt;td&gt;No&lt;/td&gt;&lt;td&gt;No&lt;/td&gt;&lt;td&gt;Possible&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Accuracy&lt;/td&gt;&lt;td&gt;Early versions may vary slightly&lt;/td&gt;&lt;td&gt;Accurate&lt;/td&gt;&lt;td&gt;Accurate (billing/logs-based)&lt;/td&gt;&lt;td&gt;Varies&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Best for&lt;/td&gt;&lt;td&gt;Diagnosis/optimization&lt;/td&gt;&lt;td&gt;Everyday use&lt;/td&gt;&lt;td&gt;Cost-sensitive workflows&lt;/td&gt;&lt;td&gt;Power users&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
-&lt;p&gt;Note: Accuracy notes reflect official/community docs and issue threads; &lt;code dir=&quot;auto&quot;&gt;/context&lt;/code&gt; continues to evolve.&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;handy-checklist-copy-paste-ready&quot;&gt;Handy checklist (copy-paste ready)&lt;/h2&gt;&lt;a href=&quot;#handy-checklist-copy-paste-ready&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Handy checklist (copy-paste ready)”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;Inspect context: Type &lt;code dir=&quot;auto&quot;&gt;/context&lt;/code&gt; and review large chunks and sources (MCP/memory/history).&lt;/li&gt;
-&lt;li&gt;Targeted slimming: &lt;code dir=&quot;auto&quot;&gt;/compact focus: &quot;current iteration goals and blockers&quot;&lt;/code&gt; to focus, then compact.&lt;/li&gt;
-&lt;li&gt;Memory governance: Put conventions in project &lt;code dir=&quot;auto&quot;&gt;CLAUDE.md&lt;/code&gt;; keep ad-hoc prefs in &lt;code dir=&quot;auto&quot;&gt;CLAUDE.local.md&lt;/code&gt;; split large docs by reference.&lt;/li&gt;
-&lt;li&gt;MCP allowlist: Allow only trusted tools to run automatically; require interactive approval when needed; add rate limits if necessary.&lt;/li&gt;
-&lt;li&gt;Cost linkage: Install &lt;code dir=&quot;auto&quot;&gt;ccusage&lt;/code&gt; and compare observations with &lt;code dir=&quot;auto&quot;&gt;/context&lt;/code&gt; regularly.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;gotchas&quot;&gt;Gotchas&lt;/h2&gt;&lt;a href=&quot;#gotchas&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Gotchas”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;Numbers won’t always match: &lt;code dir=&quot;auto&quot;&gt;/context&lt;/code&gt; is still maturing and may differ from a status bar or auto-compaction prompts; treat billing/logs as the source of truth.&lt;/li&gt;
-&lt;li&gt;Don’t treat memory as a dumping ground: Memory files are auto-read; large ones will consume context. Control granularity.&lt;/li&gt;
-&lt;li&gt;MCP isn’t a free lunch: Each external lookup/read may incur extra tokens. Use allowlists and rate limits.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;closing&quot;&gt;Closing&lt;/h2&gt;&lt;a href=&quot;#closing&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Closing”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;&lt;code dir=&quot;auto&quot;&gt;/context&lt;/code&gt; is your developer “context checkup sheet.”
-To use Claude Code more stably, efficiently, and cost‑effectively, make the invisible visible. From today, build three habits: check &lt;code dir=&quot;auto&quot;&gt;/context&lt;/code&gt; often, use &lt;code dir=&quot;auto&quot;&gt;/compact&lt;/code&gt; intentionally, and keep memory lean. You’ll see steadier responses, better cost control, and smoother collaboration.&lt;/p&gt;
-&lt;p&gt;What views would you add to &lt;code dir=&quot;auto&quot;&gt;/context&lt;/code&gt;? Do you have a “status bar + /context” combo you like? Share your setup and tips.&lt;/p&gt;&lt;!-- 
----
-
-# Suggested titles (3 sets, multi-language &amp; slug)
-
-1. CN: /context 来了：一眼看穿 Claude Code 的“脑容量”
-   EN: Meet `/context`: See Claude Code’s Context &amp; Tokens at a Glance
-   ZH-TW: /context 登場：一眼看穿 Claude Code 的「腦容量」
-   JA: /context で一発把握：Claude Code の文脈とトークン可視化
-   FR: `/context` : visualisez d’un coup d’œil le contexte et les tokens de Claude Code
-   ES: Llega `/context`: visualiza al instante el contexto y los tokens de Claude Code
-   PT: Chegou o `/context`: visualize o contexto e os tokens do Claude Code
-   slug: /context-claude-code-context-tokens-visualizer
-
-2. CN: 别再盲撸上下文：用 /context 做一次“体检”
-   EN: Stop Flying Blind: Use `/context` for a Context Health Check
-   slug: context-health-check-claude-code
-
-3. CN: 省钱、省心、省故障：/context + ccusage 的双保险
-   EN: Spend Less, Stress Less: `/context` + ccusage Double Guard
-   slug: context-ccusage-double-guard
-
----
-
-# Illustration prompts (2:1, illustrative; no Chinese text)
-
-Cover: “An illustration of a developer holding a large transparent ‘context window’ pane showing layered code snippets, token counters, and tool icons; clean minimal vector style, modern pastel palette, wide 2:1 composition, no text.”
-
-Section 1 (Context checkup): “A diagnostic dashboard labeled ‘Context Checkup’: gauges for token usage, segments for memory files, and MCP tool badges; flat design, soft gradients, 2:1, no text.”
-
-Section 2 (Memory hygiene): “Two folders: ‘CLAUDE.md’ and ‘CLAUDE.local.md’, with items being sorted via a funnel; minimalist pastel vector, 2:1 aspect ratio, no text.”
-
----
-
-# Social/caption copy (3)
-
-1) “`/context` is here! Spot token hogs at a glance. Paired with ccusage it literally saves money 😆 How do you compact?”
-2) “New habit: run `/context` + focused `/compact` before releases. More stable replies, fewer bugs.”
-3) “MCP spiking your window? `/context` shows the big eaters—time to whitelist.”
-
----
-
-References and further reading
-
-* Slash commands and usage (official docs)
-* Memory files (CLAUDE.md / CLAUDE.local.md) and configuration
-* MCP integration and observability
-* Cost and token management (official guidance)
-* Community reports on `/context` in v1.0.86
-* Status bar + ccusage integrations (community projects)
---&gt;</content:encoded><category>Claude Code</category></item></channel></rss>
+&lt;p&gt;Disclaimer: This article summarizes public research for reference only and does not constitute investment advice. Markets involve risk; invest prudently.&lt;/p&gt;</content:encoded><category>Morgan Stanley</category></item></channel></rss>
