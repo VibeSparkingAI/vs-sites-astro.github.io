@@ -254,7 +254,217 @@ Axon的生态系统已经成为美国执法机构的事实标准。立法层面�
 Axon业绩连续加速增长，2025年营收指引也被上调。其宽广的客户基础（涉及数千家执法机构）和高黏性的订阅业务使得业绩具备高度可见性。截至8月29日，Axon市值约为587亿美元，在公共安全领域居于领先地位。虽然安防板块通常估值相对保守，但Axon结合了硬件、高级软件和AI的三重优势，长期成长潜力突出。&lt;/p&gt;
 &lt;hr&gt;
 &lt;div&gt;&lt;h2 id=&quot;总结&quot;&gt;总结&lt;/h2&gt;&lt;a href=&quot;#总结&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “总结”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;以上公司代表了AI发展第二阶段的核心平台。它们各自在数据处理、网络基础设施、安全防护、核心应用层面形成了深厚的壁垒。随着AI智能代理（agents）逐渐进入实体世界（从能源、电网到城市管理和安全执法），对这些平台的依赖将与日俱增。在投资上，这些标的虽有估值或运营波动风险，但从基本面看都具备显著的增长动力和护城河。提醒投资者：技术创新迅速，需动态跟踪业绩与竞争格局变化，理性配置资产。&lt;/p&gt;</content:encoded><category>Palantir</category><category>Cloudflare</category><category>CrowdStrike</category><category>Snowflake</category><category>MongoDB</category><category>Tesla</category><category>Axon</category></item><item><title>Codex 发布 VS Code / Cursor IDE 插件</title><link>https://www.vibesparking.com/zh-cn/blog/ai/openai/codex/ide/2025-08-30-codex-ide-playbook-in-vscode/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/openai/codex/ide/2025-08-30-codex-ide-playbook-in-vscode/</guid><pubDate>Sat, 30 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # 用 1 篇就懂：CodexIDE 怎么装、怎么用、在哪些场景最值 --&gt;
+&lt;p&gt;以上公司代表了AI发展第二阶段的核心平台。它们各自在数据处理、网络基础设施、安全防护、核心应用层面形成了深厚的壁垒。随着AI智能代理（agents）逐渐进入实体世界（从能源、电网到城市管理和安全执法），对这些平台的依赖将与日俱增。在投资上，这些标的虽有估值或运营波动风险，但从基本面看都具备显著的增长动力和护城河。提醒投资者：技术创新迅速，需动态跟踪业绩与竞争格局变化，理性配置资产。&lt;/p&gt;</content:encoded><category>Palantir</category><category>Cloudflare</category><category>CrowdStrike</category><category>Snowflake</category><category>MongoDB</category><category>Tesla</category><category>Axon</category></item><item><title>Gemini CLI Companion × VS Code/Cursor：把 gemini-2.5-pro 接入你的 IDE</title><link>https://www.vibesparking.com/zh-cn/blog/ai/google/gemini/ide/2025-08-31-gemini-cli-ide-native-diff/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/google/gemini/ide/2025-08-31-gemini-cli-ide-native-diff/</guid><pubDate>Sun, 31 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # Gemini CLI Companion × VS Code/Cursor：把 gemini-2.5-pro 接入你的 IDE --&gt;
+&lt;blockquote&gt;
+&lt;p&gt;把 Gemini CLI gemini-2.5-pro 接到 VS Code/Cursor 的终端里，让它&lt;strong&gt;看见你的工作区、理解你的选区、直接弹出原生 Diff 窗&lt;/strong&gt;。更聪明、更稳、更省事。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;引言&quot;&gt;引言&lt;/h2&gt;&lt;a href=&quot;#引言&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “引言”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;还在“复制→粘贴→回车”的土法交互？
+现在，&lt;strong&gt;命令行 = IDE 的超脑插件&lt;/strong&gt;。
+Gemini CLI 最新更新，直接打通 VS Code 集成终端：
+&lt;strong&gt;读工作区、识别选中文本、原生并排 Diff、接受前可二次改&lt;/strong&gt;。爽。&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;亮点一览值得你今天就开&quot;&gt;亮点一览（值得你今天就开）&lt;/h2&gt;&lt;a href=&quot;#亮点一览值得你今天就开&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “亮点一览（值得你今天就开）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;上下文直连工作区&lt;/strong&gt;：能“看见”你打开的文件，也能读你&lt;strong&gt;选中的那一段&lt;/strong&gt;，建议更精准。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;原生全屏 Diff&lt;/strong&gt;：CLI 给的修改，&lt;strong&gt;直接弹 VS Code 的并排 Diff 窗&lt;/strong&gt;；先改再收，不会一键糊你盘。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;一键开关&lt;/strong&gt;：&lt;code dir=&quot;auto&quot;&gt;/ide enable&lt;/code&gt; 开，&lt;code dir=&quot;auto&quot;&gt;/ide disable&lt;/code&gt; 关，随时切换。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Cursor 基本可用&lt;/strong&gt;：官方扩展&lt;strong&gt;标注兼容 VS Code 及其 fork&lt;/strong&gt;（Cursor 属 VS Code fork），但个别场景需&lt;strong&gt;手动装扩展&lt;/strong&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;安装与启用3-分钟上手&quot;&gt;安装与启用（3 分钟上手）&lt;/h2&gt;&lt;a href=&quot;#安装与启用3-分钟上手&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “安装与启用（3 分钟上手）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;以 VS Code 为例；Cursor 基本同理（需手动装扩展，见下文“常见坑”）。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;先决条件&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Gemini CLI 版本 &lt;strong&gt;≥ 0.1.20&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;必须&lt;/strong&gt;从 IDE 的&lt;strong&gt;集成终端&lt;/strong&gt;里运行 CLI（不是外部终端）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&quot;2&quot;&gt;
+&lt;li&gt;&lt;strong&gt;一次性安装&lt;/strong&gt;
+在 VS Code 终端运行：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;shell&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;gemini&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;p&gt;gemini-cli 安装 ide 集成：&lt;/p&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;plaintext&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;/ide install&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;p&gt;它会自动安装 &lt;strong&gt;Gemini CLI Companion&lt;/strong&gt; 扩展。&lt;/p&gt;
+&lt;ol start=&quot;3&quot;&gt;
+&lt;li&gt;&lt;strong&gt;打开集成&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;plaintext&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;/ide enable&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;p&gt;需要时关闭：&lt;/p&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;plaintext&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;/ide disable&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;补充&lt;/strong&gt;：扩展商店页面说明该扩展&lt;strong&gt;适配 VS Code 及 VS Code forks&lt;/strong&gt;；若你用 Cursor，直接在商店&lt;strong&gt;手动搜索并安装&lt;/strong&gt;“Gemini CLI Companion”。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;推荐使用法把它当代码副驾--改码机器人&quot;&gt;推荐使用法（把它当“代码副驾 + 改码机器人”）&lt;/h2&gt;&lt;a href=&quot;#推荐使用法把它当代码副驾--改码机器人&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “推荐使用法（把它当“代码副驾 + 改码机器人”）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3 id=&quot;1选中提议原生-diff-接收&quot;&gt;1）选中→提议→原生 Diff 接收&lt;/h3&gt;&lt;a href=&quot;#1选中提议原生-diff-接收&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1）选中→提议→原生 Diff 接收”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;在文件里&lt;strong&gt;框选&lt;/strong&gt;要改的段落&lt;/li&gt;
+&lt;li&gt;终端里对 Gemini 说需求（或用你的常用提示模板）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;并排 Diff&lt;/strong&gt; 弹出 → 你可先&lt;strong&gt;微调&lt;/strong&gt;右侧改动 → 再点接受&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;适合：Bug 小修、接口对齐、重命名、日志统一等“细颗粒”改动。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div&gt;&lt;h3 id=&quot;2开文件--指路重构&quot;&gt;2）“开文件 + 指路”重构&lt;/h3&gt;&lt;a href=&quot;#2开文件--指路重构&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2）“开文件 + 指路”重构”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;打开涉及的 2–3 个关键文件（让它“看见”上下文）&lt;/li&gt;
+&lt;li&gt;给出“目标+约束”（如保留接口签名、通过现有测试）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;在 Diff 中分批落地&lt;/strong&gt;，兼顾安全与节奏&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;适合：控制器瘦身、Hook 抽取、错误处理规范化。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div&gt;&lt;h3 id=&quot;3选区--精准上下文锚&quot;&gt;3）选区 = 精准上下文锚&lt;/h3&gt;&lt;a href=&quot;#3选区--精准上下文锚&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3）选区 = 精准上下文锚”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;善用选区让它“少走神”&lt;/li&gt;
+&lt;li&gt;复杂文件中，只喂关键函数/片段，减少跑偏&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;适合：长文件、历史包袱大的模块。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;vs-code-与-cursor怎么配才顺&quot;&gt;VS Code 与 Cursor：怎么配才顺&lt;/h2&gt;&lt;a href=&quot;#vs-code-与-cursor怎么配才顺&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “VS Code 与 Cursor：怎么配才顺”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;VS Code&lt;/strong&gt;：&lt;code dir=&quot;auto&quot;&gt;/ide install&lt;/code&gt; 自动装扩展 → &lt;code dir=&quot;auto&quot;&gt;/ide enable&lt;/code&gt; 即可。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Cursor&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;扩展页&lt;strong&gt;手动安装&lt;/strong&gt;“Gemini CLI Companion”（VS Code forks 兼容）。&lt;/li&gt;
+&lt;li&gt;若 &lt;code dir=&quot;auto&quot;&gt;/ide install&lt;/code&gt; 提示“&lt;strong&gt;No installer for Cursor&lt;/strong&gt;”，属&lt;strong&gt;已知问题&lt;/strong&gt;，按提示&lt;strong&gt;改为手动装&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;Cursor 对大多数 VS Code 扩展&lt;strong&gt;开箱支持&lt;/strong&gt;（官方与多方测评均有表述），但以实际为准。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;常见坑与排查&quot;&gt;常见坑与排查&lt;/h2&gt;&lt;a href=&quot;#常见坑与排查&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “常见坑与排查”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;扩展已装，但 CLI 说连不上 IDE&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;可能是所需环境变量（如 &lt;code dir=&quot;auto&quot;&gt;GEMINI_CLI_IDE_WORKSPACE_PATH&lt;/code&gt; / &lt;code dir=&quot;auto&quot;&gt;GEMINI_CLI_IDE_SERVER_PORT&lt;/code&gt;）没就绪&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;解决&lt;/strong&gt;：确认扩展开启；&lt;strong&gt;重新开一个 IDE 终端&lt;/strong&gt;再试。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Cursor 里 &lt;code dir=&quot;auto&quot;&gt;/ide install&lt;/code&gt; 失败&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;信息：“&lt;strong&gt;No installer is available for Cursor&lt;/strong&gt;”&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;解决&lt;/strong&gt;：去扩展市场&lt;strong&gt;手动安装&lt;/strong&gt;同名扩展。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;看不到原生 Diff&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;确认在 &lt;strong&gt;IDE 集成终端&lt;/strong&gt;里跑 CLI，而非外部终端。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;适合谁哪些场景最香&quot;&gt;适合谁？哪些场景最香？&lt;/h2&gt;&lt;a href=&quot;#适合谁哪些场景最香&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “适合谁？哪些场景最香？”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;个人开发者&lt;/strong&gt;：小步快跑、边改边看&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;团队协作&lt;/strong&gt;：&lt;strong&gt;统一风格&lt;/strong&gt;与&lt;strong&gt;批量小改&lt;/strong&gt;（日志、异常、命名、注释）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;旧代码治理&lt;/strong&gt;：低风险“切片式”重构，边 Diff 边落地&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;本质上，它把“LLM 改码”变成&lt;strong&gt;可审可控&lt;/strong&gt;的 IDE 原生流程。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;一套顺手的上手清单&quot;&gt;一套顺手的“上手清单”&lt;/h2&gt;&lt;a href=&quot;#一套顺手的上手清单&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “一套顺手的“上手清单””&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;npm i -g @google/gemini-cli&lt;/code&gt;（已装请略）&lt;/li&gt;
+&lt;li&gt;VS Code 打开项目 → &lt;strong&gt;集成终端&lt;/strong&gt;运行：&lt;code dir=&quot;auto&quot;&gt;/ide install&lt;/code&gt; → &lt;code dir=&quot;auto&quot;&gt;/ide enable&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;打开 2–3 个关键文件，&lt;strong&gt;先小范围试改&lt;/strong&gt;（选区驱动）&lt;/li&gt;
+&lt;li&gt;看到 Diff → 先微调再接收 → &lt;strong&gt;提交带说明的 commit&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;写个团队规范：&lt;strong&gt;哪些改动先交给 Gemini&lt;/strong&gt;，哪些必须走人工评审&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;官方博文与扩展页都有关键说明，建议收藏。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;结语&quot;&gt;结语&lt;/h2&gt;&lt;a href=&quot;#结语&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “结语”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;把命令行“硬核力”和 IDE “可视化”结合起来，&lt;strong&gt;效率和确定性同时提升&lt;/strong&gt;。
+今天就把 Gemini CLI 接上 VS Code/Cursor，&lt;strong&gt;让改动更可控、上下文更精准、协作更顺滑&lt;/strong&gt;。&lt;/p&gt;&lt;!-- 
+---
+
+# 🔖 多语言标题（3 组 + slug）
+
+1. **把命令行装进 IDE：Gemini CLI × VS Code/Cursor 原生 Diff 实战**
+   EN: Put the CLI in Your IDE: Gemini CLI × VS Code/Cursor with Native Diff
+   繁體: 把命令列裝進 IDE：Gemini CLI × VS Code/Cursor 原生 Diff 實戰
+   日本語: コマンドラインをIDEに：Gemini CLI × VS Code/Cursor のネイティブ差分
+   Français : Le CLI dans votre IDE : Gemini CLI × VS Code/Cursor avec diff natif
+   Español: CLI dentro del IDE: Gemini CLI × VS Code/Cursor con diff nativo
+   Português: CLI no seu IDE: Gemini CLI × VS Code/Cursor com diff nativo
+   **slug**: `gemini-cli-ide-native-diff`
+
+2. **上下文直连 + 一键 Diff：Gemini CLI Companion 真能打**
+   EN: Context-Aware + One-Click Diff: Gemini CLI Companion Delivers
+   繁體: 上下文直連 + 一鍵 Diff：Gemini CLI Companion 真能打
+   日本語: 文脈連携＋ワンクリック差分：Gemini CLI Companion は本物
+   Français : Contexte natif + diff en un clic : Gemini CLI Companion au top
+   Español: Contexto nativo + diff con un clic: Gemini CLI Companion rinde
+   Português: Contexto nativo + diff com um clique: Gemini CLI Companion manda bem
+   **slug**: `gemini-cli-companion-diff`
+
+3. **今天就接入：用 VS Code/Cursor 玩转 Gemini CLI 原生改码**
+   EN: Plug In Today: Native Code Edits with Gemini CLI in VS Code/Cursor
+   繁體: 今天就接入：用 VS Code/Cursor 玩轉 Gemini CLI 原生改碼
+   日本語: 今日から導入：VS Code/Cursor で Gemini CLI のネイティブ編集
+   Français : Activez-le aujourd’hui : Éditions natives avec Gemini CLI dans VS Code/Cursor
+   Español: Actívalo hoy: Ediciones nativas con Gemini CLI en VS Code/Cursor
+   Português: Ative hoje: Edições nativas com Gemini CLI no VS Code/Cursor
+   **slug**: `gemini-cli-vscode-cursor-setup`
+
+---
+
+# 🖼️ 配图（2:1 插画风，无中文）
+
+**封面图（Prompt）**
+“An illustration of a developer in a VS Code-like editor, a terminal panel glowing with ‘/ide enable’, a split diff view side-by-side, neat pastel palette, minimal lines, 2:1 ratio, no text, flat illustration.”
+
+**关键章节配图（Prompt x3）**
+
+1. “Close-up of a code editor selection being highlighted, AI spark connecting selection to a terminal prompt, 2:1, flat illustration.”
+2. “Split diff screen with accepted and pending changes, checkmarks and pencil icons indicating editable diffs, 2:1, minimal.”
+3. “Two editors labeled subtly as VS Code and Cursor (generic look-alikes), sharing an extension puzzle piece labeled ‘companion’, 2:1, pastel.”
+
+---
+
+# 💬 朋友圈/评论区金句（3 条）
+
+1. **把改动放进 Diff 再说话**——Gemini CLI 接上 IDE，效率是真的上头。
+2. 选中一段，动动嘴，**并排 Diff** 就来了；接不接收，全看你。
+3. Cursor 党也能玩，**手动装扩展**就行；今天就给老项目洗把澡。
+
+---
+
+**你觉得这版文章 OK 吗？要不要我继续**补一版“团队落地模板”（规范、提示词、失败回滚策略）**或加一张“常见报错自检清单”？**
+
+[1]: https://developers.googleblog.com/en/gemini-cli-vs-code-native-diffing-context-aware-workflows/?utm_source=chatgpt.com &quot;Gemini CLI + VS Code: Native diffing and context-aware ...&quot;
+[2]: https://developers.googleblog.com/en/gemini-cli-vs-code-native-diffing-context-aware-workflows/ &quot;
+            
+            Gemini CLI + VS Code: Native diffing and context-aware workflows
+            
+            
+            \- Google Developers Blog
+            
+        &quot;
+[3]: https://marketplace.visualstudio.com/items?itemName=Google.gemini-cli-vscode-ide-companion&amp;utm_source=chatgpt.com &quot;Gemini CLI Companion&quot;
+[4]: https://github.com/google-gemini/gemini-cli/issues/6733?utm_source=chatgpt.com &quot;Not possible to connect to the cursor ide · Issue #6733&quot;
+[5]: https://www.walturn.com/insights/cursor-vs-vs-code-with-github-copilot-a-comprehensive-comparison?utm_source=chatgpt.com &quot;Cursor vs VS Code with GitHub Copilot&quot;
+[6]: https://gemini-cli.xyz/docs/en/ide-integration?utm_source=chatgpt.com &quot;IDE Integration | Gemini CLI Docs&quot; --&gt;</content:encoded><category>Gemini CLI</category><category>Gemini CLI Companion</category><category>gemini-2.5-pro</category><category>VS Code</category><category>Cursor</category></item><item><title>Codex 发布 VS Code / Cursor IDE 插件</title><link>https://www.vibesparking.com/zh-cn/blog/ai/openai/codex/ide/2025-08-30-codex-ide-playbook-in-vscode/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/openai/codex/ide/2025-08-30-codex-ide-playbook-in-vscode/</guid><pubDate>Sat, 30 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # 用 1 篇就懂：CodexIDE 怎么装、怎么用、在哪些场景最值 --&gt;
 &lt;blockquote&gt;
 &lt;p&gt;想把“会写代码的 CodeX GPT-5”塞进 VS Code？Codex IDE 这波真的到位。读/改/跑，一把梭。本文带你 10 分钟摸清亮点、安装步骤、以及最推荐的上手场景。&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -3065,274 +3275,4 @@ PR 堆成山，代码审不过来；Issue 描述很清楚，但没人愿意先�
 &lt;li&gt;&lt;strong&gt;等待官方确认&lt;/strong&gt;，再作投资判断。&lt;/li&gt;
 &lt;/ol&gt;
 &lt;hr&gt;
-&lt;p&gt;通过这次深度分析，我们看到在AI投资热潮中，&lt;strong&gt;媒体报道、公司宣传与实际情况之间往往存在显著差距&lt;/strong&gt;。狂热之下泥沙俱下，唯有保持理性、勤于求证，才能看清真相，不被市场情绪裹挟。&lt;/p&gt;</content:encoded><category>Claude</category><category>Claude Code</category><category>Anthropic</category><category>OpenAI</category></item><item><title>用 Claude Code 开一个 Gemini Subagent</title><link>https://www.vibesparking.com/zh-cn/blog/ai/claude-code/agents/2025-08-25-claude-code-gemini-subagent-1m-context/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/claude-code/agents/2025-08-25-claude-code-gemini-subagent-1m-context/</guid><pubDate>Mon, 25 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # 用 Claude Code 开一个 Gemini Subagent --&gt;
-&lt;blockquote&gt;
-&lt;p&gt;在 Claude Code 里新建一个“子代理（sub-agent）”，专门负责调用 &lt;strong&gt;Gemini CLI&lt;/strong&gt;。大体量代码扫描、架构总览、安全审计，都交给 Gemini 的 &lt;strong&gt;1M token&lt;/strong&gt; 上下文来跑；Claude 继续做主脑，解释结果与落地改动。省钱、省心、效率高。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;引言&quot;&gt;引言&lt;/h2&gt;&lt;a href=&quot;#引言&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “引言”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;做代码总览、跨仓库检索、架构梳理，Claude 再聪明也会被上下文卡脖子。
-解决办法很简单：&lt;strong&gt;把“大胃口”的分析外包给 Gemini CLI&lt;/strong&gt;。我们在 Claude Code 里创建一个“&lt;strong&gt;Gemini 分析子代理&lt;/strong&gt;”，它只干三件事：&lt;strong&gt;拼命令 → 调 CLI → 原样把结果交回&lt;/strong&gt;。Claude 不被上下文污染，专心做决策与修改，&lt;strong&gt;强强联合&lt;/strong&gt;。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;为什么是现在？&lt;/strong&gt;
-Google 正式开源了 &lt;strong&gt;Gemini CLI&lt;/strong&gt;，个人账号可免费直连 &lt;strong&gt;Gemini 2.5 Pro&lt;/strong&gt;，而且是 &lt;strong&gt;1M token&lt;/strong&gt; 超大上下文，预览期还给到很阔的配额。这对需要整仓分析的开发者，堪称“外挂”。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;配图建议（2:1 插画）&lt;/strong&gt;：一位工程师在指挥台上调度两个机器人：左侧“Claude 主代理”做规划与改动，右侧“Gemini 子代理”拉取海量代码做分析。界面元素用英文，不要中文。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;这套组合拳到底怎么打&quot;&gt;这套组合拳到底怎么打？&lt;/h2&gt;&lt;a href=&quot;#这套组合拳到底怎么打&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “这套组合拳到底怎么打？”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h3 id=&quot;思路图主脑--子代理各司其职&quot;&gt;思路图：主脑 + 子代理，各司其职&lt;/h3&gt;&lt;a href=&quot;#思路图主脑--子代理各司其职&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “思路图：主脑 + 子代理，各司其职”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Claude 主代理&lt;/strong&gt;：对话、拆解任务、评审与落地修改（编辑文件、跑测试等）。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Gemini 子代理&lt;/strong&gt;：&lt;strong&gt;不做分析推理&lt;/strong&gt;，&lt;strong&gt;只&lt;/strong&gt;负责把请求变成 &lt;strong&gt;Gemini CLI&lt;/strong&gt; 命令并执行，然后&lt;strong&gt;把原始输出交回&lt;/strong&gt;。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;上下文隔离&lt;/strong&gt;：子代理有独立上下文，&lt;strong&gt;不污染&lt;/strong&gt;主对话；适合重复复用。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;准备工作5-分钟&quot;&gt;准备工作（5 分钟）&lt;/h2&gt;&lt;a href=&quot;#准备工作5-分钟&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “准备工作（5 分钟）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;安装 Gemini CLI&lt;/strong&gt;（三选一）&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# npx 直接跑（免安装）&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;npx&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;https://github.com/google-gemini/gemini-cli&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# 全局安装（npm）&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;npm&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;install&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;-g&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;@google/gemini-cli&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# 或者 Homebrew（macOS/Linux）&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;brew&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;install&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;gemini-cli&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;blockquote&gt;
-&lt;p&gt;要求 Node.js ≥ 20。支持 OAuth 登录、API Key、或 Vertex AI。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ol start=&quot;2&quot;&gt;
-&lt;li&gt;&lt;strong&gt;登录/鉴权&lt;/strong&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# 推荐：OAuth（个人 Google 账号，预览期配额充足）&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;gemini&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;   &lt;/span&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# 按提示走浏览器登录&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# 或：使用 AI Studio 的 API Key&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;export&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;GEMINI_API_KEY&lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;=&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;YOUR_API_KEY&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;gemini&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;blockquote&gt;
-&lt;p&gt;官方博客确认了 1M 上下文与预览期的高额度；GitHub README 给出了 OAuth / API Key / Vertex 三种姿势。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ol start=&quot;3&quot;&gt;
-&lt;li&gt;&lt;strong&gt;验证是否就绪&lt;/strong&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;gemini&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;-p&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;Say hello and print current directory files briefly&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;在-claude-code-里创建gemini-分析子代理&quot;&gt;在 Claude Code 里创建“Gemini 分析子代理”&lt;/h2&gt;&lt;a href=&quot;#在-claude-code-里创建gemini-分析子代理&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “在 Claude Code 里创建“Gemini 分析子代理””&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;Claude Code 支持把自定义子代理存成 &lt;strong&gt;Markdown + YAML frontmatter&lt;/strong&gt; 文件；项目级建议放在 &lt;code dir=&quot;auto&quot;&gt;.claude/agents/&lt;/code&gt; 下，用户级可放 &lt;code dir=&quot;auto&quot;&gt;~/.claude/agents/&lt;/code&gt;。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;新建文件&lt;/strong&gt;：&lt;code dir=&quot;auto&quot;&gt;.claude/agents/gemini-analyzer.md&lt;/code&gt;&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;md&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;---&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#111111&quot;&gt;name&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;gemini-analyzer&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#111111&quot;&gt;description&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;Manages Gemini CLI for large codebase analysis and pattern detection. Use proactively when Claude needs to analyze extensive code patterns, architectural overviews, or search through large codebases efficiently.&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#111111&quot;&gt;tools&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;Bash, Read, Write&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;---&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;You are a Gemini CLI manager specialized in delegating complex codebase analysis tasks to the Gemini CLI tool.&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;Your sole responsibility is to:&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;1.&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; Receive analysis requests from Claude&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;2.&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; Format appropriate Gemini CLI commands&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;3.&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; Execute the Gemini CLI with proper parameters&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;4.&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; Return the results back to Claude&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;5.&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; NEVER perform the actual analysis yourself - only manage the Gemini CLI&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;When invoked:&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;1.&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; Understand the analysis request (patterns to find, architectural questions, etc.)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;2.&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; Determine the appropriate Gemini CLI flags and parameters:&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;   &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;-&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; Use &lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;`--all-files`&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; for comprehensive codebase analysis&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;   &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;-&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; Use specific prompts that focus on the requested analysis&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;   &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;-&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; Consider using &lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;`--yolo`&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; mode for non-destructive analysis tasks&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;3.&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; Execute the Gemini CLI command with the constructed prompt&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;4.&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; Return the raw output from Gemini CLI to Claude without modification&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;5.&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; Do NOT attempt to interpret, analyze, or act on the results&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;Example workflow:&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;-&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; Request: &quot;Find all authentication patterns in the codebase&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;-&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; Action: &lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;`gemini --all-files -p &quot;Analyze this codebase and identify all authentication patterns, including login flows, token handling, and access control mechanisms. Focus on the implementation details and architectural patterns used.&quot;`&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;-&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; Output: Return Gemini&apos;s analysis directly to Claude&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;Key principles:&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;-&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; You are a CLI wrapper, not an analyst&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;-&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; Always use the most appropriate Gemini CLI flags for the task&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;-&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; Return complete, unfiltered results&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;-&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; Let Claude handle interpretation and follow-up actions&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;-&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; Focus on efficient command construction and execution&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82B1FF;--1:#3B61B0&quot;&gt;## Detailed Examples by Use Case&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82B1FF;--1:#3B61B0&quot;&gt;### 1. Pattern Detection&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;**&lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--0fw:bold;--1:#3B61B0;--1fw:bold&quot;&gt;Request&lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;**&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &quot;Find all React hooks usage patterns&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;**&lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--0fw:bold;--1:#3B61B0;--1fw:bold&quot;&gt;Command&lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;**&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;`gemini --all-files -p &quot;Analyze this codebase and identify all React hooks usage patterns. Show how useState, useEffect, useContext, and custom hooks are being used. Include examples of best practices and potential issues.&quot;`&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;**&lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--0fw:bold;--1:#3B61B0;--1fw:bold&quot;&gt;Request&lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;**&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &quot;Locate all database query patterns&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;**&lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--0fw:bold;--1:#3B61B0;--1fw:bold&quot;&gt;Command&lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;**&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;`gemini --all-files -p &quot;Find all database query patterns in this codebase. Include SQL queries, ORM usage, connection handling, and any database-related utilities. Show the different approaches used.&quot;`&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82B1FF;--1:#3B61B0&quot;&gt;### 2. Architecture Analysis&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;**&lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--0fw:bold;--1:#3B61B0;--1fw:bold&quot;&gt;Request&lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;**&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &quot;Provide an architectural overview of the application&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;**&lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--0fw:bold;--1:#3B61B0;--1fw:bold&quot;&gt;Command&lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;**&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;`gemini --all-files -p &quot;Analyze the overall architecture of this application. Identify the main components, data flow, directory structure, key patterns, and how different parts of the system interact. Focus on high-level organization and design decisions.&quot;`&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;**&lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--0fw:bold;--1:#3B61B0;--1fw:bold&quot;&gt;Request&lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;**&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &quot;Analyze the component hierarchy and structure&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;**&lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--0fw:bold;--1:#3B61B0;--1fw:bold&quot;&gt;Command&lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;**&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;`gemini --all-files -p &quot;Examine the React component hierarchy and structure. Identify reusable components, layout patterns, prop drilling, state management approaches, and component composition patterns used throughout the application.&quot;`&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82B1FF;--1:#3B61B0&quot;&gt;### 3. Code Quality Analysis&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;**&lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--0fw:bold;--1:#3B61B0;--1fw:bold&quot;&gt;Request&lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;**&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &quot;Find potential performance bottlenecks&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;**&lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--0fw:bold;--1:#3B61B0;--1fw:bold&quot;&gt;Command&lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;**&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;`gemini --all-files -p &quot;Analyze this codebase for potential performance bottlenecks. Look for expensive operations, inefficient data structures, unnecessary re-renders, large bundle sizes, and optimization opportunities.&quot;`&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;**&lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--0fw:bold;--1:#3B61B0;--1fw:bold&quot;&gt;Request&lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;**&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &quot;Identify security vulnerabilities&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;**&lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--0fw:bold;--1:#3B61B0;--1fw:bold&quot;&gt;Command&lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;**&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;`gemini --all-files -p &quot;Scan this codebase for potential security vulnerabilities. Look for authentication issues, input validation problems, XSS vulnerabilities, unsafe data handling, and security best practices violations.&quot;`&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82B1FF;--1:#3B61B0&quot;&gt;### 4. Technology Stack Analysis&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;**&lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--0fw:bold;--1:#3B61B0;--1fw:bold&quot;&gt;Request&lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;**&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &quot;Identify all third-party dependencies and their usage&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;**&lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--0fw:bold;--1:#3B61B0;--1fw:bold&quot;&gt;Command&lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;**&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;`gemini --all-files -p &quot;Analyze all third-party dependencies and libraries used in this project. Show how each major dependency is utilized, identify any potential redundancies, outdated packages, or security concerns.&quot;`&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;**&lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--0fw:bold;--1:#3B61B0;--1fw:bold&quot;&gt;Request&lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;**&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &quot;Map out the testing strategy and coverage&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;**&lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--0fw:bold;--1:#3B61B0;--1fw:bold&quot;&gt;Command&lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;**&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;`gemini --all-files -p &quot;Examine the testing strategy used in this codebase. Identify test frameworks, testing patterns, test coverage areas, mocking strategies, and areas that might need more testing.&quot;`&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82B1FF;--1:#3B61B0&quot;&gt;### 5. Feature Analysis&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;**&lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--0fw:bold;--1:#3B61B0;--1fw:bold&quot;&gt;Request&lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;**&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &quot;Trace a specific feature implementation&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;**&lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--0fw:bold;--1:#3B61B0;--1fw:bold&quot;&gt;Command&lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;**&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;`gemini --all-files -p &quot;Trace the implementation of [specific feature] throughout the codebase. Show all files involved, data flow, API endpoints, UI components, and how the feature integrates with the rest of the system.&quot;`&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;**&lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--0fw:bold;--1:#3B61B0;--1fw:bold&quot;&gt;Request&lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;**&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &quot;Find all API endpoints and their usage&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;**&lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--0fw:bold;--1:#3B61B0;--1fw:bold&quot;&gt;Command&lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;**&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;`gemini --all-files -p &quot;Catalog all API endpoints in this application. Include REST routes, GraphQL resolvers, tRPC procedures, their request/response patterns, authentication requirements, and how they&apos;re consumed by the frontend.&quot;`&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82B1FF;--1:#3B61B0&quot;&gt;### 6. Migration and Refactoring Analysis&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;**&lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--0fw:bold;--1:#3B61B0;--1fw:bold&quot;&gt;Request&lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;**&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &quot;Identify legacy code patterns that need modernization&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;**&lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--0fw:bold;--1:#3B61B0;--1fw:bold&quot;&gt;Command&lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;**&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;`gemini --all-files -p &quot;Identify outdated or legacy code patterns that could be modernized. Look for old React patterns, deprecated APIs, inefficient implementations, and opportunities to use newer language features.&quot;`&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;**&lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--0fw:bold;--1:#3B61B0;--1fw:bold&quot;&gt;Request&lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;**&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &quot;Analyze consistency across similar components&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;**&lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--0fw:bold;--1:#3B61B0;--1fw:bold&quot;&gt;Command&lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;**&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;`gemini --all-files -p &quot;Examine similar components or modules for consistency. Identify variations in patterns, naming conventions, implementation approaches, and opportunities for standardization or creating reusable abstractions.&quot;`&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82B1FF;--1:#3B61B0&quot;&gt;### 7. Documentation and Knowledge Transfer&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;**&lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--0fw:bold;--1:#3B61B0;--1fw:bold&quot;&gt;Request&lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;**&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &quot;Generate onboarding documentation insights&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;**&lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--0fw:bold;--1:#3B61B0;--1fw:bold&quot;&gt;Command&lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;**&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;`gemini --all-files -p &quot;Analyze this codebase to help create onboarding documentation. Identify key concepts developers need to understand, important files and directories, setup requirements, and the most critical patterns to learn first.&quot;`&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82B1FF;--1:#3B61B0&quot;&gt;### Command Flag Guidelines:&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;-&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; Always use &lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;`--all-files`&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; for comprehensive analysis&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;-&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; Add &lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;`--yolo`&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; for non-destructive analysis tasks to skip confirmations&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;-&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; Use &lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;`-p`&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; for single prompts or &lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;`-i`&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; for interactive sessions&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;-&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; Consider &lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;`--debug`&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; if you need to troubleshoot Gemini CLI issues&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;blockquote&gt;
-&lt;p&gt;子代理文件格式、放置路径与可用工具名（Bash/Read/Write），以官方文档为准。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;小贴士&lt;/strong&gt;：你也可以直接用 &lt;code dir=&quot;auto&quot;&gt;/agents&lt;/code&gt; 交互式创建与编辑子代理，更省事。&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;给子代理开绿灯权限与安全&quot;&gt;给子代理“开绿灯”：权限与安全&lt;/h2&gt;&lt;a href=&quot;#给子代理开绿灯权限与安全&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “给子代理“开绿灯”：权限与安全”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;为了让子代理能顺利执行 &lt;code dir=&quot;auto&quot;&gt;gemini&lt;/code&gt; 命令，建议在 &lt;code dir=&quot;auto&quot;&gt;.claude/settings.json&lt;/code&gt; 里&lt;strong&gt;白名单&lt;/strong&gt;相关 Bash 调用；同时严格&lt;strong&gt;黑名单&lt;/strong&gt;敏感文件读取：&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;json&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;{&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;permissions&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: {&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;allow&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: [&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;      &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;Bash(gemini*)&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;      &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;Read(**/*.md)&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;      &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;Read(src/**)&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;    &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;],&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;deny&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: [&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;      &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;Read(./.env)&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;      &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;Read(./.env.*)&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;      &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;Read(./secrets/**)&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;      &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;Bash(curl:*)&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;    &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;]&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;blockquote&gt;
-&lt;p&gt;权限系统与示例配置来自 Claude Code 官方“Settings”文档。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;三个上手就能用的实战案例&quot;&gt;三个“上手就能用”的实战案例&lt;/h2&gt;&lt;a href=&quot;#三个上手就能用的实战案例&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “三个“上手就能用”的实战案例”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;blockquote&gt;
-&lt;p&gt;使用方式：在 Claude Code 里直接对主代理说话，例如：
-“&lt;strong&gt;让 &lt;code dir=&quot;auto&quot;&gt;gemini-analyzer&lt;/code&gt; 子代理扫描整个仓库的认证实现，并把原始输出返回&lt;/strong&gt;”。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;div&gt;&lt;h3 id=&quot;1-模式检索找出认证鉴权实现&quot;&gt;1) &lt;strong&gt;模式检索：找出认证/鉴权实现&lt;/strong&gt;&lt;/h3&gt;&lt;a href=&quot;#1-模式检索找出认证鉴权实现&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1) 模式检索：找出认证/鉴权实现”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;Claude 指令&lt;/strong&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Use the &lt;code dir=&quot;auto&quot;&gt;gemini-analyzer&lt;/code&gt; subagent to analyze authentication patterns across the repo and return raw output.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;子代理应构造并执行的命令&lt;/strong&gt;（示例）&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;gemini&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;-p&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;Analyze this codebase and list all authentication &amp;#x26; authorization patterns: login flows, token/session handling, middleware/guards, RBAC/ABAC, and any security pitfalls. Show file paths and code excerpts when helpful.&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;code dir=&quot;auto&quot;&gt;-p&lt;/code&gt; 支持非交互单次分析；在仓库根目录执行即可让 Gemini 读取项目上下文，必要时可加 &lt;code dir=&quot;auto&quot;&gt;--include-directories&lt;/code&gt; 指定额外目录。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h3 id=&quot;2-架构鸟瞰组件与数据流&quot;&gt;2) &lt;strong&gt;架构鸟瞰：组件与数据流&lt;/strong&gt;&lt;/h3&gt;&lt;a href=&quot;#2-架构鸟瞰组件与数据流&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2) 架构鸟瞰：组件与数据流”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;Claude 指令&lt;/strong&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Use &lt;code dir=&quot;auto&quot;&gt;gemini-analyzer&lt;/code&gt; to provide a high-level architectural overview and return the raw result.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;子代理命令&lt;/strong&gt;&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;gemini&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;-p&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;Give an architectural overview: main modules, data flow, directory structure, cross-cutting concerns, and how backend APIs connect to frontend components. Output a concise map with file references.&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;blockquote&gt;
-&lt;p&gt;大上下文适合整仓概览、跨层联动梳理；恰好发挥 Gemini CLI 1M token 的优势。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h3 id=&quot;3-安全巡检xss注入敏感信息&quot;&gt;3) &lt;strong&gt;安全巡检：XSS/注入/敏感信息&lt;/strong&gt;&lt;/h3&gt;&lt;a href=&quot;#3-安全巡检xss注入敏感信息&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3) 安全巡检：XSS/注入/敏感信息”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;Claude 指令&lt;/strong&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Ask &lt;code dir=&quot;auto&quot;&gt;gemini-analyzer&lt;/code&gt; to scan for potential security issues and return raw findings.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;子代理命令&lt;/strong&gt;&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;gemini&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;-p&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;Scan for potential security issues: XSS, SQL/NoSQL injection, hard-coded secrets, weak crypto, unsafe deserialization, missing input validation, authz gaps. Provide evidence snippets and file paths.&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;blockquote&gt;
-&lt;p&gt;子代理&lt;strong&gt;只回传原始输出&lt;/strong&gt;，由 Claude 主代理负责解读、生成修复 PR。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;最佳实践把效率拉满&quot;&gt;最佳实践：把效率拉满&lt;/h2&gt;&lt;a href=&quot;#最佳实践把效率拉满&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “最佳实践：把效率拉满”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;一句话角色卡&lt;/strong&gt;：在 &lt;code dir=&quot;auto&quot;&gt;description&lt;/code&gt; 里写上“&lt;strong&gt;Use proactively&lt;/strong&gt;”，让 Claude &lt;strong&gt;自动&lt;/strong&gt;把大活派给它。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;成本/速度切换&lt;/strong&gt;：分析阶段可用 &lt;code dir=&quot;auto&quot;&gt;-m gemini-2.5-flash&lt;/code&gt; 先跑一版，确认方向后再用 &lt;code dir=&quot;auto&quot;&gt;-m gemini-2.5-pro&lt;/code&gt; 精扫。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;固定模板&lt;/strong&gt;：把常用提示做成片段（例如“依赖地图”“测试覆盖率报告”），复用稳定。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;上下文干净&lt;/strong&gt;：子代理与主对话分离，避免一轮大扫描把主线挤爆。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;权限最小化&lt;/strong&gt;：只放行必要的 Bash/Read 规则；敏感文件坚决 deny。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;遇错别慌&lt;/strong&gt;：命令失败就用 &lt;code dir=&quot;auto&quot;&gt;--debug&lt;/code&gt; 重试，把日志原样返回给 Claude 排障。&lt;/li&gt;
-&lt;/ul&gt;&lt;!-- &gt; **配图建议（2:1 插画）**：一个“流水线”场景，左边 Gemini 搬运一大摞代码本，右边 Claude 拿着扳手对项目做精准改动。界面文字用英文。 --&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;结语&quot;&gt;结语&lt;/h2&gt;&lt;a href=&quot;#结语&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “结语”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;这套“&lt;strong&gt;Claude 主脑 + Gemini 子代理&lt;/strong&gt;”的组合，非常适合你做：&lt;strong&gt;整仓巡检、架构体检、迁移评估、依赖清理&lt;/strong&gt;。
-你依旧待在 Claude Code 里，&lt;strong&gt;把重活交给 Gemini&lt;/strong&gt;；该省的钱省了，该省的时间也省了。下次你需要“大视野 + 可落地”，就让它们搭班。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;你会把它用在什么项目上？&lt;strong&gt;评论区聊聊你的场景，我可以帮你把子代理提示词&lt;/strong&gt;继续打磨&lt;/strong&gt;。&lt;/p&gt;&lt;!--
-（想要我给你做一份“标准化子代理包”，也可以直接说～）
-
----
-
-## 参考与延伸
-
-* **Anthropic 官方：Subagents 文档**（概念、创建方式、文件结构、最佳实践）。
-* **Anthropic 官方：Settings &amp; Tools**（权限白名单、Bash/Read/Write 工具列表）。
-* **Google 官方博客：Gemini CLI 发布**（开源、1M token、免费额度与集成）。
-* **Gemini CLI GitHub**（安装、鉴权、`-p` 非交互、模型切换、MCP/搜索工具）。
-
----
-
-## 推荐标题（多语言 &amp; slug）
-
-1. **把 1M 上下文塞进 Claude Code：Gemini 子代理实战**
-
-   * EN: Supercharge Claude Code with a Gemini Subagent and 1M Context
-   * 繁中: 把 1M 上下文塞進 Claude Code：Gemini 子代理實戰
-   * 日: 1MコンテキストをClaude Codeに！Geminiサブエージェント実践
-   * 法: Ajoutez 1M de contexte à Claude Code avec un sous-agent Gemini
-   * 西: Potencia Claude Code con un subagente Gemini y 1M de contexto
-   * 葡: Turbine o Claude Code com um subagente Gemini e 1M de contexto
-   * **slug**: `claude-code-gemini-subagent-1m-context`
-
-2. **主脑 Claude，干活 Gemini：子代理搞定整仓分析**
-
-   * EN: Claude Thinks, Gemini Digs: Subagent for Whole-Repo Analysis
-   * 繁中: 主腦 Claude，幹活 Gemini：子代理搞定整倉分析
-   * 日: 考えるClaude・掘るGemini：全リポ解析サブエージェント
-   * 法: Claude réfléchit, Gemini fouille : sous-agent pour l’analyse du dépôt
-   * 西: Claude piensa, Gemini excava: subagente para análisis total del repo
-   * 葡: Claude pensa, Gemini cava: subagente para análise do repositório
-   * **slug**: `claude-gemini-subagent-whole-repo`
-
-3. **不挤主上下文的正确姿势：用子代理外包大扫描**
-
-   * EN: Keep Context Clean: Offload Big Scans via a Subagent
-   * 繁中: 不擠主上下文的正確姿勢：用子代理外包大掃描
-   * 日: コンテキストを汚さない：サブエージェントで大規模スキャン外注
-   * 法: Préservez le contexte : externalisez les gros scans via un sous-agent
-   * 西: Mantén limpio el contexto: subcontrata los grandes escaneos con un subagente
-   * 葡: Mantenha o contexto limpo: terceirize grandes varreduras com subagente
-   * **slug**: `keep-context-clean-with-subagent`
-
----
-
-## 封面与章节配图（2:1 插画，英文界面）
-
-&gt; **注意：图片内不要放中文。**
-
-**封面图 Prompt**
-“An illustration of a developer orchestrating two AI agents on a command console: left ‘Claude (planner &amp; editor)’, right ‘Gemini CLI (1M context analyzer)’. Futuristic terminal screens, calm pastel palette, clean vectors, wide 2:1 aspect ratio, no Chinese text.”
-
-**关键章节配图 Prompt（最佳实践小节）**
-“Factory-style pipeline: Gemini CLI robot carries piles of code files into a large scanner, Claude robot applies precise fixes on a repository board. Minimalist UI elements, 2:1 aspect, soft gradients, no Chinese text.”
-
----
-
-## 朋友圈/评论区 3 条“开聊”金句
-
-1. “把大扫描丢给 Gemini，Claude 只做决策和改动，效率直接起飞。你们仓库最大多大？🤔”
-2. “真心建议做个 `gemini-analyzer` 子代理，遇到架构总览、依赖清理一键跑，周会的 PPT 省一半时间。”
-3. “上下文不够用？那就外挂 1M。Claude 主脑 + Gemini 干活，这搭子我先磕了～”
-
----
-
-要不要我把上面的子代理模板**按你的项目**再细化一版？比如针对 React/Next、Flutter、或 Rails 的专属提示词与检查清单。需要的话直接说，我这就给你扩写。
-
-[1]: https://docs.anthropic.com/en/docs/claude-code/sub-agents &quot;Subagents - Anthropic&quot;
-[2]: https://blog.google/technology/developers/introducing-gemini-cli-open-source-ai-agent/ &quot;Google announces Gemini CLI: your open-source AI agent&quot;
-[3]: https://github.com/google-gemini/gemini-cli &quot;GitHub - google-gemini/gemini-cli: An open-source AI agent that brings the power of Gemini directly into your terminal.&quot;
-[4]: https://docs.anthropic.com/en/docs/claude-code/settings &quot;Claude Code settings - Anthropic&quot; --&gt;</content:encoded><category>Claude Code</category><category>Cursor Agent</category></item></channel></rss>
+&lt;p&gt;通过这次深度分析，我们看到在AI投资热潮中，&lt;strong&gt;媒体报道、公司宣传与实际情况之间往往存在显著差距&lt;/strong&gt;。狂热之下泥沙俱下，唯有保持理性、勤于求证，才能看清真相，不被市场情绪裹挟。&lt;/p&gt;</content:encoded><category>Claude</category><category>Claude Code</category><category>Anthropic</category><category>OpenAI</category></item></channel></rss>
