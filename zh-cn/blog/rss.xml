@@ -1,4 +1,190 @@
-<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Vibe Sparking AI | Blog</title><description/><link>https://www.vibesparking.com/</link><language>zh-CN</language><item><title>英伟达2026财年第一、第二季度财报综合分析报告：英伟达如何将H20“危机”变为战略“转机”</title><link>https://www.vibesparking.com/zh-cn/blog/finance/nvidia/2025-09-02-nvidia-fy26q2-earnings-analysis-blackwell-growth/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/finance/nvidia/2025-09-02-nvidia-fy26q2-earnings-analysis-blackwell-growth/</guid><pubDate>Tue, 02 Sep 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # 英伟达2026财年第一、第二季度财报综合分析报告 --&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Vibe Sparking AI | Blog</title><description/><link>https://www.vibesparking.com/</link><language>zh-CN</language><item><title>Claude Code 1.0.9x：权限规则、记忆编辑、Vertex 全局端点等多项优化</title><link>https://www.vibesparking.com/zh-cn/blog/ai/claude-code/changelog/2025-09-02-claude-code-109x-permission-doctor-memory-vertex/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/claude-code/changelog/2025-09-02-claude-code-109x-permission-doctor-memory-vertex/</guid><pubDate>Wed, 03 Sep 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # Claude Code 1.0.9x 来了：这几处更新，直接改善你的“日常开干”体验 --&gt;
+&lt;blockquote&gt;
+&lt;p&gt;1.0.90～1.0.97 这几次快节奏小更新，把“权限规则校验、记忆编辑、Vertex 全局端点、代理兼容、热加载设置、待办清单”等痛点一口气打通，工程师的执行闭环更顺手了。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;引言&quot;&gt;引言&lt;/h2&gt;&lt;a href=&quot;#引言&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “引言”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;这两周 Claude Code 连着更了好几个小版本。看似“微调”，但都是日常高频操作：&lt;strong&gt;写权限规则不报错了、记忆文件能直接改、Vertex 走全局端点更稳、Windows 贴图更顺手、设置改了马上生效&lt;/strong&gt;。下面用上手视角，带你一条条看影响最大的点，并给出可复制的用法。&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;更新总览10901097&quot;&gt;更新总览（1.0.90～1.0.97）&lt;/h2&gt;&lt;a href=&quot;#更新总览10901097&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “更新总览（1.0.90～1.0.97）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;1.0.97&lt;/strong&gt;：&lt;code dir=&quot;auto&quot;&gt;/doctor&lt;/code&gt; 支持&lt;strong&gt;权限规则语法校验并给出修正建议&lt;/strong&gt;。不再因为一个括号或通配写错卡半天。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;1.0.94&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Vertex&lt;/strong&gt; 支持&lt;strong&gt;全局端点（global endpoint）&lt;/strong&gt;，跨区可用性更高。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code dir=&quot;auto&quot;&gt;/memory&lt;/code&gt;&lt;/strong&gt; 现在可以&lt;strong&gt;直接编辑所有导入的记忆文件&lt;/strong&gt;，组织团队指令更轻松。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;SDK&lt;/strong&gt; 增加“&lt;strong&gt;自定义工具作为回调&lt;/strong&gt;”能力（in-process MCP / 回调钩子），更易把你自己的工具链接入代理循环。&lt;/li&gt;
+&lt;li&gt;新增 &lt;strong&gt;&lt;code dir=&quot;auto&quot;&gt;/todos&lt;/code&gt;&lt;/strong&gt;，可列出当前任务清单，配合“计划—执行—核对”闭环更自然。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;1.0.93&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Windows&lt;/strong&gt; 新增 &lt;strong&gt;Alt + V&lt;/strong&gt; 从剪贴板&lt;strong&gt;粘贴图片&lt;/strong&gt;，记录报错截图、白板草图更快。&lt;/li&gt;
+&lt;li&gt;支持 &lt;strong&gt;&lt;code dir=&quot;auto&quot;&gt;NO_PROXY&lt;/code&gt;&lt;/strong&gt; 绕过指定主机/网段（结合 &lt;code dir=&quot;auto&quot;&gt;HTTP(S)_PROXY&lt;/code&gt;），企业网络/自建代理更好配。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;1.0.90&lt;/strong&gt;：&lt;strong&gt;设置文件改动立即生效&lt;/strong&gt;，无需重启。&lt;em&gt;注意：hooks 有例外&lt;/em&gt;（下节详解）。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;版本节奏很快，确认自己已跟上：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;/blockquote&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;npm&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;i&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;-g&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;@anthropic-ai/claude-code&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;claude&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;update&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;claude&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;-v&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;   &lt;/span&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# 应显示 1.0.9x+&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;button title=&quot;Copy to clipboard&quot; data-copied=&quot;Copied!&quot; data-code=&quot;&quot;&gt;claude -v   # 应显示 1.0.9x+&quot;&gt;&lt;div&gt;&lt;/div&gt;&lt;/button&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;01-规则不再玄学用-doctor-体检权限设置1097&quot;&gt;01 规则不再“玄学”：用 &lt;code dir=&quot;auto&quot;&gt;/doctor&lt;/code&gt; 体检权限设置（1.0.97）&lt;/h2&gt;&lt;a href=&quot;#01-规则不再玄学用-doctor-体检权限设置1097&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “01 规则不再“玄学”：用 /doctor 体检权限设置（1.0.97）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;权限是 Claude Code 的刹车和油门。以前写 &lt;code dir=&quot;auto&quot;&gt;allow/deny&lt;/code&gt; 容易踩坑，现在直接：&lt;/p&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;plaintext&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;/doctor&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;p&gt;它会&lt;strong&gt;校验语法&lt;/strong&gt;、&lt;strong&gt;指出问题&lt;/strong&gt;、并给出&lt;strong&gt;修正建议&lt;/strong&gt;。例如你写了：&lt;/p&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;json&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;{&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;permissions&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: {&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;allow&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: [&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;Bash(git commit:*)&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;, &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;Edit&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;, &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;ReadFile:*&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;],&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;deny&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: [&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;Bash(rm -rf *)&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;]&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;p&gt;&lt;code dir=&quot;auto&quot;&gt;/doctor&lt;/code&gt; 能提示通配是否正确、是否被更高优先级规则覆盖等。这对团队统一“可执行命令白名单”很关键。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;顺带补一嘴安全边界&lt;/strong&gt;：社区曾反馈过&lt;strong&gt;deny 规则失效&lt;/strong&gt;、&lt;strong&gt;命令链路绕过&lt;/strong&gt;等案例，写规则时别贪心，&lt;strong&gt;先最小权限&lt;/strong&gt;再逐步放开。&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;02-团队记忆随手改memory-直接编辑1094&quot;&gt;02 团队记忆随手改：&lt;code dir=&quot;auto&quot;&gt;/memory&lt;/code&gt; 直接编辑（1.0.94）&lt;/h2&gt;&lt;a href=&quot;#02-团队记忆随手改memory-直接编辑1094&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “02 团队记忆随手改：/memory 直接编辑（1.0.94）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;现在 &lt;code dir=&quot;auto&quot;&gt;/memory&lt;/code&gt; 不止能看加载了哪些 &lt;code dir=&quot;auto&quot;&gt;CLAUDE.md&lt;/code&gt;，还能&lt;strong&gt;直接打开并编辑&lt;/strong&gt;这些文件（包括用 &lt;code dir=&quot;auto&quot;&gt;@path/to/file&lt;/code&gt; 导入的多级记忆）。
+好处有三：
+1）&lt;strong&gt;一处修订，全队生效&lt;/strong&gt;（把项目约定写进仓库）。
+2）&lt;strong&gt;模块化&lt;/strong&gt;（用 &lt;code dir=&quot;auto&quot;&gt;@导入&lt;/code&gt; 分层管理：架构、Git 规范、脚手架命令等）。
+3）&lt;strong&gt;即时迭代&lt;/strong&gt;（配合下节热加载）。
+命令：&lt;/p&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;plaintext&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;/memory      # 查看&amp;#x26;编辑项目/个人/组织级 CLAUDE.md&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;p&gt;官方文档已把&lt;strong&gt;导入、多层查找、组织级路径&lt;/strong&gt;等机制写清楚，建议直接落到你们仓库。&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;03-vertex-全局端点跨区更稳更省心1094&quot;&gt;03 Vertex 全局端点：跨区更稳、更省心（1.0.94）&lt;/h2&gt;&lt;a href=&quot;#03-vertex-全局端点跨区更稳更省心1094&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “03 Vertex 全局端点：跨区更稳、更省心（1.0.94）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;如果你走 &lt;strong&gt;Google Vertex AI&lt;/strong&gt; 计费，现在可使用&lt;strong&gt;全局端点&lt;/strong&gt;来动态路由到可用区，&lt;strong&gt;提升可用性与稳定性&lt;/strong&gt;。这对“夜间长任务”“提审前 CI 一把过”很香。文档也明确了 Claude Code &lt;strong&gt;支持 Vertex 的全球与区域端点&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;小贴士：不同区域可用的具体模型/别名不完全一致，切换时注意 endpoint 与 model 的映射关系。&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;04-设置热加载但-hooks-需确认1090&quot;&gt;04 设置热加载，但 Hooks 需确认（1.0.90）&lt;/h2&gt;&lt;a href=&quot;#04-设置热加载但-hooks-需确认1090&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “04 设置热加载，但 Hooks 需确认（1.0.90）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;1.0.90 起，多数&lt;strong&gt;设置改了就生效&lt;/strong&gt;，不用重启会话。这让&lt;strong&gt;调参—再试&lt;/strong&gt;的反馈环更快。
+&lt;strong&gt;例外&lt;/strong&gt;：&lt;strong&gt;Hooks&lt;/strong&gt;（执行前/后的自定义钩子）&lt;strong&gt;不会立刻替换&lt;/strong&gt;。当前会话会使用&lt;strong&gt;启动时的快照&lt;/strong&gt;，你修改后需要在 &lt;code dir=&quot;auto&quot;&gt;/hooks&lt;/code&gt; 菜单里&lt;strong&gt;review &amp;#x26; apply&lt;/strong&gt;。这个细节别忽略。&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;05-企业网络友好no_proxy--贴图体验1093&quot;&gt;05 企业网络友好：NO_PROXY &amp;#x26; 贴图体验（1.0.93）&lt;/h2&gt;&lt;a href=&quot;#05-企业网络友好no_proxy--贴图体验1093&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “05 企业网络友好：NO_PROXY &amp;#x26; 贴图体验（1.0.93）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code dir=&quot;auto&quot;&gt;NO_PROXY&lt;/code&gt; 支持&lt;/strong&gt;：在复杂内网/多跳代理下，给部分主机或网段&lt;strong&gt;直连&lt;/strong&gt;，旁路掉全局代理。与 &lt;code dir=&quot;auto&quot;&gt;HTTP_PROXY/HTTPS_PROXY&lt;/code&gt; 一起配，常见的 CI、堡垒机场景更顺。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Windows Alt + V 贴图&lt;/strong&gt;：终端里&lt;strong&gt;直接贴图&lt;/strong&gt;，更适合把&lt;strong&gt;错误截图/表格&lt;/strong&gt;塞进上下文，加速“定位—修复”。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;06-sdk-回调--自定义工具把你的流水线接进来1094&quot;&gt;06 SDK 回调 &amp;#x26; 自定义工具：把你的流水线接进来（1.0.94）&lt;/h2&gt;&lt;a href=&quot;#06-sdk-回调--自定义工具把你的流水线接进来1094&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “06 SDK 回调 &amp;#x26; 自定义工具：把你的流水线接进来（1.0.94）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;TypeScript SDK 支持&lt;strong&gt;进程内 MCP 服务器&lt;/strong&gt;与&lt;strong&gt;自定义工具&lt;/strong&gt;，你可以把“项目构建、Lint、发布前检查、灰度回滚”等动作，变成 Claude 的“工具调用”。配合回调/钩子，把&lt;strong&gt;成功/失败处理&lt;/strong&gt;、&lt;strong&gt;审计记录&lt;/strong&gt;串起来。&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;快速上手清单可抄&quot;&gt;快速上手清单（可抄）&lt;/h2&gt;&lt;a href=&quot;#快速上手清单可抄&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “快速上手清单（可抄）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;1）体检权限&lt;/strong&gt;&lt;/p&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;plaintext&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;/doctor&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;/permissions           # 查看当前 allow/deny&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;/config                # 打开设置面板&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;2）记忆分层&lt;/strong&gt;&lt;/p&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;CLAUDE.md&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;md&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;@docs/architecture.md&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;@docs/git.md&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;@~/.claude/personal-rules.md&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;plaintext&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;/memory                # 直接编辑以上文件&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;3）Vertex 全局端点（示意）&lt;/strong&gt;
+在环境中改为 global endpoint（按照 GCP 文档的格式与可用模型来）：&lt;/p&gt;
+&lt;p&gt;具体端点与地区支持以官方文档为准。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;4）企业代理&lt;/strong&gt;&lt;/p&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;export&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;HTTPS_PROXY&lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;=&lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;http&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;://&lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;user&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;pass&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;@&lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;proxy&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;example&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;com&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;8080&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;export&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;NO_PROXY&lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;=&lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;localhost&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;,&lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;127&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;0&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;0&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;1&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;,.&lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;corp&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;example&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;com&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;结语&quot;&gt;结语&lt;/h2&gt;&lt;a href=&quot;#结语&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “结语”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;这轮 1.0.9x 的更新没有喧嚣，但&lt;strong&gt;每一项都在“落地效率”上给你加分&lt;/strong&gt;：
+&lt;strong&gt;权限更稳、记忆更易管、网络更可用、设置更顺手、任务有清单&lt;/strong&gt;。
+如果你准备把“代理式开发”推向团队协作层面，&lt;strong&gt;先把权限与记忆这两件事做扎实&lt;/strong&gt;，收益立竿见影。&lt;/p&gt;
+&lt;p&gt;你觉得这波更新里，哪一条最有用？留言区聊聊你的实践。&lt;/p&gt;&lt;!-- 
+---
+
+## 参考与延伸
+
+* 官方 Release Notes/总览页与文档导航。
+* 1.0.97 `/doctor`、1.0.94 变更条目、1.0.93 改动（第三方梳理 &amp; 社区实测）。
+* Vertex **全球端点**官方公告与 Claude Code 对 Vertex 的使用指南。
+* “设置热加载与 hooks 快照”注意事项（issue 记录）。
+* npm 版本时间线（验证是否落后）。
+
+---
+
+## 3 个超吸睛标题（含多语 &amp; slug）
+
+1. **中文**：Claude Code 1.0.9x 实战升级：`/doctor` 体检权限、记忆直编、Vertex 全局端点全到位
+   **English**: Claude Code 1.0.9x Upgrades: Permission Doctor, Direct Memory Editing, Vertex Global Endpoints
+   **繁體**：Claude Code 1.0.9x 實戰升級：權限體檢、記憶直改、Vertex 全球端點
+   **日本語**：Claude Code 1.0.9x 実戦アップデート：権限ドクター・メモリ直接編集・Vertexグローバル
+   **Français**：Mises à jour 1.0.9x : Docteur des permissions, mémoire éditable, points de terminaison globaux
+   **Español**: Novedades 1.0.9x: Doctor de permisos, edición de memoria, endpoints globales
+   **Português**: Novidades 1.0.9x: Doutor de permissões, edição de memória, endpoints globais
+   **slug**：`claude-code-109x-permission-doctor-memory-vertex`
+
+2. **中文**：这几处小改动，让 Claude Code 更像“团队工程助理”
+   **English**: Small Tweaks, Big Flow: Turning Claude Code into a Team Dev Assistant
+   **繁體**：幾個小改動，讓 Claude Code 更像「團隊工程助理」
+   **日本語**：小さな改良で大きく変わる。Claude Code が“チーム助手”に
+   **Français**：Petites retouches, grand flux — Claude Code devient un assistant d’équipe
+   **Español**: Pequeños cambios, gran flujo: Claude Code como asistente de equipo
+   **Português**: Pequenos ajustes, grande fluxo: Claude Code como assistente da equipe
+   **slug**：`claude-code-team-assistant-boost`
+
+3. **中文**：权限不玄学、记忆可直改：1.0.9x 最实用上手指南
+   **English**: No More Guessing: Practical Guide to 1.0.9x
+   **繁體**：不再猜拳：1.0.9x 最實用上手指南
+   **日本語**：もう迷わない：1.0.9x 実用ガイド
+   **Français**：Fini le tâtonnement : guide pratique 1.0.9x
+   **Español**: Se acabó adivinar: guía práctica 1.0.9x
+   **Português**: Chega de adivinhação: guia prático 1.0.9x
+   **slug**：`claude-code-109x-practical-guide`
+
+---
+
+## 配图生成（插画风，2:1，**英文元素、不含中文**）
+
+**封面图 Prompt**
+
+“A developer in a terminal-driven workspace orchestrates AI agents like tools on a conveyor belt; floating panels show ‘/doctor’, ‘/memory’, ‘Vertex global endpoint’, and a TODO list. Clean pastel illustration, wide 2:1, minimal text, soft shadows.”
+
+**关键章节配图 Prompt（任选其一或多张）**
+
+1. **权限体检**：
+
+“A friendly robot doctor checks a checklist labeled ‘permissions’ with green checks and yellow tips, next to a JSON card. 2:1 illustration, pastel, minimal.”
+
+2. **记忆直编**：
+
+“Layered notebooks labeled ‘CLAUDE.md’ with small tabs ‘@architecture’, ‘@git’, ‘@runbook’, opened in a code editor window. 2:1 illustration.”
+
+3. **Vertex 全局端点**：
+
+“A world map with a single glowing ‘global endpoint’ node auto-routing to multiple regions. 2:1 illustration.”
+
+4. **待办清单**：
+
+“A sleek terminal window with a visible ‘/todos’ panel and checkboxes. 2:1 illustration.”
+
+---
+
+## 朋友圈/评论区 3 条热评（拿去即用）
+
+1. “`/doctor` 真的是救命，权限不再玄学！配合 `/todos`，Claude 终于像个靠谱实习生了 😂”
+2. “把团队规范丢进 `CLAUDE.md`，再 `/memory` 一键直编，协作一下就顺了～”
+3. “Vertex 全局端点 + 代理白名单，深夜发版再也不怕‘抽风’了，稳！”
+
+---
+
+需要我把文章扩写成**企业落地手册**（含权限规则模板、记忆文件骨架、Vertex/代理环境变量示例）吗？我可以直接给你**仓库可用的样板**。
+
+[1]: https://docs.anthropic.com/en/release-notes/claude-code?utm_source=chatgpt.com &quot;Claude Code - Release Notes&quot;
+[2]: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/locations?utm_source=chatgpt.com &quot;Deployments and endpoints | Generative AI on Vertex AI&quot;
+[3]: https://www.claudelog.com/claude-code-changelog/?utm_source=chatgpt.com &quot;Claude Code Changelog&quot;
+[4]: https://cloud.google.com/blog/products/ai-machine-learning/global-endpoint-for-claude-models-generally-available-on-vertex-ai?utm_source=chatgpt.com &quot;Global endpoint for Claude models generally available on ...&quot;
+[5]: https://docs.anthropic.com/en/docs/claude-code/google-vertex-ai?utm_source=chatgpt.com &quot;Claude Code on Google Vertex AI&quot;
+[6]: https://docs.anthropic.com/en/docs/claude-code/memory?utm_source=chatgpt.com &quot;Manage Claude&apos;s memory&quot;
+[7]: https://docs.anthropic.com/en/docs/claude-code/sdk/sdk-typescript?utm_source=chatgpt.com &quot;TypeScript&quot;
+[8]: https://www.reddit.com/r/ClaudeAI/comments/1n1homk/claude_ai_no_longer_shows_the_todo_list/?utm_source=chatgpt.com &quot;Claude AI no longer shows the TODO list? : r/ClaudeAI&quot;
+[9]: https://github.com/anthropics/claude-code/issues/6520?utm_source=chatgpt.com &quot;Poor Change logs · Issue #6520 · anthropics/claude-code&quot;
+[10]: https://www.npmjs.com/package/%40anthropic-ai/claude-code?activeTab=versions&amp;utm_source=chatgpt.com &quot;@anthropic-ai/claude-code - npm&quot;
+[11]: https://docs.anthropic.com/en/docs/claude-code/security?utm_source=chatgpt.com &quot;Security&quot;
+[12]: https://github.com/anthropics/claude-code/issues/4570?utm_source=chatgpt.com &quot;Deny Rules Configuration Failure in Claude Code CLI #4570&quot;
+[13]: https://docs.anthropic.com/en/api/claude-on-vertex-ai?utm_source=chatgpt.com &quot;Vertex AI API&quot;
+[14]: https://docs.anthropic.com/en/docs/claude-code/corporate-proxy?utm_source=chatgpt.com &quot;Corporate proxy configuration&quot;
+[15]: https://docs.anthropic.com/en/release-notes/overview?utm_source=chatgpt.com &quot;Release Notes&quot; --&gt;</content:encoded><category>Claude Code</category></item><item><title>英伟达2026财年第一、第二季度财报综合分析报告：英伟达如何将H20“危机”变为战略“转机”</title><link>https://www.vibesparking.com/zh-cn/blog/finance/nvidia/2025-09-02-nvidia-fy26q2-earnings-analysis-blackwell-growth/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/finance/nvidia/2025-09-02-nvidia-fy26q2-earnings-analysis-blackwell-growth/</guid><pubDate>Tue, 02 Sep 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # 英伟达2026财年第一、第二季度财报综合分析报告 --&gt;
 &lt;div&gt;&lt;h2 id=&quot;一执行摘要在逆境中强劲反弹战略远见持续兑现&quot;&gt;一、执行摘要：在逆境中强劲反弹，战略远见持续兑现&lt;/h2&gt;&lt;a href=&quot;#一执行摘要在逆境中强劲反弹战略远见持续兑现&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “一、执行摘要：在逆境中强劲反弹，战略远见持续兑现”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
 &lt;p&gt;英伟达2026财年第一和第二季度的财报，共同描绘了一幅在复杂地缘政治环境中，企业如何通过核心技术优势和审慎财务管理，成功应对挑战并持续兑现长期战略的图景。第一季度财报侧重于因美国出口管制政策而导致的短期财务冲击，如H20芯片相关的巨额费用和预期的营收损失。然而，第二季度财报不仅在关键财务指标上超出市场预期，更以其强劲的表现，有力地印证了第一季度所阐述的战略方向与基本面韧性。&lt;/p&gt;
 &lt;p&gt;本报告的分析显示，表面上第二季度总营收增速有所放缓，但这并非需求疲软的信号，而是高基数效应的体现，且伴随着新一代Blackwell平台的强劲产能爬坡和需求爆发。更为重要的是，公司在第二季度成功地将H20芯片的影响从第一季度的财务“硬伤”转化为战略性应对与“去风险化”的积极范例。第二季度的业绩强力印证了公司核心增长引擎（Blackwell平台）的强劲需求、持续优化毛利率的能力，以及通过大规模资本回报计划所展现出的对未来现金流的高度信心。&lt;/p&gt;
@@ -3127,231 +3313,4 @@ PR 堆成山，代码审不过来；Issue 描述很清楚，但没人愿意先�
 
 1. **Claude Code 配额告急？** 我用一个小代理把 Copilot 接上了，十分钟复活工作流，顺便做了限流+审单，稳。要不要试试？
 2. 今天学到的：**Plan B 也要可观测**。用量面板+速率限制=心里有数，不怕风控。
-3. 做开发像健身：**别硬撑，学会切换动作**。Copilot 当备用电源，Claude Code 不掉线。 --&gt;</content:encoded><category>Claude Code</category><category>GitHub Copilot</category></item><item><title>用 Spokenly + Claude Code，在 Mac 张口就来 Vibe Coding 编程开发</title><link>https://www.vibesparking.com/zh-cn/blog/ai/claude-code/2025-08-26-spokenly-claude-code-voice-vibe-coding-mac/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/claude-code/2025-08-26-spokenly-claude-code-voice-vibe-coding-mac/</guid><pubDate>Tue, 26 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # 用 Spokenly + Claude Code，在 Mac 张口就来 Vibe Coding 编程开发 --&gt;
-&lt;blockquote&gt;
-&lt;p&gt;你说、它写、立刻跑。手离键盘，代码照样飞。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;div&gt;&lt;h2 id=&quot;引言&quot;&gt;引言&lt;/h2&gt;&lt;a href=&quot;#引言&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “引言”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;这两个月我彻底被 &lt;strong&gt;Vibe Coding&lt;/strong&gt; 上了瘾。
-装上 &lt;strong&gt;Spokenly&lt;/strong&gt; 做语音输入，再配上 &lt;strong&gt;Claude Code&lt;/strong&gt; 当终端里的“能干小助手”。
-一口气开三扇窗：&lt;strong&gt;规划&lt;/strong&gt;、&lt;strong&gt;写码&lt;/strong&gt;、&lt;strong&gt;审查&lt;/strong&gt;。
-我去倒杯茶，回来就只剩“验收”和“续命”。
-睡前丢个大任务，第二天像“无良老板”查工单，一天的节奏就稳了。&lt;/p&gt;
-&lt;p&gt;这篇就把 &lt;strong&gt;macOS 上如何用 Spokenly 语音驱动 Claude Code&lt;/strong&gt; 的完整打法讲透，装完即用，今晚就开干。&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;tldr&quot;&gt;TL;DR&lt;/h2&gt;&lt;a href=&quot;#tldr&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “TL;DR”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Spokenly&lt;/strong&gt;：一键热键，任何输入框即刻听写；支持本地 &lt;strong&gt;Whisper&lt;/strong&gt; 模型，&lt;strong&gt;离线可用&lt;/strong&gt;，也可自带云厂商 API Key；有 &lt;strong&gt;Agent Mode&lt;/strong&gt;（语音控 Mac）。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Claude Code&lt;/strong&gt;：终端里的智能结对编程，&lt;code dir=&quot;auto&quot;&gt;npm i -g @anthropic-ai/claude-code&lt;/code&gt; 后，直接 &lt;code dir=&quot;auto&quot;&gt;claude&lt;/code&gt; 开整；支持 &lt;strong&gt;/model /config /ide /compact&lt;/strong&gt; 等 Slash 命令，与 VSCode/JetBrains IDE 深度集成。&lt;/li&gt;
-&lt;li&gt;语音交互小技巧：Option+Enter 或 &lt;code dir=&quot;auto&quot;&gt;/terminal-setup&lt;/code&gt; 解决多行输入；Esc Esc 回改上一条；三窗口分工跑通“计划-执行-审核”。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;一工具清单与安装&quot;&gt;一、工具清单与安装&lt;/h2&gt;&lt;a href=&quot;#一工具清单与安装&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “一、工具清单与安装”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;1）Spokenly（语音 → 文本）&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;官网：&lt;a href=&quot;https://spokenly.app/&quot;&gt;https://spokenly.app/&lt;/a&gt; 支持 &lt;strong&gt;本地 Apple Speech Recognition&lt;/strong&gt;、** Whisper**、100+ 语言、&lt;strong&gt;Local-only 隐私模式&lt;/strong&gt;、&lt;strong&gt;Agent Mode&lt;/strong&gt;、历史检索；Mac+iPhone。&lt;/li&gt;
-&lt;li&gt;App Store：&lt;strong&gt;免费&lt;/strong&gt;下载，Pro 订阅可用云模型；近期版本支持 &lt;strong&gt;Soniox&lt;/strong&gt;、&lt;strong&gt;Parakeet v3&lt;/strong&gt;、历史重转写等。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;2）Claude Code（终端智能体）&lt;/strong&gt;&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# Node.js 18+&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;npm&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;i&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;-g&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;@anthropic-ai/claude-code&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;cd&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;your-project&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;claude&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;p&gt;30 秒起步；支持 MCP、执行命令、编辑文件、创建提交，还能接 IDE。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;3）IDE（可选，但强烈建议）&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;VS Code/Cursor/Windsurf：在集成终端 &lt;code dir=&quot;auto&quot;&gt;claude&lt;/code&gt; 会 &lt;strong&gt;自动安装扩展&lt;/strong&gt;。&lt;/li&gt;
-&lt;li&gt;JetBrains 家族：装插件后重启；外部终端可用 &lt;strong&gt;/ide&lt;/strong&gt; 连接到 IDE。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;备选：&lt;strong&gt;苹果原生听写&lt;/strong&gt; 也能用，但功能与私密性不及 Spokenly（尤其在多语言与离线 Whisper）。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;二5-分钟搞定语音驱动&quot;&gt;二、5 分钟搞定语音驱动&lt;/h2&gt;&lt;a href=&quot;#二5-分钟搞定语音驱动&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “二、5 分钟搞定语音驱动”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;Step 1：配置 Spokenly&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;安装后首启，授予麦克风权限。&lt;/li&gt;
-&lt;li&gt;在偏好设置里设一个 &lt;strong&gt;全局 Push-to-Talk 热键&lt;/strong&gt;（如 &lt;code dir=&quot;auto&quot;&gt;Right Command&lt;/code&gt;）。&lt;/li&gt;
-&lt;li&gt;选择 &lt;strong&gt;Local-only&lt;/strong&gt;，调用 Apple Speech Recognition 模型，&lt;strong&gt;离线更私&lt;/strong&gt;。&lt;/li&gt;
-&lt;li&gt;打开 &lt;strong&gt;Auto language&lt;/strong&gt;，中英混说不卡壳。&lt;/li&gt;
-&lt;li&gt;模式选“在光标处输入”（它会“像你在打字”一样把文本塞进终端或编辑器）。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Step 2：启动 Claude Code&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;在你的项目目录里执行 &lt;code dir=&quot;auto&quot;&gt;claude&lt;/code&gt;。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;需要多行粘贴或口述长需求？&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;直接 &lt;strong&gt;Option+Enter&lt;/strong&gt; 多行；或执行 &lt;code dir=&quot;auto&quot;&gt;/terminal-setup&lt;/code&gt; 为 &lt;strong&gt;Shift+Enter&lt;/strong&gt; 绑定换行。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;跑在 IDE 里？外部终端可先开 &lt;code dir=&quot;auto&quot;&gt;claude&lt;/code&gt;，再 &lt;code dir=&quot;auto&quot;&gt;/ide&lt;/code&gt; 连接到 VSCode/JetBrains，启用 &lt;strong&gt;选区上下文&lt;/strong&gt;、&lt;strong&gt;IDE Diff&lt;/strong&gt; 等能力。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Step 3：语音开喷&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;聚焦到 Claude 终端输入框 → &lt;strong&gt;按住热键说&lt;/strong&gt; → 松开即发送。&lt;/li&gt;
-&lt;li&gt;需要改前一句？&lt;strong&gt;Esc Esc&lt;/strong&gt; 回到上一条编辑。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;三三窗口vibe-coding流计划执行审核&quot;&gt;三、三窗口「Vibe Coding」流：计划｜执行｜审核&lt;/h2&gt;&lt;a href=&quot;#三三窗口vibe-coding流计划执行审核&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “三、三窗口「Vibe Coding」流：计划｜执行｜审核”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;窗口 A：Architect（规划）&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;口述：“帮我在 Next.js 项目&lt;strong&gt;新增 OAuth 登录&lt;/strong&gt;，&lt;strong&gt;先出任务清单和文件改动列表&lt;/strong&gt;，每步 20 行内。”&lt;/li&gt;
-&lt;li&gt;命令：&lt;code dir=&quot;auto&quot;&gt;/model&lt;/code&gt; 选合适模型；&lt;code dir=&quot;auto&quot;&gt;/compact&lt;/code&gt; 压缩上下文，保持专注。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;窗口 B：Builder（实现）&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;口述：“根据 A 的清单，&lt;strong&gt;写代码并自测&lt;/strong&gt;，遇到报错&lt;strong&gt;自动修&lt;/strong&gt;，必要时&lt;strong&gt;跑脚本&lt;/strong&gt;。”&lt;/li&gt;
-&lt;li&gt;用 &lt;strong&gt;Option+Enter&lt;/strong&gt; 说出多段代码块结构：“第一段是 API 路由，第二段是 UI 组件……”。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;窗口 C：Reviewer（审查）&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;命令：&lt;code dir=&quot;auto&quot;&gt;/review&lt;/code&gt;、&lt;code dir=&quot;auto&quot;&gt;/cost&lt;/code&gt; 看 token/成本，必要时 &lt;code dir=&quot;auto&quot;&gt;/config&lt;/code&gt; 限制工具与变更范围。&lt;/li&gt;
-&lt;li&gt;IDE 模式下，Diff 直接在编辑器里看，手感接近本地结对。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;小诀窍：不同任务用不同项目目录启动 &lt;code dir=&quot;auto&quot;&gt;claude&lt;/code&gt;，每个会话的历史 &lt;strong&gt;按目录隔离&lt;/strong&gt;，切换更干净。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;四睡前通宵大活的口述模板&quot;&gt;四、睡前“通宵大活”的口述模板&lt;/h2&gt;&lt;a href=&quot;#四睡前通宵大活的口述模板&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “四、睡前“通宵大活”的口述模板”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;把大活拆成 4 段说清楚，Claude Code 才不走偏：&lt;/p&gt;
-&lt;p&gt;1）&lt;strong&gt;Goal&lt;/strong&gt;：一句话目标 + 成功标准
-2）&lt;strong&gt;Scope&lt;/strong&gt;：改哪些目录，不动哪些（白名单/黑名单）
-3）&lt;strong&gt;Checks&lt;/strong&gt;：自测脚本、lint、单测、E2E
-4）&lt;strong&gt;Deliverables&lt;/strong&gt;：PR 摘要、Diff、变更日志&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;例：
-“今晚把 &lt;strong&gt;结算模块&lt;/strong&gt; 从 REST 迁到 &lt;strong&gt;tRPC&lt;/strong&gt;。只改 &lt;strong&gt;/server/&lt;/strong&gt; 和 &lt;strong&gt;/app/billing/&lt;/strong&gt;。跑 &lt;code dir=&quot;auto&quot;&gt;pnpm test&lt;/code&gt;、&lt;code dir=&quot;auto&quot;&gt;pnpm lint&lt;/code&gt; 全绿。输出迁移步骤与风险点，最后给我一份 &lt;strong&gt;回滚指南&lt;/strong&gt;。”&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;五口述更顺的-7-个技巧&quot;&gt;五、口述更顺的 7 个技巧&lt;/h2&gt;&lt;a href=&quot;#五口述更顺的-7-个技巧&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “五、口述更顺的 7 个技巧”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;说出结构&lt;/strong&gt;： “标题：… 新段落。列表：一、二、三。” Claude 更会写文档。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;说出约束&lt;/strong&gt;： “最多改三处，每处不超 30 行。” 防止“大刀阔斧”。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;说出边界&lt;/strong&gt;： “仅允许 Bash：&lt;code dir=&quot;auto&quot;&gt;pnpm*&lt;/code&gt;、&lt;code dir=&quot;auto&quot;&gt;git*&lt;/code&gt;。”（配合 &lt;code dir=&quot;auto&quot;&gt;/config&lt;/code&gt; 限工具）&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;说出检查&lt;/strong&gt;： “改完跑 &lt;code dir=&quot;auto&quot;&gt;npm run test&lt;/code&gt;，失败就回滚。”&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;中英混说&lt;/strong&gt;： 模块名/方法名用英文更准；Spokenly 自动识别语言。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;多行输入&lt;/strong&gt;： Option+Enter 或 &lt;code dir=&quot;auto&quot;&gt;/terminal-setup&lt;/code&gt;。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;编辑上一条&lt;/strong&gt;： Esc Esc 回改再发。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;六隐私与成本&quot;&gt;六、隐私与成本&lt;/h2&gt;&lt;a href=&quot;#六隐私与成本&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “六、隐私与成本”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;本地优先&lt;/strong&gt;：Spokenly 的 &lt;strong&gt;Local-only&lt;/strong&gt; 让音频不出机，离线 Whisper 走起。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;自带 Key&lt;/strong&gt;：需要云转写可接 OpenAI/Deepgram/Groq 等，&lt;strong&gt;自己控成本&lt;/strong&gt;；也可订 Pro 省配置。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Claude 侧成本&lt;/strong&gt;：&lt;code dir=&quot;auto&quot;&gt;/cost&lt;/code&gt; 看用量，控制模型与思考深度（配合 &lt;code dir=&quot;auto&quot;&gt;/model&lt;/code&gt;）。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;七常见坑位--解决&quot;&gt;七、常见坑位 &amp;#x26; 解决&lt;/h2&gt;&lt;a href=&quot;#七常见坑位--解决&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “七、常见坑位 &amp;#x26; 解决”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;终端回车换行乱&lt;/strong&gt; → 用 &lt;strong&gt;Option+Enter&lt;/strong&gt; 或 &lt;code dir=&quot;auto&quot;&gt;/terminal-setup&lt;/code&gt; 绑定 &lt;strong&gt;Shift+Enter&lt;/strong&gt;。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;IDE 扩展没装上&lt;/strong&gt; → 确保在 IDE 的集成终端里跑 &lt;code dir=&quot;auto&quot;&gt;claude&lt;/code&gt;；JetBrains 需重启；外部终端用 &lt;code dir=&quot;auto&quot;&gt;/ide&lt;/code&gt; 连接。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;语音没输入到终端&lt;/strong&gt; → 检查焦点在 Claude 输入框；Spokenly 热键冲突改一下。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;原生听写也想用&lt;/strong&gt; → 系统设置 → 键盘 → 打开听写、设快捷键“双击 Control”。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;口述示例清单可直接读&quot;&gt;口述示例清单（可直接读）&lt;/h2&gt;&lt;a href=&quot;#口述示例清单可直接读&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “口述示例清单（可直接读）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;“在 &lt;strong&gt;/api/orders&lt;/strong&gt; 加一个导出 CSV 的端点。&lt;strong&gt;先给计划&lt;/strong&gt;，&lt;strong&gt;再写代码&lt;/strong&gt;，&lt;strong&gt;最后跑测试&lt;/strong&gt;，全程一步步展示。”&lt;/li&gt;
-&lt;li&gt;“把 &lt;strong&gt;支付页面&lt;/strong&gt; 的状态管理从 &lt;strong&gt;Redux&lt;/strong&gt; 换到 &lt;strong&gt;Zustand&lt;/strong&gt;，&lt;strong&gt;只改现有逻辑，不推翻 UI&lt;/strong&gt;，&lt;strong&gt;风险点列 3 条&lt;/strong&gt;。”&lt;/li&gt;
-&lt;li&gt;“阅读 &lt;strong&gt;/server/report/&lt;/strong&gt; 下的 6 个模块，&lt;strong&gt;生成依赖关系图&lt;/strong&gt;，并 &lt;strong&gt;输出可视化脚本&lt;/strong&gt;（d2 或 mermaid 二选一）。”&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;结语&quot;&gt;结语&lt;/h2&gt;&lt;a href=&quot;#结语&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “结语”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;语音驱动 Claude Code，不是“更花哨”，而是 &lt;strong&gt;更快进入「说清楚 → 出结果」&lt;/strong&gt; 的状态。
-当你把需求口述得越清，Claude 的执行越稳，&lt;strong&gt;Vibe&lt;/strong&gt; 就越顺。
-今晚就试试“三窗口法”，把睡前那一单交给它吧。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;你觉得这种工作流最省时间的点在哪？评论区聊聊。&lt;/strong&gt;&lt;/p&gt;&lt;!-- 
----
-
-# 配图建议（插画风，2:1，无中文）
-
-**封面图 Prompt**
-
-&gt; *An illustration of a developer on a Mac sending voice waves into three terminal windows labeled Plan / Build / Review, with code snippets flowing like a conveyor belt; minimalist, pastel palette, clean lines, 2:1.*
-
-**关键章节配图 1（三窗口）**
-
-&gt; *Three floating macOS terminal windows arranged left-to-right: Architect, Builder, Reviewer; arrows indicate flow; subtle voice-wave motif entering from the left; 2:1.*
-
-**关键章节配图 2（语音到代码）**
-
-&gt; *Microphone icon morphing into code blocks entering a terminal; background shows Whisper chip icon for on-device privacy; 2:1.*
-
-**关键章节配图 3（IDE 集成）**
-
-&gt; *VS Code window with integrated terminal running &quot;claude&quot;, side-by-side diff viewer; gentle UI abstraction, no logos; 2:1.*
-
----
-
-## 参考与延伸
-
-* **Spokenly 官网与特性**（本地 Whisper、Agent Mode、Local-only 等）。
-* **App Store 信息与更新日志**（2.13.0、Soniox/Parakeet v3、订阅）。
-* **Claude Code 快速开始**（安装、在终端使用、MCP 能力）。
-* **Slash 命令**（/model /config /compact /ide /review /cost …）。
-* **交互模式与快捷键**（Option+Enter、/terminal-setup、Esc Esc）。
-* **IDE 集成与 /ide 连接**（VSCode/JetBrains、Diff 查看、选区上下文）。
-* **苹果原生听写开启方法**（备选）。
-
----
-
-## 3 个爆款标题（多语言 &amp; slug）
-
-1. **用 Spokenly 语音 + Claude Code，Mac 上开挂式 Vibe Coding 实战**
-
-   * EN: *Voice-Driven Vibe Coding on Mac with Spokenly + Claude Code*
-   * 繁體: *用 Spokenly 語音 + Claude Code，在 Mac 上開掛式 Vibe Coding 實戰*
-   * 日本語: *Spokenly × Claude Codeで実現するMac音声Vibeコーディング*
-   * Français : *Vibe Coding sur Mac avec Spokenly + Claude Code, piloté par la voix*
-   * Español: *Vibe Coding en Mac con Spokenly + Claude Code por voz*
-   * Português: *Vibe Coding no Mac com Spokenly + Claude Code por voz*
-   * **slug**: `spokenly-claude-code-voice-vibe-coding-mac`
-
-2. **我如何用语音驱动 Claude Code：三窗口冲刺一晚一大活**
-
-   * EN: *How I Drive Claude Code by Voice: The Three-Window Night Sprint*
-   * 繁體: *我如何用語音驅動 Claude Code：三視窗一晚搞定大活*
-   * JP: *声で動かすClaude Code：三つのウィンドウで夜通しスプリント*
-   * FR: *Commander Claude Code à la voix : le sprint nocturne en 3 fenêtres*
-   * ES: *Controlando Claude Code por voz: sprint nocturno con 3 ventanas*
-   * PT: *Controlando o Claude Code por voz: sprint noturno com 3 janelas*
-   * **slug**: `voice-driving-claude-code-three-window-sprint`
-
-3. **手离键盘，代码照样飞：Spokenly × Claude Code 全流程攻略**
-
-   * EN: *Hands Off, Code Flies: Spokenly × Claude Code End-to-End Playbook*
-   * 繁體: *手離鍵盤，程式一樣飛：Spokenly × Claude Code 全流程攻略*
-   * JP: *キーボードに触れずコードが走る：Spokenly × Claude Code完全攻略*
-   * FR: *Sans clavier, ça code : guide complet Spokenly × Claude Code*
-   * ES: *Sin teclado y con código: guía total de Spokenly × Claude Code*
-   * PT: *Sem teclado e com código: guia total de Spokenly × Claude Code*
-   * **slug**: `hands-off-coding-spokenly-claude-code-guide`
-
----
-
-## 朋友圈 / 评论区文案（3 选 1）
-
-1. “语音一喷，Claude 开工。我喝口茶回来就验收，爽到不行。Spokenly + Claude Code，真的把夜间加班变白天通勤。”
-2. “三窗口 Vibe Coding：A 规划、B 写码、C 审查。睡前丢大活，早上像老板一样只看结果。”
-3. “想偷懒？先把需求说清楚。Spokenly 把你‘念叨’秒变任务清单，Claude Code 就负责把结果交上来。”
-
----
-
-要不要我把这篇改成你的 **固定 SOP 清单**（附命令和口述模板卡片版）？或者继续 **扩写成 10 个常见场景的语音 Prompt 包**？
-
-[1]: https://spokenly.app/ &quot;Spokenly – Whisper-Powered Mac Dictation App | Best Voice to Text for macOS&quot;
-[2]: https://docs.anthropic.com/en/docs/claude-code/overview &quot;Claude Code overview - Anthropic&quot;
-[3]: https://docs.anthropic.com/en/docs/claude-code/interactive-mode &quot;Interactive mode - Anthropic&quot;
-[4]: https://apps.apple.com/us/app/spokenly-voice-to-text-ai/id6740315592 &quot;
-      ‎Spokenly: Voice to Text AI on the App Store
-    &quot;
-[5]: https://docs.anthropic.com/en/docs/claude-code/ide-integrations &quot;Add Claude Code to your IDE - Anthropic&quot;
-[6]: https://support.apple.com/guide/mac-help/use-dictation-mh40584/mac?utm_source=chatgpt.com &quot;Dictate messages and documents on Mac&quot;
-[7]: https://docs.anthropic.com/en/docs/claude-code/slash-commands &quot;Slash commands - Anthropic&quot; --&gt;</content:encoded><category>Spokenly</category><category>Claude Code</category><category>Cursor</category><category>VS Code</category></item></channel></rss>
+3. 做开发像健身：**别硬撑，学会切换动作**。Copilot 当备用电源，Claude Code 不掉线。 --&gt;</content:encoded><category>Claude Code</category><category>GitHub Copilot</category></item></channel></rss>
