@@ -80,7 +80,138 @@ Confirm exact endpoints and regional model support with the official documentati
 &lt;div&gt;&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;&lt;a href=&quot;#conclusion&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Conclusion”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
 &lt;p&gt;This 1.0.9x batch isn’t flashy, but &lt;strong&gt;each change boosts real‑world delivery&lt;/strong&gt;: steadier permissions, easier memory management, better network availability, smoother settings, and a handy task list.&lt;/p&gt;
 &lt;p&gt;If you’re rolling out “agent‑style development” to a team, &lt;strong&gt;prioritize hardening permissions and memory structure&lt;/strong&gt; first—the payoff is immediate.&lt;/p&gt;
-&lt;p&gt;Which update helps you the most? Share your practice in the comments.&lt;/p&gt;</content:encoded><category>Claude Code</category></item><item><title>NVIDIA FY26 Q1–Q2 Earnings Synthesis: How NVIDIA Turned the H20 ‘Crisis’ into a Strategic ‘Pivot’</title><link>https://www.vibesparking.com/en/blog/finance/nvidia/2025-09-02-nvidia-fy26q2-earnings-analysis-blackwell-growth/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/finance/nvidia/2025-09-02-nvidia-fy26q2-earnings-analysis-blackwell-growth/</guid><pubDate>Tue, 02 Sep 2025 00:00:00 GMT</pubDate><content:encoded>&lt;div&gt;&lt;h1 id=&quot;nvidia-fy26-q1q2-earnings-synthesis&quot;&gt;NVIDIA FY26 Q1–Q2 Earnings Synthesis&lt;/h1&gt;&lt;a href=&quot;#nvidia-fy26-q1q2-earnings-synthesis&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “NVIDIA FY26 Q1–Q2 Earnings Synthesis”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Which update helps you the most? Share your practice in the comments.&lt;/p&gt;</content:encoded><category>Claude Code</category></item><item><title>Claude Code Best Practices: The Prototyping Method</title><link>https://www.vibesparking.com/en/blog/ai/workflow/2025-09-02-claude-code-prototype-then-engineer/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/workflow/2025-09-02-claude-code-prototype-then-engineer/</guid><pubDate>Tue, 02 Sep 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # Claude Code Best Practices: The Prototyping Method --&gt;
+&lt;blockquote&gt;
+&lt;p&gt;First, use Claude Code to quickly “get a prototype working” to refine the requirements; then, return to engineering design and implementation to ensure quality and stability. Efficiency and quality, we want both.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;&lt;a href=&quot;#introduction&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Introduction”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;The hardest part of product development isn’t writing code.
+&lt;strong&gt;It’s clearly defining “what needs to be built.”&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;That’s why I recommend this two-stage approach:
+&lt;strong&gt;Build a prototype in the first version, and handle the engineering seriously in the second.&lt;/strong&gt;
+Claude Code is well-suited for this strategy: it works alongside you in the terminal, handling the grunt work first, allowing you to refine it later.&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;the-2-stages-of-the-prototyping-method&quot;&gt;The 2 Stages of the Prototyping Method&lt;/h2&gt;&lt;a href=&quot;#the-2-stages-of-the-prototyping-method&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “The 2 Stages of the Prototyping Method”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3 id=&quot;stage-1-prototype-only-aim-for-it-works&quot;&gt;Stage 1: Prototype Only, Aim for “It Works”&lt;/h3&gt;&lt;a href=&quot;#stage-1-prototype-only-aim-for-it-works&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Stage 1: Prototype Only, Aim for “It Works””&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Goal:&lt;/strong&gt; &lt;strong&gt;Get the feature running&lt;/strong&gt; to make the requirements tangible.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Ignore:&lt;/strong&gt; Design, performance, security, code quality.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Method:&lt;/strong&gt; Use &lt;strong&gt;throwaway code&lt;/strong&gt;, letting the AI take the lead to quickly explore feasible paths (similar to “Spike/Throwaway Prototyping”).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Why this approach?
+Because many ambiguities &lt;strong&gt;are only exposed when the code is running&lt;/strong&gt;. Screenshots, GIFs, and clickable prototypes are far more useful than a ten-page requirements document.&lt;/p&gt;
+&lt;p&gt;Claude Code’s advantages in this stage:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Directly &lt;strong&gt;read, modify, and run code&lt;/strong&gt; within your local project—conversation becomes action.&lt;/li&gt;
+&lt;li&gt;Frequent actions can be turned into &lt;strong&gt;Slash Commands&lt;/strong&gt; for one-click reuse, like “start backend + mock data + run locally.”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;A word of caution:&lt;/strong&gt; If you’re using a personal subscription, Anthropic recently introduced an &lt;strong&gt;opt-in mechanism for data training&lt;/strong&gt; that includes Claude Code sessions. &lt;strong&gt;Check your privacy settings&lt;/strong&gt; before prototyping company projects.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h3 id=&quot;stage-2-redesign-and-engineer-seriously&quot;&gt;Stage 2: Redesign and Engineer Seriously&lt;/h3&gt;&lt;a href=&quot;#stage-2-redesign-and-engineer-seriously&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Stage 2: Redesign and Engineer Seriously”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Trigger:&lt;/strong&gt; &lt;strong&gt;Requirements are mostly finalized&lt;/strong&gt;, and the scope is stable.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Deliverables:&lt;/strong&gt; &lt;strong&gt;Database schema, API contracts, state management, module boundaries, testing strategy&lt;/strong&gt;, etc.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Pace:&lt;/strong&gt; &lt;strong&gt;Human-led, AI-assisted&lt;/strong&gt;. You set the design anchors, and the AI builds according to the plan.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;How to use Claude Code in this stage:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Let it &lt;strong&gt;scaffold&lt;/strong&gt; the project, add boilerplate, and write tests based on your design.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;@claude in PRs/Issues&lt;/strong&gt; to automatically create PRs and fix minor issues (via GitHub Actions integration).&lt;/li&gt;
+&lt;li&gt;Write engineering conventions into a &lt;strong&gt;CLAUDE.md file or Slash Commands&lt;/strong&gt; to ensure the AI follows project rules.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Security/Non-Functional Advice:&lt;/strong&gt; Treat &lt;strong&gt;security, performance, and maintainability&lt;/strong&gt; as “Technical Enablers” and progressively incorporate them into your Definition of Done (DoD) during the second stage. Conduct &lt;strong&gt;Spikes&lt;/strong&gt; for validation when necessary.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;when-can-you-skip-the-prototype&quot;&gt;When Can You Skip the Prototype?&lt;/h2&gt;&lt;a href=&quot;#when-can-you-skip-the-prototype&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “When Can You Skip the Prototype?”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;The requirements have already been validated (e.g., redoing an old feature, a clear competitor to model after).&lt;/li&gt;
+&lt;li&gt;The primary risk is in the &lt;strong&gt;engineering implementation&lt;/strong&gt;, not the &lt;strong&gt;product definition&lt;/strong&gt;.
+In this case, you can proceed directly to &lt;strong&gt;Stage 2: Design and Implementation&lt;/strong&gt;, with Claude Code acting as a &lt;strong&gt;scaffolding and execution&lt;/strong&gt; tool.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;field-guide-my-recommended-uses-in-daily-development&quot;&gt;Field Guide: My Recommended Uses in Daily Development&lt;/h2&gt;&lt;a href=&quot;#field-guide-my-recommended-uses-in-daily-development&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Field Guide: My Recommended Uses in Daily Development”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Here are practical checklists for &lt;strong&gt;prototyping to engineering&lt;/strong&gt; across four common scenarios.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div&gt;&lt;h3 id=&quot;example-a-growth-experiment-landing-page-nextjs&quot;&gt;Example A: Growth Experiment Landing Page (Next.js)&lt;/h3&gt;&lt;a href=&quot;#example-a-growth-experiment-landing-page-nextjs&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Example A: Growth Experiment Landing Page (Next.js)”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Prototype Version (Half a day)&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Have Claude Code generate a minimal page, tracking events, and a form that submits to &lt;code dir=&quot;auto&quot;&gt;/api/echo&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Get it running with mock data and simple A/B test parameters.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# Prototype: generate page + mock API + run dev server&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;claude&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;/proto nextjs landing with /api/echo and ab flags; run dev&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Engineered Version&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Design the &lt;strong&gt;routing and data models&lt;/strong&gt;, and agree on event names for tracking.&lt;/li&gt;
+&lt;li&gt;Generate &lt;strong&gt;OpenAPI&lt;/strong&gt; specs or protocol documents; write &lt;strong&gt;unit/contract tests&lt;/strong&gt;; integrate the &lt;strong&gt;Claude Code Action&lt;/strong&gt; in CI for automated checks and fixes.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h3 id=&quot;example-b-mini-program--ble-device-data-collection&quot;&gt;Example B: Mini-Program / BLE Device Data Collection&lt;/h3&gt;&lt;a href=&quot;#example-b-mini-program--ble-device-data-collection&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Example B: Mini-Program / BLE Device Data Collection”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Prototype Version&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Prioritize getting the &lt;strong&gt;scan → connect → read → local cache&lt;/strong&gt; flow working, ignoring exception handling.&lt;/li&gt;
+&lt;li&gt;Use Slash Commands to quickly reuse build and on-device debugging commands.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Engineered Version&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Define the &lt;strong&gt;state machine&lt;/strong&gt; (connected/disconnected/reconnecting/timeout).&lt;/li&gt;
+&lt;li&gt;Design the &lt;strong&gt;offline synchronization protocol&lt;/strong&gt; and &lt;strong&gt;replay strategy&lt;/strong&gt;; add &lt;strong&gt;boundary tests&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Create a &lt;strong&gt;/test-ble-reconnect&lt;/strong&gt; command for fault injection and recovery.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h3 id=&quot;example-c-internal-approval-system-railsreact&quot;&gt;Example C: Internal Approval System (Rails/React)&lt;/h3&gt;&lt;a href=&quot;#example-c-internal-approval-system-railsreact&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Example C: Internal Approval System (Rails/React)”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Prototype Version&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Focus only on the &lt;strong&gt;core workflow&lt;/strong&gt;: submit, route, approve/reject.&lt;/li&gt;
+&lt;li&gt;Use an in-memory store or SQLite; don’t implement permissions yet.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Engineered Version&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Design the &lt;strong&gt;RBAC&lt;/strong&gt; and &lt;strong&gt;audit log&lt;/strong&gt; table structures; write &lt;strong&gt;migration scripts&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Add &lt;strong&gt;rate limiting&lt;/strong&gt;, &lt;strong&gt;audit export&lt;/strong&gt;, and &lt;strong&gt;SLO reporting&lt;/strong&gt;; let Claude Code automatically fix minor issues and add tests in PRs.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h3 id=&quot;example-d-data-service-fastapi--duckdb&quot;&gt;Example D: Data Service (FastAPI + DuckDB)&lt;/h3&gt;&lt;a href=&quot;#example-d-data-service-fastapi--duckdb&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Example D: Data Service (FastAPI + DuckDB)”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Prototype Version&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Start with three read-only APIs for different scenarios, returning static or semi-dynamic data.&lt;/li&gt;
+&lt;li&gt;Ignore caching and permissions to get the frontend unblocked.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Engineered Version&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Define the &lt;strong&gt;pagination/sorting/filtering&lt;/strong&gt; protocol and &lt;strong&gt;error codes&lt;/strong&gt;; add &lt;strong&gt;authentication&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Add a &lt;strong&gt;caching layer&lt;/strong&gt; and &lt;strong&gt;rate limiting&lt;/strong&gt;; create a &lt;strong&gt;/bench-api&lt;/strong&gt; command to run load tests against a baseline.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;claude-codes-metronome&quot;&gt;Claude Code’s “Metronome”&lt;/h2&gt;&lt;a href=&quot;#claude-codes-metronome&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Claude Code’s “Metronome””&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Interactive terminal + command line&lt;/strong&gt; allows for high-frequency iteration by chatting and modifying files.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Slash Commands&lt;/strong&gt; solidify your “operational playbooks” for team sharing.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;GitHub Actions&lt;/strong&gt; bring @claude into PRs/Issues for automatic patching, PR generation, and enforcing project standards.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Together, these three features create a fast track from “idea → prototype → engineered product.”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;common-pitfalls-and-my-evasions&quot;&gt;Common Pitfalls and My Evasions&lt;/h2&gt;&lt;a href=&quot;#common-pitfalls-and-my-evasions&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Common Pitfalls and My Evasions”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Prototype drags on for too long:&lt;/strong&gt; If requirements aren’t settled in 1-2 weeks, break it down into smaller stories; conduct a &lt;strong&gt;Spike summary&lt;/strong&gt; if needed.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Prototype code accidentally shipped to production:&lt;/strong&gt; Use branch isolation, directory prefixes like &lt;code dir=&quot;auto&quot;&gt;/proto-*&lt;/code&gt;, and CI checks to block it.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Unbounded second stage:&lt;/strong&gt; Write an &lt;strong&gt;Engineering DoD&lt;/strong&gt; (including security and performance), list non-functional items as &lt;strong&gt;Technical Enablers&lt;/strong&gt;, and complete them sprint by sprint.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Privacy compliance:&lt;/strong&gt; Prioritize &lt;strong&gt;enterprise/API channels&lt;/strong&gt; for company projects; for personal subscriptions, always check &lt;strong&gt;data training opt-in settings&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;&lt;a href=&quot;#conclusion&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Conclusion”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Prototyping isn’t about being lazy; it’s about accelerating clarity.&lt;/strong&gt;
+&lt;strong&gt;Engineering isn’t about being slow; it’s about reducing long-term costs.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;With Claude Code, we can put these two activities in their proper place:
+&lt;strong&gt;AI leads the prototyping, humans lead the engineering.&lt;/strong&gt;
+Take that hesitant requirement you have right now, and &lt;strong&gt;just get it running&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;What do you think? Does your team get stuck more in the prototyping or engineering phase? Let’s discuss in the comments.&lt;/strong&gt;&lt;/p&gt;</content:encoded><category>Gemini</category><category>ChatGPT</category><category>Claude Code</category></item><item><title>NVIDIA FY26 Q1–Q2 Earnings Synthesis: How NVIDIA Turned the H20 ‘Crisis’ into a Strategic ‘Pivot’</title><link>https://www.vibesparking.com/en/blog/finance/nvidia/2025-09-02-nvidia-fy26q2-earnings-analysis-blackwell-growth/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/finance/nvidia/2025-09-02-nvidia-fy26q2-earnings-analysis-blackwell-growth/</guid><pubDate>Tue, 02 Sep 2025 00:00:00 GMT</pubDate><content:encoded>&lt;div&gt;&lt;h1 id=&quot;nvidia-fy26-q1q2-earnings-synthesis&quot;&gt;NVIDIA FY26 Q1–Q2 Earnings Synthesis&lt;/h1&gt;&lt;a href=&quot;#nvidia-fy26-q1q2-earnings-synthesis&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “NVIDIA FY26 Q1–Q2 Earnings Synthesis”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
 &lt;div&gt;&lt;h2 id=&quot;i-executive-summary-strong-rebound-in-adversity-strategy-continues-to-deliver&quot;&gt;I. Executive Summary: Strong Rebound in Adversity, Strategy Continues to Deliver&lt;/h2&gt;&lt;a href=&quot;#i-executive-summary-strong-rebound-in-adversity-strategy-continues-to-deliver&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “I. Executive Summary: Strong Rebound in Adversity, Strategy Continues to Deliver”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
 &lt;p&gt;NVIDIA’s FY26 Q1 and Q2 earnings together illustrate how, amid a complex geopolitical backdrop, a company can rely on core technological advantages and disciplined financial management to navigate shocks while continuing to deliver on long‑term strategy. Q1 centered on near‑term financial impact from U.S. export controls, including sizeable H20‑related charges and expected revenue shortfalls. Q2 not only exceeded expectations on key financial metrics but, through its strong results, provided compelling validation for the strategic direction and fundamental resilience articulated in Q1.&lt;/p&gt;
 &lt;p&gt;Our analysis finds that the apparent slowdown in Q2 total revenue growth is not a sign of weaker demand but a function of a high base, coinciding with a powerful ramp in the next‑gen Blackwell platform’s capacity and demand. More importantly, the company successfully transformed the H20 issue from Q1’s financial “wound” into a case study in strategic risk management and derisking in Q2. The quarter affirmed robust demand for the core growth engine (Blackwell), continued gross‑margin optimization, and management’s high confidence in future cash flows as evidenced by large‑scale capital returns.&lt;/p&gt;
@@ -2266,7 +2397,151 @@ If there’s no rule → go to layer 3.&lt;/p&gt;
 You can move risk evaluation, human approvals, and audit trails into a single MCP tool.
 Automation without recklessness: keep both efficiency and security strong.&lt;/p&gt;
 &lt;p&gt;Does this permission design satisfy your compliance needs?
-Tell us how you’d wire Slack/Teams/ticketing to “click-to-approve”.&lt;/p&gt;</content:encoded><category>Claude Code</category></item><item><title>Stop Arguing — Ship with Claude Code: Turn Newcomers and Engineers into One Team</title><link>https://www.vibesparking.com/en/blog/ai/management/2025-08-27-stop-arguing-ship-with-claude-code/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/management/2025-08-27-stop-arguing-ship-with-claude-code/</guid><pubDate>Wed, 27 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # 没必要争论 Claude Code：应该把团队的分歧变成协作 --&gt;
+Tell us how you’d wire Slack/Teams/ticketing to “click-to-approve”.&lt;/p&gt;</content:encoded><category>Claude Code</category></item><item><title>Who Should Use Claude Code? Perspectives by Role — Vibe Coding Experiences and Use‑Case Analysis</title><link>https://www.vibesparking.com/en/blog/ai/management/2025-08-27-claude-code-vibe-coding-users/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/management/2025-08-27-claude-code-vibe-coding-users/</guid><pubDate>Wed, 27 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # Claude Code 值得谁用？不同角色眼中的 Claude Code：Vibe Coding 体验与应用场景分析 --&gt;
+&lt;p&gt;In recent years, AI coding assistants have proliferated. Among them, Anthropic’s Claude Code (CC) has drawn attention by positioning itself as an “intelligent coding tool in your terminal.”&lt;/p&gt;
+&lt;p&gt;“Vibe Coding” refers to using these tools to rapidly turn ideas in your head into code — a fast‑iterating, intuition‑driven development flow.&lt;/p&gt;
+&lt;p&gt;This article distills feedback from different types of users, explains the reasons behind the patterns, and summarizes where Claude Code shines in Vibe Coding. We also compare CC to adjacent tools (Cursor, GitHub Copilot, OpenAI Codex CLI, Cursor CLI, Google Gemini CLI, etc.) to highlight strengths, weaknesses, and fit.&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;how-different-people-experience-claude-code&quot;&gt;How Different People Experience Claude Code&lt;/h2&gt;&lt;a href=&quot;#how-different-people-experience-claude-code&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “How Different People Experience Claude Code”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Users with different backgrounds report notably different experiences when using CC for Vibe Coding:&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;1-zerocode-beginners-a-steep-climb&quot;&gt;1) Zero‑code beginners: a steep climb&lt;/h3&gt;&lt;a href=&quot;#1-zerocode-beginners-a-steep-climb&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1) Zero‑code beginners: a steep climb”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;Claude Code isn’t a one‑click “build an app” magic wand. It expects clear natural‑language tasking so it can “plan, write code, and ensure it works.”&lt;/li&gt;
+&lt;li&gt;People with no coding literacy struggle to phrase effective instructions or judge correctness, so CC is “hard to drive.”&lt;/li&gt;
+&lt;li&gt;CC primarily runs in the terminal, assuming some dev environment and command‑line experience — a non‑trivial barrier for beginners.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;2-senior-architects-cautiously-skeptical&quot;&gt;2) Senior architects: cautiously skeptical&lt;/h3&gt;&lt;a href=&quot;#2-senior-architects-cautiously-skeptical&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2) Senior architects: cautiously skeptical”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;Many view CC’s value as “limited” — hand‑writing the code feels safer and more reliable.&lt;/li&gt;
+&lt;li&gt;CC can help “debug and fix issues,” scanning a codebase for bugs and proposing patches, but results still require human review.&lt;/li&gt;
+&lt;li&gt;The permissioned workflow asks for user approvals step by step (you can enable Yolo mode to auto‑approve), which can feel inefficient.&lt;/li&gt;
+&lt;li&gt;CC remains early and can be unstable.&lt;/li&gt;
+&lt;li&gt;Net: treat it as an assistant, not a crutch.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;3-technical-pms--founders--ceos-newfound-leverage&quot;&gt;3) Technical PMs / founders / CEOs: newfound leverage&lt;/h3&gt;&lt;a href=&quot;#3-technical-pms--founders--ceos-newfound-leverage&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3) Technical PMs / founders / CEOs: newfound leverage”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;PMs, founders, and CEOs call it “finally a way to quickly ship ideas stuck in my head.”&lt;/li&gt;
+&lt;li&gt;Many ideas you might hesitate to “ask the team to build” can be prototyped solo with CC, such as:
+&lt;ul&gt;
+&lt;li&gt;Personalized feed apps&lt;/li&gt;
+&lt;li&gt;Note‑taking utilities&lt;/li&gt;
+&lt;li&gt;Small Apple Watch data parsers&lt;/li&gt;
+&lt;li&gt;Personal sites&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;In enterprises, CTOs experiment with LLM add‑ons for legacy systems — smart support, recommendations, and more.&lt;/li&gt;
+&lt;li&gt;Intercom’s example: Claude Code “lets us build things we never had time for — from AI data‑labeling tools to an ROI calculator for sales.”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;using-claude-code-for-internal-system-integration&quot;&gt;Using Claude Code for Internal System Integration&lt;/h2&gt;&lt;a href=&quot;#using-claude-code-for-internal-system-integration&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Using Claude Code for Internal System Integration”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3 id=&quot;-rapidly-integrating-heterogeneous-systems&quot;&gt;⚡ Rapidly integrating heterogeneous systems&lt;/h3&gt;&lt;a href=&quot;#-rapidly-integrating-heterogeneous-systems&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “⚡ Rapidly integrating heterogeneous systems”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;CC excels at automating drudgery: fixing lint, resolving merge conflicts, drafting release notes.&lt;/li&gt;
+&lt;li&gt;It can quickly scaffold glue code across APIs, databases, and filesystems, enabling fast experiments.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;-injecting-llm-intelligence-into-legacy-systems&quot;&gt;🤖 Injecting LLM intelligence into legacy systems&lt;/h3&gt;&lt;a href=&quot;#-injecting-llm-intelligence-into-legacy-systems&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “🤖 Injecting LLM intelligence into legacy systems”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;CC can generate integration layers for LLM capabilities and wrap natural‑language skills into existing systems.&lt;/li&gt;
+&lt;li&gt;Examples: internal knowledge‑base chatbots; CRM smart‑recommendation modules.&lt;/li&gt;
+&lt;li&gt;CC can “stay aware of the whole project structure,” and via MCP pull data from Google Drive, Figma, Slack, etc.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;👉 Positioning: an accelerator, not a replacement. You still need monitoring, tests, and mature architectures.&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;adoption-challenges&quot;&gt;Adoption Challenges&lt;/h2&gt;&lt;a href=&quot;#adoption-challenges&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Adoption Challenges”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3 id=&quot;1-reliability&quot;&gt;1) Reliability&lt;/h3&gt;&lt;a href=&quot;#1-reliability&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1) Reliability”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;LLMs are probabilistic; outputs won’t be correct every time.&lt;/li&gt;
+&lt;li&gt;For tasks like global renaming, “let the IDE’s refactor tools do it” is often safer.&lt;/li&gt;
+&lt;li&gt;Community feedback: CC performs better on web/front‑end than on Swift/iOS.&lt;/li&gt;
+&lt;li&gt;Bottom line: great as an assistant; not a fully automated path to production‑grade software.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;2-cost&quot;&gt;2) Cost&lt;/h3&gt;&lt;a href=&quot;#2-cost&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2) Cost”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;Individual subscriptions are manageable; organization‑wide costs add up.&lt;/li&gt;
+&lt;li&gt;Reported averages: roughly ~$6 per person per day; with Sonnet 4, team costs can run $100–$200 per person per month.&lt;/li&gt;
+&lt;li&gt;Pricing: Pro ~ $17/month; Max up to $200/month.&lt;/li&gt;
+&lt;li&gt;Conclusion: fine for personal dev; building products/services purely via API usage can get expensive.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;where-claude-code-fits-for-vibe-coding&quot;&gt;Where Claude Code Fits for Vibe Coding&lt;/h2&gt;&lt;a href=&quot;#where-claude-code-fits-for-vibe-coding&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Where Claude Code Fits for Vibe Coding”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;Creative prototypes and personal projects: quickly assemble small apps, algorithm prototypes, or validation scripts.
+&lt;ul&gt;
+&lt;li&gt;Hundreds of lines of code in minutes.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Understanding and refactoring complex codebases: analyze logic, sketch architecture maps, propose global improvements.&lt;/li&gt;
+&lt;li&gt;Everyday acceleration and automation: generate tests/docs, fix formatting, go from issue to patch PR.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;👉 Best practice: Human + AI collaboration. Humans steer; AI accelerates.&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;comparisons-with-other-ai-coding-tools&quot;&gt;Comparisons with Other AI Coding Tools&lt;/h2&gt;&lt;a href=&quot;#comparisons-with-other-ai-coding-tools&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Comparisons with Other AI Coding Tools”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Tool&lt;/th&gt;&lt;th&gt;Traits&lt;/th&gt;&lt;th&gt;Best‑fit scenarios&lt;/th&gt;&lt;th&gt;Limits&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Claude Code&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Terminal agent; strong reasoning&lt;/td&gt;&lt;td&gt;Deep debugging; large codebases; creative prototyping&lt;/td&gt;&lt;td&gt;Cost; imperfect reliability&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;GitHub Copilot&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;IDE plugin; code completion&lt;/td&gt;&lt;td&gt;Everyday small‑step coding&lt;/td&gt;&lt;td&gt;Weak at global planning; not great for 0→1&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Cursor (Editor)&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;VS Code‑like, AI‑enhanced&lt;/td&gt;&lt;td&gt;IDE‑centric workflows; front‑end&lt;/td&gt;&lt;td&gt;Agent mode feels heavy; middling stability&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Cursor CLI&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;CLI, multi‑model&lt;/td&gt;&lt;td&gt;Flexible; supports Anthropic/OpenAI/Google&lt;/td&gt;&lt;td&gt;Beta; stability varies&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;OpenAI Codex CLI&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Terminal AI agent; multimodal&lt;/td&gt;&lt;td&gt;Debugging; automation; open and flexible&lt;/td&gt;&lt;td&gt;Still evolving; code quality varies&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Google Gemini CLI&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Free/open; long context&lt;/td&gt;&lt;td&gt;Big projects; low budgets; broad tasks&lt;/td&gt;&lt;td&gt;Ecosystem younger; shallower reasoning depth&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;takeaways-and-recommendations&quot;&gt;Takeaways and Recommendations&lt;/h2&gt;&lt;a href=&quot;#takeaways-and-recommendations&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Takeaways and Recommendations”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;Best‑suited users:
+&lt;ul&gt;
+&lt;li&gt;Technically literate PMs / founders / CEOs: turn ideas into reality fast.&lt;/li&gt;
+&lt;li&gt;Dev teams: internal integrations and LLM experiments.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Less suited:
+&lt;ul&gt;
+&lt;li&gt;Complete beginners (barrier too high).&lt;/li&gt;
+&lt;li&gt;Senior architects who need rigor and determinism (use CC as an aide, not a driver).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Claude Code isn’t a silver bullet, but in the Vibe Coding arena it helps more ideas leap from mind to reality. The winner of this AI developer‑productivity race will be whoever best balances cost with reliability.&lt;/p&gt;
+&lt;hr&gt;</content:encoded><category>Claude Code</category><category>Vibe Coding</category><category>Cursor</category><category>GitHub Copilot</category><category>OpenAI Codex CLI</category><category>Cursor CLI</category><category>Google Gemini CLI</category></item><item><title>Stop Arguing — Ship with Claude Code: Turn Newcomers and Engineers into One Team</title><link>https://www.vibesparking.com/en/blog/ai/management/2025-08-27-stop-arguing-ship-with-claude-code/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/management/2025-08-27-stop-arguing-ship-with-claude-code/</guid><pubDate>Wed, 27 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # 没必要争论 Claude Code：应该把团队的分歧变成协作 --&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Claude Code pushes the long‑running trend of “write less code, get more done” to the extreme. Writing code is only a slice of engineering. Dialogue and collaboration help both “non‑coders” and engineers convert Unknown Unknowns into Known Unknowns — that’s how Claude Code becomes real productivity.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -2450,151 +2725,7 @@ Tell us how you’d wire Slack/Teams/ticketing to “click-to-approve”.&lt;/p&
 &lt;p&gt;TechRadar: Anthropic is adding Claude Code to business plans&lt;br&gt;
 &lt;a href=&quot;https://www.techradar.com/pro/anthropic-is-adding-claude-code-to-business-plans-so-now-all-your-workers-can-enjoy-a-major-ai-boost&quot;&gt;https://www.techradar.com/pro/anthropic-is-adding-claude-code-to-business-plans-so-now-all-your-workers-can-enjoy-a-major-ai-boost&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
-&lt;/ul&gt;</content:encoded><category>Claude Code</category></item><item><title>Who Should Use Claude Code? Perspectives by Role — Vibe Coding Experiences and Use‑Case Analysis</title><link>https://www.vibesparking.com/en/blog/ai/management/2025-08-27-claude-code-vibe-coding-users/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/management/2025-08-27-claude-code-vibe-coding-users/</guid><pubDate>Wed, 27 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # Claude Code 值得谁用？不同角色眼中的 Claude Code：Vibe Coding 体验与应用场景分析 --&gt;
-&lt;p&gt;In recent years, AI coding assistants have proliferated. Among them, Anthropic’s Claude Code (CC) has drawn attention by positioning itself as an “intelligent coding tool in your terminal.”&lt;/p&gt;
-&lt;p&gt;“Vibe Coding” refers to using these tools to rapidly turn ideas in your head into code — a fast‑iterating, intuition‑driven development flow.&lt;/p&gt;
-&lt;p&gt;This article distills feedback from different types of users, explains the reasons behind the patterns, and summarizes where Claude Code shines in Vibe Coding. We also compare CC to adjacent tools (Cursor, GitHub Copilot, OpenAI Codex CLI, Cursor CLI, Google Gemini CLI, etc.) to highlight strengths, weaknesses, and fit.&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;how-different-people-experience-claude-code&quot;&gt;How Different People Experience Claude Code&lt;/h2&gt;&lt;a href=&quot;#how-different-people-experience-claude-code&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “How Different People Experience Claude Code”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;Users with different backgrounds report notably different experiences when using CC for Vibe Coding:&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;1-zerocode-beginners-a-steep-climb&quot;&gt;1) Zero‑code beginners: a steep climb&lt;/h3&gt;&lt;a href=&quot;#1-zerocode-beginners-a-steep-climb&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1) Zero‑code beginners: a steep climb”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;Claude Code isn’t a one‑click “build an app” magic wand. It expects clear natural‑language tasking so it can “plan, write code, and ensure it works.”&lt;/li&gt;
-&lt;li&gt;People with no coding literacy struggle to phrase effective instructions or judge correctness, so CC is “hard to drive.”&lt;/li&gt;
-&lt;li&gt;CC primarily runs in the terminal, assuming some dev environment and command‑line experience — a non‑trivial barrier for beginners.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h3 id=&quot;2-senior-architects-cautiously-skeptical&quot;&gt;2) Senior architects: cautiously skeptical&lt;/h3&gt;&lt;a href=&quot;#2-senior-architects-cautiously-skeptical&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2) Senior architects: cautiously skeptical”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;Many view CC’s value as “limited” — hand‑writing the code feels safer and more reliable.&lt;/li&gt;
-&lt;li&gt;CC can help “debug and fix issues,” scanning a codebase for bugs and proposing patches, but results still require human review.&lt;/li&gt;
-&lt;li&gt;The permissioned workflow asks for user approvals step by step (you can enable Yolo mode to auto‑approve), which can feel inefficient.&lt;/li&gt;
-&lt;li&gt;CC remains early and can be unstable.&lt;/li&gt;
-&lt;li&gt;Net: treat it as an assistant, not a crutch.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h3 id=&quot;3-technical-pms--founders--ceos-newfound-leverage&quot;&gt;3) Technical PMs / founders / CEOs: newfound leverage&lt;/h3&gt;&lt;a href=&quot;#3-technical-pms--founders--ceos-newfound-leverage&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3) Technical PMs / founders / CEOs: newfound leverage”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;PMs, founders, and CEOs call it “finally a way to quickly ship ideas stuck in my head.”&lt;/li&gt;
-&lt;li&gt;Many ideas you might hesitate to “ask the team to build” can be prototyped solo with CC, such as:
-&lt;ul&gt;
-&lt;li&gt;Personalized feed apps&lt;/li&gt;
-&lt;li&gt;Note‑taking utilities&lt;/li&gt;
-&lt;li&gt;Small Apple Watch data parsers&lt;/li&gt;
-&lt;li&gt;Personal sites&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;In enterprises, CTOs experiment with LLM add‑ons for legacy systems — smart support, recommendations, and more.&lt;/li&gt;
-&lt;li&gt;Intercom’s example: Claude Code “lets us build things we never had time for — from AI data‑labeling tools to an ROI calculator for sales.”&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;using-claude-code-for-internal-system-integration&quot;&gt;Using Claude Code for Internal System Integration&lt;/h2&gt;&lt;a href=&quot;#using-claude-code-for-internal-system-integration&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Using Claude Code for Internal System Integration”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h3 id=&quot;-rapidly-integrating-heterogeneous-systems&quot;&gt;⚡ Rapidly integrating heterogeneous systems&lt;/h3&gt;&lt;a href=&quot;#-rapidly-integrating-heterogeneous-systems&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “⚡ Rapidly integrating heterogeneous systems”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;CC excels at automating drudgery: fixing lint, resolving merge conflicts, drafting release notes.&lt;/li&gt;
-&lt;li&gt;It can quickly scaffold glue code across APIs, databases, and filesystems, enabling fast experiments.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h3 id=&quot;-injecting-llm-intelligence-into-legacy-systems&quot;&gt;🤖 Injecting LLM intelligence into legacy systems&lt;/h3&gt;&lt;a href=&quot;#-injecting-llm-intelligence-into-legacy-systems&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “🤖 Injecting LLM intelligence into legacy systems”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;CC can generate integration layers for LLM capabilities and wrap natural‑language skills into existing systems.&lt;/li&gt;
-&lt;li&gt;Examples: internal knowledge‑base chatbots; CRM smart‑recommendation modules.&lt;/li&gt;
-&lt;li&gt;CC can “stay aware of the whole project structure,” and via MCP pull data from Google Drive, Figma, Slack, etc.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;👉 Positioning: an accelerator, not a replacement. You still need monitoring, tests, and mature architectures.&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;adoption-challenges&quot;&gt;Adoption Challenges&lt;/h2&gt;&lt;a href=&quot;#adoption-challenges&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Adoption Challenges”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h3 id=&quot;1-reliability&quot;&gt;1) Reliability&lt;/h3&gt;&lt;a href=&quot;#1-reliability&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1) Reliability”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;LLMs are probabilistic; outputs won’t be correct every time.&lt;/li&gt;
-&lt;li&gt;For tasks like global renaming, “let the IDE’s refactor tools do it” is often safer.&lt;/li&gt;
-&lt;li&gt;Community feedback: CC performs better on web/front‑end than on Swift/iOS.&lt;/li&gt;
-&lt;li&gt;Bottom line: great as an assistant; not a fully automated path to production‑grade software.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h3 id=&quot;2-cost&quot;&gt;2) Cost&lt;/h3&gt;&lt;a href=&quot;#2-cost&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2) Cost”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;Individual subscriptions are manageable; organization‑wide costs add up.&lt;/li&gt;
-&lt;li&gt;Reported averages: roughly ~$6 per person per day; with Sonnet 4, team costs can run $100–$200 per person per month.&lt;/li&gt;
-&lt;li&gt;Pricing: Pro ~ $17/month; Max up to $200/month.&lt;/li&gt;
-&lt;li&gt;Conclusion: fine for personal dev; building products/services purely via API usage can get expensive.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;where-claude-code-fits-for-vibe-coding&quot;&gt;Where Claude Code Fits for Vibe Coding&lt;/h2&gt;&lt;a href=&quot;#where-claude-code-fits-for-vibe-coding&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Where Claude Code Fits for Vibe Coding”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;Creative prototypes and personal projects: quickly assemble small apps, algorithm prototypes, or validation scripts.
-&lt;ul&gt;
-&lt;li&gt;Hundreds of lines of code in minutes.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Understanding and refactoring complex codebases: analyze logic, sketch architecture maps, propose global improvements.&lt;/li&gt;
-&lt;li&gt;Everyday acceleration and automation: generate tests/docs, fix formatting, go from issue to patch PR.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;👉 Best practice: Human + AI collaboration. Humans steer; AI accelerates.&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;comparisons-with-other-ai-coding-tools&quot;&gt;Comparisons with Other AI Coding Tools&lt;/h2&gt;&lt;a href=&quot;#comparisons-with-other-ai-coding-tools&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Comparisons with Other AI Coding Tools”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Tool&lt;/th&gt;&lt;th&gt;Traits&lt;/th&gt;&lt;th&gt;Best‑fit scenarios&lt;/th&gt;&lt;th&gt;Limits&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Claude Code&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Terminal agent; strong reasoning&lt;/td&gt;&lt;td&gt;Deep debugging; large codebases; creative prototyping&lt;/td&gt;&lt;td&gt;Cost; imperfect reliability&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;GitHub Copilot&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;IDE plugin; code completion&lt;/td&gt;&lt;td&gt;Everyday small‑step coding&lt;/td&gt;&lt;td&gt;Weak at global planning; not great for 0→1&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Cursor (Editor)&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;VS Code‑like, AI‑enhanced&lt;/td&gt;&lt;td&gt;IDE‑centric workflows; front‑end&lt;/td&gt;&lt;td&gt;Agent mode feels heavy; middling stability&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Cursor CLI&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;CLI, multi‑model&lt;/td&gt;&lt;td&gt;Flexible; supports Anthropic/OpenAI/Google&lt;/td&gt;&lt;td&gt;Beta; stability varies&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;OpenAI Codex CLI&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Terminal AI agent; multimodal&lt;/td&gt;&lt;td&gt;Debugging; automation; open and flexible&lt;/td&gt;&lt;td&gt;Still evolving; code quality varies&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Google Gemini CLI&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Free/open; long context&lt;/td&gt;&lt;td&gt;Big projects; low budgets; broad tasks&lt;/td&gt;&lt;td&gt;Ecosystem younger; shallower reasoning depth&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;takeaways-and-recommendations&quot;&gt;Takeaways and Recommendations&lt;/h2&gt;&lt;a href=&quot;#takeaways-and-recommendations&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Takeaways and Recommendations”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;Best‑suited users:
-&lt;ul&gt;
-&lt;li&gt;Technically literate PMs / founders / CEOs: turn ideas into reality fast.&lt;/li&gt;
-&lt;li&gt;Dev teams: internal integrations and LLM experiments.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Less suited:
-&lt;ul&gt;
-&lt;li&gt;Complete beginners (barrier too high).&lt;/li&gt;
-&lt;li&gt;Senior architects who need rigor and determinism (use CC as an aide, not a driver).&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Claude Code isn’t a silver bullet, but in the Vibe Coding arena it helps more ideas leap from mind to reality. The winner of this AI developer‑productivity race will be whoever best balances cost with reliability.&lt;/p&gt;
-&lt;hr&gt;</content:encoded><category>Claude Code</category><category>Vibe Coding</category><category>Cursor</category><category>GitHub Copilot</category><category>OpenAI Codex CLI</category><category>Cursor CLI</category><category>Google Gemini CLI</category></item><item><title>Trump’s Fed Overhaul: What Exactly Is the Market Afraid Of?</title><link>https://www.vibesparking.com/en/blog/finance/fed/2025-08-27-trump-fed-reform-market-fears/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/finance/fed/2025-08-27-trump-fed-reform-market-fears/</guid><pubDate>Wed, 27 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # 川普“改造”美联储：市场究竟担心什么？ --&gt;
+&lt;/ul&gt;</content:encoded><category>Claude Code</category></item><item><title>Trump’s Fed Overhaul: What Exactly Is the Market Afraid Of?</title><link>https://www.vibesparking.com/en/blog/finance/fed/2025-08-27-trump-fed-reform-market-fears/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/finance/fed/2025-08-27-trump-fed-reform-market-fears/</guid><pubDate>Wed, 27 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # 川普“改造”美联储：市场究竟担心什么？ --&gt;
 &lt;p&gt;In recent days, U.S. President Donald Trump has repeatedly put the Federal Reserve in the spotlight. Publicly, he has pressed Chair Jerome Powell to cut rates “as soon as possible,” even saying “the sooner Powell leaves, the better.” In parallel, Trump nominated Council of Economic Advisers chair Stephen Miran to the Fed Board and announced via social media the immediate removal of Fed Governor Lisa Cook. The unprecedented one‑two punch rattled markets: investors sold U.S. stocks, Treasuries, and the dollar while gold surged. Fears over the Fed’s “independence” intensified.&lt;/p&gt;
 &lt;div&gt;&lt;h2 id=&quot;fed-independence-relative-not-absolute&quot;&gt;Fed “independence”: relative, not absolute&lt;/h2&gt;&lt;a href=&quot;#fed-independence-relative-not-absolute&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Fed “independence”: relative, not absolute”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
 &lt;p&gt;Strictly speaking, the Fed’s independence is relative — an institutional norm that evolved over time. The common view of a central bank walled off from short‑term politics did not fully crystallize until the 1951 Accord, and the reputation was cemented in the Volcker era of the 1980s when painful rate hikes broke inflation. Many analysts call Trump’s sustained attacks the biggest challenge to central‑bank independence in decades — independence long deemed essential for taming inflation and underpinning global financial stability. Still, observers note that the market will ultimately judge by outcomes: if the Fed keeps the economy steady and inflation in check, investors may adapt to a new policy mix; if easing goes too far and inflation or a debt scare returns, risk premia will rise as punishment.&lt;/p&gt;
@@ -2611,29 +2742,4 @@ Tell us how you’d wire Slack/Teams/ticketing to “click-to-approve”.&lt;/p&
 &lt;div&gt;&lt;h2 id=&quot;nearterm-volatility-vs-longterm-outlook&quot;&gt;Near‑term volatility vs. long‑term outlook&lt;/h2&gt;&lt;a href=&quot;#nearterm-volatility-vs-longterm-outlook&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Near‑term volatility vs. long‑term outlook”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
 &lt;p&gt;In the short run, Trump’s aggressive rhetoric and moves have clearly raised caution. Equities, rates, and FX have seen mixed, choppy trading: equity futures dipped, dollar and long‑end yields swung wider. Yet such tactical posturing may not persist. Trump has backtracked before — after saying in April he would fire Powell, he soon said he had “no intention” to do so. The Cook removal could also shift under judicial scrutiny. And voices like Bessent’s suggest policy may not veer as wildly as headlines imply. Ultimately, markets judge by results: if the new mix boosts growth and reins in debt burdens, looser policy can buoy risk assets, at least tactically. If inflation or debt risks spin out of control, markets will punish quickly. As one bank put it, fundamentals and policy effectiveness matter more than the political noise around them.&lt;/p&gt;
 &lt;p&gt;Bottom line: the market’s response has two layers. First, near‑term concern over impaired independence — with rating and long‑bond‑yield risks. Second, a wait‑and‑see on outcomes — can the new team still anchor inflation and growth? Volatility is likely, but as long as the U.S. growth base holds and fiscal policy cooperates, global risk assets won’t lose appeal overnight. Keep watching Fed personnel shifts and the fiscal path — in the end, fundamentals and results, not a single episode, steer markets.&lt;/p&gt;
-&lt;p&gt;Note: This article is based on public information and is not investment advice. Investing involves risk.&lt;/p&gt;</content:encoded><category>Finance</category><category>Federal Reserve</category></item><item><title>NVIDIA Q2 Earnings Preview: What to Watch Tonight</title><link>https://www.vibesparking.com/en/blog/finance/nvidia/2025-08-27-nvidia-q2-earnings-preview-three-key-focus/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/finance/nvidia/2025-08-27-nvidia-q2-earnings-preview-three-key-focus/</guid><pubDate>Wed, 27 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # 期待今晚英伟达二季度财报公布 --&gt;
-&lt;p&gt;As the AI wave continues, NVIDIA remains in the spotlight. After the bell tonight, the company reports fiscal Q2 results. Supply‑chain signals from TSMC, Foxconn, and KYEC point to strong AI server demand, so the bar is high. Investors will focus on:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Gross margin: can non‑GAAP GM recover toward ~75% via mix optimization and cost leverage?&lt;/li&gt;
-&lt;li&gt;Product cycle: how fast is Blackwell Ultra (B300 series) ramping? When does the next‑gen “Rubin” architecture arrive?&lt;/li&gt;
-&lt;li&gt;China: how big is the impact of the H20 line and any potential China‑specific parts?&lt;/li&gt;
-&lt;li&gt;Guidance: will Q3 and full‑year outlooks stay strong? NVIDIA has guided conservatively at times; tone matters for AI sentiment and near‑term price action.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h2 id=&quot;margins-a-path-back-to-75&quot;&gt;Margins: a path back to 75%?&lt;/h2&gt;&lt;a href=&quot;#margins-a-path-back-to-75&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Margins: a path back to 75%?”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;From late FY24 into early FY25, non‑GAAP GM hovered at elevated levels (76–79%; Q4 FY24 at 76.7%, Q1 FY25 at 78.9%). In the second half of FY25, mix shifts pulled margins down: ~75.7% in Q2 FY25, 75.0% in Q3 FY25, and 73.5% in Q4 FY25. In Q1 FY26, H20‑related inventory charges in China pushed non‑GAAP GM down to 61.0%.&lt;/p&gt;
-&lt;p&gt;Management noted that excluding the H20 inventory write‑down, Q1 non‑GAAP GM would have been ~71.3%.&lt;/p&gt;
-&lt;p&gt;For this quarter, consensus expects repair. NVIDIA guided Q2 non‑GAAP GM to ~72.0% (GAAP ~71.8%) and said it aims to push margins back toward the mid‑70s later this year. If Q2 lands as guided, the curve looks like a V‑shaped recovery — but getting to 75% still depends on the availability of higher‑mix GPUs and continued cost discipline. Watch the commentary on product mix, inventory, cost items, and full‑year margin color.&lt;/p&gt;
-&lt;div&gt;&lt;h2 id=&quot;product-roadmap-blackwell-ultra-ramps-rubin-builds&quot;&gt;Product roadmap: Blackwell Ultra ramps, Rubin builds&lt;/h2&gt;&lt;a href=&quot;#product-roadmap-blackwell-ultra-ramps-rubin-builds&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Product roadmap: Blackwell Ultra ramps, Rubin builds”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;CEO Jensen Huang has confirmed Blackwell Ultra (B300 series) is ramping steadily. Industry reports suggest the Blackwell accelerator line will launch in the back half with substantial performance gains. He also said “the next generation is called Rubin,” and partners are preparing. In short, data‑center GPUs face a Blackwell → Rubin transition over the next two years.&lt;/p&gt;
-&lt;p&gt;Post‑print, investors will want updates on B300 capacity and any hints on Rubin milestones. The public roadmap points to an 8‑stack HBM4 Rubin platform in 2026, expanding to 12‑stack in 2027. Any mention of Rubin pilot or tape‑out progress would be viewed as constructive. If Blackwell Ultra ramps smoothly and Rubin visibility improves, NVIDIA’s AI hardware leadership strengthens further.&lt;/p&gt;
-&lt;div&gt;&lt;h2 id=&quot;china-h20-pause-and-new-specials&quot;&gt;China: H20 pause and new “specials”&lt;/h2&gt;&lt;a href=&quot;#china-h20-pause-and-new-specials&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “China: H20 pause and new “specials””&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;China remains the wild card. In April, new U.S. controls paused shipments of NVIDIA’s latest high‑end GPUs to China, halting the China‑tailored H20 line. Reports on Aug 22 said NVIDIA told suppliers to suspend H20 production; the company later framed it as routine supply‑chain adjustment, reiterating H20 is not a military product and that local chips meet many needs.&lt;/p&gt;
-&lt;p&gt;H20 was a China‑specific part that shipped at scale in 2024. Early versions had 96GB HBM3 at 4.0TB/s; later versions moved to 141GB, 900GB/s NVLink, and up to 148 TFLOPS FP16. The April controls interrupted deliveries until licenses were re‑granted around July, after which production/shipments could resume — with added reporting requirements that may deter some buyers.&lt;/p&gt;
-&lt;p&gt;Industry chatter points to a new China‑market “special” (possibly B30A) with roughly half the compute of baseline Blackwell. If true, NVIDIA is seeking a performance‑compromised path that satisfies demand while complying with export limits. Watch Q2 commentary on China shipments, mix, and any preview of such parts. Given uncertainties, expect cautious China guidance — a key risk to watch this quarter.&lt;/p&gt;
-&lt;div&gt;&lt;h2 id=&quot;guidance-strong-or-cautious&quot;&gt;Guidance: strong or cautious?&lt;/h2&gt;&lt;a href=&quot;#guidance-strong-or-cautious&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Guidance: strong or cautious?”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;For a growth stock like NVIDIA, outlook is half the story. Given exuberant AI sentiment, the company has occasionally leaned conservative to manage expectations. Tonight’s Q3 and full‑year guide will be critical. A strong revenue/GM outlook signals sustained demand; a cautious tone could weigh on shares near‑term, particularly against the China backdrop. Listen for color on back‑half demand, inventory normalization, and R&amp;#x26;D intensity.&lt;/p&gt;
-&lt;p&gt;As a reference, the prior Q1 print guided Q2 revenue to ~$45B ex‑H20 (with roughly $8B H20 headwind removed) and non‑GAAP GM to ~72%. Whether the next few quarters can approach the earlier ~75% margin aspiration and maintain rapid growth remains the focal point. A steady or better‑than‑feared guide would read as AI strength; a soft one argues for volatility.&lt;/p&gt;
-&lt;div&gt;&lt;h2 id=&quot;investment-view-odds-favor-a-postprint-rise&quot;&gt;Investment view: odds favor a post‑print rise&lt;/h2&gt;&lt;a href=&quot;#investment-view-odds-favor-a-postprint-rise&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Investment view: odds favor a post‑print rise”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;Net‑net, Q2 likely meets or modestly beats expectations on the back of explosive data‑center AI demand. If GM tracks guidance, supply tightness is easing, and B300 capacity is expanding, the ecosystem story stays intact. Longer term, AI demand shows no signs of peaking; Huang has already telegraphed planning for the Rubin era, suggesting durable momentum.&lt;/p&gt;
-&lt;p&gt;Yes, China uncertainty and cautious guidance can add noise. But given NVIDIA’s leadership and secular tailwinds, the bias in expectations remains positive. If results meet targets and guidance holds, a post‑print leg higher is plausible, with fresh highs in play per many bullish analysts.&lt;/p&gt;
-&lt;p&gt;Note: This article is based on public information and is not investment advice. Investing involves risk.&lt;/p&gt;</content:encoded><category>Finance</category><category>Nvidia</category><category>NASDAQ: NVDA</category></item></channel></rss>
+&lt;p&gt;Note: This article is based on public information and is not investment advice. Investing involves risk.&lt;/p&gt;</content:encoded><category>Finance</category><category>Federal Reserve</category></item></channel></rss>
