@@ -673,7 +673,174 @@ Go high for difficult tasks and medium/low for routine ones to avoid overkill an
 &lt;hr&gt;
 &lt;div&gt;&lt;h2 id=&quot;closing&quot;&gt;Closing&lt;/h2&gt;&lt;a href=&quot;#closing&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Closing”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
 &lt;p&gt;In one line: unify rules, tier your reasoning, and control the process.
-Do these three well and GPT-5 will ship in your codebase fast and steady — without “smart but self-defeating” behavior. Calibrate with the official memos/guides and tune to your team’s style.&lt;/p&gt;</content:encoded><category>GPT-5</category><category>OpenAI</category></item><item><title>NVIDIA’s P/E Paradox: A Deep Valuation Analysis Behind a Multi‑Trillion Run</title><link>https://www.vibesparking.com/en/blog/finance/nvidia/2025-09-03-nvidia-valuation-pe-paradox/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/finance/nvidia/2025-09-03-nvidia-valuation-pe-paradox/</guid><pubDate>Wed, 03 Sep 2025 00:00:00 GMT</pubDate><content:encoded>&lt;div&gt;&lt;h1 id=&quot;nvidias-pe-paradox-a-deep-valuation-analysis-behind-a-multitrillion-run&quot;&gt;NVIDIA’s P/E Paradox: A Deep Valuation Analysis Behind a Multi‑Trillion Run&lt;/h1&gt;&lt;a href=&quot;#nvidias-pe-paradox-a-deep-valuation-analysis-behind-a-multitrillion-run&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “NVIDIA’s P/E Paradox: A Deep Valuation Analysis Behind a Multi‑Trillion Run”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+Do these three well and GPT-5 will ship in your codebase fast and steady — without “smart but self-defeating” behavior. Calibrate with the official memos/guides and tune to your team’s style.&lt;/p&gt;</content:encoded><category>GPT-5</category><category>OpenAI</category></item><item><title>Don’t want Claude Code to feed your code to Anthropic? Use this privacy settings checklist</title><link>https://www.vibesparking.com/en/blog/ai/claude-code/data-usage/2025-09-04-lock-claude-3-steps-keep-code-private/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/claude-code/data-usage/2025-09-04-lock-claude-3-steps-keep-code-private/</guid><pubDate>Thu, 04 Sep 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # Don’t want to “feed” your code to Anthropic? Grab this Claude/Claude Code hard‑privacy setup checklist and use it as‑is. --&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;TL;DR:&lt;/strong&gt;
+For &lt;strong&gt;personal accounts&lt;/strong&gt; (Free/Pro/Max), go to &lt;strong&gt;claude.ai → Settings → Data &amp;#x26; Privacy&lt;/strong&gt; and turn off “Use my chats/coding sessions to improve the model.” For &lt;strong&gt;organizations/API&lt;/strong&gt;, usage is not used for training by default; for extra assurance, use &lt;strong&gt;Zero Data Retention (ZDR)&lt;/strong&gt; with an &lt;strong&gt;org API key&lt;/strong&gt; for Claude Code. On your machine, disable &lt;strong&gt;Statsig telemetry/Sentry error reporting&lt;/strong&gt;, &lt;strong&gt;don’t use &lt;code dir=&quot;auto&quot;&gt;/bug&lt;/code&gt; to upload sessions&lt;/strong&gt;, and periodically clear local caches.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;why-lock-it-down-now&quot;&gt;Why lock it down now&lt;/h2&gt;&lt;a href=&quot;#why-lock-it-down-now&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Why lock it down now”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Anthropic is updating data policy for &lt;strong&gt;consumer products&lt;/strong&gt; (including Claude, Pro, Max, and &lt;strong&gt;Claude Code&lt;/strong&gt; when signed in with those accounts): &lt;strong&gt;you can choose whether chats and coding sessions are used for training&lt;/strong&gt;; if you choose &lt;strong&gt;Allow&lt;/strong&gt;, the &lt;strong&gt;retention period can be up to 5 years&lt;/strong&gt;. If you choose &lt;strong&gt;Do not allow&lt;/strong&gt;, the service side &lt;strong&gt;retains up to 30 days&lt;/strong&gt; for operations and compliance. This choice &lt;strong&gt;only applies to newly created or “resumed” sessions&lt;/strong&gt; (no retroactive scanning of dormant history). You can change it anytime in Privacy Settings.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;For industry coverage and reminders about timing, see summaries from The Verge / Tom’s Guide.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;safest-setups-for-three-user-types&quot;&gt;Safest setups for three user types&lt;/h2&gt;&lt;a href=&quot;#safest-setups-for-three-user-types&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Safest setups for three user types”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3 id=&quot;-personal-users-free--pro--max&quot;&gt;① Personal users (Free / Pro / Max)&lt;/h3&gt;&lt;a href=&quot;#-personal-users-free--pro--max&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “① Personal users (Free / Pro / Max)”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Goal:&lt;/strong&gt; prevent your chats and code from being used for training.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;How to do it&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Open &lt;strong&gt;claude.ai → Settings → Data &amp;#x26; Privacy&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Turn off &lt;strong&gt;“Use my chats/coding sessions to improve Claude”&lt;/strong&gt; (or similar wording).&lt;/li&gt;
+&lt;li&gt;Remember: this only applies to &lt;strong&gt;new/resumed&lt;/strong&gt; sessions; deleted conversations &lt;strong&gt;will not&lt;/strong&gt; be used for training. You can change this later, but &lt;strong&gt;data already used for training cannot be undone&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Retention rules (when you disable training):&lt;/strong&gt; backend storage for &lt;strong&gt;up to 30 days&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h3 id=&quot;-team--enterprise--api-commercial-products&quot;&gt;② Team / Enterprise / API (commercial products)&lt;/h3&gt;&lt;a href=&quot;#-team--enterprise--api-commercial-products&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “② Team / Enterprise / API (commercial products)”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Default is safer:&lt;/strong&gt; Anthropic’s &lt;strong&gt;commercial products&lt;/strong&gt; (Claude for Work, Anthropic API, Claude Gov, etc.) &lt;strong&gt;do not use your inputs/outputs for training by default&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Even safer (recommended):&lt;/strong&gt; sign &lt;strong&gt;Zero Data Retention (ZDR)&lt;/strong&gt; and &lt;strong&gt;use your organization’s API key&lt;/strong&gt; in Claude Code. ZDR currently &lt;strong&gt;applies only to the Anthropic API and products that use your org API key (including Claude Code)&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Default retention:&lt;/strong&gt; on the API side, &lt;strong&gt;30‑day auto‑deletion&lt;/strong&gt; (if ZDR isn’t in place and absent additional legal/risk requirements).&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h3 id=&quot;-go-via-cloud-providers-bedrock--vertex-for-another-layer-of-isolation&quot;&gt;③ Go via cloud providers (Bedrock / Vertex) for another layer of isolation&lt;/h3&gt;&lt;a href=&quot;#-go-via-cloud-providers-bedrock--vertex-for-another-layer-of-isolation&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “③ Go via cloud providers (Bedrock / Vertex) for another layer of isolation”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;AWS Bedrock:&lt;/strong&gt; explicitly &lt;strong&gt;does not use your inputs/outputs to train models&lt;/strong&gt;; contract terms also constrain third‑party models (including Anthropic).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Google Vertex AI:&lt;/strong&gt; has dedicated &lt;strong&gt;data governance&lt;/strong&gt; and caching docs; enterprises can configure to meet compliance and minimize retention (read caching/governance details carefully).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;This “cloud‑side isolation” suits highly regulated sectors, keeping orchestration, logs, and KMS within your cloud account under unified governance.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;local-hardening-you-must-do-for-claude-code&quot;&gt;Local hardening you must do for Claude Code&lt;/h2&gt;&lt;a href=&quot;#local-hardening-you-must-do-for-claude-code&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Local hardening you must do for Claude Code”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;These are the most commonly overlooked steps in “&lt;strong&gt;keep it private&lt;/strong&gt;” practice; once done, you’ll be much more at ease.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div&gt;&lt;h3 id=&quot;a-disable-telemetry-and-error-reporting-keep-runtime-metrics-local&quot;&gt;A. Disable telemetry and error reporting (keep runtime metrics local)&lt;/h3&gt;&lt;a href=&quot;#a-disable-telemetry-and-error-reporting-keep-runtime-metrics-local&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “A. Disable telemetry and error reporting (keep runtime metrics local)”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Officially supported environment variables&lt;/strong&gt; (cross‑platform example):&lt;/p&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# Disable Statsig telemetry (does not include code/file paths)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;export&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;DISABLE_TELEMETRY&lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;=&lt;/span&gt;&lt;span style=&quot;--0:#F78C6C;--1:#AA0982&quot;&gt;1&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# Disable Sentry error reporting&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;export&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;DISABLE_ERROR_REPORTING&lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;=&lt;/span&gt;&lt;span style=&quot;--0:#F78C6C;--1:#AA0982&quot;&gt;1&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# Disable the /bug command (does not include code/file paths)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;export&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;DISABLE_BUG_COMMAND&lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;=&lt;/span&gt;&lt;span style=&quot;--0:#F78C6C;--1:#AA0982&quot;&gt;1&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# Disable all non‑essential network requests (more thorough)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;export&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC&lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;=&lt;/span&gt;&lt;span style=&quot;--0:#F78C6C;--1:#AA0982&quot;&gt;1&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;You can also write these under the &lt;code dir=&quot;auto&quot;&gt;env&lt;/code&gt; node in &lt;code dir=&quot;auto&quot;&gt;~/.claude/settings.json&lt;/code&gt;, and override per‑project via &lt;code dir=&quot;auto&quot;&gt;.claude/settings.local.json&lt;/code&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;json&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;env&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: {&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;DISABLE_TELEMETRY&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;1&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;DISABLE_ERROR_REPORTING&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;1&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;DISABLE_BUG_COMMAND&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;1&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;1&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3 id=&quot;b-avoid-bundling-full-sessions-for-upload-dont-casually-use-bug&quot;&gt;B. Avoid bundling full sessions for upload (don’t casually use &lt;code dir=&quot;auto&quot;&gt;/bug&lt;/code&gt;)&lt;/h3&gt;&lt;a href=&quot;#b-avoid-bundling-full-sessions-for-upload-dont-casually-use-bug&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “B. Avoid bundling full sessions for upload (don’t casually use /bug)”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;The official recommendation is to &lt;strong&gt;use &lt;code dir=&quot;auto&quot;&gt;/bug&lt;/code&gt; to submit issues&lt;/strong&gt;; it bundles context for Anthropic to diagnose. Therefore &lt;strong&gt;avoid it when dealing with sensitive repos/code&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;The community has collected &lt;strong&gt;an env var to disable &lt;code dir=&quot;auto&quot;&gt;/bug&lt;/code&gt;&lt;/strong&gt; (&lt;code dir=&quot;auto&quot;&gt;DISABLE_BUG_COMMAND=1&lt;/code&gt;). This is &lt;strong&gt;“unofficial / may change”&lt;/strong&gt; — for reference only.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;c-local-caches-and-session-files&quot;&gt;C. Local caches and session files&lt;/h3&gt;&lt;a href=&quot;#c-local-caches-and-session-files&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “C. Local caches and session files”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;Per official notes, the client &lt;strong&gt;can cache sessions locally for up to 30 days&lt;/strong&gt; to aid resuming (configurable). In sensitive environments, &lt;strong&gt;regularly clean &lt;code dir=&quot;auto&quot;&gt;~/.claude/&lt;/code&gt;&lt;/strong&gt; and set cache duration to a minimum.&lt;/li&gt;
+&lt;li&gt;The community has previously reported issues about &lt;strong&gt;&lt;code dir=&quot;auto&quot;&gt;.claude.json&lt;/code&gt; retaining conversation fragments&lt;/strong&gt; — these are &lt;strong&gt;behavioral reports&lt;/strong&gt;, not official guarantees. Add &lt;code dir=&quot;auto&quot;&gt;.claude/&lt;/code&gt; to your security baseline and backup exclusion lists.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;a-beltandsuspenders-playbook-copy-asis&quot;&gt;A “belt‑and‑suspenders” playbook (copy as‑is)&lt;/h2&gt;&lt;a href=&quot;#a-beltandsuspenders-playbook-copy-asis&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “A “belt‑and‑suspenders” playbook (copy as‑is)”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Personal accounts (must‑do)&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Turn off “Use to improve the model.”&lt;/li&gt;
+&lt;li&gt;Periodically clean &lt;code dir=&quot;auto&quot;&gt;~/.claude/&lt;/code&gt;; before using &lt;code dir=&quot;auto&quot;&gt;/bug&lt;/code&gt;, do &lt;strong&gt;redaction/sanitization&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Set: &lt;code dir=&quot;auto&quot;&gt;DISABLE_TELEMETRY=1&lt;/code&gt;, &lt;code dir=&quot;auto&quot;&gt;DISABLE_ERROR_REPORTING=1&lt;/code&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;Teams/enterprises (strongly recommended)&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Only log into Claude Code with your &lt;strong&gt;org API key&lt;/strong&gt;; sign &lt;strong&gt;ZDR&lt;/strong&gt; if possible.&lt;/li&gt;
+&lt;li&gt;Inject the “no‑upload” env vars (Section A) centrally across servers and CI/CD.&lt;/li&gt;
+&lt;li&gt;Prefer &lt;strong&gt;Bedrock/Vertex&lt;/strong&gt; routes; implement cloud‑side DLP/KMS and access auditing.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;common-pitfalls-to-avoid&quot;&gt;Common pitfalls to avoid&lt;/h2&gt;&lt;a href=&quot;#common-pitfalls-to-avoid&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Common pitfalls to avoid”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Myth 1:&lt;/strong&gt; “If I delete historical chats, they won’t be used for training.”
+→ After deletion, they &lt;strong&gt;won’t be used for training&lt;/strong&gt;, but whether they &lt;strong&gt;were&lt;/strong&gt; trained on depends on your setting at the time; &lt;strong&gt;training is irreversible&lt;/strong&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Myth 2:&lt;/strong&gt; “Using Claude Code equals enterprise‑grade protection.”
+→ It depends on &lt;strong&gt;the account and key you use&lt;/strong&gt;. Claude Code signed in with a personal account is still under &lt;strong&gt;consumer terms&lt;/strong&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Myth 3:&lt;/strong&gt; “If I go via Bedrock/Vertex, I’m done.”
+→ You still need to &lt;strong&gt;configure&lt;/strong&gt; your own permission boundaries, key management, logging policies, and cache governance. The docs are explicit.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;closing&quot;&gt;Closing&lt;/h2&gt;&lt;a href=&quot;#closing&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Closing”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Data privacy has never been a simple on/off switch. It’s &lt;strong&gt;a set of habits&lt;/strong&gt;: &lt;strong&gt;right configuration + right tools + team discipline&lt;/strong&gt;. Work through the checklist above and your code and conversations will &lt;strong&gt;not be shared with Anthropic for training&lt;/strong&gt;, while you also &lt;strong&gt;preserve your team’s compliance boundary&lt;/strong&gt;.&lt;/p&gt;&lt;!-- 
+Want me to publish an “enterprise‑intranet Claude Code hardening script”? Comment “need script” and I’ll write it.
+
+---
+
+### Thought questions
+
+* In your current project, where is the easiest place to “accidentally upload”?
+* Has your team already written `/bug`, logs, caches, and proxies into an **SOP**?
+
+---
+
+## Suggested titles (multi‑language + slug)
+
+1. **Lock Claude Down: 3 Steps to Keep Your Code Private**
+
+   * EN: Lock Claude Down: 3 Steps to Keep Your Code Private
+   * ZH‑TW: 把 Claude「關成啞巴」：三步鎖死你的代碼與會話
+   * JP: Claudeを“無口”にする：コードを守る3ステップ
+   * FR: Verrouiller Claude : 3 étapes pour garder votre code privé
+   * ES: Pon a Claude en “modo mudo”: 3 pasos para blindar tu código
+   * PT: Deixe o Claude “mudo”: 3 passos para blindar seu código
+   * slug: **lock-claude-3-steps-keep-code-private**
+
+2. **Don’t Let Your Repo Become Training Data: A Hard‑Privacy Guide for Claude/Claude Code**
+
+   * EN: Don’t Let Your Repo Become Training Data: A Hard‑Privacy Guide
+   * ZH‑TW: 別讓你的倉庫變訓練集：Claude/Claude Code 隱私硬核指南
+   * JP: リポジトリを学習データにしない：ハードプライバシー実践
+   * FR: Ne laissez pas votre dépôt devenir un jeu d’entraînement
+   * ES: Que tu repo no sea el dataset: guía de privacidad
+   * PT: Não deixe seu repositório virar dataset
+   * slug: **dont-let-repo-be-training-data**
+
+3. **Minimum‑Privilege Claude: 7 Must‑Do Safeguards for Developers**
+
+   * EN: Minimum‑Privilege Claude: 7 Must‑Do Safeguards for Devs
+   * ZH‑TW: Claude 也要「最小權限」：開發者必做 7 個關口
+   * JP: Claudeにも最小権限を：開発者の7チェック
+   * FR: Claude à privilèges minimaux : 7 garde‑fous clés
+   * ES: “Mínimos privilegios” para Claude: 7 pasos clave
+   * PT: Claude com “privilégio mínimo”: 7 passos
+   * slug: **minimum-privilege-claude-7-guards**
+
+---
+
+## Illustrations (2:1, no Chinese text)
+
+* **Cover:**
+  “A developer locking a vault filled with code snippets and chat bubbles; subtle Claude logo motifs outside; clean lines, pastel tech palette, wide 2:1 illustration.”
+
+* **Key section figures:**
+
+  1. “A toggle switch panel labeled ‘Model improvement’ set to off, with shield icon and a flowing code stream blocked.”
+  2. “Two roads: ‘Consumer’ vs ‘Enterprise API (ZDR)’, the latter guarded by cloud shields (generic AWS/Vertex icons).”
+  3. “Terminal window showing environment variables being set, telemetry lines fading out into nothing.”
+
+---
+
+## Three heartfelt social/share snippets
+
+1. “Patched Claude so it can’t take a single line of my code ⚙️🛡️ This checklist really works.”
+2. “Turns out `/bug` bundles the whole session? Almost handed over private repo details… disabled now! 🙈”
+3. “Enterprise plan + ZDR + Bedrock = layered protection — our compliance folks are at ease 😌”
+
+---
+
+**Further reading | Claude data policy changes**
+
+---
+
+*Does this fit your taste? Want me to publish an expanded version with a ‘one‑click script + team SOP template’?*
+
+**References and sources:** Anthropic official terms and privacy center, Claude Code docs and NPM page, plus major media explainers. Key sources are cited inline. Main docs: --&gt;</content:encoded><category>Claude Code</category></item><item><title>NVIDIA’s P/E Paradox: A Deep Valuation Analysis Behind a Multi‑Trillion Run</title><link>https://www.vibesparking.com/en/blog/finance/nvidia/2025-09-03-nvidia-valuation-pe-paradox/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/finance/nvidia/2025-09-03-nvidia-valuation-pe-paradox/</guid><pubDate>Wed, 03 Sep 2025 00:00:00 GMT</pubDate><content:encoded>&lt;div&gt;&lt;h1 id=&quot;nvidias-pe-paradox-a-deep-valuation-analysis-behind-a-multitrillion-run&quot;&gt;NVIDIA’s P/E Paradox: A Deep Valuation Analysis Behind a Multi‑Trillion Run&lt;/h1&gt;&lt;a href=&quot;#nvidias-pe-paradox-a-deep-valuation-analysis-behind-a-multitrillion-run&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “NVIDIA’s P/E Paradox: A Deep Valuation Analysis Behind a Multi‑Trillion Run”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
 &lt;p&gt;At the peak of the global tech investment wave, NVIDIA stands out as the brightest star. Yet despite a market cap that has crossed $4T, its recent price action has puzzled many investors. The company delivered another quarter above Wall Street expectations, but the stock fell after hours and even flirted with a technical bear market. This “beat but drop” paradox raises a central question: is this an overreaction driven by short‑term sentiment, or the first crack in a grand narrative of overvaluation?&lt;/p&gt;
 &lt;p&gt;This article uses the price‑to‑earnings ratio (P/E) as the core lens to examine NVIDIA’s value. We look at the latest financials, trace valuation shifts over time, analyze the engines that power long‑term growth and the risks that could slow it, and outline a forward view for the next decade—offering a clear, grounded perspective for everyday investors.&lt;/p&gt;
 &lt;div&gt;&lt;h2 id=&quot;why-did-the-stock-fall-after-an-earnings-beat&quot;&gt;Why did the stock fall after an earnings beat?&lt;/h2&gt;&lt;a href=&quot;#why-did-the-stock-fall-after-an-earnings-beat&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Why did the stock fall after an earnings beat?”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
@@ -2679,140 +2846,4 @@ Image 3 (Claude Code bridge):
 * ES: Gemini hoy, Claude Code mañana: ACP abre la puerta
 * PT: Gemini hoje, Claude Code amanhã: ACP abre a porta
 * slug: `acp-opens-multi-agent`
---&gt;</content:encoded><category>Zed</category><category>Claude Code</category><category>Gemini CLI</category><category>Agent Client Protocol (ACP)</category></item><item><title>Zed Adds ACP for External Agents (Gemini CLI Live)</title><link>https://www.vibesparking.com/en/blog/ai/zed/2025-08-28-zed-acp-gemini-cli-guide/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/zed/2025-08-28-zed-acp-gemini-cli-guide/</guid><pubDate>Thu, 28 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # Zed Adds ACP for External Agents (Gemini CLI Live) --&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Zed introduced an Agent Client Protocol (ACP) to bring external coding agents like Gemini CLI (and later, Claude Code, etc.) directly into the editor. The first end-to-end integration is Gemini CLI. You keep using the familiar CLI; Zed embeds it in a panel so you can see file changes, review diffs across multiple buffers, and accept or modify patches. ACP is open source (Apache 2.0), welcoming more agents and editors to join the ecosystem.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;tldr&quot;&gt;TL;DR&lt;/h2&gt;&lt;a href=&quot;#tldr&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “TL;DR”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;ACP is like LSP for agents: it decouples agents from editors so you can swap them freely.&lt;/li&gt;
-&lt;li&gt;Gemini CLI runs inside Zed now: open the Agent panel to start new threads; supported since Zed 0.201.5+.&lt;/li&gt;
-&lt;li&gt;It’s the real CLI, not a cut‑down version: Zed spawns Gemini CLI and talks via ACP; you can preview files and diffs in the editor UI.&lt;/li&gt;
-&lt;li&gt;Works out of the box: if the CLI isn’t installed, Zed installs it; if it is, Zed picks it up from PATH; Gemini CLI must be ≥ 0.2.0.&lt;/li&gt;
-&lt;li&gt;Bring any agent that speaks ACP: configure and run; debugging logs included.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h1 id=&quot;introduction&quot;&gt;Introduction&lt;/h1&gt;&lt;a href=&quot;#introduction&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Introduction”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;Many folks ask: can I switch multiple AI coding agents within a single editor?
-Zed’s answer: yes—right now. ACP decouples “agent” from “editor.” Gemini CLI leads as the first integration, and Neovim already joined the ACP ecosystem via Code Companion. The ecosystem door is open.&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h1 id=&quot;why-acp-matters&quot;&gt;Why ACP Matters&lt;/h1&gt;&lt;a href=&quot;#why-acp-matters&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Why ACP Matters”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;1) Decoupling like LSP&lt;/strong&gt;
-You don’t have to change editors to change agents. Any agent that speaks ACP can plug into Zed’s UI, benefiting from multi‑buffer review, syntax highlighting, and visual diffing. Data stays local—nothing is proxied through Zed’s servers.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;2) Real capability + editor experience&lt;/strong&gt;
-Zed doesn’t simulate a chat box; it runs Gemini CLI as a child process and communicates over JSON‑RPC. You get the CLI’s full capabilities alongside editor‑grade change previews and navigation.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;3) Open ecosystem&lt;/strong&gt;
-ACP is open source (Apache 2.0). The Zed team is inviting other editors to join; Neovim’s Code Companion already supports ACP‑compatible agents. Expect similar experiences across different editors over time.&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h1 id=&quot;what-can-you-do-now-gemini-cli-in-zed&quot;&gt;What Can You Do Now? (Gemini CLI in Zed)&lt;/h1&gt;&lt;a href=&quot;#what-can-you-do-now-gemini-cli-in-zed&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “What Can You Do Now? (Gemini CLI in Zed)”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;Run Gemini CLI threads directly inside the Agent panel (open with cmd‑?, click the + in the top‑right). Zed Stable v0.201.5+ supported.&lt;/li&gt;
-&lt;li&gt;You can @‑reference files, symbols, and prior threads, and even fetch webpages. Currently not supported: editing prior messages, restoring from history, checkpoints, and using agents within SSH projects—these official‑agent features are being filled in.&lt;/li&gt;
-&lt;li&gt;Example keybinding (assign a shortcut to Gemini):&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;json&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;[&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;{&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;bindings&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: {&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;      &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;cmd-alt-g&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: [&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;agent::NewExternalAgentThread&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;, { &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;agent&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;gemini&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; }]&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;    &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;]&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;p&gt;(From Zed’s docs example.)&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h1 id=&quot;install-and-sign-in-3-steps&quot;&gt;Install and Sign In (3 Steps)&lt;/h1&gt;&lt;a href=&quot;#install-and-sign-in-3-steps&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Install and Sign In (3 Steps)”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;Step 0: Update Zed&lt;/strong&gt;
-Ensure Zed is Stable v0.201.5+ (or a newer Preview build).&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Step 1: Prepare Gemini CLI&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;If you haven’t installed it, Zed will install a version automatically.&lt;/li&gt;
-&lt;li&gt;If you have installed it, Zed uses the one on PATH.&lt;/li&gt;
-&lt;li&gt;Requires Gemini CLI ≥ 0.2.0; older versions will error. To upgrade:&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;npm&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;install&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;-g&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;@google/gemini-cli@latest&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;Step 2: Choose one of three sign‑in methods&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Log in with Google: a browser window opens; Zed never sees your OAuth/token.&lt;/li&gt;
-&lt;li&gt;Gemini API Key: if &lt;code dir=&quot;auto&quot;&gt;GEMINI_API_KEY&lt;/code&gt; is set, Zed uses it; otherwise you’ll be prompted, and the key is securely stored in your system keychain.&lt;/li&gt;
-&lt;li&gt;Vertex AI: use this if your GCP environment is configured for Vertex.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h1 id=&quot;advanced-bring-your-own-agent-acp&quot;&gt;Advanced: Bring Your Own Agent (ACP)&lt;/h1&gt;&lt;a href=&quot;#advanced-bring-your-own-agent-acp&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Advanced: Bring Your Own Agent (ACP)”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;Configuration is straightforward:&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;json&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;{&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;agent_servers&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: {&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;Custom Agent&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: {&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;      &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;command&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;node&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;      &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;args&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: [&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;~/projects/agent/index.js&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;, &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;--acp&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;],&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;      &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;env&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: {}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;    &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;p&gt;Any process that speaks ACP can plug in. During development, use “dev: open acp logs” to open the debug view and inspect messages between Zed and your agent.&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h1 id=&quot;recommended-use-cases&quot;&gt;Recommended Use Cases&lt;/h1&gt;&lt;a href=&quot;#recommended-use-cases&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Recommended Use Cases”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;1) Large‑repo refactors / batch fixes&lt;/strong&gt;
-Review changes across multiple buffers at a glance; retry failed patches or regenerate fixes efficiently.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;2) Multi‑agent “shoot‑out”&lt;/strong&gt;
-Have Gemini CLI fix tests today, and try another ACP agent for performance experiments tomorrow. Swap agents without changing editors.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;3) Security‑sensitive teams&lt;/strong&gt;
-The real CLI runs locally; Zed provides the UI and protocol bridge. Your code doesn’t go through Zed’s servers, which helps for intranet, finance, and healthcare scenarios.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;4) Smooth transition from terminal to editor workflows&lt;/strong&gt;
-Keep your CLI muscle memory while gaining editor‑grade visual diffs and navigation.&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h1 id=&quot;now-and-next&quot;&gt;Now and Next&lt;/h1&gt;&lt;a href=&quot;#now-and-next&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Now and Next”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;Usable today: Zed supports external agents in Stable; Gemini CLI is the first shipping integration.&lt;/li&gt;
-&lt;li&gt;Ecosystem is expanding: ACP is open source, and the team encourages more editors and agents to join. Neovim supports ACP‑compatible agents via Code Companion.&lt;/li&gt;
-&lt;li&gt;Likely next: Claude Code, Codex CLI, Cursor CLI, etc., can plug in once they implement ACP. This is an ecosystem forecast (not an official promise), but given ACP’s openness and Zed’s messaging, it’s a reasonable expectation.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h1 id=&quot;quickstart-checklist&quot;&gt;Quickstart Checklist&lt;/h1&gt;&lt;a href=&quot;#quickstart-checklist&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Quickstart Checklist”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;Update Zed to ≥ v0.201.5; open the Agent Panel (cmd‑?).&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Install Gemini CLI ≥ 0.2.0 yourself (or let Zed auto‑install):&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;npm&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;install&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;-g&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;@google/gemini-cli@latest&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;p&gt;Then follow the sign‑in prompts.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Optional keybinding: see the JSON example above.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Integrate your own agent: add &lt;code dir=&quot;auto&quot;&gt;agent_servers&lt;/code&gt; in settings; use “dev: open acp logs” for debugging.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h1 id=&quot;two-things-to-try-right-now&quot;&gt;Two Things to Try Right Now&lt;/h1&gt;&lt;a href=&quot;#two-things-to-try-right-now&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Two Things to Try Right Now”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;Start a Gemini thread in your project; have it fill in tests and propose a refactor plan.&lt;/li&gt;
-&lt;li&gt;Live demo for your team: switch different agents to solve the same problem and compare results.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;What else is ACP great for? Share in the comments.&lt;/p&gt;
-&lt;hr&gt;&lt;!--
-# Image Suggestions (hand to your illustrator/tool)
-
-&gt; Requirements: illustration style, 2:1, no Chinese text.
-
-Cover Prompt
-“An illustration of a developer plugging multiple AI agents (little robots labeled ‘CLI’) into a sleek code editor via a simple cable labeled ‘ACP’, with tabs and diff views visible; modern, minimal, gradient background; 2:1 ratio.”
-
-Section Image 1 (ACP concept)
-“LSP vs ACP analogy: two panels side‑by‑side; left shows LSP connecting editor to language servers; right shows ACP connecting editor to multiple coding agents; clean lines, pastel colors, 2:1.”
-
-Section Image 2 (Gemini CLI in Zed)
-“A screenshot‑style illustration of Zed’s agent panel chatting with a terminal‑like Gemini CLI window; multi‑buffer diff panes highlighted; 2:1.”
-
-Section Image 3 (Ecosystem growth)
-“An ‘agent marketplace’ style scene: Claude, Codex, Cursor icons represented as generic robot silhouettes lining up to connect via an ‘ACP’ port to the editor; 2:1.”
- 
----
-
-## References and Further Reading
-
-* Zed Docs, “External Agents”: version requirements, keybindings, auth, and limitations.
-* Zed Blog, “Bring Your Own Agent to Zed — Featuring Gemini CLI”: ACP’s design goals, license, UI, and ecosystem outlook.
-* Zed Release Notes: announcements for ACP support in Stable/Preview.
-* Gemini CLI GitHub &amp; Docs: CLI overview, ReAct, MCP, install and login.
-* Neovim Code Companion (Oli Morris): supports ACP‑compatible agents.
-
----
-
-# Conclusion
-
-ACP makes “agents” into a plugin ecosystem.
-Zed shipped the first template; Gemini CLI is already here.
-As more agents connect, “one editor, many AI teammates” becomes normal workflow.
-Try it now—and tell me which tasks you’ll outsource to agents.
---&gt;</content:encoded><category>Zed</category><category>Gemini CLI</category><category>Agent Client Protocol (ACP)</category></item></channel></rss>
+--&gt;</content:encoded><category>Zed</category><category>Claude Code</category><category>Gemini CLI</category><category>Agent Client Protocol (ACP)</category></item></channel></rss>

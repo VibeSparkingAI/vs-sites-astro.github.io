@@ -894,7 +894,174 @@
 [1]: https://cookbook.openai.com/examples/gpt-5/gpt-5_prompting_guide &quot;GPT-5 prompting guide&quot;
 [2]: https://platform.openai.com/docs/changelog/may-7th-2024?utm_source=chatgpt.com &quot;Changelog - OpenAI API&quot;
 [3]: https://developers.openai.com/codex/ide/?utm_source=chatgpt.com &quot;Codex IDE extension&quot;
-[4]: https://platform.openai.com/docs/api-reference/responses &quot;OpenAI Platform&quot; --&gt;</content:encoded><category>GPT-5</category><category>OpenAI</category></item><item><title>英伟达：十年十万亿市值背后的市盈率估值深度分析</title><link>https://www.vibesparking.com/zh-cn/blog/finance/nvidia/2025-09-03-nvidia-valuation-pe-paradox/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/finance/nvidia/2025-09-03-nvidia-valuation-pe-paradox/</guid><pubDate>Wed, 03 Sep 2025 00:00:00 GMT</pubDate><content:encoded>&lt;div&gt;&lt;h1 id=&quot;英伟达十年十万亿市值背后的市盈率估值深度分析&quot;&gt;英伟达：十年十万亿市值背后的市盈率估值深度分析&lt;/h1&gt;&lt;a href=&quot;#英伟达十年十万亿市值背后的市盈率估值深度分析&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “英伟达：十年十万亿市值背后的市盈率估值深度分析”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+[4]: https://platform.openai.com/docs/api-reference/responses &quot;OpenAI Platform&quot; --&gt;</content:encoded><category>GPT-5</category><category>OpenAI</category></item><item><title>不想 Claude Code 把代码喂给 Anthropic？参考这份隐私设置清单</title><link>https://www.vibesparking.com/zh-cn/blog/ai/claude-code/data-usage/2025-09-04-lock-claude-3-steps-keep-code-private/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/claude-code/data-usage/2025-09-04-lock-claude-3-steps-keep-code-private/</guid><pubDate>Thu, 04 Sep 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # 不想把代码“喂给”Anthropic？这份 Claude/Claude Code 隐私硬核设置清单拿走就能用 --&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;省流版&lt;/strong&gt;：
+&lt;strong&gt;个人账号&lt;/strong&gt;（Free/Pro/Max）去 &lt;strong&gt;claude.ai → Settings → Data &amp;#x26; Privacy&lt;/strong&gt; 把“用于改进模型”关掉；&lt;strong&gt;组织/API&lt;/strong&gt; 默认不用于训练，想再稳，给 Claude Code 配 &lt;strong&gt;零数据保留（ZDR）API 密钥&lt;/strong&gt;；本机把 &lt;strong&gt;Statsig 遥测/Sentry 错误&lt;/strong&gt;关了，&lt;strong&gt;不要用 &lt;code dir=&quot;auto&quot;&gt;/bug&lt;/code&gt; 上传会话&lt;/strong&gt;，定期清理本地缓存。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;为什么现在更该上保险&quot;&gt;为什么现在更该“上保险”&lt;/h2&gt;&lt;a href=&quot;#为什么现在更该上保险&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “为什么现在更该“上保险””&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Anthropic 正在调整&lt;strong&gt;消费者产品&lt;/strong&gt;（含 Claude、Pro、Max，以及用这些账号登录的 &lt;strong&gt;Claude Code&lt;/strong&gt;）的数据策略：&lt;strong&gt;你可以选择是否允许聊天与编码会话用于训练&lt;/strong&gt;；选择 &lt;strong&gt;允许&lt;/strong&gt; 时，&lt;strong&gt;保留期最高 5 年&lt;/strong&gt;。&lt;strong&gt;不允许&lt;/strong&gt; 时，服务端&lt;strong&gt;最长保留 30 天&lt;/strong&gt;用于运行与合规。这个选择&lt;strong&gt;只影响新建或&lt;/strong&gt;“&lt;strong&gt;恢复&lt;/strong&gt;”的会话（不会倒查沉睡历史）。入口就在隐私设置里，可随时更改。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;想了解行业解读与时限提醒，可看 The Verge / Tom’s Guide 的整理。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;三类用户的最稳姿势&quot;&gt;三类用户的最稳姿势&lt;/h2&gt;&lt;a href=&quot;#三类用户的最稳姿势&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “三类用户的最稳姿势”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3 id=&quot;-个人用户free--pro--max&quot;&gt;① 个人用户（Free / Pro / Max）&lt;/h3&gt;&lt;a href=&quot;#-个人用户free--pro--max&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “① 个人用户（Free / Pro / Max）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;目标&lt;/strong&gt;：不让你的聊天与代码被用于训练。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;怎么做&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;打开：&lt;strong&gt;claude.ai → Settings → Data &amp;#x26; Privacy&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;关闭 &lt;strong&gt;“Use my chats/coding sessions to improve Claude”&lt;/strong&gt;（类似字样）。&lt;/li&gt;
+&lt;li&gt;记住：只对&lt;strong&gt;新建/恢复&lt;/strong&gt;的会话生效；删除的对话&lt;strong&gt;不会&lt;/strong&gt;被用于训练。你以后也能改回，但&lt;strong&gt;已用于训练的数据不可回退&lt;/strong&gt;。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;保留规则（你关闭训练的情况下）&lt;/strong&gt;：后端存储&lt;strong&gt;最多 30 天&lt;/strong&gt;。&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h3 id=&quot;-团队--企业--api商业产品&quot;&gt;② 团队 / 企业 / API（商业产品）&lt;/h3&gt;&lt;a href=&quot;#-团队--企业--api商业产品&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “② 团队 / 企业 / API（商业产品）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;默认就更稳&lt;/strong&gt;：Anthropic 的&lt;strong&gt;商业产品&lt;/strong&gt;（Claude for Work、Anthropic API、Claude Gov 等）&lt;strong&gt;默认不会把你的输入/输出用于训练&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;更稳一层（推荐）&lt;/strong&gt;：签 &lt;strong&gt;Zero Data Retention（ZDR，零数据保留）&lt;/strong&gt; 协议，并&lt;strong&gt;在 Claude Code 使用组织的 API Key&lt;/strong&gt;。ZDR 目前&lt;strong&gt;只适用于 Anthropic API 及使用你组织 API Key 的产品（包括 Claude Code）&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;默认保留期&lt;/strong&gt;：API 侧&lt;strong&gt;30 天自动删除&lt;/strong&gt;（如未约定 ZDR，且法律/风控无额外要求）。&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h3 id=&quot;-走云厂商通道bedrock--vertex再加一层隔离&quot;&gt;③ 走云厂商通道（Bedrock / Vertex），再加一层“隔离”&lt;/h3&gt;&lt;a href=&quot;#-走云厂商通道bedrock--vertex再加一层隔离&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “③ 走云厂商通道（Bedrock / Vertex），再加一层“隔离””&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;AWS Bedrock&lt;/strong&gt;：明确&lt;strong&gt;不会使用你的输入/输出来训练模型&lt;/strong&gt;；且条款中对第三方模型（如 Anthropic）也有限定。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Google Vertex AI&lt;/strong&gt;：有专门的&lt;strong&gt;数据治理&lt;/strong&gt;与缓存说明，企业可按需配置以达成合规与最小化保留（注意阅读缓存与治理细节）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;这层“云侧隔离”适合强合规行业，把调度、日志、KMS 等都放在云账号里统一治理。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;claude-code-必做的本机加固&quot;&gt;Claude Code 必做的本机加固&lt;/h2&gt;&lt;a href=&quot;#claude-code-必做的本机加固&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Claude Code 必做的本机加固”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;下面是“&lt;strong&gt;不外传&lt;/strong&gt;”实践里最容易忽略的点，做完就安心许多。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div&gt;&lt;h3 id=&quot;a-关遥测与错误上报保留运行指标不上传&quot;&gt;A. 关遥测与错误上报（保留运行指标不上传）&lt;/h3&gt;&lt;a href=&quot;#a-关遥测与错误上报保留运行指标不上传&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “A. 关遥测与错误上报（保留运行指标不上传）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;官方文档支持的环境变量&lt;/strong&gt;（跨平台示例）：&lt;/p&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# 关闭 Statsig 遥测（不含代码/文件路径）&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;export&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;DISABLE_TELEMETRY&lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;=&lt;/span&gt;&lt;span style=&quot;--0:#F78C6C;--1:#AA0982&quot;&gt;1&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# 关闭 Sentry 错误上报&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;export&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;DISABLE_ERROR_REPORTING&lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;=&lt;/span&gt;&lt;span style=&quot;--0:#F78C6C;--1:#AA0982&quot;&gt;1&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# 关闭 /bug 命令（不含代码/文件路径）&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;export&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;DISABLE_BUG_COMMAND&lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;=&lt;/span&gt;&lt;span style=&quot;--0:#F78C6C;--1:#AA0982&quot;&gt;1&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# 关闭所有非必要的网络请求（更彻底）&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;export&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC&lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;=&lt;/span&gt;&lt;span style=&quot;--0:#F78C6C;--1:#AA0982&quot;&gt;1&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;也可在 &lt;code dir=&quot;auto&quot;&gt;~/.claude/settings.json&lt;/code&gt; 的 &lt;code dir=&quot;auto&quot;&gt;env&lt;/code&gt; 节点写入，项目里用 &lt;code dir=&quot;auto&quot;&gt;.claude/settings.local.json&lt;/code&gt; 覆盖。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;json&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;env&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: {&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;DISABLE_TELEMETRY&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;1&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;DISABLE_ERROR_REPORTING&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;1&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;DISABLE_BUG_COMMAND&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;1&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;1&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3 id=&quot;b-避免把完整会话打包上送别随手-bug&quot;&gt;B. 避免把完整会话打包上送（别随手 &lt;code dir=&quot;auto&quot;&gt;/bug&lt;/code&gt;）&lt;/h3&gt;&lt;a href=&quot;#b-避免把完整会话打包上送别随手-bug&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “B. 避免把完整会话打包上送（别随手 /bug）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;官方建议&lt;strong&gt;用 &lt;code dir=&quot;auto&quot;&gt;/bug&lt;/code&gt; 提交问题&lt;/strong&gt;；它会把上下文打包给 Anthropic 做诊断，所以&lt;strong&gt;涉及敏感仓库/代码时尽量别用&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;社区有人汇总了&lt;strong&gt;可禁用 &lt;code dir=&quot;auto&quot;&gt;/bug&lt;/code&gt; 的环境变量&lt;/strong&gt;（&lt;code dir=&quot;auto&quot;&gt;DISABLE_BUG_COMMAND=1&lt;/code&gt;），&lt;strong&gt;属“非官方/可能变更”&lt;/strong&gt;，仅供参考。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;c-本地缓存与会话文件&quot;&gt;C. 本地缓存与会话文件&lt;/h3&gt;&lt;a href=&quot;#c-本地缓存与会话文件&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “C. 本地缓存与会话文件”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;官方说明：客户端&lt;strong&gt;本地可缓存会话最多 30 天&lt;/strong&gt;以便恢复（可配置）。在敏感环境建议&lt;strong&gt;定期清理 &lt;code dir=&quot;auto&quot;&gt;~/.claude/&lt;/code&gt;&lt;/strong&gt; 并把缓存期降到最低。&lt;/li&gt;
+&lt;li&gt;社区曾反馈过 &lt;strong&gt;&lt;code dir=&quot;auto&quot;&gt;.claude.json&lt;/code&gt; 留存对话片段&lt;/strong&gt; 的 issue，属于&lt;strong&gt;行为反馈&lt;/strong&gt;而非官方承诺；建议把 &lt;code dir=&quot;auto&quot;&gt;.claude/&lt;/code&gt; 納入你的安全基线与备份排除清单。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;一套万无一失的组合拳可直接抄&quot;&gt;一套“万无一失”的组合拳（可直接抄）&lt;/h2&gt;&lt;a href=&quot;#一套万无一失的组合拳可直接抄&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “一套“万无一失”的组合拳（可直接抄）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;个人账号（必须做）&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;关“用于改进模型”。&lt;/li&gt;
+&lt;li&gt;定期清 &lt;code dir=&quot;auto&quot;&gt;~/.claude/&lt;/code&gt;，误用 &lt;code dir=&quot;auto&quot;&gt;/bug&lt;/code&gt; 前先做&lt;strong&gt;脱敏&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;设：&lt;code dir=&quot;auto&quot;&gt;DISABLE_TELEMETRY=1&lt;/code&gt;、&lt;code dir=&quot;auto&quot;&gt;DISABLE_ERROR_REPORTING=1&lt;/code&gt;。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;团队/企业（强烈推荐）&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;只用&lt;strong&gt;组织 API Key&lt;/strong&gt; 登录 Claude Code；若可行，签 &lt;strong&gt;ZDR&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;服务器与 CI/CD 里统一注入禁传变量（上面 A）。&lt;/li&gt;
+&lt;li&gt;优先走 &lt;strong&gt;Bedrock/Vertex&lt;/strong&gt; 通道，落地云侧 DLP/KMS 与访问审计。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;常见误区别踩&quot;&gt;常见误区，别踩&lt;/h2&gt;&lt;a href=&quot;#常见误区别踩&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “常见误区，别踩”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;误区 1&lt;/strong&gt;：“我把历史对话删了，就不会被训练。”
+→ 删除后&lt;strong&gt;不会用于训练&lt;/strong&gt;，但&lt;strong&gt;是否被训练过&lt;/strong&gt;取决于你当时的设置；&lt;strong&gt;已训练不可逆&lt;/strong&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;误区 2&lt;/strong&gt;：“我用 Claude Code 就等于企业级保护。”
+→ 取决于&lt;strong&gt;你用的账号与密钥&lt;/strong&gt;。个人账号登录的 Claude Code 仍受&lt;strong&gt;个人条款&lt;/strong&gt;约束。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;误区 3&lt;/strong&gt;：“走 Bedrock/Vertex 就什么都不用管了。”
+→ 还需要&lt;strong&gt;你自己&lt;/strong&gt;配置权限边界、密钥管理、日志策略与缓存治理。文档写得很清楚。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;结语&quot;&gt;结语&lt;/h2&gt;&lt;a href=&quot;#结语&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “结语”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;数据隐私从来不是“全开/全关”的开关，而是&lt;strong&gt;一整套习惯&lt;/strong&gt;：&lt;strong&gt;配置到位 + 工具到位 + 团队纪律到位&lt;/strong&gt;。把上面的清单一次性走完，你的代码与对话基本就&lt;strong&gt;不会被分享给 Anthropic 用于训练&lt;/strong&gt;，同时也能&lt;strong&gt;保住团队的合规边界&lt;/strong&gt;。&lt;/p&gt;&lt;!-- 
+你还想让我出一版「企业内网版 Claude Code 加固脚本」吗？留言“要脚本”，我就写。
+
+---
+
+### 思考题
+
+* 你现在的项目里，最容易“误上传”的环节在哪？
+* 你的团队是否已经把 `/bug`、日志、缓存、代理这些点写进了**SOP**？
+
+---
+
+## 推荐标题（中英多语 + slug）
+
+1. **把 Claude“关成哑巴”：三步锁死你的代码与会话**
+
+   * EN: Lock Claude Down: 3 Steps to Keep Your Code Private
+   * 繁: 把 Claude「關成啞巴」：三步鎖死你的代碼與會話
+   * JP: Claudeを“無口”にする：コードを守る3ステップ
+   * FR: Verrouiller Claude : 3 étapes pour garder votre code privé
+   * ES: Pon a Claude en “modo mudo”: 3 pasos para blindar tu código
+   * PT: Deixe o Claude “mudo”: 3 passos para blindar seu código
+   * slug: **lock-claude-3-steps-keep-code-private**
+
+2. **别让你的仓库变训练集：Claude/Claude Code 隐私硬核指南**
+
+   * EN: Don’t Let Your Repo Become Training Data: A Hard-Privacy Guide
+   * 繁: 別讓你的倉庫變訓練集：Claude/Claude Code 隱私硬核指南
+   * JP: リポジトリを学習データにしない：ハードプライバシー実践
+   * FR: Ne laissez pas votre dépôt devenir un jeu d’entraînement
+   * ES: Que tu repo no sea el dataset: guía de privacidad
+   * PT: Não deixe seu repositório virar dataset
+   * slug: **dont-let-repo-be-training-data**
+
+3. **Claude 也要“最小权限”：开发者必做 7 个关口**
+
+   * EN: Minimum-Privilege Claude: 7 Must-Do Safeguards for Devs
+   * 繁: Claude 也要「最小權限」：開發者必做 7 個關口
+   * JP: Claudeにも最小権限を：開発者の7チェック
+   * FR: Claude à privilèges minimaux : 7 garde-fous clés
+   * ES: “Mínimos privilegios” para Claude: 7 pasos clave
+   * PT: Claude com “privilégio mínimo”: 7 passos
+   * slug: **minimum-privilege-claude-7-guards**
+
+---
+
+## 配图（插画风，2:1，无中文）
+
+* **封面图**：
+  “A developer locking a vault filled with code snippets and chat bubbles; subtle Claude logo motifs outside; clean lines, pastel tech palette, wide 2:1 illustration.”
+
+* **关键章节配图**：
+
+  1. “A toggle switch panel labeled ‘Model improvement’ set to off, with shield icon and flowing code stream blocked.”
+  2. “Two roads: ‘Consumer’ vs ‘Enterprise API (ZDR)’, the latter guarded by cloud shields (AWS/Vertex generic cloud icons).”
+  3. “Terminal window showing environment variables being set, telemetry lines fading out into nothing.”
+
+---
+
+## 朋友圈/评论区 3 条走心话术
+
+1. “给 Claude 打了个补丁：不让它带走我一行代码 ⚙️🛡️ 这份设置清单真香～”
+2. “原来 `/bug` 会把会话打包上送？差点把私仓细节递过去了…已关！🙈”
+3. “企业版再加 ZDR + Bedrock，一层套一层，合规队友直呼放心 😌”
+
+---
+
+**延伸阅读｜Claude 数据政策变动**
+
+---
+
+*这版是否合你口味？要不要我再出一份「一键脚本 + 团队SOP 模板」的扩写版？*
+
+**参考与依据**：Anthropic 官方条款与隐私中心、Claude Code 文档与 NPM 页面、以及主流媒体解读文。关键出处已在文中对应处标注。主要文档： --&gt;</content:encoded><category>Claude Code</category></item><item><title>英伟达：十年十万亿市值背后的市盈率估值深度分析</title><link>https://www.vibesparking.com/zh-cn/blog/finance/nvidia/2025-09-03-nvidia-valuation-pe-paradox/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/finance/nvidia/2025-09-03-nvidia-valuation-pe-paradox/</guid><pubDate>Wed, 03 Sep 2025 00:00:00 GMT</pubDate><content:encoded>&lt;div&gt;&lt;h1 id=&quot;英伟达十年十万亿市值背后的市盈率估值深度分析&quot;&gt;英伟达：十年十万亿市值背后的市盈率估值深度分析&lt;/h1&gt;&lt;a href=&quot;#英伟达十年十万亿市值背后的市盈率估值深度分析&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “英伟达：十年十万亿市值背后的市盈率估值深度分析”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
 &lt;p&gt;在当前全球科技投资的浪潮之巅，英伟达（NVIDIA）无疑是那颗最耀眼的明星。然而，这家市值一度突破4万亿美元的巨头，其近期股价走势却让许多人感到困惑。根据最近的财报数据，英伟达的表现超出了华尔街的普遍预期，但其股价却在盘后交易中应声下跌，甚至一度进入技术性熊市。这种“超预期却下跌”的悖论，不禁引人深思：这究竟是短期市场情绪的过激反应，还是一个被高估的神话开始走向破灭？&lt;/p&gt;
 &lt;p&gt;本篇文章将从市盈率（P/E）这一核心估值指标切入，对英伟达的价值进行一次全面、深入的剖析。我们将审视其最新的财务数据，回顾其估值的历史变迁，分析支撑其高增长的长期引擎与潜在风险，并最终展望其在未来十年内的发展路径，为普通投资者提供一个清晰、理性的视角。&lt;/p&gt;
 &lt;div&gt;&lt;h2 id=&quot;财报超预期股价为何反而下跌&quot;&gt;财报超预期，股价为何反而下跌？&lt;/h2&gt;&lt;a href=&quot;#财报超预期股价为何反而下跌&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “财报超预期，股价为何反而下跌？”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
@@ -3577,196 +3744,4 @@ Zed 在后台&lt;strong&gt;直接跑真实的 Gemini CLI 子进程&lt;/strong&gt
 [3]: https://github.com/Xuanwo/acp-claude-code &quot;GitHub - Xuanwo/acp-claude-code: The ACP implementation for Claude Code&quot;
 [4]: https://docs.anthropic.com/en/docs/claude-code/setup?utm_source=chatgpt.com &quot;Set up Claude Code&quot;
 [5]: https://www.anthropic.com/claude-code?utm_source=chatgpt.com &quot;Claude Code: Deep coding at terminal velocity \ Anthropic&quot;
-[6]: https://zed.dev/docs/all-actions &quot;All Actions | Zed Code Editor Documentation&quot; --&gt;</content:encoded><category>Zed</category><category>Claude Code</category><category>Gemini CLI</category><category>Agent Client Protocol（ACP）</category></item><item><title>（Claude Code 待续）Zed 引入 ACP 接入外部 Agent（Gemini CLI 已上线）</title><link>https://www.vibesparking.com/zh-cn/blog/ai/zed/2025-08-28-zed-acp-gemini-cli-guide/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/zed/2025-08-28-zed-acp-gemini-cli-guide/</guid><pubDate>Thu, 28 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # （Claude Code 待续）Zed 引入 ACP 接入外部 Agent（Gemini CLI 已上线） --&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;Zed 做了一个 Agent Client Protocol（ACP）&lt;/strong&gt;，把“终端里的智能体 Gemini CLI,  Claude Code”等接进编辑器里。第一个落地案例就是 &lt;strong&gt;Gemini CLI&lt;/strong&gt;。你继续用熟悉的 CLI，Zed 负责把它嵌到面板里、看得见改动、还能多缓冲区审阅。官方还明说，&lt;strong&gt;ACP 是开源（Apache 2.0）&lt;/strong&gt;，欢迎更多 Agent 和编辑器加入生态。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;一句话总结tldr&quot;&gt;一句话总结（TL;DR）&lt;/h2&gt;&lt;a href=&quot;#一句话总结tldr&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “一句话总结（TL;DR）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;ACP = 给智能体的“LSP”&lt;/strong&gt;：像当年的语言服务器协议一样，把 Agent 和编辑器解耦，想换就换。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Gemini CLI 已可直接在 Zed 用&lt;/strong&gt;：打开 Agent 面板即可新建线程；Zed 0.201.5+ 支持。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;真实 CLI、非“阉割版”&lt;/strong&gt;：Zed 后台跑 Gemini CLI，通过 ACP 对话；可在编辑器里直观看到文件与改动。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;开箱就能干活&lt;/strong&gt;：没装 CLI 会自动安装；已装则走 PATH；Gemini CLI 需 ≥ &lt;strong&gt;0.2.0&lt;/strong&gt;。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;可自带任意 Agent&lt;/strong&gt;：只要会说 ACP，改下配置就能接；内置调试日志。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h1 id=&quot;引言&quot;&gt;引言&lt;/h1&gt;&lt;a href=&quot;#引言&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “引言”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;很多人问：“&lt;strong&gt;我能不能在一个编辑器里切换多个 AI 编程 Agent？&lt;/strong&gt;”
-Zed 这波给了答案：能。现在就能。&lt;strong&gt;ACP 把‘代理’和‘编辑器’分开了&lt;/strong&gt;，Gemini CLI 率先打样，Neovim 也已跟进支持 ACP 的生态（Code Companion）。&lt;strong&gt;生态的门，打开了。&lt;/strong&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h1 id=&quot;为什么-acp-值得关注&quot;&gt;为什么 ACP 值得关注？&lt;/h1&gt;&lt;a href=&quot;#为什么-acp-值得关注&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “为什么 ACP 值得关注？”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;1）像 LSP 一样“解耦”&lt;/strong&gt;
-你不必为了换 Agent 换编辑器。&lt;strong&gt;任何讲 ACP 的 Agent 都能插进 Zed 的 UI&lt;/strong&gt;，享受多缓冲区对比、语法高亮、以及对改动的实时可视化。&lt;strong&gt;数据只在本地&lt;/strong&gt;，不经过 Zed 服务器。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;2）“真实能力”+“编辑器体验”&lt;/strong&gt;
-Zed 不是模拟一个“聊天窗口”，而是&lt;strong&gt;直接把 Gemini CLI 当子进程跑&lt;/strong&gt;，用 JSON-RPC 通信。好处是：&lt;strong&gt;你得到 CLI 的全部能力&lt;/strong&gt;，同时&lt;strong&gt;获得编辑器级的变更预览与导航&lt;/strong&gt;。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;3）开放生态&lt;/strong&gt;
-ACP &lt;strong&gt;开源（Apache 2.0）&lt;/strong&gt;，官方还号召其他编辑器加入；Neovim 的 Code Companion 已支持 ACP 兼容 Agent。&lt;strong&gt;这意味着未来你可以在不同编辑器里获得类似体验&lt;/strong&gt;。&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h1 id=&quot;现在能干什么gemini-cli-in-zed&quot;&gt;现在能干什么？（Gemini CLI in Zed）&lt;/h1&gt;&lt;a href=&quot;#现在能干什么gemini-cli-in-zed&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “现在能干什么？（Gemini CLI in Zed）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;直接在 Agent 面板跑 Gemini CLI 线程&lt;/strong&gt;（cmd-? 打开面板，右上角 + 号新建）。Zed &lt;strong&gt;Stable v0.201.5+&lt;/strong&gt; 支持。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;可 @ 引用文件、符号、历史线程&lt;/strong&gt;，甚至&lt;strong&gt;抓取网页&lt;/strong&gt;；但目前&lt;strong&gt;暂不支持&lt;/strong&gt;：&lt;strong&gt;回溯编辑历史消息、从历史恢复、checkpoint、安全壳（SSH）项目里用 Agent&lt;/strong&gt;——这些“官方 Agent”特性正在补齐。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;键位绑定&lt;/strong&gt;示例（你可以给 Gemini 分配快捷键）：&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;json&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;[&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;{&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;bindings&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: {&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;      &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;cmd-alt-g&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: [&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;agent::NewExternalAgentThread&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;, { &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;agent&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;gemini&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; }]&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;    &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;]&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;p&gt;（来自 Zed 文档示例。）&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h1 id=&quot;安装与认证3-步走&quot;&gt;安装与认证（3 步走）&lt;/h1&gt;&lt;a href=&quot;#安装与认证3-步走&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “安装与认证（3 步走）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;第 0 步：更新 Zed&lt;/strong&gt;
-确保 Zed 版本满足 &lt;strong&gt;Stable v0.201.5+&lt;/strong&gt;（或更新的 Preview 版本）。&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;第 1 步：准备 Gemini CLI&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;若你 &lt;strong&gt;未安装&lt;/strong&gt;，Zed 会自动装一个版本；&lt;/li&gt;
-&lt;li&gt;若你 &lt;strong&gt;已安装&lt;/strong&gt;，Zed 直接用 PATH 里的；&lt;/li&gt;
-&lt;li&gt;需 &lt;strong&gt;Gemini CLI ≥ 0.2.0&lt;/strong&gt;，版本太旧会报错；升级通常跑：&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;npm&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;install&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;-g&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;@google/gemini-cli@latest&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;第 2 步：登录方式三选一&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Log in with Google&lt;/strong&gt;：浏览器弹出，&lt;strong&gt;Zed 不会看到你的 OAuth/Token&lt;/strong&gt;；&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Gemini API Key&lt;/strong&gt;：若设置了 &lt;code dir=&quot;auto&quot;&gt;GEMINI_API_KEY&lt;/code&gt;，Zed 直接使用；否则会提示你输入，并&lt;strong&gt;安全存到系统钥匙串&lt;/strong&gt;；&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Vertex AI&lt;/strong&gt;：已正确配置 GCP 环境的用户可选。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h1 id=&quot;进阶接入你自己的-agentacp&quot;&gt;进阶：接入你自己的 Agent（ACP）&lt;/h1&gt;&lt;a href=&quot;#进阶接入你自己的-agentacp&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “进阶：接入你自己的 Agent（ACP）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;配置很简单&lt;/strong&gt;：&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;json&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;{&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;agent_servers&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: {&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;Custom Agent&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: {&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;      &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;command&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;node&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;      &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;args&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: [&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;~/projects/agent/index.js&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;, &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;--acp&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;],&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;      &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;env&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: {}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;    &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;p&gt;写个会说 ACP 的进程就能接。开发时可用 &lt;strong&gt;“dev: open acp logs”&lt;/strong&gt; 打开&lt;strong&gt;调试视图&lt;/strong&gt;，看 Zed 与 Agent 的消息收发。&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h1 id=&quot;推荐使用场景&quot;&gt;推荐使用场景&lt;/h1&gt;&lt;a href=&quot;#推荐使用场景&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “推荐使用场景”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;1）大仓重构 / 批量修补&lt;/strong&gt;
-多缓冲区同时审阅改动，&lt;strong&gt;一眼看完&lt;/strong&gt;；失败重试、重写补丁更顺手。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;2）多 Agent 竞争上岗&lt;/strong&gt;
-今天你想让 Gemini CLI 修测试，&lt;strong&gt;明天换另一个 ACP Agent 做性能实验&lt;/strong&gt;。&lt;strong&gt;切换 Agent，不换编辑器&lt;/strong&gt;。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;3）安全合规团队&lt;/strong&gt;
-&lt;strong&gt;真实 CLI 在本地跑&lt;/strong&gt;，Zed 只是 UI 管理和协议转发；没有把你的代码传到 Zed 服务器。对内网仓、金融医疗等场景更友好。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;4）从“命令行工作流”平滑过渡到“编辑器工作流”&lt;/strong&gt;
-你仍然是 CLI 的肌肉记忆，但&lt;strong&gt;获得编辑器级的变更可视化与导航&lt;/strong&gt;，效率更稳。&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h1 id=&quot;现在与下一步&quot;&gt;现在与下一步&lt;/h1&gt;&lt;a href=&quot;#现在与下一步&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “现在与下一步”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;现在就能用&lt;/strong&gt;：Zed 已在稳定版开启外部 Agent 支持，Gemini CLI 首发。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;生态在扩&lt;/strong&gt;：&lt;strong&gt;ACP 开源&lt;/strong&gt;，官方也鼓励&lt;strong&gt;其他编辑器&lt;/strong&gt;和&lt;strong&gt;更多 Agent&lt;/strong&gt;加入；Neovim 已通过 &lt;strong&gt;Code Companion&lt;/strong&gt; 接了 ACP 兼容 Agent。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;可预期的下一个&lt;/strong&gt;：&lt;strong&gt;Claude Code、Codex CLI、Cursor CLI&lt;/strong&gt; 等只要实现 ACP，就能无缝进 Zed。&lt;strong&gt;这是趋势判断&lt;/strong&gt;（并非官方承诺），但从 ACP 的开放性与官方表态看，&lt;strong&gt;很可能会发生&lt;/strong&gt;。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h1 id=&quot;快速起步清单拷走就用&quot;&gt;快速起步清单（拷走就用）&lt;/h1&gt;&lt;a href=&quot;#快速起步清单拷走就用&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “快速起步清单（拷走就用）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;升级 Zed ≥ v0.201.5；打开 &lt;strong&gt;Agent Panel（cmd-?）&lt;/strong&gt;。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;终端安装（或让 Zed 自动装）&lt;strong&gt;Gemini CLI ≥ 0.2.0&lt;/strong&gt;：&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;npm&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;install&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;-g&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;@google/gemini-cli@latest&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;p&gt;然后按提示登录。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;绑定快捷键（可选）：见上文 JSON 示例。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;想接自研 Agent？把 &lt;code dir=&quot;auto&quot;&gt;agent_servers&lt;/code&gt; 写进设置，&lt;strong&gt;用 “dev: open acp logs” 调试&lt;/strong&gt;。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h1 id=&quot;你可以立刻做的两件事&quot;&gt;你可以立刻做的两件事&lt;/h1&gt;&lt;a href=&quot;#你可以立刻做的两件事&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “你可以立刻做的两件事”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;在你的项目里&lt;strong&gt;开一个 Gemini 线程&lt;/strong&gt;，让它&lt;strong&gt;补齐测试 + 出一版重构计划&lt;/strong&gt;；&lt;/li&gt;
-&lt;li&gt;给团队演示：&lt;strong&gt;切换不同 Agent&lt;/strong&gt; 解决同一个问题，现场对比效果。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;你觉得 ACP 还适合干啥？评论区聊聊。&lt;/strong&gt;&lt;/p&gt;
-&lt;hr&gt;&lt;!--
-# 配图建议（可直接交给画图工具）
-
-&gt; 要求：**插画风**，**2:1**，**不含中文**。
-
-**封面图 Prompt**
-“An illustration of a developer plugging multiple AI agents (little robots labeled ‘CLI’) into a sleek code editor via a simple cable labeled ‘ACP’, with tabs and diff views visible; modern, minimal, gradient background; 2:1 ratio.”
-
-**章节配图 1（ACP 概念）**
-“LSP vs ACP analogy: two panels side-by-side; left shows LSP connecting editor to language servers; right shows ACP connecting editor to multiple coding agents; clean lines, pastel colors, 2:1.”
-
-**章节配图 2（Gemini CLI in Zed）**
-“A screenshot-style illustration of Zed’s agent panel chatting with a terminal-like Gemini CLI window; multi-buffer diff panes highlighted; 2:1.”
-
-**章节配图 3（生态拓展）**
-“An ‘agent marketplace’ style scene: Claude, Codex, Cursor icons represented as generic robot silhouettes lining up to connect via an ‘ACP’ port to the editor; 2:1.”
- 
----
-
-## 参考与延伸阅读
-
-* Zed 文档《External Agents》：版本要求、键位、认证与限制说明。
-* Zed 博客《Bring Your Own Agent to Zed — Featuring Gemini CLI》：ACP 设计初衷、开源协议、UI 能力、生态展望。
-* Zed Release Notes：宣布在稳定/预览版本上线 ACP 支持。
-* Gemini CLI GitHub &amp; Docs：CLI 介绍、ReAct、MCP、安装与登录。
-* Neovim Code Companion（Oli Morris）：支持 ACP 兼容 Agent。
-
----
-
-# 结语
-
-**ACP 把“Agent”做成了插件生态。**
-Zed 做了第一个样板，**Gemini CLI 已就位**。
-当更多 Agent 接上来，**“一个编辑器，多位智能同事”**，会变成日常工作流的一部分。
-\*\*现在就去试一把。\*\*然后告诉我：**你要把哪类任务外包给 Agent？**
-
----
-
-## 3 个多语言标题（含 slug）
-
-1.
-
-* 简：**Zed 接入外部 Agent：ACP + Gemini CLI 实战指南**
-* 繁：**Zed 接入外部 Agent：ACP + Gemini CLI 實戰指南**
-* EN: **Zed’s External Agents: A Practical Guide to ACP + Gemini CLI**
-* JP: **Zedの外部エージェント：ACP＋Gemini CLI実践ガイド**
-* FR: **Agents externes dans Zed : Guide pratique d’ACP + Gemini CLI**
-* ES: **Agentes externos en Zed: Guía práctica de ACP + Gemini CLI**
-* PT: **Agentes externos no Zed: Guia prático de ACP + Gemini CLI**
-* slug: `zed-acp-gemini-cli-guide`
-
-2.
-
-* 简：**一个编辑器，多个智能体：ACP 为什么会改变你写代码**
-* 繁：**一個編輯器，多個智能體：ACP 為何改變你寫程式**
-* EN: **One Editor, Many Agents: Why ACP Changes How You Code**
-* JP: **1つのエディタで多数のエージェント：ACPが変える開発体験**
-* FR: **Un éditeur, plusieurs agents : comment l’ACP change le développement**
-* ES: **Un editor, muchos agentes: por qué ACP cambia tu forma de programar**
-* PT: **Um editor, muitos agentes: por que o ACP muda sua forma de codar**
-* slug: `one-editor-many-agents-acp`
-
-3.
-
-* 简：**今天接上 Gemini CLI，明天连上 Claude Code 与 Codex CLI？**
-* 繁：**今天接上 Gemini CLI，明天連上 Claude Code 與 Codex CLI？**
-* EN: **Gemini CLI Today—Claude Code &amp; Codex CLI Tomorrow?**
-* JP: **今日はGemini CLI、明日はClaude CodeとCodex CLI？**
-* FR: **Gemini CLI aujourd’hui—Claude Code &amp; Codex CLI demain ?**
-* ES: **¿Gemini CLI hoy—Claude Code y Codex CLI mañana?**
-* PT: **Gemini CLI hoje—Claude Code e Codex CLI amanhã?**
-* slug: `gemini-today-claude-codex-tomorrow`
-
----
-
-## 3 条可复制的朋友圈/评论文案
-
-1. \*\*Zed 把“AI 同事”请进编辑器了！\*\*ACP 一上，Gemini CLI 直接用，改动还能可视化。感觉要换代理，不用换工具了。
-2. 刚试了下 **cmd-alt-g** 开线程，Gemini CLI 修补单测还挺稳的。等 **Claude Code** 也接上，爽度应该翻倍。
-3. **一个编辑器，多个 Agent PK**，这样才叫工作流。你们都在用哪个 Agent？下方打榜！
-
----
-
-需要我把这篇文章**扩写成 10,000 字专题**，或配一套**可复制的演讲/培训稿**吗？我现在就整理。
-
-[1]: https://zed.dev/blog/bring-your-own-agent-to-zed?utm_source=chatgpt.com &quot;Bring Your Own Agent to Zed — Featuring Gemini CLI&quot;
-[2]: https://zed.dev/docs/ai/external-agents?utm_source=chatgpt.com &quot;External Agents | Zed Code Editor Documentation&quot;
-[3]: https://zed.dev/docs/ai/external-agents &quot;External Agents | Zed Code Editor Documentation&quot;
-[4]: https://github.com/olimorris/codecompanion.nvim?utm_source=chatgpt.com &quot;olimorris/codecompanion.nvim: ✨ AI Coding, Vim Style&quot;
-[5]: https://zed.dev/releases/stable?utm_source=chatgpt.com &quot;Stable Releases&quot;
-[6]: https://cloud.google.com/gemini/docs/codeassist/gemini-cli?utm_source=chatgpt.com &quot;Gemini CLI&quot;
-[7]: https://github.com/google-gemini/gemini-cli?utm_source=chatgpt.com &quot;google-gemini/gemini-cli: An open-source AI agent that ...&quot; --&gt;</content:encoded><category>Zed</category><category>Gemini CLI</category><category>Agent Client Protocol（ACP）</category></item></channel></rss>
+[6]: https://zed.dev/docs/all-actions &quot;All Actions | Zed Code Editor Documentation&quot; --&gt;</content:encoded><category>Zed</category><category>Claude Code</category><category>Gemini CLI</category><category>Agent Client Protocol（ACP）</category></item></channel></rss>
