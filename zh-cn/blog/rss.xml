@@ -1,4 +1,143 @@
-<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Vibe Sparking AI | Blog</title><description/><link>https://www.vibesparking.com/</link><language>zh-CN</language><item><title>Claude Code vs Codex CLI 谁更适合你的日常开发？</title><link>https://www.vibesparking.com/zh-cn/blog/ai/claude-code/2025-09-04-codex-vs-claude-code-speed-vs-orchestration/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/claude-code/2025-09-04-codex-vs-claude-code-speed-vs-orchestration/</guid><pubDate>Thu, 04 Sep 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # Claude Code vs Codex CLI 谁更适合你的日常开发？ --&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Vibe Sparking AI | Blog</title><description/><link>https://www.vibesparking.com/</link><language>zh-CN</language><item><title>Claude Code 母公司 Anthropic 完成100亿美元融资分析</title><link>https://www.vibesparking.com/zh-cn/blog/ai/anthropic/2025-09-04-anthropic-mission-and-outlook/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/anthropic/2025-09-04-anthropic-mission-and-outlook/</guid><pubDate>Thu, 04 Sep 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Anthropic 是一家在人工智能领域异军突起的公司，其核心愿景是建立可信、可解释、可控制的 AI 系统，并以此引领一场“以安全为核心的竞赛”。与许多同行不同，Anthropic 的历史并非仅始于技术突破，而是源于一场深刻的哲学与治理分歧。自诞生之日起，它就将 AI 安全和伦理作为根本使命，并将其融入公司的法律架构、技术方法论与商业战略之中。&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;第一部分安全为先的使命起源&quot;&gt;第一部分：安全为先的使命起源&lt;/h2&gt;&lt;a href=&quot;#第一部分安全为先的使命起源&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “第一部分：安全为先的使命起源”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3 id=&quot;源于分歧的诞生openai-的哲学裂痕&quot;&gt;源于分歧的诞生：OpenAI 的哲学裂痕&lt;/h3&gt;&lt;a href=&quot;#源于分歧的诞生openai-的哲学裂痕&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “源于分歧的诞生：OpenAI 的哲学裂痕”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Anthropic 由一群前 OpenAI 员工于 2021 年创立，核心人物是兄妹二人——曾任 OpenAI 研究副总裁的 Dario Amodei 和曾任安全与政策副总裁的 Daniela Amodei。他们在 2020 年底与五名同事一同离开 OpenAI，原因在于对公司发展方向存在根本分歧。&lt;/p&gt;
+&lt;p&gt;Dario 等人对 OpenAI 在 2019 年从非营利组织转型为“利润上限”公司，以及随后与微软建立深度伙伴关系表示担忧。他们认为，这种转变使使命从“确保 AI 造福全人类”转向商业化与利润追求，将 AI 安全与伦理置于次要位置。Dario 曾表示，他们“能够预见人工智能即将呈指数级发展”，AI 公司亟需“制定一套价值观来约束这些强大的程序”。Anthropic 的成立，是对“为商业牺牲安全性”趋势的直接反制。&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;公益公司将使命写入公司章程&quot;&gt;公益公司：将使命写入公司章程&lt;/h3&gt;&lt;a href=&quot;#公益公司将使命写入公司章程&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “公益公司：将使命写入公司章程”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Anthropic 是特拉华州公益公司（Public Benefit Corporation, PBC）。这种法律结构要求在平衡股东利益的同时，将公益目标作为优先考量。对 Anthropic 而言，这一目标是开发“可靠、可解释和可控制的 AI 系统”。&lt;/p&gt;
+&lt;p&gt;为确保安全使命不受商业压力侵蚀，Anthropic 设立了“长期利益信托”（Long-Term Benefit Trust），该信托持有 T 类股票并可选举董事会大多数席位。此治理设计意在从法律层面将安全使命与股东财务利益适度隔离，回应传统公司治理在应对 AGI 潜在灾难性风险方面的局限。&lt;/p&gt;
+&lt;p&gt;以上举措从创始团队的离职到公司结构设计，构成了 Anthropic 的核心叙事：AI 的快速进步需要一种以使命为导向的治理范式。这既树立了“负责任”的品牌形象，也为担忧 AGI 商业化风险的人提供了可信选择。&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;第二部分claude-的架构哲学&quot;&gt;第二部分：Claude 的架构哲学&lt;/h2&gt;&lt;a href=&quot;#第二部分claude-的架构哲学&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “第二部分：Claude 的架构哲学”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Anthropic 的独特性不仅在治理结构，更在其技术方法论。其核心对齐路线旨在正面解决 AI 伦理对齐这一根本难题。&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;宪法式-aiconstitutional-ai价值观的编码&quot;&gt;宪法式 AI（Constitutional AI）：价值观的编码&lt;/h3&gt;&lt;a href=&quot;#宪法式-aiconstitutional-ai价值观的编码&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “宪法式 AI（Constitutional AI）：价值观的编码”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;宪法式 AI（CAI）的目标是训练 AI 成为“有帮助、诚实且无害”。其核心是在训练中引入一份由人类撰写的“宪法”——一组原则，指导模型自我评估与修改输出。与传统在敏感问题上“回避/模糊”的处理不同，CAI 让模型在遵循原则的前提下更直接地回应请求，并在拒绝时说明理由。&lt;/p&gt;
+&lt;p&gt;训练过程分两阶段：监督学习阶段中，模型依据宪法原则批评并修正自身不当回答，生成更“无害”的数据集进行微调。&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;基于-ai-反馈的强化学习rlaif对齐的自动化引擎&quot;&gt;基于 AI 反馈的强化学习（RLAIF）：对齐的自动化引擎&lt;/h3&gt;&lt;a href=&quot;#基于-ai-反馈的强化学习rlaif对齐的自动化引擎&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “基于 AI 反馈的强化学习（RLAIF）：对齐的自动化引擎”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;第二阶段为强化学习。Anthropic 采用 RLAIF（Reinforcement Learning from AI Feedback）：模型生成两段回答，再按随机选定的宪法原则评估并选优；这些评估数据训练偏好模型，从而让最终策略更符合宪法原则。&lt;/p&gt;
+&lt;p&gt;相较常见的 RLHF，Anthropic 认为 RLAIF 更高效、更可扩展（减少人工标注依赖），且通过以自然语言编码目标提升可解释性与透明度，同时在一定程度上降低人类主观偏见的影响。批评者指出，宪法本身仍由人类撰写，难免主观性；同时减少人工干预也带来问责与监督的讨论。这种“自动化”与“人工控制”的张力，是理解 Anthropic 方法论的关键。&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;第三部分claude-ai-系列的演进&quot;&gt;第三部分：Claude AI 系列的演进&lt;/h2&gt;&lt;a href=&quot;#第三部分claude-ai-系列的演进&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “第三部分：Claude AI 系列的演进”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3 id=&quot;从研究到前沿模型持续创新的时间线&quot;&gt;从研究到前沿模型：持续创新的时间线&lt;/h3&gt;&lt;a href=&quot;#从研究到前沿模型持续创新的时间线&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “从研究到前沿模型：持续创新的时间线”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;自 2023 年 3 月发布 Claude 1 以来，Anthropic 保持 4–8 个月一版的高速迭代：Claude 2（2023 年 7 月）、Claude 3 系列（2024 年 3 月）等，体现其既是研究机构，也是“前沿模型竞赛”的产品公司。&lt;/p&gt;
+&lt;p&gt;每代新模型在上下文、推理与多模态上持续跃迁：从 Claude 2 的 100K token 上下文，到 Claude 3 的 200K，再到 Claude 4 扩展推理模式接近 100 万 token。Claude 3 起支持图像与文本，多模态理解、编程、数学与逻辑推理能力显著增强。&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;梯级架构覆盖不同场景&quot;&gt;梯级架构：覆盖不同场景&lt;/h3&gt;&lt;a href=&quot;#梯级架构覆盖不同场景&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “梯级架构：覆盖不同场景”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;自 Claude 3 系列起采用三档梯级架构：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Haiku：最快，面向实时与低延迟场景。&lt;/li&gt;
+&lt;li&gt;Sonnet：性能/速度平衡，覆盖通用任务。&lt;/li&gt;
+&lt;li&gt;Opus：旗舰级，面向复杂任务与高级推理。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;2024 年 6 月的 Claude 3.5 Sonnet 在多项基准上超越更大的 Claude 3 Opus，显示出激进优化与产品化能力。&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;率先探索代理能力&quot;&gt;率先探索代理能力&lt;/h3&gt;&lt;a href=&quot;#率先探索代理能力&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “率先探索代理能力”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;Artifacts：随 Claude 3.5 Sonnet 推出，可在专门窗口实时生成与预览代码、SVG、网站等。&lt;/li&gt;
+&lt;li&gt;Computer Use：在 3.5 Sonnet 测试版首发，AI 可操控虚拟电脑界面，模拟光标、点击、输入等跨应用多步骤任务。&lt;/li&gt;
+&lt;li&gt;Hybrid Dual-Mode Reasoning：在 Claude 3.7 与 Claude 4 中引入，可在快速响应与“扩展思考”之间动态切换，必要时调用工具（检索、执行代码）解决复杂问题。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这些能力推动 AI 从对话助理走向自主代理，也让 AGI 相关的现实风险更为迫近。&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;表-1claude-ai-系列发布时间线与核心能力&quot;&gt;表 1：Claude AI 系列发布时间线与核心能力&lt;/h3&gt;&lt;a href=&quot;#表-1claude-ai-系列发布时间线与核心能力&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “表 1：Claude AI 系列发布时间线与核心能力”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;模型名称&lt;/th&gt;&lt;th&gt;发布日期&lt;/th&gt;&lt;th&gt;关键能力/特点&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;Claude 1&lt;/td&gt;&lt;td&gt;2023年3月&lt;/td&gt;&lt;td&gt;初次发布，AI 助理原型&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Claude 2&lt;/td&gt;&lt;td&gt;2023年7月&lt;/td&gt;&lt;td&gt;行业领先的 100K token 上下文窗口&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Claude 3 系列（Haiku, Sonnet, Opus）&lt;/td&gt;&lt;td&gt;2024年3月&lt;/td&gt;&lt;td&gt;梯级架构，文本+图像，多项基准表现卓越&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Claude 3.5 Sonnet&lt;/td&gt;&lt;td&gt;2024年6月&lt;/td&gt;&lt;td&gt;编码与图表分析显著提升，推出 “Artifacts”&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Claude 3.7 Sonnet&lt;/td&gt;&lt;td&gt;2025年2月&lt;/td&gt;&lt;td&gt;混合推理，支持快/深切换&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Claude 4 系列（Sonnet 4, Opus 4）&lt;/td&gt;&lt;td&gt;2025年5月&lt;/td&gt;&lt;td&gt;100 万 token 上下文，改进 “Computer Use” 与 “Working Notes”&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;div&gt;&lt;h2 id=&quot;第四部分安全-ai-的商业实践成长资本与伙伴关系&quot;&gt;第四部分：安全 AI 的商业实践：成长、资本与伙伴关系&lt;/h2&gt;&lt;a href=&quot;#第四部分安全-ai-的商业实践成长资本与伙伴关系&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “第四部分：安全 AI 的商业实践：成长、资本与伙伴关系”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3 id=&quot;资本市场的崛起&quot;&gt;资本市场的崛起&lt;/h3&gt;&lt;a href=&quot;#资本市场的崛起&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “资本市场的崛起”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Anthropic 估值在 2024 年末超 610 亿美元，2025 年中 Series F 后达约 1830 亿美元。本轮由 ICONIQ 领投的 130 亿美元融资，强化其在企业、开发者与高端用户市场的领先地位。&lt;/p&gt;
+&lt;p&gt;营收同样快速：年化收入从 2025 年初约 10 亿美元增至同年 8 月超 50 亿美元。Claude Code 在三个月内实现超 5 亿美元年化收入，显示技术已有效转化为竞争力。&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;与科技巨头的战略联盟&quot;&gt;与科技巨头的战略联盟&lt;/h3&gt;&lt;a href=&quot;#与科技巨头的战略联盟&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “与科技巨头的战略联盟”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Anthropic 与亚马逊、谷歌建立深度合作：将 AWS 作为主要云供应商，并在 Amazon Bedrock 上提供模型；谷歌亦承诺数十亿美元投资与云基础设施支持。双方提供的 Trainium 与 TPU 等算力，使 Anthropic 能进行大规模前沿训练。&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;道德困境泄露备忘录的启示&quot;&gt;道德困境：泄露备忘录的启示&lt;/h3&gt;&lt;a href=&quot;#道德困境泄露备忘录的启示&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “道德困境：泄露备忘录的启示”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;2025 年，CEO Dario Amodei 的内部备忘录被泄露，坦言公司为维持竞争力考虑向中东主权资本寻求投资，并承认其中“道德风险”。他写道：“我真的希望我们不必陷入这种境地，但我们身在其中。”以及“‘任何坏人都不应从我们的成功中受益’是一个很难经营企业的原则。”&lt;/p&gt;
+&lt;p&gt;这揭示了 Anthropic 的核心矛盾：在资本密集的竞赛中，即便具公益属性的治理结构，也难完全免于“竞相触底”的现实压力。&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;表-2anthropic-的主要融资轮次与估值&quot;&gt;表 2：Anthropic 的主要融资轮次与估值&lt;/h3&gt;&lt;a href=&quot;#表-2anthropic-的主要融资轮次与估值&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “表 2：Anthropic 的主要融资轮次与估值”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;日期&lt;/th&gt;&lt;th&gt;投资方&lt;/th&gt;&lt;th&gt;投资金额&lt;/th&gt;&lt;th&gt;估值&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;2022年4月&lt;/td&gt;&lt;td&gt;FTX&lt;/td&gt;&lt;td&gt;5.8 亿美元&lt;/td&gt;&lt;td&gt;未公开&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2023年9月/10月&lt;/td&gt;&lt;td&gt;亚马逊、谷歌&lt;/td&gt;&lt;td&gt;亚马逊承诺 40 亿美元（首轮 12.5 亿），谷歌承诺 20 亿美元（首轮 5 亿）&lt;/td&gt;&lt;td&gt;超过 610 亿美元&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2024年3月&lt;/td&gt;&lt;td&gt;亚马逊&lt;/td&gt;&lt;td&gt;27.5 亿美元（完成承诺的 40 亿）&lt;/td&gt;&lt;td&gt;未公开&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2024年11月&lt;/td&gt;&lt;td&gt;亚马逊&lt;/td&gt;&lt;td&gt;40 亿美元（总投资达 80 亿）&lt;/td&gt;&lt;td&gt;未公开&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2025年5月&lt;/td&gt;&lt;td&gt;ICONIQ、Fidelity、Lightspeed 等&lt;/td&gt;&lt;td&gt;130 亿美元&lt;/td&gt;&lt;td&gt;1830 亿美元&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;div&gt;&lt;h2 id=&quot;第五部分未来展望agi-与社会影响&quot;&gt;第五部分：未来展望：AGI 与社会影响&lt;/h2&gt;&lt;a href=&quot;#第五部分未来展望agi-与社会影响&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “第五部分：未来展望：AGI 与社会影响”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3 id=&quot;agi-竞赛紧迫的愿景&quot;&gt;AGI 竞赛：紧迫的愿景&lt;/h3&gt;&lt;a href=&quot;#agi-竞赛紧迫的愿景&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “AGI 竞赛：紧迫的愿景”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Dario Amodei 对 AGI 的时间表极为激进，曾预测“奇点”可能在 2026 年到来。这种紧迫感解释了 Anthropic 对资本的巨大需求以及在竞争中的艰难权衡。&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;引领以安全为核心的竞赛&quot;&gt;引领“以安全为核心的竞赛”&lt;/h3&gt;&lt;a href=&quot;#引领以安全为核心的竞赛&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “引领“以安全为核心的竞赛””&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;除以 CAI 设定技术基线外，Anthropic 也积极参与美国 AI 政策讨论。与 Palantir 的合作使 Claude 3/3.5 首次用于“机密环境”，既验证了能力与安全性，也触及其最具争议的应用场景之一。&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;ai-驱动未来的影响与挑战&quot;&gt;AI 驱动未来的影响与挑战&lt;/h3&gt;&lt;a href=&quot;#ai-驱动未来的影响与挑战&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “AI 驱动未来的影响与挑战”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Claude Code 等产品使软件工程的现代化与自动化成为现实，亦将推动医疗、教育、金融等行业变革。挑战仍在：如何让系统在复杂情境中稳健地理解并应用伦理原则，如何建立监管与问责框架、重塑公众信任。&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;结论anthropic-的必然选择&quot;&gt;结论：Anthropic 的必然选择&lt;/h2&gt;&lt;a href=&quot;#结论anthropic-的必然选择&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “结论：Anthropic 的必然选择”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Anthropic 以使命分歧为起点，通过公益公司与信托治理将安全嵌入企业 DNA；其快速迭代与商业增长表明，“安全承诺”可成为强有力的市场差异化。然而，泄露备忘录揭示了资本与理想之间的持续张力。&lt;/p&gt;
+&lt;p&gt;开发强大 AI 与确保其安全并非两条平行线，而是一枚硬币的两面。随着 Anthropic 沿这条复杂道路前行，它不仅将影响 AI 的技术版图，也迫使我们思考：在一个由 AI 驱动的世界里，我们愿为力量牺牲多少原则。&lt;/p&gt;</content:encoded><category>Claude</category><category>Claude Code</category><category>Anthropic</category><category>OpenAI</category></item><item><title>Claude Code vs Codex CLI 谁更适合你的日常开发？</title><link>https://www.vibesparking.com/zh-cn/blog/ai/claude-code/2025-09-04-codex-vs-claude-code-speed-vs-orchestration/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/claude-code/2025-09-04-codex-vs-claude-code-speed-vs-orchestration/</guid><pubDate>Thu, 04 Sep 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # Claude Code vs Codex CLI 谁更适合你的日常开发？ --&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;Claude Code&lt;/strong&gt; 更成熟，工程化能力强（子代理、Slash 命令、Hooks）；&lt;strong&gt;Codex（GPT-5 High）&lt;/strong&gt; 速度快、跟指令更贴、话少事快。两者并用，效率拉满。&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -3630,212 +3769,4 @@ Zed 做了第一个样板，**Gemini CLI 已就位**。
 [4]: https://github.com/olimorris/codecompanion.nvim?utm_source=chatgpt.com &quot;olimorris/codecompanion.nvim: ✨ AI Coding, Vim Style&quot;
 [5]: https://zed.dev/releases/stable?utm_source=chatgpt.com &quot;Stable Releases&quot;
 [6]: https://cloud.google.com/gemini/docs/codeassist/gemini-cli?utm_source=chatgpt.com &quot;Gemini CLI&quot;
-[7]: https://github.com/google-gemini/gemini-cli?utm_source=chatgpt.com &quot;google-gemini/gemini-cli: An open-source AI agent that ...&quot; --&gt;</content:encoded><category>Zed</category><category>Gemini CLI</category><category>Agent Client Protocol（ACP）</category></item><item><title>把 Claude Code 接上国产大模型：DeepSeek/GLM-4.5/Kimi K2</title><link>https://www.vibesparking.com/zh-cn/blog/ai/claude-code/chinese-mainland/2025-08-28-claude-code-china-llms-deepseek-glm45-k2/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/claude-code/chinese-mainland/2025-08-28-claude-code-china-llms-deepseek-glm45-k2/</guid><pubDate>Thu, 28 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # 用 Claude Code 接入国内主流大模型：一文跑通 DeepSeek / 智谱 GLM-4.5 / Kimi K2 --&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;把 Claude Code 指向国产模型 API，开箱能写代码、能跑指令、能提 PR。&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;——别纠结，照这篇一步步抄就行。&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;引言&quot;&gt;引言&lt;/h2&gt;&lt;a href=&quot;#引言&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “引言”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;最近大家都在玩 Claude Code。
-&lt;strong&gt;问题是：公司网络/预算不方便直连海外&lt;/strong&gt;，那还怎么玩？&lt;/p&gt;
-&lt;p&gt;好消息是，&lt;strong&gt;国内几家头部模型已经提供了 “Anthropic 兼容” 的接口&lt;/strong&gt;。
-把 Claude Code 的 &lt;strong&gt;Base URL + Key&lt;/strong&gt; 改一改，就能直接用。
-本文手把手接好 &lt;strong&gt;DeepSeek、智谱 GLM-4.5、Kimi K2&lt;/strong&gt;，顺带给你一份&lt;strong&gt;避坑清单&lt;/strong&gt;。&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;快速开始3-步就够&quot;&gt;快速开始（3 步就够）&lt;/h2&gt;&lt;a href=&quot;#快速开始3-步就够&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “快速开始（3 步就够）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h3 id=&quot;1安装-claude-code&quot;&gt;1）安装 Claude Code&lt;/h3&gt;&lt;a href=&quot;#1安装-claude-code&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1）安装 Claude Code”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# 需要 Node.js 18+&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;npm&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;install&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;-g&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;@anthropic-ai/claude-code&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;p&gt;安装完成，终端输入 &lt;code dir=&quot;auto&quot;&gt;claude&lt;/code&gt; 进入交互界面。官方支持 Node18+，交互里还能用 &lt;code dir=&quot;auto&quot;&gt;/config&lt;/code&gt; 调整设置。&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;2拿到国内模型的-api-key&quot;&gt;2）拿到国内模型的 API Key&lt;/h3&gt;&lt;a href=&quot;#2拿到国内模型的-api-key&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2）拿到国内模型的 API Key”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;DeepSeek&lt;/strong&gt;：平台开通后在 API Keys 页面创建密钥。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;智谱 Z.AI（GLM-4.5）&lt;/strong&gt;：控制台生成密钥。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Kimi K2（Moonshot）&lt;/strong&gt;：控制台生成密钥。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h3 id=&quot;3设置环境变量临时测试&quot;&gt;3）设置环境变量（临时测试）&lt;/h3&gt;&lt;a href=&quot;#3设置环境变量临时测试&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3）设置环境变量（临时测试）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;blockquote&gt;
-&lt;p&gt;直接在当前终端导出变量；&lt;strong&gt;重开终端会失效&lt;/strong&gt;。要永久生效见下文“长期配置”。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;方案-adeepseek官方提供-anthropic-兼容&quot;&gt;方案 A：DeepSeek（官方提供 Anthropic 兼容）&lt;/h2&gt;&lt;a href=&quot;#方案-adeepseek官方提供-anthropic-兼容&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “方案 A：DeepSeek（官方提供 Anthropic 兼容）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;临时设置：&lt;/strong&gt;&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;export&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;ANTHROPIC_BASE_URL&lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;=&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;https://api.deepseek.com/anthropic&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;export&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;ANTHROPIC_AUTH_TOKEN&lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;=&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;你的DeepSeek_API_Key&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;export&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;ANTHROPIC_MODEL&lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;=&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;deepseek-chat&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;export&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;ANTHROPIC_SMALL_FAST_MODEL&lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;=&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;deepseek-chat&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;export&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;API_TIMEOUT_MS&lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;=&lt;/span&gt;&lt;span style=&quot;--0:#F78C6C;--1:#AA0982&quot;&gt;600000&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;p&gt;然后在项目目录里执行：&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;claude&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;p&gt;DeepSeek 官方文档给出了 &lt;strong&gt;Anthropic 兼容路径&lt;/strong&gt;、&lt;strong&gt;推荐模型名&lt;/strong&gt;、以及 &lt;strong&gt;长输出需加超时&lt;/strong&gt; 的说明。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;长期配置（zsh 示例）：&lt;/strong&gt;&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;cat&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&gt;&gt;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;~/.zshrc&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&amp;#x3C;&amp;#x3C;&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&apos;EOF&apos;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;export ANTHROPIC_BASE_URL=&quot;https://api.deepseek.com/anthropic&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;export ANTHROPIC_AUTH_TOKEN=&quot;你的DeepSeek_API_Key&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;export ANTHROPIC_MODEL=&quot;deepseek-chat&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;export ANTHROPIC_SMALL_FAST_MODEL=&quot;deepseek-chat&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;export API_TIMEOUT_MS=600000&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;EOF&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;source&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;~/.zshrc&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;button title=&quot;Copy to clipboard&quot; data-copied=&quot;Copied!&quot; data-code=&quot;&quot;&gt;&gt; ~/.zshrc &lt;&lt;&amp;#x27;EOF&amp;#x27;export ANTHROPIC_BASE_URL=&amp;#x22;https://api.deepseek.com/anthropic&amp;#x22;export ANTHROPIC_AUTH_TOKEN=&amp;#x22;你的DeepSeek_API_Key&amp;#x22;export ANTHROPIC_MODEL=&amp;#x22;deepseek-chat&amp;#x22;export ANTHROPIC_SMALL_FAST_MODEL=&amp;#x22;deepseek-chat&amp;#x22;export API_TIMEOUT_MS=600000EOFsource ~/.zshrc&quot;&gt;&lt;div&gt;&lt;/div&gt;&lt;/button&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;验证：&lt;/strong&gt; 启动后输入 &lt;code dir=&quot;auto&quot;&gt;/status&lt;/code&gt; 看当前模型；也可以 &lt;code dir=&quot;auto&quot;&gt;echo $ANTHROPIC_BASE_URL&lt;/code&gt; 自检。&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;方案-b智谱-glm-45zai-官方教程直连-claude-code&quot;&gt;方案 B：智谱 GLM-4.5（Z.AI 官方教程直连 Claude Code）&lt;/h2&gt;&lt;a href=&quot;#方案-b智谱-glm-45zai-官方教程直连-claude-code&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “方案 B：智谱 GLM-4.5（Z.AI 官方教程直连 Claude Code）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;临时设置：&lt;/strong&gt;&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;export&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;ANTHROPIC_BASE_URL&lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;=&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;https://api.z.ai/api/anthropic&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;export&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;ANTHROPIC_AUTH_TOKEN&lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;=&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;你的Z.AI_API_Key&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# 可选：默认模型&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;export&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;ANTHROPIC_MODEL&lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;=&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;glm-4.5&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;p&gt;官方页面明确写了 &lt;strong&gt;Anthropic 兼容端点&lt;/strong&gt;，并给出在 &lt;code dir=&quot;auto&quot;&gt;~/.claude/settings.json&lt;/code&gt; 中切换 &lt;code dir=&quot;auto&quot;&gt;glm-4.5&lt;/code&gt; 与 &lt;code dir=&quot;auto&quot;&gt;glm-4.5-air&lt;/code&gt; 的方式。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;用 settings.json 切模型（可选）：&lt;/strong&gt;&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;json&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;{&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;env&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: {&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;ANTHROPIC_MODEL&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;glm-4.5-air&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;p&gt;保存后新开一个终端再 &lt;code dir=&quot;auto&quot;&gt;claude&lt;/code&gt;，在界面里 &lt;code dir=&quot;auto&quot;&gt;/status&lt;/code&gt; 查看。&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;方案-ckimi-k2moonshot-的-anthropic-兼容&quot;&gt;方案 C：Kimi K2（Moonshot 的 Anthropic 兼容）&lt;/h2&gt;&lt;a href=&quot;#方案-ckimi-k2moonshot-的-anthropic-兼容&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “方案 C：Kimi K2（Moonshot 的 Anthropic 兼容）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;临时设置（全球域名更通用）：&lt;/strong&gt;&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;export&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;ANTHROPIC_BASE_URL&lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;=&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;https://api.moonshot.ai/anthropic&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;export&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;ANTHROPIC_AUTH_TOKEN&lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;=&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;你的Moonshot_API_Key&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# 部分部署会把温度做0.6映射，保持默认即可&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;p&gt;Moonshot 团队在 K2 仓库与技术博客多次强调 &lt;strong&gt;同时兼容 OpenAI / Anthropic&lt;/strong&gt;；社区与指南也普遍使用 &lt;code dir=&quot;auto&quot;&gt;https://api.moonshot.ai/anthropic&lt;/code&gt; 作为 Base URL。&lt;strong&gt;注意&lt;/strong&gt;：有些帖子写成 &lt;code dir=&quot;auto&quot;&gt;.cn&lt;/code&gt; 域名会失败，请以 &lt;code dir=&quot;auto&quot;&gt;.ai&lt;/code&gt; 为准或以控制台文档为准。&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;一键检查我到底连上没&quot;&gt;一键检查：我到底连上没？&lt;/h2&gt;&lt;a href=&quot;#一键检查我到底连上没&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “一键检查：我到底连上没？”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;进入 &lt;code dir=&quot;auto&quot;&gt;claude&lt;/code&gt; 之后，建议先做 3 件事：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;看模型&lt;/strong&gt;：输入 &lt;code dir=&quot;auto&quot;&gt;/status&lt;/code&gt; 或问 “你现在的模型 ID 是？”&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;跑个命令&lt;/strong&gt;：&lt;code dir=&quot;auto&quot;&gt;/bash echo &quot;hello cc&quot;&lt;/code&gt; 看权限弹窗是否正常。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;改个文件&lt;/strong&gt;：让它在示例仓库里新建 &lt;code dir=&quot;auto&quot;&gt;README_CC.md&lt;/code&gt;，确认能读写。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;这些都是 Claude Code 官方推荐的交互与配置方式。&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;常见问题--速通排错&quot;&gt;常见问题 &amp;#x26; 速通排错&lt;/h2&gt;&lt;a href=&quot;#常见问题--速通排错&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “常见问题 &amp;#x26; 速通排错”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;Q1：401 未授权？&lt;/strong&gt;
-多半是 Key 没带对。Claude Code 支持两种鉴权位：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;ANTHROPIC_API_KEY&lt;/code&gt;（发到 &lt;code dir=&quot;auto&quot;&gt;X-Api-Key&lt;/code&gt;）&lt;/li&gt;
-&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;ANTHROPIC_AUTH_TOKEN&lt;/code&gt;（发到 &lt;code dir=&quot;auto&quot;&gt;Authorization: Bearer&lt;/code&gt;）
-国产兼容端一般用 &lt;strong&gt;AUTH_TOKEN + 自定义 Base URL&lt;/strong&gt; 更稳。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Q2：连不上 / 404？&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Base URL 路径要包含 &lt;strong&gt;&lt;code dir=&quot;auto&quot;&gt;/anthropic&lt;/code&gt;&lt;/strong&gt;（例如 DeepSeek、Moonshot 的兼容端）。&lt;/li&gt;
-&lt;li&gt;Kimi 用 &lt;code dir=&quot;auto&quot;&gt;.ai&lt;/code&gt; 域名更可靠，部分 &lt;code dir=&quot;auto&quot;&gt;.cn&lt;/code&gt; 会挂。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Q3：网页搜索 / WebSearch 工具没反应？&lt;/strong&gt;
-用的不是官方 Anthropic API 时，&lt;strong&gt;内置 WebSearch 工具不会提供&lt;/strong&gt;。需要接 &lt;strong&gt;外部 MCP 搜索&lt;/strong&gt;（Tavily/Brave/DuckDuckGo 等）。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Q4：长输出容易超时？&lt;/strong&gt;
-DeepSeek 官方建议加 &lt;code dir=&quot;auto&quot;&gt;API_TIMEOUT_MS=600000&lt;/code&gt;（10 分钟）。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Q5：多模态/图片消息？&lt;/strong&gt;
-兼容端可能&lt;strong&gt;不完全支持所有 Anthropic 字段&lt;/strong&gt;（比如图片/文档内容）。以厂商文档为准。&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;安全与合规小贴士&quot;&gt;安全与合规小贴士&lt;/h2&gt;&lt;a href=&quot;#安全与合规小贴士&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “安全与合规小贴士”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;保护仓库隐私&lt;/strong&gt;：在 &lt;code dir=&quot;auto&quot;&gt;~/.claude/settings.json&lt;/code&gt; 里把 &lt;code dir=&quot;auto&quot;&gt;.env&lt;/code&gt;、&lt;code dir=&quot;auto&quot;&gt;secrets/**&lt;/code&gt; 加入 &lt;code dir=&quot;auto&quot;&gt;permissions.deny&lt;/code&gt;。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;敏感代码脱敏&lt;/strong&gt;：公司代码先过一层 Git 镜像或删秘钥再让 AI 看。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;权限模式&lt;/strong&gt;：默认保留确认弹窗。&lt;code dir=&quot;auto&quot;&gt;--dangerously-skip-permissions&lt;/code&gt; 仅在你&lt;strong&gt;完全信任&lt;/strong&gt;环境时临时使用。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;复制就能用的对照表&quot;&gt;复制就能用的「对照表」&lt;/h2&gt;&lt;a href=&quot;#复制就能用的对照表&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “复制就能用的「对照表」”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;供应商&lt;/th&gt;&lt;th&gt;Base URL&lt;/th&gt;&lt;th&gt;必填环境变量&lt;/th&gt;&lt;th&gt;推荐模型名&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;DeepSeek&lt;/td&gt;&lt;td&gt;&lt;code dir=&quot;auto&quot;&gt;https://api.deepseek.com/anthropic&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;code dir=&quot;auto&quot;&gt;ANTHROPIC_AUTH_TOKEN&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;code dir=&quot;auto&quot;&gt;deepseek-chat&lt;/code&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;智谱 Z.AI&lt;/td&gt;&lt;td&gt;&lt;code dir=&quot;auto&quot;&gt;https://api.z.ai/api/anthropic&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;code dir=&quot;auto&quot;&gt;ANTHROPIC_AUTH_TOKEN&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;code dir=&quot;auto&quot;&gt;glm-4.5&lt;/code&gt; / &lt;code dir=&quot;auto&quot;&gt;glm-4.5-air&lt;/code&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Kimi K2&lt;/td&gt;&lt;td&gt;&lt;code dir=&quot;auto&quot;&gt;https://api.moonshot.ai/anthropic&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;code dir=&quot;auto&quot;&gt;ANTHROPIC_AUTH_TOKEN&lt;/code&gt;&lt;/td&gt;&lt;td&gt;（按平台路由即可）&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
-&lt;p&gt;以上均为厂商及官方渠道公开说明或实测常用配置。&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;进阶把配置写进-claude-code&quot;&gt;进阶：把配置写进 Claude Code&lt;/h2&gt;&lt;a href=&quot;#进阶把配置写进-claude-code&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “进阶：把配置写进 Claude Code”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;不想每次 &lt;code dir=&quot;auto&quot;&gt;export&lt;/code&gt;？直接把环境变量写入 &lt;code dir=&quot;auto&quot;&gt;~/.claude/settings.json&lt;/code&gt;：&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;json&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;{&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;env&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: {&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;ANTHROPIC_BASE_URL&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;https://api.deepseek.com/anthropic&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;ANTHROPIC_AUTH_TOKEN&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;xxxxx&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;ANTHROPIC_MODEL&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;deepseek-chat&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;API_TIMEOUT_MS&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;600000&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;p&gt;&lt;code dir=&quot;auto&quot;&gt;settings.json&lt;/code&gt; 是官方推荐的全局/项目分级配置方式，支持 env、权限、hooks 等统一管理。&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;结语&quot;&gt;结语&lt;/h2&gt;&lt;a href=&quot;#结语&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “结语”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;接上国内模型后，&lt;strong&gt;Claude Code 依旧是那个“把灵感变代码”的生产力发动机&lt;/strong&gt;。
-哪家更顺手？&lt;strong&gt;DeepSeek 快、GLM-4.5 思考稳、K2 价格香&lt;/strong&gt;，你现场对比就知道。
-跑通一条，团队就能&lt;strong&gt;低成本试点 AI 代码协作&lt;/strong&gt;，把效率真金白银落地。&lt;/p&gt;
-&lt;p&gt;你觉得哪个组合更顺手？有没有踩过别的坑？&lt;strong&gt;评论区聊聊你的实践&lt;/strong&gt;。&lt;/p&gt;&lt;!-- 
----
-
-## 参考与来源
-
-* Claude Code 配置、环境变量与权限体系（官方）
-* DeepSeek **Anthropic 兼容**与 Claude Code 指南（官方）
-* Z.AI（智谱）**Claude Code 集成**与模型切换（官方）
-* Moonshot K2 **OpenAI/Anthropic 兼容**说明（官方仓库/文档与社区实践）
-
----
-
-## 配图建议（2:1 插画，英文元素，无中文）
-
-**封面图 Prompt**
-“Terminal-based AI coding assistant orchestrating three model ‘engines’ labeled DeepSeek, GLM-4.5, and K2, clean pastel palette, developer at a laptop, flowing cables into a code repository, minimal futuristic style, 2:1.”
-
-**关键章节配图**
-
-1. “Switching API Base URL in a settings panel, toggles and environment variables floating around a terminal, minimal icons, 2:1.”
-2. “Security shield blocking .env and secrets folders while AI writes code, playful yet clean, 2:1.”
-3. “Three highway lanes to ‘Anthropic-compatible’ gate: DeepSeek, Z.AI, Moonshot, traffic signs, 2:1.”
-
----
-
-## 3 个多语言标题（附 slug）
-
-1. **把 Claude Code 接上国产大模型：DeepSeek/GLM-4.5/Kimi K2 一文跑通**
-
-   * EN: Plug Claude Code into China LLMs: DeepSeek / GLM-4.5 / Kimi K2 in One Go
-   * 繁體: 把 Claude Code 接上國產大模型：DeepSeek／GLM-4.5／Kimi K2 一文跑通
-   * 日: Claude Code を国産LLMに接続：DeepSeek・GLM-4.5・Kimi K2 を一気に
-   * 法: Connecter Claude Code aux LLM chinois : DeepSeek / GLM-4.5 / Kimi K2
-   * 西: Conecta Claude Code a LLMs chinos: DeepSeek / GLM-4.5 / Kimi K2
-   * 葡: Conecte o Claude Code aos LLMs chineses: DeepSeek / GLM-4.5 / Kimi K2
-   * **slug**: `claude-code-china-llms-deepseek-glm45-k2`
-
-2. **别翻墙也能玩：Claude Code × 国内 API 实战指南**
-
-   * EN: No VPN Needed: Claude Code × China APIs, A Practical Guide
-   * 繁體: 不用翻牆也能玩：Claude Code × 國內 API 實戰指南
-   * 日: VPN なしで使える：Claude Code × 中国 API 実践ガイド
-   * 法: Sans VPN : Guide pratique Claude Code × API chinoises
-   * 西: Sin VPN: Guía práctica de Claude Code × APIs chinas
-   * 葡: Sem VPN: Guia prático Claude Code × APIs chinesas
-   * **slug**: `claude-code-cn-api-playbook`
-
-3. **三步改环境变量，让 Claude Code 跑在 DeepSeek/GLM/K2 上**
-
-   * EN: 3 Env Vars to Run Claude Code on DeepSeek/GLM/K2
-   * 繁體: 三步改環境變量，讓 Claude Code 跑在 DeepSeek/GLM/K2
-   * 日: 環境変数3つで DeepSeek/GLM/K2 で動く Claude Code
-   * 法: 3 variables d’environnement pour faire tourner Claude Code sur DeepSeek/GLM/K2
-   * 西: 3 variables para correr Claude Code en DeepSeek/GLM/K2
-   * 葡: 3 variáveis para rodar Claude Code no DeepSeek/GLM/K2
-   * **slug**: `claude-code-3-env-vars-deepseek-glm-k2`
-
----
-
-## 朋友圈/评论区文案（3 条）
-
-1. “把 Claude Code 指向 DeepSeek/GLM/K2，真的一行环境变量的事。开完会 10 分钟，我项目就能自动改代码了，爽！”
-2. “公司不让直连海外？这篇教程太实用：改 Base URL，配个 Key，Claude Code 继续飞🚀”
-3. “实测：DeepSeek 输出快，GLM-4.5 思路稳，K2 便宜量大。你用哪个组合？”
-
----
-
-需要我把这篇**做成可复制的企业内训手册**，或补一份 **LiteLLM 网关一键整合** 吗？
-**你还想加哪家模型，我直接补好配置。**满意吗？要不要我再**扩写升级版**（含 IDE 集成、MCP 搜索与 GitHub Actions 实战）？
-
-[1]: https://docs.anthropic.com/en/docs/claude-code/settings &quot;Claude Code settings - Anthropic&quot;
-[2]: https://api-docs.deepseek.com/guides/anthropic_api &quot;Anthropic API | DeepSeek API Docs&quot;
-[3]: https://docs.z.ai/scenario-example/develop-tools/claude &quot;Claude Code - Z.AI API DOC&quot;
-[4]: https://github.com/MoonshotAI/Kimi-K2 &quot;GitHub - MoonshotAI/Kimi-K2: Kimi K2 is the large language model series developed by Moonshot AI team&quot;
-[5]: https://docs.anthropic.com/en/docs/claude-code/setup?utm_source=chatgpt.com &quot;Set up Claude Code&quot;
-[6]: https://platform.moonshot.ai/?utm_source=chatgpt.com &quot;Moonshot AI Open Platform - Kimi Large Language Model API ...&quot;
-[7]: https://blog.logrocket.com/agentic-ai-with-kimi-k2/?utm_source=chatgpt.com &quot;Agentic AI for 5x less: Why Kimi K2 is a frontend game- ...&quot;
-[8]: https://github.com/LLM-Red-Team/kimi-cc/issues/18?utm_source=chatgpt.com &quot;Wrong Base URL for Claude Code Routing · Issue #18&quot;
-[9]: https://github.com/feiskyer/claude-code-settings?utm_source=chatgpt.com &quot;Claude Code settings, commands and agents for vibe coding&quot; --&gt;</content:encoded><category>Claude Code</category><category>DeepSeek</category><category>GLM-4.5</category><category>Kimi K2</category></item></channel></rss>
+[7]: https://github.com/google-gemini/gemini-cli?utm_source=chatgpt.com &quot;google-gemini/gemini-cli: An open-source AI agent that ...&quot; --&gt;</content:encoded><category>Zed</category><category>Gemini CLI</category><category>Agent Client Protocol（ACP）</category></item></channel></rss>
