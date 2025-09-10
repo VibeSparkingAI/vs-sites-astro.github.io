@@ -1,4 +1,310 @@
-<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Vibe Sparking AI | Blog</title><description/><link>https://www.vibesparking.com/</link><language>zh-CN</language><item><title>Claude Code 母公司 Anthropic 完成100亿美元融资分析</title><link>https://www.vibesparking.com/zh-cn/blog/ai/anthropic/2025-09-04-anthropic-mission-and-outlook/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/anthropic/2025-09-04-anthropic-mission-and-outlook/</guid><pubDate>Thu, 04 Sep 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Anthropic 是一家在人工智能领域异军突起的公司，其核心愿景是建立可信、可解释、可控制的 AI 系统，并以此引领一场“以安全为核心的竞赛”。与许多同行不同，Anthropic 的历史并非仅始于技术突破，而是源于一场深刻的哲学与治理分歧。自诞生之日起，它就将 AI 安全和伦理作为根本使命，并将其融入公司的法律架构、技术方法论与商业战略之中。&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Vibe Sparking AI | Blog</title><description/><link>https://www.vibesparking.com/</link><language>zh-CN</language><item><title>Codex 1UP 增强你的 Codex CLI 编程能力</title><link>https://www.vibesparking.com/zh-cn/blog/ai/openai/codex/codex-1up/2025-09-10-codex-1up-terminal-extra-life-practical-guide/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/openai/codex/codex-1up/2025-09-10-codex-1up-terminal-extra-life-practical-guide/</guid><pubDate>Wed, 10 Sep 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # Codex 1UP 增强你的 Codex CLI 编程能力 --&gt;
+&lt;blockquote&gt;
+&lt;p&gt;本文面向正在用 Codex 写代码的你。用 10 分钟，把你的本地终端升级成“能读、能改、能跑”的 AI 结对程序员，再配上一套结构化重构与语义 Diff 的硬核工具链。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;为什么是-codex-1up&quot;&gt;为什么是 Codex 1UP？&lt;/h2&gt;&lt;a href=&quot;#为什么是-codex-1up&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “为什么是 Codex 1UP？”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Codex 1UP&lt;/strong&gt; 是一个一键增强包：给 OpenAI 的 &lt;strong&gt;Codex CLI&lt;/strong&gt; 装上“外设”，把日常开发里最常用的查找、重构、对比、选择器都配齐，还顺手生成 AGENTS.md 规范和别名。它的定位很清晰——**让本地 Codex 更实战、更稳。**源仓库在 GitHub，近期活跃更新，支持 macOS / Linux，Windows 建议走 WSL。&lt;/p&gt;
+&lt;p&gt;它做了几件对程序员很“顶”的事：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;一键装好 Codex CLI（@openai/codex）&lt;/strong&gt;，终端里直接召唤 AI 读改跑你的项目。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;加装 ast-grep&lt;/strong&gt;：按语法树做精准重构，不再被脆弱的纯文本 grep 绑架。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;加装 difftastic 语义 Diff&lt;/strong&gt;：审查 AI 改动时更清楚、少噪声。找不到就回退到 delta。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;打包 fd / ripgrep / fzf / jq / yq&lt;/strong&gt;：快速找文件、搜文本、模糊挑选、切 JSON/YAML。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;内置 AGENTS.md 模板与多种配置档&lt;/strong&gt;（SAFE / DEFAULT / YOLO），开箱可用，还能按团队风格微调。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;适合谁用&quot;&gt;适合谁用？&lt;/h2&gt;&lt;a href=&quot;#适合谁用&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “适合谁用？”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;要在大仓里安全重构&lt;/strong&gt;：比如批量把老接口替换成新 SDK，ast-grep + Codex 能先“规划后执行”，再用 difftastic 审改。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;刚接手遗留项目&lt;/strong&gt;：&lt;code dir=&quot;auto&quot;&gt;rg&lt;/code&gt; 秒级摸清“这个函数被谁调”，&lt;code dir=&quot;auto&quot;&gt;fd&lt;/code&gt; 找文件比 &lt;code dir=&quot;auto&quot;&gt;find&lt;/code&gt; 快很多，&lt;code dir=&quot;auto&quot;&gt;fzf&lt;/code&gt; 交互选目标。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;注重合规和可控&lt;/strong&gt;：选 &lt;strong&gt;SAFE/DEFAULT&lt;/strong&gt; 模式，限制越权与外网访问；需要全速就切 &lt;strong&gt;YOLO&lt;/strong&gt;，但要知道自己在做什么。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;团队要统一 AI 使用规范&lt;/strong&gt;：AGENTS.md 一键模板，约定“先用 fd/rg，命中多再 fzf，结构化改动交给 ast-grep”。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;一图看亮点文字小结&quot;&gt;一图看亮点（文字小结）&lt;/h2&gt;&lt;a href=&quot;#一图看亮点文字小结&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “一图看亮点（文字小结）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;读改跑&lt;/strong&gt;：Codex CLI 本地运行，可读文件、编辑与执行任务，支持用 ChatGPT 账号登录。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;结构化重构&lt;/strong&gt;：&lt;code dir=&quot;auto&quot;&gt;ast-grep -p &apos;old()&apos; -r &apos;new()&apos;&lt;/code&gt; 这类“像写代码一样写模式”。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;语义审改&lt;/strong&gt;：&lt;code dir=&quot;auto&quot;&gt;cxdiff&lt;/code&gt; 走 difftastic，让“真正的改动”一目了然。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;搜与选&lt;/strong&gt;：&lt;code dir=&quot;auto&quot;&gt;rg&lt;/code&gt; 查文本、&lt;code dir=&quot;auto&quot;&gt;fd&lt;/code&gt; 找文件、&lt;code dir=&quot;auto&quot;&gt;fzf&lt;/code&gt; 模糊挑选；&lt;code dir=&quot;auto&quot;&gt;jq/yq&lt;/code&gt; 处理 JSON/YAML 配置。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;实战安装与过程解读基于你的-dry-run&quot;&gt;实战安装与过程解读（基于你的 dry-run）&lt;/h2&gt;&lt;a href=&quot;#实战安装与过程解读基于你的-dry-run&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “实战安装与过程解读（基于你的 dry-run）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;你提供的执行记录如下&lt;/strong&gt;（dry-run：只打印将会发生的事，不改动系统）：&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;sehll&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;git clone https://github.com/openai/codex-1up.git&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;cd codex-1up&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;./install.sh --dry-run&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;==&gt; codex-1up installer&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;Log: /Users/vs/.codex-1up/install-20250910-174058.log&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;✔ Node.js present (v22.11.0)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;Checking global npm packages (@openai/codex, @ast-grep/cli)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;✔ @openai/codex up-to-date (0.31.0)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;✔ @ast-grep/cli up-to-date (0.39.5)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;✔ Global npm packages are up-to-date&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;✔ Codex CLI installed&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;✔ ast-grep installed&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;Detected package manager: brew&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;[dry-run] brew update&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;[dry-run] brew install fd ripgrep fzf jq yq difftastic&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;⚠ difftastic not found and Rust/cargo missing; falling back to git-delta&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;✔ rg ✓&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;✔ jq ✓&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;✔ ast-grep ✓&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;Configure git diff tools for better syntax-aware code diffs (recommended for developers)? [y/N] y&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;Configuring git difftool aliases&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;⚠ No difftastic or delta found; git diff will remain default&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;The following aliases will be added to /Users/vs/.zshrc:&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;cx=&apos;codex exec&apos;          # Run codex commands&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;cxdiff=&apos;git difftool -y&apos; # Launch git difftool&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;fd=&apos;fdfind&apos;              # fd-find alias (if applicable)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;Add these aliases to your shell config? [y/N] y&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;Updating shell rc: /Users/vs/.zshrc&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;[dry-run] append block to /Users/vs/.zshrc&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;Choose your codex-1up configuration profile:&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;1) SAFE     - Most restrictive, asks for approval when commands fail&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;                &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;(Recommended for high-security environments)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;2) DEFAULT  - Balanced approach, asks for approval when needed&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;                &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;(Recommended for most users - good security/usability balance)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;3) YOLO     - Full access, never asks for approval&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;                &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;⚠️  WARNING: Allows codex full disk + network access!&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;                &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;⚠️  WARNING: Inherits ALL environment variables (including secrets)!&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;                &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;⚠️  Only use in trusted, sandboxed environments!&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;4) NO CHANGES - Do not create or modify ~/.codex/config.toml&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;                &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;(You can manage it yourself later)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;Choose profile [1-4] (default: 2/DEFAULT): 2&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;⚠ ~/.codex/config.toml already exists&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;Overwrite with the &apos;default&apos; template? (existing will be backed up) [y/N] y&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;[dry-run] cp /Users/vs/.codex/config.toml /Users/vs/.codex/config.toml.backup.20250910_174210&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;Backed up existing config to: /Users/vs/.codex/config.toml.backup.20250910_174210&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;Creating config using default profile&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;[dry-run] cp /Users/vs/WorkSpaces/VibeSparking/github/regenrek/codex-1up/templates/configs/codex-default.toml /Users/vs/.codex/config.toml&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;✔ Created ~/.codex/config.toml with default profile&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;See config options: https://github.com/openai/codex/blob/main/docs/config.md&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;Do you want to create a global AGENTS.md for personal guidance at ~/.codex/AGENTS.md?&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;1) default     - Generic rubric (works for most repos)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;2) typescript  - TS/TSX-focused rubric with ast-grep examples&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;3) python      - Python-focused rubric and tooling notes (ruff, mypy, pytest)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;4) shell       - Shell/Bash-focused rubric with shellcheck/shfmt/bats tips&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;5) NONE        - Do not create ~/.codex/AGENTS.md&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;Choose template [1-5] (default: 5/NONE): 1&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;Writing global AGENTS.md to: /Users/vs/.codex/AGENTS.md (template: default)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;[dry-run] cp /Users/vs/WorkSpaces/VibeSparking/github/regenrek/codex-1up/templates/agent-templates/AGENTS-default.md /Users/vs/.codex/AGENTS.md&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;✔ Wrote /Users/vs/.codex/AGENTS.md&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;VS Code extension id not provided. Use: --vscode &amp;#x3C;publisher.extension&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;✔ All done. Open a new shell or &apos;source&apos; your rc file to load aliases.&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;Next steps:&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;1) codex    # sign in; then ask it to plan a refactor&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;2) ./bin/codex-1up agents --path /Users/vs/WorkSpaces/VibeSparking/github/regenrek/codex-1up   # write a starter AGENTS.md to your repo&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;3) Review ~/.codex/config.toml (see: https://github.com/openai/codex/blob/main/docs/config.md)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;button title=&quot;Copy to clipboard&quot; data-copied=&quot;Copied!&quot; data-code=&quot;&quot;&gt; codex-1up installerLog: /Users/vs/.codex-1up/install-20250910-174058.log✔ Node.js present (v22.11.0)Checking global npm packages (@openai/codex, @ast-grep/cli)✔ @openai/codex up-to-date (0.31.0)✔ @ast-grep/cli up-to-date (0.39.5)✔ Global npm packages are up-to-date✔ Codex CLI installed✔ ast-grep installedDetected package manager: brew[dry-run] brew update[dry-run] brew install fd ripgrep fzf jq yq difftastic⚠ difftastic not found and Rust/cargo missing; falling back to git-delta✔ rg ✓✔ jq ✓✔ ast-grep ✓Configure git diff tools for better syntax-aware code diffs (recommended for developers)? [y/N] yConfiguring git difftool aliases⚠ No difftastic or delta found; git diff will remain defaultThe following aliases will be added to /Users/vs/.zshrc:  cx=&amp;#x27;codex exec&amp;#x27;          # Run codex commands  cxdiff=&amp;#x27;git difftool -y&amp;#x27; # Launch git difftool  fd=&amp;#x27;fdfind&amp;#x27;              # fd-find alias (if applicable)Add these aliases to your shell config? [y/N] yUpdating shell rc: /Users/vs/.zshrc[dry-run] append block to /Users/vs/.zshrcChoose your codex-1up configuration profile:  1) SAFE     - Most restrictive, asks for approval when commands fail                (Recommended for high-security environments)  2) DEFAULT  - Balanced approach, asks for approval when needed                (Recommended for most users - good security/usability balance)  3) YOLO     - Full access, never asks for approval                ⚠️  WARNING: Allows codex full disk + network access!                ⚠️  WARNING: Inherits ALL environment variables (including secrets)!                ⚠️  Only use in trusted, sandboxed environments!  4) NO CHANGES - Do not create or modify ~/.codex/config.toml                (You can manage it yourself later)Choose profile [1-4] (default: 2/DEFAULT): 2⚠ ~/.codex/config.toml already existsOverwrite with the &amp;#x27;default&amp;#x27; template? (existing will be backed up) [y/N] y[dry-run] cp /Users/vs/.codex/config.toml /Users/vs/.codex/config.toml.backup.20250910_174210Backed up existing config to: /Users/vs/.codex/config.toml.backup.20250910_174210Creating config using default profile[dry-run] cp /Users/vs/WorkSpaces/VibeSparking/github/regenrek/codex-1up/templates/configs/codex-default.toml /Users/vs/.codex/config.toml✔ Created ~/.codex/config.toml with default profileSee config options: https://github.com/openai/codex/blob/main/docs/config.mdDo you want to create a global AGENTS.md for personal guidance at ~/.codex/AGENTS.md?  1) default     - Generic rubric (works for most repos)  2) typescript  - TS/TSX-focused rubric with ast-grep examples  3) python      - Python-focused rubric and tooling notes (ruff, mypy, pytest)  4) shell       - Shell/Bash-focused rubric with shellcheck/shfmt/bats tips  5) NONE        - Do not create ~/.codex/AGENTS.mdChoose template [1-5] (default: 5/NONE): 1Writing global AGENTS.md to: /Users/vs/.codex/AGENTS.md (template: default)[dry-run] cp /Users/vs/WorkSpaces/VibeSparking/github/regenrek/codex-1up/templates/agent-templates/AGENTS-default.md /Users/vs/.codex/AGENTS.md✔ Wrote /Users/vs/.codex/AGENTS.mdVS Code extension id not provided. Use: --vscode &lt;publisher.extension&gt;✔ All done. Open a new shell or &amp;#x27;source&amp;#x27; your rc file to load aliases.Next steps:  1) codex    # sign in; then ask it to plan a refactor  2) ./bin/codex-1up agents --path /Users/vs/WorkSpaces/VibeSparking/github/regenrek/codex-1up   # write a starter AGENTS.md to your repo  3) Review ~/.codex/config.toml (see: https://github.com/openai/codex/blob/main/docs/config.md)&quot;&gt;&lt;div&gt;&lt;/div&gt;&lt;/button&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;逐行要点解释：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Node / 全局包检查&lt;/strong&gt;：确认有 Node 22，并核对 &lt;code dir=&quot;auto&quot;&gt;@openai/codex&lt;/code&gt; 与 &lt;code dir=&quot;auto&quot;&gt;@ast-grep/cli&lt;/code&gt; 的版本；你的机器均为最新。Codex CLI 是官方维护的本地编码 Agent。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;包管理器识别为 Homebrew&lt;/strong&gt;：将安装 &lt;code dir=&quot;auto&quot;&gt;fd / ripgrep / fzf / jq / yq / difftastic&lt;/code&gt;。这几个工具分别负责“找文件、搜文本、模糊选择、JSON、YAML、语义 Diff”。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;difftastic 提示&lt;/strong&gt;：由于缺少 Rust/cargo，脚本计划回退到 git-delta；dry-run 模式下只打印不执行。difftastic 是“懂语法”的 Diff。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Git difftool 与别名&lt;/strong&gt;：&lt;code dir=&quot;auto&quot;&gt;cxdiff&lt;/code&gt; 走 &lt;code dir=&quot;auto&quot;&gt;git difftool -y&lt;/code&gt;，&lt;code dir=&quot;auto&quot;&gt;cx&lt;/code&gt; 等于 &lt;code dir=&quot;auto&quot;&gt;codex exec&lt;/code&gt;。方便一键审改与批量跑命令。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;配置档选择&lt;/strong&gt;：你选了 &lt;strong&gt;DEFAULT&lt;/strong&gt;，即“默认平衡”——工作区可读改跑，对越权/外网会询问。更保守可选 SAFE，更解放可选 YOLO。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;自动备份并写入 &lt;code dir=&quot;auto&quot;&gt;~/.codex/config.toml&lt;/code&gt;&lt;/strong&gt;：用模板生成，随时可手改。官方文档也建议先跑 &lt;code dir=&quot;auto&quot;&gt;codex&lt;/code&gt; 登录 ChatGPT 账号。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;创建全局 &lt;code dir=&quot;auto&quot;&gt;~/.codex/AGENTS.md&lt;/code&gt;&lt;/strong&gt;：你选了 &lt;strong&gt;default&lt;/strong&gt; 模板，给 Codex 一个“如何选工具”的行为指南。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Next steps&lt;/strong&gt;：打开新终端或 &lt;code dir=&quot;auto&quot;&gt;source ~/.zshrc&lt;/code&gt; 生效别名 → 运行 &lt;code dir=&quot;auto&quot;&gt;codex&lt;/code&gt; 登录 → 在项目里写入仓库级 AGENTS.md。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;小贴士&lt;/strong&gt;：Windows 建议在 &lt;strong&gt;WSL&lt;/strong&gt; 里跑 Linux 路线；官方对 Windows 支持仍以 WSL 为佳。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;快速上手-5-招直接可抄&quot;&gt;快速上手 5 招（直接可抄）&lt;/h2&gt;&lt;a href=&quot;#快速上手-5-招直接可抄&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “快速上手 5 招（直接可抄）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;让 Codex 先“打谱”再动手&lt;/strong&gt;
+&lt;code dir=&quot;auto&quot;&gt;codex &quot;Plan a refactor to replace axios with fetch; then apply and run tests&quot;&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;结构化替换（TS 项目示例）&lt;/strong&gt;
+&lt;code dir=&quot;auto&quot;&gt;ast-grep -p &quot;oldApi($A)&quot; -r &quot;newApi($A)&quot; src --lang ts&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;秒搜调用点&lt;/strong&gt;
+&lt;code dir=&quot;auto&quot;&gt;rg &quot;useAuth(&quot; -n&lt;/code&gt; / &lt;code dir=&quot;auto&quot;&gt;fd &quot;auth*.ts&quot;&lt;/code&gt; / &lt;code dir=&quot;auto&quot;&gt;git grep&lt;/code&gt; 之外更快更准。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;审改用语义 Diff&lt;/strong&gt;
+&lt;code dir=&quot;auto&quot;&gt;cxdiff&lt;/code&gt; 打开 difftastic（若已装），更聚焦“真实语义变化”。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;批处理配置&lt;/strong&gt;
+&lt;code dir=&quot;auto&quot;&gt;jq &apos;.scripts&apos; package.json&lt;/code&gt; / &lt;code dir=&quot;auto&quot;&gt;yq &apos;.services[].image&apos; docker-compose.yml&lt;/code&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;风险与最佳实践&quot;&gt;风险与最佳实践&lt;/h2&gt;&lt;a href=&quot;#风险与最佳实践&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “风险与最佳实践”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;YOLO 档&lt;/strong&gt;真的很猛：默认放开读写与网络，别在含有敏感环境变量的生产机上用。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;大变更必审&lt;/strong&gt;：用 &lt;code dir=&quot;auto&quot;&gt;cxdiff&lt;/code&gt; + 单元测试兜底，必要时拆小 PR。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;AGENTS.md 要“贴合你们的 repo”&lt;/strong&gt;：给出正例/反例，标注“何时用 ast-grep，何时只读规划”。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;结语&quot;&gt;结语&lt;/h2&gt;&lt;a href=&quot;#结语&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “结语”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Codex 1UP = 本地 Codex + 结构化工具链。&lt;/strong&gt;
+&lt;strong&gt;写得更快，改得更稳，看得更清楚。&lt;/strong&gt;
+如果你正准备给团队引入 AI 结对，这套组合拳，值得今天就装上试试。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;你觉得最离不开的是哪一个工具？有没有被 ast-grep 或 difftastic 救过命的故事？欢迎在评论区聊聊。&lt;/strong&gt;&lt;/p&gt;&lt;!-- 
+## 配图与封面（2:1 插画风，英文元素）
+
+&gt; **图片内暂不使用中文**。以下是可直接用于 MJ/SD 的提示词（Prompt）：
+
+**封面图 Prompt**
+“Terminal supercharged by AI, glowing power-up mushroom icon, sleek developer desk setup, code lines flowing into a CLI window, subtle circuit patterns, vibrant lighting, minimalist illustration, 2:1 aspect ratio”
+
+**章节配图 · 结构化重构（ast-grep）**
+“Codebase tree morphing into precise building blocks, magnifying glass highlighting syntax nodes, clean blue and green palette, infographic-style illustration, 2:1”
+
+**章节配图 · 语义 Diff（difftastic）**
+“Two code panels with syntax-aware differences connected by colorful arcs, noise reduced, clarity emphasized, modern flat illustration, 2:1”
+
+**章节配图 · 搜与选（fd/rg/fzf）**
+“Futuristic search HUD scanning folders, quick highlights on files and lines, command palette vibes, minimal illustration, 2:1”
+
+--- --&gt;&lt;!-- 
+---
+
+## 多语言标题（3 组）
+
+1. **中文简体**：给你的命令行多一条命：Codex 1UP 实战上手
+   **English**: Give Your Terminal an Extra Life: Codex 1UP in Practice
+   **中文繁體**：給你的命令列多一條命：Codex 1UP 實戰上手
+   **日本語**：ターミナルに「1UP」を：Codex 1UP 実践ガイド
+   **Français** : Donnez une “vie” à votre terminal : Codex 1UP en pratique
+   **Español**: Dale “una vida extra” a tu terminal: Codex 1UP en práctica
+   **Português**: Dê “uma vida extra” ao seu terminal: Codex 1UP na prática
+   **slug**：`codex-1up-terminal-extra-life-practical-guide`
+
+2. **中文简体**：把 AI 结对装进你的终端：Codex 1UP 全流程指南
+   **English**: Install AI Pair-Programming in Your Terminal: Codex 1UP Guide
+   **中文繁體**：把 AI 結對裝進你的終端：Codex 1UP 全流程指南
+   **日本語**：AI 相棒をターミナルに導入：Codex 1UP ガイド
+   **Français** : L’IA pair-programmer dans votre terminal : guide Codex 1UP
+   **Español**: IA de pareja en tu terminal: Guía Codex 1UP
+   **Português**: Programação em par com IA no terminal: Guia Codex 1UP
+   **slug**：`codex-1up-ai-pair-programming-terminal-guide`
+
+3. **中文简体**：结构化重构 + 语义 Diff：Codex 1UP 高效开发法
+   **English**: AST Refactors + Semantic Diff: The Codex 1UP Workflow
+   **中文繁體**：結構化重構 + 語義 Diff：Codex 1UP 高效開發法
+   **日本語**：AST リファクタ + セマンティック Diff：Codex 1UP 流儀
+   **Français** : Refacto AST + diff sémantique : workflow Codex 1UP
+   **Español**: Refactor AST + Diff semántico: flujo Codex 1UP
+   **Português**: Refatoração AST + Diff semântico: fluxo Codex 1UP
+   **slug**：`codex-1up-ast-refactor-semantic-diff-workflow`
+
+---
+
+## 评论区/朋友圈示例（3 条）
+
+1. “刚把 Codex 1UP 装上，`rg + ast-grep + cxdiff` 这套太丝滑了… 老项目重构终于不怕了 😂”
+2. “语义 Diff 第一次用就上头，AI 改了啥一眼看穿。准备给团队全员装一遍～”
+3. “不夸张地说，Codex 1UP = 终端里挂了个靠谱小队友。你也来试试？”
+
+---
+
+## 参考与延伸阅读
+
+* GitHub：codex-1up 官方仓库，特性、模板与安装脚本一览。
+* OpenAI：**Codex CLI** 官方页（安装、模式与登录方式）。
+* npm：`@openai/codex` 发布信息与安装指引。
+* ast-grep：结构化搜索/重写 CLI 文档。
+* difftastic：基于语法的结构化 Diff。
+* ripgrep / fd / fzf / jq / yq 工具主页与简介。
+
+---
+
+你满意这版吗？要不要再**扩写一篇“团队版 AGENTS.md 模板实战”**或做一篇**“ast-grep 常用 12 招”**？
+
+[1]: https://github.com/regenrek/codex-1up &quot;GitHub - regenrek/codex-1up:  Give your CLI an extra life&quot;
+[2]: https://developers.openai.com/codex/cli/ &quot;Codex CLI&quot;
+[3]: https://www.npmjs.com/package/%40openai/codex &quot;@openai/codex - npm&quot;
+[4]: https://github.com/ast-grep/ast-grep?utm_source=chatgpt.com &quot;ast-grep/ast-grep: ⚡A CLI tool for code structural search, ...&quot;
+[5]: https://ast-grep.github.io/reference/cli.html?utm_source=chatgpt.com &quot;Command Line Reference | ast-grep&quot;
+[6]: https://github.com/Wilfred/difftastic?utm_source=chatgpt.com &quot;Wilfred/difftastic: a structural diff that understands syntax&quot;
+[7]: https://github.com/sharkdp/fd?utm_source=chatgpt.com &quot;sharkdp/fd: A simple, fast and user-friendly alternative to &apos;find&apos;&quot;
+[8]: https://jqlang.org/?utm_source=chatgpt.com &quot;jq&quot;
+[9]: https://github.com/BurntSushi/ripgrep?utm_source=chatgpt.com &quot;ripgrep recursively searches directories for a regex pattern ...&quot;
+[10]: https://github.com/mikefarah/yq?utm_source=chatgpt.com &quot;mikefarah/yq: yq is a portable command-line YAML, JSON, ...&quot; --&gt;</content:encoded><category>Codex</category></item><item><title>日本央行货币政策正常化：对美国国债、美元指数与美股的系统性影响深度解析</title><link>https://www.vibesparking.com/zh-cn/blog/finance/japan/2025-09-05-boj-normalization-impact-us-treasuries-dxy-us-equities/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/finance/japan/2025-09-05-boj-normalization-impact-us-treasuries-dxy-us-equities/</guid><pubDate>Fri, 05 Sep 2025 00:00:00 GMT</pubDate><content:encoded>&lt;div&gt;&lt;h1 id=&quot;日本央行货币政策正常化对美国国债美元指数与美股的系统性影响深度解析&quot;&gt;日本央行货币政策正常化：对美国国债、美元指数与美股的系统性影响深度解析&lt;/h1&gt;&lt;a href=&quot;#日本央行货币政策正常化对美国国债美元指数与美股的系统性影响深度解析&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “日本央行货币政策正常化：对美国国债、美元指数与美股的系统性影响深度解析”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h2 id=&quot;1-执行摘要&quot;&gt;1. 执行摘要&lt;/h2&gt;&lt;a href=&quot;#1-执行摘要&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1. 执行摘要”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;鉴于日本名义工资与实际工资的显著增长，日本央行（BOJ）最早在10月加息的概率上升。这不仅是日本国内经济周期的关键转折，更可能通过触发“日元利差交易”的系统性逆转，对全球市场产生深远影响。&lt;/p&gt;
+&lt;p&gt;核心结论：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;美国国债：日本投资者对美债需求减弱、对冲成本上升，叠加美债供给扩张，长期端收益率承受结构性上行压力。&lt;/li&gt;
+&lt;li&gt;美元指数（DXY）：日元在DXY中的较高权重使其升值对美元指数形成持续的结构性下行压力。&lt;/li&gt;
+&lt;li&gt;美国股市：无风险利率上行压缩高成长科技股估值，板块或发生从“长久期成长”向“价值/防御”的轮动。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h2 id=&quot;2-日本货币政策正常化的核心驱动与内在逻辑&quot;&gt;2. 日本货币政策正常化的核心驱动与内在逻辑&lt;/h2&gt;&lt;a href=&quot;#2-日本货币政策正常化的核心驱动与内在逻辑&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2. 日本货币政策正常化的核心驱动与内在逻辑”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3 id=&quot;21-工资-通胀良性循环的形成与确认&quot;&gt;2.1 工资-通胀良性循环的形成与确认&lt;/h3&gt;&lt;a href=&quot;#21-工资-通胀良性循环的形成与确认&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2.1 工资-通胀良性循环的形成与确认”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;过去通胀主要源于输入性因素（能源冲击、日元贬值），实际工资长期为负。&lt;/li&gt;
+&lt;li&gt;2024年“春斗”名义工资涨幅约5.1%，为1991年以来新高，通胀驱动由外生转为内生（劳动力短缺、结构性转型）。&lt;/li&gt;
+&lt;li&gt;工资-物价良性循环成为日本央行退出超宽松的关键依据。&lt;/li&gt;
+&lt;li&gt;金融机构（如三菱日联金融集团）公开支持尽早加息，加息亦改善银行净息差与盈利。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;22-从非常规到正常化历史性转折&quot;&gt;2.2 从非常规到正常化：历史性转折&lt;/h3&gt;&lt;a href=&quot;#22-从非常规到正常化历史性转折&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2.2 从非常规到正常化：历史性转折”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;2024年3月，日本央行结束负利率与收益率曲线控制（YCC），并实施17年来首次加息（-0.1% → 0–0.1%）。&lt;/li&gt;
+&lt;li&gt;此后因增长与外部不确定性，决策步调谨慎，阶段性维持利率不变。&lt;/li&gt;
+&lt;li&gt;与美联储潜在降息周期“背离”，美日利差收窄成为全球资本联动的核心触发因素。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h2 id=&quot;3-日元利差交易的逆转全球资本流动的核心传导机制&quot;&gt;3. “日元利差交易”的逆转：全球资本流动的核心传导机制&lt;/h2&gt;&lt;a href=&quot;#3-日元利差交易的逆转全球资本流动的核心传导机制&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3. “日元利差交易”的逆转：全球资本流动的核心传导机制”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3 id=&quot;31-原理与体量&quot;&gt;3.1 原理与体量&lt;/h3&gt;&lt;a href=&quot;#31-原理与体量&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3.1 原理与体量”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;日元利差交易：借入低利率日元，兑换高收益货币并投向海外高收益资产。该交易持续时间长、体量庞大。&lt;/p&gt;
+&lt;p&gt;广义口径规模约为 $9.3 万亿美元，主要包含：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;日本居民对外证券投资：约 $5.4 万亿&lt;/li&gt;
+&lt;li&gt;非居民借入日元投向日本股票：约 $2.1 万亿&lt;/li&gt;
+&lt;li&gt;非居民借入日元投向海外证券：约 $1.8 万亿&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;当美日利差因日本加息收窄，利差交易吸引力下降并可能亏损，触发平仓：卖出海外资产（如美股、美债）并回兑日元。即使小比例回流，也可能对全球资产价格产生显著冲击。若美元走软与日本加息同步，逆转速度与规模或被放大。&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;4-对美国核心资产的影响&quot;&gt;4. 对美国核心资产的影响&lt;/h2&gt;&lt;a href=&quot;#4-对美国核心资产的影响&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “4. 对美国核心资产的影响”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3 id=&quot;41-美国国债需求萎缩与收益率上行压力&quot;&gt;4.1 美国国债：需求萎缩与收益率上行压力&lt;/h3&gt;&lt;a href=&quot;#41-美国国债需求萎缩与收益率上行压力&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “4.1 美国国债：需求萎缩与收益率上行压力”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;传导路径：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;直接效应：日本利率上行提升JGB与国内资产吸引力，日本投资者减少海外配比（含美债）。&lt;/li&gt;
+&lt;li&gt;间接效应：日元升值预期抬升汇率对冲成本，削弱持有美元资产的吸引力。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;叠加美国财政供给扩张（债务与赤字上行），在需求侧（日本为美债最大海外持有者之一）走弱背景下，长期美债收益率面临持续的结构性上行。近期日债波动亦通过联动抬升欧美长端利率，提示跨市场传染效应。&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;42-美元指数dxy日元升值的结构性影响&quot;&gt;4.2 美元指数（DXY）：日元升值的结构性影响&lt;/h3&gt;&lt;a href=&quot;#42-美元指数dxy日元升值的结构性影响&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “4.2 美元指数（DXY）：日元升值的结构性影响”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;DXY权重结构中，日元占比约13.6%（仅次于欧元的57.6%）。在其他条件不变时，日元升值将机械性压低DXY。若美联储转鸽，该压力或被放大。地缘风险上行时，日元避险属性可能带来非线性升值，增加DXY的不确定性。结构性看，日本政策正常化对DXY偏弱构成中长期因素。&lt;/p&gt;
+&lt;p&gt;DXY构成与权重：&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;货币&lt;/th&gt;&lt;th align=&quot;right&quot;&gt;权重 (%)&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;欧元 (EUR)&lt;/td&gt;&lt;td align=&quot;right&quot;&gt;57.6&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;日元 (JPY)&lt;/td&gt;&lt;td align=&quot;right&quot;&gt;13.6&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;英镑 (GBP)&lt;/td&gt;&lt;td align=&quot;right&quot;&gt;11.9&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;加元 (CAD)&lt;/td&gt;&lt;td align=&quot;right&quot;&gt;9.1&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;瑞典克朗 (SEK)&lt;/td&gt;&lt;td align=&quot;right&quot;&gt;4.2&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;瑞士法郎 (CHF)&lt;/td&gt;&lt;td align=&quot;right&quot;&gt;3.6&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;div&gt;&lt;h3 id=&quot;43-美国股市估值重塑与板块轮动&quot;&gt;4.3 美国股市：估值重塑与板块轮动&lt;/h3&gt;&lt;a href=&quot;#43-美国股市估值重塑与板块轮动&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “4.3 美国股市：估值重塑与板块轮动”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;长期美债收益率为“全球资产定价之锚”（无风险折现率）。其上行将压缩以远期现金流为主的高成长标的估值。当前大型科技股前瞻估值偏高、对利率变动敏感，利差缓冲有限。&lt;/p&gt;
+&lt;p&gt;美国大型科技股估值利差分析：&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;指标&lt;/th&gt;&lt;th&gt;当前值（约）&lt;/th&gt;&lt;th&gt;意义&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;大型科技股前瞻市盈率&lt;/td&gt;&lt;td&gt;约 29 倍&lt;/td&gt;&lt;td&gt;处于阶段性高位&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;大型科技股盈利收益率（E/P）&lt;/td&gt;&lt;td&gt;约 4.5%&lt;/td&gt;&lt;td&gt;盈利/股价&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;10年期美债收益率&lt;/td&gt;&lt;td&gt;约 4.2%&lt;/td&gt;&lt;td&gt;无风险利率&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;利差&lt;/td&gt;&lt;td&gt;约 0.3%&lt;/td&gt;&lt;td&gt;缓冲极窄、估值对利率高度敏感&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;p&gt;历史上，长端利率快速上行时，纳斯达克回撤较大；道琼斯等价值/防御板块相对抗跌甚至创新高，体现“长久期”向“短久期/价值”的轮动。不对称性方面，日股更受美股牵引，反向传导较弱。&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;5-结论与投资策略建议&quot;&gt;5. 结论与投资策略建议&lt;/h2&gt;&lt;a href=&quot;#5-结论与投资策略建议&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “5. 结论与投资策略建议”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3 id=&quot;51-关键风险与情景&quot;&gt;5.1 关键风险与情景&lt;/h3&gt;&lt;a href=&quot;#51-关键风险与情景&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “5.1 关键风险与情景”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;关键风险：美债长端收益率上行、DXY结构性下行、美股（尤其高成长科技）估值重塑。&lt;/li&gt;
+&lt;li&gt;情景设定：
+&lt;ul&gt;
+&lt;li&gt;基准：BOJ 10月加息，FED观望/转鸽 → 利差快速收敛，上述风险高强度兑现。&lt;/li&gt;
+&lt;li&gt;延迟加息：BOJ推迟 → 压力阶段性缓解，结构性风险延后不消失。&lt;/li&gt;
+&lt;li&gt;联储转鹰：FED因通胀转鹰 → 美元走强、利差扩大，日元套息逆转压力暂缓（与当前共识相悖）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;52-策略与风险管理&quot;&gt;5.2 策略与风险管理&lt;/h3&gt;&lt;a href=&quot;#52-策略与风险管理&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “5.2 策略与风险管理”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;美国国债：降低长久期敞口；用期货/期权对冲；关注曲线陡峭化。&lt;/li&gt;
+&lt;li&gt;外汇与美元：布局DXY下行对冲；在USD/JPY考虑策略性空头以捕捉利差收敛。&lt;/li&gt;
+&lt;li&gt;股票组合：战术性降配高估值、利率敏感的成长科技；增配价值与防御（必选消费、医疗、稳健分红）；适度配置日本受益标的（大型银行、估值合理蓝筹）以分散风险。&lt;/li&gt;
+&lt;/ul&gt;</content:encoded><category>Finance</category><category>Japan</category><category>BOJ</category><category>Monetary Policy</category><category>USDJPY</category><category>DXY</category><category>US Treasuries</category><category>US Stock Market</category></item><item><title>Claude Code 母公司 Anthropic 完成100亿美元融资分析</title><link>https://www.vibesparking.com/zh-cn/blog/ai/anthropic/2025-09-04-anthropic-mission-and-outlook/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/anthropic/2025-09-04-anthropic-mission-and-outlook/</guid><pubDate>Thu, 04 Sep 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Anthropic 是一家在人工智能领域异军突起的公司，其核心愿景是建立可信、可解释、可控制的 AI 系统，并以此引领一场“以安全为核心的竞赛”。与许多同行不同，Anthropic 的历史并非仅始于技术突破，而是源于一场深刻的哲学与治理分歧。自诞生之日起，它就将 AI 安全和伦理作为根本使命，并将其融入公司的法律架构、技术方法论与商业战略之中。&lt;/p&gt;
 &lt;div&gt;&lt;h2 id=&quot;第一部分安全为先的使命起源&quot;&gt;第一部分：安全为先的使命起源&lt;/h2&gt;&lt;a href=&quot;#第一部分安全为先的使命起源&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “第一部分：安全为先的使命起源”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
 &lt;div&gt;&lt;h3 id=&quot;源于分歧的诞生openai-的哲学裂痕&quot;&gt;源于分歧的诞生：OpenAI 的哲学裂痕&lt;/h3&gt;&lt;a href=&quot;#源于分歧的诞生openai-的哲学裂痕&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “源于分歧的诞生：OpenAI 的哲学裂痕”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
 &lt;p&gt;Anthropic 由一群前 OpenAI 员工于 2021 年创立，核心人物是兄妹二人——曾任 OpenAI 研究副总裁的 Dario Amodei 和曾任安全与政策副总裁的 Daniela Amodei。他们在 2020 年底与五名同事一同离开 OpenAI，原因在于对公司发展方向存在根本分歧。&lt;/p&gt;
@@ -3387,361 +3693,4 @@ Gemini CLI 最新更新，直接打通 VS Code 集成终端：
 [3]: https://marketplace.visualstudio.com/items?itemName=Google.gemini-cli-vscode-ide-companion&amp;utm_source=chatgpt.com &quot;Gemini CLI Companion&quot;
 [4]: https://github.com/google-gemini/gemini-cli/issues/6733?utm_source=chatgpt.com &quot;Not possible to connect to the cursor ide · Issue #6733&quot;
 [5]: https://www.walturn.com/insights/cursor-vs-vs-code-with-github-copilot-a-comprehensive-comparison?utm_source=chatgpt.com &quot;Cursor vs VS Code with GitHub Copilot&quot;
-[6]: https://gemini-cli.xyz/docs/en/ide-integration?utm_source=chatgpt.com &quot;IDE Integration | Gemini CLI Docs&quot; --&gt;</content:encoded><category>Gemini CLI</category><category>Gemini CLI Companion</category><category>gemini-2.5-pro</category><category>VS Code</category><category>Cursor</category></item><item><title>Codex 发布 VS Code / Cursor IDE 插件</title><link>https://www.vibesparking.com/zh-cn/blog/ai/openai/codex/ide/2025-08-30-codex-ide-playbook-in-vscode/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/openai/codex/ide/2025-08-30-codex-ide-playbook-in-vscode/</guid><pubDate>Sat, 30 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # 用 1 篇就懂：CodexIDE 怎么装、怎么用、在哪些场景最值 --&gt;
-&lt;blockquote&gt;
-&lt;p&gt;想把“会写代码的 CodeX GPT-5”塞进 VS Code？Codex IDE 这波真的到位。读/改/跑，一把梭。本文带你 10 分钟摸清亮点、安装步骤、以及最推荐的上手场景。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;为什么是-codex-ide&quot;&gt;为什么是 Codex IDE？&lt;/h2&gt;&lt;a href=&quot;#为什么是-codex-ide&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “为什么是 Codex IDE？”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;它是“能自己跑代码的代理”。&lt;/strong&gt;
-不是只会聊天的助手。Codex 能在你的工作目录里直接&lt;strong&gt;读文件、改代码、跑命令&lt;/strong&gt;，还支持把大活儿丢到云端跑，改完再一键拉回本地验收。官方扩展已适配 VS Code / Cursor / Windsurf，macOS、Linux 体验稳定；Windows 建议配 WSL。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;侧边面板同屏协作。&lt;/strong&gt;
-把 Codex 面板拖到编辑器右侧，选中一段代码就能少打字、给更准的上下文，响应更快更贴题。&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;三种“批准模式”，安全与效率自选。&lt;/strong&gt;
-默认 &lt;code dir=&quot;auto&quot;&gt;Agent&lt;/code&gt; 可在当前目录自动读/改/跑；需要出目录或联网会再问你。也能切到只聊天的 &lt;code dir=&quot;auto&quot;&gt;Chat&lt;/code&gt;，或完全放开权限的 &lt;code dir=&quot;auto&quot;&gt;Agent (Full Access)&lt;/code&gt;（慎用）。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;云端代跑，现场旁观。&lt;/strong&gt;
-本地聊着聊着，一键“Run in the cloud”。大项目开新分支让它先干；小任务基于你本地改动收尾更顺手。云端上下文会延续回本地，拉回测一遍再合并。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;可编排、可扩展。&lt;/strong&gt;
-扩展本体围绕开源 Codex CLI 打造，支持 MCP 与 AGENTS.md 规范，方便团队把“项目规则、构建步骤、验收流程”写给代理读。&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;3-步搞定安装与登录&quot;&gt;3 步搞定安装与登录&lt;/h2&gt;&lt;a href=&quot;#3-步搞定安装与登录&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3 步搞定安装与登录”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;① 安装扩展&lt;/strong&gt;
-从 VS Code Marketplace 搜 “Codex – OpenAI’s coding agent”，点安装即可；Cursor、Windsurf 同理。&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;② 登录&lt;/strong&gt;
-推荐用 ChatGPT 账号（Plus / Pro / Team / Edu / Enterprise 都包含）。也可用 API Key，但需要额外配置。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;③（可选）装 CLI&lt;/strong&gt;
-想跑纯终端或做 CI，装 Codex CLI：
-&lt;code dir=&quot;auto&quot;&gt;npm i -g @openai/codex&lt;/code&gt; 或 &lt;code dir=&quot;auto&quot;&gt;brew install codex&lt;/code&gt;，随后 &lt;code dir=&quot;auto&quot;&gt;codex&lt;/code&gt; 直接开干。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Windows 小贴士：配合 &lt;strong&gt;WSL&lt;/strong&gt; 体验更稳。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;上手就香的-6-大场景&quot;&gt;上手就香的 6 大场景&lt;/h2&gt;&lt;a href=&quot;#上手就香的-6-大场景&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “上手就香的 6 大场景”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h3 id=&quot;1遗留项目快速读透&quot;&gt;1）&lt;strong&gt;遗留项目“快速读透”&lt;/strong&gt;&lt;/h3&gt;&lt;a href=&quot;#1遗留项目快速读透&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1）遗留项目“快速读透””&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;让 Codex 在 repo 里&lt;strong&gt;跑测试、搜调用链、总结模块职责&lt;/strong&gt;，给你一张“开箱导览”。适合新人进组或接锅老项目。&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;2小需求当场落地&quot;&gt;2）&lt;strong&gt;小需求当场落地&lt;/strong&gt;&lt;/h3&gt;&lt;a href=&quot;#2小需求当场落地&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2）小需求当场落地”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;在 &lt;code dir=&quot;auto&quot;&gt;Agent&lt;/code&gt; 模式下，直接让它&lt;strong&gt;新建文件、改路由、补单测、运行本地命令&lt;/strong&gt;，你只需把关 PR。&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;3重构迁移&quot;&gt;3）&lt;strong&gt;重构/迁移&lt;/strong&gt;&lt;/h3&gt;&lt;a href=&quot;#3重构迁移&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3）重构/迁移”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;交代目标与约束，让它分批提交改动。若耗时长、影响大，切到&lt;strong&gt;云端任务&lt;/strong&gt;跑，边看 diff 边 review。&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;4性能定位--bug-复现&quot;&gt;4）&lt;strong&gt;性能定位 &amp;#x26; Bug 复现&lt;/strong&gt;&lt;/h3&gt;&lt;a href=&quot;#4性能定位--bug-复现&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “4）性能定位 &amp;#x26; Bug 复现”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;给日志与复现步骤，让它&lt;strong&gt;写探针脚本/本地压测命令&lt;/strong&gt;并执行，产出对比报告。&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;5安全与规范内化&quot;&gt;5）&lt;strong&gt;安全与规范“内化”&lt;/strong&gt;&lt;/h3&gt;&lt;a href=&quot;#5安全与规范内化&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “5）安全与规范“内化””&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;在项目根加 &lt;strong&gt;AGENTS.md&lt;/strong&gt;：建构/测试/代码风格/提交规范/安全要点写清。代理照单执行，减少“口头约定”。&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;6多人协作提效&quot;&gt;6）&lt;strong&gt;多人协作提效&lt;/strong&gt;&lt;/h3&gt;&lt;a href=&quot;#6多人协作提效&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “6）多人协作提效”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;把“需求 → 云端代跑 → 本地验收 → 合并”的流转定成团队 SOP，人人同一套动作，交付节奏更稳。&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;你会常用的-3-个操作流&quot;&gt;你会常用的 3 个操作流&lt;/h2&gt;&lt;a href=&quot;#你会常用的-3-个操作流&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “你会常用的 3 个操作流”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h3 id=&quot;流程-a本地快速改&quot;&gt;流程 A：本地快速改&lt;/h3&gt;&lt;a href=&quot;#流程-a本地快速改&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “流程 A：本地快速改”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ol&gt;
-&lt;li&gt;面板切 &lt;code dir=&quot;auto&quot;&gt;Agent&lt;/code&gt;。&lt;/li&gt;
-&lt;li&gt;选中代码 → 说明意图 → 让它改并跑。&lt;/li&gt;
-&lt;li&gt;看 diff，不满意就“撤回/重做”。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div&gt;&lt;h3 id=&quot;流程-b云端代跑大任务&quot;&gt;流程 B：云端代跑大任务&lt;/h3&gt;&lt;a href=&quot;#流程-b云端代跑大任务&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “流程 B：云端代跑大任务”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ol&gt;
-&lt;li&gt;说明目标与约束（分支、测试覆盖）。&lt;/li&gt;
-&lt;li&gt;选择环境 → &lt;strong&gt;Run in the cloud&lt;/strong&gt;。&lt;/li&gt;
-&lt;li&gt;期间可继续本地开发；完成后把改动拉回本地测一遍。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div&gt;&lt;h3 id=&quot;流程-c只聊天先定方案&quot;&gt;流程 C：只聊天先定方案&lt;/h3&gt;&lt;a href=&quot;#流程-c只聊天先定方案&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “流程 C：只聊天先定方案”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;切 &lt;code dir=&quot;auto&quot;&gt;Chat&lt;/code&gt;，先把设计、接口、边界想清楚，再换回 &lt;code dir=&quot;auto&quot;&gt;Agent&lt;/code&gt; 落地实现。&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;团队落地小抄强烈建议&quot;&gt;团队落地小抄（强烈建议）&lt;/h2&gt;&lt;a href=&quot;#团队落地小抄强烈建议&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “团队落地小抄（强烈建议）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;规范写进 AGENTS.md&lt;/strong&gt;：安装命令、测试脚本、Lint 规则、提交模板、权限范围。代理就会按你写的来。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;按场景选模式&lt;/strong&gt;：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;方案讨论用 &lt;code dir=&quot;auto&quot;&gt;Chat&lt;/code&gt;；&lt;/li&gt;
-&lt;li&gt;局部改动用 &lt;code dir=&quot;auto&quot;&gt;Agent&lt;/code&gt;；&lt;/li&gt;
-&lt;li&gt;大范围/联网操作再考虑 &lt;code dir=&quot;auto&quot;&gt;Full Access&lt;/code&gt;。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;云端任务做“重活”&lt;/strong&gt;：迁移框架、批量重构、生成大型测试集。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;VS Code 右侧面板固定&lt;/strong&gt;，减少来回切窗。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;常见问题&quot;&gt;常见问题&lt;/h2&gt;&lt;a href=&quot;#常见问题&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “常见问题”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;装完看不到？&lt;/strong&gt;
-在侧栏扩展区，可能折叠了；拖到右侧固定。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;计划在 Windows 用？&lt;/strong&gt;
-先上 WSL，体验更丝滑。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;怎么更新？&lt;/strong&gt;
-扩展会自动更新，也可在 IDE 扩展页手动检查。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;tldr&quot;&gt;TL;DR&lt;/h2&gt;&lt;a href=&quot;#tldr&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “TL;DR”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;本地 = 快速改/跑&lt;/strong&gt;，&lt;code dir=&quot;auto&quot;&gt;Agent&lt;/code&gt; 模式够用。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;云端 = 干重活&lt;/strong&gt;，保留上下文、改完拉回测。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;规则写进 AGENTS.md&lt;/strong&gt;，团队协作质量上限被拉满。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;3-个开箱即用的示例话术&quot;&gt;3 个“开箱即用”的示例话术&lt;/h2&gt;&lt;a href=&quot;#3-个开箱即用的示例话术&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3 个“开箱即用”的示例话术”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;“在 &lt;code dir=&quot;auto&quot;&gt;apps/web&lt;/code&gt; 新增 &lt;code dir=&quot;auto&quot;&gt;/pricing&lt;/code&gt; 页面，用 Tailwind，补 e2e 测试并 &lt;code dir=&quot;auto&quot;&gt;npm run test&lt;/code&gt; 通过后提交。”&lt;/li&gt;
-&lt;li&gt;“把 &lt;code dir=&quot;auto&quot;&gt;UserService&lt;/code&gt; 的 N+1 查询用 &lt;code dir=&quot;auto&quot;&gt;includes&lt;/code&gt; 优化，生成基准对比报告。”&lt;/li&gt;
-&lt;li&gt;“把 Monorepo 的 &lt;code dir=&quot;auto&quot;&gt;eslint&lt;/code&gt; 和 &lt;code dir=&quot;auto&quot;&gt;prettier&lt;/code&gt; 升级到最新稳定版，修复所有 CI 报错再发起 PR。”&lt;/li&gt;
-&lt;/ul&gt;&lt;!-- 
----
-
-## 推荐标题（多语种 + slug）
-
-1. **把会写代码的 AI 搬进 VS Code：Codex IDE 实战手册**
-
-   * EN: Bring an AI Coder into VS Code: Codex IDE Playbook
-   * 繁體: 把會寫程式的 AI 搬進 VS Code：Codex IDE 實戰手冊
-   * 日: VS CodeにAIコーダーを入れる：Codex IDE実践ガイド
-   * 法: Un codeur IA dans VS Code : Guide pratique Codex IDE
-   * 西: Un programador IA en VS Code: Guía práctica de Codex IDE
-   * 葡: Um codificador IA no VS Code: Guia prático do Codex IDE
-   * **slug**: codex-ide-playbook-in-vscode
-
-2. **本地改、云端跑：Codex IDE 的高效工作流**
-
-   * EN: Edit Locally, Run in the Cloud: Efficient Workflows with Codex IDE
-   * 繁體: 本地改、雲端跑：Codex IDE 的高效工作流
-   * 日: ローカル編集・クラウド実行：Codex IDE効率ワークフロー
-   * 法: Éditez local, exécutez dans le cloud : flux Codex IDE
-   * 西: Edita local, ejecuta en la nube: flujos con Codex IDE
-   * 葡: Edite local, rode na nuvem: fluxos com Codex IDE
-   * **slug**: codex-ide-local-edit-cloud-run
-
-3. **让代理写代码：Codex IDE 最佳实践清单**
-
-   * EN: Let the Agent Code: Codex IDE Best Practices
-   * 繁體: 讓代理寫程式：Codex IDE 最佳實踐清單
-   * 日: エージェントに書かせる：Codex IDEベストプラクティス
-   * 法: Laissez l’agent coder : bonnes pratiques Codex IDE
-   * 西: Deja que el agente programe: buenas prácticas Codex IDE
-   * 葡: Deixe o agente codar: boas práticas do Codex IDE
-   * **slug**: codex-ide-best-practices
-
----
-
-## 配图（插画风，2:1，无中文文案）
-
-**封面图**
-“An IDE window with a friendly robot agent editing code while launching tests in a terminal; side panel shows chat and diffs; modern pastel palette, clean lines, wide 2:1 aspect.”
-
-**关键章节配图**
-1）“Local Agent mode”
-“A laptop screen showing ‘Agent’ toggle on, file tree highlighted, terminal running tests; subtle safety shield icon.”
-
-2）“Run in the Cloud”
-“A cloud conveyor belt building and testing code, delivering a pull request box to a developer desk.”
-
-3）“AGENTS.md teamwork”
-“A team pinning a document labeled AGENTS.md on a kanban wall; checklists for build, test, style.”
-
----
-
-## 朋友圈/评论区 3 条文案
-
-1. “把 AI 搬进 VS Code，改代码还能自己跑命令，真就上班有‘副驾’了。”
-2. “小需求本地改，大活云端跑，Codex IDE 这工作流太顺手了。”
-3. “在 AGENTS.md 里写清规则，代理按你说的干，团队协作省一半嘴皮子。”
-
----
-
-你觉得这样的写法好用吗？需要我**按你的技术栈**出一份更具体的落地清单（命令、AGENTS.md 模板、常用提示语）吗？我可以直接给到可复制的项目模板。
-
-[1]: https://developers.openai.com/codex/ide/ &quot;Codex IDE extension&quot;
-[2]: https://marketplace.visualstudio.com/items?itemName=openai.chatgpt &quot;
-        Codex - OpenAI&apos;s coding agent - Visual Studio Marketplace
-    &quot;
-[3]: https://github.com/openai/codex &quot;GitHub - openai/codex: Lightweight coding agent that runs in your terminal&quot;
-[4]: https://agents.md/ &quot;AGENTS.md&quot; --&gt;</content:encoded><category>codex</category><category>OpenAI</category><category>Vs Code</category><category>Cursor</category></item><item><title>Zed 支持 ACP 接入 Claude Code 与 Gemini：给多位 AI 同事派活</title><link>https://www.vibesparking.com/zh-cn/blog/ai/zed/2025-08-29-zed-acp-gemini-claude-code/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/zed/2025-08-29-zed-acp-gemini-claude-code/</guid><pubDate>Fri, 29 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- Zed 支持 ACP 接入 Claude Code 与 Gemini：一台编辑器，招齐多位“AI 同事” --&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;Zed 把“代理”做成了标准接口（ACP）&lt;/strong&gt;，把命令行里的智能体请进了编辑器。Gemini CLI 率先接入；&lt;strong&gt;Claude Code&lt;/strong&gt; 也可通过社区桥接跑在 Zed 的 ACP 上。未来，多 Agent 共存将是常态。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;省流版&quot;&gt;省流版&lt;/h2&gt;&lt;a href=&quot;#省流版&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “省流版”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;ACP = 给 AI 编程 Agent 的“LSP”&lt;/strong&gt;。Zed 把协议开源（Apache），任何实现 ACP 的 Agent 都能在 Zed 里跑。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Gemini CLI 官方打样&lt;/strong&gt;：Zed 0.201.5 起，Agent 面板内直接新建 Gemini 线程；未安装会自动装；需要 Gemini CLI ≥ &lt;strong&gt;0.2.0&lt;/strong&gt;。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Claude Code 现在也能接&lt;/strong&gt;：用社区开源桥接 &lt;code dir=&quot;auto&quot;&gt;acp-claude-code&lt;/code&gt;，一行配置就行，支持&lt;strong&gt;自动接受文件编辑&lt;/strong&gt;权限模式。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;注意功能差异&lt;/strong&gt;：Gemini CLI 目前仍缺少“历史消息编辑/从历史恢复/checkpoint/SSH 项目内使用”等能力，官方规划补齐。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;数据在本地&lt;/strong&gt;：第三方 Agent 交互&lt;strong&gt;不经过 Zed 服务器&lt;/strong&gt;；多缓冲区可视化改动、实时预览很香。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;为什么这波值得关注&quot;&gt;为什么这波值得关注？&lt;/h2&gt;&lt;a href=&quot;#为什么这波值得关注&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “为什么这波值得关注？”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;1）编辑器与 Agent 解耦&lt;/strong&gt;
-像 LSP 解耦语言服务一样，&lt;strong&gt;ACP 把“哪位 Agent 上场”这件事交给你选&lt;/strong&gt;。同一个项目，随时切换不同 Agent 解决不同问题。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;2）“真·命令行能力”，但在编辑器里可视化&lt;/strong&gt;
-Zed 在后台&lt;strong&gt;直接跑真实的 Gemini CLI 子进程&lt;/strong&gt;，用 JSON-RPC 说话；你得到 CLI 的全部能力，同时拥有&lt;strong&gt;实时变更可视化&lt;/strong&gt;与&lt;strong&gt;多缓冲区审阅&lt;/strong&gt;。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;3）开源协议 + 生态扩张&lt;/strong&gt;
-&lt;strong&gt;ACP 开源（Apache）&lt;/strong&gt;，Neovim 社区也已跟进支持 ACP 兼容 Agent。&lt;strong&gt;生态不是单机模式&lt;/strong&gt;。&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;安装与快速上手gemini-cli&quot;&gt;安装与快速上手（Gemini CLI）&lt;/h2&gt;&lt;a href=&quot;#安装与快速上手gemini-cli&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “安装与快速上手（Gemini CLI）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;准备 Zed：&lt;/strong&gt; Stable 版 0.201.5+ 可直接用外部 Agent；&lt;strong&gt;cmd-?&lt;/strong&gt; 打开 Agent 面板，右上角 &lt;strong&gt;+&lt;/strong&gt; 新建 Gemini 线程。可加快捷键：&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;json&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;[&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;{ &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;bindings&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: { &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;cmd-alt-g&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: [&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;agent::NewExternalAgentThread&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;, { &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;agent&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;gemini&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; }] } }&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;]&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;准备 Gemini CLI：&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;未安装时 Zed 会代为安装；已装则走 PATH。&lt;/li&gt;
-&lt;li&gt;需 &lt;strong&gt;≥ 0.2.0&lt;/strong&gt;；常见升级命令：&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;npm&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;install&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;-g&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;@google/gemini-cli@latest&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;登录可选：&lt;strong&gt;Log in with Google&lt;/strong&gt; / &lt;strong&gt;GEMINI_API_KEY&lt;/strong&gt; / &lt;strong&gt;Vertex AI&lt;/strong&gt;。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;使用提示：&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;支持 @ 文件 / 线程 / 符号 / 抓网页。&lt;/li&gt;
-&lt;li&gt;暂不支持：历史消息编辑、从历史恢复、checkpoint、SSH 项目内使用。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;一键把-claude-code-接进-zed社区桥接&quot;&gt;一键把 Claude Code 接进 Zed（社区桥接）&lt;/h2&gt;&lt;a href=&quot;#一键把-claude-code-接进-zed社区桥接&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “一键把 Claude Code 接进 Zed（社区桥接）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;现在你也能在 Zed 里用 Claude Code：&lt;strong&gt;社区实现的 ACP 桥接器&lt;/strong&gt; &lt;code dir=&quot;auto&quot;&gt;acp-claude-code&lt;/code&gt;。按下面加到你的 Zed 设置即可（支持自动接受编辑权限）：&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;json&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;{&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;agent_servers&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: {&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;claude-code&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: {&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;      &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;command&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;npx&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;      &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;args&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: [&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;acp-claude-code&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;],&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;      &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;env&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: {&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;        &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;ACP_PERMISSION_MODE&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;acceptEdits&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;   &lt;/span&gt;&lt;span style=&quot;--0:#919F9F;--1:#5D6376&quot;&gt;// 自动接受文件编辑&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;      &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;    &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;p&gt;这个桥接器实现了 &lt;strong&gt;ACP Agent&lt;/strong&gt;，封装 Claude Code SDK，&lt;strong&gt;支持会话保持、流式输出、工具调用、权限模式&lt;/strong&gt; 等；仓库声明 Zed 团队在做原生支持，当前以桥接形态使用。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;备注：&lt;code dir=&quot;auto&quot;&gt;acceptEdits&lt;/code&gt; 仅自动接受“文件编辑”；若用 &lt;code dir=&quot;auto&quot;&gt;bypassPermissions&lt;/code&gt; 会&lt;strong&gt;绕过所有权限&lt;/strong&gt;（不推荐，除非在干净环境做批处理）。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;Claude Code 安装&lt;/strong&gt;（如未安装）：&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;npm&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;install&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;-g&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;@anthropic-ai/claude-code&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;推荐使用场景&quot;&gt;推荐使用场景&lt;/h2&gt;&lt;a href=&quot;#推荐使用场景&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “推荐使用场景”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;大仓重构与批量修补&lt;/strong&gt;：多缓冲区审阅 + 实时可视化，&lt;strong&gt;改动一览无余&lt;/strong&gt;。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;多 Agent PK&lt;/strong&gt;：同题不同解。Gemini 先出重构方案，Claude Code 再补测试与提交信息。&lt;strong&gt;一个编辑器搞定。&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;安全/合规团队&lt;/strong&gt;：外部 Agent 交互&lt;strong&gt;不经 Zed 服务器&lt;/strong&gt;，更安心。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;调试与排错&quot;&gt;调试与排错&lt;/h2&gt;&lt;a href=&quot;#调试与排错&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “调试与排错”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;命令面板运行 &lt;strong&gt;&lt;code dir=&quot;auto&quot;&gt;dev: open acp logs&lt;/code&gt;&lt;/strong&gt;，查看 Zed 与 Agent 的消息收发，定位问题非常直观。&lt;/li&gt;
-&lt;li&gt;需要快捷开新线程？动作名：&lt;strong&gt;&lt;code dir=&quot;auto&quot;&gt;agent::NewExternalAgentThread&lt;/code&gt;&lt;/strong&gt;。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;生态走向&quot;&gt;生态走向&lt;/h2&gt;&lt;a href=&quot;#生态走向&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “生态走向”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;今天&lt;/strong&gt;：Gemini CLI 官方集成已上线。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;正在发生&lt;/strong&gt;：社区已把 &lt;strong&gt;Claude Code&lt;/strong&gt; 接入 ACP（桥接器开源活跃）。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;可预期&lt;/strong&gt;：ACP 是开源协议，&lt;strong&gt;更多 Agent（如 Codex CLI、Cursor CLI 等）完全可以接入&lt;/strong&gt;；这不是空想，Zed 博文明确鼓励第三方 Agent 与其他编辑器加入。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;行动清单复制即用&quot;&gt;行动清单（复制即用）&lt;/h2&gt;&lt;a href=&quot;#行动清单复制即用&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “行动清单（复制即用）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Gemini 线路&lt;/strong&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;升级 Zed 到稳定版（≥0.201.5）。&lt;/li&gt;
-&lt;li&gt;打开 Agent 面板新建 Gemini 线程；如需升级 CLI：&lt;code dir=&quot;auto&quot;&gt;npm i -g @google/gemini-cli@latest&lt;/code&gt;。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol start=&quot;2&quot;&gt;
-&lt;li&gt;&lt;strong&gt;Claude Code 线路（桥接）&lt;/strong&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;安装 Claude Code：&lt;code dir=&quot;auto&quot;&gt;npm i -g @anthropic-ai/claude-code&lt;/code&gt;。&lt;/li&gt;
-&lt;li&gt;在 Zed 设置写入上面的 &lt;code dir=&quot;auto&quot;&gt;agent_servers&lt;/code&gt; 片段，建议 &lt;code dir=&quot;auto&quot;&gt;ACP_PERMISSION_MODE=acceptEdits&lt;/code&gt;。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol start=&quot;3&quot;&gt;
-&lt;li&gt;&lt;strong&gt;调试&lt;/strong&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;dev: open acp logs&lt;/code&gt; 看日志，排查权限/会话问题。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;思考题&quot;&gt;思考题&lt;/h2&gt;&lt;a href=&quot;#思考题&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “思考题”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;你的项目里，&lt;strong&gt;哪类任务&lt;/strong&gt;更适合交给 Gemini？哪类交给 Claude Code？&lt;/li&gt;
-&lt;li&gt;团队要不要设定&lt;strong&gt;权限策略&lt;/strong&gt;（如只自动接受编辑，不自动执行命令）？&lt;/li&gt;
-&lt;li&gt;要不要做一场“&lt;strong&gt;多 Agent PK&lt;/strong&gt;”的内部学习会？&lt;/li&gt;
-&lt;/ul&gt;&lt;!-- 
----
-
-## 配图建议（交给画图工具即可）
-
-**封面图（2:1，插画风，无中文）：**
-“An illustration of a sleek code editor ‘Zed’ docking multiple AI agent robots via a cable labeled ‘ACP’; diff panes glow subtly; clean gradients; 2:1.”
-
-**配图 1（ACP 概念）：**
-“Side-by-side analogy panel: LSP connects editor ↔ language servers; ACP connects editor ↔ multiple coding agents; pastel, minimal, 2:1.”
-
-**配图 2（Gemini in Zed）：**
-“Editor agent panel chatting with Gemini CLI; multi-buffer diffs highlighted; keyboard shortcut hint; 2:1.”
-
-**配图 3（Claude Code 桥接）：**
-“Small bridge device labeled ‘acp-claude-code’ plugging Claude bot into editor via ACP; warning tag ‘acceptEdits’; 2:1.”
-
----
-
-## 多语言标题 &amp; slug（3 组）
-
-1.
-
-* 简：**Zed 上的多智能体：ACP 接入 Gemini 与 Claude Code 实战**
-* 繁：Zed 上的多智能體：ACP 接入 Gemini 與 Claude Code 實戰
-* EN: **Many Agents in Zed: ACP with Gemini and Claude Code**
-* JP: Zedで多エージェント：ACPでGeminiとClaude Codeを接続
-* FR: **Multi-agents dans Zed : ACP avec Gemini et Claude Code**
-* ES: **Varios agentes en Zed: ACP con Gemini y Claude Code**
-* PT: **Múltiplos agentes no Zed: ACP com Gemini e Claude Code**
-* slug: `zed-acp-gemini-claude-code`
-
-2.
-
-* 简：**一个编辑器，多位 AI 同事：Zed ACP 全攻略**
-* EN: **One Editor, Many AI Teammates: Your Zed ACP Playbook**
-* 繁：一個編輯器，多位 AI 同事：Zed ACP 全攻略
-* JP: 1つのエディタで多数のAI同僚：Zed ACP実践ガイド
-* FR: Un éditeur, plusieurs coéquipiers IA : le guide ACP de Zed
-* ES: Un editor, muchos compañeros IA: guía ACP de Zed
-* PT: Um editor, muitos colegas IA: guia ACP do Zed
-* slug: `one-editor-many-agents-zed-acp`
-
-3.
-
-* 简：**今天接 Gemini，明天上 Claude Code：ACP 打开多 Agent 之门**
-* EN: **Gemini Today, Claude Code Tomorrow: ACP Opens the Door**
-* 繁：今天接 Gemini，明天上 Claude Code：ACP 打開多 Agent 之門
-* JP: 今日はGemini、明日はClaude Code：ACPが扉を開く
-* FR: Gemini aujourd’hui, Claude Code demain : ACP ouvre la voie
-* ES: Gemini hoy, Claude Code mañana: ACP abre la puerta
-* PT: Gemini hoje, Claude Code amanhã: ACP abre a porta
-* slug: `acp-opens-multi-agent`
-
----
-
-## 朋友圈/评论区 3 条文案
-
-1. **Zed 把“AI 同事”都请进来了**：Gemini 走官方，Claude Code 走桥接。多 Agent PK，生产力起飞。
-2. 我把 `ACP_PERMISSION_MODE=acceptEdits` 打开了，自动接文件改动，爽到飞起。你们更喜欢谁来做重构？
-3. **一个编辑器，多个 Agent**。这才是工作流自由度。准备试试 Codex/Cursor 的 ACP 版本了。
-
----
-
-## 参考链接
-
-* **Zed 文档《External Agents》**：版本要求、键位、安装、认证、功能限制、调试日志。
-* **Zed 博客**《Bring Your Own Agent to Zed — Featuring Gemini CLI》：ACP 初衷、Apache 开源、数据不经 Zed 服务器、生态展望。
-* **Zed 动作一览**：`agent::NewExternalAgentThread` 等快捷动作名。
-* **Claude Code 社区桥接器** `acp-claude-code`：配置、权限模式、调试方式。
-* **Claude Code 安装与概览**：官方文档与主页。
-
----
-
-要不要把这篇再**扩写为企业内部培训稿（含演示脚本 + 现场操作清单）**？或者我直接给你**做一页式海报 + 配图包**，发公众号更省心。你觉得呢？
-
-[1]: https://zed.dev/blog/bring-your-own-agent-to-zed &quot;Bring Your Own Agent to Zed — Featuring Gemini CLI — Zed&apos;s Blog&quot;
-[2]: https://zed.dev/docs/ai/external-agents &quot;External Agents | Zed Code Editor Documentation&quot;
-[3]: https://github.com/Xuanwo/acp-claude-code &quot;GitHub - Xuanwo/acp-claude-code: The ACP implementation for Claude Code&quot;
-[4]: https://docs.anthropic.com/en/docs/claude-code/setup?utm_source=chatgpt.com &quot;Set up Claude Code&quot;
-[5]: https://www.anthropic.com/claude-code?utm_source=chatgpt.com &quot;Claude Code: Deep coding at terminal velocity \ Anthropic&quot;
-[6]: https://zed.dev/docs/all-actions &quot;All Actions | Zed Code Editor Documentation&quot; --&gt;</content:encoded><category>Zed</category><category>Claude Code</category><category>Gemini CLI</category><category>Agent Client Protocol（ACP）</category></item></channel></rss>
+[6]: https://gemini-cli.xyz/docs/en/ide-integration?utm_source=chatgpt.com &quot;IDE Integration | Gemini CLI Docs&quot; --&gt;</content:encoded><category>Gemini CLI</category><category>Gemini CLI Companion</category><category>gemini-2.5-pro</category><category>VS Code</category><category>Cursor</category></item></channel></rss>
