@@ -174,7 +174,196 @@
 [7]: https://github.com/sharkdp/fd?utm_source=chatgpt.com &quot;sharkdp/fd: A simple, fast and user-friendly alternative to &apos;find&apos;&quot;
 [8]: https://jqlang.org/?utm_source=chatgpt.com &quot;jq&quot;
 [9]: https://github.com/BurntSushi/ripgrep?utm_source=chatgpt.com &quot;ripgrep recursively searches directories for a regex pattern ...&quot;
-[10]: https://github.com/mikefarah/yq?utm_source=chatgpt.com &quot;mikefarah/yq: yq is a portable command-line YAML, JSON, ...&quot; --&gt;</content:encoded><category>Codex</category></item><item><title>日本央行货币政策正常化：对美国国债、美元指数与美股的系统性影响深度解析</title><link>https://www.vibesparking.com/zh-cn/blog/finance/japan/2025-09-05-boj-normalization-impact-us-treasuries-dxy-us-equities/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/finance/japan/2025-09-05-boj-normalization-impact-us-treasuries-dxy-us-equities/</guid><pubDate>Fri, 05 Sep 2025 00:00:00 GMT</pubDate><content:encoded>&lt;div&gt;&lt;h1 id=&quot;日本央行货币政策正常化对美国国债美元指数与美股的系统性影响深度解析&quot;&gt;日本央行货币政策正常化：对美国国债、美元指数与美股的系统性影响深度解析&lt;/h1&gt;&lt;a href=&quot;#日本央行货币政策正常化对美国国债美元指数与美股的系统性影响深度解析&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “日本央行货币政策正常化：对美国国债、美元指数与美股的系统性影响深度解析”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+[10]: https://github.com/mikefarah/yq?utm_source=chatgpt.com &quot;mikefarah/yq: yq is a portable command-line YAML, JSON, ...&quot; --&gt;</content:encoded><category>Codex</category></item><item><title>Codex 接入推荐的 10 个 MCP</title><link>https://www.vibesparking.com/zh-cn/blog/ai/openai/codex/mcp/2025-09-10-codex-mcp-setup-10-servers/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/openai/codex/mcp/2025-09-10-codex-mcp-setup-10-servers/</guid><pubDate>Wed, 10 Sep 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # 用 Codex 一键接入 MCP：从配置到 10 个高能服务器，直接抄作业就能跑 --&gt;
+&lt;blockquote&gt;
+&lt;p&gt;把 MCP 服务器写进 &lt;code dir=&quot;auto&quot;&gt;~/.codex/config.toml&lt;/code&gt;，Codex 就能“长出手脚”，会爬网、会看文档、会点浏览器、会改代码。本文给你&lt;strong&gt;可复制配置&lt;/strong&gt; + &lt;strong&gt;使用场景&lt;/strong&gt; + &lt;strong&gt;避坑提示&lt;/strong&gt;。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;引言&quot;&gt;引言&lt;/h2&gt;&lt;a href=&quot;#引言&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “引言”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;过去我们让模型写代码、查资料、跑任务，总感觉差点“动手能力”。&lt;strong&gt;MCP（Model Context Protocol）&lt;strong&gt;像 AI 的 USB-C，把外部工具以统一方式接进来，Codex 配好就能随叫随到。OpenAI 文档把 MCP比作“给 AI 的 USB-C 接口”，意思就是&lt;/strong&gt;接上就能用&lt;/strong&gt;。vs&lt;/p&gt;
+&lt;p&gt;微软的 &lt;strong&gt;Playwright MCP&lt;/strong&gt; 也上了车：智能体能真开浏览器、看可达性树、验证变更，不必靠截图。vs&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;一分钟上手codexconfigtoml&quot;&gt;一分钟上手：&lt;code dir=&quot;auto&quot;&gt;~/.codex/config.toml&lt;/code&gt;&lt;/h2&gt;&lt;a href=&quot;#一分钟上手codexconfigtoml&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “一分钟上手：~/.codex/config.toml”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;在 Codex CLI 里，&lt;strong&gt;MCP 服务器列表写在 &lt;code dir=&quot;auto&quot;&gt;mcp_servers&lt;/code&gt; 段&lt;/strong&gt;（TOML）。参考结构：vs&lt;/p&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;~/.codex/config.toml&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;toml&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;[mcp_servers.server-name]&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;command&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; = &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;npx&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;args&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; = [&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;-y&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;, &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;package-name@latest&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;]&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# 可选：自定义每个服务器启动与列工具清单的等待时长（毫秒）&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;startup_timeout_ms&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; = &lt;/span&gt;&lt;span style=&quot;--0:#F78C6C;--1:#AA0982&quot;&gt;20000&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;p&gt;Codex 最近版本支持 &lt;strong&gt;per-server 启动超时&lt;/strong&gt;（&lt;code dir=&quot;auto&quot;&gt;startup_timeout_ms&lt;/code&gt;），官方发布笔记已合并此能力，社区 issue 也提到&lt;strong&gt;默认是 10 秒&lt;/strong&gt;的超时场景，超时可调更稳。vs&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;小贴士&lt;/strong&gt;：很多 MCP 客户端偏好 &lt;strong&gt;STDIO 传输&lt;/strong&gt;；如果遇到&lt;strong&gt;只支持 SSE&lt;/strong&gt; 的远程服务，&lt;strong&gt;用 mcp-proxy 做桥接&lt;/strong&gt;就行（STDIO↔SSE 双向）。vs&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;抄作业清单10-个高能-mcp-服务器&quot;&gt;抄作业清单：10 个高能 MCP 服务器&lt;/h2&gt;&lt;a href=&quot;#抄作业清单10-个高能-mcp-服务器&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “抄作业清单：10 个高能 MCP 服务器”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;每段都给你&lt;strong&gt;用途&lt;/strong&gt;、&lt;strong&gt;可复制配置&lt;/strong&gt;、&lt;strong&gt;要点&lt;/strong&gt;。把块复制到 &lt;code dir=&quot;auto&quot;&gt;~/.codex/config.toml&lt;/code&gt; 即可。环境变量记得换成自己的 Key。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div&gt;&lt;h3 id=&quot;1context7--一键把最新库文档示例塞进上下文&quot;&gt;1）Context7 —— 一键把&lt;strong&gt;最新库文档/示例&lt;/strong&gt;塞进上下文&lt;/h3&gt;&lt;a href=&quot;#1context7--一键把最新库文档示例塞进上下文&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1）Context7 —— 一键把最新库文档/示例塞进上下文”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;用途&lt;/strong&gt;：按你项目依赖版本，抓&lt;strong&gt;最新&lt;/strong&gt;官方文档与示例，减少“旧接口/幻觉”。vs&lt;/p&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;toml&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;[mcp_servers.context7]&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;command&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; = &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;npx&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;args&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; = [&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;-y&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;, &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;@upstash/context7-mcp&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;]&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;env&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; = {}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;要点&lt;/strong&gt;：支持多客户端；文档里也给了 Cursor/VS Code/Zed/Claude 的配置样例。vs&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h3 id=&quot;2deepwiki--针对任意-github-仓库的问答结构化知识&quot;&gt;2）DeepWiki —— 针对&lt;strong&gt;任意 GitHub 仓库&lt;/strong&gt;的问答&amp;#x26;结构化知识&lt;/h3&gt;&lt;a href=&quot;#2deepwiki--针对任意-github-仓库的问答结构化知识&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2）DeepWiki —— 针对任意 GitHub 仓库的问答&amp;#x26;结构化知识”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;用途&lt;/strong&gt;：对 DeepWiki 索引过的开源仓库，直接问答、读 wiki 内容/结构。vs&lt;/p&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;toml&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;[mcp_servers.mcp-deepwiki]&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;command&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; = &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;npx&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;args&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; = [&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;-y&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;, &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;mcp-deepwiki@latest&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;]&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;env&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; = {}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;要点&lt;/strong&gt;：官方宣布&lt;strong&gt;免费、免登录&lt;/strong&gt;；可提交你的仓库去索引。vs&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h3 id=&quot;3playwright--让-codex-真开浏览器做-e2e-验证&quot;&gt;3）Playwright —— 让 Codex &lt;strong&gt;真开浏览器&lt;/strong&gt;做 E2E 验证&lt;/h3&gt;&lt;a href=&quot;#3playwright--让-codex-真开浏览器做-e2e-验证&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3）Playwright —— 让 Codex 真开浏览器做 E2E 验证”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;用途&lt;/strong&gt;：页面交互、可达性树、执行脚本、自动化测试。vs&lt;/p&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;toml&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;[mcp_servers.playwright]&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;command&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; = &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;npx&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;args&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; = [&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;@playwright/mcp@latest&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;]&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;要点&lt;/strong&gt;：官方 npm 包与仓库维护活跃；适合&lt;strong&gt;回归验证&lt;/strong&gt;、&lt;strong&gt;可视化检查&lt;/strong&gt;、&lt;strong&gt;端到端测试&lt;/strong&gt;。vs&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h3 id=&quot;4exa--实时-web-搜索结构化结果&quot;&gt;4）Exa —— &lt;strong&gt;实时 Web 搜索&lt;/strong&gt;（结构化结果）&lt;/h3&gt;&lt;a href=&quot;#4exa--实时-web-搜索结构化结果&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “4）Exa —— 实时 Web 搜索（结构化结果）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;用途&lt;/strong&gt;：用 Exa Search API 做实时检索，返回&lt;strong&gt;结构化标题/URL/摘要&lt;/strong&gt;，适合研究/资料搜集。vs&lt;/p&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;toml&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;[mcp_servers.exa]&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;command&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; = &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;npx&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;args&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; = [&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;-y&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;, &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;exa-mcp-server&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;]&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;env&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; = { &lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;EXA_API_KEY&lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; = &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;your_exa_key&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; }&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;要点&lt;/strong&gt;：官方文档与 npm 包都在更新；支持远程托管版本。vs&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h3 id=&quot;5spec-workflow--规格驱动开发的整套流水线&quot;&gt;5）Spec-Workflow —— &lt;strong&gt;规格驱动开发&lt;/strong&gt;的整套流水线&lt;/h3&gt;&lt;a href=&quot;#5spec-workflow--规格驱动开发的整套流水线&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “5）Spec-Workflow —— 规格驱动开发的整套流水线”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;用途&lt;/strong&gt;：用规范化四阶段（需求→设计→任务→实现）推进项目，带&lt;strong&gt;实时仪表盘&lt;/strong&gt;与 VSCode 扩展。vs&lt;/p&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;toml&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;[mcp_servers.spec-workflow]&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;command&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; = &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;npx&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;args&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; = [&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;-y&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;, &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;@pimzino/spec-workflow-mcp@latest&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;]&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;env&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; = {}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;要点&lt;/strong&gt;：官方示例含一键配置；适合多人协作、留痕审批。vs&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h3 id=&quot;6sequential-thinking--结构化思考与多路径推理&quot;&gt;6）Sequential-Thinking —— &lt;strong&gt;结构化思考&lt;/strong&gt;与&lt;strong&gt;多路径推理&lt;/strong&gt;&lt;/h3&gt;&lt;a href=&quot;#6sequential-thinking--结构化思考与多路径推理&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “6）Sequential-Thinking —— 结构化思考与多路径推理”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;用途&lt;/strong&gt;：把复杂问题切成步骤、可回溯、可分支，支持动态“想法”数量。vs&lt;/p&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;toml&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;[mcp_servers.sequential-thinking]&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;command&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; = &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;npx&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;args&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; = [&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;-y&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;, &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;@modelcontextprotocol/server-sequential-thinking&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;]&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;要点&lt;/strong&gt;：官方/社区多实现，适合需要&lt;strong&gt;可解释链路&lt;/strong&gt;的任务拆解。vs&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h3 id=&quot;7magic21stdev-自然语言生成专业-ui-组件&quot;&gt;7）Magic（21st.dev）—— &lt;strong&gt;自然语言生成专业 UI 组件&lt;/strong&gt;&lt;/h3&gt;&lt;a href=&quot;#7magic21stdev-自然语言生成专业-ui-组件&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “7）Magic（21st.dev）—— 自然语言生成专业 UI 组件”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;用途&lt;/strong&gt;：用一句话生成&lt;strong&gt;可投产的 React 组件&lt;/strong&gt;，支持 Cursor/Windsurf/VSCode。vs&lt;/p&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;toml&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;[mcp_servers.magic]&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;command&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; = &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;npx&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;args&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; = [&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;@21st-dev/magic&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;]&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;env&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; = { &lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;TWENTYFIRST_API_KEY&lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; = &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;your_21st_key&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; }&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;要点&lt;/strong&gt;：官方安装指引与用法清晰；适合&lt;strong&gt;设计-开发&lt;/strong&gt;一体化迭代。vs&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h3 id=&quot;8serena--代码语义检索符号级编辑像给模型装了-ide&quot;&gt;8）Serena —— &lt;strong&gt;代码语义检索+符号级编辑&lt;/strong&gt;，像给模型装了 IDE&lt;/h3&gt;&lt;a href=&quot;#8serena--代码语义检索符号级编辑像给模型装了-ide&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “8）Serena —— 代码语义检索+符号级编辑，像给模型装了 IDE”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;用途&lt;/strong&gt;：基于 LSP 的语义理解与符号级修改，跨多语言；特别适合&lt;strong&gt;大仓重构/精准改动&lt;/strong&gt;。vs&lt;/p&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;toml&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;[mcp_servers.serena]&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;command&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; = &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;uvx&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;args&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; = [&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;--from&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;, &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;git+https://github.com/oraios/serena&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;, &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;serena&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;, &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;start-mcp-server&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;]&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;要点&lt;/strong&gt;：开源、活跃；版本更新日志强调&lt;strong&gt;稳定性与同步执行&lt;/strong&gt;。vs&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h3 id=&quot;9morph-fast-apply--超快精准改码4k-tokenss-合并补丁&quot;&gt;9）Morph Fast-Apply —— &lt;strong&gt;超快精准改码&lt;/strong&gt;（4k+ tokens/s 合并补丁）&lt;/h3&gt;&lt;a href=&quot;#9morph-fast-apply--超快精准改码4k-tokenss-合并补丁&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “9）Morph Fast-Apply —— 超快精准改码（4k+ tokens/s 合并补丁）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;用途&lt;/strong&gt;：把模型建议的“差异片段”&lt;strong&gt;快速、稳&lt;/strong&gt;地打进真实文件，适合大规模重构/批量修复。vs&lt;/p&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;toml&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;[mcp_servers.morphllm-fast-apply]&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;command&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; = &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;npx&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;args&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; = [&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;@morph-llm/morph-fast-apply&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;, &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;/home/&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;]&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;env&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; = { &lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;MORPH_API_KEY&lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; = &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;your_morph_key&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;, &lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;ALL_TOOLS&lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; = &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;true&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; }&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;要点&lt;/strong&gt;：官方包说明支持选择仅 edit 或开放全文件系统工具。vs&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h3 id=&quot;10open-web-search--跨搜索引擎-web-检索支持-stdiosse&quot;&gt;10）Open-Web-Search —— &lt;strong&gt;跨搜索引擎 Web 检索&lt;/strong&gt;（支持 STDIO/SSE）&lt;/h3&gt;&lt;a href=&quot;#10open-web-search--跨搜索引擎-web-检索支持-stdiosse&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “10）Open-Web-Search —— 跨搜索引擎 Web 检索（支持 STDIO/SSE）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;用途&lt;/strong&gt;：统一落地 DuckDuckGo/Bing/Brave 搜索，&lt;strong&gt;一键切换&lt;/strong&gt;后端与传输模式。vs&lt;/p&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;toml&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;[mcp_servers.open-websearch]&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;command&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; = &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;npx&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;args&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; = [&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;-y&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;, &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;open-websearch@latest&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;]&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;env&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; = { &lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;MODE&lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; = &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;stdio&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;, &lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;DEFAULT_SEARCH_ENGINE&lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; = &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;duckduckgo&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;, &lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;ALLOWED_SEARCH_ENGINES&lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; = &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;duckduckgo,bing,brave&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; }&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;要点&lt;/strong&gt;：仓库文档写清了 &lt;code dir=&quot;auto&quot;&gt;MODE=stdio|sse&lt;/code&gt; 与默认搜索引擎配置。vs&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;远程sse-服务器怎么接不会就用-mcp-proxy&quot;&gt;远程/SSE 服务器怎么接？（不会就用 mcp-proxy）&lt;/h2&gt;&lt;a href=&quot;#远程sse-服务器怎么接不会就用-mcp-proxy&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “远程/SSE 服务器怎么接？（不会就用 mcp-proxy）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;很多客户端偏好 STDIO，本地可执行没问题；&lt;strong&gt;远程 SSE&lt;/strong&gt; 就需要桥接。最省事的方法是 &lt;strong&gt;mcp-proxy&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;模式 A&lt;/strong&gt;：STDIO → SSE（让只认 STDIO 的客户端连到远程 SSE 服务器）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;模式 B&lt;/strong&gt;：SSE → STDIO（把本地 STDIO 服务器暴露成可远程连的 SSE）vs&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;一行命令示例&lt;/strong&gt;
+&lt;code dir=&quot;auto&quot;&gt;mcp-proxy --port=8080 -- npx @playwright/mcp@latest&lt;/code&gt;（把本地 STDIO 的 Playwright 暴露成 SSE）vs&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;安全小贴士很重要&quot;&gt;安全小贴士（很重要）&lt;/h2&gt;&lt;a href=&quot;#安全小贴士很重要&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “安全小贴士（很重要）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;最小权限&lt;/strong&gt;：给服务器只开必须的环境变量/目录访问。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;留意供应链&lt;/strong&gt;：MCP 生态在快速扩张，研究指出存在“寄生式工具链攻击”的新风险面。&lt;strong&gt;优先用官方与可信来源&lt;/strong&gt;，敏感数据分层隔离。vs&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;常见问题--排错&quot;&gt;常见问题 &amp;#x26; 排错&lt;/h2&gt;&lt;a href=&quot;#常见问题--排错&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “常见问题 &amp;#x26; 排错”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;工具启动超时&lt;/strong&gt;：把 &lt;code dir=&quot;auto&quot;&gt;startup_timeout_ms&lt;/code&gt; 拉长，例如 20000。这个参数官方已支持，适合网络慢/冷启动慢的服务器。vs&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;SSE 连接不了&lt;/strong&gt;：确认是否需要 mcp-proxy 或网关做转接。vs&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Playwright 安装问题&lt;/strong&gt;：遇到包版本异常，可换 &lt;code dir=&quot;auto&quot;&gt;@latest&lt;/code&gt; 或追踪 issue。vs&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;结语&quot;&gt;结语&lt;/h2&gt;&lt;a href=&quot;#结语&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “结语”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;把 MCP 接进 Codex，就像给工程师配了&lt;strong&gt;一支多功能团队&lt;/strong&gt;：有人负责查文档，有人跑浏览器，有人改代码，有人做流程。&lt;strong&gt;上面的 10 个块直接粘贴就能跑&lt;/strong&gt;，再加上 mcp-proxy，&lt;strong&gt;本地/远程都不愁&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;**你会先接哪几个？打算用来解决什么痛点？**欢迎在评论区聊聊你的组合拳。&lt;/p&gt;&lt;!-- 
+---
+
+# 🎯 多语言标题（3 组）
+
+1. **把 MCP 接进 Codex：10 个必装服务器与一键配置清单**
+   EN: *Plug MCP into Codex: 10 Must-Have Servers with Copy-Paste Configs*
+   繁體: *把 MCP 接進 Codex：10 個必裝伺服器與一鍵配置清單*
+   日本語: *Codex に MCP を接続：必須サーバー10選とコピペ設定*
+   Français : *Brancher MCP à Codex : 10 serveurs indispensables et configs à copier-coller*
+   Español: *Conecta MCP a Codex: 10 servidores imprescindibles y configs para copiar*
+   Português: *Conecte o MCP ao Codex: 10 servidores essenciais com configs para copiar*
+   **slug**: `codex-mcp-setup-10-servers`
+
+2. **一键把 Codex 变“全能助理”：浏览器、改码、搜网全都有**
+   EN: *Turn Codex into an All-Rounder: Browser, Code Edits, Web Search in One*
+   繁體: *一鍵把 Codex 變「全能助理」：瀏覽器、改碼、搜網通通有*
+   日本語: *Codex を万能アシスタント化：ブラウザ操作・コード編集・検索*
+   Français : *Transformer Codex en assistant tout-en-un : navigateur, édition de code, recherche web*
+   Español: *Convierte Codex en asistente total: navegador, edición de código y búsqueda web*
+   Português: *Deixe o Codex completo: navegador, edição de código e busca web*
+   **slug**: `codex-all-in-one-with-mcp`
+
+3. **工程效率 x10：这份 MCP 配置抄了就能跑**
+   EN: *10× Dev Velocity: Copy-Paste MCP Configs that Just Work*
+   繁體: *工程效率 x10：這份 MCP 配置抄了就能跑*
+   日本語: *生産性10倍：コピペで動く MCP 設定*
+   Français : *Productivité ×10 : configs MCP à copier pour démarrer tout de suite*
+   Español: *Productividad ×10: configs MCP para copiar y correr*
+   Português: *Produtividade ×10: configs MCP para copiar e rodar*
+   **slug**: `mcp-dev-velocity-boost`
+
+---
+
+## 🖼️ 配图提示（插画风，2:1，图中文字先别用中文）
+
+**封面图**
+
+* 提示词：*Illustration, USB-C cable plugging into a robot’s chest labeled “MCP”, multiple app icons (browser, search, docs, code) lighting up, vibrant, minimal, flat style, 2:1 aspect ratio*
+
+**关键章节配图**
+
+1. *“config.toml” open on a laptop, blocks labeled “context7”, “playwright”, “exa” snapping into ports, clean techy style, 2:1*
+2. *Browser window with a robot hand navigating elements, checkmarks for tests, Playwright logo hints, flat illustration, 2:1*
+3. *Gears labeled “SSE” and “STDIO” bridged by a small proxy box, arrows both ways, informative minimal illustration, 2:1*
+4. *Code file with highlighted diff snippets being merged by a fast rocket “Morph”, speed lines, 2:1*
+
+---
+
+## 💬 朋友圈/评论区 3 条种草文案
+
+1. “抄这份 MCP 配置，Codex 直接会开浏览器、会改代码、还能全网搜。真是把我从‘复制粘贴工程师’救出来了 😂”
+2. “Context7 + Playwright + Morph= 开发三件套。写、测、改一条龙，效率飙升，老板以为我加班了。”
+3. “原来 DeepWiki 还能直接问开源库细节？再搭个 Exa 搜研究资料，做技术选型不香吗！”
+
+---
+
+要不要我把**你现有项目**的 `config.toml` **直接改好**，或者扩写一版“最佳组合方案”（按你工作流定制）？你觉得呢？需要我再细化哪一块？
+
+[1]: https://openai.github.io/openai-agents-js/guides/mcp/?utm_source=chatgpt.com &quot;Model Context Protocol (MCP) | OpenAI Agents SDK&quot;
+[2]: https://www.npmjs.com/package/%40playwright/mcp?utm_source=chatgpt.com &quot;playwright/mcp&quot;
+[3]: https://github.com/microsoft/playwright-mcp?utm_source=chatgpt.com &quot;microsoft/playwright-mcp: Playwright MCP server&quot;
+[4]: https://developer.microsoft.com/blog/the-complete-playwright-end-to-end-story-tools-ai-and-real-world-workflows?utm_source=chatgpt.com &quot;The Complete Playwright End-to-End Story, Tools, AI, and ...&quot;
+[5]: https://github.com/openai/codex &quot;GitHub - openai/codex: Lightweight coding agent that runs in your terminal&quot;
+[6]: https://community.openai.com/t/codex-changelog-indicates-setup-script-timeout-is-now-10-minutes-but-mine-timing-out-at-5/1278352?utm_source=chatgpt.com &quot;Codex Changelog Indicates Setup Script Timeout is Now ...&quot;
+[7]: https://pub.towardsai.net/i-used-mcp-for-3-months-everything-you-need-to-know-24-best-servers-0c02f3915867?utm_source=chatgpt.com &quot;🧠 I Used MCP for 3 months: Everything You Need to Know ...&quot;
+[8]: https://github.com/sparfenyuk/mcp-proxy?utm_source=chatgpt.com &quot;sparfenyuk/mcp-proxy: A bridge between Streamable ...&quot;
+[9]: https://www.home-assistant.io/integrations/mcp_server/?utm_source=chatgpt.com &quot;Model Context Protocol Server&quot;
+[10]: https://www.npmjs.com/package/%40upstash/context7-mcp/v/1.0.12 &quot;@upstash/context7-mcp - npm&quot;
+[11]: https://cognition.ai/blog/deepwiki-mcp-server &quot;Cognition | The DeepWiki MCP Server&quot;
+[12]: https://docs.exa.ai/examples/exa-mcp?utm_source=chatgpt.com &quot;Exa MCP&quot;
+[13]: https://github.com/exa-labs/exa-mcp-server?utm_source=chatgpt.com &quot;exa-labs/exa-mcp-server: Exa is a Web Search API&quot;
+[14]: https://www.npmjs.com/package/exa-mcp-server?utm_source=chatgpt.com &quot;exa-mcp-server - NPM&quot;
+[15]: https://github.com/Pimzino/spec-workflow-mcp?utm_source=chatgpt.com &quot;Pimzino/spec-workflow-mcp&quot;
+[16]: https://marketplace.visualstudio.com/items?itemName=Pimzino.spec-workflow-mcp&amp;utm_source=chatgpt.com &quot;Spec Workflow MCP Extension&quot;
+[17]: https://playbooks.com/mcp/spec-workflow?utm_source=chatgpt.com &quot;Spec Workflow MCP server for AI agents - Playbooks&quot;
+[18]: https://www.npmjs.com/package/%40modelcontextprotocol/server-sequential-thinking?utm_source=chatgpt.com &quot;modelcontextprotocol/server-sequential-thinking&quot;
+[19]: https://github.com/modelcontextprotocol/servers/tree/main/src/sequentialthinking?utm_source=chatgpt.com &quot;Sequential Thinking MCP Server&quot;
+[20]: https://playbooks.com/mcp/anthropic-sequential-thinking?utm_source=chatgpt.com &quot;Sequential Thinking MCP server for AI agents - Playbooks&quot;
+[21]: https://21st.dev/magic?utm_source=chatgpt.com &quot;Magic - AI Agent for Your IDE That Creates Professional UI ...&quot;
+[22]: https://www.npmjs.com/package/%4021st-dev/magic?utm_source=chatgpt.com &quot;21st.dev Magic AI Agent&quot;
+[23]: https://www.npmjs.com/package/%4021st-dev/magic/v/0.0.11?activeTab=dependencies&amp;utm_source=chatgpt.com &quot;21st-dev/magic&quot;
+[24]: https://github.com/oraios/serena?utm_source=chatgpt.com &quot;oraios/serena: A powerful coding agent toolkit providing ...&quot;
+[25]: https://github.com/oraios/serena/releases?utm_source=chatgpt.com &quot;Releases · oraios/serena&quot;
+[26]: https://morphllm.com/?utm_source=chatgpt.com &quot;Morph - The Fastest Way to Apply Edits to Files&quot;
+[27]: https://openrouter.ai/morph/morph-v2?utm_source=chatgpt.com &quot;Morph: Fast Apply&quot;
+[28]: https://www.npmjs.com/package/%40morph-llm%2Fmorph-fast-apply?utm_source=chatgpt.com &quot;morph-llm/morph-fast-apply - Filesystem MCP Server&quot;
+[29]: https://morphllm.com/mcp?utm_source=chatgpt.com &quot;MCP for Morph&quot;
+[30]: https://github.com/Aas-ee/open-webSearch?utm_source=chatgpt.com &quot;Aas-ee/open-webSearch: WebSearchMCP using free multi ...&quot;
+[31]: https://pypi.org/project/mcp-proxy/0.5.1/?utm_source=chatgpt.com &quot;mcp-proxy · PyPI&quot;
+[32]: https://thesof.medium.com/bridging-mcp-transports-turning-an-stdio-server-into-sse-and-the-other-way-around-da23a36e074a?utm_source=chatgpt.com &quot;Bridging MCP Transports: Turning an STDIO Server into SSE ...&quot;
+[33]: https://arxiv.org/abs/2509.06572?utm_source=chatgpt.com &quot;Mind Your Server: A Systematic Study of Parasitic Toolchain Attacks on the MCP Ecosystem&quot;
+[34]: https://github.com/microsoft/playwright/issues/35264?utm_source=chatgpt.com &quot;[Bug]: playwright mcp package installation issue -- Cannot ...&quot; --&gt;</content:encoded><category>Codex</category><category>MCP</category><category>OpenAI</category><category>Context7</category><category>Playwright</category><category>DeepWiki</category><category>Exa</category><category>Spec-Workflow</category><category>Sequential-Thinking</category><category>Magic</category><category>Serena</category><category>Morph</category><category>Open-Web-Search</category><category>mcp-proxy</category></item><item><title>日本央行货币政策正常化：对美国国债、美元指数与美股的系统性影响深度解析</title><link>https://www.vibesparking.com/zh-cn/blog/finance/japan/2025-09-05-boj-normalization-impact-us-treasuries-dxy-us-equities/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/finance/japan/2025-09-05-boj-normalization-impact-us-treasuries-dxy-us-equities/</guid><pubDate>Fri, 05 Sep 2025 00:00:00 GMT</pubDate><content:encoded>&lt;div&gt;&lt;h1 id=&quot;日本央行货币政策正常化对美国国债美元指数与美股的系统性影响深度解析&quot;&gt;日本央行货币政策正常化：对美国国债、美元指数与美股的系统性影响深度解析&lt;/h1&gt;&lt;a href=&quot;#日本央行货币政策正常化对美国国债美元指数与美股的系统性影响深度解析&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “日本央行货币政策正常化：对美国国债、美元指数与美股的系统性影响深度解析”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
 &lt;div&gt;&lt;h2 id=&quot;1-执行摘要&quot;&gt;1. 执行摘要&lt;/h2&gt;&lt;a href=&quot;#1-执行摘要&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1. 执行摘要”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
 &lt;p&gt;鉴于日本名义工资与实际工资的显著增长，日本央行（BOJ）最早在10月加息的概率上升。这不仅是日本国内经济周期的关键转折，更可能通过触发“日元利差交易”的系统性逆转，对全球市场产生深远影响。&lt;/p&gt;
 &lt;p&gt;核心结论：&lt;/p&gt;
@@ -3483,214 +3672,4 @@ Axon的生态系统已经成为美国执法机构的事实标准。立法层面�
 Axon业绩连续加速增长，2025年营收指引也被上调。其宽广的客户基础（涉及数千家执法机构）和高黏性的订阅业务使得业绩具备高度可见性。截至8月29日，Axon市值约为587亿美元，在公共安全领域居于领先地位。虽然安防板块通常估值相对保守，但Axon结合了硬件、高级软件和AI的三重优势，长期成长潜力突出。&lt;/p&gt;
 &lt;hr&gt;
 &lt;div&gt;&lt;h2 id=&quot;总结&quot;&gt;总结&lt;/h2&gt;&lt;a href=&quot;#总结&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “总结”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;以上公司代表了AI发展第二阶段的核心平台。它们各自在数据处理、网络基础设施、安全防护、核心应用层面形成了深厚的壁垒。随着AI智能代理（agents）逐渐进入实体世界（从能源、电网到城市管理和安全执法），对这些平台的依赖将与日俱增。在投资上，这些标的虽有估值或运营波动风险，但从基本面看都具备显著的增长动力和护城河。提醒投资者：技术创新迅速，需动态跟踪业绩与竞争格局变化，理性配置资产。&lt;/p&gt;</content:encoded><category>Palantir</category><category>Cloudflare</category><category>CrowdStrike</category><category>Snowflake</category><category>MongoDB</category><category>Tesla</category><category>Axon</category></item><item><title>Gemini CLI Companion × VS Code/Cursor：把 gemini-2.5-pro 接入你的 IDE</title><link>https://www.vibesparking.com/zh-cn/blog/ai/google/gemini/ide/2025-08-31-gemini-cli-ide-native-diff/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/google/gemini/ide/2025-08-31-gemini-cli-ide-native-diff/</guid><pubDate>Sun, 31 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # Gemini CLI Companion × VS Code/Cursor：把 gemini-2.5-pro 接入你的 IDE --&gt;
-&lt;blockquote&gt;
-&lt;p&gt;把 Gemini CLI gemini-2.5-pro 接到 VS Code/Cursor 的终端里，让它&lt;strong&gt;看见你的工作区、理解你的选区、直接弹出原生 Diff 窗&lt;/strong&gt;。更聪明、更稳、更省事。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;引言&quot;&gt;引言&lt;/h2&gt;&lt;a href=&quot;#引言&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “引言”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;还在“复制→粘贴→回车”的土法交互？
-现在，&lt;strong&gt;命令行 = IDE 的超脑插件&lt;/strong&gt;。
-Gemini CLI 最新更新，直接打通 VS Code 集成终端：
-&lt;strong&gt;读工作区、识别选中文本、原生并排 Diff、接受前可二次改&lt;/strong&gt;。爽。&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;亮点一览值得你今天就开&quot;&gt;亮点一览（值得你今天就开）&lt;/h2&gt;&lt;a href=&quot;#亮点一览值得你今天就开&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “亮点一览（值得你今天就开）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;上下文直连工作区&lt;/strong&gt;：能“看见”你打开的文件，也能读你&lt;strong&gt;选中的那一段&lt;/strong&gt;，建议更精准。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;原生全屏 Diff&lt;/strong&gt;：CLI 给的修改，&lt;strong&gt;直接弹 VS Code 的并排 Diff 窗&lt;/strong&gt;；先改再收，不会一键糊你盘。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;一键开关&lt;/strong&gt;：&lt;code dir=&quot;auto&quot;&gt;/ide enable&lt;/code&gt; 开，&lt;code dir=&quot;auto&quot;&gt;/ide disable&lt;/code&gt; 关，随时切换。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Cursor 基本可用&lt;/strong&gt;：官方扩展&lt;strong&gt;标注兼容 VS Code 及其 fork&lt;/strong&gt;（Cursor 属 VS Code fork），但个别场景需&lt;strong&gt;手动装扩展&lt;/strong&gt;。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;安装与启用3-分钟上手&quot;&gt;安装与启用（3 分钟上手）&lt;/h2&gt;&lt;a href=&quot;#安装与启用3-分钟上手&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “安装与启用（3 分钟上手）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;blockquote&gt;
-&lt;p&gt;以 VS Code 为例；Cursor 基本同理（需手动装扩展，见下文“常见坑”）。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;先决条件&lt;/strong&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;Gemini CLI 版本 &lt;strong&gt;≥ 0.1.20&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;必须&lt;/strong&gt;从 IDE 的&lt;strong&gt;集成终端&lt;/strong&gt;里运行 CLI（不是外部终端）。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol start=&quot;2&quot;&gt;
-&lt;li&gt;&lt;strong&gt;一次性安装&lt;/strong&gt;
-在 VS Code 终端运行：&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;shell&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;gemini&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;p&gt;gemini-cli 安装 ide 集成：&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;plaintext&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;/ide install&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;p&gt;它会自动安装 &lt;strong&gt;Gemini CLI Companion&lt;/strong&gt; 扩展。&lt;/p&gt;
-&lt;ol start=&quot;3&quot;&gt;
-&lt;li&gt;&lt;strong&gt;打开集成&lt;/strong&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;plaintext&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;/ide enable&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;p&gt;需要时关闭：&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;plaintext&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;/ide disable&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;补充&lt;/strong&gt;：扩展商店页面说明该扩展&lt;strong&gt;适配 VS Code 及 VS Code forks&lt;/strong&gt;；若你用 Cursor，直接在商店&lt;strong&gt;手动搜索并安装&lt;/strong&gt;“Gemini CLI Companion”。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;推荐使用法把它当代码副驾--改码机器人&quot;&gt;推荐使用法（把它当“代码副驾 + 改码机器人”）&lt;/h2&gt;&lt;a href=&quot;#推荐使用法把它当代码副驾--改码机器人&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “推荐使用法（把它当“代码副驾 + 改码机器人”）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h3 id=&quot;1选中提议原生-diff-接收&quot;&gt;1）选中→提议→原生 Diff 接收&lt;/h3&gt;&lt;a href=&quot;#1选中提议原生-diff-接收&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1）选中→提议→原生 Diff 接收”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;在文件里&lt;strong&gt;框选&lt;/strong&gt;要改的段落&lt;/li&gt;
-&lt;li&gt;终端里对 Gemini 说需求（或用你的常用提示模板）&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;并排 Diff&lt;/strong&gt; 弹出 → 你可先&lt;strong&gt;微调&lt;/strong&gt;右侧改动 → 再点接受&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;适合：Bug 小修、接口对齐、重命名、日志统一等“细颗粒”改动。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;div&gt;&lt;h3 id=&quot;2开文件--指路重构&quot;&gt;2）“开文件 + 指路”重构&lt;/h3&gt;&lt;a href=&quot;#2开文件--指路重构&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2）“开文件 + 指路”重构”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;打开涉及的 2–3 个关键文件（让它“看见”上下文）&lt;/li&gt;
-&lt;li&gt;给出“目标+约束”（如保留接口签名、通过现有测试）&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;在 Diff 中分批落地&lt;/strong&gt;，兼顾安全与节奏&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;适合：控制器瘦身、Hook 抽取、错误处理规范化。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;div&gt;&lt;h3 id=&quot;3选区--精准上下文锚&quot;&gt;3）选区 = 精准上下文锚&lt;/h3&gt;&lt;a href=&quot;#3选区--精准上下文锚&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3）选区 = 精准上下文锚”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;善用选区让它“少走神”&lt;/li&gt;
-&lt;li&gt;复杂文件中，只喂关键函数/片段，减少跑偏&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;适合：长文件、历史包袱大的模块。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;vs-code-与-cursor怎么配才顺&quot;&gt;VS Code 与 Cursor：怎么配才顺&lt;/h2&gt;&lt;a href=&quot;#vs-code-与-cursor怎么配才顺&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “VS Code 与 Cursor：怎么配才顺”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;VS Code&lt;/strong&gt;：&lt;code dir=&quot;auto&quot;&gt;/ide install&lt;/code&gt; 自动装扩展 → &lt;code dir=&quot;auto&quot;&gt;/ide enable&lt;/code&gt; 即可。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Cursor&lt;/strong&gt;：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;扩展页&lt;strong&gt;手动安装&lt;/strong&gt;“Gemini CLI Companion”（VS Code forks 兼容）。&lt;/li&gt;
-&lt;li&gt;若 &lt;code dir=&quot;auto&quot;&gt;/ide install&lt;/code&gt; 提示“&lt;strong&gt;No installer for Cursor&lt;/strong&gt;”，属&lt;strong&gt;已知问题&lt;/strong&gt;，按提示&lt;strong&gt;改为手动装&lt;/strong&gt;。&lt;/li&gt;
-&lt;li&gt;Cursor 对大多数 VS Code 扩展&lt;strong&gt;开箱支持&lt;/strong&gt;（官方与多方测评均有表述），但以实际为准。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;常见坑与排查&quot;&gt;常见坑与排查&lt;/h2&gt;&lt;a href=&quot;#常见坑与排查&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “常见坑与排查”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;扩展已装，但 CLI 说连不上 IDE&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;可能是所需环境变量（如 &lt;code dir=&quot;auto&quot;&gt;GEMINI_CLI_IDE_WORKSPACE_PATH&lt;/code&gt; / &lt;code dir=&quot;auto&quot;&gt;GEMINI_CLI_IDE_SERVER_PORT&lt;/code&gt;）没就绪&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;解决&lt;/strong&gt;：确认扩展开启；&lt;strong&gt;重新开一个 IDE 终端&lt;/strong&gt;再试。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Cursor 里 &lt;code dir=&quot;auto&quot;&gt;/ide install&lt;/code&gt; 失败&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;信息：“&lt;strong&gt;No installer is available for Cursor&lt;/strong&gt;”&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;解决&lt;/strong&gt;：去扩展市场&lt;strong&gt;手动安装&lt;/strong&gt;同名扩展。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;看不到原生 Diff&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;确认在 &lt;strong&gt;IDE 集成终端&lt;/strong&gt;里跑 CLI，而非外部终端。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;适合谁哪些场景最香&quot;&gt;适合谁？哪些场景最香？&lt;/h2&gt;&lt;a href=&quot;#适合谁哪些场景最香&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “适合谁？哪些场景最香？”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;个人开发者&lt;/strong&gt;：小步快跑、边改边看&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;团队协作&lt;/strong&gt;：&lt;strong&gt;统一风格&lt;/strong&gt;与&lt;strong&gt;批量小改&lt;/strong&gt;（日志、异常、命名、注释）&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;旧代码治理&lt;/strong&gt;：低风险“切片式”重构，边 Diff 边落地&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;本质上，它把“LLM 改码”变成&lt;strong&gt;可审可控&lt;/strong&gt;的 IDE 原生流程。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;一套顺手的上手清单&quot;&gt;一套顺手的“上手清单”&lt;/h2&gt;&lt;a href=&quot;#一套顺手的上手清单&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “一套顺手的“上手清单””&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;npm i -g @google/gemini-cli&lt;/code&gt;（已装请略）&lt;/li&gt;
-&lt;li&gt;VS Code 打开项目 → &lt;strong&gt;集成终端&lt;/strong&gt;运行：&lt;code dir=&quot;auto&quot;&gt;/ide install&lt;/code&gt; → &lt;code dir=&quot;auto&quot;&gt;/ide enable&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;打开 2–3 个关键文件，&lt;strong&gt;先小范围试改&lt;/strong&gt;（选区驱动）&lt;/li&gt;
-&lt;li&gt;看到 Diff → 先微调再接收 → &lt;strong&gt;提交带说明的 commit&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;写个团队规范：&lt;strong&gt;哪些改动先交给 Gemini&lt;/strong&gt;，哪些必须走人工评审&lt;/li&gt;
-&lt;/ol&gt;
-&lt;blockquote&gt;
-&lt;p&gt;官方博文与扩展页都有关键说明，建议收藏。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;结语&quot;&gt;结语&lt;/h2&gt;&lt;a href=&quot;#结语&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “结语”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;把命令行“硬核力”和 IDE “可视化”结合起来，&lt;strong&gt;效率和确定性同时提升&lt;/strong&gt;。
-今天就把 Gemini CLI 接上 VS Code/Cursor，&lt;strong&gt;让改动更可控、上下文更精准、协作更顺滑&lt;/strong&gt;。&lt;/p&gt;&lt;!-- 
----
-
-# 🔖 多语言标题（3 组 + slug）
-
-1. **把命令行装进 IDE：Gemini CLI × VS Code/Cursor 原生 Diff 实战**
-   EN: Put the CLI in Your IDE: Gemini CLI × VS Code/Cursor with Native Diff
-   繁體: 把命令列裝進 IDE：Gemini CLI × VS Code/Cursor 原生 Diff 實戰
-   日本語: コマンドラインをIDEに：Gemini CLI × VS Code/Cursor のネイティブ差分
-   Français : Le CLI dans votre IDE : Gemini CLI × VS Code/Cursor avec diff natif
-   Español: CLI dentro del IDE: Gemini CLI × VS Code/Cursor con diff nativo
-   Português: CLI no seu IDE: Gemini CLI × VS Code/Cursor com diff nativo
-   **slug**: `gemini-cli-ide-native-diff`
-
-2. **上下文直连 + 一键 Diff：Gemini CLI Companion 真能打**
-   EN: Context-Aware + One-Click Diff: Gemini CLI Companion Delivers
-   繁體: 上下文直連 + 一鍵 Diff：Gemini CLI Companion 真能打
-   日本語: 文脈連携＋ワンクリック差分：Gemini CLI Companion は本物
-   Français : Contexte natif + diff en un clic : Gemini CLI Companion au top
-   Español: Contexto nativo + diff con un clic: Gemini CLI Companion rinde
-   Português: Contexto nativo + diff com um clique: Gemini CLI Companion manda bem
-   **slug**: `gemini-cli-companion-diff`
-
-3. **今天就接入：用 VS Code/Cursor 玩转 Gemini CLI 原生改码**
-   EN: Plug In Today: Native Code Edits with Gemini CLI in VS Code/Cursor
-   繁體: 今天就接入：用 VS Code/Cursor 玩轉 Gemini CLI 原生改碼
-   日本語: 今日から導入：VS Code/Cursor で Gemini CLI のネイティブ編集
-   Français : Activez-le aujourd’hui : Éditions natives avec Gemini CLI dans VS Code/Cursor
-   Español: Actívalo hoy: Ediciones nativas con Gemini CLI en VS Code/Cursor
-   Português: Ative hoje: Edições nativas com Gemini CLI no VS Code/Cursor
-   **slug**: `gemini-cli-vscode-cursor-setup`
-
----
-
-# 🖼️ 配图（2:1 插画风，无中文）
-
-**封面图（Prompt）**
-“An illustration of a developer in a VS Code-like editor, a terminal panel glowing with ‘/ide enable’, a split diff view side-by-side, neat pastel palette, minimal lines, 2:1 ratio, no text, flat illustration.”
-
-**关键章节配图（Prompt x3）**
-
-1. “Close-up of a code editor selection being highlighted, AI spark connecting selection to a terminal prompt, 2:1, flat illustration.”
-2. “Split diff screen with accepted and pending changes, checkmarks and pencil icons indicating editable diffs, 2:1, minimal.”
-3. “Two editors labeled subtly as VS Code and Cursor (generic look-alikes), sharing an extension puzzle piece labeled ‘companion’, 2:1, pastel.”
-
----
-
-# 💬 朋友圈/评论区金句（3 条）
-
-1. **把改动放进 Diff 再说话**——Gemini CLI 接上 IDE，效率是真的上头。
-2. 选中一段，动动嘴，**并排 Diff** 就来了；接不接收，全看你。
-3. Cursor 党也能玩，**手动装扩展**就行；今天就给老项目洗把澡。
-
----
-
-**你觉得这版文章 OK 吗？要不要我继续**补一版“团队落地模板”（规范、提示词、失败回滚策略）**或加一张“常见报错自检清单”？**
-
-[1]: https://developers.googleblog.com/en/gemini-cli-vs-code-native-diffing-context-aware-workflows/?utm_source=chatgpt.com &quot;Gemini CLI + VS Code: Native diffing and context-aware ...&quot;
-[2]: https://developers.googleblog.com/en/gemini-cli-vs-code-native-diffing-context-aware-workflows/ &quot;
-            
-            Gemini CLI + VS Code: Native diffing and context-aware workflows
-            
-            
-            \- Google Developers Blog
-            
-        &quot;
-[3]: https://marketplace.visualstudio.com/items?itemName=Google.gemini-cli-vscode-ide-companion&amp;utm_source=chatgpt.com &quot;Gemini CLI Companion&quot;
-[4]: https://github.com/google-gemini/gemini-cli/issues/6733?utm_source=chatgpt.com &quot;Not possible to connect to the cursor ide · Issue #6733&quot;
-[5]: https://www.walturn.com/insights/cursor-vs-vs-code-with-github-copilot-a-comprehensive-comparison?utm_source=chatgpt.com &quot;Cursor vs VS Code with GitHub Copilot&quot;
-[6]: https://gemini-cli.xyz/docs/en/ide-integration?utm_source=chatgpt.com &quot;IDE Integration | Gemini CLI Docs&quot; --&gt;</content:encoded><category>Gemini CLI</category><category>Gemini CLI Companion</category><category>gemini-2.5-pro</category><category>VS Code</category><category>Cursor</category></item></channel></rss>
+&lt;p&gt;以上公司代表了AI发展第二阶段的核心平台。它们各自在数据处理、网络基础设施、安全防护、核心应用层面形成了深厚的壁垒。随着AI智能代理（agents）逐渐进入实体世界（从能源、电网到城市管理和安全执法），对这些平台的依赖将与日俱增。在投资上，这些标的虽有估值或运营波动风险，但从基本面看都具备显著的增长动力和护城河。提醒投资者：技术创新迅速，需动态跟踪业绩与竞争格局变化，理性配置资产。&lt;/p&gt;</content:encoded><category>Palantir</category><category>Cloudflare</category><category>CrowdStrike</category><category>Snowflake</category><category>MongoDB</category><category>Tesla</category><category>Axon</category></item></channel></rss>
