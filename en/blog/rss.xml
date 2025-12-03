@@ -1,4 +1,637 @@
-<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Vibe Sparking AI | Blog</title><description/><link>https://www.vibesparking.com/</link><language>en</language><item><title>Johari Window Model and Four-Quadrant Analysis of Human–AI Dialogue</title><link>https://www.vibesparking.com/en/blog/ai/trends/2025-12-01-johari-window-ai-human-dialogue/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/trends/2025-12-01-johari-window-ai-human-dialogue/</guid><pubDate>Mon, 01 Dec 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # Johari Window Model and Four-Quadrant Analysis of Human–AI Dialogue --&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Vibe Sparking AI | Blog</title><description/><link>https://www.vibesparking.com/</link><language>en</language><item><title>Anthropic Internal AI Development Survey: Frontend Shines, Architecture Is Hardest to Hand Off to AI</title><link>https://www.vibesparking.com/en/blog/ai/anthropic/2025-12-03-anthropic-internal-ai-development-survey/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/anthropic/2025-12-03-anthropic-internal-ai-development-survey/</guid><pubDate>Wed, 03 Dec 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # Anthropic Internal AI Development Survey: Frontend Shines, Architecture Is Hardest to Hand Off to AI --&gt;&lt;!-- --- --&gt;
+&lt;div&gt;&lt;h2 id=&quot;introduction-is-ai-really-making-engineers-more-productive&quot;&gt;Introduction: Is AI Really Making Engineers More Productive?&lt;/h2&gt;&lt;a href=&quot;#introduction-is-ai-really-making-engineers-more-productive&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Introduction: Is AI Really Making Engineers More Productive?”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;This year, every developer friend around me keeps asking the same question:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“I use Claude/Copilot every day, but is it really worth it? Are the vendors overselling me?”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Coincidentally, Anthropic turned the real usage data of 132 internal engineers and researchers into a detailed survey and interviews, plus several charts.&lt;/p&gt;
+&lt;p&gt;It is like &lt;strong&gt;an AI vendor giving itself a physical exam&lt;/strong&gt;. Who is delighted, who is stumbling—everything is written in the numbers.&lt;/p&gt;
+&lt;p&gt;Let’s look at the report from a working engineer’s perspective and talk about:
+&lt;strong&gt;In software engineering, which tasks have the highest ROI with AI, and which ones should you not rush to offload to a model?&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;i-what-kind-of-internal-survey-is-this&quot;&gt;I. What Kind of Internal Survey Is This?&lt;/h2&gt;&lt;a href=&quot;#i-what-kind-of-internal-survey-is-this&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “I. What Kind of Internal Survey Is This?”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Anthropic asked 132 engineers and researchers a series of very concrete questions:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;How much of your daily work do you do with Claude?&lt;/li&gt;
+&lt;li&gt;What do you mainly use it for? Debugging, new features, refactoring, tests, documentation, or design and planning?&lt;/li&gt;
+&lt;li&gt;For each task type, does working with Claude make you spend &lt;strong&gt;more or less time&lt;/strong&gt;?&lt;/li&gt;
+&lt;li&gt;Does the &lt;strong&gt;volume of output&lt;/strong&gt; (code, docs, deliverables) go up or down?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;They also compared changes over time:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A year ago, employees estimated that &lt;strong&gt;about 28% of their work used Claude&lt;/strong&gt;, self-reporting a +20% productivity lift.&lt;/li&gt;
+&lt;li&gt;Now that number has risen to &lt;strong&gt;59% of work done with Claude&lt;/strong&gt;, with an average self-reported productivity &lt;strong&gt;+50%&lt;/strong&gt;; around 14% of “power users” believe they improved by &lt;strong&gt;over 100%&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Another independent study is also striking: using 100,000 real conversations, Anthropic estimated that the &lt;strong&gt;median task completion time dropped by roughly 80%&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;It sounds dramatic, but engineers know &lt;strong&gt;self-reported productivity needs a haircut&lt;/strong&gt;.
+The more useful takeaway is: &lt;strong&gt;by task type, where are the real gains and where is the fluff?&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;ii-overall-pattern-time-saved-is-small-output-gain-is-big&quot;&gt;II. Overall Pattern: Time Saved Is Small, Output Gain Is Big&lt;/h2&gt;&lt;a href=&quot;#ii-overall-pattern-time-saved-is-small-output-gain-is-big&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “II. Overall Pattern: Time Saved Is Small, Output Gain Is Big”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;That figure you saw is one of the core findings:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Left: after using Claude, for a given task, &lt;strong&gt;time spent&lt;/strong&gt; goes down, stays the same, or goes up.&lt;/li&gt;
+&lt;li&gt;Right: in the same amount of time, &lt;strong&gt;the amount of output&lt;/strong&gt; goes up by how much.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Looking across all tasks, two patterns stand out:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;For most tasks, time is only slightly lower&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Many points sit around “-1” (a light decrease).&lt;/li&gt;
+&lt;li&gt;It means people are &lt;strong&gt;saving a little&lt;/strong&gt;, not cutting the time in half.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;But the output increase is more obvious&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;In the right plot, most points are in the “+1 to +2” range.&lt;/li&gt;
+&lt;li&gt;So even when time only drops a bit, &lt;strong&gt;the amount produced jumps a lot&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;A hidden detail:
+In the raw data, a small group actually &lt;strong&gt;spends more time&lt;/strong&gt; on some tasks.&lt;/p&gt;
+&lt;p&gt;Their interview explanations feel very real:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Cleaning up after Claude—&lt;strong&gt;fixing the mess it made&lt;/strong&gt;, redoing debugging and cleanup.&lt;/li&gt;
+&lt;li&gt;Spending time to understand code they did not write themselves.&lt;/li&gt;
+&lt;li&gt;Or because Claude exists, they simply work more thoroughly: more tests, more exploration.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In short:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Time does not vanish; it gets “reinvested” into more work.&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;iii-roi-by-task-type-frontend-wins-design-and-infra-lose&quot;&gt;III. ROI by Task Type: Frontend Wins, Design and Infra Lose&lt;/h2&gt;&lt;a href=&quot;#iii-roi-by-task-type-frontend-wins-design-and-infra-lose&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “III. ROI by Task Type: Frontend Wins, Design and Infra Lose”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Looking at the distribution and my own experience, the ROI ranking is clear.&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;1-roi-ceiling-frontend-new-features-debugging-testing-documentation&quot;&gt;1) ROI Ceiling: Frontend, New Features, Debugging, Testing, Documentation&lt;/h2&gt;&lt;a href=&quot;#1-roi-ceiling-frontend-new-features-debugging-testing-documentation&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1) ROI Ceiling: Frontend, New Features, Debugging, Testing, Documentation”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;These tasks share traits:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Outcomes are &lt;strong&gt;easy to verify&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Frontend: run it and you immediately see if the UI is right.&lt;/li&gt;
+&lt;li&gt;Debugging: reproduce the bug, run tests—pass or fail.&lt;/li&gt;
+&lt;li&gt;Tests and docs: format and coverage are obvious at a glance.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Task boundaries are clear&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;“Make this component responsive.”&lt;/li&gt;
+&lt;li&gt;“Add a set of unit tests for this code.”&lt;/li&gt;
+&lt;li&gt;“Write a README for new teammates.”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In these jobs, the most annoying part for humans is:
+&lt;strong&gt;mechanical, repetitive, boring to write, yet quality is visible instantly.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;This matches a keyword Anthropic staff highlighted:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“I’m more willing to hand Claude tasks that are &lt;strong&gt;easy to verify&lt;/strong&gt;.”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The report also notes that engineers increasingly use Claude for frontend visualization, implementing UI, and building small tools,
+even encouraging backend engineers to write frontend and become “quasi full stack.”&lt;/p&gt;
+&lt;p&gt;From an ROI lens, these tasks are &lt;strong&gt;short, fast projects&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Model does the work&lt;/li&gt;
+&lt;li&gt;Human reviews&lt;/li&gt;
+&lt;li&gt;If it breaks, roll back and redo&lt;/li&gt;
+&lt;li&gt;Beginners can supervise&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Frontend is a clear beneficiary&lt;/strong&gt;—screens, interactions, styles iterate quickly.
+You focus on user experience itself instead of wrestling with CSS details.&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;2-lower-roi-design-and-planning-infrastructuredevops&quot;&gt;2) Lower ROI: Design and Planning, Infrastructure/DevOps&lt;/h2&gt;&lt;a href=&quot;#2-lower-roi-design-and-planning-infrastructuredevops&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2) Lower ROI: Design and Planning, Infrastructure/DevOps”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;On the other end: &lt;strong&gt;high-level design, system planning, Infra/DevOps&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Anthropic’s report shows two things:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Employees explicitly said:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;“I usually &lt;strong&gt;keep high-level thinking and design to myself&lt;/strong&gt; and hand implementation/debugging tasks to Claude.”&lt;/li&gt;
+&lt;li&gt;Design and planning tasks show the &lt;strong&gt;smallest productivity lift&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Infra and DevOps tasks are used less often; time and output gains are limited.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This aligns with software-engineering common sense:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;The more a task depends on experience, context, taste, and organizational strategy, the harder it is to fully hand it to AI.&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Designing a new system architecture requires considering:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;What the business looks like in five years&lt;/li&gt;
+&lt;li&gt;The team’s current stack&lt;/li&gt;
+&lt;li&gt;Who maintains it and who is on-call&lt;/li&gt;
+&lt;li&gt;Cost budget, compliance, and security&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Claude can:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Generate versions of architecture diagrams&lt;/li&gt;
+&lt;li&gt;List risks and trade-offs&lt;/li&gt;
+&lt;li&gt;Draft design docs&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;But the person who approves is still you.
+Here AI is a smart adviser, &lt;strong&gt;not the decision-making CTO&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Infra/DevOps is similar:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;The hard part is&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Knowing the company’s complex network topology&lt;/li&gt;
+&lt;li&gt;Dealing with legacy scripts and configs&lt;/li&gt;
+&lt;li&gt;Knowing who owns the pager when things break&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;AI can write scripts, explain logs, draft runbooks.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;But it is hard to run a command to production without looking.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;From an ROI angle:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Frontend, new features, debugging, testing, documentation -&gt; low investment, fast return&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Design, planning, Infra -&gt; high value, but AI rarely “saves you a ton of time” directly&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;iv-verifiability-the-watershed-that-decides-ai-effectiveness&quot;&gt;IV. Verifiability: The “Watershed” That Decides AI Effectiveness&lt;/h2&gt;&lt;a href=&quot;#iv-verifiability-the-watershed-that-decides-ai-effectiveness&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “IV. Verifiability: The “Watershed” That Decides AI Effectiveness”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;In interviews, Anthropic summarized a pragmatic delegation rule: engineers are more willing to hand Claude tasks that are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Easy to verify&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Low complexity or clearly bounded&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Not under extreme quality bars&lt;/strong&gt; (e.g., one-off debug scripts)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Repetitive, dull, but cannot be skipped&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This can be abstracted into one word: &lt;strong&gt;verifiability&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Think of it this way:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Tasks with tests or demos are great for AI to charge ahead&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Frontend pages, backend endpoints, data-processing scripts&lt;/li&gt;
+&lt;li&gt;Run them and see whether the result is in the expected range&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Tasks relying on “taste” and “judgment” need human oversight&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;System design, UX design, security strategy&lt;/li&gt;
+&lt;li&gt;Often no standard answers, only trade-offs&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Local problems vs. global problems&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Changing one component or writing a doc is a local problem.&lt;/li&gt;
+&lt;li&gt;Planning a cross-team technical roadmap is a global problem.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Claude delivers huge ROI on &lt;strong&gt;local, verifiable&lt;/strong&gt; tasks.
+On &lt;strong&gt;global, fuzzy&lt;/strong&gt; tasks, it is better for &lt;strong&gt;brainstorming, lists, and comparisons&lt;/strong&gt;,
+not for directly giving the final plan.&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;v-practical-tips-for-typical-teams-dont-rush-to-make-ai-the-architect&quot;&gt;V. Practical Tips for Typical Teams: Don’t Rush to Make AI the Architect&lt;/h2&gt;&lt;a href=&quot;#v-practical-tips-for-typical-teams-dont-rush-to-make-ai-the-architect&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “V. Practical Tips for Typical Teams: Don’t Rush to Make AI the Architect”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;If you lead an engineering team or build solo, you can draw a clear “sphere of influence” for AI, following Anthropic’s approach.&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;1-start-by-treating-ai-as-manual-labor--recorder&quot;&gt;1) Start by Treating AI as “Manual Labor + Recorder”&lt;/h2&gt;&lt;a href=&quot;#1-start-by-treating-ai-as-manual-labor--recorder&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1) Start by Treating AI as “Manual Labor + Recorder””&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Let Claude handle:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Debugging&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Help locate stack traces, explain errors, reproduce bugs&lt;/li&gt;
+&lt;li&gt;Write temporary scripts for validation&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Tests, documentation, and comments&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Auto-complete unit tests, generate mocks&lt;/li&gt;
+&lt;li&gt;Summarize PR changes, generate README and API docs&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Frontend and visualization&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Produce page scaffolds and style options&lt;/li&gt;
+&lt;li&gt;Build internal tools, dashboards, data visualizations&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Small refactors and “paper cuts”&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Break a blob of code into functions&lt;/li&gt;
+&lt;li&gt;Rename variables, extract shared logic&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For these, just write clearer acceptance criteria.
+Results will beat asking it to “think up an architecture from scratch.”&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;2-design-and-planning-use-ai-as-a-brainstorming-partner&quot;&gt;2) Design and Planning: Use AI as a Brainstorming Partner&lt;/h2&gt;&lt;a href=&quot;#2-design-and-planning-use-ai-as-a-brainstorming-partner&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2) Design and Planning: Use AI as a Brainstorming Partner”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;For high-level design, Claude works best when you:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Ask for multiple architecture options with pros/cons&lt;/li&gt;
+&lt;li&gt;Let it draft RFC/technical design first versions&lt;/li&gt;
+&lt;li&gt;Simulate reviews from different personas (e.g., “what would security ask?”)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Decision-making, trade-offs, and final sign-off&lt;/strong&gt; stay with you.&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;3-infradevops-scripts-and-docs-can-be-delegated-production-commands-are-yours&quot;&gt;3) Infra/DevOps: Scripts and Docs Can Be Delegated, Production Commands Are Yours&lt;/h2&gt;&lt;a href=&quot;#3-infradevops-scripts-and-docs-can-be-delegated-production-commands-are-yours&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3) Infra/DevOps: Scripts and Docs Can Be Delegated, Production Commands Are Yours”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;In Infra scenarios, it is safe to give AI:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Explanations of complex Kubernetes YAML or Terraform configs&lt;/li&gt;
+&lt;li&gt;CI/CD pipeline templates&lt;/li&gt;
+&lt;li&gt;Log reading and first-pass root-cause analysis&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For commands or change plans that hit production, require:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A human to review again&lt;/li&gt;
+&lt;li&gt;A teammate’s review&lt;/li&gt;
+&lt;li&gt;A dry run in staging when needed&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Set a simple team rule:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“Any command that directly affects production must be edited and executed by a human.”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div&gt;&lt;h2 id=&quot;4-make-your-own-ai-task-map&quot;&gt;4) Make Your Own “AI Task Map”&lt;/h2&gt;&lt;a href=&quot;#4-make-your-own-ai-task-map&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “4) Make Your Own “AI Task Map””&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Following Anthropic, you can draw a table for the team:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Rows: Debug / Frontend / New features / Tests / Docs / Refactoring / Design / Infra …&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Columns:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Does AI draft it?&lt;/li&gt;
+&lt;li&gt;Is AI allowed to finish it alone?&lt;/li&gt;
+&lt;li&gt;Who reviews the final output?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This becomes your &lt;strong&gt;“AI usage policy.”&lt;/strong&gt;
+Update it quarterly; when models upgrade, move more tasks into the AI column.&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;vi-the-future-engineer-more-full-stack-with-stronger-judgment&quot;&gt;VI. The Future Engineer: More Full Stack, With Stronger Judgment&lt;/h2&gt;&lt;a href=&quot;#vi-the-future-engineer-more-full-stack-with-stronger-judgment&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “VI. The Future Engineer: More Full Stack, With Stronger Judgment”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;One survey insight resonated with me:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Employees estimated that &lt;strong&gt;27% of Claude-assisted work would not exist without AI&lt;/strong&gt;—extra refactors, dashboards, internal tools.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;So Claude is not just &lt;strong&gt;speeding up existing work&lt;/strong&gt;;
+it makes you &lt;strong&gt;do valuable things you “never had time for.”&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;At the same time, many worry:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;With less time writing code, will &lt;strong&gt;my hands get rusty&lt;/strong&gt;?&lt;/li&gt;
+&lt;li&gt;Supervising AI needs experience, yet experience is being eaten by AI.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This is the “oversight paradox”:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Using AI well requires strong judgment, and judgment itself needs hands-on practice.&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;A healthier approach might be:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Use AI boldly for high-ROI tasks.&lt;/li&gt;
+&lt;li&gt;Keep a portion of “handwritten training” for yourself.&lt;/li&gt;
+&lt;li&gt;Treat AI as an accelerator for your skill growth, not a substitute.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In the long run, what will engineers look like?&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;More like a mix of &lt;strong&gt;product + architecture + project manager + AI wrangler&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Focus more on “what to build” and “why,”
+rather than “exactly how this line of code looks.”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;conclusion-use-ai-in-the-right-places-and-become-the-teams-productivity-arbitrageur&quot;&gt;Conclusion: Use AI in the Right Places and Become the Team’s “Productivity Arbitrageur”&lt;/h2&gt;&lt;a href=&quot;#conclusion-use-ai-in-the-right-places-and-become-the-teams-productivity-arbitrageur&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Conclusion: Use AI in the Right Places and Become the Team’s “Productivity Arbitrageur””&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Anthropic’s internal survey points to a clear mindset:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Do not expect AI to 10x every task.&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;The real gap is whether you dare and know how to give it the right tasks.&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If you are an engineer or tech lead,
+take a moment now to list your work:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Which tasks are &lt;strong&gt;easy to verify&lt;/strong&gt;, &lt;strong&gt;repetitive and dull&lt;/strong&gt;, and can be handed to Claude today?&lt;/li&gt;
+&lt;li&gt;Which tasks &lt;strong&gt;involve high-level design and team strategy&lt;/strong&gt;—let it act as “think tank,” not “ghostwriter”?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Draw that &lt;strong&gt;“AI task map,”&lt;/strong&gt; and your productivity in the team is already a big step ahead.&lt;/p&gt;&lt;!--
+---
+
+**In your team, which tasks feel best with AI?**
+Share your **high-ROI use cases** in the comments so we can learn from each other.
+
+ 
+
+---
+
+## Recommended Titles (Multilingual + Slug)
+
+## Title 1
+
+* Simplified Chinese: Anthropic 内部调查：哪些工程任务最值得交给 AI？
+* English: Inside Anthropic: Which Engineering Tasks Get the Best ROI from AI?
+* Traditional Chinese: Anthropic 內部調查：哪些工程任務最值得交給 AI？
+* Japanese: Anthropic社の社内調査：AIに任せるべき開発タスクはどれ？
+* French: Enquête interne d&apos;Anthropic : quelles tâches d&apos;ingénierie offrent le meilleur ROI avec l&apos;IA ?
+* Spanish: Encuesta interna de Anthropic: ¿qué tareas de ingeniería tienen mejor ROI con IA?
+* Portuguese: Pesquisa interna da Anthropic: quais tarefas de engenharia trazem mais ROI com IA?
+* slug: `anthropic-ai-roi-by-task`
+
+## Title 2
+
+* Simplified Chinese: 前端真香、架构吃亏：Anthropic 工程师如何用 Claude 提效
+* English: Frontend Wins, Architecture Struggles: How Anthropic Engineers Use Claude
+* Traditional Chinese: 前端真香、架構吃虧：Anthropic 工程師如何用 Claude 提效
+* Japanese: フロントエンドは得、アーキテクチャは損？Anthropic エンジニアのClaude活用術
+* French: Le front-end cartonne, l&apos;architecture souffre : comment les ingénieurs d&apos;Anthropic utilisent Claude
+* Spanish: El frontend triunfa, la arquitectura sufre: así usan Claude los ingenieros de Anthropic
+* Portuguese: Frontend bomba, arquitetura sofre: como os engenheiros da Anthropic usam o Claude
+* slug: `frontend-vs-architecture-claude-usage`
+
+## Title 3
+
+* Simplified Chinese: 别让 AI 当架构师：从 Anthropic 数据看&quot;可验证性&quot;ROI
+* English: Don&apos;t Make AI Your Architect: Anthropic Data and the Power of Verifiable Tasks
+* Traditional Chinese: 別讓 AI 當架構師：從 Anthropic 數據看「可驗證性」ROI
+* Japanese: AIにアーキテクトを任せるな：Anthropicデータで読む「検証しやすさ」のROI
+* French: Ne faites pas de l&apos;IA votre architecte : les données d&apos;Anthropic et le pouvoir des tâches vérifiables
+* Spanish: No conviertas a la IA en tu arquitecto: datos de Anthropic y el poder de las tareas verificables
+* Portuguese: Não deixe a IA virar sua arquiteta: dados da Anthropic e o poder das tarefas verificáveis
+* slug: `dont-make-ai-your-architect`
+
+---
+
+## Image Concepts (Illustration Style, 2:1)
+
+## 1. Cover Prompt
+
+&gt; An illustration in 2:1 ratio of a software engineer sitting at a desk, with two columns of tasks on a big screen: on the left &quot;Debugging, Tests, Frontend&quot; glowing with high ROI, on the right &quot;Architecture, Planning, Infra&quot; faded and grey, while a friendly robot assistant helps on the left side. Clean flat style, soft colors, no Chinese text.
+
+## 2. Body Image 1 (&quot;Overall: Time vs. Output&quot;)
+
+&gt; 2:1 illustration of a balanced scale: on one side a clock slightly going down, on the other side a stack of code files and documents rising high, symbolizing little time saved but big increase in output. Modern tech style, simple icons, no Chinese text.
+
+## 3. Body Image 2 (&quot;High ROI for Frontend and Verifiable Tasks&quot;)
+
+&gt; 2:1 illustration of a developer previewing a web app on multiple screens while an AI assistant highlights bugs and auto-fills UI code. Visual focus on fast iterations and green check marks. Flat illustration, no Chinese text.
+
+## 4. Body Image 3 (&quot;Lower ROI for Design and Infra&quot;)
+
+&gt; 2:1 illustration of a whiteboard full of complex architecture diagrams and arrows. A human engineer is thinking deeply, while a confused robot holds a stack of possible plans behind them. Emphasize ambiguity and trade-offs. No Chinese text.
+
+## 5. Body Image 4 (&quot;AI Task Map / Delegation Principles&quot;)
+
+&gt; 2:1 illustration of a kanban-style board with columns &quot;Let AI do it,&quot; &quot;AI draft + human review,&quot; &quot;Human only,&quot; and sticky notes moving between them by a human and a robot working together. Collaborative, optimistic mood, no Chinese text.
+
+---
+
+## Sample Comments (For Social Posts/Comment Sections)
+
+1.
+
+&gt; After reading Anthropic&apos;s internal survey, I realized I&apos;ve been using AI wrong... Frontend, tests, docs should have gone to Claude ages ago while I go be the architect 😂
+
+2.
+
+&gt; Turns out it&apos;s not just us--Anthropic&apos;s own engineers also do &quot;easy-to-verify to AI, design and architecture stay human.&quot; I suddenly have theory-backed justification for lazy productivity 🤣
+
+3.
+
+&gt; This piece spells out &quot;what AI should do vs. what humans should do&quot; so clearly. I&apos;m going to draw an AI task map for the team and pitch it at next week&apos;s meeting 😏
+
+---
+
+Are you happy with this version?
+If you want it more tailored to managers or to frontline engineers, I can **expand with more specific cases and playbooks**. \
+
+[1]: https://www.anthropic.com/research/how-ai-is-transforming-work-at-anthropic &quot;How AI Is Transforming Work at Anthropic \\ Anthropic&quot;
+[2]: https://www.anthropic.com/research/estimating-productivity-gains &quot;Estimating AI productivity gains \\ Anthropic&quot; --&gt;</content:encoded><category>Claude</category><category>Claude Code</category><category>Anthropic</category><category>OpenAI</category></item><item><title>From Frontend to Monitoring: A Practical Engineering Map for Agentic AI</title><link>https://www.vibesparking.com/en/blog/ai/trends/2025-12-02-full-stack-of-agentic-ai/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/trends/2025-12-02-full-stack-of-agentic-ai/</guid><pubDate>Tue, 02 Dec 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- #From Frontend to Monitoring: A Practical Engineering Map for Agentic AI --&gt;
+&lt;div&gt;&lt;h2 id=&quot;introduction&quot;&gt;Introduction:&lt;/h2&gt;&lt;a href=&quot;#introduction&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Introduction:”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;In the past two years, terms like “Agentic AI” and “AI Agent” have been overused to the point of cliché.&lt;/p&gt;
+&lt;p&gt;When many people hear “Agent,” they immediately think:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“I can build one too; just use a large model + Prompt + LangChain and that’s it.”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;But when it comes to actual projects, they discover:
+&lt;strong&gt;A production-ready Agentic AI is far more than just a simple &lt;code dir=&quot;auto&quot;&gt;llm(prompt)&lt;/code&gt; call.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;The “iceberg diagram” you see today lays out &lt;strong&gt;a practical Agentic AI technology stack&lt;/strong&gt; for everyone to see clearly:
+Visible above the water are the chat interfaces and Web Apps you see;
+Submerged below is a comprehensive system for document processing, vector databases, retrieval, monitoring, and deployment.&lt;/p&gt;
+&lt;p&gt;In this article, I want to take you through this “Agentic AI Iceberg” from top to bottom, using plain language as much as possible.&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;i-above-the-water-the-shell-you-see&quot;&gt;I. Above the Water: The “Shell” You See&lt;/h2&gt;&lt;a href=&quot;#i-above-the-water-the-shell-you-see&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “I. Above the Water: The “Shell” You See”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3 id=&quot;1-frontend-you-think-its-an-interface-its-actually-an-experience-engine&quot;&gt;1. Frontend: You Think It’s an “Interface,” It’s Actually an “Experience Engine”&lt;/h3&gt;&lt;a href=&quot;#1-frontend-you-think-its-an-interface-its-actually-an-experience-engine&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1. Frontend: You Think It’s an “Interface,” It’s Actually an “Experience Engine””&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;The diagram lists frontend frameworks like React, Next.js, and Streamlit, paired with hosting environments like Azure App Service.&lt;/p&gt;
+&lt;p&gt;Many AI projects start by just wrapping a dialog box around a model, which looks usable;
+But when it comes time for internal colleagues or clients to use it, problems arise:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Supporting &lt;strong&gt;multi-turn conversation history&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Handling &lt;strong&gt;file uploads, result exports, and visualization&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Implementing &lt;strong&gt;permission controls and organizational statistics&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;These all fall on the frontend + simple backend.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;In short: The frontend isn’t just “writing some UI by the way”; it is the “console” for your entire Agent experience.&lt;/strong&gt;
+If you don’t think this through, users will just think:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“Isn’t this just ChatGPT with a skin?”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;ii-the-middle-of-the-iceberg-the-knowledge-pipeline-that-lets-the-agent-read-the-world&quot;&gt;II. The Middle of the Iceberg: The Knowledge Pipeline That Lets the Agent “Read the World”&lt;/h2&gt;&lt;a href=&quot;#ii-the-middle-of-the-iceberg-the-knowledge-pipeline-that-lets-the-agent-read-the-world&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “II. The Middle of the Iceberg: The Knowledge Pipeline That Lets the Agent “Read the World””&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;The real power of Agentic AI lies in “&lt;strong&gt;understanding your own data&lt;/strong&gt;”.
+This corresponds to these layers in the diagram: &lt;strong&gt;Document Ingestion → Chunking/Preprocessing → Vector Representation → Vector Database → Retrieval Layer&lt;/strong&gt;.&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;1-document-ingestion-feeding-the-agent-clean-raw-materials&quot;&gt;1. Document Ingestion: Feeding the Agent Clean “Raw Materials”&lt;/h3&gt;&lt;a href=&quot;#1-document-ingestion-feeding-the-agent-clean-raw-materials&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1. Document Ingestion: Feeding the Agent Clean “Raw Materials””&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Components like Microsoft Fabric, Azure AI OCR, Apache Tika, and LangChain do very plain work:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Uniformly extracting&lt;/strong&gt; content from PDFs, Word docs, web pages, and screenshots&lt;/li&gt;
+&lt;li&gt;Removing noise, ads, and messy formatting&lt;/li&gt;
+&lt;li&gt;Structuring data, such as tables of contents, headings, paragraphs, and tables&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Think of it this way:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;To feed a bodybuilder, you must first ensure “real meat and vegetables,” not junk food.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;If you just throw a bunch of raw PDFs at the model and expect it to be your “enterprise search/knowledge assistant,” you are basically playing with fire.&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;2-chunking--preprocessing-cutting-knowledge-into-bite-sized-pieces-for-the-model&quot;&gt;2. Chunking &amp;#x26; Preprocessing: Cutting Knowledge into Bite-Sized Pieces for the Model&lt;/h3&gt;&lt;a href=&quot;#2-chunking--preprocessing-cutting-knowledge-into-bite-sized-pieces-for-the-model&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2. Chunking &amp;#x26; Preprocessing: Cutting Knowledge into Bite-Sized Pieces for the Model”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Tools like spaCy, Hugging Face, LangChain, and some capabilities of Azure AI Search in the diagram are there to help you do this:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Intelligent chunking&lt;/strong&gt; by paragraph or logical structure&lt;/li&gt;
+&lt;li&gt;Identifying entities and topics, doing some &lt;strong&gt;lightweight NLP preprocessing&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Some also add &lt;strong&gt;metadata tags&lt;/strong&gt; (e.g., source system, time, business line)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;What happens if this step isn’t done well?&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Either the chunk is too large: super long context, &lt;strong&gt;expensive and inaccurate&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Or the chunk is too fragmented: the model sees a pile of “debris” each time, answering &lt;strong&gt;irrelevantly&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;A common engineering approach is to create a dynamic chunking strategy based on document structure + word count + semantics, paired with overlapping windows to ensure “&lt;strong&gt;no key information is missed in a query&lt;/strong&gt;”.&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;3-embeddings-compressing-enterprise-knowledge-into-vector-fingerprints&quot;&gt;3. Embeddings: Compressing Enterprise Knowledge into “Vector Fingerprints”&lt;/h3&gt;&lt;a href=&quot;#3-embeddings-compressing-enterprise-knowledge-into-vector-fingerprints&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3. Embeddings: Compressing Enterprise Knowledge into “Vector Fingerprints””&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;This is where Embedding models like Azure OpenAI, OpenAI, and Cohere come into play.&lt;/p&gt;
+&lt;p&gt;Simply put, they help you convert:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Text → High-dimensional Vector&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The distance between vectors represents “semantic similarity.”&lt;/p&gt;
+&lt;p&gt;Why is this step critical?&lt;/p&gt;
+&lt;p&gt;Because questions in an enterprise basically look like this:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;“Help me check the reasons for the abnormal return rate of a certain product in 2023?”&lt;/li&gt;
+&lt;li&gt;“List the differences in contract terms between these versions?”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;No one searches by exact original text&lt;/strong&gt;; everyone asks “randomly in natural language,”
+and the Agent has to rely on semantic retrieval to quickly find the &lt;strong&gt;truly relevant content&lt;/strong&gt; in your knowledge base.&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;4-vector-database-a-gym-specific-hard-drive-for-the-agent&quot;&gt;4. Vector Database: A “Gym-Specific Hard Drive” for the Agent&lt;/h3&gt;&lt;a href=&quot;#4-vector-database-a-gym-specific-hard-drive-for-the-agent&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “4. Vector Database: A “Gym-Specific Hard Drive” for the Agent”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;The diagram lists Azure AI Search, Cosmos DB, PostgreSQL + vector plugins, as well as Milvus, FAISS, etc.&lt;/p&gt;
+&lt;p&gt;In the real world, you basically have to consider a few things:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;When the data volume is large, can retrieval still maintain &lt;strong&gt;millisecond-level response&lt;/strong&gt;?&lt;/li&gt;
+&lt;li&gt;Does it support &lt;strong&gt;hybrid search&lt;/strong&gt; (vector + keyword + filter conditions)?&lt;/li&gt;
+&lt;li&gt;How are security and isolation handled, such as sharding by tenant, department, or project?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Here you are actually choosing your “&lt;strong&gt;Agent Memory Hub&lt;/strong&gt;”.
+Choose wrong, and all your subsequent “RAG + Agent” capabilities will be stuck on performance and cost.&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;5-retrieval-layer-let-the-agent-look-up-before-thinking&quot;&gt;5. Retrieval Layer: Let the Agent “Look Up Before Thinking”&lt;/h3&gt;&lt;a href=&quot;#5-retrieval-layer-let-the-agent-look-up-before-thinking&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “5. Retrieval Layer: Let the Agent “Look Up Before Thinking””&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;This layer is what everyone calls RAG (Retrieval-Augmented Generation):&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;LangChain, LlamaIndex, and Haystack do &lt;strong&gt;retrieval orchestration&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Azure AI Search provides &lt;strong&gt;built-in retrieval + ranking capabilities&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;You can design a fixed routine for the Agent:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;User asks → Retrieve N pieces of related knowledge → Let the large model answer based on “evidence” → Return citations to the user when necessary&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;If this step is done well,
+&lt;strong&gt;the Agent’s “hallucination rate” and “nonsense” will drop by an order of magnitude.&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;iii-prompt-engineering-layer-from-writing-prompts-to-designing-strategies&quot;&gt;III. Prompt Engineering Layer: From “Writing Prompts” to “Designing Strategies”&lt;/h2&gt;&lt;a href=&quot;#iii-prompt-engineering-layer-from-writing-prompts-to-designing-strategies&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “III. Prompt Engineering Layer: From “Writing Prompts” to “Designing Strategies””&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;The diagram includes Prompty, LangChain, and DSPy.&lt;/p&gt;
+&lt;p&gt;Many people’s understanding of Prompts is stuck at “thinking of a few good English descriptions.”&lt;/p&gt;
+&lt;p&gt;But Prompts in Agentic AI are closer to a type of:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“Decision Strategy + Workflow Orchestration Language”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;They can be roughly divided into categories:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;System Prompts&lt;/strong&gt;: Define role, tone, boundaries&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Tool Invocation Strategy&lt;/strong&gt;: When to check the knowledge base, when to call an API&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Multi-Agent Collaboration&lt;/strong&gt;: How the planning, execution, and review roles talk to each other&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Tools like DSPy even try to “&lt;strong&gt;automatically optimize Prompts&lt;/strong&gt;”,
+somewhat like treating Prompts as “parameters,”
+tuning them through datasets and feedback signals.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Only when you start managing Prompts as “experimental, iterative product configurations” rather than just scribbling them down, will the ceiling of large model applications be opened.&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;iv-llm-layer-not-choosing-a-model-but-choosing-a-brain-combo&quot;&gt;IV. LLM Layer: Not “Choosing a Model,” But “Choosing a Brain Combo”&lt;/h2&gt;&lt;a href=&quot;#iv-llm-layer-not-choosing-a-model-but-choosing-a-brain-combo&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “IV. LLM Layer: Not “Choosing a Model,” But “Choosing a Brain Combo””&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;The diagram mentions Azure OpenAI, plus models like LLaMA and Mistral.&lt;/p&gt;
+&lt;p&gt;In real projects, using a single model for everything is no longer very realistic;
+more often, it’s about making a “model platter”:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Cheap models run &lt;strong&gt;most chitchat and simple tasks&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Specialized models run &lt;strong&gt;vertical tasks like code, law, medicine&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Enterprises will also mix &lt;strong&gt;open-source models + commercial models&lt;/strong&gt; to balance privacy and cost&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;You can understand this layer as:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The Agent’s “Multi-Core Brain Pool”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;It has to be responsible for those “Prompt strategies” and “retrieval results” above,
+making decisions that are as reliable and consistent with business logic as possible.&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;v-monitoring--evaluation-if-an-agent-isnt-monitored-it-slowly-becomes-a-time-bomb&quot;&gt;V. Monitoring &amp;#x26; Evaluation: If an Agent Isn’t Monitored, It Slowly Becomes a “Time Bomb”&lt;/h2&gt;&lt;a href=&quot;#v-monitoring--evaluation-if-an-agent-isnt-monitored-it-slowly-becomes-a-time-bomb&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “V. Monitoring &amp;#x26; Evaluation: If an Agent Isn’t Monitored, It Slowly Becomes a “Time Bomb””&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;The diagram shows Azure Foundry, OpenTelemetry, and Grafana.&lt;/p&gt;
+&lt;p&gt;A pitfall many teams fall into is:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“The app is online, people can use it, so it’s a success.”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;A few weeks later you’ll find:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Users often complain “the answer this time is different from the last time”&lt;/li&gt;
+&lt;li&gt;After a model upgrade, &lt;strong&gt;results in some scenarios get worse&lt;/strong&gt;, but no one notices&lt;/li&gt;
+&lt;li&gt;Certain Prompts are called tens of thousands of times a day, &lt;strong&gt;costs blowing straight through the budget&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;At this point, &lt;strong&gt;Observability and Evaluation&lt;/strong&gt; become critical:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Record the &lt;strong&gt;input, output, tools used, latency, and cost&lt;/strong&gt; of every call&lt;/li&gt;
+&lt;li&gt;Establish an &lt;strong&gt;automatic evaluation set&lt;/strong&gt; for key scenarios, running comparisons as soon as a new version comes&lt;/li&gt;
+&lt;li&gt;Hang these metrics on a dashboard like Grafana for operations and tech to monitor together&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In short:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;An Agent without monitoring is like a car without rearview mirrors. The faster you drive, the more dangerous it is.&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;vi-infrastructure--deployment-turning-the-agent-from-a-lab-toy-into-a-productivity-tool&quot;&gt;VI. Infrastructure &amp;#x26; Deployment: Turning the Agent from a “Lab Toy” into a “Productivity Tool”&lt;/h2&gt;&lt;a href=&quot;#vi-infrastructure--deployment-turning-the-agent-from-a-lab-toy-into-a-productivity-tool&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “VI. Infrastructure &amp;#x26; Deployment: Turning the Agent from a “Lab Toy” into a “Productivity Tool””&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;The bottom layer contains things like Azure Container Apps, AKS, Docker, and Kubernetes.&lt;/p&gt;
+&lt;p&gt;The problem they solve is really just two words: &lt;strong&gt;Stability&lt;/strong&gt;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Withstanding &lt;strong&gt;high concurrency&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Meeting &lt;strong&gt;high availability requirements&lt;/strong&gt; (can’t keep crashing)&lt;/li&gt;
+&lt;li&gt;Supporting &lt;strong&gt;multiple environments&lt;/strong&gt; (dev, test, staging, prod)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Many people think everything is fine when doing a Demo:
+“It runs pretty fast locally.”&lt;/p&gt;
+&lt;p&gt;But in a production environment, you have to consider:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;How to do horizontal scaling and auto-scaling?&lt;/li&gt;
+&lt;li&gt;How to split model services and business services?&lt;/li&gt;
+&lt;li&gt;How to isolate and audit sensitive data?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;These things are the engineering details at the very bottom of the iceberg.
+&lt;strong&gt;The sooner you realize their existence, the less rework you’ll have later.&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;vii-a-landing-route-suggestion-for-you-who-want-to-build-agentic-ai&quot;&gt;VII. A Landing Route Suggestion for You Who Want to Build Agentic AI&lt;/h2&gt;&lt;a href=&quot;#vii-a-landing-route-suggestion-for-you-who-want-to-build-agentic-ai&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “VII. A Landing Route Suggestion for You Who Want to Build Agentic AI”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;If you are currently in a company and planning to build an “Intelligent Customer Service,” “Internal Knowledge Assistant,” or “AI Operations Assistant,” you can think about the route like this:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Start with a clear scenario&lt;/strong&gt;
+For example, “allow operations to instantly query any historical campaign data,” rather than “make an Agent that can chat about anything.”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Run a MVP with the simplest frontend + RAG pipeline&lt;/strong&gt;
+Don’t use complex multi-Agent scheduling at the start.
+Being able to do: “Ask business question → Check knowledge base → Provide cited answer” is already very powerful.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Leave hooks for monitoring and evaluation from the very beginning&lt;/strong&gt;
+Even if you only do simple logging + a few typical question sets at first,
+it will save a lot of time for tuning later.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Treat this iceberg diagram as a “Technical Debt List”&lt;/strong&gt;
+Think clearly:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Which layers must be done now&lt;/li&gt;
+&lt;li&gt;Which layers can be added gradually later&lt;/li&gt;
+&lt;li&gt;Which layers can use cloud vendor/open-source solutions to “borrow for a while”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Wait until you make the first version of the Agent &lt;strong&gt;indispensable to the team’s daily routine&lt;/strong&gt;,
+then slowly dig down into this iceberg,
+and you will find:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The truly hard part is not “knowing how to use large models,”
+but “being able to embed large models into business, running stably, for a long time, and affordably.”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;conclusion-agentic-ai-is-not-a-new-term-but-a-whole-new-engineering-paradigm&quot;&gt;Conclusion: Agentic AI Is Not a New Term, But a Whole New Engineering Paradigm&lt;/h2&gt;&lt;a href=&quot;#conclusion-agentic-ai-is-not-a-new-term-but-a-whole-new-engineering-paradigm&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Conclusion: Agentic AI Is Not a New Term, But a Whole New Engineering Paradigm”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Back to that diagram.&lt;/p&gt;
+&lt;p&gt;Above the water are the “cool AI applications” users see;
+Below the water is a comprehensive engineering system from data and models to monitoring and deployment.&lt;/p&gt;
+&lt;p&gt;If you are currently a developer, product manager, or are considering using AI to improve business efficiency,
+I highly recommend saving this “Agentic AI Iceberg Diagram”
+as a &lt;strong&gt;long-term reference engineering map&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Next time you are urged to make “an AI Agent Demo,”
+you can throw this diagram at them and say with a smile:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“We can first make the part visible above the water,
+but to run in production, the whole iceberg below will have to be filled in sooner or later.”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;What do you think,
+in your current work/project, which layer of this iceberg is the hardest?
+Welcome to chat in the comments section about the most “outrageous” AI project requirements you have encountered.&lt;/p&gt;</content:encoded><category>AI Era</category><category>Agentic AI</category></item><item><title>Johari Window Model and Four-Quadrant Analysis of Human–AI Dialogue</title><link>https://www.vibesparking.com/en/blog/ai/trends/2025-12-01-johari-window-ai-human-dialogue/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/trends/2025-12-01-johari-window-ai-human-dialogue/</guid><pubDate>Mon, 01 Dec 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # Johari Window Model and Four-Quadrant Analysis of Human–AI Dialogue --&gt;
 &lt;div&gt;&lt;h2 id=&quot;introduction-to-the-johari-window-model-and-its-four-quadrants&quot;&gt;Introduction to the Johari Window Model and Its Four Quadrants&lt;/h2&gt;&lt;a href=&quot;#introduction-to-the-johari-window-model-and-its-four-quadrants&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Introduction to the Johari Window Model and Its Four Quadrants”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
 &lt;p&gt;The Johari Window is a psychological model for improving self-awareness and interpersonal communication, proposed by psychologists Joseph Luft and Harrington Ingham in 1955. It divides personal cognition into four quadrants (or four “windows”):&lt;/p&gt;
 &lt;p&gt;&lt;/p&gt;
@@ -2409,203 +3042,4 @@ Need a “team playbook” version (with model‑switch scripts, cost dashboards
 [6]: https://marketplace.visualstudio.com/items?itemName=anthropic.claude-code &quot;Claude Code for VS Code&quot;
 [7]: https://anthropic.com/news/enabling-claude-code-to-work-more-autonomously &quot;Enabling Claude Code to work more autonomously&quot;
 [8]: https://arstechnica.com/ai/2025/10/anthropics-claude-haiku-4-5-matches-mays-frontier-model-at-fraction-of-cost/ &quot;Ars Technica on Haiku 4.5&quot;
---&gt;</content:encoded><category>Claude Code</category></item><item><title>Break the “etc.”: Clarity for Claude Code</title><link>https://www.vibesparking.com/en/blog/ai/claude-code/practices/2025-10-16-break-the-etc-clarity-for-claude-code/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/claude-code/practices/2025-10-16-break-the-etc-clarity-for-claude-code/</guid><pubDate>Thu, 16 Oct 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;strong&gt;One‑line takeaway:&lt;/strong&gt; AI coding speed can’t fix fuzzy specs. &lt;strong&gt;To make Claude Code truly low‑friction, break every “etc.” into a checklist, turn acceptance into an executable script, and let automation run the tests.&lt;/strong&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;&lt;a href=&quot;#introduction&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Introduction”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;Have you ever written a requirement like:
-“Show key device info on the home page (power, volume, etc.).”&lt;/p&gt;
-&lt;p&gt;Then at QA time, the AI only implements the first three. &lt;strong&gt;The “etc.” simply disappears.&lt;/strong&gt;
-It’s not that the AI isn’t smart; the signal you gave wasn’t precise. &lt;strong&gt;Claude Code “does less” when your instructions are vague&lt;/strong&gt;—it will reasonably but incompletely narrow the scope. That’s not a bug; &lt;strong&gt;it’s a boundary reminder for human‑AI collaboration.&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;By the way, Anthropic just bumped Haiku to 4.5: &lt;strong&gt;cheaper, faster, and coding performance close to Sonnet&lt;/strong&gt; (now available in Copilot too). It’s faster, yes—but &lt;strong&gt;it still won’t auto‑complete your “etc.”&lt;/strong&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;what-you-see-the-less-you-write-before--the-less-you-get-after-it&quot;&gt;What you see: the less you write before “=”, the less you get after it&lt;/h2&gt;&lt;a href=&quot;#what-you-see-the-less-you-write-before--the-less-you-get-after-it&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “What you see: the less you write before “=”, the less you get after it”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;You wrote “power, volume, brightness, etc.”&lt;/li&gt;
-&lt;li&gt;Claude Code reads this as &lt;strong&gt;three explicit items + one implicit “etc.”&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;Result: code, automated tests, and docs &lt;strong&gt;all cover only the first three&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;It’s not AI “cutting corners.” &lt;strong&gt;It’s AI prioritizing what’s verifiable.&lt;/strong&gt; Explicit items can produce code and tests; ambiguous ones get skipped. &lt;strong&gt;This shows up repeatedly in research and industry reports&lt;/strong&gt;—with incomplete or vague specs, AI helpers &lt;strong&gt;are more likely to miss features&lt;/strong&gt;, even when they produce code faster.&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;a-copyanduse-solution-dont-let-etc-ship-to-production&quot;&gt;A copy‑and‑use solution: don’t let “etc.” ship to production&lt;/h2&gt;&lt;a href=&quot;#a-copyanduse-solution-dont-let-etc-ship-to-production&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “A copy‑and‑use solution: don’t let “etc.” ship to production”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;This workflow &lt;strong&gt;works for any app, admin, or web project.&lt;/strong&gt; Steal it.&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;1-turn-every-etc-into-a-datadriven-checklist&quot;&gt;1) Turn every “etc.” into a data‑driven checklist&lt;/h3&gt;&lt;a href=&quot;#1-turn-every-etc-into-a-datadriven-checklist&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1) Turn every “etc.” into a data‑driven checklist”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;Write the nouns as a table&lt;/strong&gt; and add “status, source, display rules, empty‑state policy, error policy” for each item. Example fields:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Name: Power / Volume / Brightness …&lt;/li&gt;
-&lt;li&gt;Domain: On/Off; 0–100 …&lt;/li&gt;
-&lt;li&gt;Source: local cache / backend API / Bluetooth …&lt;/li&gt;
-&lt;li&gt;Display: icon, label, unit&lt;/li&gt;
-&lt;li&gt;Empty: show “—” or greyed out&lt;/li&gt;
-&lt;li&gt;Error: timeout, disconnect, permission‑denied placeholders&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;The payoff: &lt;strong&gt;AI can generate complete UI + validation + empty states + error handling&lt;/strong&gt;, not just “three components that look right.”&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Tip: &lt;strong&gt;Use Gherkin/BDD for acceptance&lt;/strong&gt;, and write behavior as a &lt;strong&gt;Given‑When‑Then script&lt;/strong&gt;. Human‑readable, machine‑testable.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h3 id=&quot;2-upgrade-acceptance-from-verbal-agreement-to-executable&quot;&gt;2) Upgrade acceptance from “verbal agreement” to “executable”&lt;/h3&gt;&lt;a href=&quot;#2-upgrade-acceptance-from-verbal-agreement-to-executable&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2) Upgrade acceptance from “verbal agreement” to “executable””&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;Convert the checklist into Gherkin scenarios&lt;/strong&gt;, then have AI generate the automation (e.g., Cypress/Playwright):&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;plaintext&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;Feature: Device key info panel&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;Scenario Outline: Render each key info item&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;    &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;Given the device exposes &quot;&amp;#x3C;name&gt;&quot; with value &quot;&amp;#x3C;value&gt;&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;    &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;When I open the home page&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;    &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;Then I should see &quot;&amp;#x3C;label&gt;&quot; and formatted &quot;&amp;#x3C;value&gt;&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;    &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;Examples:&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;      &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;| name       | value | label       |&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;      &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;| Power      | On    | Power       |&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;      &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;| Volume     | 70    | Volume      |&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;      &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;| Brightness | 40    | Brightness  |&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;      &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;| …          | …     | …           |&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;button title=&quot;Copy to clipboard&quot; data-copied=&quot;Copied!&quot; data-code=&quot;&quot;&gt;&amp;#x22; with value &amp;#x22;&lt;value&gt;&amp;#x22;    When I open the home page    Then I should see &amp;#x22;&lt;label&gt;&amp;#x22; and formatted &amp;#x22;&lt;value&gt;&amp;#x22;    Examples:      | name       | value | label       |      | Power      | On    | Power       |      | Volume     | 70    | Volume      |      | Brightness | 40    | Brightness  |      | …          | …     | …           |&quot;&gt;&lt;div&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;Research shows&lt;/strong&gt;: generating Gherkin from user stories first, then &lt;strong&gt;turning it into executable tests&lt;/strong&gt; (Cypress, etc.) significantly improves coverage and control.&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h3 id=&quot;3-put-reuse-in-the-data-layer-to-avoid-reimplementing-the-same-thing&quot;&gt;3) Put reuse in the data layer to avoid re‑implementing the same thing&lt;/h3&gt;&lt;a href=&quot;#3-put-reuse-in-the-data-layer-to-avoid-reimplementing-the-same-thing&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3) Put reuse in the data layer to avoid re‑implementing the same thing”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;Don’t write &lt;strong&gt;multiple near‑duplicate infos()&lt;/strong&gt; scattered across modules.
-&lt;strong&gt;Extract a reusable data mapping and renderer&lt;/strong&gt;: one schema, &lt;strong&gt;consumed everywhere&lt;/strong&gt;.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;keyInfo.schema.ts&lt;/code&gt;: fields, domain, formatters, empty‑state policy&lt;/li&gt;
-&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;keyInfo.adapter.ts&lt;/code&gt;: &lt;strong&gt;unify&lt;/strong&gt; sources (API, Bluetooth, cache)&lt;/li&gt;
-&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;KeyInfoPanel.tsx&lt;/code&gt;: &lt;strong&gt;pure presentation&lt;/strong&gt;, no business logic&lt;/li&gt;
-&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;keyInfo.spec.ts&lt;/code&gt;: &lt;strong&gt;table‑driven tests&lt;/strong&gt;; add one schema item = get more tests for free&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Result&lt;/strong&gt;: when you later add “battery temperature,” you just &lt;strong&gt;update the schema&lt;/strong&gt; and everything else follows. That’s &lt;strong&gt;engineering the “etc.”&lt;/strong&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h3 id=&quot;4-put-aigenerated-into-ci&quot;&gt;4) Put “AI‑generated” into CI&lt;/h3&gt;&lt;a href=&quot;#4-put-aigenerated-into-ci&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “4) Put “AI‑generated” into CI”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;On PRs, automatically run: &lt;strong&gt;type checks, static rules, unit + acceptance tests&lt;/strong&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Gate&lt;/strong&gt;: if checklist count ≠ test‑covered count, reject the merge.&lt;/li&gt;
-&lt;li&gt;Add security and compliance scans to prevent &lt;strong&gt;AI‑introduced latent risks&lt;/strong&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Unit tests tell you “what broke.” Acceptance tests tell you “is it actually complete.” &lt;strong&gt;You need both.&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h3 id=&quot;5-use-claude-codes-latest-featuresjust-dont-expect-mindreading&quot;&gt;5) Use Claude Code’s latest features—just don’t expect mind‑reading&lt;/h3&gt;&lt;a href=&quot;#5-use-claude-codes-latest-featuresjust-dont-expect-mindreading&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “5) Use Claude Code’s latest features—just don’t expect mind‑reading”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Claude Code Plugins&lt;/strong&gt;: bundle “checklist generation → Gherkin → test coverage checks” into an &lt;strong&gt;installable workflow&lt;/strong&gt; your team can share.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Haiku 4.5&lt;/strong&gt;: &lt;strong&gt;cheap and fast&lt;/strong&gt;, perfect for mass‑producing the “checklist → scenarios → tests” grunt work. Rolling out in Copilot too.&lt;/li&gt;
-&lt;li&gt;Remember: &lt;strong&gt;faster ≠ understands you better&lt;/strong&gt;. &lt;strong&gt;Clarity&lt;/strong&gt; is the true force multiplier.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;quick-checklist-paste-into-your-team-wiki&quot;&gt;Quick checklist (paste into your team wiki)&lt;/h2&gt;&lt;a href=&quot;#quick-checklist-paste-into-your-team-wiki&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Quick checklist (paste into your team wiki)”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;Shared definitions&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Break every “etc.” into a &lt;strong&gt;tabular checklist&lt;/strong&gt; with domain, source, display, empty, and error policies.&lt;/li&gt;
-&lt;li&gt;Write one &lt;strong&gt;Gherkin scenario per item&lt;/strong&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Automation&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Use Claude to generate &lt;strong&gt;Cypress/Playwright&lt;/strong&gt; scripts.&lt;/li&gt;
-&lt;li&gt;CI rule: &lt;strong&gt;checklist count = passed scenario count&lt;/strong&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Engineering reuse&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;schema + adapter + pure UI component.&lt;/li&gt;
-&lt;li&gt;New item = update schema; tests and UI &lt;strong&gt;follow automatically&lt;/strong&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Security &amp;#x26; quality&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Static analysis + dependency/secret checks.&lt;/li&gt;
-&lt;li&gt;No merge if gates fail.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;&lt;a href=&quot;#conclusion&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Conclusion”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;Claude Code isn’t slacking. It follows the boundaries you set.&lt;/strong&gt;
-When you turn &lt;strong&gt;ambiguity&lt;/strong&gt; into &lt;strong&gt;structure&lt;/strong&gt; and &lt;strong&gt;acceptance&lt;/strong&gt; into &lt;strong&gt;execution&lt;/strong&gt;, AI becomes a &lt;strong&gt;reliable teammate&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Where does your team most often write “etc.”? How are you addressing it?&lt;/strong&gt; Share in the comments.&lt;/p&gt;&lt;/value&gt;&lt;/label&gt;&lt;/value&gt;&lt;/button&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;</content:encoded><category>Claude Code</category><category>TypeScript</category></item><item><title>Ship a Rails feature in minutes with Claude Code: Document‑Driven dev + RSpec BDD</title><link>https://www.vibesparking.com/en/blog/ai/claude-code/practices/2025-10-16-rails-feature-from-one-doc-claude-code-rspec-bdd/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/claude-code/practices/2025-10-16-rails-feature-from-one-doc-claude-code-rspec-bdd/</guid><pubDate>Thu, 16 Oct 2025 00:00:00 GMT</pubDate><content:encoded>&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;&lt;a href=&quot;#introduction&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Introduction”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;Ever felt this pain? A device reports multiple states within a minute and your database turns into a wall of “noise”.&lt;/p&gt;
-&lt;p&gt;Here’s a general, reusable practice: in Rails, merge repeated reports that arrive within a short, configurable time window into a single “golden record”.&lt;/p&gt;
-&lt;p&gt;I’ll use Claude Code with a document‑driven approach: start from a single page of specs → generate BDD scenarios → validate with RSpec → minimal implementation → write findings back to the doc. The loop is fast, stable, and traceable. If you’re new to Claude Code, the official docs outline a clear playbook and best practices.&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;our-public-version-requirement-desensitized&quot;&gt;Our “public version” requirement (desensitized)&lt;/h2&gt;&lt;a href=&quot;#our-public-version-requirement-desensitized&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Our “public version” requirement (desensitized)”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;Business context (generic)&lt;/p&gt;
-&lt;p&gt;An “intelligent fitness band” may report multiple heart‑rate/status events within one minute. To avoid redundancy, we want to:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Within a configurable time window (default 1 minute), grouped by device and type, merge multiple events into one;&lt;/li&gt;
-&lt;li&gt;Keep the latest record within the window (i.e., the last one wins);&lt;/li&gt;
-&lt;li&gt;Write to a unified work record table, ensure idempotency, and keep merge provenance for audit and traceability.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Document‑Driven&lt;/p&gt;
-&lt;p&gt;Put the above into a single “feature spec” document. That document doubles as the product contract and acceptance criteria. From it, we derive BDD scenarios and tests. This follows the same spirit as “Specification by Example/ATDD/BDD”: examples are the single source of truth.&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;claude-code--bdd-from-doc-to-executable-acceptance&quot;&gt;Claude Code + BDD: from doc to executable acceptance&lt;/h2&gt;&lt;a href=&quot;#claude-code--bdd-from-doc-to-executable-acceptance&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Claude Code + BDD: from doc to executable acceptance”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;Why Claude Code&lt;/p&gt;
-&lt;p&gt;It’s a terminal‑native coding copilot that actively pulls context. It connects code, docs, dependencies, and scaffolding, turning ideas into runnable structure quickly. The docs include hands‑on tips such as how to organize repositories so the agent “understands” your intent.&lt;/p&gt;
-&lt;p&gt;Prompt template (paste into Claude Code)&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Role: Senior Rails engineer + test coach
-Goal: Implement “device report merge” as a reusable capability
-Deliverables:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Based on the spec below, generate RSpec BDD scenarios and edge cases (Rails + Capybara/request/service layer);&lt;/li&gt;
-&lt;li&gt;Provide a minimal implementation skeleton (service object, queries, transaction, idempotency strategy);&lt;/li&gt;
-&lt;li&gt;Propose rollback and audit logging;&lt;/li&gt;
-&lt;li&gt;Write all assumptions back to the doc under “Open Questions”.
-Attachment: the feature spec (paste the “public version” requirement above)&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Why RSpec + BDD&lt;/p&gt;
-&lt;p&gt;RSpec reads like behavior. Tests are documentation. Rails’ official guide also clarifies test layers. With Capybara/request specs you can do API acceptance and system flows.&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;acceptance-examples-trimmed-bdd-thinking&quot;&gt;Acceptance examples (trimmed BDD thinking)&lt;/h2&gt;&lt;a href=&quot;#acceptance-examples-trimmed-bdd-thinking&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Acceptance examples (trimmed BDD thinking)”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;User story&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;As a data platform, within one minute, multiple reports of the same device and record type should be merged into one, taking the last record as the truth. This keeps queries clean and metrics correct.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Key scenarios&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;In‑window merge: t=00:10 and 00:40 → save 1 row, payload from 00:40.&lt;/li&gt;
-&lt;li&gt;Cross‑window no‑merge: t=00:10 and 01:15 → save 2 rows.&lt;/li&gt;
-&lt;li&gt;Idempotent writes: repeated requests do not produce duplicate merge results.&lt;/li&gt;
-&lt;li&gt;Auditable: keep source IDs and window parameters.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Tip: Put these examples in the doc/feature file so they serve both discussion and automated tests.&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;rspec-skeleton-snippet&quot;&gt;RSpec skeleton (snippet)&lt;/h2&gt;&lt;a href=&quot;#rspec-skeleton-snippet&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “RSpec skeleton (snippet)”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;spec/services/record_merger_spec.rb&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;ruby&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;RSpec&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;describe&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;RecordMerger&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;do&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;let(:&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#096E72&quot;&gt;device_id&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;)&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; { &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;device-123&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; }&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;let(:&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#096E72&quot;&gt;window&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;)&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;    { &lt;/span&gt;&lt;span style=&quot;--0:#F78C6C;--1:#AA0982&quot;&gt;1&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;minute&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; }&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;it &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;merges multiple records within window, keeps the latest&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;do&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;create(:&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#096E72&quot;&gt;work_status&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;, &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;device_id&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;:, &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;recorded_at&lt;/span&gt;&lt;span style=&quot;--1:#3B61B0&quot;&gt;&lt;span style=&quot;--0:#82AAFF&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#C5E478&quot;&gt;Time&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF&quot;&gt;.current &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;-&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#F78C6C;--1:#AA0982&quot;&gt;40&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;.seconds, &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;payload&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;: { &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;hr&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#F78C6C;--1:#AA0982&quot;&gt;85&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt; })&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;create(:&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#096E72&quot;&gt;work_status&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;, &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;device_id&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;:, &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;recorded_at&lt;/span&gt;&lt;span style=&quot;--1:#3B61B0&quot;&gt;&lt;span style=&quot;--0:#82AAFF&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#C5E478&quot;&gt;Time&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF&quot;&gt;.current &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;-&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#F78C6C;--1:#AA0982&quot;&gt;10&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;.seconds, &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;payload&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;: { &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;hr&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#F78C6C;--1:#AA0982&quot;&gt;92&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt; })&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;result&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;=&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; described_class.&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;call&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;device_id&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;, &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;record_type&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#096E72&quot;&gt;work_status&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;, &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;window&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;expect(result.payload&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;[&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#096E72&quot;&gt;hr&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;]&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;)&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;to&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;eq(&lt;/span&gt;&lt;span style=&quot;--0:#F78C6C;--1:#AA0982&quot;&gt;92&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span style=&quot;--1:#3B61B0&quot;&gt;&lt;span style=&quot;--0:#82AAFF&quot;&gt;expect(&lt;/span&gt;&lt;span style=&quot;--0:#C5E478&quot;&gt;WorkStatus&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF&quot;&gt;.where(&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;device_id&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;:)&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;count&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;).&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;to&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;eq(&lt;/span&gt;&lt;span style=&quot;--0:#F78C6C;--1:#AA0982&quot;&gt;1&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;end&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;it &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;does not merge across windows&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;do&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;create(:&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#096E72&quot;&gt;work_status&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;, &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;device_id&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;:, &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;recorded_at&lt;/span&gt;&lt;span style=&quot;--1:#3B61B0&quot;&gt;&lt;span style=&quot;--0:#82AAFF&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#C5E478&quot;&gt;Time&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF&quot;&gt;.current &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;-&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#F78C6C;--1:#AA0982&quot;&gt;75&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;.seconds)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;create(:&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#096E72&quot;&gt;work_status&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;, &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;device_id&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;:, &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;recorded_at&lt;/span&gt;&lt;span style=&quot;--1:#3B61B0&quot;&gt;&lt;span style=&quot;--0:#82AAFF&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#C5E478&quot;&gt;Time&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF&quot;&gt;.current &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;-&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#F78C6C;--1:#AA0982&quot;&gt;10&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;.seconds)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;    &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;described_class.&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;call&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;device_id&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;, &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;record_type&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#096E72&quot;&gt;work_status&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;, &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;window&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span style=&quot;--1:#3B61B0&quot;&gt;&lt;span style=&quot;--0:#82AAFF&quot;&gt;expect(&lt;/span&gt;&lt;span style=&quot;--0:#C5E478&quot;&gt;WorkStatus&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF&quot;&gt;.where(&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;device_id&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;:)&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;count&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;).&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;to&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;eq(&lt;/span&gt;&lt;span style=&quot;--0:#F78C6C;--1:#AA0982&quot;&gt;2&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;end&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;end&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;p&gt;Reference: See RSpec/Capybara conventions for feature tests and dependency constraints.&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;rails-minimal-implementation-map&quot;&gt;Rails minimal implementation (map)&lt;/h2&gt;&lt;a href=&quot;#rails-minimal-implementation-map&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Rails minimal implementation (map)”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;Entry point: service object &lt;code dir=&quot;auto&quot;&gt;RecordMerger.call(device_id:, record_type:, window:)&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Query: same device + same type + &lt;code dir=&quot;auto&quot;&gt;recorded_at&lt;/code&gt; within the “natural time window”&lt;/li&gt;
-&lt;li&gt;Merge strategy:
-&lt;ul&gt;
-&lt;li&gt;Use the record with the max &lt;code dir=&quot;auto&quot;&gt;recorded_at&lt;/code&gt; as the base data&lt;/li&gt;
-&lt;li&gt;Persist the rest as the provenance set, e.g., &lt;code dir=&quot;auto&quot;&gt;merged_from: [ids...]&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Idempotency &amp;#x26; concurrency:
-&lt;ul&gt;
-&lt;li&gt;App‑level mutual exclusion by device + window (e.g., &lt;code dir=&quot;auto&quot;&gt;with_advisory_lock&lt;/code&gt;)&lt;/li&gt;
-&lt;li&gt;Unique index on the critical key (device + window start, or a computed idempotency key)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Audit:
-&lt;ul&gt;
-&lt;li&gt;Record &lt;code dir=&quot;auto&quot;&gt;merge_window_sec&lt;/code&gt;, &lt;code dir=&quot;auto&quot;&gt;merged_count&lt;/code&gt;, &lt;code dir=&quot;auto&quot;&gt;merged_from&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Emit event logs for tracing and replay&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;For broader coverage, add request/system tests to verify API I/O. Rails’ testing guide explains test responsibilities across layers.&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;make-ai-truly-accelerate-engineering-checklist&quot;&gt;Make AI truly accelerate: engineering checklist&lt;/h2&gt;&lt;a href=&quot;#make-ai-truly-accelerate-engineering-checklist&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Make AI truly accelerate: engineering checklist”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;Keep the spec in the repo root with a consistent name so Claude Code can auto‑pull context.&lt;/li&gt;
-&lt;li&gt;Advance one micro‑goal at a time: get “in‑window merge” green first, then expand to idempotency and audit.&lt;/li&gt;
-&lt;li&gt;Write back to the doc frequently: new edge cases, pitfalls, and decisions go to “Open Questions/Decision Log”.&lt;/li&gt;
-&lt;li&gt;Backups and milestones: long sessions may compress context—split sessions at milestones, tag them, and keep local snapshots. AI is a power tool; you are still the craftsperson.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Industry feedback echoes this: Claude Code is rolling out across teams, long‑context models keep improving, and large‑repo analysis is getting steadier.&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;what-the-deliverables-look-like-team-template&quot;&gt;What the deliverables look like (team template)&lt;/h2&gt;&lt;a href=&quot;#what-the-deliverables-look-like-team-template&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “What the deliverables look like (team template)”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ol&gt;
-&lt;li&gt;One‑page feature spec (background, goal, scope, glossary, examples, open questions)&lt;/li&gt;
-&lt;li&gt;RSpec suite (service + request/system tests, with edges and regression)&lt;/li&gt;
-&lt;li&gt;Service object + indexes/locks (minimal viable)&lt;/li&gt;
-&lt;li&gt;Event log + dashboards (merge hit rate, storage saved, query latency deltas)&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Value is measurable: docs are the contract; tests are the acceptance; logs are the operational review.&lt;/p&gt;
-&lt;p&gt;Iteration stays smooth: adding a “2‑minute window” or “window per type” is just add examples → run tests → small tweaks.&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;&lt;a href=&quot;#conclusion&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Conclusion”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;Document‑Driven + BDD does not mean “write more docs”; it means making the doc an executable product contract. With Claude Code, you compress the chain from idea → tests → implementation → review to hours. Collaboration gets smoother, delivery more stable, and reading the code feels like reading a story.&lt;/p&gt;
-&lt;p&gt;How would you land this merge capability in your team? Any stronger idempotency key designs? Share in the comments.&lt;/p&gt;</content:encoded><category>Claude Code</category><category>Rails</category><category>RSpec</category><category>BDD</category></item></channel></rss>
+--&gt;</content:encoded><category>Claude Code</category></item></channel></rss>

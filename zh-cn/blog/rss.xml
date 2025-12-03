@@ -1,4 +1,685 @@
-<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Vibe Sparking AI | Blog</title><description/><link>https://www.vibesparking.com/</link><language>zh-CN</language><item><title>乔哈里视窗模型与人类–AI对话的四象限分析</title><link>https://www.vibesparking.com/zh-cn/blog/ai/trends/2025-12-01-johari-window-ai-human-dialogue/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/trends/2025-12-01-johari-window-ai-human-dialogue/</guid><pubDate>Mon, 01 Dec 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # 乔哈里视窗模型与人类–AI对话的四象限分析 --&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Vibe Sparking AI | Blog</title><description/><link>https://www.vibesparking.com/</link><language>zh-CN</language><item><title>Anthropic 内部员工 AI 开发调查：前端最香，架构最难交给 AI</title><link>https://www.vibesparking.com/zh-cn/blog/ai/anthropic/2025-12-03-anthropic-internal-ai-development-survey/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/anthropic/2025-12-03-anthropic-internal-ai-development-survey/</guid><pubDate>Wed, 03 Dec 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # Anthropic 内部员工 AI 开发调查：前端最香，架构最难交给 AI --&gt;&lt;!-- --- --&gt;
+&lt;div&gt;&lt;h2 id=&quot;引言ai-真的让工程师更高效了吗&quot;&gt;引言：AI 真的让工程师更高效了吗？&lt;/h2&gt;&lt;a href=&quot;#引言ai-真的让工程师更高效了吗&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “引言：AI 真的让工程师更高效了吗？”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;这一年，身边做开发的朋友，都在问同一个问题：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“我天天在用 Claude / Copilot，但到底值不值？有没有被厂商忽悠？”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;刚好，Anthropic 自己把内部 132 名工程师、研究员的真实使用情况，做成了一份很详细的调查和访谈，外加好几张数据图。&lt;/p&gt;
+&lt;p&gt;这就像是&lt;strong&gt;AI 厂商给自己做了一次体检报告&lt;/strong&gt;。
+谁在真香，谁在踩坑，数据都写在脸上了。&lt;/p&gt;
+&lt;p&gt;今天就带你用“打工人视角”，拆一下这份报告，顺便聊聊：
+&lt;strong&gt;在软件工程里，哪些任务用 AI ROI 最高，哪些地方别急着全交给模型。&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;一这是一份什么样的内部调查&quot;&gt;一、这是一份什么样的内部调查？&lt;/h2&gt;&lt;a href=&quot;#一这是一份什么样的内部调查&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “一、这是一份什么样的内部调查？”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Anthropic 找了 132 名工程师和研究员，问了他们一堆非常具体的问题：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;你每天有多少工作是和 Claude 一起做的？&lt;/li&gt;
+&lt;li&gt;主要用它干什么？调试、写新功能、重构、写测试、写文档，还是做设计和规划？&lt;/li&gt;
+&lt;li&gt;对每一类任务，用 Claude 后&lt;strong&gt;花的时间&lt;/strong&gt;变多还是变少？&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;产出的量&lt;/strong&gt;（代码、文档、可交付成果）变多还是变少？&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;他们还做了对比：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;一年前，员工觉得自己大概有 &lt;strong&gt;28% 的工作在用 Claude&lt;/strong&gt;，自报生产力 +20%。&lt;/li&gt;
+&lt;li&gt;到了现在，这个数字涨到 &lt;strong&gt;59% 的工作用 Claude&lt;/strong&gt;，平均自报生产力 &lt;strong&gt;+50%&lt;/strong&gt;，其中大约 14% 的“重度玩家”认为自己提高 &lt;strong&gt;超过 100%&lt;/strong&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;另外一条独立研究也挺猛：Anthropic 用 10 万条真实对话估算，&lt;strong&gt;中位任务的完成时间减少了 80% 左右&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;听起来很夸张，但工程师都懂——&lt;strong&gt;自报生产力要打个折&lt;/strong&gt;。
+所以更有价值的是：&lt;strong&gt;按任务细分，哪些地方真的收益大，哪些地方水分多。&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;二整体现象时间只省一点点产出涨得很猛&quot;&gt;二、整体现象：时间只省一点点，产出涨得很猛&lt;/h2&gt;&lt;a href=&quot;#二整体现象时间只省一点点产出涨得很猛&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “二、整体现象：时间只省一点点，产出涨得很猛”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;那张你看到的 Figure 就是核心结论之一：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;左边：用 Claude 后，做某类任务 &lt;strong&gt;花的时间&lt;/strong&gt; 是减少、没变，还是增加&lt;/li&gt;
+&lt;li&gt;右边：在同样时间里，&lt;strong&gt;产出的工作量&lt;/strong&gt; 是变多了多少&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;把所有任务拉开来看，有两个有意思的模式：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;大多数任务，时间是略微下降的&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;很多点落在 “-1 左右”（轻微减少），&lt;/li&gt;
+&lt;li&gt;意味着：并不是每个人都节省了一半时间，更多是&lt;strong&gt;省一点点&lt;/strong&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;但产出量普遍涨得更明显&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;右图里，大部分点在 “+1 ~ +2” 区间，&lt;/li&gt;
+&lt;li&gt;说明即便时间只省了一点，&lt;strong&gt;写出来的东西多很多&lt;/strong&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;还有一个隐藏细节：
+原始数据里，有一小撮人，在某些任务上 &lt;strong&gt;时间反而变多了&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;访谈里，他们的解释特别真实：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;要帮 Claude &lt;strong&gt;收拾它写出来的烂摊子&lt;/strong&gt;，重搞调试和清理&lt;/li&gt;
+&lt;li&gt;要花精力理解自己没写过的代码&lt;/li&gt;
+&lt;li&gt;或者因为有了 Claude，干脆做得更细、更认真，比如更多测试、更多探索&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;一句话总结：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;时间并不是凭空消失，而是被“再投资”到了更多工作上。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;三从-roi-看任务类型前端最香设计和-infra-最吃亏&quot;&gt;三、从 ROI 看任务类型：前端最香，设计和 Infra 最吃亏&lt;/h2&gt;&lt;a href=&quot;#三从-roi-看任务类型前端最香设计和-infra-最吃亏&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “三、从 ROI 看任务类型：前端最香，设计和 Infra 最吃亏”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;结合图里的分布，再对照我自己的使用体验，能看到一个很清晰的 ROI 排名。&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;1roi-天花板前端新功能调试测试文档&quot;&gt;1）ROI 天花板：前端、新功能、调试、测试、文档&lt;/h2&gt;&lt;a href=&quot;#1roi-天花板前端新功能调试测试文档&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1）ROI 天花板：前端、新功能、调试、测试、文档”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;这些任务，有几个共同点：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;结果&lt;strong&gt;非常容易验证&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;前端：跑起来一看 UI 就知道有没有问题&lt;/li&gt;
+&lt;li&gt;调试：复现 bug、跑测试，要么过要么挂&lt;/li&gt;
+&lt;li&gt;测试和文档：格式、覆盖范围一下子就能看出来&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;任务边界比较清晰&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;“把这个组件改成响应式布局”&lt;/li&gt;
+&lt;li&gt;“为这段代码补一组单测”&lt;/li&gt;
+&lt;li&gt;“帮我写一段 README，目标读者是新同事”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这类工作里，人类最烦的是：
+&lt;strong&gt;机械、重复、写起来枯燥，但好不好一眼就能看出来。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;这刚好踩中了 Anthropic 员工总结的一个关键词：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“我更愿意把&lt;strong&gt;容易验收的任务&lt;/strong&gt;丢给 Claude。”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;报告还提到，工程师越来越常用 Claude 来做前端可视化、实现 UI、做小工具，
+甚至让后端工程师也敢去写前端，把自己变成“准全栈”。&lt;/p&gt;
+&lt;p&gt;从 ROI 角度看，这些任务就像&lt;strong&gt;短平快项目&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;模型干活&lt;/li&gt;
+&lt;li&gt;人类验收&lt;/li&gt;
+&lt;li&gt;出问题直接回滚重来&lt;/li&gt;
+&lt;li&gt;新手也可以监督&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;前端在这波里是明显受益者&lt;/strong&gt;——画面、交互、样式都能快速迭代，
+你只要盯着用户体验本身，而不是纠结 CSS 细节。&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;2roi-较低设计--规划infrastructure--devops&quot;&gt;2）ROI 较低：设计 &amp;#x26; 规划、Infrastructure / DevOps&lt;/h2&gt;&lt;a href=&quot;#2roi-较低设计--规划infrastructure--devops&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2）ROI 较低：设计 &amp;#x26; 规划、Infrastructure / DevOps”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;再看图的另一端：&lt;strong&gt;高层设计、系统规划、Infra / DevOps&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;从 Anthropic 的报告里可以看到两个现象：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;员工明确表示：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;“我通常&lt;strong&gt;保留高层思考和设计在自己手里&lt;/strong&gt;，把实现、调试类任务交给 Claude。”&lt;/li&gt;
+&lt;li&gt;设计和规划类任务，在问卷里&lt;strong&gt;生产力提升最小&lt;/strong&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Infra 和 DevOps 相关任务，用得没那么频繁，时间和产出提升也比较有限。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这就和我们的“软件工程常识”高度吻合：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;越依赖经验、上下文、品味、组织策略的工作，越难完全交给 AI。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;比如设计一个新系统架构，你要考虑：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;五年后的业务形态&lt;/li&gt;
+&lt;li&gt;团队现在的技术栈&lt;/li&gt;
+&lt;li&gt;谁来维护、谁来值班&lt;/li&gt;
+&lt;li&gt;成本预算、合规、安全&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Claude 可以帮你：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;生成几版架构图&lt;/li&gt;
+&lt;li&gt;帮你列风险清单和 trade-off&lt;/li&gt;
+&lt;li&gt;写设计文档初稿&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;但真正拍板的人，还是你。
+AI 在这里更像一个聪明顾问，&lt;strong&gt;不是拍板的 CTO&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;Infra / DevOps 也是一样：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;真正困难的，是&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;熟悉公司复杂的网络拓扑&lt;/li&gt;
+&lt;li&gt;一堆历史债务的脚本和配置&lt;/li&gt;
+&lt;li&gt;出事时谁负责背锅&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;AI 可以帮你写脚本、解释 log、起草 runbook&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;很难一个命令直接上生产，不看就执行&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;所以从 ROI 来看：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;前端、新功能、调试、测试、文档 → 投入少、收益快&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;设计、规划、Infra → 价值高，但 AI 很难“直接帮你省大量时间”&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;四可验证性决定-ai-效益的那条分水岭&quot;&gt;四、可验证性：决定 AI 效益的那条“分水岭”&lt;/h2&gt;&lt;a href=&quot;#四可验证性决定-ai-效益的那条分水岭&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “四、可验证性：决定 AI 效益的那条“分水岭””&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Anthropic 在访谈里，总结了一套很实用的“委托原则”：工程师更愿意把这些任务交给 Claude：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;容易验证&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;复杂度不高或边界清晰&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;质量要求没那么极端严苛&lt;/strong&gt;（比如一次性的 debug 脚本）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;重复、无聊，但又不能不做的活&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这套原则其实可以抽象成一个词：&lt;strong&gt;可验证性&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;你可以这样想象：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;有单测 / 有 demo 的任务，适合 AI 冲锋&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;比如前端页面、后端接口、数据处理脚本&lt;/li&gt;
+&lt;li&gt;写完就跑一遍，看结果是不是在预期范围内&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;靠“味道”和“判断”的任务，要人类把关&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;例如系统设计、体验设计、安全策略&lt;/li&gt;
+&lt;li&gt;很多时候没有标准答案，只有 trade-off&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;局部问题 vs 全局问题&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;改一个组件、写一段文档，是局部问题&lt;/li&gt;
+&lt;li&gt;规划跨团队的技术路线，是全局问题&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Claude 在“局部、可验证”的任务上 ROI 爆表，
+在“全局、模糊”的任务上，更适合帮你&lt;strong&gt;想思路、列清单、做对比&lt;/strong&gt;，
+而不是直接给最终方案。&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;五给普通团队的落地建议别急着让-ai-当架构师&quot;&gt;五、给普通团队的落地建议：别急着让 AI 当架构师&lt;/h2&gt;&lt;a href=&quot;#五给普通团队的落地建议别急着让-ai-当架构师&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “五、给普通团队的落地建议：别急着让 AI 当架构师”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;如果你在带一个工程团队，或者自己就是个人开发者，可以参考 Anthropic 的玩法，给 AI 划一条清晰的“势力范围”。&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;1先把-ai-当成苦力--记录员&quot;&gt;1）先把 AI 当成“苦力 + 记录员”&lt;/h2&gt;&lt;a href=&quot;#1先把-ai-当成苦力--记录员&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1）先把 AI 当成“苦力 + 记录员””&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;优先让 Claude 负责这些：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;调试相关&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;让它帮你定位栈追踪、解释报错、重现 bug&lt;/li&gt;
+&lt;li&gt;写临时脚本做验证&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;测试 &amp;#x26; 文档 &amp;#x26; 注释&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;自动补单测、生成 mock&lt;/li&gt;
+&lt;li&gt;总结 PR 变更、生成 README、接口说明&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;前端和可视化&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;生成页面骨架、样式方案&lt;/li&gt;
+&lt;li&gt;做内部工具、仪表盘、数据可视化&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;小型重构 &amp;#x26; “去纸割”&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;帮你把一坨屎山拆成函数&lt;/li&gt;
+&lt;li&gt;改变量名、提取公共逻辑&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这些地方，你只要多写几个验收条件，
+效果会远好于让它“从 0 思考一个架构”。&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;2设计和规划把-ai-当头脑风暴伙伴&quot;&gt;2）设计和规划：把 AI 当头脑风暴伙伴&lt;/h2&gt;&lt;a href=&quot;#2设计和规划把-ai-当头脑风暴伙伴&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2）设计和规划：把 AI 当头脑风暴伙伴”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;在高层设计上，Claude 更适合这么用：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;让它列出多种架构方案和优缺点&lt;/li&gt;
+&lt;li&gt;帮你写 RFC / 技术方案初稿&lt;/li&gt;
+&lt;li&gt;模拟不同角色视角的 review（比如“安全团队会问什么问题？”）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;决策权&lt;/strong&gt;、&lt;strong&gt;取舍&lt;/strong&gt;、&lt;strong&gt;最终署名&lt;/strong&gt;，还是掌握在你手里。&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;3infra--devops脚本和说明书可以交生产命令要自己敲&quot;&gt;3）Infra / DevOps：脚本和说明书可以交，生产命令要自己敲&lt;/h2&gt;&lt;a href=&quot;#3infra--devops脚本和说明书可以交生产命令要自己敲&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3）Infra / DevOps：脚本和说明书可以交，生产命令要自己敲”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;在 Infra 场景里，可以放心交给 AI 的，是这些东西：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;解释复杂的 Kubernetes YAML、Terraform 配置&lt;/li&gt;
+&lt;li&gt;写 CI/CD pipeline 模板&lt;/li&gt;
+&lt;li&gt;帮你阅读日志，先做一版归因分析&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;真正执行到生产环境的命令、变更计划，需要：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;人类自己再看一遍&lt;/li&gt;
+&lt;li&gt;多一道同事 review&lt;/li&gt;
+&lt;li&gt;必要时先在 staging 走一遍流程&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;可以给团队定一个简单规则：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“凡是直接影响生产的命令，必须由人类亲手改、亲手敲。”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div&gt;&lt;h2 id=&quot;4给自己做一份ai-任务地图&quot;&gt;4）给自己做一份“AI 任务地图”&lt;/h2&gt;&lt;a href=&quot;#4给自己做一份ai-任务地图&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “4）给自己做一份“AI 任务地图””&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;结合 Anthropic 的做法，你完全可以给团队画一张表：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;行：Debug / 前端 / 新功能 / 测试 / 文档 / 重构 / 设计 / Infra …&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;列：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;是否交给 AI 做初稿？&lt;/li&gt;
+&lt;li&gt;是否允许 AI 独立完成？&lt;/li&gt;
+&lt;li&gt;最终需要谁 review？&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这张表就是你们自己的 &lt;strong&gt;“AI 使用策略”&lt;/strong&gt;，
+可以每季度调整一次，等模型升级了，再把更多任务划进来。&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;六未来工程师的样子更全栈也更需要判断力&quot;&gt;六、未来工程师的样子：更全栈，也更需要判断力&lt;/h2&gt;&lt;a href=&quot;#六未来工程师的样子更全栈也更需要判断力&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “六、未来工程师的样子：更全栈，也更需要判断力”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;调查里，有一条我很有共鸣：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;员工估计，&lt;strong&gt;27% 的 Claude 辅助工作，在没有 AI 的情况下根本不会做&lt;/strong&gt;，
+比如更多的重构、更多仪表盘、更多 internal 工具。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;也就是说，Claude 不只是帮你“把本来的工作做快一点”，
+而是让你&lt;strong&gt;多做了一堆原本“来不及做”的好东西&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;同时，很多人也在担心：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;自己写代码的时间变少了，会不会&lt;strong&gt;手生&lt;/strong&gt;？&lt;/li&gt;
+&lt;li&gt;监督 AI 需要经验，可经验又在一点点被 AI 抢走。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这就是所谓的“监督悖论”：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;用好 AI 需要更强的判断力，而判断力本身又需要亲自下场练级。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;所以比较健康的做法，可能是：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;在 ROI 高的任务里大胆用 AI 提速&lt;/li&gt;
+&lt;li&gt;但给自己保留一部分“手写训练场”&lt;/li&gt;
+&lt;li&gt;把 AI 当成你升级技能的加速器，而不是替代品&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;长期看，工程师会变成怎样？&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;更像 &lt;strong&gt;产品 + 架构 + 项目经理 + AI 驯兽师&lt;/strong&gt; 的混合体&lt;/li&gt;
+&lt;li&gt;更关注“要做什么”和“为什么做”，
+而不是“这一行代码具体写成什么样”。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;结语把-ai-用对地方你就是团队里的生产力套利者&quot;&gt;结语：把 AI 用对地方，你就是团队里的“生产力套利者”&lt;/h2&gt;&lt;a href=&quot;#结语把-ai-用对地方你就是团队里的生产力套利者&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “结语：把 AI 用对地方，你就是团队里的“生产力套利者””&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Anthropic 的这份内部调查，其实给我们提供了一个很清晰的思路：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;别期待 AI 在所有任务上都 10 倍提速&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;真正的差别在于：你敢不敢、会不会挑对任务去交给它&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;如果你是工程师、技术负责人，
+现在就可以拿出纸和笔，列一个自己的任务清单：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;哪些事&lt;strong&gt;容易验证&lt;/strong&gt;、&lt;strong&gt;重复又枯燥&lt;/strong&gt;，可以马上交给 Claude？&lt;/li&gt;
+&lt;li&gt;哪些事&lt;strong&gt;涉及高层设计和团队策略&lt;/strong&gt;，只用它做“智囊团”，而不是“代写”？&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;把这张“AI 任务地图”画出来，你在团队里的生产力，就已经领先一大截了。&lt;/p&gt;&lt;!--
+---
+
+**你所在团队里，哪一类任务用 AI 感觉最香？**
+欢迎在评论区分享一下你们的“高 ROI 用法”，互相抄作业。
+
+ 
+
+---
+
+## 推荐标题（多语言 + slug）
+
+## 标题 1
+
+* 简体：Anthropic 内部调查：哪些工程任务最值得交给 AI？
+* English: Inside Anthropic: Which Engineering Tasks Get the Best ROI from AI?
+* 繁體：Anthropic 內部調查：哪些工程任務最值得交給 AI？
+* 日本語：Anthropic社の社内調査：AIに任せるべき開発タスクはどれ？
+* Français : Enquête interne d’Anthropic : quelles tâches d’ingénierie offrent le meilleur ROI avec l’IA ?
+* Español: Encuesta interna de Anthropic: ¿qué tareas de ingeniería tienen mejor ROI con IA?
+* Português: Pesquisa interna da Anthropic: quais tarefas de engenharia trazem mais ROI com IA?
+* slug: `anthropic-ai-roi-by-task`
+
+## 标题 2
+
+* 简体：前端真香、架构吃亏：Anthropic 工程师如何用 Claude 提效
+* English: Frontend Wins, Architecture Struggles: How Anthropic Engineers Use Claude
+* 繁體：前端真香、架構吃虧：Anthropic 工程師如何用 Claude 提效
+* 日本語：フロントエンドは得、アーキテクチャは損？Anthropic エンジニアのClaude活用術
+* Français : Le front-end cartonne, l’architecture souffre : comment les ingénieurs d’Anthropic utilisent Claude
+* Español: El frontend triunfa, la arquitectura sufre: así usan Claude los ingenieros de Anthropic
+* Português: Frontend bomba, arquitetura sofre: como os engenheiros da Anthropic usam o Claude
+* slug: `frontend-vs-architecture-claude-usage`
+
+## 标题 3
+
+* 简体：别让 AI 当架构师：从 Anthropic 数据看“可验证性”ROI
+* English: Don’t Make AI Your Architect: Anthropic Data and the Power of Verifiable Tasks
+* 繁體：別讓 AI 當架構師：從 Anthropic 數據看「可驗證性」ROI
+* 日本語：AIにアーキテクトを任せるな：Anthropicデータで読む「検証しやすさ」のROI
+* Français : Ne faites pas de l’IA votre architecte : les données d’Anthropic et le pouvoir des tâches vérifiables
+* Español: No conviertas a la IA en tu arquitecto: datos de Anthropic y el poder de las tareas verificables
+* Português: Não deixe a IA virar sua arquiteta: dados da Anthropic e o poder das tarefas verificáveis
+* slug: `dont-make-ai-your-architect`
+
+---
+
+## 图片设计（插画风，2:1）
+
+## 1. 封面图 Prompt
+
+&gt; An illustration in 2:1 ratio of a software engineer sitting at a desk, with two columns of tasks on a big screen: on the left “Debugging, Tests, Frontend” glowing with high ROI, on the right “Architecture, Planning, Infra” faded and grey, while a friendly robot assistant helps on the left side. Clean flat style, soft colors, no Chinese text.
+
+## 2. 正文配图 1（“整体结论：时间 vs 产出”）
+
+&gt; 2:1 illustration of a balanced scale: on one side a clock slightly going down, on the other side a stack of code files and documents rising high, symbolizing little time saved but big increase in output. Modern tech style, simple icons, no Chinese text.
+
+## 3. 正文配图 2（“前端与易验证任务 ROI 高”）
+
+&gt; 2:1 illustration of a developer previewing a web app on multiple screens while an AI assistant highlights bugs and auto-fills UI code. Visual focus on fast iterations and green check marks. Flat illustration, no Chinese text.
+
+## 4. 正文配图 3（“设计与 Infra ROI 较低”）
+
+&gt; 2:1 illustration of a whiteboard full of complex architecture diagrams and arrows. A human engineer is thinking deeply, while a confused robot holds a stack of possible plans behind them. Emphasize ambiguity and trade-offs. No Chinese text.
+
+## 5. 正文配图 4（“AI 任务地图 / 委托原则”）
+
+&gt; 2:1 illustration of a kanban-style board with columns “Let AI do it”, “AI draft + human review”, “Human only”, and sticky notes moving between them by a human and a robot working together. Collaborative, optimistic mood, no Chinese text.
+
+---
+
+## 示例评论（适合朋友圈 / 评论区）
+
+1.
+
+&gt; 看完 Anthropic 这份内部调查，才发现我一直在用错 AI… 前端、测试、文档早该全丢给 Claude，自个儿去当架构师才对 😂
+
+2.
+
+&gt; 原来不止我们组，连 Anthropic 自家工程师也是“易验证的交给 AI，设计和架构自己扛”……突然对摸鱼式提效有了理论依据 🤣
+
+3.
+
+&gt; 这篇把“AI 该干啥、人该干啥”说得太清楚了，我准备照着画一张团队 AI 任务地图，下周例会就拿出来忽悠老板 😏
+
+---
+
+这版你还满意吗？
+如果你希望面向更偏管理者 / 更偏一线工程师，我可以在对应部分再帮你**扩写一版更细的案例和实操清单**。
+
+[1]: https://www.anthropic.com/research/how-ai-is-transforming-work-at-anthropic &quot;How AI Is Transforming Work at Anthropic \ Anthropic&quot;
+[2]: https://www.anthropic.com/research/estimating-productivity-gains &quot;Estimating AI productivity gains \ Anthropic&quot; --&gt;</content:encoded><category>Claude</category><category>Claude Code</category><category>Anthropic</category><category>OpenAI</category></item><item><title>从前端到监控，这就是一套可落地的 Agentic AI 工程地图</title><link>https://www.vibesparking.com/zh-cn/blog/ai/trends/2025-12-02-full-stack-of-agentic-ai/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/trends/2025-12-02-full-stack-of-agentic-ai/</guid><pubDate>Tue, 02 Dec 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- #从前端到监控，这就是一套可落地的 Agentic AI 工程地图 --&gt;
+&lt;div&gt;&lt;h2 id=&quot;引言&quot;&gt;引言：&lt;/h2&gt;&lt;a href=&quot;#引言&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “引言：”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;这两年，「Agentic AI」「AI Agent」这几个词，已经被说烂了。&lt;/p&gt;
+&lt;p&gt;很多人一听“智能体”，脑子里就是：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“我也能做一个，用大模型 + Prompt + LangChain 就行了嘛。”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;结果真上项目时才发现：
+&lt;strong&gt;一个能跑在生产环境里的 Agentic AI，远远不是一条 &lt;code dir=&quot;auto&quot;&gt;llm(prompt)&lt;/code&gt; 这么简单。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;你今天看到的这张“冰山图”，其实就把&lt;strong&gt;一套可落地的 Agentic AI 技术栈&lt;/strong&gt;摊开给大家看了个明白：
+上面露出水面的，是你能看到的聊天界面、Web App；
+下面沉在水里的，是一整套文档处理、向量数据库、检索、监控和部署体系。&lt;/p&gt;
+&lt;p&gt;这篇文章，我想用尽量“人话”的方式，带你从上往下，把这座“Agentic AI 冰山”走一遍。&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;一露在水面上的是你看到的那层壳&quot;&gt;一、露在水面上的，是你看到的那层“壳”&lt;/h2&gt;&lt;a href=&quot;#一露在水面上的是你看到的那层壳&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “一、露在水面上的，是你看到的那层“壳””&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3 id=&quot;1-前端你以为是界面其实是体验引擎&quot;&gt;1. 前端：你以为是“界面”，其实是“体验引擎”&lt;/h3&gt;&lt;a href=&quot;#1-前端你以为是界面其实是体验引擎&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1. 前端：你以为是“界面”，其实是“体验引擎””&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;图里放的是 React、Next.js、Streamlit 这类前端框架，配上 Azure App Service 这类托管环境。&lt;/p&gt;
+&lt;p&gt;很多 AI 项目一开始，只是给模型套个对话框，看起来能用；
+但等到真要给内部同事、客户用，问题就来了：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;要支持&lt;strong&gt;多轮对话历史&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;要做&lt;strong&gt;文件上传、结果导出、可视化&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;要做&lt;strong&gt;权限控制、组织维度统计&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这些都落在前端 + 简单后台上。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;一句话：前端不是“顺便写一下 UI”，而是你整套 Agent 体验的“控制台”。&lt;/strong&gt;
+你想的不清楚，用户就只会觉得：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“这不就是个加了皮肤的 ChatGPT 吗？”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;二冰山中部让-agent-读得懂世界的知识管线&quot;&gt;二、冰山中部：让 Agent “读得懂世界”的知识管线&lt;/h2&gt;&lt;a href=&quot;#二冰山中部让-agent-读得懂世界的知识管线&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “二、冰山中部：让 Agent “读得懂世界”的知识管线”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Agentic AI 真正的威力，在于“&lt;strong&gt;会理解你自己的数据&lt;/strong&gt;”。
+也就是图里这几层：&lt;strong&gt;文档摄取 → 切块预处理 → 向量表示 → 向量库 → 检索层&lt;/strong&gt;。&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;1-文档摄取给-agent-喂干净的原材料&quot;&gt;1. 文档摄取：给 Agent 喂干净的“原材料”&lt;/h3&gt;&lt;a href=&quot;#1-文档摄取给-agent-喂干净的原材料&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1. 文档摄取：给 Agent 喂干净的“原材料””&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;像 Microsoft Fabric、Azure AI OCR、Apache Tika、LangChain 这些组件，做的事情很朴素：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;把 PDF、Word、网页、截图里的内容&lt;strong&gt;统一抽出来&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;去掉噪音、广告、乱七八糟的格式&lt;/li&gt;
+&lt;li&gt;做结构化，比如目录、标题、段落、表格&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;可以把它想象成：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;给健身的人吃饭，先得保证“真肉真菜”，而不是垃圾食品。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;你要是直接把一堆 PDF 生扔给模型，还指望它帮你做“企业搜索、知识助手”，基本是在玩火。&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;2-chunking--预处理把知识切成模型能消化的小块&quot;&gt;2. Chunking &amp;#x26; 预处理：把知识切成模型能消化的小块&lt;/h3&gt;&lt;a href=&quot;#2-chunking--预处理把知识切成模型能消化的小块&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2. Chunking &amp;#x26; 预处理：把知识切成模型能消化的小块”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;图里像 spaCy、Hugging Face、LangChain，以及 Azure AI Search 的一些处理能力，就是帮你做这件事：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;按段落、逻辑结构&lt;strong&gt;智能切块（chunking）&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;识别实体、主题，做点&lt;strong&gt;轻量 NLP 预处理&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;有的还会加上&lt;strong&gt;元数据标签&lt;/strong&gt;（比如来源系统、时间、业务线）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;做不好这一步，会发生什么？&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;要么 chunk 太大：超长上下文，&lt;strong&gt;贵且不准&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;要么 chunk 太碎：模型每次看到一堆“碎片”，&lt;strong&gt;答非所问&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;工程上比较常见的打法，是根据文档结构 + 字数 + 语义，做一个动态的切块策略，再配上重叠窗口，保证“&lt;strong&gt;一问不漏关键信息&lt;/strong&gt;”。&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;3-embeddings把企业知识压成向量指纹&quot;&gt;3. Embeddings：把企业知识压成“向量指纹”&lt;/h3&gt;&lt;a href=&quot;#3-embeddings把企业知识压成向量指纹&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3. Embeddings：把企业知识压成“向量指纹””&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;这层就是 Azure OpenAI、OpenAI、Cohere 等 Embedding 模型发挥作用的地方。&lt;/p&gt;
+&lt;p&gt;通俗讲，就是帮你把：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;文本 → 高维向量&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;向量之间的距离，代表“语义相似度”。&lt;/p&gt;
+&lt;p&gt;为什么这一步关键？&lt;/p&gt;
+&lt;p&gt;因为企业里的问题基本长这样：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;“帮我查一下某产品 2023 年退货率异常的原因？”&lt;/li&gt;
+&lt;li&gt;“把这几个版本的合同条款差异列出来？”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;没有人会按原文去搜&lt;/strong&gt;，大家都是“自然语言胡乱一问”，
+Agent 得靠语义检索，在你的知识库里快速找到&lt;strong&gt;真正相关的内容&lt;/strong&gt;。&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;4-向量数据库给-agent-一块健身房专用硬盘&quot;&gt;4. 向量数据库：给 Agent 一块“健身房专用硬盘”&lt;/h3&gt;&lt;a href=&quot;#4-向量数据库给-agent-一块健身房专用硬盘&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “4. 向量数据库：给 Agent 一块“健身房专用硬盘””&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;图里列了 Azure AI Search、Cosmos DB、PostgreSQL + 向量插件，还有 Milvus、FAISS 等等。&lt;/p&gt;
+&lt;p&gt;现实世界里，你基本要考虑几件事：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;数据量多大的时候，检索还能保持&lt;strong&gt;毫秒级响应&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;支不支持&lt;strong&gt;混合检索&lt;/strong&gt;（向量 + 关键字 + 过滤条件）&lt;/li&gt;
+&lt;li&gt;安全和隔离怎么做，比如按租户、按部门、按项目分库&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这里其实就是在选你的“&lt;strong&gt;Agent 记忆中枢&lt;/strong&gt;”。
+选错了，你后面所有“RAG + Agent”能力都会卡在性能、成本上。&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;5-retrieval-layer让-agent先查再想&quot;&gt;5. Retrieval Layer：让 Agent“先查再想”&lt;/h3&gt;&lt;a href=&quot;#5-retrieval-layer让-agent先查再想&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “5. Retrieval Layer：让 Agent“先查再想””&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;这层才是大家常说的 RAG：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;LangChain、LlamaIndex、Haystack 做的是&lt;strong&gt;检索编排&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Azure AI Search 这种则提供&lt;strong&gt;内建的检索 + 排序能力&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;你可以给 Agent 设计一个固定套路：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;用户提问 → 检索 N 条相关知识 → 让大模型在“证据”基础上作答 → 必要时把引用也返回给用户&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这一步做得好，
+&lt;strong&gt;Agent 的“幻觉率”和“胡说八道”会下降一个数量级&lt;/strong&gt;。&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;三prompt-工程层从写提示升级到设计策略&quot;&gt;三、Prompt 工程层：从“写提示”升级到“设计策略”&lt;/h2&gt;&lt;a href=&quot;#三prompt-工程层从写提示升级到设计策略&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “三、Prompt 工程层：从“写提示”升级到“设计策略””&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;图上放了 Prompty、LangChain、DSPy。&lt;/p&gt;
+&lt;p&gt;很多人对 Prompt 的理解，还停留在“想几句好点的英文描述”。&lt;/p&gt;
+&lt;p&gt;但 Agentic AI 里的 Prompt，更接近于一种：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“决策策略 + 工作流编排语言”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;大概可以分几类：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;系统提示&lt;/strong&gt;：定义角色、语气、边界&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;工具调用策略&lt;/strong&gt;：什么时候查知识库、什么时候调 API&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;多 Agent 协作&lt;/strong&gt;：规划、执行、复盘三个角色如何互相对话&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;像 DSPy 这类工具，还会尝试“&lt;strong&gt;自动优化 Prompt&lt;/strong&gt;”，
+有点类似把 Prompt 当“参数”，
+通过数据集和反馈信号去调优。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;当你开始把 Prompt 当“可实验、可迭代的产品配置”来管理，而不是随手写写，大模型应用的上限才会被打开。&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;四llm-层不是选个模型而是选个大脑组合&quot;&gt;四、LLM 层：不是“选个模型”，而是“选个大脑组合”&lt;/h2&gt;&lt;a href=&quot;#四llm-层不是选个模型而是选个大脑组合&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “四、LLM 层：不是“选个模型”，而是“选个大脑组合””&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;图里提到 Azure OpenAI，外加 LLaMA、Mistral 这些模型。&lt;/p&gt;
+&lt;p&gt;现实项目里，单模型一把梭已经不太现实了，
+更多是在做“模型拼盘”：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;便宜模型跑&lt;strong&gt;大部分闲聊和简单任务&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;专业模型跑&lt;strong&gt;代码、法律、医学等垂直任务&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;企业内部还会混合&lt;strong&gt;开源模型 + 商业模型&lt;/strong&gt;，做隐私和成本权衡&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;你可以把这层理解为：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Agent 的“多核大脑池子”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;它要对上面那些“Prompt 策略”和“检索结果”负责，
+做出尽可能可靠、符合业务逻辑的决策。&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;五监控--评估agent-不监控就会慢慢变成定时炸弹&quot;&gt;五、监控 &amp;#x26; 评估：Agent 不监控，就会慢慢变成“定时炸弹”&lt;/h2&gt;&lt;a href=&quot;#五监控--评估agent-不监控就会慢慢变成定时炸弹&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “五、监控 &amp;#x26; 评估：Agent 不监控，就会慢慢变成“定时炸弹””&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;图上有 Azure Foundry、OpenTelemetry、Grafana。&lt;/p&gt;
+&lt;p&gt;很多团队栽的一个坑，就是：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“应用上线了，大家能用，就算成功了。”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;过几周你会发现：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;用户经常吐槽“这次回答跟上次不一样”&lt;/li&gt;
+&lt;li&gt;模型升级之后，&lt;strong&gt;部分场景效果变差&lt;/strong&gt;，却没人发现&lt;/li&gt;
+&lt;li&gt;某些 Prompt 每天被调用上万次，&lt;strong&gt;成本直接炸穿预算&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这时候，**可观测性（Observability）和评估（Evaluation）**就很关键：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;记录每一次调用的&lt;strong&gt;输入、输出、使用的工具、耗时、成本&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;对关键场景，建立一套&lt;strong&gt;自动评估集&lt;/strong&gt;，新版本一来就跑对比&lt;/li&gt;
+&lt;li&gt;把这些指标挂在 Grafana 一类的仪表盘上，方便运营和技术一起盯&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;一句话：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;没有监控的 Agent，就像没有后视镜的车。开得越快，越危险。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;六基础设施--部署让-agent-从实验室玩具变成生产力工具&quot;&gt;六、基础设施 &amp;#x26; 部署：让 Agent 从“实验室玩具”变成“生产力工具”&lt;/h2&gt;&lt;a href=&quot;#六基础设施--部署让-agent-从实验室玩具变成生产力工具&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “六、基础设施 &amp;#x26; 部署：让 Agent 从“实验室玩具”变成“生产力工具””&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;最底层是 Azure Container Apps、AKS、Docker、Kubernetes 这些东西。&lt;/p&gt;
+&lt;p&gt;它们解决的问题其实就两个字：&lt;strong&gt;撑得住&lt;/strong&gt;。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;撑得住&lt;strong&gt;高并发&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;撑得住&lt;strong&gt;高可用要求&lt;/strong&gt;（不能总挂）&lt;/li&gt;
+&lt;li&gt;撑得住&lt;strong&gt;多环境&lt;/strong&gt;（开发、测试、预发、生产）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;很多人做 Demo 时觉得一切都好：
+“本地跑得挺快呀。”&lt;/p&gt;
+&lt;p&gt;但到生产环境，你要考虑：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;横向扩容、自动伸缩怎么做？&lt;/li&gt;
+&lt;li&gt;模型服务和业务服务怎么拆分？&lt;/li&gt;
+&lt;li&gt;敏感数据如何隔离、审计？&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这些东西，都是冰山最底下那一层的工程细节。
+&lt;strong&gt;你越早意识到它的存在，后面返工就越少。&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;七给想做-agentic-ai-的你一个落地路线建议&quot;&gt;七、给想做 Agentic AI 的你，一个落地路线建议&lt;/h2&gt;&lt;a href=&quot;#七给想做-agentic-ai-的你一个落地路线建议&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “七、给想做 Agentic AI 的你，一个落地路线建议”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;如果你现在在公司里，正打算做一个“智能客服”“内部知识助手”“AI 运营小助手”，可以这样想路线：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;先从一个清晰场景入手&lt;/strong&gt;
+比如“让运营能秒查任何一条历史活动数据”，而不是“做个啥都能聊的 Agent”。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;用最简单的前端 + RAG 管线跑通 MVP&lt;/strong&gt;
+一开始不用上太复杂的多 Agent 调度，
+能做到：“问业务问题 → 查知识库 → 给出引用答案”，就已经很能打。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;从一开始就留好监控和评估的钩子&lt;/strong&gt;
+哪怕一开始只做最简单的日志 + 若干典型问题集，
+后期调优会省非常多时间。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;把这张冰山图当做“技术债清单”&lt;/strong&gt;
+想清楚：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;哪几层是现在必须做的&lt;/li&gt;
+&lt;li&gt;哪几层可以后面逐步补上&lt;/li&gt;
+&lt;li&gt;哪几层可以用云厂商/开源方案“先借用一下”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;等你把第一版 Agent 做到&lt;strong&gt;团队日常离不开&lt;/strong&gt;，
+再慢慢往下挖这座冰山，
+你会发现：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;真正难的不是“会不会用大模型”，
+而是“能不能把大模型嵌进业务，跑得稳、跑得久、跑得起”。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;结语agentic-ai不是一个新名词而是一整套新工程范式&quot;&gt;结语：Agentic AI，不是一个新名词，而是一整套新工程范式&lt;/h2&gt;&lt;a href=&quot;#结语agentic-ai不是一个新名词而是一整套新工程范式&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “结语：Agentic AI，不是一个新名词，而是一整套新工程范式”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;回到那张图。&lt;/p&gt;
+&lt;p&gt;水面之上，是用户看到的“炫酷 AI 应用”；
+水面之下，是一整套从数据、模型到监控、部署的工程体系。&lt;/p&gt;
+&lt;p&gt;如果你现在是开发、产品，或者正在考虑用 AI 提升业务效率，
+我非常建议你把这张“Agentic AI 冰山图”保存下来，
+当成一张&lt;strong&gt;长期参考的工程地图&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;等下次你再被催着做“一个 AI Agent Demo”时，
+可以把这张图甩给对方，笑着说：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“我们可以先做一个在水面上看得见的部分，
+但要想跑进生产，这下面一整块冰山，也迟早得补齐。”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;你觉得，
+在你现在的工作/项目里，这座冰山哪一层最难？
+欢迎在评论区聊聊，你遇到过最“离谱”的 AI 项目需求是什么。&lt;/p&gt;&lt;!-- 
+---
+
+## 三、配图设计（插画风，2:1，英文或无文字）
+
+&gt; 图片要求：插画式、2:1 比例；图中文字暂时不要用中文，可用英文或纯画面。
+
+1. **封面图 Prompt**
+
+   * “Flat illustration of a huge iceberg in the ocean at sunrise, only small part above water showing a simple chat bubble icon, the massive underwater part filled with tiny icons of servers, documents, graphs, gears and clouds, soft gradients, modern tech style, 2:1 aspect ratio, no Chinese text.”
+
+2. **章节配图：知识管线（文档→向量→检索）**
+
+   * “Illustration of a conveyor belt transforming messy documents and PDFs into clean glowing data blocks, then flowing into a vector grid and search icons, playful but modern tech style, 2:1 aspect ratio, no Chinese text.”
+
+3. **章节配图：Prompt 工程 &amp; 多模型大脑**
+
+   * “Abstract illustration of a human hand arranging colorful cards labeled with simple icons, connected to multiple glowing brain shapes representing different AI models, showing orchestration and strategy, 2:1 aspect ratio, no Chinese text.”
+
+4. **章节配图：监控 &amp; 评估仪表盘**
+
+   * “Dashboard-style illustration with charts, logs and metrics on floating screens around a small robot operator, representing observability and evaluation of AI systems, clean modern style, 2:1 aspect ratio, no Chinese text.”
+
+5. **章节配图：基础设施与部署**
+
+   * “Illustration of containers and cubes stacked like building blocks, connected to clouds and networks, symbolizing scalable deployment with containers and orchestration, minimal and modern, 2:1 aspect ratio, no Chinese text.”
+
+---
+
+## 四、可直接用的 3 条朋友圈 / 评论文案
+
+1.
+
+&gt; 最近在啃 Agentic AI，这张“冰山图”配上这篇拆解，看完才知道自己之前做的都叫 Demo😂 有做 AI 项目的可以一起交流下，看看你家冰山补到哪一层了？
+
+2.
+
+&gt; 发现一个把大模型应用讲得很人话的文章，不是那种“吹神话”的，而是从前端、RAG、监控一路扒到底的那种。准备拿来当我司 AI 项目对线老板专用资料🤣
+
+3.
+
+&gt; 如果你也在公司被安排“搞个 AI Agent 出来”，强烈建议先看这篇。看完大概率会少掉好几轮返工，也更好跟产品和老板谈需求，真心省命哈哈。
+
+---
+
+你看这版结构和风格还 OK 吗？
+要不要我帮你再**扩写成 3000 字完整版**，或者按你选定的标题去做一版更贴合某个具体场景（比如“内部知识助手” / “智能客服”）的深度版？ --&gt;</content:encoded><category>AI Era</category><category>Agentic AI</category></item><item><title>乔哈里视窗模型与人类–AI对话的四象限分析</title><link>https://www.vibesparking.com/zh-cn/blog/ai/trends/2025-12-01-johari-window-ai-human-dialogue/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/trends/2025-12-01-johari-window-ai-human-dialogue/</guid><pubDate>Mon, 01 Dec 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # 乔哈里视窗模型与人类–AI对话的四象限分析 --&gt;
 &lt;div&gt;&lt;h2 id=&quot;乔哈里视窗模型简介及四个象限&quot;&gt;乔哈里视窗模型简介及四个象限&lt;/h2&gt;&lt;a href=&quot;#乔哈里视窗模型简介及四个象限&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “乔哈里视窗模型简介及四个象限”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
 &lt;p&gt;乔哈里视窗（Johari Window）是心理学中用于提升自我认知和改善人际沟通的模型，由心理学家约瑟夫·卢夫特（Joseph Luft）和哈里·英格哈姆（Harrington Ingham）于1955年提出。该模型将一个人的认知分为四个象限（又称四个”窗口”）:&lt;/p&gt;
 &lt;p&gt;&lt;/p&gt;
@@ -2386,319 +3067,4 @@ OpenSpec + Claude，不是多一个工具，而是&lt;strong&gt;把“怎么合�
 [7]: https://www.nngroup.com/articles/filter-categories-values/?utm_source=chatgpt.com &quot;Defining Helpful Filter Categories and Values for Better UX&quot;
 [8]: https://learn.microsoft.com/en-us/dotnet/api/android.bluetooth.le.scanresult.rssi?view=net-android-35.0&amp;utm_source=chatgpt.com &quot;ScanResult.Rssi Property (Android.Bluetooth.LE)&quot;
 [9]: https://m3.material.io/components?utm_source=chatgpt.com &quot;Components — Material Design 3&quot;
-[10]: https://www.nngroup.com/articles/alphabetical-sorting-must-mostly-die/?utm_source=chatgpt.com &quot;Alphabetical Sorting Must (Mostly) Die&quot; --&gt;</content:encoded><category>AI</category><category>ChatGPT</category><category>OpenAI</category><category>Product Manager</category><category>UX</category><category>Bluetooth</category><category>BLE</category></item><item><title>Claude Code 2.0.17 上新：Haiku 4.5 接管执行，Plan 用 Sonnet，速度与成本都下来了</title><link>https://www.vibesparking.com/zh-cn/blog/ai/claude-code/changelog/2025-10-16-claude-code-217-haiku-45-sonnet-45/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/claude-code/changelog/2025-10-16-claude-code-217-haiku-45-sonnet-45/</guid><pubDate>Thu, 16 Oct 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # Claude Code 2.0.17 上新：Haiku 4.5 接管执行，Plan 用 Sonnet，速度与成本都下来了 --&gt;&lt;!-- （配合 Vibe Sparking AI 氛围～这篇给你一口气看懂新版 Claude Code 的两个关键变化） --&gt;
-&lt;div&gt;&lt;h2 id=&quot;引言&quot;&gt;引言&lt;/h2&gt;&lt;a href=&quot;#引言&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “引言”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;今天的更新，对 Claude Code 写代码的人太友好了。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Claude Haiku 4.5 上线，便宜还更快；Plan 模式默认用 Sonnet 规划，执行切 Haiku。&lt;/strong&gt;
-实际体验？项目跑起来更顺，钱包也不那么疼了。官方定价与定位、以及这次在 Claude Code 里的联动，都能佐证这点。&lt;/p&gt;
-&lt;div&gt;&lt;h2 id=&quot;亮点一价格更低速度更快&quot;&gt;亮点一：价格更低，速度更快&lt;/h2&gt;&lt;a href=&quot;#亮点一价格更低速度更快&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “亮点一：价格更低，速度更快”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;Haiku 4.5：$1 / $5（输入/输出，每百万tokens）&lt;/strong&gt;，面向实时、低延迟任务，针对代码、子代理协作、电脑操作等场景做了优化。和今年 5 月的 Sonnet 4 相比，&lt;strong&gt;速度翻倍有余、成本约三分之一&lt;/strong&gt;，但在很多编码任务上给到“近前沿”的表现。&lt;/p&gt;
-&lt;p&gt;为什么说“更省钱”？你可以对比下同梯队的定价：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Sonnet 4.5：$3 / $15&lt;/strong&gt;（输入/输出）。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Opus 4.1：$15 / $75&lt;/strong&gt;（输入/输出）。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;这意味着，&lt;strong&gt;把一些不需要“最强脑力”的执行环节交给 Haiku 4.5&lt;/strong&gt;，账单能立刻瘦身，而且响应更跟手。对需要批量跑 agent、对接服务端、或在 IDE 里频繁调用的团队来说，性价比非常明显。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;小结：&lt;strong&gt;Haiku 4.5 = 接近 Sonnet 4 的编码力 + 更快速度 + 三分之一价格&lt;/strong&gt;。这不是“凑合用的小模型”，而是“能落地的大杀器”。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;div&gt;&lt;h2 id=&quot;亮点二plan-用-sonnet执行切-haiku2017-的默认联动&quot;&gt;亮点二：Plan 用 Sonnet，执行切 Haiku（2.0.17 的默认联动）&lt;/h2&gt;&lt;a href=&quot;#亮点二plan-用-sonnet执行切-haiku2017-的默认联动&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “亮点二：Plan 用 Sonnet，执行切 Haiku（2.0.17 的默认联动）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;这次 &lt;strong&gt;Claude Code 2.0.17&lt;/strong&gt; 的细节很关键：
-**在 Plan 模式下，默认用 Sonnet 规划；到执行阶段自动切换 Haiku 来落地。**这和我们在终端/VS Code 里的真实工作流正好契合：&lt;strong&gt;重推理给 Sonnet，批量实现交给 Haiku。&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;版本侧证：VS Code 扩展已到 &lt;strong&gt;2.0.17&lt;/strong&gt;，伴随 10 月更新上架。&lt;/li&gt;
-&lt;li&gt;官方基调：&lt;strong&gt;Claude Code 的主力仍由 Sonnet 4.5 驱动&lt;/strong&gt;，负责长任务与复杂规划；Haiku 4.5 则以&lt;strong&gt;更快更省&lt;/strong&gt;的姿态补上执行位。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;这种“&lt;strong&gt;规划/执行分层&lt;/strong&gt;”的设计，和此前“高级模型负责 Plan、次一级模型负责实现”的思路一脉相承，只是这次把 &lt;strong&gt;Haiku 4.5&lt;/strong&gt; 换上了更能打的位置。&lt;/p&gt;
-&lt;div&gt;&lt;h2 id=&quot;真实感受opus-太强也太贵sonnet-稳haiku-现在能顶&quot;&gt;真实感受：&lt;strong&gt;Opus 太强，也太贵；Sonnet 稳；Haiku 现在能顶&lt;/strong&gt;&lt;/h2&gt;&lt;a href=&quot;#真实感受opus-太强也太贵sonnet-稳haiku-现在能顶&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “真实感受：Opus 太强，也太贵；Sonnet 稳；Haiku 现在能顶”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;做过几次大活之后，我的感受更直接：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Opus&lt;/strong&gt;：开脑洞、跨栈架构、深度检索，稳得离谱。**但账单真的顶不住。**一旦把执行也交给它，涌现出来的是结果，也是心跳。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Sonnet 4.5&lt;/strong&gt;：现在是 Claude 家“&lt;strong&gt;最好用的编码大脑&lt;/strong&gt;”。Plan 模式下让它思考，策略、步骤、风险提示都在线。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Haiku 4.5&lt;/strong&gt;：&lt;strong&gt;执行位的 MVP&lt;/strong&gt;。跑 agent 子任务、开并行、写样板、搬文件、过测试，全都又快又省。&lt;strong&gt;写前端 scaffold、批量重命名、生成 fixtures&lt;/strong&gt; 这种工作量，它几乎“不带喘”。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;一句话：**昂贵的“思考”，用 Sonnet；大量的“手脚”，交给 Haiku。**你的速度会上去，成本会下来，稳定性也更可控。&lt;/p&gt;
-&lt;div&gt;&lt;h2 id=&quot;上手建议给忙碌的工程团队&quot;&gt;上手建议（给忙碌的工程团队）&lt;/h2&gt;&lt;a href=&quot;#上手建议给忙碌的工程团队&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “上手建议（给忙碌的工程团队）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;保持“Plan→Exec”分层&lt;/strong&gt;：把难题拆清楚，再并行下发子任务，Haiku 4.5 扛执行。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;多用并行与子代理&lt;/strong&gt;：让多个 Haiku 4.5 并跑，主代理用 Sonnet 4.5 协调。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;成本可视化&lt;/strong&gt;：看 API usage，统计 Haiku/Sonnet/Opus 的调用占比，拉一个冲刺周期的对账单。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;场景切换&lt;/strong&gt;：实时聊天助手、客服工单、低延迟编排，优先 Haiku 4.5；复杂改造、跨仓库大手术，Plan 交给 Sonnet 4.5。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h2 id=&quot;结语&quot;&gt;结语&lt;/h2&gt;&lt;a href=&quot;#结语&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “结语”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;这波更新没搞花活，&lt;strong&gt;就是把“好用+省钱”落实到日常开发流&lt;/strong&gt;。
-Plan 用 Sonnet，执行切 Haiku。&lt;strong&gt;代码动得快，钱也花得明白。&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;你怎么看？有没有哪种任务，Haiku 4.5 一上阵就立刻见效？欢迎在评论区分享你的实测。&lt;/p&gt;&lt;!-- 
-
-
-## 参考与延伸阅读
-
-* Anthropic《Introducing Claude Haiku 4.5》：性能与定价信息，强调“更快更省”。
-* Haiku 4.5 开发者定价：**$1 / $5（输入/输出）**。
-* Sonnet 4.5 发布与定价：**$3 / $15**。
-* Opus 4.1 定价：**$15 / $75**。
-* 社区侧证：**Claude Code 2.0.17** Plan→Sonnet、执行→Haiku 的默认策略。
-* Claude Code 能力升级（Sonnet 4.5 驱动）。
-
----
-
-# 推荐标题（多语言 + slug）
-
-1. **中文**：Haiku 4.5 接管执行位：Claude Code 2.0.17 省钱又提速
-   **English**: Haiku 4.5 Takes Over Execution: Faster, Cheaper Claude Code 2.0.17
-   **繁體**：Haiku 4.5 接手執行位：Claude Code 2.0.17 省錢又加速
-   **日本語**：Haiku 4.5 が実行を担当：Claude Code 2.0.17 は高速・低コスト
-   **Français** : Haiku 4.5 prend l’exécution : Claude Code 2.0.17 plus rapide et moins cher
-   **Español**: Haiku 4.5 toma la ejecución: Claude Code 2.0.17 más rápido y barato
-   **Português**: Haiku 4.5 assume a execução: Claude Code 2.0.17 mais rápido e barato
-   **slug**：haiku45-exec-claude-code-2017
-
-2. **中文**：Plan 用 Sonnet，干活交 Haiku：新一代 Claude Code 流程范式
-   **English**: Plan with Sonnet, Ship with Haiku: The New Claude Code Workflow
-   **繁體**：Plan 用 Sonnet，執行交 Haiku：Claude Code 新工作流
-   **日本語**：計画は Sonnet、実装は Haiku：新しい Claude Code ワークフロー
-   **Français** : Planifier avec Sonnet, livrer avec Haiku : le nouveau flux Claude Code
-   **Español**: Planear con Sonnet, ejecutar con Haiku: el nuevo flujo de Claude Code
-   **Português**: Planeje com Sonnet, entregue com Haiku: o novo fluxo do Claude Code
-   **slug**：plan-sonnet-ship-haiku
-
-3. **中文**：告别“贵上天”的 Opus？Haiku 4.5 给了更现实的答案
-   **English**: Tired of Opus Prices? Haiku 4.5 Is the Practical Answer
-   **繁體**：Opus 太貴？Haiku 4.5 給出務實解
-   **日本語**：Opus は高すぎ？Haiku 4.5 が現実解
-   **Français** : Marre du prix d’Opus ? Haiku 4.5 est la réponse pragmatique
-   **Español**: ¿Opus demasiado caro? Haiku 4.5 es la respuesta práctica
-   **Português**: Opus caro demais? Haiku 4.5 é a resposta prática
-   **slug**：bye-opus-hello-haiku45
-
----
-
-# 图片生成（插画风｜2:1｜不含中文）
-
-**封面图 Prompt（英文）**
-“An illustration of a dual-engine coding workflow: a thoughtful planner brain on the left labeled ‘Plan (Sonnet)’ and a lightning-fast robotic arm on the right labeled ‘Execute (Haiku)’, connected by a flow of code snippets and checkmarks. Clean, modern, vibrant gradients, developer terminal elements, 2:1 aspect ratio, no text in Chinese.”
-
-**配图 1（亮点一：价格与速度）**
-“Infographic-style illustration showing three model tiers as rockets: Opus (largest, expensive), Sonnet (balanced), Haiku 4.5 (small, very fast) racing on a track with price tags and speed lines. Minimalistic, tech aesthetic, 2:1, no Chinese text.”
-
-**配图 2（亮点二：Plan→Exec 流程）**
-“Pipeline diagram illustration: ‘Plan’ node with a strategic blueprint, arrow to ‘Execute’ node with multiple small bots working in parallel, representing subagents. Subtle icons for IDE and terminal. Clean, pastel gradients, 2:1.”
-
-**配图 3（真实感受/对比）**
-“Side-by-side illustration: a heavy golden crown labeled ‘Opus’ on a scale vs. a feather-fast conveyor belt of code blocks labeled ‘Haiku 4.5’. Emphasize cost vs. speed tradeoff. 2:1, editorial, no Chinese text.”
-
-&gt; 说明：以上是直接可用的英文提示词，投喂你常用的绘图工具即可出图。
-
----
-
-# 互动金句（3条，用于朋友圈/评论区）
-
-1. “Plan 交给 Sonnet，体力活扔给 Haiku，项目跑得比我回消息还快😂”
-2. “Opus：你值得更好；钱包：我更需要便宜。Haiku 4.5：成交！”
-3. “今天起，写代码像点外卖：Sonnet 负责下单，Haiku 5 分钟送达🍕”
-
-
-
-需要我把这篇扩成“团队落地操作手册版”（含模型切换脚本、成本监控表、并行子代理模板）吗？我可以直接补上。
-
-[1]: https://www.anthropic.com/news/claude-haiku-4-5?utm_source=chatgpt.com &quot;Introducing Claude Haiku 4.5&quot;
-[2]: https://www.anthropic.com/news/claude-sonnet-4-5?utm_source=chatgpt.com &quot;Introducing Claude Sonnet 4.5&quot;
-[3]: https://www.anthropic.com/claude/opus?utm_source=chatgpt.com &quot;Claude Opus 4.1&quot;
-[4]: https://docs.claude.com/en/release-notes/api?utm_source=chatgpt.com &quot;Claude Developer Platform&quot;
-[5]: https://x.com/oikon48/status/1978509015328964846?utm_source=chatgpt.com &quot;Oikon on X: \&quot;Claude Code 2.0.17: ・Haiku 4.5 が追加 ・Plan ...&quot;
-[6]: https://marketplace.visualstudio.com/items?itemName=anthropic.claude-code&amp;utm_source=chatgpt.com &quot;Claude Code for VS Code&quot;
-[7]: https://anthropic.com/news/enabling-claude-code-to-work-more-autonomously?utm_source=chatgpt.com &quot;Enabling Claude Code to work more autonomously&quot;
-[8]: https://arstechnica.com/ai/2025/10/anthropics-claude-haiku-4-5-matches-mays-frontier-model-at-fraction-of-cost/?utm_source=chatgpt.com &quot;Anthropic&apos;s Claude Haiku 4.5 matches May&apos;s frontier model ...&quot; --&gt;</content:encoded><category>Claude Code</category></item><item><title>用 Claude Code 做“面向文档编程”＋ RSpec BDD，把 Rails 新功能几分钟搞定</title><link>https://www.vibesparking.com/zh-cn/blog/ai/claude-code/practices/2025-10-16-rails-feature-from-one-doc-claude-code-rspec-bdd/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/claude-code/practices/2025-10-16-rails-feature-from-one-doc-claude-code-rspec-bdd/</guid><pubDate>Thu, 16 Oct 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # 用 Claude Code 做“面向文档编程”＋ RSpec BDD，把 Rails 新功能几分钟搞定 --&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;引言&quot;&gt;引言&lt;/h2&gt;&lt;a href=&quot;#引言&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “引言”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;有没有过这种痛：设备一分钟内连着上报好几条状态，数据库一片“信息噪音”？
-今天聊个通用实战：&lt;strong&gt;在 Rails 里，把短时间内的重复上报合并为一条“黄金记录”&lt;/strong&gt;。&lt;/p&gt;
-&lt;p&gt;我会用 &lt;strong&gt;Claude Code&lt;/strong&gt; 的“面向文档编程”思路起手，从一页文档→自动生成 BDD 场景→RSpec 验证→最小实现→回到文档沉淀。&lt;strong&gt;整套闭环，高速、稳、可追溯&lt;/strong&gt;。关于 Claude Code 的定位与最佳实践，你也能在官方文档里找到清晰路线图。&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;我们的公共版本需求已脱敏&quot;&gt;我们的“公共版本”需求（已脱敏）&lt;/h2&gt;&lt;a href=&quot;#我们的公共版本需求已脱敏&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “我们的“公共版本”需求（已脱敏）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;业务背景（通用）&lt;/strong&gt;
-一个“智能健身手环”在 1 分钟内可能上报多条心率/状态。为了避免冗余，我们要：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;在一个可配置的时间窗（默认 1 分钟）内&lt;/strong&gt;，按设备和类型，&lt;strong&gt;合并多条为一条&lt;/strong&gt;；&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;以最新记录为准&lt;/strong&gt;（同窗内的最后一条）；&lt;/li&gt;
-&lt;li&gt;写入统一工作记录表，&lt;strong&gt;保证幂等&lt;/strong&gt;，并留下合并轨迹（便于审计与回溯）。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;面向文档编程（Document-Driven）&lt;/strong&gt;
-把上面的说明放进&lt;strong&gt;一页“功能说明文档”&lt;/strong&gt;，它既是产品协议、也是验收标准，后面直接产出 BDD 场景与测试。
-这个方法和 &lt;strong&gt;“Specification by Example（示例化规格）/ATDD/BDD”&lt;/strong&gt; 一脉相承——&lt;strong&gt;示例就是唯一可信的“真相源”&lt;/strong&gt;。&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;claude-code--bdd从文档到可执行的验收剧本&quot;&gt;Claude Code + BDD：从文档到可执行的“验收剧本”&lt;/h2&gt;&lt;a href=&quot;#claude-code--bdd从文档到可执行的验收剧本&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Claude Code + BDD：从文档到可执行的“验收剧本””&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;为什么用 Claude Code&lt;/strong&gt;
-它是“会主动拉取上下文”的&lt;strong&gt;终端内编码副驾&lt;/strong&gt;，能把代码、文档、依赖、脚手架串起来，&lt;strong&gt;把想法快速变成项目结构与可运行原型&lt;/strong&gt;。官方也给了不少上手心法，比如如何优化上下文、如何组织仓库让智能体“读懂”你的需求。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;通用提示词模板（可直接贴给 Claude Code）&lt;/strong&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;角色：高级 Rails 工程师＋测试教练
-目标：实现“设备上报合并”为通用能力
-产出：
-1）根据下述文档，生成 RSpec（Rails＋Capybara/请求/服务层）BDD 场景与边界用例；
-2）给出最小实现骨架（服务对象、查询、事务、幂等策略）；
-3）生成回滚与审计日志建议；
-4）把所有假设写回文档“开放问题”区；
-附：功能说明文档（粘贴上面的“公共版本”需求）&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;为什么是 RSpec + BDD&lt;/strong&gt;
-RSpec 天生面向行为与可读性，&lt;strong&gt;测试也是文档&lt;/strong&gt;；Rails 官方测试指南也强调不同层级测试的分工。配合 Capybara/请求规范，既能做 API 行为验收，也能做系统级流。&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;验收示例精简版-bdd-思路&quot;&gt;验收示例（精简版 BDD 思路）&lt;/h2&gt;&lt;a href=&quot;#验收示例精简版-bdd-思路&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “验收示例（精简版 BDD 思路）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;用户故事&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;作为数据平台，我希望&lt;strong&gt;在 1 分钟内&lt;/strong&gt;，同一设备、同一记录类型的多条上报&lt;strong&gt;合并为一条&lt;/strong&gt;，以最后一条为准，这样查询清爽、指标准确。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;关键场景&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;同窗合并&lt;/strong&gt;：t=00:10、00:40 上报 → 保存 1 条，内容取 00:40。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;跨窗不合并&lt;/strong&gt;：t=00:10、01:15 上报 → 保存 2 条。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;幂等写入&lt;/strong&gt;：重复请求不会产生重复合并结果。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;审计可追溯&lt;/strong&gt;：保留合并源 ID 与时间窗参数。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;小技巧：&lt;strong&gt;把这些示例放进文档/Feature 文件&lt;/strong&gt;，让它既是讨论载体也是自动化测试的蓝本。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;rspec-骨架片段示意&quot;&gt;RSpec 骨架（片段示意）&lt;/h2&gt;&lt;a href=&quot;#rspec-骨架片段示意&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “RSpec 骨架（片段示意）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;spec/services/record_merger_spec.rb&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;ruby&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;RSpec&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;describe&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;RecordMerger&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;do&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;let(:&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#096E72&quot;&gt;device_id&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;)&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; { &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;device-123&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; }&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;let(:&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#096E72&quot;&gt;window&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;)&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;    { &lt;/span&gt;&lt;span style=&quot;--0:#F78C6C;--1:#AA0982&quot;&gt;1&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;minute&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; }&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;it &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;merges multiple records within window, keeps the latest&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;do&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;create(:&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#096E72&quot;&gt;work_status&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;, &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;device_id&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;:, &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;recorded_at&lt;/span&gt;&lt;span style=&quot;--1:#3B61B0&quot;&gt;&lt;span style=&quot;--0:#82AAFF&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#C5E478&quot;&gt;Time&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF&quot;&gt;.current &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;-&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#F78C6C;--1:#AA0982&quot;&gt;40&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;.seconds, &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;payload&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;: { &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;hr&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#F78C6C;--1:#AA0982&quot;&gt;85&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt; })&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;create(:&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#096E72&quot;&gt;work_status&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;, &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;device_id&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;:, &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;recorded_at&lt;/span&gt;&lt;span style=&quot;--1:#3B61B0&quot;&gt;&lt;span style=&quot;--0:#82AAFF&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#C5E478&quot;&gt;Time&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF&quot;&gt;.current &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;-&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#F78C6C;--1:#AA0982&quot;&gt;10&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;.seconds, &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;payload&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;: { &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;hr&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#F78C6C;--1:#AA0982&quot;&gt;92&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt; })&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;result&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;=&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; described_class.&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;call&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;device_id&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;, &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;record_type&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#096E72&quot;&gt;work_status&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;, &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;window&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;expect(result.payload&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;[&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#096E72&quot;&gt;hr&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;]&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;)&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;to&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;eq(&lt;/span&gt;&lt;span style=&quot;--0:#F78C6C;--1:#AA0982&quot;&gt;92&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span style=&quot;--1:#3B61B0&quot;&gt;&lt;span style=&quot;--0:#82AAFF&quot;&gt;expect(&lt;/span&gt;&lt;span style=&quot;--0:#C5E478&quot;&gt;WorkStatus&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF&quot;&gt;.where(&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;device_id&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;:)&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;count&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;).&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;to&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;eq(&lt;/span&gt;&lt;span style=&quot;--0:#F78C6C;--1:#AA0982&quot;&gt;1&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;end&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;it &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;does not merge across windows&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;do&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;create(:&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#096E72&quot;&gt;work_status&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;, &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;device_id&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;:, &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;recorded_at&lt;/span&gt;&lt;span style=&quot;--1:#3B61B0&quot;&gt;&lt;span style=&quot;--0:#82AAFF&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#C5E478&quot;&gt;Time&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF&quot;&gt;.current &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;-&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#F78C6C;--1:#AA0982&quot;&gt;75&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;.seconds)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;create(:&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#096E72&quot;&gt;work_status&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;, &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;device_id&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;:, &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;recorded_at&lt;/span&gt;&lt;span style=&quot;--1:#3B61B0&quot;&gt;&lt;span style=&quot;--0:#82AAFF&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#C5E478&quot;&gt;Time&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF&quot;&gt;.current &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;-&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#F78C6C;--1:#AA0982&quot;&gt;10&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;.seconds)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;    &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;described_class.&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;call&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;device_id&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;, &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;record_type&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#096E72&quot;&gt;work_status&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;, &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;window&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span style=&quot;--1:#3B61B0&quot;&gt;&lt;span style=&quot;--0:#82AAFF&quot;&gt;expect(&lt;/span&gt;&lt;span style=&quot;--0:#C5E478&quot;&gt;WorkStatus&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF&quot;&gt;.where(&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;device_id&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;:)&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;count&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;).&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;to&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;eq(&lt;/span&gt;&lt;span style=&quot;--0:#F78C6C;--1:#AA0982&quot;&gt;2&lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;end&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C792EA;--1:#8844AE&quot;&gt;end&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;blockquote&gt;
-&lt;p&gt;规范参考：RSpec/Capybara 的特性测试写法与依赖约束。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;rails-最小实现清单思路导图&quot;&gt;Rails 最小实现清单（思路导图）&lt;/h2&gt;&lt;a href=&quot;#rails-最小实现清单思路导图&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Rails 最小实现清单（思路导图）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;入口&lt;/strong&gt;：服务对象 &lt;code dir=&quot;auto&quot;&gt;RecordMerger.call(device_id:, record_type:, window:)&lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;查询&lt;/strong&gt;：同设备＋同类型＋&lt;code dir=&quot;auto&quot;&gt;recorded_at&lt;/code&gt; 落在“自然时间窗”的记录&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;合并策略&lt;/strong&gt;：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;以 &lt;code dir=&quot;auto&quot;&gt;recorded_at&lt;/code&gt; 最大的那条为主数据&lt;/li&gt;
-&lt;li&gt;其余作为“来源集合”写入 &lt;code dir=&quot;auto&quot;&gt;merged_from: [ids...]&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;幂等与并发&lt;/strong&gt;：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;按设备＋窗口做&lt;strong&gt;应用级互斥&lt;/strong&gt;（如 &lt;code dir=&quot;auto&quot;&gt;with_advisory_lock&lt;/code&gt;）&lt;/li&gt;
-&lt;li&gt;关键字段加&lt;strong&gt;唯一索引&lt;/strong&gt;（设备＋窗口起点，或幂等键）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;审计&lt;/strong&gt;：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;记录 &lt;code dir=&quot;auto&quot;&gt;merge_window_sec&lt;/code&gt;、&lt;code dir=&quot;auto&quot;&gt;merged_count&lt;/code&gt;、&lt;code dir=&quot;auto&quot;&gt;merged_from&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;重要场景写 &lt;strong&gt;event log&lt;/strong&gt; 用于追踪与回放&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;想做系统级 E2E，直接加 &lt;strong&gt;系统测试/请求测试&lt;/strong&gt; 覆盖接口输入输出；Rails 官方指南对层级测试有清晰边界。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;让-ai-真正加速工程化用法清单&quot;&gt;让 AI 真正加速：工程化用法清单&lt;/h2&gt;&lt;a href=&quot;#让-ai-真正加速工程化用法清单&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “让 AI 真正加速：工程化用法清单”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;把文档放在仓库根目录&lt;/strong&gt;，命名统一，便于 Claude Code自动抓取上下文。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;一次只推进一个“微目标”&lt;/strong&gt;：先让“同窗合并”绿灯，再扩展幂等、审计。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;频繁回写文档&lt;/strong&gt;：新增边界条件、发现的陷阱都要沉淀到“开放问题/决策记录”。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;备份与里程碑&lt;/strong&gt;：长会话偶有上下文压缩，里程碑时&lt;strong&gt;切分 Session＋打 Tag&lt;/strong&gt;，并做好本地快照。行业经验也提醒我们：&lt;strong&gt;AI 是强力电动工具，你仍然是工匠&lt;/strong&gt;。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;行业侧反馈也在强化这条路：企业版全面引入 Claude Code，长上下文模型持续增强，大型代码库分析更稳。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;交付物长这样团队落地模板&quot;&gt;交付物长这样（团队落地模板）&lt;/h2&gt;&lt;a href=&quot;#交付物长这样团队落地模板&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “交付物长这样（团队落地模板）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;1）&lt;strong&gt;一页功能文档&lt;/strong&gt;（背景、目标、范围、术语、示例、开放问题）
-2）&lt;strong&gt;RSpec 套件&lt;/strong&gt;（服务层＋请求/系统测试，含边界与回归）
-3）&lt;strong&gt;服务对象 + 索引/锁&lt;/strong&gt;（最小可用）
-4）&lt;strong&gt;事件日志与仪表盘&lt;/strong&gt;（合并命中率、节省存储、查询耗时变化）&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;价值可量化&lt;/strong&gt;：文档就是规范；测试就是验收；日志就是运营复盘。
-&lt;strong&gt;迭代更丝滑&lt;/strong&gt;：新增“2 分钟窗”或“按类型分窗”——只需加示例 → 跑测试 → 小改实现。&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;结语&quot;&gt;结语&lt;/h2&gt;&lt;a href=&quot;#结语&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “结语”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;面向文档编程 + BDD&lt;/strong&gt;，不是“多写文档”，而是&lt;strong&gt;把文档变成可执行的产品契约&lt;/strong&gt;。
-配合 &lt;strong&gt;Claude Code&lt;/strong&gt;，你把“想法→测试→实现→复盘”这条链路，按小时计。团队协作更顺、交付更稳，读者看代码就像读故事。&lt;/p&gt;
-&lt;p&gt;**你在团队里会怎样落地这个合并能力？**有没有更猛的幂等键设计？欢迎在评论区聊聊。&lt;/p&gt;&lt;!-- 
----
-
-## 推荐标题（3 组 × 7 语种＋slug）
-
-1. **中文简体**：用 Claude Code＋RSpec BDD，把 Rails 新功能“一页文档”跑通
-   **English**: Ship Rails features from one page of docs with Claude Code + RSpec BDD
-   **繁體**：用 Claude Code＋RSpec BDD，從一頁文件跑通 Rails 新功能
-   **日本語**：Claude Code＋RSpec BDDで、1枚ドキュメントからRails機能を出荷
-   **Français** : Expédier des features Rails depuis une page de specs avec Claude Code + RSpec BDD
-   **Español**: Entrega features de Rails desde una página con Claude Code + RSpec BDD
-   **Português**: Entregue features Rails a partir de um documento com Claude Code + RSpec BDD
-   **slug**: `rails-feature-from-one-doc-claude-code-rspec-bdd`
-
-2. **中文简体**：面向文档编程实战：1 分钟内合并设备上报，用 RSpec 说人话
-   **English**: Document-Driven Dev in practice: merge bursty device events with RSpec
-   **繁體**：面向文件開發實戰：用 RSpec 合併裝置短時上報
-   **日本語**：ドキュメント駆動の実践：RSpecで短時間のデバイス送信を集約
-   **Français** : Doc-Driven Dev : fusionner les événements IoT avec RSpec
-   **Español**: Desarrollo guiado por documentos: fusiona eventos IoT con RSpec
-   **Português**: Dev guiado por documentação: mescle eventos IoT com RSpec
-   **slug**: `doc-driven-rails-iot-merge-with-rspec`
-
-3. **中文简体**：别再多写一行废代码：用示例做规格，用测试做文档
-   **English**: No more waste: specs by example, tests as docs
-   **繁體**：不再多寫一行廢程式：示例即規格、測試即文件
-   **日本語**：無駄ゼロ：例で仕様、テストがドキュメント
-   **Français** : Zéro gâchis : spécifier par l’exemple, tests = docs
-   **Español**: Cero derroche: especifica con ejemplos, pruebas como docs
-   **Português**: Zero desperdício: exemplos como especificação, testes como docs
-   **slug**: `spec-by-example-tests-as-docs`
-
----
-
-## 配图提示词（插画风｜2:1｜英文，无中文）
-
-**封面图**
-
-* Prompt：“Illustration of a developer turning a one-page document into running code on a terminal, gentle gradients, clean lines, modern workspace, AI assistant glow near terminal, widescreen 2:1 composition, no text.”
-
-**关键章节 1（文档→测试）**
-
-* Prompt：“Storyboard-style illustration: a specification page morphs into green passing test badges, terminal window with RSpec checkmarks, minimalistic, 2:1, no text.”
-
-**关键章节 2（合并逻辑）**
-
-* Prompt：“Two overlapping timelines of device events blending into a single consolidated record card, arrows showing merge flow, soft tech colors, 2:1, no text.”
-
-**关键章节 3（工程化与可观测）**
-
-* Prompt：“Dashboard with audit logs and metrics (merge hits, storage saved), abstract charts and gauges, terminal nearby, 2:1, no text.”
-
----
-
-## 朋友圈/评论区推荐语（3 条）
-
-1. “把需求写成一页文档，丢给 Claude Code＋RSpec，一下午交付一个稳功能。真香。”
-2. “测试就是文档，回归就是验收。合并上报这招，数据库立马清爽。”
-3. “AI 是电动工具，但方向要你来定。这篇把路线、用法、坑点都讲清了，收藏不亏。”
-
----
-
-要不要我把**完整的 RSpec 场景 + 服务对象骨架**也写出来，顺手生成一个**README 模板**给你直接用？你觉得呢？
-
-（参考资料：Claude Code 官方说明与最佳实践；Rails 测试指南；RSpec/Capybara 文档；SBE/Feature 文件方法论。）
-
-[1]: https://docs.claude.com/en/docs/claude-code/overview?utm_source=chatgpt.com &quot;Claude Code overview&quot;
-[2]: https://en.wikipedia.org/wiki/Specification_by_example?utm_source=chatgpt.com &quot;Specification by example&quot;
-[3]: https://rspec.info/?utm_source=chatgpt.com &quot;RSpec: Behaviour Driven Development for Ruby&quot;
-[4]: https://www.modernanalyst.com/Resources/Articles/tabid/115/ID/3871/BDD-An-introduction-to-feature-files.aspx?utm_source=chatgpt.com &quot;BDD – An introduction to feature files&quot;
-[5]: https://rspec.info/features/6-0/rspec-rails/feature-specs/feature-spec/?utm_source=chatgpt.com &quot;Feature specs&quot;
-[6]: https://guides.rubyonrails.org/testing.html?utm_source=chatgpt.com &quot;Testing Rails Applications&quot;
-[7]: https://www.businessinsider.com/tech-memo-claude-code-assistant-anthropic-aws-review-2025-8?utm_source=chatgpt.com &quot;Claude Code turned a 3-week project into a 2-day task &amp;mdash; but nearly broke it&quot;
-[8]: https://www.techradar.com/pro/anthropic-is-adding-claude-code-to-business-plans-so-now-all-your-workers-can-enjoy-a-major-ai-boost?utm_source=chatgpt.com &quot;Anthropic is adding Claude Code to business plans - so now all your workers can enjoy a major AI boost&quot; --&gt;</content:encoded><category>Claude Code</category><category>Flutter</category><category>Android</category><category>APK</category></item></channel></rss>
+[10]: https://www.nngroup.com/articles/alphabetical-sorting-must-mostly-die/?utm_source=chatgpt.com &quot;Alphabetical Sorting Must (Mostly) Die&quot; --&gt;</content:encoded><category>AI</category><category>ChatGPT</category><category>OpenAI</category><category>Product Manager</category><category>UX</category><category>Bluetooth</category><category>BLE</category></item></channel></rss>
