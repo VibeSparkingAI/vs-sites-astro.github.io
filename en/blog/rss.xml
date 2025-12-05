@@ -1,4 +1,85 @@
-<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Vibe Sparking AI | Blog</title><description/><link>https://www.vibesparking.com/</link><language>en</language><item><title>Anthropic Internal AI Development Survey: Frontend Shines, Architecture Is Hardest to Hand Off to AI</title><link>https://www.vibesparking.com/en/blog/ai/anthropic/2025-12-03-anthropic-internal-ai-development-survey/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/anthropic/2025-12-03-anthropic-internal-ai-development-survey/</guid><pubDate>Wed, 03 Dec 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # Anthropic Internal AI Development Survey: Frontend Shines, Architecture Is Hardest to Hand Off to AI --&gt;&lt;!-- --- --&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Vibe Sparking AI | Blog</title><description/><link>https://www.vibesparking.com/</link><language>en</language><item><title>2025 Concierge Guide: Step-by-Step Applying for a Google Developer Account (with D-U-N-S / Payment Tips)</title><link>https://www.vibesparking.com/en/blog/ai/google/play/2025-12-05-google-developer-account-application-guide/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/google/play/2025-12-05-google-developer-account-application-guide/</guid><pubDate>Fri, 05 Dec 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- This article is written in a WeChat Official Account style. It covers the three key points you asked for and adds practical tips and “avoid the pitfalls” advice in light of Google Play’s tighter policies, to raise reader value and completion rates.
+
+---
+
+## Title Suggestions
+**Option 1 (pain-point direct):** [Go-Global Must-Read] Is registering a Google Play developer account too hard? Nail these three steps for a first-pass approval!
+**Option 2 (how-to):** 2025 concierge guide: step-by-step apply for a Google developer account (includes D-U-N-S/payment playbook)
+**Option 3 (urgency):** Google Play tightened again? A detailed breakdown of the three registration “roadblocks” and solutions
+
+---
+
+## Body text --&gt;
+&lt;p&gt;&lt;strong&gt;[Intro]&lt;/strong&gt;
+As domestic mobile internet traffic peaks, “going overseas” has become a must for many developers. As the world’s largest Android app distribution platform, &lt;strong&gt;Google Play&lt;/strong&gt; is naturally the first stop.&lt;/p&gt;
+&lt;p&gt;However, since 2024 Google has enforced unprecedentedly strict reviews for developer accounts. Many people get stuck during registration: an unqualified network environment leading to instant bans, delays with the D-U-N-S number application, or even failing to pay the $25 fee.&lt;/p&gt;
+&lt;p&gt;Today we break down the three most critical steps to registering a Google Play developer account so you can start your global journey smoothly.&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;first-gate-a-stable-network-environment-network&quot;&gt;First Gate: A Stable “Network Environment” (Network)&lt;/h2&gt;&lt;a href=&quot;#first-gate-a-stable-network-environment-network&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “First Gate: A Stable “Network Environment” (Network)”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;— The first firewall against account linkage&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The biggest misconception for newcomers is: “as long as I can open Google, I’m good.” &lt;strong&gt;Completely wrong!&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Google’s risk control is powerful; it tracks your IP address, device fingerprint, and browser cookies. For developer registration, “can access” is the baseline—“clean and stable” is the core.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;💡 Pitfall Avoidance Guide:&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;A fixed IP matters:&lt;/strong&gt; During registration (and later console logins), keep your IP as static as possible. If your IP hops from the US to Singapore and back, Google will flag the account as risky or compromised, leading to bans or failed verification.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Browser isolation:&lt;/strong&gt; Use Chrome &lt;strong&gt;Incognito&lt;/strong&gt; or create a dedicated browser &lt;strong&gt;profile&lt;/strong&gt; for registration. Never sign in to multiple different developer accounts in the same browser; if one gets hit, cookie linkage can trigger “collective punishment.”&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Physical environment:&lt;/strong&gt; If possible, operate on a clean computer that has never been used to register Google accounts.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;⚠️ Warning:&lt;/strong&gt; The purity of your network environment directly determines your account’s survival rate. Many “instant bans” happen because the IP is already on a blacklist.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;second-gate-d-u-n-s-number&quot;&gt;Second Gate: D-U-N-S Number&lt;/h2&gt;&lt;a href=&quot;#second-gate-d-u-n-s-number&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Second Gate: D-U-N-S Number”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;— The global ID card for corporate identity&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Since late 2023, Google Play has required “organization/company” accounts to provide a &lt;strong&gt;D-U-N-S Number&lt;/strong&gt;. This has become the biggest hurdle for many small teams.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;What is a D-U-N-S Number?&lt;/strong&gt;
+It is a 9-digit identifier assigned by Dun &amp;#x26; Bradstreet to recognize businesses globally. Simply put, it proves your company is real.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;🛠️ Application Playbook:&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Prepare documents:&lt;/strong&gt; Your business license and its &lt;strong&gt;English translation&lt;/strong&gt; (the English company name must be standard, as it will show in the Google Play developer info), company seal, and contact details.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Application channels:&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Recommended:&lt;/strong&gt; Use the &lt;strong&gt;Google-provided link&lt;/strong&gt; or the &lt;strong&gt;Apple Developer Support page&lt;/strong&gt; to enter the D-U-N-S application portal. These big-tech partner channels are typically faster than applying directly on the Dun &amp;#x26; Bradstreet site and are often free.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Timeline expectations:&lt;/strong&gt; After submission, it usually takes 5–14 business days. Once you receive the number, database sync to Google may take up to 48 hours before you can enter it in the Google Play console.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;📝 Key Point:&lt;/strong&gt; The &lt;strong&gt;English company name&lt;/strong&gt; and &lt;strong&gt;address&lt;/strong&gt; used for the D-U-N-S application must match exactly with what you enter in Google Play. Even a single letter mismatch can cause verification failure.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;third-gate-paying-the-registration-fee-payment&quot;&gt;Third Gate: Paying the Registration Fee (Payment)&lt;/h2&gt;&lt;a href=&quot;#third-gate-paying-the-registration-fee-payment&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Third Gate: Paying the Registration Fee (Payment)”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;— The $25 ticket&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Unlike Apple Developer’s $99/year subscription, Google Play charges a &lt;strong&gt;one-time $25&lt;/strong&gt; (about ¥180 RMB) registration fee.&lt;/p&gt;
+&lt;p&gt;Sounds easy? Many developers still stumble at “payment failed.”&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;💳 Payment challenges and fixes:&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Card types:&lt;/strong&gt; Google Play does not support Alipay or WeChat Pay. You need a credit card that supports foreign currency, typically &lt;strong&gt;Visa&lt;/strong&gt; or &lt;strong&gt;MasterCard&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Issuing country vs. account region:&lt;/strong&gt; Google checks whether the card’s issuing country matches the account registration country and current IP location.
+&lt;ul&gt;
+&lt;li&gt;For a &lt;strong&gt;China-region&lt;/strong&gt; developer account (using a Chinese business license), domestic Visa/MasterCard dual-currency cards usually work.&lt;/li&gt;
+&lt;li&gt;For an &lt;strong&gt;overseas&lt;/strong&gt; account (e.g., US), do not use a domestic Chinese card—use a card from that country, or risk tripping risk controls.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Billing address:&lt;/strong&gt; When entering card info, fill the billing address truthfully.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;💡 Tip:&lt;/strong&gt; If payment keeps failing, don’t spam retries—this triggers fraud protection. Contact the issuing bank to confirm overseas card-not-present transactions are enabled, or try another card the next day.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;wrap-up-and-next-steps&quot;&gt;Wrap-Up and Next Steps&lt;/h2&gt;&lt;a href=&quot;#wrap-up-and-next-steps&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Wrap-Up and Next Steps”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Once you’ve secured a &lt;strong&gt;clean network environment&lt;/strong&gt;, obtained your &lt;strong&gt;D-U-N-S Number&lt;/strong&gt;, and successfully paid &lt;strong&gt;$25&lt;/strong&gt;, congrats—you’ve completed 90% of the hard work!&lt;/p&gt;
+&lt;p&gt;Next, finish &lt;strong&gt;identity verification&lt;/strong&gt; (upload ID/passport) and meet the latest &lt;strong&gt;20-person closed test&lt;/strong&gt; requirement (for individual accounts), and you’re ready to publish apps.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Official reference:&lt;/strong&gt;&lt;br&gt;
+To stay accurate, read Google’s latest guide before you start:&lt;br&gt;
+&lt;a href=&quot;https://support.google.com/googleplay/android-developer/answer/13628312?hl=zh&quot;&gt;Register for a Google Play developer account — Play Console Help&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Wishing you smooth global expansion and one hit after another! 🚀&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;[Discussion]&lt;/strong&gt;
+What potholes have you hit while registering a Google Play account? Drop a comment to share! 👇&lt;/p&gt;&lt;!-- 
+---
+**Do you want me to further map out a detailed flowchart for the D-U-N-S application step?** --&gt;</content:encoded><category>Google Play</category></item><item><title>Anthropic Internal AI Development Survey: Frontend Shines, Architecture Is Hardest to Hand Off to AI</title><link>https://www.vibesparking.com/en/blog/ai/anthropic/2025-12-03-anthropic-internal-ai-development-survey/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/anthropic/2025-12-03-anthropic-internal-ai-development-survey/</guid><pubDate>Wed, 03 Dec 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # Anthropic Internal AI Development Survey: Frontend Shines, Architecture Is Hardest to Hand Off to AI --&gt;&lt;!-- --- --&gt;
 &lt;div&gt;&lt;h2 id=&quot;introduction-is-ai-really-making-engineers-more-productive&quot;&gt;Introduction: Is AI Really Making Engineers More Productive?&lt;/h2&gt;&lt;a href=&quot;#introduction-is-ai-really-making-engineers-more-productive&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Introduction: Is AI Really Making Engineers More Productive?”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
 &lt;p&gt;This year, every developer friend around me keeps asking the same question:&lt;/p&gt;
 &lt;blockquote&gt;
@@ -2923,123 +3004,4 @@ References:
 [8]: https://learn.microsoft.com/en-us/dotnet/api/android.bluetooth.le.scanresult.rssi?view=net-android-35.0&amp;utm_source=chatgpt.com &quot;ScanResult.Rssi Property (Android.Bluetooth.LE)&quot;
 [9]: https://m3.material.io/components?utm_source=chatgpt.com &quot;Components — Material Design 3&quot;
 [10]: https://www.nngroup.com/articles/alphabetical-sorting-must-mostly-die/?utm_source=chatgpt.com &quot;Alphabetical Sorting Must (Mostly) Die&quot; 
---&gt;</content:encoded><category>AI</category><category>ChatGPT</category><category>OpenAI</category><category>Product Manager</category><category>UX</category><category>Bluetooth</category><category>BLE</category></item><item><title>Claude Code 2.0.17 Update: Haiku 4.5 Takes Execution, Plan with Sonnet — Faster and Cheaper</title><link>https://www.vibesparking.com/en/blog/ai/claude-code/changelog/2025-10-16-claude-code-217-haiku-45-sonnet-45/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/claude-code/changelog/2025-10-16-claude-code-217-haiku-45-sonnet-45/</guid><pubDate>Thu, 16 Oct 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # Claude Code 2.0.17 Update: Haiku 4.5 Takes Execution, Plan with Sonnet — Faster and Cheaper --&gt;&lt;!-- (In the spirit of Vibe Sparking AI — this gives you a one‑sitting read on the two key changes in the new Claude Code.) --&gt;
-&lt;div&gt;&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;&lt;a href=&quot;#introduction&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Introduction”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;Today’s update is very kind to developers who code with Claude Code.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Claude Haiku 4.5 launches — cheaper and faster; Plan mode defaults to Sonnet for planning and switches to Haiku for execution.&lt;/strong&gt;
-In practice, projects run smoother and your wallet hurts less. Official pricing/positioning and how this release hooks into Claude Code both support that conclusion.&lt;/p&gt;
-&lt;div&gt;&lt;h2 id=&quot;highlight-1-lower-cost-faster-speed&quot;&gt;Highlight 1: Lower cost, faster speed&lt;/h2&gt;&lt;a href=&quot;#highlight-1-lower-cost-faster-speed&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Highlight 1: Lower cost, faster speed”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;Haiku 4.5: $1 / $5 (input/output per million tokens)&lt;/strong&gt; — aimed at real‑time, low‑latency work, with optimizations for coding, sub‑agent collaboration, and computer‑use scenarios. Compared with Sonnet 4 from May, it’s &lt;strong&gt;well over 2× faster at about one‑third the cost&lt;/strong&gt;, while delivering “near‑frontier” performance on many coding tasks.&lt;/p&gt;
-&lt;p&gt;Why “more economical”? Compare peers on pricing:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Sonnet 4.5: $3 / $15&lt;/strong&gt; (input/output).&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Opus 4.1: $15 / $75&lt;/strong&gt; (input/output).&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;This means you can &lt;strong&gt;hand off execution steps that don’t need the “strongest brainpower” to Haiku 4.5&lt;/strong&gt;. Bills slim down immediately and responses feel snappier. If you run many agents, hit backend services, or trigger calls frequently from your IDE, the value is obvious.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Summary: &lt;strong&gt;Haiku 4.5 = coding ability close to Sonnet 4 + faster speed + one‑third the price&lt;/strong&gt;. It’s not a “make‑do small model”, it’s a “deployment‑grade workhorse”.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;div&gt;&lt;h2 id=&quot;highlight-2-plan-with-sonnet-execute-with-haiku-the-2017-default-pairing&quot;&gt;Highlight 2: Plan with Sonnet, execute with Haiku (the 2.0.17 default pairing)&lt;/h2&gt;&lt;a href=&quot;#highlight-2-plan-with-sonnet-execute-with-haiku-the-2017-default-pairing&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Highlight 2: Plan with Sonnet, execute with Haiku (the 2.0.17 default pairing)”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;In &lt;strong&gt;Claude Code 2.0.17&lt;/strong&gt;, a crucial detail: &lt;strong&gt;Plan mode uses Sonnet by default for planning, then automatically switches to Haiku for execution.&lt;/strong&gt; That mirrors real workflows in the terminal/VS Code: &lt;strong&gt;deep reasoning with Sonnet, batch implementation with Haiku.&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Version signal: the VS Code extension is now &lt;strong&gt;2.0.17&lt;/strong&gt;, released with the October update.&lt;/li&gt;
-&lt;li&gt;Official framing: &lt;strong&gt;Sonnet 4.5 remains the primary engine behind Claude Code&lt;/strong&gt;, handling long tasks and complex planning; Haiku 4.5 fills the execution seat with &lt;strong&gt;more speed and lower cost&lt;/strong&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;This &lt;strong&gt;plan/execute layering&lt;/strong&gt; follows the familiar pattern of “frontline model for Plan, next‑tier model for implementation” — except now &lt;strong&gt;Haiku 4.5&lt;/strong&gt; takes the more capable spot on the execution side.&lt;/p&gt;
-&lt;div&gt;&lt;h2 id=&quot;realworld-take-opus-is-phenomenal-and-pricey-sonnet-is-steady-haiku-now-carries&quot;&gt;Real‑world take: Opus is phenomenal (and pricey); Sonnet is steady; Haiku now carries&lt;/h2&gt;&lt;a href=&quot;#realworld-take-opus-is-phenomenal-and-pricey-sonnet-is-steady-haiku-now-carries&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Real‑world take: Opus is phenomenal (and pricey); Sonnet is steady; Haiku now carries”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;After several large runs, here’s the blunt take:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Opus&lt;/strong&gt;: expansive ideation, cross‑stack architecture, deep retrieval — rock‑solid. &lt;strong&gt;But the bill is hard to stomach.&lt;/strong&gt; If you also hand it execution, you get great results and a racing heartbeat.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Sonnet 4.5&lt;/strong&gt;: currently the &lt;strong&gt;most usable “coding brain”&lt;/strong&gt; in the Claude family. In Plan mode it thinks clearly: strategy, steps, and risk flags are all there.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Haiku 4.5&lt;/strong&gt;: the &lt;strong&gt;MVP for execution&lt;/strong&gt;. Running agent subtasks, fanning out in parallel, scaffolding, moving files, getting tests green — it’s fast and frugal. For &lt;strong&gt;front‑end scaffolds, mass renames, fixture generation&lt;/strong&gt;, it barely “breaks a sweat”.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;In short: &lt;strong&gt;Use Sonnet for expensive “thinking”; give Haiku the bulk “hands‑on”.&lt;/strong&gt; Your speed goes up, costs come down, and stability is easier to control.&lt;/p&gt;
-&lt;div&gt;&lt;h2 id=&quot;getting-started-for-busy-engineering-teams&quot;&gt;Getting started (for busy engineering teams)&lt;/h2&gt;&lt;a href=&quot;#getting-started-for-busy-engineering-teams&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Getting started (for busy engineering teams)”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Keep the Plan→Exec split&lt;/strong&gt;: clarify the hard parts, then dispatch subtasks in parallel; let Haiku 4.5 handle execution.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Lean on parallelism and sub‑agents&lt;/strong&gt;: spin up multiple Haiku 4.5 workers; coordinate with a Sonnet 4.5 orchestrator.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Make costs visible&lt;/strong&gt;: track API usage, measure call shares across Haiku/Sonnet/Opus, and review a sprint‑length invoice.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Match model to scenario&lt;/strong&gt;: real‑time assistants, support tickets, low‑latency orchestration → favor Haiku 4.5; complex refactors and multi‑repo surgery → Plan with Sonnet 4.5.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;&lt;a href=&quot;#conclusion&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Conclusion”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;No flashy tricks here — &lt;strong&gt;this update makes “useful + economical” a daily development default.&lt;/strong&gt;
-Plan with Sonnet, execute with Haiku. &lt;strong&gt;Code moves fast and spending is transparent.&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;What’s your take? Which tasks see immediate gains with Haiku 4.5? Share real‑world results in the comments.&lt;/p&gt;&lt;!--
-
-## References and further reading
-
-* Anthropic “Introducing Claude Haiku 4.5”: performance and pricing, emphasizes “faster and cheaper”.
-* Haiku 4.5 developer pricing: **$1 / $5 (input/output)**.
-* Sonnet 4.5 release and pricing: **$3 / $15**.
-* Opus 4.1 overview and pricing: **$15 / $75**.
-* Claude Developer Platform: API release notes and model usage guidance.
-* Claude Code for VS Code: extension page (2.0.17).
-* Enabling Claude Code to work more autonomously: official blog post.
-* Ars Technica: coverage on Haiku 4.5 matching May’s frontier model at a fraction of the cost.
-
-## Title suggestions (multi‑language + slug)
-
-1. Chinese: Haiku 4.5 接管执行位：Claude Code 2.0.17 省钱又提速
-   English: Haiku 4.5 Takes Over Execution: Faster, Cheaper Claude Code 2.0.17
-   Traditional Chinese: Haiku 4.5 接手執行位：Claude Code 2.0.17 省錢又加速
-   Japanese: Haiku 4.5 が実行を担当：Claude Code 2.0.17 は高速・低コスト
-   Français : Haiku 4.5 prend l’exécution : Claude Code 2.0.17 plus rapide et moins cher
-   Español: Haiku 4.5 toma la ejecución: Claude Code 2.0.17 más rápido y barato
-   Português: Haiku 4.5 assume a execução: Claude Code 2.0.17 mais rápido e barato
-   slug: haiku45-exec-claude-code-2017
-
-2. Chinese: Plan 用 Sonnet，干活交 Haiku：新一代 Claude Code 流程范式
-   English: Plan with Sonnet, Ship with Haiku: The New Claude Code Workflow
-   Traditional Chinese: Plan 用 Sonnet，執行交 Haiku：Claude Code 新工作流
-   Japanese: 計画は Sonnet、実装は Haiku：新しい Claude Code ワークフロー
-   Français : Planifier avec Sonnet, livrer avec Haiku : le nouveau flux Claude Code
-   Español: Planear con Sonnet, ejecutar con Haiku: el nuevo flujo de Claude Code
-   Português: Planeje com Sonnet, entregue com Haiku: o novo fluxo do Claude Code
-   slug: plan-sonnet-ship-haiku
-
-3. Chinese: 告别“贵上天”的 Opus？Haiku 4.5 给了更现实的答案
-   English: Tired of Opus Prices? Haiku 4.5 Is the Practical Answer
-   Traditional Chinese: Opus 太貴？Haiku 4.5 給出務實解
-   Japanese: Opus は高すぎ？Haiku 4.5 が現実解
-   Français : Marre du prix d’Opus ? Haiku 4.5 est la réponse pragmatique
-   Español: ¿Opus demasiado caro? Haiku 4.5 es la respuesta práctica
-   Português: Opus caro demais? Haiku 4.5 é a resposta prática
-   slug: bye-opus-hello-haiku45
-
----
-
-# Image prompts (illustration style | 2:1 | no Chinese text)
-
-Cover prompt (EN):
-“An illustration of a dual‑engine coding workflow: a thoughtful planner brain on the left labeled ‘Plan (Sonnet)’ and a lightning‑fast robotic arm on the right labeled ‘Execute (Haiku)’, connected by a flow of code snippets and checkmarks. Clean, modern, vibrant gradients, developer terminal elements, 2:1 aspect ratio, no text in Chinese.”
-
-Key visual #1 (pricing &amp; speed):
-“Infographic‑style illustration showing three model tiers as rockets: Opus (largest, expensive), Sonnet (balanced), Haiku 4.5 (small, very fast) racing on a track with price tags and speed lines. Minimalistic, tech aesthetic, 2:1, no Chinese text.”
-
-Key visual #2 (Plan→Exec pipeline):
-“Pipeline diagram illustration: ‘Plan’ node with a strategic blueprint, arrow to ‘Execute’ node with multiple small bots working in parallel, representing sub‑agents. Subtle icons for IDE and terminal. Clean, pastel gradients, 2:1.”
-
-Key visual #3 (real‑world contrast):
-“Side‑by‑side illustration: a heavy golden crown labeled ‘Opus’ on a scale vs. a feather‑fast conveyor belt of code blocks labeled ‘Haiku 4.5’. Emphasize cost vs. speed trade‑off. 2:1, editorial, no Chinese text.”
-
-&gt; Note: These are ready‑to‑use English prompts — feed them to your usual image tool.
-
----
-
-# Social one‑liners (for posts/comments)
-
-1) “Plan with Sonnet, throw the grunt work to Haiku — the project moves faster than I can reply. 😂”
-2) “Opus: you deserve better. Wallet: I need cheaper. Haiku 4.5: deal!”
-3) “From today, coding feels like takeout: Sonnet places the order, Haiku delivers in 5 minutes. 🍕”
-
-Need a “team playbook” version (with model‑switch scripts, cost dashboards, and parallel sub‑agent templates)? I can add it.
-
-[1]: https://www.anthropic.com/news/claude-haiku-4-5 &quot;Introducing Claude Haiku 4.5&quot;
-[2]: https://www.anthropic.com/news/claude-sonnet-4-5 &quot;Introducing Claude Sonnet 4.5&quot;
-[3]: https://www.anthropic.com/claude/opus &quot;Claude Opus 4.1&quot;
-[4]: https://docs.claude.com/en/release-notes/api &quot;Claude Developer Platform&quot;
-[5]: https://x.com/oikon48/status/1978509015328964846 &quot;Claude Code 2.0.17: ・Haiku 4.5 ...&quot;
-[6]: https://marketplace.visualstudio.com/items?itemName=anthropic.claude-code &quot;Claude Code for VS Code&quot;
-[7]: https://anthropic.com/news/enabling-claude-code-to-work-more-autonomously &quot;Enabling Claude Code to work more autonomously&quot;
-[8]: https://arstechnica.com/ai/2025/10/anthropics-claude-haiku-4-5-matches-mays-frontier-model-at-fraction-of-cost/ &quot;Ars Technica on Haiku 4.5&quot;
---&gt;</content:encoded><category>Claude Code</category></item></channel></rss>
+--&gt;</content:encoded><category>AI</category><category>ChatGPT</category><category>OpenAI</category><category>Product Manager</category><category>UX</category><category>Bluetooth</category><category>BLE</category></item></channel></rss>
