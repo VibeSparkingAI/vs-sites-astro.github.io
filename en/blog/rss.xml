@@ -1,4 +1,777 @@
-<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Vibe Sparking AI | Blog</title><description/><link>https://www.vibesparking.com/</link><language>en</language><item><title>2025 Concierge Guide: Step-by-Step Applying for a Google Developer Account (with D-U-N-S / Payment Tips)</title><link>https://www.vibesparking.com/en/blog/ai/google/play/2025-12-05-google-developer-account-application-guide/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/google/play/2025-12-05-google-developer-account-application-guide/</guid><pubDate>Fri, 05 Dec 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- This article is written in a WeChat Official Account style. It covers the three key points you asked for and adds practical tips and “avoid the pitfalls” advice in light of Google Play’s tighter policies, to raise reader value and completion rates.
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Vibe Sparking AI | Blog</title><description/><link>https://www.vibesparking.com/</link><language>en</language><item><title>Decoding the AI Chip Wars: Why Google TPU Won&apos;t Kill NVIDIA</title><link>https://www.vibesparking.com/en/blog/finance/us-market/2025-12-07-decoding-the-ai-chip-wars-why-google-tpu-wont-kill-nvidia/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/finance/us-market/2025-12-07-decoding-the-ai-chip-wars-why-google-tpu-wont-kill-nvidia/</guid><pubDate>Sun, 07 Dec 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # It&apos;s Not Google TPU Killing NVIDIA—It&apos;s That No One Can Live Without Compute --&gt;
+&lt;div&gt;&lt;h2 id=&quot;decoding-the-real-ai-chip-war&quot;&gt;Decoding the Real AI Chip War&lt;/h2&gt;&lt;a href=&quot;#decoding-the-real-ai-chip-war&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Decoding the Real AI Chip War”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Lately the market’s favorite storyline goes like this:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“Google TPU is rising, NVIDIA is about to be taken out; AWS has Trainium, Microsoft has Maia, in-house ASICs will push GPUs off the throne.”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;But if you look at Morgan Stanley internet analyst Brian plus semiconductor analyst Joe Moore’s kind of “inside view,” and cross-check the public data, a picture closer to the industry’s real logic emerges:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;This isn’t about “who replaces whom”—it’s “if it can compute, we want it.” In the short run it’s compute scarcity; in the long run profits concentrate with the few who control standards and cost.&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;I’ll frame this article around four questions:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Have we really entered an “infinite compute era”?&lt;/li&gt;
+&lt;li&gt;Whose normal is multi-architecture coexistence—the giants, or the whole industry?&lt;/li&gt;
+&lt;li&gt;Google has TPU, so why can’t it ditch NVIDIA?&lt;/li&gt;
+&lt;li&gt;How should regular investors choose in this “everyone is building chips” melee?&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Along the way I’ll weave in:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Fact checks&lt;/strong&gt; on each point (at least 3 professional sources cross-verified),&lt;/li&gt;
+&lt;li&gt;Logic breakdowns,&lt;/li&gt;
+&lt;li&gt;And some perspective on “who is selling what story” from the standpoint of incentives and human nature.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;i-compute-flood-never-enough-or-shortage-for-now&quot;&gt;I. Compute Flood: “Never Enough” or “Shortage for Now”?&lt;/h2&gt;&lt;a href=&quot;#i-compute-flood-never-enough-or-shortage-for-now&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “I. Compute Flood: “Never Enough” or “Shortage for Now”?”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3 id=&quot;1-how-much-of-a-flood-start-with-some-hard-numbers&quot;&gt;1. How much of a “flood”? Start with some hard numbers&lt;/h3&gt;&lt;a href=&quot;#1-how-much-of-a-flood-start-with-some-hard-numbers&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1. How much of a “flood”? Start with some hard numbers”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;(1) Data center CapEx is exploding&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Dell’Oro reports: in 2024 Q2, global data center capital expenditure rose &lt;strong&gt;46% YoY&lt;/strong&gt;, driven mainly by deployments of AI accelerator servers (GPU / TPU / in-house accelerator cards).&lt;/li&gt;
+&lt;li&gt;Same firm later tallied: full-year 2024 global data center CapEx jumped to &lt;strong&gt;$455 billion, up 51%&lt;/strong&gt;, with 2025 still expected to post double-digit growth, powered chiefly by AI accelerator servers.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;These numbers are basically saying:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“Everyone is spending on data centers at a historically rare speed—and it’s specifically for AI.”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;(2) On the GPU side: NVIDIA as an “income black hole”&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;NVIDIA’s latest earnings: FY2025 Q4 (through 2025-01-26) revenue of &lt;strong&gt;$39.3 billion&lt;/strong&gt; for the quarter, +78% YoY, mainly from data center.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Industry estimates: in FY2025 Q3, NVIDIA’s data center segment alone topped &lt;strong&gt;$50 billion&lt;/strong&gt; in a single quarter, with gross margin near &lt;strong&gt;75%&lt;/strong&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;For the “data center GPU” market by itself, research firms estimate: about &lt;strong&gt;$10.5 billion&lt;/strong&gt; in 2025, with potential to expand to &lt;strong&gt;$77 billion&lt;/strong&gt; by 2035, &gt;&lt;strong&gt;22%&lt;/strong&gt; CAGR.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;(3) Blackwell’s real state: not “no one wants it” but “nowhere near enough supply”&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;NVIDIA management repeatedly stressed across late 2024 and 2025 earnings calls:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Hopper and Blackwell platforms are both supply-constrained;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Blackwell demand is expected to “exceed supply” for multiple consecutive quarters in FY2026&lt;/strong&gt;, with much of next year’s capacity already pre-booked.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Most research reports and media agree:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;High-end AI GPUs (H100/H200/Blackwell) are in “line up and rationing” mode.&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;So your original line:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“The game isn’t about chip architectures, it’s about whether you can get cards”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;is consistent with public data in the &lt;strong&gt;near-term 1–3 year window&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h3 id=&quot;2-but-compute-is-forever-scarce-is-a-feeling-not-a-law-of-physics&quot;&gt;2. But “compute is forever scarce” is a feeling, not a law of physics&lt;/h3&gt;&lt;a href=&quot;#2-but-compute-is-forever-scarce-is-a-feeling-not-a-law-of-physics&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2. But “compute is forever scarce” is a feeling, not a law of physics”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;That nuance matters for investors.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;(1) Physical and infrastructure constraints&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;AI data centers aren’t just about buying cards; you also need:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Power: large AI facilities routinely draw hundreds of megawatts;&lt;/li&gt;
+&lt;li&gt;Copper and materials: analyses show AI data centers use &lt;strong&gt;27–33 tons of copper per MW&lt;/strong&gt;. At current project plans, existing and in-progress copper mines would cover only about &lt;strong&gt;70% of demand&lt;/strong&gt; by 2035, with a potential &lt;strong&gt;300,000-ton shortfall&lt;/strong&gt; as soon as 2025.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;These constraints are a reminder:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“Infinite compute” is a &lt;strong&gt;demand-side wish&lt;/strong&gt;—the real world applies brakes via the grid, materials, and permits.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;(2) Cash flow and shareholder constraints&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Cloud providers now spend tens to hundreds of billions of dollars annually on AI infrastructure,&lt;/li&gt;
+&lt;li&gt;But shareholders ask: “How fast do these GPUs/TPUs pay back? Are AI products earning enough?”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If over the next two to three years “big-model monetization” lags market expectations,
+CapEx growth will inevitably fall from 50%+—just like any prior infrastructure cycle (4G, cloud, fiber).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Bottom line on this point:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Facts:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Right now we truly are in a phase of &lt;strong&gt;compute scarcity + acute high-end GPU shortage&lt;/strong&gt;;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Opinion:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;“Compute is forever insufficient” is an emotion amplified;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Investment meaning:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Short term you can justify valuations with “card-hoarding logic”;&lt;/li&gt;
+&lt;li&gt;Medium to long term you must watch &lt;strong&gt;when power / materials / ROI start cutting growth&lt;/strong&gt;—the three blades of the scissors.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;ii-whoever-has-compute-we-use-multi-architecture-is-a-survival-move-not-a-pretty-choice&quot;&gt;II. “Whoever has compute, we use”: Multi-architecture Is a Survival Move, Not a Pretty Choice&lt;/h2&gt;&lt;a href=&quot;#ii-whoever-has-compute-we-use-multi-architecture-is-a-survival-move-not-a-pretty-choice&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “II. “Whoever has compute, we use”: Multi-architecture Is a Survival Move, Not a Pretty Choice”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Your second takeaway was:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“Right now I’ll use any compute I can get. NVIDIA, AMD, in-house ASICs, TPU, even the next cheap chip—I’ll buy.”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Let’s see what parts of that line up with reality and which are privileges of the very top tier.&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;1-the-facts-top-players-truly-are-running-multi-architecture&quot;&gt;1. The facts: top players truly are running “multi-architecture”&lt;/h3&gt;&lt;a href=&quot;#1-the-facts-top-players-truly-are-running-multi-architecture&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1. The facts: top players truly are running “multi-architecture””&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;(1) The hyperscaler structure&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Multiple research shops (Kearney, MLQ.ai, etc.) in 2025 reports note:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The data center AI accelerator market is &lt;strong&gt;still dominated by NVIDIA&lt;/strong&gt;,&lt;/li&gt;
+&lt;li&gt;But Google TPU, AWS Trainium, Microsoft Maia and other &lt;strong&gt;in-house chips&lt;/strong&gt; are expected to reach &lt;strong&gt;15–20% internal deployment share&lt;/strong&gt; in the late 2020s (mostly their own workloads).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In other words:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;For Google/AWS/Microsoft and peers:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“&lt;strong&gt;GPU + in-house ASIC mix&lt;/strong&gt;” is already written into the roadmap as reality.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;(2) How specific vendors do it&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Google Cloud: AI Hypercomputer&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;On one side it’s rolling out the new Trillium TPU (6th gen),&lt;/li&gt;
+&lt;li&gt;On the other it explicitly says in the official blog it will include &lt;strong&gt;NVIDIA Blackwell platforms (B200 / GB200) as part of Hypercomputer&lt;/strong&gt;, letting customers pick between TPUs and NVIDIA GPUs.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;AWS: Trainium + NVIDIA GPU sold side by side&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;At re:Invent 2024/2025, AWS launched Trainium2/3/4 in-house AI chips and UltraServer, pitched as “cheaper training + inference compute”;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Meanwhile, its compute-track tech blog stresses:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“Our accelerated compute lineup includes both GPU instances and AWS AI chip instances; customers choose based on cost / performance / compatibility.”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Microsoft: Maia for inside, NVIDIA for customers&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Microsoft introduced Maia 100/200 AI accelerators, clearly for &lt;strong&gt;internal mega-model workloads like its own and OpenAI’s&lt;/strong&gt;;&lt;/li&gt;
+&lt;li&gt;At the same time Azure keeps deploying and touting the latest NVIDIA GPUs (including GB300 NVL72 clusters), with joint blogs on “extracting every drop of value from every GPU on Azure.”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;All this shows:&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;In the very top circle, “multi-architecture coexistence” is already fact. They literally practice your line: &lt;strong&gt;“whoever can deliver compute, we use.”&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h3 id=&quot;2-but-this-isnt-the-industrys-defaultits-a-giants-privilege&quot;&gt;2. But this isn’t the industry’s default—it’s a giant’s privilege&lt;/h3&gt;&lt;a href=&quot;#2-but-this-isnt-the-industrys-defaultits-a-giants-privilege&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2. But this isn’t the industry’s default—it’s a giant’s privilege”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;The logical trap is:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Seeing frontier model shops run 4–5 architectures and assuming every AI company can do that.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Reality is closer to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Only cloud giants / top model companies&lt;/strong&gt; can afford to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Maintain multiple hardware stacks (GPU / TPU / Trainium / Maia / other ASICs);&lt;/li&gt;
+&lt;li&gt;Spend engineering to port models across backends (CUDA, ROCm, XLA, in-house SDKs);&lt;/li&gt;
+&lt;li&gt;Build unified scheduling / compilation / MLOps layers to mask heterogeneity.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Most AI startups and enterprise customers behave more like:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“&lt;strong&gt;As long as I can rent enough NVIDIA GPUs, I won’t deliberately tinker with other architectures.&lt;/strong&gt;”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Ecosystem proof points:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;CUDA still enjoys much broader framework, toolchain, tutorial, and open-source support than any other stack;&lt;/li&gt;
+&lt;li&gt;When third-party training/inference platforms do “multi-backend support,” they still default to NVIDIA as first priority.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;So:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Your line “multi-architecture became the norm” is&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;True for &lt;strong&gt;Google/AWS/Microsoft/OpenAI/Anthropic&lt;/strong&gt;;&lt;/li&gt;
+&lt;li&gt;For &lt;strong&gt;typical AI companies&lt;/strong&gt;, it’s more “NVIDIA first, others as backups.”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h3 id=&quot;3-incentives-who-is-gaming-whom-behind-multi-architecture&quot;&gt;3. Incentives: who is gaming whom behind multi-architecture?&lt;/h3&gt;&lt;a href=&quot;#3-incentives-who-is-gaming-whom-behind-multi-architecture&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3. Incentives: who is gaming whom behind multi-architecture?”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Pull this back from “technical pluralism” to “incentive reality”:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;For &lt;strong&gt;big model firms / cloud providers&lt;/strong&gt;, the real motives are three:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Survival:&lt;/strong&gt; during compute shortages, “whoever has cards is your lifesaver”;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Price pressure:&lt;/strong&gt; use TPU / Trainium / Maia to lean on NVIDIA in negotiations;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;TCO:&lt;/strong&gt; shift some inference loads to cheaper, more efficient ASICs to lower long-run costs.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;For &lt;strong&gt;NVIDIA&lt;/strong&gt;, the prime goal is:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“Make CUDA + platform ecosystem the default industry standard, so even if others ship cheaper chips, migration costs stay high.”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Conclusion:&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Multi-architecture isn’t “the beauty of technical diversity”—
+&lt;strong&gt;it’s a supply-chain, cost, and bargaining-power game.&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;iii-google-has-tpuwhy-still-buy-nvidia&quot;&gt;III. Google Has TPU—Why Still Buy NVIDIA?&lt;/h2&gt;&lt;a href=&quot;#iii-google-has-tpuwhy-still-buy-nvidia&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “III. Google Has TPU—Why Still Buy NVIDIA?”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Your third point hits the mark:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“Google has TPU yet keeps buying NVIDIA GPUs—TPU supplements, not replaces.”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;That’s squarely in line with public info.&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;1-what-google-itself-says&quot;&gt;1. What Google itself says&lt;/h3&gt;&lt;a href=&quot;#1-what-google-itself-says&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1. What Google itself says”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Google Cloud’s blogs and docs state plainly:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;AI Hypercomputer includes &lt;strong&gt;in-house Trillium TPU&lt;/strong&gt;,&lt;/li&gt;
+&lt;li&gt;And &lt;strong&gt;NVIDIA H200 / Blackwell (B200, GB200 NVL72) GPU instances&lt;/strong&gt;,&lt;/li&gt;
+&lt;li&gt;Customers can choose different accelerator mixes as needed.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Many Google customer stories mention using both TPU and NVIDIA GPU:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Some training jobs run on TPU,&lt;/li&gt;
+&lt;li&gt;But latency-sensitive or CUDA-native workloads stay on GPU.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;2-why-not-tpu-only&quot;&gt;2. Why not “TPU only”?&lt;/h3&gt;&lt;a href=&quot;#2-why-not-tpu-only&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2. Why not “TPU only”?”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;(1) Business mix differences&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Core internal businesses (search, ads, YouTube recommendations, GWS, etc.):&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Can be forced onto TPU on Google’s own timeline—this is “internally controlled + long-term ROI.”;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;For the external cloud business:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Customers have mountains of CUDA-based code, models, and tooling;&lt;/li&gt;
+&lt;li&gt;If Google said “TPU only, no GPU option,” it would shove customers to AWS/Azure.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;So for Google, GPU and TPU split is:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;TPU: &lt;strong&gt;mass internal production + some external&lt;/strong&gt;, focused on lowering its own long-run compute costs;&lt;/li&gt;
+&lt;li&gt;NVIDIA GPU: &lt;strong&gt;ecosystem default + customer demand&lt;/strong&gt;, essential for keeping cloud clients.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;(2) Path dependence and migration costs&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Even if TPU is cheaper or more efficient for certain tasks,
+for most developers already “trained by CUDA”:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“Rewrite tons of code + rebuild the entire toolchain”
+costs more than “pay a bit of NVIDIA tax.”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h3 id=&quot;3-in-the-bigger-picture-what-in-house-asics-really-do&quot;&gt;3. In the bigger picture: what in-house ASICs really do&lt;/h3&gt;&lt;a href=&quot;#3-in-the-bigger-picture-what-in-house-asics-really-do&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3. In the bigger picture: what in-house ASICs really do”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Across Google TPU, AWS Trainium, Microsoft Maia public statements, a more grounded conclusion is:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;In-house ASICs are tools for giants to “lower long-run compute costs + secure supply chain”;&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;They’re not meant to “sell so much on the open market that NVIDIA dies”;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;They’re leverage to say at the bargaining table:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“I’m not forced to use your cards; I can make my own—keep prices reasonable.”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;So your line—“TPU is a complement, not a replacement”—
+holds perfectly at the industry-structure level.&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;iv-infinite-compute-everyone-winsthe-retail-investor-trap&quot;&gt;IV. “Infinite Compute, Everyone Wins”?—The Retail Investor Trap&lt;/h2&gt;&lt;a href=&quot;#iv-infinite-compute-everyone-winsthe-retail-investor-trap&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “IV. “Infinite Compute, Everyone Wins”?—The Retail Investor Trap”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Your vivid wrap-up was:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“All architectures and vendors get pulled into the same black hole—racing for time, cards, iteration speed. GPU, TPU, ASIC aren’t substituting but expanding together; the winners are anyone who can supply compute.”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;The direction is right&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Right now “anyone who can deliver high-performance compute has business”;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;But for investors, the key question is:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Business ≠ high profit, and certainly not that everyone makes big money.&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div&gt;&lt;h3 id=&quot;1-profit-pools-are-highly-concentratednot-rain-for-all&quot;&gt;1. Profit pools are highly concentrated—not “rain for all”&lt;/h3&gt;&lt;a href=&quot;#1-profit-pools-are-highly-concentratednot-rain-for-all&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1. Profit pools are highly concentrated—not “rain for all””&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;From current data:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;NVIDIA:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Single-quarter data center revenue &lt;strong&gt;~$50 billion&lt;/strong&gt;, gross margin about &lt;strong&gt;75%&lt;/strong&gt;—classic “money-printing”.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Other vendors (including some GPU/ASIC makers):&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Revenue ranges from hundreds of millions to low billions;&lt;/li&gt;
+&lt;li&gt;Gross margins, pricing power, and ecosystem stickiness nowhere near NVIDIA.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Consensus view:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The AI accelerator profit pool is &lt;strong&gt;highly concentrated in a handful of leaders&lt;/strong&gt;;
+Many others have revenue and a story, but not necessarily fat margins.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;For retail investors,
+the “everyone wins” narrative is dangerous—it nudges you to buy a basket of fringe players,
+while the real money may accrue only to those with &lt;strong&gt;standards + ecosystem + cost curve&lt;/strong&gt; control.&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h3 id=&quot;2-in-house-asic-as-a-long-term-threatwho-feels-it-first&quot;&gt;2. In-house ASIC as a long-term threat—who feels it first?&lt;/h3&gt;&lt;a href=&quot;#2-in-house-asic-as-a-long-term-threatwho-feels-it-first&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2. In-house ASIC as a long-term threat—who feels it first?”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;In-house chips don’t “instantly slay NVIDIA”;
+they gradually reshape &lt;strong&gt;who captures how much profit&lt;/strong&gt;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;For NVIDIA:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Short term: still the prime beneficiary; all clouds are still frantically buying its cards;&lt;/li&gt;
+&lt;li&gt;Medium/long term: once TPU/Trainium/Maia reach 15–25% internal share at each cloud,
+they’ll start &lt;strong&gt;chipping away at NVIDIA’s ultimate pricing power&lt;/strong&gt; (the dreaded “GPU tax”).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;For second-tier / smaller chip vendors:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Squeezed from above by in-house ASIC price pressure, from below by NVIDIA’s ecosystem moat;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;They sit in the most painful spot—&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“A bit less performance, far weaker ecosystem, and not cheap enough to be irresistible,”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Many could be the first out in the elimination round.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;So:&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The bullets from in-house ASICs may not hit NVIDIA first;
+they may land on the tier lacking ecosystem, scale, and cost advantage.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h3 id=&quot;3-three-blades-against-the-infinite-compute-story-power-capital-regulation&quot;&gt;3. Three blades against the “infinite compute” story: power, capital, regulation&lt;/h3&gt;&lt;a href=&quot;#3-three-blades-against-the-infinite-compute-story-power-capital-regulation&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3. Three blades against the “infinite compute” story: power, capital, regulation”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;One more time: compute cannot truly expand without limit:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Power and materials&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;AI data centers compete with society-wide energy infrastructure for power, transformers, copper, and cooling;&lt;/li&gt;
+&lt;li&gt;Long-cycle copper supply has been flagged to tighten further around 2030.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Return on capital&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;If AI app monetization lags CapEx spending,&lt;/li&gt;
+&lt;li&gt;Shareholders will force clouds to slow the “spend curve,” directly braking upstream chipmakers.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Policy and regulation&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Energy use, carbon, data center siting, AI risk rules—once scaled, these become hard constraints;&lt;/li&gt;
+&lt;li&gt;They’re in the brewing stage now; once enacted, they immediately affect compute expansion pace.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;v-how-can-individual-investors-use-this&quot;&gt;V. How Can Individual Investors Use This?&lt;/h2&gt;&lt;a href=&quot;#v-how-can-individual-investors-use-this&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “V. How Can Individual Investors Use This?”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;To compress the above into a &lt;strong&gt;usable investment framework&lt;/strong&gt;, I’d give readers a few rules:&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;1-dont-get-dragged-by-who-replaces-whom-plots&quot;&gt;1. Don’t get dragged by “who replaces whom” plots&lt;/h3&gt;&lt;a href=&quot;#1-dont-get-dragged-by-who-replaces-whom-plots&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1. Don’t get dragged by “who replaces whom” plots”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Near term:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;NVIDIA remains the AI compute center;&lt;/li&gt;
+&lt;li&gt;TPU / Trainium / Maia mostly serve giant internal needs.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Long term:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Watch not “are there new players,” but “who controls the &lt;strong&gt;standard (software ecosystem)&lt;/strong&gt; and &lt;strong&gt;cost curve&lt;/strong&gt;.”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;2-slice-the-industry-into-three-layersnot-one-big-stew&quot;&gt;2. Slice the industry into three layers—not one big stew&lt;/h3&gt;&lt;a href=&quot;#2-slice-the-industry-into-three-layersnot-one-big-stew&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2. Slice the industry into three layers—not one big stew”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Roughly split into three:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Compute chip/module providers&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;NVIDIA, AMD, in-house ASICs (TPU / Trainium / Maia), some new-arch players;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Those likely to earn thick profits long run are the few with:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Ecosystem (CUDA/platform/middleware),&lt;/li&gt;
+&lt;li&gt;Scale (volume + supply-chain control),&lt;/li&gt;
+&lt;li&gt;Cost advantage (process + packaging + efficiency).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Compute infrastructure providers&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Clouds (AWS / Azure / GCP, etc.), data center operators, power and cooling solution vendors;&lt;/li&gt;
+&lt;li&gt;They feast on CapEx demand while bearing “payback pressure” and policy risk.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Compute “upstream applications”&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Big model firms / AI SaaS / vertical AI apps;&lt;/li&gt;
+&lt;li&gt;They determine whether these GPUs/TPUs turn into sustained, meaningful cash flow.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div&gt;&lt;h3 id=&quot;3-flag-two-common-pitfalls-for-readers&quot;&gt;3. Flag two common pitfalls for readers&lt;/h3&gt;&lt;a href=&quot;#3-flag-two-common-pitfalls-for-readers&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3. Flag two common pitfalls for readers”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;“AI concept stocks rain on all” trap&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Seeing everyone build chips/AI and assuming all stocks get equal upside;&lt;/li&gt;
+&lt;li&gt;In reality profits concentrate—&lt;strong&gt;bad picks hurt more than missing the sector.&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;“Forever shortage” emotional trap&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;When everyone shouts “cards are never enough, compute is forever scarce,” ask:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“In which year do supply/power/regulation flip from ‘shortage story’ to ‘price pressure, expansion slowdown’ reality?”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;vi-one-line-summary-of-the-real-industry-logic&quot;&gt;VI. One-Line Summary of the Real Industry Logic&lt;/h2&gt;&lt;a href=&quot;#vi-one-line-summary-of-the-real-industry-logic&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “VI. One-Line Summary of the Real Industry Logic”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Compressing everything into one line for readers:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;This isn’t a “TPU vs. NVIDIA vs. Trainium” winner-take-all; it’s a systemic war over who can control high-performance compute + software ecosystems + cost curves for the long haul.&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;In the short run, &lt;strong&gt;anyone who can reliably ship top-tier compute&lt;/strong&gt; can gorge on the flood of demand;
+over the long run, profits concentrate with the very few who have ecosystem, scale, and cost advantages.&lt;/p&gt;
+&lt;p&gt;For regular investors, instead of staring at “who replaces whom” soundbites, calmly watch three things:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Whose product is the industry’s “default option”?&lt;/strong&gt; (standards &amp;#x26; ecosystem)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Who lowers cost per unit of compute fastest?&lt;/strong&gt; (cost curve)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Who can survive the post-CapEx-peak “rational return” phase?&lt;/strong&gt; (business model &amp;#x26; cash flow)&lt;/li&gt;
+&lt;/ol&gt;&lt;!-- 
+---
+
+### Further Reading (for readers who really want to dig deeper)
+
+* [MarketWatch](https://www.marketwatch.com/story/alphabet-and-nvidia-alone-make-up-a-third-of-the-s-p-500s-gains-this-year-in-a-sign-of-big-techs-dominance-fee982a1?utm_source=chatgpt.com)
+* [Reuters](https://www.reuters.com/business/retail-consumer/amazon-use-nvidia-tech-ai-chips-roll-out-new-servers-2025-12-02/?utm_source=chatgpt.com)
+* [Axios](https://www.axios.com/2025/12/02/amazon-reinvent-nova-forge?utm_source=chatgpt.com)
+* [Reuters](https://www.reuters.com/business/marvell-shares-jump-chipmaker-bolsters-ai-ambitions-with-celestial-deal-2025-12-03/?utm_source=chatgpt.com)
+* [Tom&apos;s Hardware](https://www.tomshardware.com/tech-industry/ai-data-center-buildout-pushes-copper-toward-shortages-analysts-warn?utm_source=chatgpt.com)
+
+If you want to turn this into a series (e.g., one piece each on NVIDIA, TPU, Trainium/Maia), I can help outline each around &quot;fact-checks + business model + risks + valuation.&quot; 
+
+[1]: https://www.delloro.com/news/accelerated-servers-propelled-data-center-capex-to-46-percent-growth-in-2q-2024/?utm_source=chatgpt.com &quot;Accelerated Servers Propelled Data Center Capex to 46 ...&quot;
+[2]: https://www.delloro.com/news/data-center-capex-surged-51-percent-to-455-billion-in-2024/?utm_source=chatgpt.com &quot;Data Center Capex Surged 51 Percent to $455 Billion in ...&quot;
+[3]: https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-fourth-quarter-and-fiscal-2025?utm_source=chatgpt.com &quot;NVIDIA Announces Financial Results for Fourth Quarter ...&quot;
+[4]: https://www.constellationr.com/blog-news/insights/nvidias-q3-stellar-data-center-revenue-66?utm_source=chatgpt.com &quot;Nvidia&apos;s Q3 stellar as data center revenue up 66%&quot;
+[5]: https://www.precedenceresearch.com/ai-data-center-gpu-market?utm_source=chatgpt.com &quot;AI Data Center GPU Market Size to Hit USD 77.15 Billion ...&quot;
+[6]: https://www.crn.com/news/components-peripherals/2024/nvidia-we-are-racing-to-scale-supply-to-meet-incredible-blackwell-demand?utm_source=chatgpt.com &quot;Nvidia: &apos;We Are Racing To Scale Supply To Meet Incredible ...&quot;
+[7]: https://www.tomshardware.com/tech-industry/ai-data-center-buildout-pushes-copper-toward-shortages-analysts-warn?utm_source=chatgpt.com &quot;AI data-centre buildout pushes copper toward shortages, analysts warn - only 70% of 2035 demand could be met, 2025 deficit thought to be 304,000 tonnes&quot;
+[8]: https://www.kearney.com/industry/technology/article/breaking-the-gpu-stronghold-emerging-competition-in-ai-infrastructure?utm_source=chatgpt.com &quot;Breaking the GPU stronghold: emerging competition in AI ...&quot;
+[9]: https://cloud.google.com/blog/products/compute/whats-new-with-google-clouds-ai-hypercomputer-architecture?utm_source=chatgpt.com &quot;What&apos;s new with Google Cloud&apos;s AI Hypercomputer ...&quot;
+[10]: https://www.aboutamazon.com/news/aws/aws-reinvent-2024-keynote-live-news-updates?utm_source=chatgpt.com &quot;Announcements and updates from AWS re:Invent 2024&quot;
+[11]: https://repost.aws/ja/articles/ARuhbPQliOSqKn74zJpGmMYQ/get-the-latest-on-aws-ai-chips-from-re-invent-2024?utm_source=chatgpt.com &quot;Get the latest on AWS AI Chips from re:Invent 2024&quot;
+[12]: https://news.microsoft.com/source/features/ai/in-house-chips-silicon-to-service-to-meet-ai-demand/?utm_source=chatgpt.com &quot;With a systems approach to chips, Microsoft aims to tailor ...&quot;
+[13]: https://azure.microsoft.com/en-us/blog/building-the-future-together-microsoft-and-nvidia-announce-ai-advancements-at-gtc-dc/?utm_source=chatgpt.com &quot;Microsoft and NVIDIA announce AI advancements at GTC DC&quot;
+[14]: https://finance.yahoo.com/news/data-center-gpu-company-evaluation-132300436.html?utm_source=chatgpt.com &quot;Data Center GPU Company Evaluation Report 2025&quot; --&gt;</content:encoded><category>Finance</category><category>US Stock Market</category><category>NVIDIA</category><category>Google TPU</category></item><item><title>Google Antigravity Can Code and Draw: One-Click UI and Image Generation in Your IDE</title><link>https://www.vibesparking.com/en/blog/ai/google/antigravity/2025-12-05-google-antigravity-one-click-ui-and-image-generation-in-ide/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/google/antigravity/2025-12-05-google-antigravity-one-click-ui-and-image-generation-in-ide/</guid><pubDate>Fri, 05 Dec 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Straight to the point:
+&lt;strong&gt;Google Antigravity, this new IDE, doesn’t just write code — it can “casually draw” inside the editor. UI sketches, logos, and marketing images are all one click away.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;i-what-on-earth-is-antigravity-why-are-engineers-talking-about-it&quot;&gt;I. What on Earth Is Antigravity? Why Are Engineers Talking About It?&lt;/h2&gt;&lt;a href=&quot;#i-what-on-earth-is-antigravity-why-are-engineers-talking-about-it&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “I. What on Earth Is Antigravity? Why Are Engineers Talking About It?”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;In short:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Antigravity = VS Code look + multi-agent AI core + Gemini 3 Pro + built-in image generation&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;It’s Google’s &lt;strong&gt;AI-first (agent-first) development platform&lt;/strong&gt; that runs a fleet of AI agents across the editor, terminal, and built-in browser to help with planning, coding, testing, and demoing. ([Google Developers Blog][1])&lt;/p&gt;
+&lt;p&gt;Antigravity is currently in &lt;strong&gt;free public preview&lt;/strong&gt;, supports Windows / macOS / Linux, uses Gemini 3 Pro by default, and can also connect to Claude Sonnet 4.5 and some open-source models. ([Wikipedia][2])&lt;/p&gt;
+&lt;p&gt;For those of us building frontends, product demos, or side projects, it’s basically:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Opening the IDE = opening a “studio with an artist and a helper”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;ii-how-do-you-draw-inside-antigravity-which-models-power-it&quot;&gt;II. How Do You “Draw” Inside Antigravity? Which Models Power It?&lt;/h2&gt;&lt;a href=&quot;#ii-how-do-you-draw-inside-antigravity-which-models-power-it&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “II. How Do You “Draw” Inside Antigravity? Which Models Power It?”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3 id=&quot;1-two-built-in-image-models-imagen-3--nano-banana-pro&quot;&gt;1) Two built-in image models: Imagen 3 + Nano Banana Pro&lt;/h3&gt;&lt;a href=&quot;#1-two-built-in-image-models-imagen-3--nano-banana-pro&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1) Two built-in image models: Imagen 3 + Nano Banana Pro”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;According to official notes and community feedback, image generation in Antigravity now follows two main tracks: ([Google Antigravity][3])&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Default: Imagen 3&lt;/strong&gt;&lt;br&gt;
+Used for generating illustrations and supporting images inside the IDE; general-purpose creation.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Advanced: Nano Banana Pro (Gemini 3 Pro Image)&lt;/strong&gt;&lt;br&gt;
+Google’s new image model, offering:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Clearer text rendering (no more blurry English copy on posters)&lt;/li&gt;
+&lt;li&gt;More complex logic and layouts (charts, infographics)&lt;/li&gt;
+&lt;li&gt;Higher resolutions (1K / 2K / 4K output)&lt;/li&gt;
+&lt;li&gt;Multiple reference images for consistent style/composition&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Official blogs and docs say &lt;strong&gt;Nano Banana Pro is already integrated into Antigravity&lt;/strong&gt;, so you can call it directly inside the IDE to generate UI mockups, logos, marketing graphics, and more. ([Google Antigravity][3])&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;2-image-generation-isnt-a-standalone-toyits-part-of-the-workflow&quot;&gt;2) Image generation isn’t a standalone toy—it’s part of the workflow&lt;/h3&gt;&lt;a href=&quot;#2-image-generation-isnt-a-standalone-toyits-part-of-the-workflow&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2) Image generation isn’t a standalone toy—it’s part of the workflow”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;InfoWorld’s hands-on review mentions that Antigravity’s agents can directly call Nano Banana to create &lt;strong&gt;UI mockups and image assets&lt;/strong&gt;. ([InfoWorld][4])&lt;/p&gt;
+&lt;p&gt;Typical scenarios include:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Generate several UI sketches for a new page&lt;/li&gt;
+&lt;li&gt;Produce logo options for a product&lt;/li&gt;
+&lt;li&gt;Create illustrations/visuals for a marketing page&lt;/li&gt;
+&lt;li&gt;Auto-generate diagrams or visuals for docs&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Interestingly, one tester hit a situation where image services were overloaded and the agent failed to generate images for a while. It immediately “switched strategies” and &lt;strong&gt;wrote an entire HTML/CSS page as the mockup instead&lt;/strong&gt;. That’s the agent workflow in action:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“Either I’ll give you images, or I’ll give you a runnable frontend page.”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;iii-what-real-value-does-this-bring-to-frontend-product-and-indie-makers&quot;&gt;III. What Real Value Does This Bring to Frontend, Product, and Indie Makers?&lt;/h2&gt;&lt;a href=&quot;#iii-what-real-value-does-this-bring-to-frontend-product-and-indie-makers&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “III. What Real Value Does This Bring to Frontend, Product, and Indie Makers?”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3 id=&quot;1-a-write-requirements-while-generating-images-dev-experience&quot;&gt;1) A “write requirements while generating images” dev experience&lt;/h3&gt;&lt;a href=&quot;#1-a-write-requirements-while-generating-images-dev-experience&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1) A “write requirements while generating images” dev experience”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;A real user on Reddit shared:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Building an RV rental site needed six hero images for popular destinations.&lt;br&gt;
+They simply asked the agent inside Antigravity to generate the right photos and auto-apply them to card components—done in about one minute. ([Reddit][5])&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;This flips the traditional flow:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Before: finish the page → open stock sites/design tools → download/export → drop back into the project&lt;br&gt;
+Now: one line in the IDE → images + code land together&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;For MVPs, hackathons, and internal demos, “finding/making images” now compresses into minutes.&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;2-the-wall-between-ui-design-and-implementation-gets-thinner&quot;&gt;2) The wall between UI design and implementation gets thinner&lt;/h3&gt;&lt;a href=&quot;#2-the-wall-between-ui-design-and-implementation-gets-thinner&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2) The wall between UI design and implementation gets thinner”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Antigravity agents package generated images, mockups, and code changes into &lt;strong&gt;Artifacts (deliverables)&lt;/strong&gt;, so you can: ([Google Antigravity][6])&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;View mockups side by side with code diffs&lt;/li&gt;
+&lt;li&gt;Comment directly on Artifacts: “Make the button larger”, “Switch the primary color to blue”&lt;/li&gt;
+&lt;li&gt;Ask the agent to revise images and code based on that feedback&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This also smooths collaboration:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Product/Design: leave natural-language comments on the Artifact page&lt;/li&gt;
+&lt;li&gt;Dev: focus on diffs and logic&lt;/li&gt;
+&lt;li&gt;Agent: runs errands—edits images and code&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;3-solo-founders-one-ide-equals-a-small-team&quot;&gt;3) Solo founders: one IDE equals a small team&lt;/h3&gt;&lt;a href=&quot;#3-solo-founders-one-ide-equals-a-small-team&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3) Solo founders: one IDE equals a small team”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;If you’re building alone:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Copywriting: have the model draft your landing page&lt;/li&gt;
+&lt;li&gt;Design: ask Antigravity for illustrations, UI mockups, logo drafts&lt;/li&gt;
+&lt;li&gt;Development: use the same agent to drop images into the frontend and even scaffold API/backend&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Essentially:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Opening Antigravity = hiring a copywriter, an artist, and a junior engineer&lt;br&gt;
+You just play director and decision-maker&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;iv-what-does-it-actually-take-to-generate-an-image-inside-antigravity&quot;&gt;IV. What Does It Actually Take to Generate an Image Inside Antigravity?&lt;/h2&gt;&lt;a href=&quot;#iv-what-does-it-actually-take-to-generate-an-image-inside-antigravity&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “IV. What Does It Actually Take to Generate an Image Inside Antigravity?”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Based on Google’s official Codelab and several tutorials, the flow looks like this: ([Google Codelabs][7])&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Below is a typical “image + frontend code” play to help you picture it.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div&gt;&lt;h3 id=&quot;step-1-create-a-task-and-ask-the-agent-for-a-page-plus-visuals&quot;&gt;Step 1: Create a task and ask the agent for a page plus visuals&lt;/h3&gt;&lt;a href=&quot;#step-1-create-a-task-and-ask-the-agent-for-a-page-plus-visuals&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Step 1: Create a task and ask the agent for a page plus visuals”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;In Agent Manager, create a Task, e.g.:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“Build a landing page for a fitness app, including a hero section, and generate a hero illustration for the top of the page.”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The agent will automatically:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Plan the task (generate a Task Plan)&lt;/li&gt;
+&lt;li&gt;Decide which files and images are needed&lt;/li&gt;
+&lt;li&gt;Create/modify code files in the editor&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;step-2-call-the-image-model-to-produce-visuals&quot;&gt;Step 2: Call the image model to produce visuals&lt;/h3&gt;&lt;a href=&quot;#step-2-call-the-image-model-to-produce-visuals&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Step 2: Call the image model to produce visuals”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;During execution, the agent will call the built-in image models:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Default is Imagen 3&lt;/li&gt;
+&lt;li&gt;If you follow the tutorial scripts, you can also route through &lt;strong&gt;Nano Banana Pro&lt;/strong&gt; (Gemini 3 Pro Image) for more complex, text-heavy designs ([Zenn][8])&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;It shows a set of image candidates in the Artifact panel:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Preview directly&lt;/li&gt;
+&lt;li&gt;If you dislike them, ask to “regenerate with …”&lt;/li&gt;
+&lt;li&gt;Add notes like “make it more minimal, more dark theme”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;step-3-drop-the-images-into-code&quot;&gt;Step 3: Drop the images into code&lt;/h3&gt;&lt;a href=&quot;#step-3-drop-the-images-into-code&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Step 3: Drop the images into code”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;From most reviews, people pick between two styles: ([Medium][9])&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Let the agent edit code directly&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The agent saves images to the project’s static assets&lt;/li&gt;
+&lt;li&gt;It updates &lt;code dir=&quot;auto&quot;&gt;&amp;#x3C;img&gt;&lt;/code&gt; or &lt;code dir=&quot;auto&quot;&gt;Image&lt;/code&gt; components in your React/Vue/Next.js pages&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Pick images yourself + tweak UI&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Manually select a preferred image&lt;/li&gt;
+&lt;li&gt;Adjust layout, copy, and styles yourself&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Some even used it to build a &lt;strong&gt;“UI + imagery” for an image-optimization tool&lt;/strong&gt;, treating Antigravity as a graphics co-pilot. ([Enchanter Consulting][10])&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;v-dont-forget-quotas-and-safety-enjoy-the-speed-mind-the-brakes&quot;&gt;V. Don’t Forget Quotas and Safety: Enjoy the Speed, Mind the Brakes&lt;/h2&gt;&lt;a href=&quot;#v-dont-forget-quotas-and-safety-enjoy-the-speed-mind-the-brakes&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “V. Don’t Forget Quotas and Safety: Enjoy the Speed, Mind the Brakes”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3 id=&quot;1-free-image-generation-has-limits&quot;&gt;1) Free image generation has limits&lt;/h3&gt;&lt;a href=&quot;#1-free-image-generation-has-limits&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1) Free image generation has limits”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Lately, Google and OpenAI have been quietly tightening free quotas:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Free calls for Gemini 3 Pro and Nano Banana Pro are shrinking&lt;/li&gt;
+&lt;li&gt;Free users only get a few image generations per day—roughly 2–3 ([TechRadar][11])&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Meaning:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Spamming image generation in Antigravity will hit quotas&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Good enough for product demos/internal reviews&lt;/li&gt;
+&lt;li&gt;For real production-scale assets, you’ll want paid plans or other tools&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;2-agents-inside-an-ide-demand-respect-for-permissions&quot;&gt;2) Agents inside an IDE demand respect for permissions&lt;/h3&gt;&lt;a href=&quot;#2-agents-inside-an-ide-demand-respect-for-permissions&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2) Agents inside an IDE demand respect for permissions”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Security researchers noted that Antigravity’s “agents can run terminal commands and access files” design carries risks, such as: ([TechRadar][12])&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Prompt injection leading agents to run odd commands&lt;/li&gt;
+&lt;li&gt;Accidentally exposing &lt;code dir=&quot;auto&quot;&gt;.env&lt;/code&gt; or sensitive logs&lt;/li&gt;
+&lt;li&gt;Overly broad permissions could even delete files&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Not directly about images, but:&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;If you’re letting it edit code, move files, and run scripts, double-check permission settings. The image magic is cool—just don’t “draw” your servers away.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;vi-final-thoughts-with-an-in-ide-artist-where-would-you-use-it&quot;&gt;VI. Final Thoughts: With an “In-IDE Artist,” Where Would You Use It?&lt;/h2&gt;&lt;a href=&quot;#vi-final-thoughts-with-an-in-ide-artist-where-would-you-use-it&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “VI. Final Thoughts: With an “In-IDE Artist,” Where Would You Use It?”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;In one sentence:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Antigravity upgrades “AI that can code” into “a whole team of agents that can code, draw, and run a browser.”&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;For product builders, frontend devs, and indie makers, the value is threefold:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Faster MVPs and demos&lt;/li&gt;
+&lt;li&gt;UI/visuals and code no longer live on separate tracks&lt;/li&gt;
+&lt;li&gt;Solo projects feel like working with a small team&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Where would you use built-in image generation?&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Internal demos for reviews?&lt;/li&gt;
+&lt;li&gt;Side-project landing pages?&lt;/li&gt;
+&lt;li&gt;Or as a low-cost “design buddy”?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Share your thoughts in the comments—or pass this to the frontend/product/indie folks around you to try the new workflow.&lt;/p&gt;&lt;!-- 
+---
+
+## Recommended Titles (multilingual + slug)
+
+### Title 1
+
+* Simplified Chinese: **Google Antigravity 会写代码也会画图：IDE 里一键生成 UI 和配图**
+* English: *Google Antigravity Can Code and Draw: One-Click UI &amp; Images Inside Your IDE*
+* Traditional Chinese: **Google Antigravity 會寫程式也會畫圖：IDE 裡一鍵生成 UI 和配圖**
+* Japanese: **Google Antigravity はコードも画像もお任せ：IDE 内でUIと画像を一発生成**
+* Français : *Google Antigravity sait coder et dessiner : UI et visuels en un clic dans l’IDE*
+* Español: *Google Antigravity programa y dibuja: UI e imágenes en un clic dentro del IDE*
+* Português: *Google Antigravity programa e desenha: UI e imagens com um clique no IDE*
+* slug-url: `google-antigravity-ide-image-generation-ui-assets`
+
+### Title 2
+
+* Simplified Chinese: **在 Antigravity 里写前端，就像自带一个画师合伙人**
+* English: *Writing Frontend in Antigravity Feels Like Having a Designer Partner*
+* Traditional Chinese: **在 Antigravity 裡寫前端，就像自帶一位畫師夥伴**
+* Japanese: **Antigravity でフロントエンドを書くとデザイナーと組んでいる感覚になる**
+* Français : *Coder le frontend dans Antigravity, c’est comme avoir un designer à côté de soi*
+* Español: *Hacer frontend en Antigravity es como tener un diseñador de socio*
+* Português: *Fazer frontend no Antigravity é como ter um designer como sócio*
+* slug-url: `antigravity-frontend-like-having-designer-partner`
+
+### Title 3
+
+* Simplified Chinese: **别再来回切 Figma 了：Antigravity 里直接生成页面视觉和代码**
+* English: *Stop Alt-Tabbing to Figma: Generate UI Visuals and Code Directly in Antigravity*
+* Traditional Chinese: **別再來回切 Figma 了：在 Antigravity 裡直接生成頁面視覺和程式碼**
+* Japanese: **Figma を行き来するのは卒業：Antigravity でUI画像とコードを一気に生成**
+* Français : *Fini les allers-retours avec Figma : générez visuels et code directement dans Antigravity*
+* Español: *No más ir y venir con Figma: genera visuales y código directamente en Antigravity*
+* Português: *Chega de alternar com o Figma: gere visuais e código direto no Antigravity*
+* slug-url: `no-more-figma-alt-tab-antigravity-ui-code`
+
+---
+
+## Image Prompts (drop into your image tool)
+
+&gt; Requirement: illustration style, 2:1 ratio, no Chinese text in the image.
+
+### 1) Cover image
+
+&gt; *A wide 2:1 illustration of a modern developer desk at night. On the main monitor, a futuristic IDE labeled “Antigravity” shows a split screen: code on the left, AI-generated images and UI mockups on the right. Soft neon lights, tech vibe, clean and minimal, no Chinese text anywhere.*
+
+### 2) Section image: What is Antigravity
+
+&gt; *2:1 illustration of a control room–style workspace. Multiple floating panels show a code editor, terminal, and browser window with small robots (AI agents) working together. One panel highlights the word “Antigravity IDE.” Futuristic but friendly, no Chinese text.*
+
+### 3) Section image: Generating UI and logos inside the IDE
+
+&gt; *2:1 illustration of a developer and a friendly robot assistant standing in front of a large screen. The screen displays a web app UI mockup and several logo variations side by side, as if just generated. Bright colors, clean lines, no Chinese text.*
+
+### 4) Section image: Indie developer workflow
+
+&gt; *2:1 illustration of a solo indie hacker working in a small cozy room. One monitor shows code, another shows AI-generated images and charts. Sticky notes and a coffee mug around, giving a late-night building vibe. No Chinese text on screen.*
+
+---
+
+## Social/Comment Copy Examples (Moments &amp; comment section)
+
+1.
+
+&gt; Just read a piece about Antigravity. You can code and have it draw UI and images inside the IDE—feels like no more alt-tabbing to Figma for demos 😂 Frontend folks might want to peek.
+
+2.
+
+&gt; Google’s Antigravity goes hard: ship a page and it cranks out illustrations and logos too. Indie devs just gained a “designer buddy.” Thinking about tossing my next side project to it 👀
+
+3.
+
+&gt; Sharing this with our frontend and design teammates: maybe the “pull an all-nighter before design reviews” era is ending… or turning into all-nighters wrestling prompts? 🤦‍♂️
+
+---
+
+Is this length and angle enough?  
+Should I also write a **more hands-on tutorial** (e.g., step-by-step “how to configure Nano Banana Pro in Antigravity for image generation”)?
+--&gt;</content:encoded><category>Google Antigravity</category><category>Gemini 3 Pro</category><category>Nano Banana Pro</category></item><item><title>2025 Concierge Guide: Step-by-Step Applying for a Google Developer Account (with D-U-N-S / Payment Tips)</title><link>https://www.vibesparking.com/en/blog/ai/google/play/2025-12-05-google-developer-account-application-guide/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/google/play/2025-12-05-google-developer-account-application-guide/</guid><pubDate>Fri, 05 Dec 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- This article is written in a WeChat Official Account style. It covers the three key points you asked for and adds practical tips and “avoid the pitfalls” advice in light of Google Play’s tighter policies, to raise reader value and completion rates.
 
 ---
 
@@ -2707,301 +3480,4 @@ Want me to draft a ready‑to‑use `SKILL.md` for any one scenario above—or e
 &lt;ul&gt;
 &lt;li&gt;Specs first to reduce rework; approvals up front to lower risk&lt;/li&gt;
 &lt;li&gt;Task closure with traceable outputs; archivable changes for reusable knowledge&lt;/li&gt;
-&lt;/ul&gt;</content:encoded><category>Claude Code</category><category>OpenSpec</category></item><item><title>Q3 2025 AI Chip Supply Chain Earnings Start Strong: ASML and TSMC Beat — Where Does NVIDIA Go from Here?</title><link>https://www.vibesparking.com/en/blog/finance/us-market/2025-10-16-2025-q3-ai-chip-supply-chain-earnings-outlook/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/finance/us-market/2025-10-16-2025-q3-ai-chip-supply-chain-earnings-outlook/</guid><pubDate>Thu, 16 Oct 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # 2025年Q3 AI芯片产业链财报开门红：阿斯麦、台积电业绩超预期，英伟达将何去何从？ --&gt;
-&lt;div&gt;&lt;h2 id=&quot;opening-tech-earnings-season-kicks-off-supplychain-confidence-surges&quot;&gt;Opening: Tech Earnings Season Kicks Off, Supply‑Chain Confidence Surges&lt;/h2&gt;&lt;a href=&quot;#opening-tech-earnings-season-kicks-off-supplychain-confidence-surges&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Opening: Tech Earnings Season Kicks Off, Supply‑Chain Confidence Surges”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;As this earnings season shows, the AI chip supply chain is firing on all cylinders. ASML and TSMC both delivered upside surprises in their Q3 2025 results. More importantly, both turned distinctly more optimistic in their outlooks — a sharp contrast with their cautious tone three months ago.&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;asml-q3-highlights&quot;&gt;ASML Q3 Highlights&lt;/h3&gt;&lt;a href=&quot;#asml-q3-highlights&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “ASML Q3 Highlights”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;Revenue €7.5B (≈$8.2B), gross margin 51.6%&lt;/li&gt;
-&lt;li&gt;Net income €2.125B, above market expectations&lt;/li&gt;
-&lt;li&gt;Q4 guidance raised sharply to €9.2–9.8B; gross margin 51%–53%&lt;/li&gt;
-&lt;li&gt;The key shift: management explicitly said 2026 revenue will not be below 2025, reversing prior uncertainty&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h3 id=&quot;tsmcs-record-q3&quot;&gt;TSMC’s Record Q3&lt;/h3&gt;&lt;a href=&quot;#tsmcs-record-q3&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “TSMC’s Record Q3”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;Revenue NT$989.92B (≈$32.2B), up 39% y/y&lt;/li&gt;
-&lt;li&gt;Net income NT$452.3B (≈$14.8B), a record high&lt;/li&gt;
-&lt;li&gt;ADR EPS up 39% y/y; dynamic P/E only 33x, PEG &amp;#x3C; 1&lt;/li&gt;
-&lt;li&gt;Full‑year revenue growth target raised from 30% to 35%&lt;/li&gt;
-&lt;li&gt;Gross margin at a strong 59.5%, underscoring pricing power&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;The core message from both prints: AI acceleration is itself being accelerated.&lt;/p&gt;
-&lt;div&gt;&lt;h2 id=&quot;supplychain-triangle-asml--tsmc--nvidia&quot;&gt;Supply‑Chain Triangle: ASML → TSMC → NVIDIA&lt;/h2&gt;&lt;a href=&quot;#supplychain-triangle-asml--tsmc--nvidia&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Supply‑Chain Triangle: ASML → TSMC → NVIDIA”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;To understand how these three companies interrelate, start with the key nodes in the AI chip value chain:&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;asml--the-photolithography-monopolist&quot;&gt;ASML — The Photolithography Monopolist&lt;/h3&gt;&lt;a href=&quot;#asml--the-photolithography-monopolist&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “ASML — The Photolithography Monopolist”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;World’s only supplier of EUV lithography equipment&lt;/li&gt;
-&lt;li&gt;Each EUV system sells for &gt;$200M; the latest High‑NA EUV is ~$380M per unit&lt;/li&gt;
-&lt;li&gt;All advanced‑node manufacturers (TSMC, Samsung, Intel) depend heavily on ASML&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h3 id=&quot;tsmc--the-king-of-advanced-foundry&quot;&gt;TSMC — The King of Advanced Foundry&lt;/h3&gt;&lt;a href=&quot;#tsmc--the-king-of-advanced-foundry&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “TSMC — The King of Advanced Foundry”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;61% global foundry share; 67% share in advanced nodes (&amp;#x3C;7nm)&lt;/li&gt;
-&lt;li&gt;Chips from all top AI designers (NVIDIA, Apple, AMD, etc.) are manufactured by TSMC&lt;/li&gt;
-&lt;li&gt;Mass‑production at 3nm; 2nm in progress&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h3 id=&quot;nvidia--the-ai-chip-design-leader&quot;&gt;NVIDIA — The AI Chip Design Leader&lt;/h3&gt;&lt;a href=&quot;#nvidia--the-ai-chip-design-leader&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “NVIDIA — The AI Chip Design Leader”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;~$4.38T market cap; data‑center business is ~88% of revenue&lt;/li&gt;
-&lt;li&gt;Relies entirely on TSMC’s advanced nodes to produce H100, H200, and the new Blackwell series&lt;/li&gt;
-&lt;li&gt;Blackwell generated ~$11B in FY25 Q4 revenue alone — the “fastest product ramp” in company history&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;The transmission goes: ASML’s EUV tools → TSMC’s advanced‑node capacity → NVIDIA’s AI chip supply. A bottleneck at any node constrains the entire chain.&lt;/p&gt;
-&lt;div&gt;&lt;h2 id=&quot;data-stockperformance-and-results-correlations&quot;&gt;Data: Stock‑Performance and Results Correlations&lt;/h2&gt;&lt;a href=&quot;#data-stockperformance-and-results-correlations&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Data: Stock‑Performance and Results Correlations”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;Analyzing post‑earnings stock moves for these three from 2022–2025 reveals important patterns:&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;finding-1-tsmcs-link-to-nvidia-is-tighter&quot;&gt;Finding 1: TSMC’s Link to NVIDIA Is Tighter&lt;/h3&gt;&lt;a href=&quot;#finding-1-tsmcs-link-to-nvidia-is-tighter&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Finding 1: TSMC’s Link to NVIDIA Is Tighter”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;Our statistics show:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;In the 10 trading days after TSMC earnings, NVIDIA’s return correlation is 0.70 (p=0.004) — statistically significant&lt;/li&gt;
-&lt;li&gt;After ASML earnings, NVIDIA’s 10‑day correlation is 0.49 (p=0.065) — weaker&lt;/li&gt;
-&lt;li&gt;Over 30‑day windows, TSMC↔NVIDIA correlation stays ~0.48; ASML drops to ~0.13&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;This supports the intuition that the nearer the link in the chain, the stronger the co‑movement. As NVIDIA’s direct supplier, TSMC’s capacity and process progress directly shape how many chips NVIDIA can ship.&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;finding-2-supplier-earnings-tend-to-lift-nvidia&quot;&gt;Finding 2: Supplier Earnings Tend to Lift NVIDIA&lt;/h3&gt;&lt;a href=&quot;#finding-2-supplier-earnings-tend-to-lift-nvidia&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Finding 2: Supplier Earnings Tend to Lift NVIDIA”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;On average:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;In the 10 days after ASML reports, NVIDIA rose 3.8%; over 30 days, +14.2%&lt;/li&gt;
-&lt;li&gt;In the 10 days after TSMC reports, NVIDIA rose 2.1%; over 30 days, +15.8%&lt;/li&gt;
-&lt;li&gt;The effect was most pronounced in 2023 (the breakout year for AI): post‑ASML 30‑day average +19.8%; post‑TSMC +26.7%&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h3 id=&quot;finding-3-correlations-weakened-in-20242025-but-remain-meaningful&quot;&gt;Finding 3: Correlations Weakened in 2024–2025 but Remain Meaningful&lt;/h3&gt;&lt;a href=&quot;#finding-3-correlations-weakened-in-20242025-but-remain-meaningful&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Finding 3: Correlations Weakened in 2024–2025 but Remain Meaningful”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;As NVIDIA’s market cap surpassed $3T, its stock began to reflect more macro factors:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Fed policy expectations&lt;/li&gt;
-&lt;li&gt;U.S. export‑control policy toward China&lt;/li&gt;
-&lt;li&gt;Competition (AMD; hyperscaler in‑house chips)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Even so, supplier earnings remain pivotal indicators for NVIDIA — especially TSMC’s expansion plans and ASML’s EUV shipment cadence, which map to NVIDIA’s potential shipments over the next 12–18 months.&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;shareprice-performance-comparison&quot;&gt;Share‑Price Performance Comparison&lt;/h3&gt;&lt;a href=&quot;#shareprice-performance-comparison&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Share‑Price Performance Comparison”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;NVIDIA vs. ASML vs. TSMC since early 2022 (indexed to 100 at Jan 2022)&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;The chart shows NVIDIA up 497%, TSMC up 137%, and ASML up 27% over the period. The gap reflects differences in value capture:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;NVIDIA&lt;/strong&gt;: commands the highest value‑added layer via CUDA software ecosystem and leading chip design&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;TSMC&lt;/strong&gt;: manufacturing profits are high (≈60% gross margin) but massive capex tempers stock elasticity&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;ASML&lt;/strong&gt;: EUV monopoly, but the customer base is limited (principally TSMC, Samsung, Intel) and deliveries are long‑cycle, making growth steadier&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h3 id=&quot;earningsseason-by-year-who-leads&quot;&gt;Earnings‑Season by Year: Who Leads?&lt;/h3&gt;&lt;a href=&quot;#earningsseason-by-year-who-leads&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Earnings‑Season by Year: Who Leads?”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Year&lt;/th&gt;&lt;th&gt;NVIDIA Return&lt;/th&gt;&lt;th&gt;ASML Return&lt;/th&gt;&lt;th&gt;TSMC Return&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;2022&lt;/td&gt;&lt;td&gt;-51.5%&lt;/td&gt;&lt;td&gt;-31.5%&lt;/td&gt;&lt;td&gt;-42.2%&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2023&lt;/td&gt;&lt;td&gt;+245.8%&lt;/td&gt;&lt;td&gt;+37.7%&lt;/td&gt;&lt;td&gt;+40.5%&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2024&lt;/td&gt;&lt;td&gt;+178.8%&lt;/td&gt;&lt;td&gt;-3.3%&lt;/td&gt;&lt;td&gt;+94.5%&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2025 (YTD)&lt;/td&gt;&lt;td&gt;+33.9%&lt;/td&gt;&lt;td&gt;+45.7%&lt;/td&gt;&lt;td&gt;+54.3%&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
-&lt;p&gt;&lt;strong&gt;Key observations:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;2022 bear market&lt;/strong&gt;: all three fell sharply; ASML fell least, showing defensiveness&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;2023 “AI year one”&lt;/strong&gt;: NVIDIA +246%; TSMC and ASML more moderate (+38–41%)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;2024 divergence&lt;/strong&gt;: NVIDIA +179%; TSMC +95%; ASML −3% — reflecting China‑related limits and macro concerns&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;2025 YTD&lt;/strong&gt;: first time all three are rising together; TSMC/ASML outpacing NVIDIA as markets re‑rate upstream value&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h2 id=&quot;three-key-signals-from-this-earnings-season&quot;&gt;Three Key Signals from This Earnings Season&lt;/h2&gt;&lt;a href=&quot;#three-key-signals-from-this-earnings-season&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Three Key Signals from This Earnings Season”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h3 id=&quot;signal-1-asmls-2026-stance-flips-180-degrees&quot;&gt;Signal 1: ASML’s 2026 Stance Flips 180 Degrees&lt;/h3&gt;&lt;a href=&quot;#signal-1-asmls-2026-stance-flips-180-degrees&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Signal 1: ASML’s 2026 Stance Flips 180 Degrees”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;In July 2024 (Q2), ASML cautioned that “given rising macro and geopolitical uncertainty, we cannot confirm growth in 2026,” triggering a ~16% single‑day drop.&lt;/p&gt;
-&lt;p&gt;In Q3, management stated clearly that &lt;strong&gt;“2026 total revenue will not be below 2025,”&lt;/strong&gt; stressing enduring AI‑driven demand. Drivers include:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Strong EUV orders: €5.4B net bookings in Q3, with €3.6B from EUV&lt;/li&gt;
-&lt;li&gt;High‑NA EUV shipments have begun, at higher price points (~$380M/unit)&lt;/li&gt;
-&lt;li&gt;TSMC, Samsung, Intel are all expanding; photolithography demand remains robust&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h3 id=&quot;signal-2-tsmc-lifts-2025-fullyear-growth-from-30-to-35&quot;&gt;Signal 2: TSMC Lifts 2025 Full‑Year Growth from 30% to 35%&lt;/h3&gt;&lt;a href=&quot;#signal-2-tsmc-lifts-2025-fullyear-growth-from-30-to-35&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Signal 2: TSMC Lifts 2025 Full‑Year Growth from 30% to 35%”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;In Q3, TSMC raised its 2025 USD revenue‑growth outlook from 30% to 35% — the second raise this year. CFO Wendell Huang noted: “We saw strong demand for advanced technologies in Q3, and as we enter Q4, we expect the strength to continue.”&lt;/p&gt;
-&lt;p&gt;More importantly, TSMC said 3nm and more advanced nodes are fully booked, with customers “competing for capacity,” indicating strong demand from NVIDIA, Apple, and others.&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;signal-3-nvidia-blackwell-is-supplyconstrained-q4-guide-above-street&quot;&gt;Signal 3: NVIDIA Blackwell Is Supply‑Constrained; Q4 Guide Above Street&lt;/h3&gt;&lt;a href=&quot;#signal-3-nvidia-blackwell-is-supplyconstrained-q4-guide-above-street&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Signal 3: NVIDIA Blackwell Is Supply‑Constrained; Q4 Guide Above Street”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;While NVIDIA has not yet reported Q3 (due Nov 19), Q2 already showed a rapid Blackwell ramp:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Q2 Blackwell revenue +17% q/q&lt;/li&gt;
-&lt;li&gt;Q3 guide $54.0B (±2%), above the Street’s $52.7B&lt;/li&gt;
-&lt;li&gt;CEO Jensen Huang: “Blackwell demand is surprising… we have achieved large‑scale mass production of Blackwell AI supercomputers.”&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;UBS lifted its Blackwell Q4 revenue estimate from $5B to $9B, signaling demand far above prior expectations.&lt;/p&gt;
-&lt;div&gt;&lt;h2 id=&quot;forecast-nvidias-q3-and-the-road-ahead&quot;&gt;Forecast: NVIDIA’s Q3 and the Road Ahead&lt;/h2&gt;&lt;a href=&quot;#forecast-nvidias-q3-and-the-road-ahead&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Forecast: NVIDIA’s Q3 and the Road Ahead”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;Based on supplier prints and historical correlations, we estimate:&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;q3-reports-nov-19&quot;&gt;Q3 (reports Nov 19)&lt;/h3&gt;&lt;a href=&quot;#q3-reports-nov-19&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Q3 (reports Nov 19)”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Revenue&lt;/strong&gt;: consensus $54.0B; we see a modest beat to $54.5–55.0B&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Data‑center revenue&lt;/strong&gt;: $47–48B (≈88–89% mix)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Gross margin&lt;/strong&gt;: 73–74%, a touch above Q2’s 72.7%&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Q4 guide&lt;/strong&gt;: $60–65B as Blackwell continues to ramp&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h3 id=&quot;stock-outlook&quot;&gt;Stock outlook&lt;/h3&gt;&lt;a href=&quot;#stock-outlook&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Stock outlook”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;Near term (1 month post‑print)&lt;/strong&gt;: if results land near expectations, shares could test the $200–210 range (≈11–17% above the current ~$180).&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Through 2025 year‑end&lt;/strong&gt;: Street average target ~$222 (+23%).&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Upside case&lt;/strong&gt;: if Blackwell capacity and demand both exceed expectations, HSBC’s $320 target is conceivable (+78%).&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;key-risks&quot;&gt;Key risks&lt;/h3&gt;&lt;a href=&quot;#key-risks&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Key risks”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Macro slowdown&lt;/strong&gt;: weaker global growth could curb enterprise IT spending&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Rising competition&lt;/strong&gt;: AMD’s MI300 and hyperscaler in‑house silicon (Google TPU, Amazon Trainium) chip away at share&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Geopolitics&lt;/strong&gt;: tighter U.S. export controls on China&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Valuation pressure&lt;/strong&gt;: current ~51x P/E sits well above the market average&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h2 id=&quot;investment-takeaways-positioning-for-the-ai-chip-chain&quot;&gt;Investment Takeaways: Positioning for the AI Chip Chain&lt;/h2&gt;&lt;a href=&quot;#investment-takeaways-positioning-for-the-ai-chip-chain&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Investment Takeaways: Positioning for the AI Chip Chain”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h3 id=&quot;core-holding-nvidia&quot;&gt;Core holding: NVIDIA&lt;/h3&gt;&lt;a href=&quot;#core-holding-nvidia&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Core holding: NVIDIA”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Strengths&lt;/strong&gt;: clear technology lead and a moat built on CUDA’s software ecosystem&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Valuation&lt;/strong&gt;: ~51x P/E not trivial, but ~1.3 PEG (on 35–40% growth) remains reasonable&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Allocation&lt;/strong&gt;: core position, ~50–60% of an AI‑theme sleeve&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h3 id=&quot;quality-anchor-tsmc&quot;&gt;Quality anchor: TSMC&lt;/h3&gt;&lt;a href=&quot;#quality-anchor-tsmc&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Quality anchor: TSMC”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Strengths&lt;/strong&gt;: leading advanced‑node manufacturing; diversified blue‑chip customers (Apple, NVIDIA, AMD, etc.); hard to replace&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Valuation&lt;/strong&gt;: ~33.6x P/E, below NVIDIA; PEG &amp;#x3C; 1 — attractive&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Allocation&lt;/strong&gt;: primary holding for balanced profiles, ~30–40%&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h3 id=&quot;defensive-ballast-asml&quot;&gt;Defensive ballast: ASML&lt;/h3&gt;&lt;a href=&quot;#defensive-ballast-asml&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Defensive ballast: ASML”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Strengths&lt;/strong&gt;: absolute EUV monopoly; high long‑term visibility&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Weaknesses&lt;/strong&gt;: slower growth; more sensitive to macro cycles; sold off in 2024 on China concerns&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Allocation&lt;/strong&gt;: defensive weight, ~10–20%&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h3 id=&quot;note-mind-the-transmission-lags-along-the-chain&quot;&gt;Note: Mind the transmission lags along the chain&lt;/h3&gt;&lt;a href=&quot;#note-mind-the-transmission-lags-along-the-chain&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Note: Mind the transmission lags along the chain”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;Our work suggests ASML/TSMC earnings impact NVIDIA with lag:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Short term (≤10 days)&lt;/strong&gt;: higher correlations, smaller absolute moves&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Medium term (~30 days)&lt;/strong&gt;: weaker correlation, larger cumulative moves&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Longer term (quarterly)&lt;/strong&gt;: all three converge toward fundamentals&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Hence we do not recommend short‑term trading purely on supplier reports; focus on multi‑quarter trends.&lt;/p&gt;
-&lt;div&gt;&lt;h2 id=&quot;conclusion-the-acceleration-of-ai-acceleration-is-just-beginning&quot;&gt;Conclusion: The Acceleration of AI Acceleration Is Just Beginning&lt;/h2&gt;&lt;a href=&quot;#conclusion-the-acceleration-of-ai-acceleration-is-just-beginning&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Conclusion: The Acceleration of AI Acceleration Is Just Beginning”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;ASML and TSMC’s Q3 beats are not only their own victories; they’re also barometers of supply‑chain health. As TSMC’s CFO put it, “We continue to see strong AI‑related demand, and we expect the trend to extend into 2026.”&lt;/p&gt;
-&lt;p&gt;Historically, NVIDIA has risen an average 15.8% in the 30 days post‑TSMC earnings, and 14.2% after ASML. With both suppliers beating this season, NVIDIA enters its Q3 report with a constructive setup.&lt;/p&gt;
-&lt;p&gt;For investors, the AI chip chain presents a rare case of full‑chain resonance: upstream ASML orderbooks are full; midstream TSMC is running flat out; downstream NVIDIA demand remains robust. In this backdrop, the acceleration of AI acceleration may be only getting started.&lt;/p&gt;
-&lt;hr&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;Risk Disclaimer&lt;/strong&gt;: Investing involves risk. This article is for reference only and does not constitute investment advice.&lt;/p&gt;
-&lt;/blockquote&gt;</content:encoded><category>Finance</category><category>US Market</category><category>Investment</category><category>AI</category><category>NVIDIA</category><category>TSMC</category><category>ASML</category><category>Semiconductor</category><category>GPU</category></item><item><title>How ChatGPT Helps Fix Bluetooth Device UI Chaos</title><link>https://www.vibesparking.com/en/blog/ai/chatgpt/2025-10-16-chatgpt-fix-bluetooth-device-ui-chaos/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/chatgpt/2025-10-16-chatgpt-fix-bluetooth-device-ui-chaos/</guid><pubDate>Thu, 16 Oct 2025 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
-&lt;p&gt;Scenario recap: You built a mobile app that scans nearby BLE devices. Your office/ward/desk is full of the same model, all with the same name. The scan results keep “jumping” as new devices arrive; just as users tap one, it gets pushed away — pure frustration for a PM.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;This article doesn’t go into protocol internals. Instead, it shows how to use ChatGPT as your AI interaction partner: turn complex technical constraints into a UI your team can build, users can understand, and QA can validate.&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;1-align-on-technical-boundaries-first-then-pick-the-ui&quot;&gt;1) Align on technical boundaries first, then pick the UI&lt;/h2&gt;&lt;a href=&quot;#1-align-on-technical-boundaries-first-then-pick-the-ui&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1) Align on technical boundaries first, then pick the UI”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;For BLE scanning, a few facts directly shape your design:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Advertising payload: Useful info includes local name, service UUIDs, manufacturer data, Tx Power, etc. These can help you distinguish devices and filter. They’re read from the advertisement data structures.&lt;/li&gt;
-&lt;li&gt;iOS does not expose MAC addresses (privacy). Apps receive a &lt;code dir=&quot;auto&quot;&gt;CBPeripheral.identifier&lt;/code&gt;-style UUID, and it is not guaranteed to be permanently stable. Do not bake “display/remember MAC address” into any cross‑platform plan. Prefer short codes/manufacturer data from the advertisement as the differentiator.&lt;/li&gt;
-&lt;li&gt;Android can pre-filter and batch callbacks via &lt;code dir=&quot;auto&quot;&gt;ScanFilter&lt;/code&gt; and &lt;code dir=&quot;auto&quot;&gt;ScanSettings&lt;/code&gt; (e.g., filter by service UUID/manufacturer data and use &lt;code dir=&quot;auto&quot;&gt;setReportDelay&lt;/code&gt; for batched dispatch). This dramatically reduces UI jitter.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;With these boundaries clear, ChatGPT can propose cross‑platform interaction patterns that are actionable, not just theory.&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;2-break-i-cant-tap-the-right-one-into-three-solvable-ux-problems&quot;&gt;2) Break “I can’t tap the right one” into three solvable UX problems&lt;/h2&gt;&lt;a href=&quot;#2-break-i-cant-tap-the-right-one-into-three-solvable-ux-problems&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2) Break “I can’t tap the right one” into three solvable UX problems”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h3 id=&quot;a-recognition-too-many-identical-names--which-one-do-i-pick&quot;&gt;A. Recognition: Too many identical names — which one do I pick?&lt;/h3&gt;&lt;a href=&quot;#a-recognition-too-many-identical-names--which-one-do-i-pick&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “A. Recognition: Too many identical names — which one do I pick?”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;Solution: Generate a human‑recognizable short label per device.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Ask hardware to add a short code in the advertised name or Manufacturer Data (e.g., last 4 digits of S/N or batch + checksum). Surface it as a subtitle: &lt;code dir=&quot;auto&quot;&gt;Device Name · Short Code 3K7F&lt;/code&gt;. This is a common use of BLE advertisement.&lt;/li&gt;
-&lt;li&gt;iOS cannot show MAC: use the short code and/or service signature from the advertisement as the distinguishing factor. Don’t promise MAC in product specs.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h3 id=&quot;b-jitter-list-jumps-as-it-refreshes-finger-misses-the-target&quot;&gt;B. Jitter: List jumps as it refreshes; finger misses the target&lt;/h3&gt;&lt;a href=&quot;#b-jitter-list-jumps-as-it-refreshes-finger-misses-the-target&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “B. Jitter: List jumps as it refreshes; finger misses the target”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;Solution: Decouple “data changes” from “interface changes”.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Batched callbacks: On Android, enable &lt;code dir=&quot;auto&quot;&gt;ScanSettings.Builder#setReportDelay(xxx)&lt;/code&gt; so N updates arrive as a batch. Diff‑update the list once to reduce item shifts.&lt;/li&gt;
-&lt;li&gt;Freeze interactive zones: When the user long‑presses or enters multi‑select, freeze sorting and positions. Only update light fields inside items (e.g., RSSI value). Merge the full refresh after the action. This follows the principle “don’t let refreshes interrupt the user’s task”.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h3 id=&quot;c-decision-load-too-noisy--help-me-narrow-scope-first&quot;&gt;C. Decision load: Too noisy — help me narrow scope first&lt;/h3&gt;&lt;a href=&quot;#c-decision-load-too-noisy--help-me-narrow-scope-first&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “C. Decision load: Too noisy — help me narrow scope first”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;Solution: Put filter controls where the hand is.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Use Filter/Assist Chips above the list for one‑tap toggles like “Recently used only”, “Strong signal only”, “Connectable only”, “Target service only”. Chips are made for quick filtering.&lt;/li&gt;
-&lt;li&gt;Make filtering/sorting intent‑aligned — avoid large jumps that break focus. NN/g specifically recommends minimizing “view jumping” when applying filters.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;3-a-readytoship-ui-package-for-pms-via-chatgpt&quot;&gt;3) A ready‑to‑ship UI package for PMs (via ChatGPT)&lt;/h2&gt;&lt;a href=&quot;#3-a-readytoship-ui-package-for-pms-via-chatgpt&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3) A ready‑to‑ship UI package for PMs (via ChatGPT)”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;You can paste the following to ChatGPT to polish copy, generate a prototype (describe it), or output component and acceptance lists.&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;1-list-item-anatomy&quot;&gt;(1) List item anatomy&lt;/h3&gt;&lt;a href=&quot;#1-list-item-anatomy&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “(1) List item anatomy”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;Title: &lt;code dir=&quot;auto&quot;&gt;Device name&lt;/code&gt; (append batch/model if names collide)&lt;/li&gt;
-&lt;li&gt;Subtitle: &lt;code dir=&quot;auto&quot;&gt;Short code · Service overview&lt;/code&gt; (e.g., &lt;code dir=&quot;auto&quot;&gt;3K7F · Battery, UpdateSvc&lt;/code&gt;)&lt;/li&gt;
-&lt;li&gt;Right‑side info: &lt;code dir=&quot;auto&quot;&gt;RSSI&lt;/code&gt; (supports the “tap the one you’re close to” mental model; if showing distance, prefer coarse buckets strong/medium/weak to avoid misleading precision)&lt;/li&gt;
-&lt;li&gt;Status badges: &lt;code dir=&quot;auto&quot;&gt;Recently used&lt;/code&gt; / &lt;code dir=&quot;auto&quot;&gt;New device&lt;/code&gt; (reduces decision cost). Use small badges or Chips (MD3).&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h3 id=&quot;2-toplevel-quick-filters-chips&quot;&gt;(2) Top‑level quick filters (Chips)&lt;/h3&gt;&lt;a href=&quot;#2-toplevel-quick-filters-chips&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “(2) Top‑level quick filters (Chips)”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;Recently used only&lt;/code&gt;, &lt;code dir=&quot;auto&quot;&gt;Strong signal only&lt;/code&gt; (&gt; −70 dBm), &lt;code dir=&quot;auto&quot;&gt;Connectable only&lt;/code&gt;, &lt;code dir=&quot;auto&quot;&gt;Target service only&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Interaction policy: Keep the viewport stable on toggle. Try not to move the currently focused item.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h3 id=&quot;3-sorting-and-grouping-avoid-the-alphabetical-trap&quot;&gt;(3) Sorting and grouping (avoid the alphabetical trap)&lt;/h3&gt;&lt;a href=&quot;#3-sorting-and-grouping-avoid-the-alphabetical-trap&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “(3) Sorting and grouping (avoid the alphabetical trap)”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;Default: Sort by &lt;code dir=&quot;auto&quot;&gt;last interaction time&lt;/code&gt; descending (user mental model: the thing I just used should be first).&lt;/li&gt;
-&lt;li&gt;Alternative: Group into &lt;code dir=&quot;auto&quot;&gt;Recently used&lt;/code&gt; / &lt;code dir=&quot;auto&quot;&gt;New devices&lt;/code&gt;, then sort within groups by RSSI or last seen time. As NN/g notes, alphabetical sorting is rarely the best choice for decision tasks.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h3 id=&quot;4-refresh-and-selection-stability&quot;&gt;(4) Refresh and selection stability&lt;/h3&gt;&lt;a href=&quot;#4-refresh-and-selection-stability&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “(4) Refresh and selection stability”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;Combine Android batched callbacks with list diffing. When entering multi‑select/long‑press, freeze ordering; only “light‑update” fields inside items (e.g., RSSI).&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h3 id=&quot;5-crossplatform-identifier-strategy&quot;&gt;(5) Cross‑platform identifier strategy&lt;/h3&gt;&lt;a href=&quot;#5-crossplatform-identifier-strategy&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “(5) Cross‑platform identifier strategy”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;Android: Use MAC (when available) or the advertised short code.&lt;/li&gt;
-&lt;li&gt;iOS: Use &lt;code dir=&quot;auto&quot;&gt;CBPeripheral.identifier&lt;/code&gt; plus advertised short code/service signature. Do not commit to displaying/remembering MAC.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;4-copy-and-naming-you-can-drop-in-encn-hints--field-names&quot;&gt;4) Copy and naming you can drop in (EN/CN hints + field names)&lt;/h2&gt;&lt;a href=&quot;#4-copy-and-naming-you-can-drop-in-encn-hints--field-names&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “4) Copy and naming you can drop in (EN/CN hints + field names)”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;Group headers (UI copy)&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Recently Used Devices / 最近使用过的设备&lt;/li&gt;
-&lt;li&gt;New Devices / 新设备&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Filter chips (UI copy)&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Recently used / 只看最近使用&lt;/li&gt;
-&lt;li&gt;Strong signal only (&gt; −70 dBm) / 只看强信号（&gt; −70 dBm）&lt;/li&gt;
-&lt;li&gt;Connectable only / 只看可连接&lt;/li&gt;
-&lt;li&gt;Target service only / 只看目标服务&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Interfaces/fields (snake_case)&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;json&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;{&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;recently_used_devices&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: [&lt;/span&gt;&lt;span style=&quot;--0:#FFFFFF;--1:#984E4D&quot;&gt;...&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;],&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;new_devices&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: [&lt;/span&gt;&lt;span style=&quot;--0:#FFFFFF;--1:#984E4D&quot;&gt;...&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;],&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;filters&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: {&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;recently_used&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#FF6A83;--1:#A24848&quot;&gt;true&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;rssi_threshold_dbm&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#F78C6C;--1:#AA0982&quot;&gt;-70&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;connectable_only&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#FF6A83;--1:#A24848&quot;&gt;true&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;service_uuid_includes&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: [&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;...&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;]&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;5-turn-plan--artifacts-with-chatgpt&quot;&gt;5) Turn “plan → artifacts” with ChatGPT&lt;/h2&gt;&lt;a href=&quot;#5-turn-plan--artifacts-with-chatgpt&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “5) Turn “plan → artifacts” with ChatGPT”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;Feed the “requirements + components” above to ChatGPT and ask for:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Prototype description for design: item hierarchy, chip interactions, empty‑state copy.&lt;/li&gt;
-&lt;li&gt;Engineering checklist: Android &lt;code dir=&quot;auto&quot;&gt;ScanFilter&lt;/code&gt;/&lt;code dir=&quot;auto&quot;&gt;ScanSettings&lt;/code&gt; config (with &lt;code dir=&quot;auto&quot;&gt;setReportDelay&lt;/code&gt; examples), iOS CoreBluetooth scanning and &lt;code dir=&quot;auto&quot;&gt;identifier&lt;/code&gt; usage cautions.&lt;/li&gt;
-&lt;li&gt;Acceptance cases: With 30+ devices, fluctuating RSSI, and stacked filters, can users still reliably select the intended device?&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;6-takeaways-know-the-boundaries-design-the-right-interactions&quot;&gt;6) Takeaways: Know the boundaries, design the right interactions&lt;/h2&gt;&lt;a href=&quot;#6-takeaways-know-the-boundaries-design-the-right-interactions&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “6) Takeaways: Know the boundaries, design the right interactions”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;Lean on advertisement data to distinguish devices; don’t insist on MAC on iOS.&lt;/li&gt;
-&lt;li&gt;Use batched dispatch + frozen ordering to tame list jitter.&lt;/li&gt;
-&lt;li&gt;Make filtering/sorting intent‑centric with lightweight Chips; surface “Recently used/New” to lower selection cost.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;With these constraints and patterns in hand, ChatGPT becomes your on‑call interaction consultant — bridging what’s buildable with what users grasp — turning the tiny pain of “I can’t tap it” into a chance for a big UX upgrade.&lt;/p&gt;&lt;!-- 
-References:
-[1]: https://novelbits.io/bluetooth-low-energy-advertisements-part-1/?utm_source=chatgpt.com &quot;How Bluetooth Low Energy Works: Advertisements (Part 1)&quot;
-[2]: https://punchthrough.com/core-bluetooth-guide/?utm_source=chatgpt.com &quot;Apple&apos;s IOS Core Bluetooth: The Ultimate Guide&quot;
-[3]: https://punchthrough.com/android-ble-guide/?utm_source=chatgpt.com &quot;Android BLE: The Ultimate Guide To Bluetooth Low Energy&quot;
-[4]: https://developer.android.com/reference/android/bluetooth/le/ScanSettings.Builder?utm_source=chatgpt.com &quot;ScanSettings.Builder | API reference&quot;
-[5]: https://www.nngroup.com/articles/applying-filters/?utm_source=chatgpt.com &quot;User Intent Affects Filter Design&quot;
-[6]: https://m3.material.io/components/chips?utm_source=chatgpt.com &quot;Chips – Material Design 3&quot;
-[7]: https://www.nngroup.com/articles/filter-categories-values/?utm_source=chatgpt.com &quot;Defining Helpful Filter Categories and Values for Better UX&quot;
-[8]: https://learn.microsoft.com/en-us/dotnet/api/android.bluetooth.le.scanresult.rssi?view=net-android-35.0&amp;utm_source=chatgpt.com &quot;ScanResult.Rssi Property (Android.Bluetooth.LE)&quot;
-[9]: https://m3.material.io/components?utm_source=chatgpt.com &quot;Components — Material Design 3&quot;
-[10]: https://www.nngroup.com/articles/alphabetical-sorting-must-mostly-die/?utm_source=chatgpt.com &quot;Alphabetical Sorting Must (Mostly) Die&quot; 
---&gt;</content:encoded><category>AI</category><category>ChatGPT</category><category>OpenAI</category><category>Product Manager</category><category>UX</category><category>Bluetooth</category><category>BLE</category></item></channel></rss>
+&lt;/ul&gt;</content:encoded><category>Claude Code</category><category>OpenSpec</category></item></channel></rss>
