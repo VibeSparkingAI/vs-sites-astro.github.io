@@ -1,4 +1,331 @@
-<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Vibe Sparking AI | Blog</title><description/><link>https://www.vibesparking.com/</link><language>en</language><item><title>Decoding the AI Chip Wars: Why Google TPU Won&apos;t Kill NVIDIA</title><link>https://www.vibesparking.com/en/blog/finance/us-market/2025-12-07-decoding-the-ai-chip-wars-why-google-tpu-wont-kill-nvidia/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/finance/us-market/2025-12-07-decoding-the-ai-chip-wars-why-google-tpu-wont-kill-nvidia/</guid><pubDate>Sun, 07 Dec 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # It&apos;s Not Google TPU Killing NVIDIA—It&apos;s That No One Can Live Without Compute --&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Vibe Sparking AI | Blog</title><description/><link>https://www.vibesparking.com/</link><language>en</language><item><title>Give Claude Long-Term Memory: Hands-on Guide to claude-mem</title><link>https://www.vibesparking.com/en/blog/ai/claude-code/claude-mem/2025-12-09-claude-mem-long-term-memory/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/claude-code/claude-mem/2025-12-09-claude-mem-long-term-memory/</guid><pubDate>Tue, 09 Dec 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;claude-mem actually lets Claude genuinely “remember you”&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Do you ever feel like this:&lt;/p&gt;
+&lt;p&gt;Every time you open Claude / ChatGPT to write code,
+you have to re-explain the project from scratch:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“I’m building an admin console, the stack is…”
+“Last time we stopped at user login; this time we need to add…”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Halfway through explaining, you’re already annoyed.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The model isn’t dumb; it just has no memory.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Today, let’s look at a fun little GitHub project:
+&lt;strong&gt;&lt;code dir=&quot;auto&quot;&gt;claude-mem&lt;/code&gt;—a “long-term memory” add-on for Claude Code.&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;1-what-exactly-does-claude-mem-do&quot;&gt;1. What exactly does claude-mem do?&lt;/h2&gt;&lt;a href=&quot;#1-what-exactly-does-claude-mem-do&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1. What exactly does claude-mem do?”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;In one sentence:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;It automatically records what you do in Claude Code, summarizes and compresses it,
+and the next time you open the same project, Claude will “actively recall” past context.&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;More specifically, it is:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A &lt;strong&gt;Claude Code plugin&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Automatically captures: your prompts, tool calls, file reads/writes, etc.&lt;/li&gt;
+&lt;li&gt;Uses Claude’s Agent SDK in the background to summarize and extract key points&lt;/li&gt;
+&lt;li&gt;Stores them in a local database and vector store; supports full-text + semantic search&lt;/li&gt;
+&lt;li&gt;When you reopen Claude Code, it injects the most relevant history
+back into the new conversation automatically&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;So the experience is:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;You keep coding, and Claude becomes the partner
+who remembers the project background even better than you do.&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;2-how-does-it-give-claude-memory-buffs&quot;&gt;2. How does it give Claude “memory buffs”?&lt;/h2&gt;&lt;a href=&quot;#2-how-does-it-give-claude-memory-buffs&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2. How does it give Claude “memory buffs”?”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;The official README has a clear flowchart; here’s the plain-language version:&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;1-session-start-feed-it-recent-events&quot;&gt;1) Session start: feed it “recent events”&lt;/h3&gt;&lt;a href=&quot;#1-session-start-feed-it-recent-events&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1) Session start: feed it “recent events””&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Each time you start a new session in Claude Code,
+claude-mem digs out “recent key info” from the database,
+organizes it into a concise context block,
+&lt;strong&gt;and injects it automatically at the top of the conversation&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;It’s like running through, in your head, before meeting a friend:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“Last time we talked about login and signup—what pitfalls did we hit?“&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div&gt;&lt;h3 id=&quot;2-while-you-code-it-quietly-takes-notes&quot;&gt;2) While you code: it quietly takes notes&lt;/h3&gt;&lt;a href=&quot;#2-while-you-code-it-quietly-takes-notes&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2) While you code: it quietly takes notes”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Throughout the development session, it keeps recording:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Important prompts you send to Claude&lt;/li&gt;
+&lt;li&gt;The “observations” from Claude’s tool calls (which files were read, what was written)&lt;/li&gt;
+&lt;li&gt;Some critical intermediate steps&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;These raw snippets are not replayed wholesale as context.
+Instead, they’re sent to the Worker Service, which uses Claude’s Agent SDK to summarize:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“What are the takeaways worth remembering from this session?”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;For example:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;We decided to drop a certain third-party library&lt;/li&gt;
+&lt;li&gt;Refactored the interface design of a module&lt;/li&gt;
+&lt;li&gt;Fixed a nasty bug and summarized its root cause&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;3-session-end-generate-a-study-note&quot;&gt;3) Session end: generate a “study note”&lt;/h3&gt;&lt;a href=&quot;#3-session-end-generate-a-study-note&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3) Session end: generate a “study note””&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;When the session ends, it does one more thing:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Condenses the entire session into a “project changelog + decision digest.”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;That gets stored in local SQLite (for full-text search)
+while also being written to a vector database like Chroma for semantic search.&lt;/p&gt;
+&lt;p&gt;Next time Claude looks up history, it won’t rummage through everything.
+It uses smart search + progressive disclosure to inject
+&lt;strong&gt;a small but crucial slice of context&lt;/strong&gt; back into the chat.&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;3-whats-in-it-for-developers&quot;&gt;3. What’s in it for developers?&lt;/h2&gt;&lt;a href=&quot;#3-whats-in-it-for-developers&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3. What’s in it for developers?”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3 id=&quot;1-long-running-projects-no-more-endless-recaps&quot;&gt;1) Long-running projects: no more endless recaps&lt;/h3&gt;&lt;a href=&quot;#1-long-running-projects-no-more-endless-recaps&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1) Long-running projects: no more endless recaps”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Picture a real scenario.&lt;/p&gt;
+&lt;p&gt;You’re building a SaaS admin console over 3 months,
+constantly interrupted by meetings and changing requirements.&lt;/p&gt;
+&lt;p&gt;Without claude-mem, every return to the project looks like this:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Skim Git logs and docs first&lt;/li&gt;
+&lt;li&gt;Paste a long prompt to explain the background to Claude&lt;/li&gt;
+&lt;li&gt;Only then does Claude get into the groove&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;With claude-mem installed:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;As soon as a new session opens, Claude already knows:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;What the project is about&lt;/li&gt;
+&lt;li&gt;Which modules changed recently&lt;/li&gt;
+&lt;li&gt;Which pitfalls you’ve hit so you don’t repeat them&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;You only need to say:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“Pick up where we left off on permissions and finish the export feature.”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Claude can “follow the thread” instead of looking lost.&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;2-mem-search-a-project-time-machine&quot;&gt;2) mem-search: a “project time machine”&lt;/h3&gt;&lt;a href=&quot;#2-mem-search-a-project-time-machine&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2) mem-search: a “project time machine””&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;claude-mem also ships a neat skill: &lt;strong&gt;mem-search&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;You can ask it in natural language:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;“Find how we designed the login API before.”&lt;/li&gt;
+&lt;li&gt;“That file upload bug—how did we fix it back then?”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Unlike a basic code keyword search,
+mem-search looks through &lt;strong&gt;conversations + tool calls + summarized knowledge&lt;/strong&gt;, and
+lets you control how much context to inject via progressive disclosure, saving tokens.&lt;/p&gt;
+&lt;p&gt;Simply put:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;It turns “I vaguely remember we discussed this” into “I can surface it on demand.”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div&gt;&lt;h3 id=&quot;3-web-ui-see-what-claude-is-thinking-in-real-time&quot;&gt;3) Web UI: see what Claude is “thinking” in real time&lt;/h3&gt;&lt;a href=&quot;#3-web-ui-see-what-claude-is-thinking-in-real-time&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3) Web UI: see what Claude is “thinking” in real time”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;The project provides a Web Viewer at &lt;code dir=&quot;auto&quot;&gt;http://localhost:37777&lt;/code&gt; by default:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Watch the current session’s “memory stream” in real time
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Search history
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Check exactly &lt;strong&gt;what got recorded and what will be injected&lt;/strong&gt;
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;For privacy-conscious teams, this matters a lot.
+You can visually confirm whether anything sensitive was stored.&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;4-privacy-control-block-with-a--tag&quot;&gt;4) Privacy control: block with a &lt;private&gt; tag&lt;/private&gt;&lt;/h3&gt;&lt;a href=&quot;#4-privacy-control-block-with-a--tag&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “4) Privacy control: block with a  tag”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;If you have sensitive content (internal systems, secrets, user data),
+wrap it in &lt;code dir=&quot;auto&quot;&gt;&amp;#x3C;private&gt;&lt;/code&gt; and claude-mem will exclude it from persistence.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The model can still use that info within the current session,
+but it won’t be written into long-term memory, reducing leakage risk.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;That’s a nice plus for compliance-focused orgs.&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;4-how-to-install-is-it-hard&quot;&gt;4. How to install? Is it hard?&lt;/h2&gt;&lt;a href=&quot;#4-how-to-install-is-it-hard&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “4. How to install? Is it hard?”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;The author made installation match Claude Code habits closely.&lt;/p&gt;
+&lt;p&gt;In Claude Code’s terminal, open a new session and run two lines:&lt;/p&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;text&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;/plugin marketplace add thedotmack/claude-mem&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;/plugin install claude-mem&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;p&gt;Restart Claude Code and it starts working automatically.&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;More advanced (optional) moves:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Run the local worker service and Web UI&lt;/li&gt;
+&lt;li&gt;Tune configs (what to record, token strategy, etc.)&lt;/li&gt;
+&lt;li&gt;Customize settings or integrate with more complex environments&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For most developers, &lt;strong&gt;the default setup is already great&lt;/strong&gt;.
+Once you’re hooked, explore docs on “Context Engineering” and “Progressive Disclosure” later.&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;5-who-is-it-for-any-pitfalls&quot;&gt;5. Who is it for? Any pitfalls?&lt;/h2&gt;&lt;a href=&quot;#5-who-is-it-for-any-pitfalls&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “5. Who is it for? Any pitfalls?”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3 id=&quot;best-suited-for&quot;&gt;Best suited for&lt;/h3&gt;&lt;a href=&quot;#best-suited-for&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Best suited for”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;These groups will feel the biggest gains:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Lead developers on long projects&lt;/strong&gt;
+If you spend a year on one big project, you’ll love it.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;People who rely on Claude Code as their primary IDE helper&lt;/strong&gt;
+Daily AI pair programming makes memory benefits obvious.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Side project / open-source enthusiasts&lt;/strong&gt;
+If you pause for a week or two, you can still “resume seamlessly.”&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;maybe-less-critical&quot;&gt;Maybe less critical&lt;/h3&gt;&lt;a href=&quot;#maybe-less-critical&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Maybe less critical”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;Just occasionally asking Claude to write a small script&lt;/li&gt;
+&lt;li&gt;One-off experiments or single-file utilities&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;At that intensity, claude-mem’s long-term memory edge is minor—install it if you feel like it.&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;potential-pitfalls&quot;&gt;Potential pitfalls&lt;/h3&gt;&lt;a href=&quot;#potential-pitfalls&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Potential pitfalls”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;Requires running a local daemon and database&lt;/li&gt;
+&lt;li&gt;Team use needs data storage and access policies&lt;/li&gt;
+&lt;li&gt;It’s a community project; you need to watch upgrades and compatibility&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;That said, judging by stars and activity, the community is healthy.
+If you hit issues, open an Issue and discuss.&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;6-a-pragmatic-roi-view&quot;&gt;6. A pragmatic ROI view&lt;/h2&gt;&lt;a href=&quot;#6-a-pragmatic-roi-view&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “6. A pragmatic ROI view”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;From a time/money perspective, claude-mem pays off mainly by:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Saving time&lt;/strong&gt;
+No more repeating project context or digging through old chats.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Reducing mistakes&lt;/strong&gt;
+Avoid re-hitting old pitfalls; remember prior decisions.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Stabler collaboration&lt;/strong&gt;
+When projects pause or team members change, history is easier to restore.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If you’re already paying for Claude / GPT, every “re-explaining the project” burns tokens.
+claude-mem essentially helps you:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Turn “explaining repeatedly” into “explain once, reuse many times.”&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;summary-make-ai-the-teammate-with-great-memory&quot;&gt;Summary: make AI the “teammate with great memory”&lt;/h2&gt;&lt;a href=&quot;#summary-make-ai-the-teammate-with-great-memory&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Summary: make AI the “teammate with great memory””&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;For many people, AI is now essential to daily development.
+But an AI without memory is more like a &lt;strong&gt;short-term intern&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Capable in the moment&lt;/li&gt;
+&lt;li&gt;Limited long-term project value&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;A “memory add-on” like claude-mem
+upgrades it into a &lt;strong&gt;long-term teammate who truly understands the project context&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;If you’re already coding with Claude Code,
+set aside an hour on the weekend to install it and try:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;You might suddenly realize—
+the real ceiling of LLMs isn’t “how much code they write,” but
+“how much of the journey they can remember.”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;question-to-ponder&quot;&gt;Question to ponder&lt;/h2&gt;&lt;a href=&quot;#question-to-ponder&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Question to ponder”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;How are you making AI “remember projects” today?&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Handwritten docs?&lt;/li&gt;
+&lt;li&gt;Copy-pasting giant prompts each time?&lt;/li&gt;
+&lt;li&gt;Or simply giving up and letting it remember whatever it can?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Share your approach in the comments,
+or how you’d use claude-mem for your projects.&lt;/p&gt;&lt;!-- 
+(The writing structure follows the project&apos;s established article conventions.)
+
+---
+
+# Multilingual title suggestions (with slug)
+
+### Title 1: Focus on &quot;long-term memory&quot;
+
+* Simplified: **给 Claude 装上「长期记忆」：claude-mem 实战体验与使用建议**
+* English: **Give Claude Long-Term Memory: Hands-on Guide to claude-mem**
+* Traditional: **幫 Claude 裝上「長期記憶」：claude-mem 實戰體驗與使用建議**
+* Japanese: **Claude に「長期記憶」を付ける：claude-mem 実践ガイド**
+* Français : **Donner une mémoire longue à Claude : guide pratique de claude-mem**
+* Español: **Dale memoria a largo plazo a Claude: guía práctica de claude-mem**
+* Português: **Dê memória de longo prazo ao Claude: guia prático do claude-mem**
+* slug-url: `claude-long-term-memory-with-claude-mem`
+
+---
+
+### Title 2: Emphasize developer efficiency
+
+* Simplified: **再也不用重复解释项目：claude-mem 如何帮 Claude 记住你的代码库**
+* English: **Stop Re-Explaining Your Project: How claude-mem Helps Claude Remember Your Codebase**
+* Traditional: **不用再重複解釋專案：claude-mem 如何幫 Claude 記住你的程式庫**
+* Japanese: **もうプロジェクト説明は不要：claude-mem で Claude にコードベースを覚えさせる**
+* Français : **Fini les explications répétées : comment claude-mem aide Claude à se souvenir de votre code**
+* Español: **Se acabó explicar el proyecto mil veces: así ayuda claude-mem a Claude a recordar tu código**
+* Português: **Chega de explicar o projeto toda hora: como o claude-mem ajuda o Claude a lembrar seu projeto**
+* slug-url: `stop-reexplaining-project-with-claude-mem`
+
+---
+
+### Title 3: Position it as an &quot;AI pair-programming upgrade&quot;
+
+* Simplified: **从工具到队友：用 claude-mem 把 Claude 变成真正懂项目的搭档**
+* English: **From Tool to Teammate: Turn Claude into a Project-Savvy Partner with claude-mem**
+* Traditional: **從工具到隊友：用 claude-mem 把 Claude 變成真正懂專案的搭檔**
+* Japanese: **ツールから相棒へ：claude-mem で Claude を本当にプロジェクト理解のパートナーにする**
+* Français : **D’un outil à un coéquipier : transformer Claude en partenaire qui comprend votre projet avec claude-mem**
+* Español: **De herramienta a compañero: convierte a Claude en un socio que entiende tu proyecto con claude-mem**
+* Português: **De ferramenta a parceiro: transforme o Claude em alguém que entende seu projeto com claude-mem**
+* slug-url: `from-tool-to-teammate-claude-mem`
+
+---
+
+# Image copy (illustration style, 2:1 ratio, no Chinese text)
+
+You can hand these to a designer / image tool.
+
+### 1. Cover image
+
+&gt; A developer sits at a desk with a code editor on the screen. Beside it, a friendly &quot;digital assistant&quot; appears in semi-transparent form, with a timeline behind them showing project folders and code snippets. The assistant uses glowing lines to connect those memories to the code on screen. Flat illustration, clean tech vibe, 2:1 ratio, suitable for a social post cover.
+
+---
+
+### 2. Key section illustration: explain how it works
+
+&gt; Information-flow illustration from left to right: &quot;User prompts&quot; → &quot;Tool actions&quot; → &quot;AI summary&quot; → &quot;Memory database&quot; → &quot;Next session.&quot; Each node uses simple icons, connected by glowing arrows to show the flow &quot;capture → summarize → store → reuse.&quot; Modern, clean illustration style, 2:1 ratio, fits into a technical breakdown section.
+
+---
+
+### 3. Key section illustration: developer scenario
+
+&gt; A nighttime workspace scene. A developer reopens a project; the screen shows a project tree and a chat window. Speech bubbles show the AI &quot;recalling&quot; past tasks (expressed with abstract icons like small lightning bolts and folders, no text). The developer looks amused and relieved—&quot;oh, you still remember.&quot; Warm, slightly humorous illustration, 2:1 ratio.
+
+---
+
+# Sample share/comment lines (3)
+
+1.
+
+&gt; Turns out Claude isn&apos;t forgetful—I just hadn&apos;t given it memory 😂 After trying claude-mem, it really feels like upgrading AI from a &quot;short-term intern&quot; to a &quot;long-term project teammate.&quot; Strongly recommend for heavy Claude Code users.
+
+2.
+
+&gt; The worst part of coding with LLMs was rehashing project context. Now the plugin remembers for me. Tested: no more asking the AI &quot;do you remember where we left off?&quot;—way smoother.
+
+3.
+
+&gt; Just gave Claude a &quot;memory add-on&quot; and I&apos;m hooked: on long projects or after a week-long break, picking up again feels like we shipped yesterday. Sharing this for anyone who keeps saying &quot;AI has no memory&quot;—don&apos;t blame it anymore 🤣
+
+---
+
+Do you think this direction and depth work?
+Want me to expand a section for a specific scenario (like &quot;team collaboration&quot; or &quot;side projects&quot;)?
+
+[1]: https://github.com/thedotmack/claude-mem &quot;GitHub - thedotmack/claude-mem: A Claude Code plugin that automatically captures everything Claude does during your coding sessions, compresses it with AI (using Claude&apos;s agent-sdk), and injects relevant context back into future sessions.&quot; --&gt;</content:encoded><category>Claude Code</category><category>DeepSeek</category><category>GLM-4.5</category><category>Kimi K2</category></item><item><title>Decoding the AI Chip Wars: Why Google TPU Won&apos;t Kill NVIDIA</title><link>https://www.vibesparking.com/en/blog/finance/us-market/2025-12-07-decoding-the-ai-chip-wars-why-google-tpu-wont-kill-nvidia/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/finance/us-market/2025-12-07-decoding-the-ai-chip-wars-why-google-tpu-wont-kill-nvidia/</guid><pubDate>Sun, 07 Dec 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # It&apos;s Not Google TPU Killing NVIDIA—It&apos;s That No One Can Live Without Compute --&gt;
 &lt;div&gt;&lt;h2 id=&quot;decoding-the-real-ai-chip-war&quot;&gt;Decoding the Real AI Chip War&lt;/h2&gt;&lt;a href=&quot;#decoding-the-real-ai-chip-war&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Decoding the Real AI Chip War”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
 &lt;p&gt;Lately the market’s favorite storyline goes like this:&lt;/p&gt;
 &lt;blockquote&gt;
@@ -3282,202 +3609,4 @@ Want me to draft a ready‑to‑use `SKILL.md` for any one scenario above—or e
 [7]: https://github.com/anthropics/skills?utm_source=chatgpt.com &quot;anthropics/skills: Public repository for Skills&quot;
 [8]: https://www.anthropic.com/news/skills?utm_source=chatgpt.com &quot;Claude Skills: Customize AI for your workflows&quot;
 [9]: https://www.tomsguide.com/ai/claude-just-got-customizable-skills-heres-how-they-could-supercharge-your-workflow?utm_source=chatgpt.com &quot;Claude just got customizable &apos;Skills&apos; - here&apos;s how they could supercharge your workflow&quot;
-[10]: https://www.theverge.com/ai-artificial-intelligence/800868/anthropic-claude-skills-ai-agents?utm_source=chatgpt.com &quot;Anthropic turns to &apos;skills&apos; to make Claude more useful at work&quot; --&gt;</content:encoded><category>Claude</category><category>Claude Code</category><category>Anthropic</category></item><item><title>Build an Efficient, Lightweight, and Controlled Spec‑Driven Workflow with OpenSpec + Claude Code</title><link>https://www.vibesparking.com/en/blog/ai/openspec/2025-10-17-openspec-claude-code-dev-process/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/openspec/2025-10-17-openspec-claude-code-dev-process/</guid><pubDate>Fri, 17 Oct 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # Build an Efficient, Lightweight, and Controlled Spec‑Driven Workflow with OpenSpec + Claude Code --&gt;
-&lt;p&gt;When teams start collaborating with AI coding assistants, clearly answering “what to build, how to build it, and how we know it’s done” becomes crucial. This guide walks you through a practical, reviewable, and traceable development workflow using OpenSpec (documentation‑driven development) together with Claude Code (an intelligent coding assistant).&lt;/p&gt;
-&lt;p&gt;Who this is for:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Teams that want specs before changes in multi‑person collaboration&lt;/li&gt;
-&lt;li&gt;People/teams that want AI assistants embedded into a standard workflow&lt;/li&gt;
-&lt;li&gt;Projects that require approval, archiving, or compliance control&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h2 id=&quot;core-principles--specs-are-truth&quot;&gt;Core Principles — Specs Are Truth&lt;/h2&gt;&lt;a href=&quot;#core-principles--specs-are-truth&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Core Principles — Specs Are Truth”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;Specs are truth: &lt;code dir=&quot;auto&quot;&gt;openspec/specs&lt;/code&gt; represents the currently delivered source of truth.&lt;/li&gt;
-&lt;li&gt;Propose before changes: any change impacting behavior/architecture/security/performance starts in &lt;code dir=&quot;auto&quot;&gt;changes/[id]&lt;/code&gt;.&lt;/li&gt;
-&lt;li&gt;Three‑phase loop: Create change → Implement tasks → Archive and codify.&lt;/li&gt;
-&lt;li&gt;AI works to specs: Claude Code always uses OpenSpec as the authoritative context.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h2 id=&quot;install-and-initialize&quot;&gt;Install and Initialize&lt;/h2&gt;&lt;a href=&quot;#install-and-initialize&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Install and Initialize”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;Install OpenSpec (global):&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;shell&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;npm&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;install&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;-g&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;@fission-ai/openspec@latest&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;openspec&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;--version&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;p&gt;Initialize at the project root:&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;shell&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;openspec&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;init&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;p&gt;Initialization will:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Write a cross‑assistant AGENTS guide at the repo root&lt;/li&gt;
-&lt;li&gt;Generate the &lt;code dir=&quot;auto&quot;&gt;openspec/&lt;/code&gt; directory structure&lt;/li&gt;
-&lt;li&gt;Establish unified collaboration instructions for Claude Code / Cursor / Codex, etc.&lt;/li&gt;
-&lt;li&gt;Later you can run &lt;code dir=&quot;auto&quot;&gt;openspec update&lt;/code&gt; to refresh the guidelines&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Recommended directory structure (auto‑generated):&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;text&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;openspec/&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;├── project.md              # Project conventions, background, stack&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;├── specs/                  # Delivered capabilities (source of truth)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;│   └── [capability]/&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;│       ├── spec.md         # Requirements + scenarios (canonical format)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;│       └── design.md       # Technical approach (optional)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;├── changes/                # Proposals (pending changes)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;│   ├── [change-id]/&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;│   │   ├── proposal.md     # Why / What / Impact&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;│   │   ├── tasks.md        # Implementation checklist&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;│   │   ├── design.md       # For large changes&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;│   │   └── specs/          # Delta for affected capabilities&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;│   │       └── [capability]/spec.md&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;│   └── archive/            # Archived changes&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h2 id=&quot;collaborating-with-claude-code&quot;&gt;Collaborating with Claude Code&lt;/h2&gt;&lt;a href=&quot;#collaborating-with-claude-code&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Collaborating with Claude Code”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;OpenSpec provides project context and process standards; Claude Code executes the Read → Generate → Implement → Verify cycle. After initialization, start your Claude Code session with prompts like these:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Fill in project context:&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Please read &lt;code dir=&quot;auto&quot;&gt;openspec/project.md&lt;/code&gt;. Based on the repo’s current state, help me fully document project goals, tech stack, conventions, external dependencies, constraints, and naming standards.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Create the first change proposal:&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;I want to add “[your feature]”. Please create an OpenSpec change proposal (&lt;code dir=&quot;auto&quot;&gt;changes/[id]/&lt;/code&gt;) including &lt;code dir=&quot;auto&quot;&gt;proposal.md&lt;/code&gt;, &lt;code dir=&quot;auto&quot;&gt;tasks.md&lt;/code&gt;, and the relevant specs delta under &lt;code dir=&quot;auto&quot;&gt;changes/[id]/specs/&lt;/code&gt;.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Explain/enforce the workflow:&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Using &lt;code dir=&quot;auto&quot;&gt;openspec/AGENTS.md&lt;/code&gt;, explain the three‑phase workflow and strictly follow it in subsequent steps: propose and validate first, implement after approval, archive when complete.&lt;/p&gt;
-&lt;p&gt;Tip: After installation, Codex/Windsurf/Cursor, etc. will also pick up the same guidelines so multiple assistants collaborate consistently.&lt;/p&gt;
-&lt;div&gt;&lt;h2 id=&quot;threephase-workflow-from-openspecagentsmd&quot;&gt;Three‑Phase Workflow (from &lt;code dir=&quot;auto&quot;&gt;openspec/AGENTS.md&lt;/code&gt;)&lt;/h2&gt;&lt;a href=&quot;#threephase-workflow-from-openspecagentsmd&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Three‑Phase Workflow (from openspec/AGENTS.md)”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ol&gt;
-&lt;li&gt;Create Change&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;When: new capability, breaking change, architecture/security/performance strategy changes&lt;/li&gt;
-&lt;li&gt;Steps:
-&lt;ul&gt;
-&lt;li&gt;Pick a unique &lt;code dir=&quot;auto&quot;&gt;change-id&lt;/code&gt; (kebab‑case, verb‑prefixed: &lt;code dir=&quot;auto&quot;&gt;add-&lt;/code&gt;, &lt;code dir=&quot;auto&quot;&gt;update-&lt;/code&gt;, &lt;code dir=&quot;auto&quot;&gt;remove-&lt;/code&gt;, &lt;code dir=&quot;auto&quot;&gt;refactor-&lt;/code&gt;)&lt;/li&gt;
-&lt;li&gt;Generate &lt;code dir=&quot;auto&quot;&gt;proposal.md&lt;/code&gt;, &lt;code dir=&quot;auto&quot;&gt;tasks.md&lt;/code&gt;, and &lt;code dir=&quot;auto&quot;&gt;design.md&lt;/code&gt; if needed&lt;/li&gt;
-&lt;li&gt;Write specs delta using operation headers: &lt;code dir=&quot;auto&quot;&gt;## ADDED|MODIFIED|REMOVED|RENAMED Requirements&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Validate: &lt;code dir=&quot;auto&quot;&gt;openspec validate &amp;#x3C;id&gt; --strict&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Only implement after approval&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol start=&quot;2&quot;&gt;
-&lt;li&gt;Implement Change&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;Steps:
-&lt;ul&gt;
-&lt;li&gt;Read in order: &lt;code dir=&quot;auto&quot;&gt;proposal.md&lt;/code&gt; → &lt;code dir=&quot;auto&quot;&gt;design.md&lt;/code&gt; (optional) → &lt;code dir=&quot;auto&quot;&gt;tasks.md&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Implement strictly in &lt;code dir=&quot;auto&quot;&gt;tasks.md&lt;/code&gt; order; check off each item when complete&lt;/li&gt;
-&lt;li&gt;Update overall task status only when all are completed&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol start=&quot;3&quot;&gt;
-&lt;li&gt;Archive Change&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;After deployment:
-&lt;ul&gt;
-&lt;li&gt;Move &lt;code dir=&quot;auto&quot;&gt;changes/[id]&lt;/code&gt; to &lt;code dir=&quot;auto&quot;&gt;changes/archive/YYYY-MM-DD-[id]/&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;If capability behavior changed, update &lt;code dir=&quot;auto&quot;&gt;openspec/specs/&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Run strict validation: &lt;code dir=&quot;auto&quot;&gt;openspec validate --strict&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Optional: &lt;code dir=&quot;auto&quot;&gt;openspec archive [change] [--yes|-y]&lt;/code&gt; to auto‑archive (tooling changes may use &lt;code dir=&quot;auto&quot;&gt;--skip-specs&lt;/code&gt;)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h2 id=&quot;key-spec-file-format-important&quot;&gt;Key Spec File Format (Important)&lt;/h2&gt;&lt;a href=&quot;#key-spec-file-format-important&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Key Spec File Format (Important)”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;Each requirement uses &lt;code dir=&quot;auto&quot;&gt;### Requirement: ...&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Each requirement must have at least one scenario using a level‑4 heading:&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;markdown&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82B1FF;--1:#3B61B0&quot;&gt;#### Scenario: Returns success&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;-&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;**&lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--0fw:bold;--1:#3B61B0;--1fw:bold&quot;&gt;WHEN&lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;**&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; input is valid&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;-&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;**&lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--0fw:bold;--1:#3B61B0;--1fw:bold&quot;&gt;THEN&lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;**&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; return 200 with data&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;p&gt;Do not use bullets or bold text instead of a scenario heading (the parser will fail).&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Three types of delta changes:
-&lt;ul&gt;
-&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;## ADDED Requirements&lt;/code&gt; for new capabilities&lt;/li&gt;
-&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;## MODIFIED Requirements&lt;/code&gt; for behavior changes (paste the full updated requirement block, not a diff)&lt;/li&gt;
-&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;## REMOVED Requirements&lt;/code&gt; for removals (include rationale and migration)&lt;/li&gt;
-&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;## RENAMED Requirements&lt;/code&gt; for renames only&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h2 id=&quot;from-zero-to-one-a-happy-path&quot;&gt;From Zero to One: A Happy Path&lt;/h2&gt;&lt;a href=&quot;#from-zero-to-one-a-happy-path&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “From Zero to One: A Happy Path”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ol&gt;
-&lt;li&gt;Explore current state&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;shell&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;openspec&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;spec&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;list&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;--long&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;openspec&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;list&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# Full‑text search via ripgrep is also recommended:&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;rg&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;-n&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#984E4D&quot;&gt;Requirement:|Scenario:&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;openspec/specs&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;ol start=&quot;2&quot;&gt;
-&lt;li&gt;Choose a change ID and scaffold&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;markdown&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82B1FF;--1:#3B61B0&quot;&gt;# Example: add-direct-youtube-subtitle-download&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82B1FF;--1:#3B61B0&quot;&gt;# You can also ask Claude Code to create the directory and file skeletons for you&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;ol start=&quot;3&quot;&gt;
-&lt;li&gt;Write the delta (example)&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;markdown&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82B1FF;--1:#3B61B0&quot;&gt;## ADDED Requirements&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82B1FF;--1:#3B61B0&quot;&gt;### Requirement: Direct subtitle download&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;The system SHALL request subtitle files directly from YouTube without relying on M3U8.&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82B1FF;--1:#3B61B0&quot;&gt;#### Scenario: Download succeeds&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;-&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;**&lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--0fw:bold;--1:#3B61B0;--1fw:bold&quot;&gt;WHEN&lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;**&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; a valid video and subtitle language are provided&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;-&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;**&lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--0fw:bold;--1:#3B61B0;--1fw:bold&quot;&gt;THEN&lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;**&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; download the corresponding subtitles and save to the target directory&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;ol start=&quot;4&quot;&gt;
-&lt;li&gt;Strict validation&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;shell&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;openspec&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;validate&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;add-direct-youtube-subtitle-download&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;--strict&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;ol start=&quot;5&quot;&gt;
-&lt;li&gt;Approval → Implementation&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;shell&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;openspec&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;apply&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;add-direct-youtube-subtitle-download&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;After approval, have Claude Code implement items in &lt;code dir=&quot;auto&quot;&gt;tasks.md&lt;/code&gt; step by step&lt;/li&gt;
-&lt;li&gt;Check off one item when it’s done; proceed until all are &lt;code dir=&quot;auto&quot;&gt;- [x]&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol start=&quot;6&quot;&gt;
-&lt;li&gt;Archive and codify&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;shell&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;openspec&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;archive&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;add-direct-youtube-subtitle-download&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;--yes&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;openspec&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;validate&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;--strict&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h2 id=&quot;best-practices-with-claude-code&quot;&gt;Best Practices with Claude Code&lt;/h2&gt;&lt;a href=&quot;#best-practices-with-claude-code&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Best Practices with Claude Code”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;Always let Claude Code “read” first: &lt;code dir=&quot;auto&quot;&gt;openspec/project.md&lt;/code&gt;, relevant &lt;code dir=&quot;auto&quot;&gt;specs/[capability]/spec.md&lt;/code&gt;, and &lt;code dir=&quot;auto&quot;&gt;changes/[id]/proposal.md|tasks.md&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Execute strictly against &lt;code dir=&quot;auto&quot;&gt;tasks.md&lt;/code&gt; as the single source of truth; check off as you go&lt;/li&gt;
-&lt;li&gt;Prioritize edits directly related to the proposed change; avoid unrelated refactors&lt;/li&gt;
-&lt;li&gt;When ambiguous, ask 1–2 clarifying questions before scaffolding&lt;/li&gt;
-&lt;li&gt;When referencing code locations, use &lt;code dir=&quot;auto&quot;&gt;src/module.ts:42&lt;/code&gt; single‑line pointers&lt;/li&gt;
-&lt;li&gt;Built‑in validation: &lt;code dir=&quot;auto&quot;&gt;openspec validate [change] --strict&lt;/code&gt;; if issues occur, use &lt;code dir=&quot;auto&quot;&gt;--json&lt;/code&gt; to diagnose&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h2 id=&quot;cli-cheat-sheet&quot;&gt;CLI Cheat Sheet&lt;/h2&gt;&lt;a href=&quot;#cli-cheat-sheet&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “CLI Cheat Sheet”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h1 id=&quot;list--show--diff--validate&quot;&gt;List / show / diff / validate&lt;/h1&gt;&lt;a href=&quot;#list--show--diff--validate&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “List / show / diff / validate”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;shell&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;openspec&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;list&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;openspec&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;list&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;--specs&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;openspec&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;show&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; [item]              &lt;/span&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# change or spec&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;openspec&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;diff&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; [change]&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;openspec&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;validate&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; [item] --strict&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# Init / update&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;openspec&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;init&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; [path]&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;openspec&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;update&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; [path]&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# Archive (post‑deploy)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;openspec&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;archive&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; [change] [--yes&lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;|&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;-y]&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;p&gt;Common flags:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;--json&lt;/code&gt; machine‑readable output&lt;/li&gt;
-&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;--type change|spec&lt;/code&gt; to specify the object type&lt;/li&gt;
-&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;--strict&lt;/code&gt; strict validation&lt;/li&gt;
-&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;--skip-specs&lt;/code&gt; archive only (skip specs update)&lt;/li&gt;
-&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;--yes|-y&lt;/code&gt; skip confirmation (good for CI)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h2 id=&quot;proposal-vs-direct-fix--when-to-use-which&quot;&gt;Proposal vs. Direct Fix — When to Use Which?&lt;/h2&gt;&lt;a href=&quot;#proposal-vs-direct-fix--when-to-use-which&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Proposal vs. Direct Fix — When to Use Which?”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;Propose (recommended) when:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;New features/capabilities&lt;/li&gt;
-&lt;li&gt;Breaking changes (API/Schema)&lt;/li&gt;
-&lt;li&gt;Architecture/pattern shifts&lt;/li&gt;
-&lt;li&gt;Performance/security strategy changes that affect behavior&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Direct edits are fine when:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Bug fixes (restoring intended behavior)&lt;/li&gt;
-&lt;li&gt;Copy/format/comments&lt;/li&gt;
-&lt;li&gt;Non‑breaking dependency upgrades&lt;/li&gt;
-&lt;li&gt;Minor configuration tweaks&lt;/li&gt;
-&lt;li&gt;Tests that cover existing behavior&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h2 id=&quot;common-pitfalls-and-troubleshooting&quot;&gt;Common Pitfalls and Troubleshooting&lt;/h2&gt;&lt;a href=&quot;#common-pitfalls-and-troubleshooting&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Common Pitfalls and Troubleshooting”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;“Change must have at least one delta”
-&lt;ul&gt;
-&lt;li&gt;Check that &lt;code dir=&quot;auto&quot;&gt;changes/[id]/specs/&lt;/code&gt; contains &lt;code dir=&quot;auto&quot;&gt;.md&lt;/code&gt; files&lt;/li&gt;
-&lt;li&gt;Ensure files include &lt;code dir=&quot;auto&quot;&gt;## ADDED|MODIFIED|REMOVED&lt;/code&gt; operation headers&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;“Requirement must have at least one scenario”
-&lt;ul&gt;
-&lt;li&gt;Scenario headings must be &lt;code dir=&quot;auto&quot;&gt;#### Scenario: ...&lt;/code&gt; (level‑4 heading)&lt;/li&gt;
-&lt;li&gt;Do not use bullets or bold text&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Delta parsing failures
-&lt;ul&gt;
-&lt;li&gt;Use &lt;code dir=&quot;auto&quot;&gt;openspec show [change] --json --deltas-only&lt;/code&gt; to debug&lt;/li&gt;
-&lt;li&gt;Compare with originals under &lt;code dir=&quot;auto&quot;&gt;openspec/specs/&lt;/code&gt; and ensure &lt;code dir=&quot;auto&quot;&gt;MODIFIED&lt;/code&gt; is a full replacement block&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;&lt;a href=&quot;#conclusion&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Conclusion”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;Use OpenSpec to make Requirements → Design → Tasks → Changes explicit from day one and treat them as the project’s source of truth. Then leverage Claude Code for efficient execution and collaboration so AI delivers within clear boundaries. The benefits:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Specs first to reduce rework; approvals up front to lower risk&lt;/li&gt;
-&lt;li&gt;Task closure with traceable outputs; archivable changes for reusable knowledge&lt;/li&gt;
-&lt;/ul&gt;</content:encoded><category>Claude Code</category><category>OpenSpec</category></item></channel></rss>
+[10]: https://www.theverge.com/ai-artificial-intelligence/800868/anthropic-claude-skills-ai-agents?utm_source=chatgpt.com &quot;Anthropic turns to &apos;skills&apos; to make Claude more useful at work&quot; --&gt;</content:encoded><category>Claude</category><category>Claude Code</category><category>Anthropic</category></item></channel></rss>

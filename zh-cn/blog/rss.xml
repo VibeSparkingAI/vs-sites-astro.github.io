@@ -1,4 +1,334 @@
-<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Vibe Sparking AI | Blog</title><description/><link>https://www.vibesparking.com/</link><language>zh-CN</language><item><title>12月～明年1月，美股投资者必须盯紧的几件大事</title><link>https://www.vibesparking.com/zh-cn/blog/finance/us-market/2025-12-07-decoding-the-ai-chip-wars-why-google-tpu-wont-kill-nvidia/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/finance/us-market/2025-12-07-decoding-the-ai-chip-wars-why-google-tpu-wont-kill-nvidia/</guid><pubDate>Sun, 07 Dec 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # 不是 Google TPU 杀死 NVIDIA，而是 谁都离不开算力 --&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Vibe Sparking AI | Blog</title><description/><link>https://www.vibesparking.com/</link><language>zh-CN</language><item><title>给 Claude 装上「长期记忆」：claude-mem 实战体验与使用建议</title><link>https://www.vibesparking.com/zh-cn/blog/ai/claude-code/claude-mem/2025-12-09-claude-mem-long-term-memory/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/claude-code/claude-mem/2025-12-09-claude-mem-long-term-memory/</guid><pubDate>Tue, 09 Dec 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;claude-mem 这玩意儿，能让 Claude 真正「记住你」&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;你有没有这种感受：&lt;/p&gt;
+&lt;p&gt;每次打开 Claude / ChatGPT 写代码，
+都要从头给它讲一遍项目背景：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;「我在做个后台管理系统，技术栈是……」
+「上次我们做到用户登录，这次要加的是……」&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;讲着讲着，人都烦了。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;模型不是真的笨，只是没记忆。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;今天这篇，就带你看看 GitHub 上一个很有意思的小项目：
+&lt;strong&gt;&lt;code dir=&quot;auto&quot;&gt;claude-mem&lt;/code&gt;——给 Claude Code 装上「长期记忆」的大脑。&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;一claude-mem-到底干嘛的&quot;&gt;一、claude-mem 到底干嘛的？&lt;/h2&gt;&lt;a href=&quot;#一claude-mem-到底干嘛的&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “一、claude-mem 到底干嘛的？”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;一句话版：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;它会自动记录你在 Claude Code 里的操作，自己总结、压缩，
+下次再开同一个项目，Claude 会「主动想起」之前的上下文。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;更细一点说，它是：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;一个 &lt;strong&gt;Claude Code 插件&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;会自动捕获：你的指令、工具调用、读写文件等操作&lt;/li&gt;
+&lt;li&gt;后台用 Claude 的 Agent SDK 做总结、提炼要点&lt;/li&gt;
+&lt;li&gt;存进本地数据库和向量库，支持全文 + 语义检索&lt;/li&gt;
+&lt;li&gt;下次你再开 Claude Code，它会把「最相关」的历史内容
+当作上下文自动塞回新对话里&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;所以体验上就是：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;你继续写代码，Claude 变成了那个
+「对项目背景比你还熟」的搭档。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;二它是怎么帮-claude开挂记忆的&quot;&gt;二、它是怎么帮 Claude「开挂记忆」的？&lt;/h2&gt;&lt;a href=&quot;#二它是怎么帮-claude开挂记忆的&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “二、它是怎么帮 Claude「开挂记忆」的？”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;官方 README 里画了一个很清晰的流程图，我给你翻译成人话版：&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;1会话开始先喂点最近发生的事&quot;&gt;1）会话开始：先喂点「最近发生的事」&lt;/h3&gt;&lt;a href=&quot;#1会话开始先喂点最近发生的事&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1）会话开始：先喂点「最近发生的事」”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;每次你在 Claude Code 里开一个新 session，
+claude-mem 会先从数据库里挖出「最近的关键信息」，
+整理成一段简短上下文，
+&lt;strong&gt;自动注入到这次对话开头&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;就好像跟朋友见面前，先在脑子里过一遍：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;「上次我们聊到登录注册，中间踩了哪些坑？」&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div&gt;&lt;h3 id=&quot;2你在写代码它在后台默默记笔记&quot;&gt;2）你在写代码：它在后台默默记笔记&lt;/h3&gt;&lt;a href=&quot;#2你在写代码它在后台默默记笔记&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2）你在写代码：它在后台默默记笔记”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;在整个开发过程中，它会持续记录：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;你发给 Claude 的重要指令&lt;/li&gt;
+&lt;li&gt;Claude 调用工具时的「观察结果」（读了哪个文件、写了什么）&lt;/li&gt;
+&lt;li&gt;一些关键的中间过程&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这些原始信息不会直接拿来当上下文那样粗暴重放，
+而是先交给 Worker Service，用 Claude 自己的 Agent SDK 来做总结：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;「这次 session 里有哪些值得记住的‘经验’？」&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;比如：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;我们决定弃用某个第三方库&lt;/li&gt;
+&lt;li&gt;重构了某个模块的接口设计&lt;/li&gt;
+&lt;li&gt;修了一个阴间 Bug，并总结了成因&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;3会话结束生成一份学习笔记&quot;&gt;3）会话结束：生成一份「学习笔记」&lt;/h3&gt;&lt;a href=&quot;#3会话结束生成一份学习笔记&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3）会话结束：生成一份「学习笔记」”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;session 结束时，它会做一件事：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;把这整个会话浓缩成一份「项目变更日志 + 决策摘要」。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;然后存进本地 SQLite（支持全文搜索），
+同时也写入 Chroma 这类向量数据库，方便走语义检索。&lt;/p&gt;
+&lt;p&gt;下一次 Claude 要查历史，就不用「全量翻旧账」，
+而是通过智能搜索 + 分层展开（progressive disclosure）
+把&lt;strong&gt;少量但关键的上下文&lt;/strong&gt;塞回对话中。&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;三对开发者来说爽点在哪&quot;&gt;三、对开发者来说，爽点在哪？&lt;/h2&gt;&lt;a href=&quot;#三对开发者来说爽点在哪&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “三、对开发者来说，爽点在哪？”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3 id=&quot;1长周期项目不用每次都复盘一遍&quot;&gt;1）长周期项目：不用每次都复盘一遍&lt;/h3&gt;&lt;a href=&quot;#1长周期项目不用每次都复盘一遍&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1）长周期项目：不用每次都复盘一遍”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;想象一个真实场景。&lt;/p&gt;
+&lt;p&gt;你在做一个 SaaS 管理后台，跨度 3 个月。
+中间还要被各种会议、需求变更打断。&lt;/p&gt;
+&lt;p&gt;没装 claude-mem 的时候，每次回到项目是这样的：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;先翻 Git log 和文档&lt;/li&gt;
+&lt;li&gt;再用大段提示把背景讲一遍给 Claude&lt;/li&gt;
+&lt;li&gt;Claude 才慢慢进入状态&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;装上 claude-mem 之后：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;新 session 一开，Claude 自己就知道：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;项目在做什么&lt;/li&gt;
+&lt;li&gt;最近改了哪些模块&lt;/li&gt;
+&lt;li&gt;哪些坑已经踩过、别再踩第二次&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;你只需要说一句：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;「继续上次我们做到的权限管理，把导出功能补完。」&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Claude 就能「接得上话」，而不是一脸懵逼。&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;2mem-search给你一个项目时光机&quot;&gt;2）mem-search：给你一个「项目时光机」&lt;/h3&gt;&lt;a href=&quot;#2mem-search给你一个项目时光机&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2）mem-search：给你一个「项目时光机」”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;claude-mem 还内置了一个很有意思的技能：&lt;strong&gt;mem-search&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;你可以直接用自然语言问它：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;「帮我找下我们之前是怎么设计登录接口的？」&lt;/li&gt;
+&lt;li&gt;「之前那个 file upload 的 Bug，我们当时是怎么修的？」&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;和普通的「在代码里搜关键词」不一样，
+mem-search 查的是&lt;strong&gt;对话 + 工具调用 + 总结后的知识&lt;/strong&gt;，
+还能按「分层展开」控制注入多少上下文，顺便省 token。&lt;/p&gt;
+&lt;p&gt;简单说：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;它帮你把「我记得我们好像讨论过这个」
+变成可以随时调出的「有据可查」。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div&gt;&lt;h3 id=&quot;3web-ui实时看-claude-在想什么&quot;&gt;3）Web UI：实时看 Claude 在「想什么」&lt;/h3&gt;&lt;a href=&quot;#3web-ui实时看-claude-在想什么&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3）Web UI：实时看 Claude 在「想什么」”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;项目还提供了一个 Web Viewer，默认跑在 &lt;code dir=&quot;auto&quot;&gt;http://localhost:37777&lt;/code&gt; 上：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;能实时看到当前 session 的「记忆流」
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;支持搜索历史
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;方便你检查：&lt;strong&gt;到底记录了什么、会注入什么&lt;/strong&gt;
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;这对有安全洁癖的团队，很重要。
+你可以肉眼确认：有没有把不该记的东西写进数据库。&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;4隐私控制-标签一挡就行&quot;&gt;4）隐私控制：&lt;private&gt; 标签一挡就行&lt;/private&gt;&lt;/h3&gt;&lt;a href=&quot;#4隐私控制-标签一挡就行&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “4）隐私控制： 标签一挡就行”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;如果你有一些敏感内容（比如公司内部系统、密钥、用户数据），
+可以在对话中用 &lt;code dir=&quot;auto&quot;&gt;&amp;#x3C;private&gt;&lt;/code&gt; 包裹，
+claude-mem 会把这部分内容从持久化存储中排除掉。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;大模型继续能用这些信息在当前 session 里思考，
+但不会被写进长期记忆，降低泄漏风险。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;对需要合规的企业用户，很加分。&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;四怎么安装难不难上手&quot;&gt;四、怎么安装？难不难上手？&lt;/h2&gt;&lt;a href=&quot;#四怎么安装难不难上手&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “四、怎么安装？难不难上手？”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;作者已经把安装流程做得非常贴近 Claude Code 用户习惯。&lt;/p&gt;
+&lt;p&gt;在 Claude Code 的终端里，新开一个 session，然后输入两行命令：&lt;/p&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;text&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;/plugin marketplace add thedotmack/claude-mem&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;/plugin install claude-mem&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;p&gt;重启一下 Claude Code，就开始自动工作了。&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;更深一点的玩法（可选）：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;跑本地 worker service 和 Web UI&lt;/li&gt;
+&lt;li&gt;调整配置（哪些内容要记录、token 使用策略等）&lt;/li&gt;
+&lt;li&gt;自己改配置、对接更复杂的开发环境&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;对一般开发者来说，&lt;strong&gt;先用默认配置跑起来就够爽了&lt;/strong&gt;。
+真香之后，再慢慢研究文档里的「Context Engineering」「Progressive Disclosure」这些高级玩法。&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;五它适合谁用有没有坑&quot;&gt;五、它适合谁用？有没有坑？&lt;/h2&gt;&lt;a href=&quot;#五它适合谁用有没有坑&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “五、它适合谁用？有没有坑？”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3 id=&quot;更适合的人&quot;&gt;更适合的人&lt;/h3&gt;&lt;a href=&quot;#更适合的人&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “更适合的人”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;我觉得这几个群体用起来会最有感觉：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;长周期项目的主力开发&lt;/strong&gt;
+一年只做一个大项目的那种人，会非常爱它。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;用 Claude Code 当主力 IDE 辅助的同学&lt;/strong&gt;
+每天都在和 AI 结对编程，记忆收益特别明显。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;喜欢做 Side Project / 开源项目&lt;/strong&gt;
+中间经常停一两周，再回来还能「无缝接续」。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;可能不那么刚需的情况&quot;&gt;可能不那么刚需的情况&lt;/h3&gt;&lt;a href=&quot;#可能不那么刚需的情况&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “可能不那么刚需的情况”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;只是偶尔让 Claude 帮你写个小脚本&lt;/li&gt;
+&lt;li&gt;单文件的小实验、一次性小工具&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这种强度下，claude-mem 的长期记忆优势不明显，
+装不装完全看心情。&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;潜在坑点&quot;&gt;潜在坑点&lt;/h3&gt;&lt;a href=&quot;#潜在坑点&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “潜在坑点”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;需要你愿意在本地跑一个常驻服务和数据库&lt;/li&gt;
+&lt;li&gt;团队使用时，还是要评估好数据存储和访问规范&lt;/li&gt;
+&lt;li&gt;目前是社区项目，升级和兼容性需要自己多留意&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;不过从 star 数和活跃度来看，社区热度还不错，
+有问题也可以直接去 Issues 里交流。&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;六一个很现实的-roi-视角&quot;&gt;六、一个很现实的 ROI 视角&lt;/h2&gt;&lt;a href=&quot;#六一个很现实的-roi-视角&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “六、一个很现实的 ROI 视角”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;站在「效率 / 钱」的角度，claude-mem 带来的收益主要有几类：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;节省时间&lt;/strong&gt;
+不用一遍遍重复项目背景、翻历史对话。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;减少错误&lt;/strong&gt;
+避免重复踩过的坑，记得之前做过的决策。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;更稳的协作&lt;/strong&gt;
+项目暂停、成员变动后，历史脉络更好恢复。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;如果你已经在为 Claude / GPT 付费，其实每次「重新解释项目」
+也是在烧 token。claude-mem 本质上是在帮你：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;把「反复解释」变成「一次解释，多次复用」。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;总结让-ai-成为记性很好的搭档&quot;&gt;总结：让 AI 成为「记性很好的搭档」&lt;/h2&gt;&lt;a href=&quot;#总结让-ai-成为记性很好的搭档&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “总结：让 AI 成为「记性很好的搭档」”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;对很多人来说，AI 现在已经是日常开发里不可或缺的帮手。
+但没有记忆的 AI，更像是一个&lt;strong&gt;短期实习生&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;当下干活没问题&lt;/li&gt;
+&lt;li&gt;但对项目长期价值有限&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;像 claude-mem 这种「记忆外挂」，
+就是在把它升级成一个&lt;strong&gt;真正懂项目上下文的长期队友&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;如果你已经在用 Claude Code 写项目，
+可以找个周末腾一个小时，装上试试：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;也许你会突然意识到——
+原来大模型真正的上限，不在「它能写多少代码」，
+而在「它能记住多少你们一起走过的路」。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;思考题&quot;&gt;思考题&lt;/h2&gt;&lt;a href=&quot;#思考题&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “思考题”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;你现在是怎么让 AI「记住项目」的？&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;靠手写文档？&lt;/li&gt;
+&lt;li&gt;靠每次复制一大段提示词？&lt;/li&gt;
+&lt;li&gt;还是干脆放弃，能记多少算多少？&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;欢迎在评论区聊聊你的做法，
+也可以分享一下你会把 claude-mem 用在什么项目上。&lt;/p&gt;&lt;!-- 
+（写作结构参考了当前项目的既定文章规范。）
+
+---
+
+# 多语言标题推荐（含 slug）
+
+### 标题 1：聚焦「长期记忆」
+
+* 简体：**给 Claude 装上「长期记忆」：claude-mem 实战体验与使用建议**
+* English: **Give Claude Long-Term Memory: Hands-on Guide to claude-mem**
+* 繁體：**幫 Claude 裝上「長期記憶」：claude-mem 實戰體驗與使用建議**
+* 日本語：**Claude に「長期記憶」を付ける：claude-mem 実践ガイド**
+* Français : **Donner une mémoire longue à Claude : guide pratique de claude-mem**
+* Español: **Dale memoria a largo plazo a Claude: guía práctica de claude-mem**
+* Português: **Dê memória de longo prazo ao Claude: guia prático do claude-mem**
+* slug-url：`claude-long-term-memory-with-claude-mem`
+
+---
+
+### 标题 2：强调开发效率
+
+* 简体：**再也不用重复解释项目：claude-mem 如何帮 Claude 记住你的代码库**
+* English: **Stop Re-Explaining Your Project: How claude-mem Helps Claude Remember Your Codebase**
+* 繁體：**不用再重複解釋專案：claude-mem 如何幫 Claude 記住你的程式庫**
+* 日本語：**もうプロジェクト説明は不要：claude-mem で Claude にコードベースを覚えさせる**
+* Français : **Fini les explications répétées : comment claude-mem aide Claude à se souvenir de votre code**
+* Español: **Se acabó explicar el proyecto mil veces: así ayuda claude-mem a Claude a recordar tu código**
+* Português: **Chega de explicar o projeto toda hora: como o claude-mem ajuda o Claude a lembrar seu código**
+* slug-url：`stop-reexplaining-project-with-claude-mem`
+
+---
+
+### 标题 3：定位「AI 结对编程助手升级」
+
+* 简体：**从工具到队友：用 claude-mem 把 Claude 变成真正懂项目的搭档**
+* English: **From Tool to Teammate: Turn Claude into a Project-Savvy Partner with claude-mem**
+* 繁體：**從工具到隊友：用 claude-mem 把 Claude 變成真正懂專案的搭檔**
+* 日本語：**ツールから相棒へ：claude-mem で Claude を本当にプロジェクト理解のパートナーにする**
+* Français : **D’un outil à un coéquipier : transformer Claude en partenaire qui comprend votre projet avec claude-mem**
+* Español: **De herramienta a compañero: convierte a Claude en un socio que entiende tu proyecto con claude-mem**
+* Português: **De ferramenta a parceiro: transforme o Claude em alguém que entende seu projeto com claude-mem**
+* slug-url：`from-tool-to-teammate-claude-mem`
+
+---
+
+# 配图文案（插画风，2:1 比例，无中文文字）
+
+你可以把这些文案交给设计 / AI 绘图工具使用。
+
+### 1. 封面图
+
+&gt; 一位开发者坐在桌前，屏幕上是代码编辑器，旁边以半透明的方式浮现一位友好的「数字助手」形象，背后延伸出一条时间线，时间线上挂着多个项目文件夹和代码片段，数字助手用发光的线条把这些记忆连接到当前屏幕上的代码。整体风格偏扁平插画，颜色清爽科技感，画面比例 2:1，适合作为公众号封面。
+
+---
+
+### 2. 关键章节配图：解释工作原理
+
+&gt; 信息流流程插画：从左到右依次是「User prompts」「Tool actions」「AI summary」「Memory database」「Next session」。每个节点用简洁的图标表示，中间用发光的箭头连接，体现「自动记录 → 总结 → 存储 → 再利用」的过程。风格简洁现代插画，线条干净，2:1 比例，适合嵌在技术解析章节中。
+
+---
+
+### 3. 关键章节配图：开发者使用场景
+
+&gt; 夜晚的办公场景，一个开发者再次打开项目，屏幕上显示项目结构树和对话窗口，对话窗口中出现气泡，展示 AI 正在「回忆」之前的任务（用抽象图标而不是文字表达，比如小闪电、小档案夹）。开发者表情轻松好笑，有「啊原来你还记得」的感觉。插画风格温暖、有一点幽默，2:1 比例。
+
+---
+
+# 分享 / 评论区文案示例（3 条）
+
+1.
+
+&gt; 原来不是 Claude 傻，是我没给它装记忆 😂 用了一圈下来，claude-mem 真的有点把 AI 从「短期实习生」升级成了「长期项目搭档」的感觉，强烈建议重度 Claude Code 用户试试。
+
+2.
+
+&gt; 以前每次开大模型写代码，最痛苦的就是复述项目背景，现在直接让插件帮我记。亲测：再也不用对着 AI 说「还记得我们上次做到哪儿吗？」了，爽度直线上升。
+
+3.
+
+&gt; 最近给 Claude 装了个「记忆外挂」，效果有点上头：长项目、中断一周回来的那种，继续聊就像昨天才写完。发这篇给经常喊「AI 没长记性」的朋友们看看，别再冤枉人家了 🤣
+
+---
+
+你看这篇整体方向和深度还 OK 吗？
+要不要我再帮你按某个具体场景（比如「团队协作」或者「Side Project」）单独扩写一节？
+
+[1]: https://github.com/thedotmack/claude-mem &quot;GitHub - thedotmack/claude-mem: A Claude Code plugin that automatically captures everything Claude does during your coding sessions, compresses it with AI (using Claude&apos;s agent-sdk), and injects relevant context back into future sessions.&quot; --&gt;</content:encoded><category>Claude Code</category><category>DeepSeek</category><category>GLM-4.5</category><category>Kimi K2</category></item><item><title>12月～明年1月，美股投资者必须盯紧的几件大事</title><link>https://www.vibesparking.com/zh-cn/blog/finance/us-market/2025-12-07-decoding-the-ai-chip-wars-why-google-tpu-wont-kill-nvidia/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/finance/us-market/2025-12-07-decoding-the-ai-chip-wars-why-google-tpu-wont-kill-nvidia/</guid><pubDate>Sun, 07 Dec 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # 不是 Google TPU 杀死 NVIDIA，而是 谁都离不开算力 --&gt;
 &lt;div&gt;&lt;h2 id=&quot;拆解真正的-ai-芯片战争&quot;&gt;拆解真正的 AI 芯片战争&lt;/h2&gt;&lt;a href=&quot;#拆解真正的-ai-芯片战争&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “拆解真正的 AI 芯片战争”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
 &lt;p&gt;最近，市场上最流行的一句故事是：&lt;/p&gt;
 &lt;blockquote&gt;
@@ -3419,156 +3749,4 @@ Prompt：`A friendly AI assistant opening a toolbox labeled &quot;Skills&quot;, 
 [7]: https://github.com/anthropics/skills?utm_source=chatgpt.com &quot;anthropics/skills: Public repository for Skills&quot;
 [8]: https://www.anthropic.com/news/skills?utm_source=chatgpt.com &quot;Claude Skills: Customize AI for your workflows&quot;
 [9]: https://www.tomsguide.com/ai/claude-just-got-customizable-skills-heres-how-they-could-supercharge-your-workflow?utm_source=chatgpt.com &quot;Claude just got customizable &apos;Skills&apos; - here&apos;s how they could supercharge your workflow&quot;
-[10]: https://www.theverge.com/ai-artificial-intelligence/800868/anthropic-claude-skills-ai-agents?utm_source=chatgpt.com &quot;Anthropic turns to &apos;skills&apos; to make Claude more useful at work&quot; --&gt;</content:encoded><category>Claude</category><category>Claude Code</category><category>Anthropic</category></item><item><title>用 OpenSpec + Claude Code，跑通一套高效、轻量和可控的规格驱动开发流程</title><link>https://www.vibesparking.com/zh-cn/blog/ai/openspec/2025-10-17-openspec-claude-code-dev-process/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/openspec/2025-10-17-openspec-claude-code-dev-process/</guid><pubDate>Fri, 17 Oct 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # 用 OpenSpec + Claude Code，跑通一套高效、轻量和可控的规格驱动开发流程 --&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;用 OpenSpec 写“剧本”，用 Claude 执行“剧本”。三步走，从模糊需求到可落地改动，全程留痕、可回放、可协作。&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;引言&quot;&gt;引言&lt;/h2&gt;&lt;a href=&quot;#引言&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “引言”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;做功能评审，大家各说各话；开干之后，产品改口、需求漂移、PR 回滚……你是不是也被这种节奏拖累过？&lt;/p&gt;
-&lt;p&gt;我最近把 &lt;strong&gt;OpenSpec + Claude&lt;/strong&gt; 搭了一遍流程。&lt;strong&gt;装、起、提、落、归&lt;/strong&gt; 五个动作，团队就能同步心智、快速交付，还能把过程“固化”成资产。&lt;strong&gt;下面就用一套真实命令与输出，带你 10 分钟走一遍。&lt;/strong&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;亮点速览先给答案&quot;&gt;亮点速览（先给答案）&lt;/h2&gt;&lt;a href=&quot;#亮点速览先给答案&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “亮点速览（先给答案）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;2 分钟上手&lt;/strong&gt;：&lt;code dir=&quot;auto&quot;&gt;npm i -g @fission-ai/openspec &amp;#x26;&amp;#x26; openspec init&lt;/code&gt;，开箱生成 AGENTS.md、目录结构、工具预设。零 API Key 依赖。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;全 Markdown&lt;/strong&gt;：提案、规格、任务分解都在 &lt;code dir=&quot;auto&quot;&gt;.md&lt;/code&gt;，人机可读、跨 IDE/Agent 可移植。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Claude 深度协作&lt;/strong&gt;：通过 &lt;strong&gt;插件/指令&lt;/strong&gt; 的方式，把“提案→落地→归档”串成标准作业流。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;版本化的共识&lt;/strong&gt;：每个变更都可追溯，从「想法」到「实现」有据可依。且 OpenSpec 仍在活跃更新（v0.12.0 刚加了新 CLI 支持）。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;用一次你就懂5-步实操&quot;&gt;用一次你就懂：5 步实操&lt;/h2&gt;&lt;a href=&quot;#用一次你就懂5-步实操&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “用一次你就懂：5 步实操”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h3 id=&quot;1-安装install&quot;&gt;1) 安装（Install）&lt;/h3&gt;&lt;a href=&quot;#1-安装install&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1) 安装（Install）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;npm&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;install&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;-g&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;@fission-ai/openspec@latest&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;openspec&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;--version&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;p&gt;社区文档与仓库均给到同样的安装指引，上手门槛极低。&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h3 id=&quot;2-初始化init&quot;&gt;2) 初始化（Init）&lt;/h3&gt;&lt;a href=&quot;#2-初始化init&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2) 初始化（Init）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;在项目根目录：&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;openspec&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;init&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;p&gt;它会创建 &lt;strong&gt;Root AGENTS.md&lt;/strong&gt;、标准目录、并引导你勾选常用 AI 助手（Claude Code、Cursor、Copilot、Amazon Q 等）。输出里清清楚楚列了“已创建的工具”和“下一步做什么”。&lt;strong&gt;等于给所有 Agent 发了一份《进组须知》&lt;/strong&gt;。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;为什么强调 &lt;strong&gt;AGENTS.md&lt;/strong&gt;？因为它就是给 Agent 看的 README：怎么装依赖、怎么跑测试、代码风格是什么——&lt;strong&gt;别让模型瞎猜&lt;/strong&gt;。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h3 id=&quot;3-填项目画像projectmd&quot;&gt;3) 填项目画像（Project.md）&lt;/h3&gt;&lt;a href=&quot;#3-填项目画像projectmd&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3) 填项目画像（Project.md）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;直接把提示丢给你的助手：&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;plaintext&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;“请阅读 openspec/project.md，帮我补全项目目的、技术栈、规范等。”&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;p&gt;这一步会形成&lt;strong&gt;项目语境基线&lt;/strong&gt;：语言版本、依赖、错误处理、目录约定、测试策略……&lt;strong&gt;之后的所有提案与实现，都在同一个语境里协作。&lt;/strong&gt;（示例里已把 YouTube 爬取、并行处理、前后端约定等都写进去了）&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h3 id=&quot;4-提变更提案proposal&quot;&gt;4) 提变更提案（Proposal）&lt;/h3&gt;&lt;a href=&quot;#4-提变更提案proposal&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “4) 提变更提案（Proposal）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;当你想加一个功能，比如“&lt;strong&gt;直接下载 YouTube 字幕&lt;/strong&gt;”，执行：&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;plaintext&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;/openspec:proposal with @engineering/00-issues/10-feature-xxx.md&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;p&gt;生成的提案包含 &lt;strong&gt;Why / What&amp;#x26;How / 验收标准 / 测试场景&lt;/strong&gt;，全部 Markdown，易读、可评审、好跟踪。&lt;strong&gt;这一步定锚“共识”，而不是直接“开干”。&lt;/strong&gt;&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;markdown&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82B1FF;--1:#3B61B0&quot;&gt;# 10. Feature: Download subtitles directly from YouTube videos&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82B1FF;--1:#3B61B0&quot;&gt;## Why&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;Currently, the &lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;`vs-digital-garden`&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; project downloads subtitles using an M3U8 playlist approach, which can be unreliable and slow. By implementing a direct subtitle download method using YouTube&apos;s API or direct HTTP requests, we can improve the reliability and speed of subtitle retrieval. This enhancement will ensure that users have access to accurate subtitles for their videos, enhancing the overall user experience and accessibility of the content.&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82B1FF;--1:#3B61B0&quot;&gt;## What &amp;#x26;&amp;#x26; How&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;-&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; Change &lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;`_download_subtitle_file`&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; method in &lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;`vs-digital-garden-python/src/crawler.py`&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; to download subtitles directly from YouTube using &lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;`requests`&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; instead of current method with M3U8 playlist.&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82B1FF;--1:#3B61B0&quot;&gt;## Acceptance Criteria&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82B1FF;--1:#3B61B0&quot;&gt;### Testing&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;Generate BDD test cases for the new subtitle download method, including scenarios for successful downloads, handling of different subtitle formats, and fallback mechanisms in case of failures.&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h3 id=&quot;5-落地与归档apply--archive&quot;&gt;5) 落地与归档（Apply &amp;#x26; Archive）&lt;/h3&gt;&lt;a href=&quot;#5-落地与归档apply--archive&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “5) 落地与归档（Apply &amp;#x26; Archive）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;/openspec:apply&lt;/code&gt; → 将提案具体落实到代码与文档变更&lt;/li&gt;
-&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;/openspec:archive&lt;/code&gt; → 完成后归档，留存变更历史&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;整个闭环在 Claude 里就能走通；配合 &lt;strong&gt;Claude Code 插件&lt;/strong&gt;，这些指令可以打包共享到团队环境，&lt;strong&gt;复制一套成熟工作流&lt;/strong&gt;给所有人。&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;为什么这套比拍脑袋强&quot;&gt;为什么这套比“拍脑袋”强？&lt;/h2&gt;&lt;a href=&quot;#为什么这套比拍脑袋强&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “为什么这套比“拍脑袋”强？”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h3 id=&quot;a-先共识再编码&quot;&gt;A. 先共识、再编码&lt;/h3&gt;&lt;a href=&quot;#a-先共识再编码&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “A. 先共识、再编码”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;OpenSpec 把“要做什么”写清楚，&lt;strong&gt;Claude 再把“怎么做”执行出来&lt;/strong&gt;。你会发现评审更短、返工更少。&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;b-信息密度高token-友好&quot;&gt;B. 信息密度高、Token 友好&lt;/h3&gt;&lt;a href=&quot;#b-信息密度高token-友好&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “B. 信息密度高、Token 友好”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;纯文本 Markdown&lt;/strong&gt; 对人和模型都友好，指令清晰、来回提问更少。社区实测里，多人提到“Token 使用更省、执行节奏更稳”。（可参考教程与视频复盘）&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;c-团队可复制&quot;&gt;C. 团队可复制&lt;/h3&gt;&lt;a href=&quot;#c-团队可复制&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “C. 团队可复制”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;借助 &lt;strong&gt;Claude Code 插件体系&lt;/strong&gt;，把 Slash 命令、Agent 角色、Hook 全部打包，一键安装到新同事环境，&lt;strong&gt;标准化开发体验&lt;/strong&gt;。&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;d-持续演进&quot;&gt;D. 持续演进&lt;/h3&gt;&lt;a href=&quot;#d-持续演进&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “D. 持续演进”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;OpenSpec 仓库活跃、版本更新频繁（如 2025-10-14 发布 v0.12.0）。这意味着你踩到的问题，生态大概率在完善。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;有不同声音吗？当然有。也有人质疑“Spec-driven 太啰嗦”。建议：&lt;strong&gt;从一个功能点试跑一周&lt;/strong&gt;，用真数据说话。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;一把梳理你的第一条从-0-到-1流水线&quot;&gt;一把梳理：你的第一条“从 0 到 1”流水线&lt;/h2&gt;&lt;a href=&quot;#一把梳理你的第一条从-0-到-1流水线&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “一把梳理：你的第一条“从 0 到 1”流水线”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;安装&lt;/strong&gt;：&lt;code dir=&quot;auto&quot;&gt;npm i -g @fission-ai/openspec &amp;#x26;&amp;#x26; openspec init&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;建共识&lt;/strong&gt;：补全 &lt;code dir=&quot;auto&quot;&gt;openspec/project.md&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;提需求&lt;/strong&gt;：&lt;code dir=&quot;auto&quot;&gt;/openspec:proposal&lt;/code&gt; 写清 Why/What/验收&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;做实现&lt;/strong&gt;：&lt;code dir=&quot;auto&quot;&gt;/openspec:apply&lt;/code&gt; 由 Claude 生成/修改代码&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;留痕迹&lt;/strong&gt;：&lt;code dir=&quot;auto&quot;&gt;/openspec:archive&lt;/code&gt; 关单、沉淀为知识&lt;/li&gt;
-&lt;/ol&gt;
-&lt;blockquote&gt;
-&lt;p&gt;小贴士：用 &lt;strong&gt;AGENTS.md&lt;/strong&gt; 把“运行/测试/风格”写死；用 &lt;strong&gt;Claude 插件&lt;/strong&gt;发给全员，一次设置，全队受益。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;结语&quot;&gt;结语&lt;/h2&gt;&lt;a href=&quot;#结语&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “结语”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;产品讨论再热闹，&lt;strong&gt;不如把分歧写进 Spec、把共识写成历史。&lt;/strong&gt;
-OpenSpec + Claude，不是多一个工具，而是&lt;strong&gt;把“怎么合作”变成了可执行的剧本&lt;/strong&gt;。&lt;/p&gt;&lt;!-- 你打算先用它解决哪个痛点？留言区见——我会挑几个真实场景，**直接写一版可用的 OpenSpec 提案**送你。 --&gt;&lt;!-- 
-
----
-
-## 配图指引（插画风 2:1，无中文）
-
-&gt; 你可以把以下 Prompt 交给你常用的出图工具：
-
-* **封面图**：
-  “A clean illustration of a blueprint turning into shipped code: left side is a tidy spec document with checkmarks, right side is a terminal with `openspec init` and a green ‘Applied’ status, modern flat illustration, minimal, high contrast, 2:1.”
-
-* **关键图 1｜工作流总览**：
-  “A 5-step conveyor belt: Install → Init → Project.md → Proposal → Apply/Archive, each step as an icon, arrows connecting, developer and AI assistant high-fiving, flat style, 2:1.”
-
-* **关键图 2｜AGENTS.md 作用**：
-  “An instruction manual titled ‘AGENTS.md’ guiding multiple tiny robot coders, each following the manual into the same codebase, playful but professional, 2:1.”
-
-* **关键图 3｜团队复制**：
-  “Plugin box installing into multiple laptops simultaneously, progress bars completing in sync, symbolizes one-click standardization, 2:1.”
-
----
-
-## 推荐标题（3 组，多语言 + slug）
-
-1. **中文**：OpenSpec × Claude：写好“剧本”，再开工
-   **English**: OpenSpec × Claude: Spec First, Ship Faster
-   **繁體**：OpenSpec × Claude：先寫劇本，再開工
-   **日本語**：OpenSpec × Claude：仕様を先に、実装は速く
-   **Français** : OpenSpec × Claude : Spécifier d’abord, livrer plus vite
-   **Español**: OpenSpec × Claude: Especifica primero, entrega más rápido
-   **Português**: OpenSpec × Claude: Especifique primeiro, entregue mais rápido
-   **slug**：openspec-claude-spec-first-ship-faster
-
-2. **中文**：从“灵感”到“上线”，就差这 5 步
-   **English**: From Idea to Production in 5 Steps
-   **繁體**：從靈感到上線，只差這 5 步
-   **日本語**：アイデアから本番まで、5 ステップ
-   **Français** : De l’idée à la prod en 5 étapes
-   **Español**: De la idea a producción en 5 pasos
-   **Português**: Da ideia à produção em 5 passos
-   **slug**：idea-to-production-in-5-steps-openspec-claude
-
-3. **中文**：别再瞎猜了，用 OpenSpec 给 AI 发“通告单”
-   **English**: Stop Guessing—Give Your AI a Call Sheet
-   **繁體**：別再瞎猜，用 OpenSpec 給 AI 發「通告單」
-   **日本語**：推測は終わり。AI に“コールシート”を
-   **Français** : Fin des suppositions—un call sheet pour l’IA
-   **Español**: Basta de adivinar—dale a tu IA una “call sheet”
-   **Português**: Chega de adivinhar—uma “call sheet” para sua IA
-   **slug**：stop-guessing-call-sheet-for-ai-openspec
-
----
-
-## 朋友圈/评论区推荐文案（3 条）
-
-1. “今天把 OpenSpec + Claude 跑了一遍，**需求不口嗨、实现不走偏、历史能回放**。真香——准备拉同事全员上车。”
-2. “别再‘感觉编码’了，给 AI 写份通告单（AGENTS.md），**三步开干、五步闭环**。效率和心情都提升。”
-3. “试了下 Proposal→Apply→Archive，**像开了自动挡**。团队配合更顺，返工更少。强烈安利。”
-
----
-
-要不要我把你当前项目也“Spec 化”？我可以直接按这套流程，**帮你写第一份 Proposal 和验收清单**。如果你需要，我也能把配图直接做出来。满意吗？要不要我再扩写一版“测试与验收案例库”？
-
-[1]: https://github.com/Fission-AI/OpenSpec?utm_source=chatgpt.com &quot;Fission-AI/OpenSpec: Spec-driven development for AI ...&quot;
-[2]: https://forum.cursor.com/t/openspec-lightweight-portable-spec-driven-framework-for-ai-coding-assistants/134052?utm_source=chatgpt.com &quot;OpenSpec - Lightweight &amp; portable spec driven framework ...&quot;
-[3]: https://www.reddit.com/r/cursor/comments/1nomd8t/specdriven_development_is_underhyped_heres_how/?utm_source=chatgpt.com &quot;Spec-driven development is underhyped! Here&apos;s how you ...&quot;
-[4]: https://www.anthropic.com/news/claude-code-plugins?utm_source=chatgpt.com &quot;Customize Claude Code with plugins&quot;
-[5]: https://github.com/Fission-AI/OpenSpec/releases?utm_source=chatgpt.com &quot;Releases · Fission-AI/OpenSpec&quot;
-[6]: https://agents.md/?utm_source=chatgpt.com &quot;AGENTS.md&quot;
-[7]: https://www.youtube.com/watch?v=cQv3ocbsKHY&amp;utm_source=chatgpt.com &quot;I Found the Simplest AI Dev Tool Ever&quot;
-[8]: https://www.reddit.com/r/ChatGPTCoding/comments/1o6j1yr/specdriven_development_for_ai_is_a_form_of/?utm_source=chatgpt.com &quot;Spec-driven development for AI is a form of technical ...&quot; --&gt;</content:encoded><category>Claude Code</category><category>OpenSpec</category></item></channel></rss>
+[10]: https://www.theverge.com/ai-artificial-intelligence/800868/anthropic-claude-skills-ai-agents?utm_source=chatgpt.com &quot;Anthropic turns to &apos;skills&apos; to make Claude more useful at work&quot; --&gt;</content:encoded><category>Claude</category><category>Claude Code</category><category>Anthropic</category></item></channel></rss>
