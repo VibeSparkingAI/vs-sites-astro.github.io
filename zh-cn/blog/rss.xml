@@ -1,4 +1,476 @@
-<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Vibe Sparking AI | Blog</title><description/><link>https://www.vibesparking.com/</link><language>zh-CN</language><item><title>给 Claude 装上「长期记忆」：claude-mem 实战体验与使用建议</title><link>https://www.vibesparking.com/zh-cn/blog/ai/claude-code/claude-mem/2025-12-09-claude-mem-long-term-memory/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/claude-code/claude-mem/2025-12-09-claude-mem-long-term-memory/</guid><pubDate>Tue, 09 Dec 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;claude-mem 这玩意儿，能让 Claude 真正「记住你」&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Vibe Sparking AI | Blog</title><description/><link>https://www.vibesparking.com/</link><language>zh-CN</language><item><title>Anthropic 法务把审合同这件苦差事，用 Claude 玩成了“工作流艺术”</title><link>https://www.vibesparking.com/zh-cn/blog/ai/anthropic/2025-12-09-anthropic-legal-claude-stop-manual-redlining/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/anthropic/2025-12-09-anthropic-legal-claude-stop-manual-redlining/</guid><pubDate>Tue, 09 Dec 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # Anthropic 法务把审合同这件苦差事，用 Claude 玩成了“工作流艺术” --&gt;
+&lt;hr&gt;
+&lt;p&gt;昨天 Anthropic 官网上发了一篇新文章，讲他们&lt;strong&gt;法务团队怎么用 Claude / Claude Code，把原来要几天的活压缩到几个小时，而且全程“人始终在环中”&lt;/strong&gt;。&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;一连顶级-ai-公司法务也在被体力活榨干&quot;&gt;一、连顶级 AI 公司，法务也在被“体力活”榨干&lt;/h2&gt;&lt;a href=&quot;#一连顶级-ai-公司法务也在被体力活榨干&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “一、连顶级 AI 公司，法务也在被“体力活”榨干”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Anthropic 的产品律师 Mark 描述自己之前的日常：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;回各种合规文档、客户问卷&lt;/li&gt;
+&lt;li&gt;改服务条款和隐私政策&lt;/li&gt;
+&lt;li&gt;帮市场部审博客、邮件、营销素材&lt;/li&gt;
+&lt;li&gt;红线合同、一条条对比版本&lt;/li&gt;
+&lt;li&gt;写一大堆隐私影响评估（PIA）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这些活有几个特点：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;重复、格式差不多、出错成本高、又极其浪费脑力。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;他甚至说，很多事情会拖到一天最后去做，因为很占时间，但完全用不上自己“最好的那部分大脑”。&lt;/p&gt;
+&lt;p&gt;这听着是不是很眼熟？
+只要你在公司里做过一点法务、合规、风控、运营、客服，其实都在经历类似的痛。&lt;/p&gt;
+&lt;p&gt;Anthropic 法务团队做了一件很“工程师”的事：&lt;/p&gt;
+&lt;p&gt;他们拉了个会，专门在白板上写——
+&lt;strong&gt;“什么事最耗精力？什么最重复？哪些活根本不配占我们这么多时间？”&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;答案出来之后，他们没急着谈“AI 能做什么”，而是只盯一个问题：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;哪些事情，我们&lt;strong&gt;最想再也不用亲手做一遍？&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;二法务工作流怎么拆4-个真实场景&quot;&gt;二、法务工作流怎么拆：4 个真实场景&lt;/h2&gt;&lt;a href=&quot;#二法务工作流怎么拆4-个真实场景&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “二、法务工作流怎么拆：4 个真实场景”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Anthropic 法务团队花了几个月，把痛点一点点变成了“可复制工作流”。&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;1营销素材自助审核先过-ai-这一关&quot;&gt;1）营销素材自助审核：先过 AI 这一关&lt;/h3&gt;&lt;a href=&quot;#1营销素材自助审核先过-ai-这一关&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1）营销素材自助审核：先过 AI 这一关”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;以前的流程，你肯定见过：&lt;/p&gt;
+&lt;p&gt;市场部在发布前一晚，把落地页、Push、海报一股脑甩给法务：
+“帮忙今天之内过一下，明天要上线。”&lt;/p&gt;
+&lt;p&gt;法务只好：打开文档 → 从头看一遍 → 留一堆 comment → 来回几轮修改。
+经常一拖就是几天。&lt;/p&gt;
+&lt;p&gt;Anthropic 的改造方式很简单，但很狠：&lt;/p&gt;
+&lt;p&gt;他们在 Slack 里做了一个**“营销素材自查工具”**（Self-Review Tool）：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;市场同学把文案粘进去&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Claude 调用一个专门的 &lt;strong&gt;“法务 Skill 文件”&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;里面是：历史审核意见、常见风险点、团队约定的判断标准&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Claude 自动标出：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;夸大宣传？&lt;/li&gt;
+&lt;li&gt;数据是否有来源？&lt;/li&gt;
+&lt;li&gt;是否侵犯肖像权、名誉权？&lt;/li&gt;
+&lt;li&gt;有没有暗示不该承诺的东西？&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;每个问题打风险等级：低 / 中 / 高&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;顺带给出“修改建议版本”&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;只有过了这一关，才会真的创建工单，进法务队列。&lt;/p&gt;
+&lt;p&gt;StartupHub 的报道里提到，这一套下来，&lt;strong&gt;原来要几天的审核，现在可以压缩到几个小时&lt;/strong&gt;，而且 Slack 里还能自动生成一条总结消息，帮法务把风险点捋清楚。&lt;/p&gt;
+&lt;p&gt;这件事本质是：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;把“问诊前的表格”和“基础体检”交给 AI 做，
+真正的诊断，还是医生说了算。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h3 id=&quot;2兼职--外部活动审批ai-先问清楚细节&quot;&gt;2）兼职 / 外部活动审批：AI 先问清楚细节&lt;/h3&gt;&lt;a href=&quot;#2兼职--外部活动审批ai-先问清楚细节&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2）兼职 / 外部活动审批：AI 先问清楚细节”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;很多公司都有类似流程：&lt;/p&gt;
+&lt;p&gt;员工想去接个顾问、搞个副业、去非营利机构当个董事，都要走“外部商业活动审批”。&lt;/p&gt;
+&lt;p&gt;以前的做法：法务要一对一问清楚背景、利益冲突、时间占用、竞业风险……来回问半天。&lt;/p&gt;
+&lt;p&gt;现在 Anthropic 是这么玩：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;员工先填一个结构化表单&lt;/li&gt;
+&lt;li&gt;Claude 读完表单内容&lt;/li&gt;
+&lt;li&gt;如果信息不够，它会自动&lt;strong&gt;追问补充问题&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;再根据公司规则，给出一个&lt;strong&gt;建议结论 + 风险说明&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;最后进法务队列，由律师确认通过与否&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;律师们现在主要盯两类：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;真·疑难杂症&lt;/li&gt;
+&lt;li&gt;风险比较高的边界情况&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;把“90% 标准流程 + 10% 极值判断”拆开了。&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h3 id=&quot;3隐私影响评估pia让-ai-学会写模板&quot;&gt;3）隐私影响评估（PIA）：让 AI 学会“写模板”&lt;/h3&gt;&lt;a href=&quot;#3隐私影响评估pia让-ai-学会写模板&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3）隐私影响评估（PIA）：让 AI 学会“写模板””&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;隐私类项目，每上一个新功能，就要重新写一份 PIA。&lt;/p&gt;
+&lt;p&gt;痛点在于：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;模板类似，但每次都得重写&lt;/li&gt;
+&lt;li&gt;既要贴合具体场景，又不能漏掉必写模块&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Anthropic 的做法有两步：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;用 MCP（Model Context Protocol）把 Claude 接入一个 Google Drive 文件夹&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;里面是他们&lt;strong&gt;历史所有 PIA 文档&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;给 Claude 配一个“写 PIA 的 Skill”，告诉它：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;文档结构&lt;/li&gt;
+&lt;li&gt;每一块重点关注什么&lt;/li&gt;
+&lt;li&gt;公司特别在意的隐私点&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;律师只要说一句：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“根据之前这些案例，帮我写一个这次新功能的 PIA 草稿。”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Claude 会：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;先理解历次 PIA 的风格&lt;/li&gt;
+&lt;li&gt;再按格式写出初稿&lt;/li&gt;
+&lt;li&gt;把历史关注点迁移到新场景&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;律师做的工作，从“从 0 写一遍”，变成“改一篇已经 80 分的稿子”。&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h3 id=&quot;4legal-玩出了摩斯密码灯但重点在于门槛降到了人话&quot;&gt;4）Legal 玩出了“摩斯密码灯”，但重点在于“门槛降到了人话”&lt;/h3&gt;&lt;a href=&quot;#4legal-玩出了摩斯密码灯但重点在于门槛降到了人话&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “4）Legal 玩出了“摩斯密码灯”，但重点在于“门槛降到了人话””&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;有个细节挺好玩：&lt;/p&gt;
+&lt;p&gt;Mark 用 Claude Code 做了个“法律台灯”，能闪烁摩斯密码来收发信息——纯属个人兴趣项目。&lt;/p&gt;
+&lt;p&gt;但这个故事背后的点很重要：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;连一个不会写代码的律师，都能靠“跟 AI 说人话”，做出一个完整的小应用。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;对企业来说，这意味着：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;法务、合规、运营这些本来“不会写代码的人”，可以自己动手搭工作流&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;不用一上来就排工程资源、立大项目&lt;/li&gt;
+&lt;li&gt;他们只要把规则讲清楚，就能让 AI 帮忙落地成工具&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这就从根上改变了：
+“只有工程师才能做工具”这件事。&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;三这套法务工作流的底层积木&quot;&gt;三、这套法务工作流的“底层积木”&lt;/h2&gt;&lt;a href=&quot;#三这套法务工作流的底层积木&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “三、这套法务工作流的“底层积木””&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Anthropic 法务这套体系背后，其实就三块积木：&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;1从技术能做什么换成我不想干什么&quot;&gt;1）从“技术能做什么”换成“我不想干什么”&lt;/h3&gt;&lt;a href=&quot;#1从技术能做什么换成我不想干什么&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1）从“技术能做什么”换成“我不想干什么””&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Mark 给的建议很直接：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;不要上来问“AI 能干嘛”，
+先问“我们最想摆脱的活是什么”。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;他们就是按这个思路，白板上写：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;哪些是重复文书&lt;/li&gt;
+&lt;li&gt;哪些是每天都在做的判断&lt;/li&gt;
+&lt;li&gt;哪些是完全可以标准化的流程&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;确认完，再看：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;能不能先让 AI 做&lt;strong&gt;第一轮&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;把人类的时间保留给&lt;strong&gt;争议点、例外情况、战略判断&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h3 id=&quot;2skills把团队经验打包成可调用资产&quot;&gt;2）Skills：把团队经验打包成“可调用资产”&lt;/h3&gt;&lt;a href=&quot;#2skills把团队经验打包成可调用资产&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2）Skills：把团队经验打包成“可调用资产””&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;官方博客里把 Skills 定义成：&lt;strong&gt;一份文件，里面写着指令、脚本、参考资料，让 Claude 在做某个任务时能“变成行家”&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;对法务来说，Skills 用在两件事：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;保证规则统一&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;营销审核 Skill：把“团队历史审核意见”固化进去&lt;/li&gt;
+&lt;li&gt;不同领域有不同 Skill：雇佣、商业、隐私、公司治理……&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;保持文风统一&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Mark 让 Claude 读了自己 10 篇备忘录&lt;/li&gt;
+&lt;li&gt;让它学会自己的写法、结构、口吻&lt;/li&gt;
+&lt;li&gt;以后让 Claude 起草 memo，可以直接“写出他的风格”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;你可以把 Skill 想象成：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;团队里那位资深律师的“外挂记忆卡”。&lt;/p&gt;
+&lt;p&gt;用的时候插上，不用的时候拔掉。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h3 id=&quot;3mcp把分散的信息接成一张法务知识网&quot;&gt;3）MCP：把分散的信息接成一张“法务知识网”&lt;/h3&gt;&lt;a href=&quot;#3mcp把分散的信息接成一张法务知识网&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3）MCP：把分散的信息接成一张“法务知识网””&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;另一个关键积木是 MCP（Model Context Protocol）。&lt;/p&gt;
+&lt;p&gt;Anthropic 法务用它把 Claude 接到了：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Google Drive：历史合同、PIA、模板、政策&lt;/li&gt;
+&lt;li&gt;JIRA：需求与工单&lt;/li&gt;
+&lt;li&gt;Slack：沟通记录&lt;/li&gt;
+&lt;li&gt;日历：关键会议、审批节点&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这样做有两个效果：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;AI 不再“瞎编”，因为它有你自己的资料可查&lt;/li&gt;
+&lt;li&gt;每个工作流，都能拿到&lt;strong&gt;刚好够用的上下文&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;你可以简单理解：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;MCP = 给 AI 接上“公司内部网”。&lt;/p&gt;
+&lt;p&gt;Skills = 教它“怎么用这些资料办事”。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;四整套方案最关键的一条人绝对不能缺席&quot;&gt;四、整套方案最关键的一条：人绝对不能缺席&lt;/h2&gt;&lt;a href=&quot;#四整套方案最关键的一条人绝对不能缺席&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “四、整套方案最关键的一条：人绝对不能缺席”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;无论是 Anthropic 自己的博客，还是 StartupHub 的报道，都在反复强调一句话：&lt;strong&gt;“法务一定要在人在环中。”&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;他们的实际做法是：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;AI 负责：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;首轮审稿、找问题&lt;/li&gt;
+&lt;li&gt;初步打风险等级&lt;/li&gt;
+&lt;li&gt;草拟修改建议和文档&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;律师负责：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;核查事实与引用&lt;/li&gt;
+&lt;li&gt;判断“这个风险公司能不能接受”&lt;/li&gt;
+&lt;li&gt;对外最后拍板&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Anthropic 明说了：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;AI 会幻觉，这是客观事实。&lt;/p&gt;
+&lt;p&gt;所以他们的设计就是：&lt;strong&gt;AI 做“加速器”，人做“刹车 + 方向盘”。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;对任何想在公司里推 AI 的人来说，这句话很有用：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;你不是在用 AI 替代法务，
+你是在用 AI 让法务不再做“改格式、找错别字”的机器。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;五这套玩法国内团队怎么抄作业&quot;&gt;五、这套玩法，国内团队怎么“抄作业”？&lt;/h2&gt;&lt;a href=&quot;#五这套玩法国内团队怎么抄作业&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “五、这套玩法，国内团队怎么“抄作业”？”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;说完 Anthropic，我们来聊“怎么抄”。
+不管你现在用的是 Claude、ChatGPT、DeepSeek 还是自家的模型，其实都能借这套思路。&lt;/p&gt;
+&lt;p&gt;你可以这样开局：&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;1列出你团队的法务地狱清单&quot;&gt;1）列出你团队的“法务地狱清单”&lt;/h3&gt;&lt;a href=&quot;#1列出你团队的法务地狱清单&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1）列出你团队的“法务地狱清单””&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;找一天，拉上法务 / 合规 / 市场 / 产品：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;写下&lt;strong&gt;最不想亲自再做一百遍的任务&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;按“重复度 × 风险可控度”来排优先级&lt;/li&gt;
+&lt;li&gt;选 1～2 个“现在就可以试水”的&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;典型候选：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;营销素材初审&lt;/li&gt;
+&lt;li&gt;合同标准条款比对&lt;/li&gt;
+&lt;li&gt;数据保护、隐私类模板&lt;/li&gt;
+&lt;li&gt;标准问卷、合规 Q&amp;#x26;A&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h3 id=&quot;2先搭人--ai-双层流程再谈自动化&quot;&gt;2）先搭“人 + AI 双层流程”，再谈自动化&lt;/h3&gt;&lt;a href=&quot;#2先搭人--ai-双层流程再谈自动化&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2）先搭“人 + AI 双层流程”，再谈自动化”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;一上来就做“端到端自动审批”，往往会死在风控和信任上。&lt;/p&gt;
+&lt;p&gt;更稳的方式是：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;让 AI 做“内部预审 + 辅助草稿”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;真正的决策流程&lt;strong&gt;不变&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;用 1～2 个月，验证：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;它有没有明显错误&lt;/li&gt;
+&lt;li&gt;速度是不是真的提升&lt;/li&gt;
+&lt;li&gt;团队有没有觉得更好用&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;过了这一关，再看要不要升级成：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;自助工具&lt;/li&gt;
+&lt;li&gt;与内部系统打通的工作流&lt;/li&gt;
+&lt;li&gt;加入模板、Skills、团队规范&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h3 id=&quot;3把规则和风格慢慢喂给-ai&quot;&gt;3）把“规则”和“风格”慢慢喂给 AI&lt;/h3&gt;&lt;a href=&quot;#3把规则和风格慢慢喂给-ai&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3）把“规则”和“风格”慢慢喂给 AI”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;可以学 Anthropic 的两步法：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;规则&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;整理一份“本公司法务审核 checklist”&lt;/li&gt;
+&lt;li&gt;例如：不可使用的词、必加免责声明、必须核实的数据项&lt;/li&gt;
+&lt;li&gt;编成一个长期维护的“AI 提示文档”或 Skill&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;风格&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;丢给 AI 你们团队写得比较满意的几份合同评审意见、备忘录&lt;/li&gt;
+&lt;li&gt;让它总结：常见结构、表达习惯、措辞偏好&lt;/li&gt;
+&lt;li&gt;以后生成草稿时，都要求“按这个风格写”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;慢慢地，你会得到一个：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;会按&lt;strong&gt;你们自己的习惯&lt;/strong&gt;做事的 AI 小同事。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h3 id=&quot;4别忘了收益要算清楚&quot;&gt;4）别忘了收益要算清楚&lt;/h3&gt;&lt;a href=&quot;#4别忘了收益要算清楚&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “4）别忘了收益要算清楚”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;做这类自动化，到底值不值？
+Anthropic 在另一份《How Anthropic teams use Claude Code》文档中提到，他们内部很多团队都用这套方式来评估效率提升，而法务是收益特别明显的一块。&lt;/p&gt;
+&lt;p&gt;你可以简单量化：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;每条营销素材的平均审核时间&lt;/li&gt;
+&lt;li&gt;每份合同从“发给法务”到“给出意见”的周期&lt;/li&gt;
+&lt;li&gt;每个律师每周花在重复文书上的小时数&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;做个前后对比，很容易说服老板继续投资源。&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;六一点小总结&quot;&gt;六、一点小总结&lt;/h2&gt;&lt;a href=&quot;#六一点小总结&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “六、一点小总结”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;用一句话概括 Anthropic 法务这次的实践：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;用 AI 做“懂规则的初级助理”，
+把资深律师从体力活里解放出来，去做真正需要判断力的事。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这件事对所有“又懂业务又懂一点点 AI 的人”来说，都是一个巨大的机会：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;你可以成为那个&lt;strong&gt;把团队经验沉淀成 Skills 的人&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;你可以搭起第一个“AI + 法务工作流”&lt;/li&gt;
+&lt;li&gt;你可以把 AI 从“聊天玩具”，变成真正的“流程基础设施”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;我很好奇：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;你所在的团队，有哪些事，其实完全可以照着 Anthropic 这套思路，交给 AI 打底？&lt;/p&gt;
+&lt;/blockquote&gt;&lt;!-- 
+欢迎在评论区说说你的场景，我们可以一起帮你拆一个工作流出来玩。
+
+
+
+---
+
+## 推荐标题（3 组，多语言 + slug）
+
+### 标题 1
+
+* 简体：
+  **连 Anthropic 法务都在用 Claude 解放自己了，你的合同还在手工改吗？**
+* English:
+  **Anthropic’s Legal Team Now Runs on Claude. Are You Still Redlining by Hand?**
+* 繁體：
+  **連 Anthropic 法務都在用 Claude 解放自己了，你的合約還在手動修改嗎？**
+* 日本語:
+  **Anthropic の法務はもう Claude で働いている。あなたはまだ手作業で契約を直してる？**
+* Français :
+  **L’équipe juridique d’Anthropic tourne déjà avec Claude. Vous révisez encore vos contrats à la main ?**
+* Español:
+  **El equipo legal de Anthropic ya usa Claude. ¿Tú sigues corrigiendo contratos a mano?**
+* Português:
+  **O jurídico da Anthropic já roda com Claude. Você ainda revisa contratos na mão?**
+* slug-url：
+  `anthropic-legal-claude-stop-manual-redlining`
+
+---
+
+### 标题 2
+
+* 简体：
+  **从“部门刹车”到“增长搭子”：Anthropic 法务用 Claude 改造自己**
+* English:
+  **From Department of No to Growth Partner: How Anthropic Legal Reinvented Itself with Claude**
+* 繁體：
+  **從「否決部門」到「成長夥伴」：Anthropic 法務如何用 Claude 改造自己**
+* 日本語:
+  **「ブレーキ役」から「成長パートナー」へ：Anthropic 法務が Claude で変わった話**
+* Français :
+  **Du “service qui bloque” au partenaire de croissance : comment le juridique d’Anthropic s’est réinventé avec Claude**
+* Español:
+  **De “departamento que frena” a socio de crecimiento: así se reinventó el equipo legal de Anthropic con Claude**
+* Português:
+  **Do “departamento do não” a parceiro de crescimento: como o jurídico da Anthropic se reinventou com Claude**
+* slug-url：
+  `anthropic-legal-growth-partner-with-claude`
+
+---
+
+### 标题 3
+
+* 简体：
+  **不会写代码的律师，也在用 Claude Code 织工作流了**
+* English:
+  **Lawyers Who Can’t Code Are Now Building Workflows with Claude Code**
+* 繁體：
+  **不會寫程式的律師，也在用 Claude Code 編織工作流了**
+* 日本語:
+  **コードを書けない弁護士が、Claude Code でワークフローを組み始めた**
+* Français :
+  **Des avocats qui ne codent pas construisent déjà des workflows avec Claude Code**
+* Español:
+  **Abogados que no programan ya crean flujos de trabajo con Claude Code**
+* Português:
+  **Advogados que não programam já criam workflows com Claude Code**
+* slug-url：
+  `lawyers-building-workflows-with-claude-code`
+
+---
+
+## 配图设计（插画风，2:1，图片内不要中文）
+
+你可以把下面这些提示词丢给绘图工具（如 DALL·E、Midjourney 等）：
+
+### 1）封面图（整篇文章）
+
+&gt; A wide 2:1 illustration of a modern legal team in a bright tech office, a friendly AI assistant represented as a glowing screen or hologram helping lawyers review documents, documents flowing into organized workflows, subtle code patterns in the background, clean flat illustration style, no text in the image
+
+---
+
+### 2）关键章节配图建议
+
+**配图 A：营销素材自助审核**
+
+&gt; 2:1 illustration of a marketer pasting text into a chat window on a laptop, an AI assistant highlighting risky parts of the content with colorful markers, a happy lawyer in the background giving a thumbs up, modern flat style, no text in the image
+
+**配图 B：法务 + AI 双层审批**
+
+&gt; 2:1 illustration of a “two-layer workflow”: on the left, an AI assistant quickly sorting and tagging digital documents; on the right, a human lawyer carefully reviewing a smaller stack with a checkmark, connected by arrows, calm and trustworthy color palette, no text in the image
+
+**配图 C：Skills 与知识网络**
+
+&gt; 2:1 illustration of a central AI brain connected by lines to multiple folders labeled as icons (contract, marketing, privacy, policy), symbolizing reusable skills and a knowledge network, futuristic yet friendly style, no text in the image
+
+---
+
+## 朋友圈 / 评论区文案（3 条）
+
+1️⃣
+刚刷到 Anthropic 法务用 Claude 把审合同、审物料这堆苦差事，压缩成“几小时搞定”的工作流，看完只想说：原来我们加班，不是因为工作多，是因为还没请到对的 AI 打工人。
+
+2️⃣
+这篇把法务工作流拆得太清楚了，市场、产品、合规都能抄作业那种。准备周一拉法务同事喝杯咖啡：咱别再当“部门刹车”了，一起搞个 AI 小助手当挡箭牌。😆
+
+3️⃣
+看 Anthropic 法务的实践，突然意识到：AI 真正的价值不是“写几段文案”，而是帮你把一整条流程重排一遍。转给正在被合同和审批淹没的朋友，咱们一起把“体力活”外包给硅基大脑吧。
+
+---
+
+你觉得这版文章 OK 吗？
+如果你打算发公众号，我可以帮你**按你常用的字数和排版习惯再做一版扩写或精简版**，也可以针对你自己公司的场景，补充一段“落地操作清单”。
+
+* [theverge.com](https://www.theverge.com/news/839817/anthropic-claude-code-slack-integration?utm_source=chatgpt.com)
+* [reuters.com](https://www.reuters.com/business/media-telecom/anthropic-acquires-developer-tool-startup-bun-scale-ai-coding-2025-12-02/?utm_source=chatgpt.com)
+
+[1]: https://claude.com/blog/how-anthropic-uses-claude-legal &quot;How Anthropic uses Claude in Legal | Claude&quot;
+[2]: https://www.startuphub.ai/ai-news/ai-video/2025/claude-unlocks-legal-efficiency-at-anthropic/ &quot;Claude Unlocks Legal Efficiency at Anthropic&quot;
+[3]: https://www-cdn.anthropic.com/58284b19e702b49db9302d5b6f135ad8871e7658.pdf?utm_source=chatgpt.com &quot;How Anthropic teams use Claude Code&quot; --&gt;</content:encoded><category>Anthropic</category><category>Claude</category><category>Claude Code</category><category>Slack</category></item><item><title>中国人工智能：2026年供应链上行空间成为焦点</title><link>https://www.vibesparking.com/zh-cn/blog/finance/china/2025-12-09-china-ai-supply-chain-outlook-2026/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/finance/china/2025-12-09-china-ai-supply-chain-outlook-2026/</guid><pubDate>Tue, 09 Dec 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # 中国人工智能：2026年供应链上行空间成为焦点 --&gt;
+&lt;p&gt;对于中国的AI故事而言，现在仅仅是开始的结束，我们不认为中国的AI是一个泡沫。对中国AI而言，2025年是一个好年景，由DeepSeek引发，但从供应链发展的角度来看，中国的AI故事才刚刚结束其初始篇章。我们预计，中国云服务提供商（CSP）和电信公司（Telco）的总资本支出（capex）的复合年增长率（CAGR）将达到13%，其中AI资本支出到2028年将以25%的复合年增长率增长，达到1720亿美元。重要的是，这一支出仍然是健康的：对于已上市公司而言，总资本支出仅占其自由现金流的40%至60%，或占其营收的约17%。主要云服务提供商已经预示将上调其资本支出计划，其中大部分将分配给AI，这将在2028年创造880亿美元的AI芯片需求。&lt;/p&gt;
+&lt;p&gt;本土供应链正在迅速发展以满足这一激增的需求。目前，最大的瓶颈在于本土先进逻辑生产能力的限制，这限制了本土AI芯片的产出。然而，我们的渠道调查显示了一个关键的转折点：先进逻辑产能应在2026/27年开始加速增长（附图12）。考虑到从晶圆代工生产到AI芯片销售通常有3-4个季度的滞后时间，这种产能增加将转化为2027/28年本土AI芯片销售额的急剧增长（附图14）。我们预计，到2028年，本土AI芯片的供应将比2025年增长5倍，市场将实现供需平衡。值得注意的是，我们预计在正在进行的“后门”调查中，英伟达（NVIDIA）不会恢复在中国的销售，因此预计到2028年本土企业将占据90%以上的市场份额。&lt;/p&gt;
+&lt;p&gt;中国AI供应链中的领先者将受益。我们预测2026年中国整个AI供应链将出现广泛反弹，按行业排名为：AI芯片 &gt; 半导体设备 &gt; 晶圆代工。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+&lt;/p&gt;&lt;!-- ![](/assets/finance/china/china-ai-supply-chain-outlook-2026/12.png) --&gt;
+&lt;p&gt;
+
+&lt;/p&gt;</content:encoded><category>Finance</category><category>China</category><category>AI Supply Chain</category></item><item><title>给 Claude 装上「长期记忆」：claude-mem 实战体验与使用建议</title><link>https://www.vibesparking.com/zh-cn/blog/ai/claude-code/claude-mem/2025-12-09-claude-mem-long-term-memory/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/claude-code/claude-mem/2025-12-09-claude-mem-long-term-memory/</guid><pubDate>Tue, 09 Dec 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;claude-mem 这玩意儿，能让 Claude 真正「记住你」&lt;/p&gt;
 &lt;p&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;你有没有这种感受：&lt;/p&gt;
@@ -3488,265 +3960,4 @@ AI 过于“忠实”地参考了原图，竟然把原图左上角的 Logo ID（
 &lt;p&gt;对于初级程序员，不要害怕 AI “抢饭碗”，也不要把自己降格为 AI 的码农。相反，你应该把 AI 当作导师和工具，多问几个”为什么”，多利用它学习更高层次的知识。调查显示，很多开发者使用 AI 辅助编码的首要原因竟然是学习，比如学习新的技术知识、了解最佳实践等。所以新人更要注重打好思考问题的基础：在拿到任务时，先自己尝试分析和设计，然后可以让 AI 给出另一种实现思路，与自己的思路比对，找出差距。从中你会成长得更快。切忌完全不思考就把问题丢给 AI，拿到答案也不求甚解地照搬——长此以往，你可能会陷入”能力空心化”的危险。AI 最终服务的是会思考的人，而不会思考的人终将被淘汰。这一点在 AI 时代只会更加明显。&lt;/p&gt;
 &lt;p&gt;最后，我们要意识到：AI 编程助手的出现，并不是让我们彻底解放、大脑下班，恰恰相反，它倒逼每一位开发者更清楚地认识到自己真正的价值所在。既然写代码的体力活可以自动化了，那么我们更应该把时间投入到深度理解业务、精心设计方案、严格把控质量、持续创新这些需要人类智慧的事情上。这不仅不会让我们失业，反而会让我们成为更高效、更有创造力的开发者。&lt;/p&gt;
 &lt;p&gt;让 AI 当好我们的”代码小工”，让我们人类自己成为更优秀的”系统设计师”和”问题解决专家”。当你学会充分利用 AI 去承担繁琐的实现工作，你会惊喜地发现：脑海中那些天马行空的创意，实现出来的速度变快了；曾经望而生畏的复杂需求，也因你有更多时间深思熟虑而变得迎刃而解。软件开发的本质始终是思考，这一点在 AI 加持下从未改变，只是分工更明确——机器负责听话地写代码，人类负责聪明地思考问题。&lt;/p&gt;
-&lt;p&gt;希望这篇分享能启发你在今后的工作中更加注重思考的力量，也勇于拥抱 AI 工具为你所用。把重复劳动交给机器，让你的脑力创造更大价值！ 🎉&lt;/p&gt;</content:encoded><category>AI</category></item><item><title>银行风波、流动性和关税：一则“小镇储户”的市场冒险故事</title><link>https://www.vibesparking.com/zh-cn/blog/finance/us-market/2025-10-18-bank-turmoil-liquidity-tariffs-small-town-depositors-market-adventure/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/finance/us-market/2025-10-18-bank-turmoil-liquidity-tariffs-small-town-depositors-market-adventure/</guid><pubDate>Sat, 18 Oct 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # 银行风波、流动性和关税：一则“小镇储户”的市场冒险故事 --&gt;
-&lt;blockquote&gt;
-&lt;p&gt;这是一个关于“钱从哪来、又流向哪”的故事。主角不是华尔街，而是你我：工资进账、买基金、看新闻……当美国两家地区银行出事、美联储暗示要“停表”、10年期美债跌到4%下方、又传出中美要不要见面的风声——这些听上去很“远”的事，怎么一步步走进了我们的账户里？&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;第一章存款阿姨的坏消息&quot;&gt;第一章｜存款阿姨的“坏消息”&lt;/h2&gt;&lt;a href=&quot;#第一章存款阿姨的坏消息&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “第一章｜存款阿姨的“坏消息””&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;周五清晨，“小镇银行”的大厅里，人还没来齐，&lt;strong&gt;电子屏忽然跳出一条快讯&lt;/strong&gt;：&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;“&lt;strong&gt;Zions 银行&lt;/strong&gt;披露一笔&lt;strong&gt;5,000万美元&lt;/strong&gt;的贷款坏账；&lt;strong&gt;Western Alliance&lt;/strong&gt;说他们已在&lt;strong&gt;8月起诉&lt;/strong&gt;一个叫 &lt;strong&gt;Cantor Group V&lt;/strong&gt; 的借款方，怀疑有抵押品欺诈。”&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;大堂经理小声说：“不是系统性爆雷，就是&lt;strong&gt;个案的欺诈&lt;/strong&gt;，但&lt;strong&gt;股价&lt;/strong&gt;先跌了再说。” 隔壁的债券经理补刀：“可别小看，&lt;strong&gt;这种‘意外’会让大家更怕风&lt;/strong&gt;，于是都去抢&lt;strong&gt;更安全的债&lt;/strong&gt;。” 果不其然，&lt;strong&gt;10年期美债收益率&lt;/strong&gt;当天一度&lt;strong&gt;探到 ~3.93%-4% 附近&lt;/strong&gt;——价格涨了、收益率就下去了。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;旁白：不是说银行“全线有事”，而是&lt;strong&gt;个案把市场神经绷紧&lt;/strong&gt;——一紧，钱就往债券里躲，&lt;strong&gt;股市&lt;/strong&gt;短线就更容易被**“吓一跳”**。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;第二章水池的边缘&quot;&gt;第二章｜水池的边缘&lt;/h2&gt;&lt;a href=&quot;#第二章水池的边缘&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “第二章｜水池的边缘”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;你可以把&lt;strong&gt;金融系统&lt;/strong&gt;想成一口大水池：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;美联储缩表（QT）&lt;/strong&gt;＝慢慢放水走；&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;财政部户头（TGA）&lt;/strong&gt;＝国家“水缸”，装太满时，留给银行的水会&lt;strong&gt;暂时少&lt;/strong&gt;；&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;隔夜逆回购（ON RRP）&lt;/strong&gt;＝墙角的“&lt;strong&gt;备用小水桶&lt;/strong&gt;”，空了就更&lt;strong&gt;指望主池&lt;/strong&gt;。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;本周二，&lt;strong&gt;鲍威尔&lt;/strong&gt;出来说话：&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;“我们可能在&lt;strong&gt;未来几个月&lt;/strong&gt;接近&lt;strong&gt;停止缩表&lt;/strong&gt;的点位，已经看到&lt;strong&gt;回购利率&lt;/strong&gt;等迹象显示&lt;strong&gt;流动性在变紧&lt;/strong&gt;。”&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;与此同时，&lt;strong&gt;银行准备金&lt;/strong&gt;这口“主水池”边缘被市场紧盯——&lt;strong&gt;跌到 3 万亿美元附近&lt;/strong&gt;，大家就会问：再缩，还顶得住吗？（周度数据见&lt;strong&gt;H.4.1&lt;/strong&gt;）
-而&lt;strong&gt;ON RRP&lt;/strong&gt;这个“备用小水桶”，今年&lt;strong&gt;几乎见底&lt;/strong&gt;，意味着再“抽水”，就更可能&lt;strong&gt;直接动到银行准备金&lt;/strong&gt;。
-财政这边，&lt;strong&gt;TGA 余额&lt;/strong&gt;10月中旬仍在&lt;strong&gt;8,500亿美元上下&lt;/strong&gt;，也相当“满”。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;旁白：&lt;strong&gt;水位低&lt;/strong&gt;+&lt;strong&gt;小水桶快空&lt;/strong&gt;+&lt;strong&gt;大水缸较满&lt;/strong&gt;，大家自然更爱“蹲在安全边”（买国债），&lt;strong&gt;股市&lt;/strong&gt;就会更挑剔。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;第三章好公司也会被淋雨&quot;&gt;第三章｜好公司，也会“被淋雨”&lt;/h2&gt;&lt;a href=&quot;#第三章好公司也会被淋雨&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “第三章｜好公司，也会“被淋雨””&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;偏偏这个时候，&lt;strong&gt;公司基本面&lt;/strong&gt;并不差。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;ASML&lt;/strong&gt;：三季度&lt;strong&gt;净销售额 €75 亿&lt;/strong&gt;、&lt;strong&gt;毛利率 51.6%&lt;/strong&gt;；给出&lt;strong&gt;旺季Q4&lt;/strong&gt;指引，甚至说&lt;strong&gt;2026年不会低于2025年&lt;/strong&gt;。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;台积电&lt;/strong&gt;：三季度&lt;strong&gt;营收 331 亿美元&lt;/strong&gt;、&lt;strong&gt;毛利 59.5%&lt;/strong&gt;；Q4 仍看 &lt;strong&gt;322–334 亿美元&lt;/strong&gt;。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;旁白：&lt;strong&gt;雨不是基本面下的&lt;/strong&gt;，更多是&lt;strong&gt;资金面与情绪&lt;/strong&gt;的阵雨——伞够大（现金流强、负债健康）的公司，&lt;strong&gt;淋一阵就干&lt;/strong&gt;。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;第四章风从海那边吹来稀土与关税&quot;&gt;第四章｜风从海那边吹来：稀土与关税&lt;/h2&gt;&lt;a href=&quot;#第四章风从海那边吹来稀土与关税&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “第四章｜风从海那边吹来：稀土与关税”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;市场又听到一阵海风：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;中国&lt;/strong&gt;在 &lt;strong&gt;10月9日&lt;/strong&gt; 扩大&lt;strong&gt;稀土出口管制&lt;/strong&gt;（新增元素与技术），全球供应链神经紧张；&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;美国&lt;/strong&gt;这边，&lt;strong&gt;100%关税&lt;/strong&gt;的说法此起彼伏，消息面时而强硬、时而缓和，&lt;strong&gt;是否在APEC期间会面&lt;/strong&gt;也成了“悬念剧”。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;旁白：这叫**“外生变量”**——哪怕公司自己没变，&lt;strong&gt;估值&lt;/strong&gt;也会被“风声”左右。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;第五章给投资小白的雨天三件套&quot;&gt;第五章｜给投资小白的“雨天三件套”&lt;/h2&gt;&lt;a href=&quot;#第五章给投资小白的雨天三件套&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “第五章｜给投资小白的“雨天三件套””&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;先看“水位”&lt;/strong&gt;（别硬扛）：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;停止缩表&lt;/strong&gt;的信号更明确、&lt;strong&gt;回购利率&lt;/strong&gt;回落，说明&lt;strong&gt;雨要小&lt;/strong&gt;了；&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;ON RRP&lt;/strong&gt;几近见底后，若&lt;strong&gt;准备金数据&lt;/strong&gt;止跌企稳，是&lt;strong&gt;放晴&lt;/strong&gt;的早信号；&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;10年期美债收益率&lt;/strong&gt;如果稳在 &lt;strong&gt;~4% 附近&lt;/strong&gt;甚至下破后&lt;strong&gt;不再反弹&lt;/strong&gt;，风险偏好更容易回升。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;再挑“伞面”&lt;/strong&gt;（别挑花）：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;现金流稳+负债表健康&lt;/strong&gt;的龙头（如上游&lt;strong&gt;半导体设备/代工&lt;/strong&gt;）更能&lt;strong&gt;扛阵雨&lt;/strong&gt;；&lt;/li&gt;
-&lt;li&gt;银行个案频出时，&lt;strong&gt;板块内要轻仓、分散&lt;/strong&gt;，等披露更清晰再加。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;最后看“海风”&lt;/strong&gt;（别装聋）：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;稀土与关税&lt;/strong&gt;的走向，会左右&lt;strong&gt;制造链成本与估值&lt;/strong&gt;；重要会议前后，多看两眼新闻再动手。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;第六章一页备忘&quot;&gt;第六章｜一页备忘&lt;/h2&gt;&lt;a href=&quot;#第六章一页备忘&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “第六章｜一页备忘”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;这轮波动的导火索&lt;/strong&gt;：地区银行&lt;strong&gt;个案信用问题&lt;/strong&gt;→市场&lt;strong&gt;避险&lt;/strong&gt;→&lt;strong&gt;债券涨、收益率下&lt;/strong&gt;、股市承压。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;更深的水因子&lt;/strong&gt;：&lt;strong&gt;缩表将近尾声&lt;/strong&gt;的暗示 + &lt;strong&gt;准备金下沿&lt;/strong&gt; + &lt;strong&gt;RRP见底&lt;/strong&gt; + &lt;strong&gt;TGA偏高&lt;/strong&gt;。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;基本面“对照组”&lt;/strong&gt;：龙头财报依旧&lt;strong&gt;强&lt;/strong&gt;（ASML、台积电）。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;最大外部变数&lt;/strong&gt;：&lt;strong&gt;稀土与关税&lt;/strong&gt;消息强弱切换，牵动估值。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;一句话策略&lt;/strong&gt;：把这次当**“资金面的阵雨”&lt;strong&gt;看，而不是&lt;/strong&gt;“房塌了”&lt;strong&gt;；雨大时少出门（轻仓/分批），天放晴再跑（加仓）。看天色的三把尺：&lt;/strong&gt;（1）停表信号（2）准备金与RRP（3）10年期收益率**。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;彩蛋为什么新闻老说收益率&quot;&gt;彩蛋｜“为什么新闻老说收益率？”&lt;/h2&gt;&lt;a href=&quot;#彩蛋为什么新闻老说收益率&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “彩蛋｜“为什么新闻老说收益率？””&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;因为&lt;strong&gt;收益率像全市场的温度计&lt;/strong&gt;：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;它跌（到 ~4%），说明大家在&lt;strong&gt;抢国债&lt;/strong&gt;躲雨；&lt;/li&gt;
-&lt;li&gt;它稳住或回升，常常意味着&lt;strong&gt;雨停了&lt;/strong&gt;，股票的“阳光”会多一点。&lt;/li&gt;
-&lt;/ul&gt;&lt;!-- 
----
-
-* [Federal Reserve](https://www.federalreserve.gov/newsevents/speech/powell20251014a.htm?utm_source=chatgpt.com)
-* [Bloomberg](https://www.bloomberg.com/news/articles/2025-10-16/zions-western-alliance-disclose-bad-loans-tied-to-alleged-fraud?utm_source=chatgpt.com)
-* [Federal Reserve](https://www.federalreserve.gov/releases/h41/current/?utm_source=chatgpt.com)
-* [FRED](https://fred.stlouisfed.org/series/RRPONTSYD?utm_source=chatgpt.com)
-* [Bureau of the Fiscal Service](https://fiscal.treasury.gov/reports-statements/dts/index.html?utm_source=chatgpt.com)
-* [Taiwan Semiconductor](https://pr.tsmc.com/english/news/3264?utm_source=chatgpt.com)
-
-（注：上文关键事实均来自**美联储官网讲话/数据、上市公司财报与一线媒体**，已在文中标注。）
-
-[1]: https://www.bloomberg.com/news/articles/2025-10-16/zions-western-alliance-disclose-bad-loans-tied-to-alleged-fraud?utm_source=chatgpt.com &quot;Zions, Western Alliance Banks Disclose Bad Loans Tied to ...&quot;
-[2]: https://www.marketwatch.com/story/concerns-about-banks-credit-exposure-help-power-latest-leg-of-bond-market-rally-41119da6?utm_source=chatgpt.com &quot;Concerns about banks&apos; credit exposure help power latest leg of bond-market rally&quot;
-[3]: https://www.federalreserve.gov/newsevents/speech/powell20251014a.htm?utm_source=chatgpt.com &quot;Speech by Chair Powell on the economic outlook and ...&quot;
-[4]: https://www.federalreserve.gov/releases/h41/current/?utm_source=chatgpt.com &quot;Factors Affecting Reserve Balances - H.4.1&quot;
-[5]: https://fred.stlouisfed.org/series/RRPONTSYD?utm_source=chatgpt.com &quot;Overnight Reverse Repurchase Agreements: Treasury ... - FRED&quot;
-[6]: https://fiscal.treasury.gov/reports-statements/dts/index.html?utm_source=chatgpt.com &quot;Daily Treasury Statement&quot;
-[7]: https://www.asml.com/en/news/press-releases/2025/q3-2025-financial-results?utm_source=chatgpt.com &quot;ASML reports €7.5 billion total net sales and €2.1 ...&quot;
-[8]: https://pr.tsmc.com/english/news/3264?utm_source=chatgpt.com &quot;TSMC Reports Third Quarter EPS of NT$17.44&quot;
-[9]: https://www.reuters.com/world/china/china-tightens-rare-earth-export-controls-2025-10-09/?utm_source=chatgpt.com &quot;China expands rare earths restrictions, targets defense and ...&quot;
-[10]: https://www.reuters.com/world/china/trump-says-100-tariffs-china-not-sustainable-2025-10-17/?utm_source=chatgpt.com &quot;Trump says 100% tariffs on China not sustainable, still plans to meet Xi&quot; --&gt;</content:encoded><category>Finance</category><category>US Market</category><category>Investment</category><category>JPMorgan</category><category>Goldman Sachs</category><category>Citi</category><category>Wells Fargo</category><category>BlackRock</category><category>S&amp;P 500</category><category>Nasdaq</category><category>AI</category></item><item><title>让 Claude Skills 帮你“开外挂”：三步上手、亮点速览、8 个真·落地场景</title><link>https://www.vibesparking.com/zh-cn/blog/ai/anthropic/2025-10-18-claude-skills-overview/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/anthropic/2025-10-18-claude-skills-overview/</guid><pubDate>Sat, 18 Oct 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # 让 Claude Skills 帮你“开外挂”：三步上手、亮点速览、8 个真·落地场景 --&gt;&lt;!-- ## 引言 --&gt;
-&lt;p&gt;有没有这种时刻：&lt;strong&gt;你写报表像搬砖、做PPT像熬夜赶工&lt;/strong&gt;，而同事却像开了挂，一条指令就生成成套文档、还自带品牌规范？
-新发布的 &lt;strong&gt;Claude Skills&lt;/strong&gt;，就是把这种“外挂”装进 Claude 里的方法。它把一堆重复活封装成模块，&lt;strong&gt;自动匹配、自动调用&lt;/strong&gt;，像“专长包”一样随叫随到。&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;claude-skills-是什么一句话版&quot;&gt;Claude Skills 是什么？（一句话版）&lt;/h2&gt;&lt;a href=&quot;#claude-skills-是什么一句话版&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Claude Skills 是什么？（一句话版）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;一个文件夹 = 一项专长。&lt;/strong&gt; 里面放说明（&lt;code dir=&quot;auto&quot;&gt;SKILL.md&lt;/code&gt;）、脚本、资源。Claude 会按需加载并在合适的任务里自动调用。&lt;strong&gt;你不用会写代码，也能把自己的工作套路变成“可复用的技能”。&lt;/strong&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;亮点速读
-– &lt;strong&gt;自动触发&lt;/strong&gt;：根据任务语义匹配合适的 Skill
-– &lt;strong&gt;可组合&lt;/strong&gt;：多个 Skill 可协同完成复杂工作
-– &lt;strong&gt;可执行代码&lt;/strong&gt;：必要时跑脚本，稳定、可复现
-– &lt;strong&gt;全场景可用&lt;/strong&gt;：Claude.ai、Claude Code、API 同步可用
-– &lt;strong&gt;企业就绪&lt;/strong&gt;：品牌规范、合规策略、表格自动化一把梭&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;它怎么自动从发现到协同的-5-个瞬间&quot;&gt;它怎么“自动”：从发现到协同的 5 个瞬间&lt;/h2&gt;&lt;a href=&quot;#它怎么自动从发现到协同的-5-个瞬间&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “它怎么“自动”：从发现到协同的 5 个瞬间”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;扫描 &amp;#x26; 发现&lt;/strong&gt;：启动时扫描可用技能并读取摘要（极省上下文）。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;匹配&lt;/strong&gt;：你的请求一来，Claude 判断是否命中某项技能。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;激活&lt;/strong&gt;：命中就加载该技能需要的说明/资源/脚本。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;执行&lt;/strong&gt;：按说明完成任务，必要时调用代码工具。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;协同&lt;/strong&gt;：多个技能可并行或串行“接力”。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;三步安装--使用2-分钟起飞&quot;&gt;三步安装 &amp;#x26; 使用（2 分钟起飞）&lt;/h2&gt;&lt;a href=&quot;#三步安装--使用2-分钟起飞&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “三步安装 &amp;#x26; 使用（2 分钟起飞）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;A. 安装 Claude Code（可选但强烈推荐）&lt;/strong&gt;&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;npm&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;install&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;-g&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;@anthropic-ai/claude-code&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;p&gt;安装好后即可在本地项目中使用 Skills。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;B. 在 Claude/Claude Code 里启用 Skills&lt;/strong&gt;
-设置里打开 &lt;strong&gt;Code execution / File creation&lt;/strong&gt;，在 &lt;strong&gt;Skills&lt;/strong&gt; 区域按需开启或上传 ZIP（自定义技能）。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;C. 自定义一个 Skill（最小结构）&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;新建文件夹 &lt;code dir=&quot;auto&quot;&gt;my-skill/&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;写一个 &lt;code dir=&quot;auto&quot;&gt;SKILL.md&lt;/code&gt;：顶部 YAML 里包含 &lt;code dir=&quot;auto&quot;&gt;name&lt;/code&gt; 和 &lt;code dir=&quot;auto&quot;&gt;description&lt;/code&gt;；正文写步骤、约束；需要的话再配 &lt;code dir=&quot;auto&quot;&gt;resources/&lt;/code&gt; 或脚本。&lt;/li&gt;
-&lt;li&gt;放到个人目录、项目目录或插件来源里（例如 &lt;code dir=&quot;auto&quot;&gt;.claude/skills&lt;/code&gt; 或 &lt;code dir=&quot;auto&quot;&gt;project/claude/skills&lt;/code&gt;），Claude 会自动发现。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;想直接上手？看看官方与社区示例库，改名即用。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;上手模板可直接抄&quot;&gt;上手模板（可直接抄）&lt;/h2&gt;&lt;a href=&quot;#上手模板可直接抄&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “上手模板（可直接抄）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;&lt;code dir=&quot;auto&quot;&gt;SKILL.md&lt;/code&gt; 片段（示意）：&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;markdown&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;---&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#111111&quot;&gt;name&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;Branded PPT Maker&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#111111&quot;&gt;description&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;Convert an outline to a PPT with our brand fonts, colors, and slide layout rules.&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#111111&quot;&gt;allowed-tools&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;:&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;- &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;python:read-only&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;- &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;bash:read-only&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;---&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82B1FF;--1:#3B61B0&quot;&gt;# Instructions&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;-&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; Read /resources/brand-guidelines.pdf&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;-&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; Use title/body styles from page 5&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;-&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; Build slide outline from user&apos;s bullets&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;-&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; Export as .pptx&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;p&gt;要点：&lt;strong&gt;用人话写清触发关键词、边界、输入输出&lt;/strong&gt;；把规范、模板、示例都丢进 &lt;code dir=&quot;auto&quot;&gt;resources/&lt;/code&gt;；需要稳定步骤时&lt;strong&gt;配脚本&lt;/strong&gt;。&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;工作场景4-个省时到离谱的用法&quot;&gt;工作场景：4 个“省时到离谱”的用法&lt;/h2&gt;&lt;a href=&quot;#工作场景4-个省时到离谱的用法&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “工作场景：4 个“省时到离谱”的用法”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h3 id=&quot;1-excel-报表一键成型&quot;&gt;1) Excel 报表一键成型&lt;/h3&gt;&lt;a href=&quot;#1-excel-报表一键成型&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1) Excel 报表一键成型”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;上传模板 + 规则，自动填公式、透视表、图表配色。每周复盘 10 分钟搞定。&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;2-品牌统一的-ppt-工厂&quot;&gt;2) 品牌统一的 PPT 工厂&lt;/h3&gt;&lt;a href=&quot;#2-品牌统一的-ppt-工厂&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2) 品牌统一的 PPT 工厂”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;喂给品牌手册和母版，Skill 自动套版、控字数、控对齐，还能输出成套讲稿。&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;3-web-app-冒烟测试&quot;&gt;3) Web App 冒烟测试&lt;/h3&gt;&lt;a href=&quot;#3-web-app-冒烟测试&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3) Web App 冒烟测试”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;把用例和选择器放进资源夹，脚本负责点击/断言，Skill 出一份带截图的测试报告。&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;4-合规法务条款检查&quot;&gt;4) 合规/法务条款检查&lt;/h3&gt;&lt;a href=&quot;#4-合规法务条款检查&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “4) 合规/法务条款检查”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;把公司政策和黑名单词库放资源里，Skill 扫文档并标注风险句子，附改写建议。&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;生活场景4-个越用越上头的玩法&quot;&gt;生活场景：4 个“越用越上头”的玩法&lt;/h2&gt;&lt;a href=&quot;#生活场景4-个越用越上头的玩法&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “生活场景：4 个“越用越上头”的玩法”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h3 id=&quot;1-旅行筹划--预算表&quot;&gt;1) 旅行筹划 + 预算表&lt;/h3&gt;&lt;a href=&quot;#1-旅行筹划--预算表&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1) 旅行筹划 + 预算表”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;输入城市、天数、偏好。Skill 拉行程、订路线、估预算，顺手生成一张 Excel 明细。&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;2-健身饮食计划&quot;&gt;2) 健身饮食计划&lt;/h3&gt;&lt;a href=&quot;#2-健身饮食计划&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2) 健身饮食计划”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;把体重目标和过敏原写进 &lt;code dir=&quot;auto&quot;&gt;SKILL.md&lt;/code&gt; 规则，自动给出一周食谱 + 购物单。&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;3-家庭账单对账--分摊&quot;&gt;3) 家庭账单对账 &amp;#x26; 分摊&lt;/h3&gt;&lt;a href=&quot;#3-家庭账单对账--分摊&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3) 家庭账单对账 &amp;#x26; 分摊”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;导入水电网账单 CSV，Skill 分类、纠错、可视化，最后生成“该谁付多少”的清单。&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;4-亲友活动组织&quot;&gt;4) 亲友活动组织&lt;/h3&gt;&lt;a href=&quot;#4-亲友活动组织&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “4) 亲友活动组织”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;活动流程模板 + 注意事项打包成 Skill，自动生成群公告、签到表、物资清单。&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;常见问题你可能也在想&quot;&gt;常见问题（你可能也在想）&lt;/h2&gt;&lt;a href=&quot;#常见问题你可能也在想&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “常见问题（你可能也在想）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;要不要担心安全？&lt;/strong&gt; 官方建议只启用可信来源的技能；涉及代码执行的技能会受限在沙箱并带权限控制。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;谁能用？&lt;/strong&gt; Pro、Max、Team、Enterprise 已开放，并且可在 Claude.ai、Claude Code 与 API 侧使用。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;哪里找示例？&lt;/strong&gt; 先看官方/社区仓库，挑近似场景改一改就能跑。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;结语&quot;&gt;结语&lt;/h2&gt;&lt;a href=&quot;#结语&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “结语”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;说白了，&lt;strong&gt;Claude Skills = 把“你的工作流”产品化&lt;/strong&gt;。
-把零散的经验、规范、模板，封装成可触发、可复用、可协同的技能。
-今天装一个“报表 Skill”，明天再加一个“品牌 Skill”，&lt;strong&gt;你的 AI 助手就真的会越用越懂你&lt;/strong&gt;。&lt;/p&gt;
-&lt;p&gt;你觉得先把哪项工作封装成 Skill 最值？欢迎在评论区聊聊。&lt;/p&gt;&lt;!-- 
----
-
-## 推荐标题（3 组 × 多语）
-
-1. **中文简体**：Claude Skills 上线：把你的工作流，一键做成“外挂”
-   **English**: Claude Skills: Turn Your Workflow into a Superpower
-   **繁體**：Claude Skills 上線：把你的工作流做成「外掛」
-   **日本語**：Claude Skills 登場：あなたの仕事術を“スキル化”
-   **Français** : Claude Skills : transformez votre flux de travail en super-pouvoir
-   **Español**: Claude Skills: convierte tu flujo en superpoder
-   **Português**: Claude Skills: transforme seu fluxo em superpoder
-   **Slug**：`claude-skills-workflow-superpower`
-
-2. **中文简体**：别再熬夜做PPT和报表了，用 Skill 一键生产力
-   **English**: Stop All-Nighters: Ship PPTs &amp; Reports with Skills
-   **繁體**：別再熬夜做簡報與報表，用 Skills 一鍵搞定
-   **日本語**：徹夜は終了。Skills で資料＆レポ速成
-   **Français** : Fini les nuits blanches : générer PPT &amp; rapports avec Skills
-   **Español**: Adiós trasnochos: PPT y reportes con Skills
-   **Português**: Chega de virar noite: PPT e relatórios com Skills
-   **Slug**：`stop-all-nighters-claude-skills`
-
-3. **中文简体**：2 分钟上手 Claude Skills：安装、模板、8 个高频场景
-   **English**: 2-Minute Claude Skills: Install, Templates, 8 Real Use Cases
-   **繁體**：2 分鐘上手 Claude Skills：安裝、模板與 8 個場景
-   **日本語**：2分で始める Claude Skills：導入と実例8選
-   **Français** : Démarrage en 2 min : installation &amp; 8 cas concrets
-   **Español**: En 2 minutos: instalación y 8 casos reales
-   **Português**: Em 2 minutos: instalação e 8 casos reais
-   **Slug**：`claude-skills-quickstart-8-cases`
-
----
-
-## 配图（插画风，2:1，英文不含中文）
-
-**封面图**
-Prompt：`A friendly AI assistant opening a toolbox labeled &quot;Skills&quot;, glowing folders inside (Excel, PPT, Policy), smooth gradients, clean vector illustration, 2:1 aspect ratio, modern tech vibes.`
-
-**关键章节配图**
-
-1. 核心概念：`Modular folders labeled SKILL.md, resources, scripts connecting to an AI brain, arrows &quot;match→activate→execute→compose&quot;, vector, 2:1.`
-2. 安装与使用：`Terminal shows &quot;npm install -g @anthropic-ai/claude-code&quot;, settings panel toggling &quot;Skills&quot;, simple UI mock, 2:1.`
-3. 工作场景：`Split canvas: brand-compliant PPT, auto Excel charts, QA checklist with green checks, 2:1.`
-4. 生活场景：`Travel plan board, grocery list, budget sheet, family event checklist, warm playful illustration, 2:1.`
-
-&gt; 需要我直接把这些图生成出来吗？我可以按上面提示一次性出图并打包给你。
-
----
-
-## 朋友圈/评论区文案（3 条）
-
-1. 终于把我的“品牌手册+PPT模板”做成 Claude Skill 了——**一条指令出全套**，今天准点下班，神清气爽。
-2. 旅行计划交给 Skills：行程、预算、打包清单全自动，**我只负责快乐出发**。
-3. 用 Skills 把周报自动化了，**老板以为我变勤奋**，其实我只是会装外挂。
-
----
-
-想不想我把文中任意一个场景，**给你打个可用的 `SKILL.md` 模板**？
-或者需要我把文章扩写成系列（进阶：团队协作、版本管理、Skill 测试/治理）？我现在就可以继续。
-
-[1]: https://support.claude.com/en/articles/12512176-what-are-skills?utm_source=chatgpt.com &quot;What are Skills?&quot;
-[2]: https://docs.claude.com/en/docs/claude-code/skills?utm_source=chatgpt.com &quot;Agent Skills - Claude Docs&quot;
-[3]: https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills?utm_source=chatgpt.com &quot;Equipping agents for the real world with Agent Skills&quot;
-[4]: https://docs.claude.com/en/docs/claude-code/quickstart?utm_source=chatgpt.com &quot;Quickstart - Claude Docs&quot;
-[5]: https://support.claude.com/en/articles/12512180-using-skills-in-claude?utm_source=chatgpt.com &quot;Using Skills in Claude&quot;
-[6]: https://support.claude.com/en/articles/12512198-how-to-create-custom-skills?utm_source=chatgpt.com &quot;How to create custom Skills&quot;
-[7]: https://github.com/anthropics/skills?utm_source=chatgpt.com &quot;anthropics/skills: Public repository for Skills&quot;
-[8]: https://www.anthropic.com/news/skills?utm_source=chatgpt.com &quot;Claude Skills: Customize AI for your workflows&quot;
-[9]: https://www.tomsguide.com/ai/claude-just-got-customizable-skills-heres-how-they-could-supercharge-your-workflow?utm_source=chatgpt.com &quot;Claude just got customizable &apos;Skills&apos; - here&apos;s how they could supercharge your workflow&quot;
-[10]: https://www.theverge.com/ai-artificial-intelligence/800868/anthropic-claude-skills-ai-agents?utm_source=chatgpt.com &quot;Anthropic turns to &apos;skills&apos; to make Claude more useful at work&quot; --&gt;</content:encoded><category>Claude</category><category>Claude Code</category><category>Anthropic</category></item></channel></rss>
+&lt;p&gt;希望这篇分享能启发你在今后的工作中更加注重思考的力量，也勇于拥抱 AI 工具为你所用。把重复劳动交给机器，让你的脑力创造更大价值！ 🎉&lt;/p&gt;</content:encoded><category>AI</category></item></channel></rss>

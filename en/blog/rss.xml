@@ -1,4 +1,465 @@
-<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Vibe Sparking AI | Blog</title><description/><link>https://www.vibesparking.com/</link><language>en</language><item><title>Give Claude Long-Term Memory: Hands-on Guide to claude-mem</title><link>https://www.vibesparking.com/en/blog/ai/claude-code/claude-mem/2025-12-09-claude-mem-long-term-memory/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/claude-code/claude-mem/2025-12-09-claude-mem-long-term-memory/</guid><pubDate>Tue, 09 Dec 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;claude-mem actually lets Claude genuinely “remember you”&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Vibe Sparking AI | Blog</title><description/><link>https://www.vibesparking.com/</link><language>en</language><item><title>Anthropic Legal Turned Contract Review Drudgery Into a Workflow Art With Claude</title><link>https://www.vibesparking.com/en/blog/ai/anthropic/2025-12-09-anthropic-legal-claude-stop-manual-redlining/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/anthropic/2025-12-09-anthropic-legal-claude-stop-manual-redlining/</guid><pubDate>Tue, 09 Dec 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # Anthropic Legal Turned Contract Review Drudgery Into a Workflow Art With Claude --&gt;
+&lt;hr&gt;
+&lt;p&gt;Yesterday Anthropic published a new article explaining how their &lt;strong&gt;legal team uses Claude / Claude Code to compress work that used to take days into a few hours—while keeping humans in the loop the whole time&lt;/strong&gt;.&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;1-even-at-a-top-ai-company-legal-is-still-squeezed-by-grunt-work&quot;&gt;1. Even at a top AI company, legal is still squeezed by grunt work&lt;/h2&gt;&lt;a href=&quot;#1-even-at-a-top-ai-company-legal-is-still-squeezed-by-grunt-work&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1. Even at a top AI company, legal is still squeezed by grunt work”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Anthropic product counsel Mark described his earlier routine:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Replying to compliance documents and customer questionnaires&lt;/li&gt;
+&lt;li&gt;Editing terms of service and privacy policies&lt;/li&gt;
+&lt;li&gt;Reviewing blogs, emails, and marketing assets for the marketing team&lt;/li&gt;
+&lt;li&gt;Redlining contracts and comparing versions line by line&lt;/li&gt;
+&lt;li&gt;Writing a stack of privacy impact assessments (PIA)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;These tasks share a few traits:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Repetitive, similar formats, high cost for mistakes, and extremely brain-draining.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;He even said many things get pushed to the end of the day because they take so much time yet barely use “the best part of his brain.”&lt;/p&gt;
+&lt;p&gt;Sound familiar? If you have ever touched legal, compliance, risk, operations, or customer support, you have felt the same pain.&lt;/p&gt;
+&lt;p&gt;The Anthropic legal team did something very engineer-like:&lt;/p&gt;
+&lt;p&gt;They held a meeting and wrote on a whiteboard—
+&lt;strong&gt;“What drains the most energy? What repeats the most? What tasks do not deserve this much of our time?”&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Once they had answers, they did not rush to “what AI can do.” They focused on a single question:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Which tasks do we &lt;strong&gt;never want to do by hand again?&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;2-how-to-break-down-legal-workflows-4-real-scenarios&quot;&gt;2. How to break down legal workflows: 4 real scenarios&lt;/h2&gt;&lt;a href=&quot;#2-how-to-break-down-legal-workflows-4-real-scenarios&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2. How to break down legal workflows: 4 real scenarios”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Over a few months, Anthropic’s legal team turned their pain points into repeatable workflows.&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;1-self-serve-marketing-review-ai-is-the-first-gate&quot;&gt;1) Self-serve marketing review: AI is the first gate&lt;/h3&gt;&lt;a href=&quot;#1-self-serve-marketing-review-ai-is-the-first-gate&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1) Self-serve marketing review: AI is the first gate”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;You have surely seen the previous flow:&lt;/p&gt;
+&lt;p&gt;On the night before launch, marketing would dump landing pages, push copy, and posters on legal: “Please review today; we go live tomorrow.”&lt;/p&gt;
+&lt;p&gt;Legal had to open the docs -&gt; read end to end -&gt; leave a pile of comments -&gt; go back and forth for multiple rounds. It often dragged on for days.&lt;/p&gt;
+&lt;p&gt;Anthropic’s rebuild is simple but ruthless:&lt;/p&gt;
+&lt;p&gt;They built a &lt;strong&gt;Self-Review Tool&lt;/strong&gt; in Slack:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Marketing pastes the copy into it&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Claude calls a dedicated &lt;strong&gt;legal Skill file&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;It contains: past review comments, common risk points, and the team’s judgment criteria&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Claude automatically flags:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Exaggerated claims?&lt;/li&gt;
+&lt;li&gt;Is there a source for the data?&lt;/li&gt;
+&lt;li&gt;Any violation of portrait rights or reputation?&lt;/li&gt;
+&lt;li&gt;Any implication of promises that should not be made?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Assigns a risk level to each issue: Low / Medium / High&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Also provides a suggested revision&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Only after passing this gate will a ticket be created and enter the legal queue.&lt;/p&gt;
+&lt;p&gt;StartupHub reported that with this flow, &lt;strong&gt;reviews that took days now compress to a few hours&lt;/strong&gt;, and Slack can auto-generate a summary to help legal see the risk points clearly.&lt;/p&gt;
+&lt;p&gt;The essence:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Let AI handle the “intake form” and “basic checkup.” The true diagnosis still belongs to the doctor.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h3 id=&quot;2-side-gig--external-activity-approval-ai-asks-for-details-first&quot;&gt;2) Side gig / external activity approval: AI asks for details first&lt;/h3&gt;&lt;a href=&quot;#2-side-gig--external-activity-approval-ai-asks-for-details-first&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2) Side gig / external activity approval: AI asks for details first”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Many companies have similar processes:&lt;/p&gt;
+&lt;p&gt;If an employee wants to moonlight as an adviser, pursue a side business, or serve on a nonprofit board, they must go through “external business activity approval.”&lt;/p&gt;
+&lt;p&gt;Previously, legal would ask one-on-one about background, conflicts of interest, time commitments, and non-compete risks—going back and forth endlessly.&lt;/p&gt;
+&lt;p&gt;Here is how Anthropic runs it now:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The employee fills out a structured form&lt;/li&gt;
+&lt;li&gt;Claude reads the form&lt;/li&gt;
+&lt;li&gt;If information is missing, it will automatically &lt;strong&gt;ask follow-up questions&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Based on company rules, it provides a &lt;strong&gt;recommended decision + risk explanation&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;It then enters the legal queue for an attorney to confirm approval or rejection&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Lawyers now mainly focus on two buckets:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;True edge cases&lt;/li&gt;
+&lt;li&gt;Higher-risk borderline situations&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;They separated “90% standard flow + 10% extreme judgment.”&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h3 id=&quot;3-privacy-impact-assessments-pia-teach-ai-to-write-the-template&quot;&gt;3) Privacy impact assessments (PIA): teach AI to write the template&lt;/h3&gt;&lt;a href=&quot;#3-privacy-impact-assessments-pia-teach-ai-to-write-the-template&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3) Privacy impact assessments (PIA): teach AI to write the template”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;For privacy projects, every new feature needs a fresh PIA.&lt;/p&gt;
+&lt;p&gt;The pain:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Templates look similar, but you still have to rewrite them each time&lt;/li&gt;
+&lt;li&gt;It must fit the specific scenario without missing required sections&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Anthropic’s approach has two steps:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Use MCP (Model Context Protocol) to connect Claude to a Google Drive folder&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Inside are &lt;strong&gt;all historical PIA documents&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Equip Claude with a “PIA writing Skill” that spells out:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Document structure&lt;/li&gt;
+&lt;li&gt;What to focus on in each section&lt;/li&gt;
+&lt;li&gt;Privacy points the company cares about most&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;An attorney just says:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“Using the previous cases, draft a PIA for this new feature.”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Claude will:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;First learn the style of past PIAs&lt;/li&gt;
+&lt;li&gt;Then draft in the same format&lt;/li&gt;
+&lt;li&gt;Transfer historical focus points into the new scenario&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The work shifts from “write from scratch” to “edit an 80-point draft.”&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h3 id=&quot;4-legal-built-a-morse-code-lamp-but-the-point-is-that-the-barrier-dropped-to-human-language&quot;&gt;4) Legal built a “Morse code lamp,” but the point is that the barrier dropped to human language&lt;/h3&gt;&lt;a href=&quot;#4-legal-built-a-morse-code-lamp-but-the-point-is-that-the-barrier-dropped-to-human-language&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “4) Legal built a “Morse code lamp,” but the point is that the barrier dropped to human language”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;There is a fun detail:&lt;/p&gt;
+&lt;p&gt;Mark used Claude Code to build a “legal desk lamp” that blinks Morse code to send and receive messages—purely a personal hobby project.&lt;/p&gt;
+&lt;p&gt;But the story highlights something important:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Even a lawyer who cannot code can, by “speaking human language” to AI, build a complete mini app.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;For companies, this means:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Legal, compliance, and operations—the people who do not code—can build workflows themselves&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;No need to first line up engineering resources or launch a big project&lt;/li&gt;
+&lt;li&gt;As long as they explain the rules clearly, AI can help turn them into tools&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;It fundamentally changes the belief that “only engineers can build tools.”&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;3-the-building-blocks-under-this-legal-workflow&quot;&gt;3. The building blocks under this legal workflow&lt;/h2&gt;&lt;a href=&quot;#3-the-building-blocks-under-this-legal-workflow&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3. The building blocks under this legal workflow”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Anthropic’s legal system rests on three building blocks:&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;1-swap-what-tech-can-do-for-what-i-refuse-to-do&quot;&gt;1) Swap “what tech can do” for “what I refuse to do”&lt;/h3&gt;&lt;a href=&quot;#1-swap-what-tech-can-do-for-what-i-refuse-to-do&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1) Swap “what tech can do” for “what I refuse to do””&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Mark’s advice is blunt:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Do not start with “what AI can do.” Start with “what work do we most want to escape.”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;They followed that approach on a whiteboard:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Which documents are repetitive&lt;/li&gt;
+&lt;li&gt;What judgment calls we make every day&lt;/li&gt;
+&lt;li&gt;Which flows can be fully standardized&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;After confirming, they checked:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Can AI do the &lt;strong&gt;first pass&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Reserve human time for &lt;strong&gt;disputes, exceptions, and strategic judgment&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h3 id=&quot;2-skills-package-team-experience-into-callable-assets&quot;&gt;2) Skills: package team experience into callable assets&lt;/h3&gt;&lt;a href=&quot;#2-skills-package-team-experience-into-callable-assets&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2) Skills: package team experience into callable assets”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;The official blog defines Skills as &lt;strong&gt;a document with instructions, scripts, and references that let Claude act like an expert for a task&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;For legal, Skills do two things:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Keep rules consistent&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Marketing review Skill: bakes in historical review comments&lt;/li&gt;
+&lt;li&gt;Different domains get different Skills: employment, commercial, privacy, corporate governance…&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Keep the voice consistent&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Mark had Claude read 10 of his memos&lt;/li&gt;
+&lt;li&gt;He taught it his structure and tone&lt;/li&gt;
+&lt;li&gt;When Claude drafts memos later, it can “write in his style”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Think of a Skill as:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;A senior lawyer’s “plug-in memory card.”&lt;/p&gt;
+&lt;p&gt;Plug it in when needed; pull it out when you do not.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h3 id=&quot;3-mcp-turn-scattered-info-into-a-legal-knowledge-web&quot;&gt;3) MCP: turn scattered info into a “legal knowledge web”&lt;/h3&gt;&lt;a href=&quot;#3-mcp-turn-scattered-info-into-a-legal-knowledge-web&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3) MCP: turn scattered info into a “legal knowledge web””&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Another key block is MCP (Model Context Protocol).&lt;/p&gt;
+&lt;p&gt;Anthropic’s legal team connected Claude to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Google Drive: historical contracts, PIAs, templates, policies&lt;/li&gt;
+&lt;li&gt;JIRA: requests and tickets&lt;/li&gt;
+&lt;li&gt;Slack: conversation records&lt;/li&gt;
+&lt;li&gt;Calendar: key meetings and approval checkpoints&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This yields two effects:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;AI stops “hallucinating” because it can check your own materials&lt;/li&gt;
+&lt;li&gt;Each workflow gets &lt;strong&gt;just enough context&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;You can think of it simply:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;MCP = connect AI to your “company intranet.”&lt;/p&gt;
+&lt;p&gt;Skills = teach it “how to use those materials to get work done.”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;4-the-single-most-important-rule-humans-must-not-be-absent&quot;&gt;4. The single most important rule: humans must not be absent&lt;/h2&gt;&lt;a href=&quot;#4-the-single-most-important-rule-humans-must-not-be-absent&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “4. The single most important rule: humans must not be absent”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Both Anthropic’s blog and the StartupHub article keep repeating: &lt;strong&gt;“Legal must stay human-in-the-loop.”&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;In practice:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;AI handles:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;First-pass review and issue spotting&lt;/li&gt;
+&lt;li&gt;Initial risk grading&lt;/li&gt;
+&lt;li&gt;Drafting suggested edits and documents&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Attorneys handle:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Fact-checking and citations&lt;/li&gt;
+&lt;li&gt;Deciding “can the company accept this risk”&lt;/li&gt;
+&lt;li&gt;Final external sign-off&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Anthropic is explicit:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;AI hallucinates; that is a fact.&lt;/p&gt;
+&lt;p&gt;So the design is: &lt;strong&gt;AI as accelerator, humans as brakes and steering.&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;For anyone rolling out AI in a company, keep this in mind:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;You are not replacing legal with AI. You are using AI so legal stops being a “format fixer and typo hunter.”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;5-how-teams-can-copy-the-homework&quot;&gt;5. How teams can “copy the homework”&lt;/h2&gt;&lt;a href=&quot;#5-how-teams-can-copy-the-homework&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “5. How teams can “copy the homework””&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;After discussing Anthropic, let’s talk about borrowing the idea. Whether you use Claude, ChatGPT, DeepSeek, or your own model, you can follow the same playbook.&lt;/p&gt;
+&lt;p&gt;Here is how to start:&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;1-list-your-teams-legal-hell-list&quot;&gt;1) List your team’s “legal hell list”&lt;/h3&gt;&lt;a href=&quot;#1-list-your-teams-legal-hell-list&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1) List your team’s “legal hell list””&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Pick a day and gather legal, compliance, marketing, and product:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Write down the tasks you &lt;strong&gt;never want to do for the hundredth time&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Prioritize by “repeatability x risk control”&lt;/li&gt;
+&lt;li&gt;Pick one or two that are ready to pilot now&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Typical candidates:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;First-pass marketing review&lt;/li&gt;
+&lt;li&gt;Standard clause comparison in contracts&lt;/li&gt;
+&lt;li&gt;Data protection and privacy templates&lt;/li&gt;
+&lt;li&gt;Standard questionnaires and compliance Q&amp;#x26;A&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h3 id=&quot;2-start-with-human--ai-dual-layer-flow-then-talk-automation&quot;&gt;2) Start with “human + AI dual-layer flow,” then talk automation&lt;/h3&gt;&lt;a href=&quot;#2-start-with-human--ai-dual-layer-flow-then-talk-automation&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2) Start with “human + AI dual-layer flow,” then talk automation”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Jumping straight to “end-to-end auto-approval” often dies on risk and trust.&lt;/p&gt;
+&lt;p&gt;A steadier way:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Let AI handle “internal pre-review + draft assistance”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Keep the real decision flow &lt;strong&gt;unchanged&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Use one to two months to check:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Does it make obvious mistakes?&lt;/li&gt;
+&lt;li&gt;Is speed truly better?&lt;/li&gt;
+&lt;li&gt;Does the team find it more usable?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Once it passes, consider upgrading to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Self-serve tools&lt;/li&gt;
+&lt;li&gt;Workflows wired into internal systems&lt;/li&gt;
+&lt;li&gt;Added templates, Skills, and team norms&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h3 id=&quot;3-feed-ai-your-rules-and-style-over-time&quot;&gt;3) Feed AI your “rules” and “style” over time&lt;/h3&gt;&lt;a href=&quot;#3-feed-ai-your-rules-and-style-over-time&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3) Feed AI your “rules” and “style” over time”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Follow Anthropic’s two-step method:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Rules&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Compile a “company legal review checklist”&lt;/li&gt;
+&lt;li&gt;For example: banned words, mandatory disclaimers, data points that must be verified&lt;/li&gt;
+&lt;li&gt;Turn it into a long-lived “AI prompt doc” or Skill&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Style&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Give AI a few contract reviews or memos your team likes&lt;/li&gt;
+&lt;li&gt;Have it summarize: common structure, phrasing habits, tone preferences&lt;/li&gt;
+&lt;li&gt;Require all future drafts to “follow this style”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Gradually, you will have:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;An AI teammate that works &lt;strong&gt;the way you do&lt;/strong&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h3 id=&quot;4-do-not-forget-to-count-the-gains&quot;&gt;4) Do not forget to count the gains&lt;/h3&gt;&lt;a href=&quot;#4-do-not-forget-to-count-the-gains&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “4) Do not forget to count the gains”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Is the automation worth it? Anthropic’s “How Anthropic teams use Claude Code” notes that many teams measure efficiency this way, and legal shows especially clear returns.&lt;/p&gt;
+&lt;p&gt;You can quantify quickly:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Average review time per marketing asset&lt;/li&gt;
+&lt;li&gt;Cycle time from “sent to legal” to “legal response” for each contract&lt;/li&gt;
+&lt;li&gt;Hours per week each attorney spends on repetitive documents&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Do a before-and-after, and it becomes easy to justify more resources.&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;6-a-quick-wrap-up&quot;&gt;6. A quick wrap-up&lt;/h2&gt;&lt;a href=&quot;#6-a-quick-wrap-up&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “6. A quick wrap-up”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;In one line, Anthropic Legal’s practice is:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Use AI as a rules-aware junior assistant to free senior lawyers from grunt work so they can do real judgment.&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;For anyone who understands the business and a bit of AI, this is a huge opportunity:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;You can be the person who &lt;strong&gt;packages team knowledge into Skills&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;You can build the first “AI + legal workflow”&lt;/li&gt;
+&lt;li&gt;You can turn AI from a “chat toy” into true “process infrastructure”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I am curious:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;In your team, what could be handed to AI to handle the groundwork if you follow Anthropic’s approach?&lt;/p&gt;
+&lt;/blockquote&gt;&lt;!-- 
+Feel free to share your scenario in the comments--we can break down a workflow together for fun.
+
+
+
+---
+
+## Recommended titles (3 sets, multilingual + slug)
+
+### Title 1
+
+* Simplified: 
+  **Even Anthropic&apos;s legal team is using Claude to free themselves. Are you still redlining contracts by hand?**
+* English:
+  **Anthropic&apos;s Legal Team Now Runs on Claude. Are You Still Redlining by Hand?**
+* Traditional:
+  **Even Anthropic&apos;s legal team uses Claude to free themselves. Are you still redlining contracts by hand?**
+* Japanese:
+  **Anthropic no legal team is already working with Claude. Are you still fixing contracts by hand?**
+* Francais :
+  **L&apos;equipe juridique d&apos;Anthropic tourne deja avec Claude. Vous revisez encore vos contrats a la main ?**
+* Espanol:
+  **El equipo legal de Anthropic ya usa Claude. Tu sigues corrigiendo contratos a mano?**
+* Portugues:
+  **O juridico da Anthropic ja roda com Claude. Voce ainda revisa contratos na mao?**
+* slug-url:
+  `anthropic-legal-claude-stop-manual-redlining`
+
+---
+
+### Title 2
+
+* Simplified: 
+  **From &quot;department brake&quot; to &quot;growth partner&quot;: Anthropic Legal reinvented itself with Claude**
+* English:
+  **From Department of No to Growth Partner: How Anthropic Legal Reinvented Itself with Claude**
+* Traditional:
+  **From &quot;the department that blocks&quot; to &quot;growth partner&quot;: how Anthropic Legal reinvented itself with Claude**
+* Japanese:
+  **From &quot;brake role&quot; to &quot;growth partner&quot;: how Anthropic Legal changed with Claude**
+* Francais :
+  **Du &quot;service qui bloque&quot; au partenaire de croissance : comment le juridique d&apos;Anthropic s&apos;est reinvente avec Claude**
+* Espanol:
+  **De &quot;departamento que frena&quot; a socio de crecimiento: asi se reinvento el equipo legal de Anthropic con Claude**
+* Portugues:
+  **Do &quot;departamento do nao&quot; a parceiro de crescimento: como o juridico da Anthropic se reinventou com Claude**
+* slug-url:
+  `anthropic-legal-growth-partner-with-claude`
+
+---
+
+### Title 3
+
+* Simplified: 
+  **Lawyers who cannot code are already weaving workflows with Claude Code**
+* English:
+  **Lawyers Who Can&apos;t Code Are Now Building Workflows with Claude Code**
+* Traditional:
+  **Lawyers who cannot program are already building workflows with Claude Code**
+* Japanese:
+  **Lawyers who cannot code are starting to assemble workflows with Claude Code**
+* Francais :
+  **Des avocats qui ne codent pas construisent deja des workflows avec Claude Code**
+* Espanol:
+  **Abogados que no programan ya crean flujos de trabajo con Claude Code**
+* Portugues:
+  **Advogados que nao programam ja criam workflows com Claude Code**
+* slug-url:
+  `lawyers-building-workflows-with-claude-code`
+
+---
+
+## Image design (illustration style, 2:1, no Chinese text in the image)
+
+You can drop these prompts into an image tool (DALLE, Midjourney, etc.):
+
+### 1) Cover image (whole article)
+
+&gt; A wide 2:1 illustration of a modern legal team in a bright tech office, a friendly AI assistant represented as a glowing screen or hologram helping lawyers review documents, documents flowing into organized workflows, subtle code patterns in the background, clean flat illustration style, no text in the image
+
+---
+
+### 2) Illustration suggestions for key sections
+
+**Image A: Self-serve marketing review**
+
+&gt; 2:1 illustration of a marketer pasting text into a chat window on a laptop, an AI assistant highlighting risky parts of the content with colorful markers, a happy lawyer in the background giving a thumbs up, modern flat style, no text in the image
+
+**Image B: Legal + AI dual-layer approval**
+
+&gt; 2:1 illustration of a &quot;two-layer workflow&quot;: on the left, an AI assistant quickly sorting and tagging digital documents; on the right, a human lawyer carefully reviewing a smaller stack with a checkmark, connected by arrows, calm and trustworthy color palette, no text in the image
+
+**Image C: Skills and knowledge network**
+
+&gt; 2:1 illustration of a central AI brain connected by lines to multiple folders labeled as icons (contract, marketing, privacy, policy), symbolizing reusable skills and a knowledge network, futuristic yet friendly style, no text in the image
+
+---
+
+## Social feed / comment copy (3 posts)
+
+1)
+Just read how Anthropic Legal used Claude to crush the drudgery of contract and asset review into &quot;done in hours.&quot; Makes you realize overtime happens because we have not hired the right AI coworker yet.
+
+2)
+This piece breaks legal workflows down so clearly that marketing, product, and compliance can all copy it. I am booking coffee with legal on Monday: let&apos;s stop being the &quot;department of no&quot; and build an AI sidekick as our shield. :)
+
+3)
+Watching Anthropic Legal&apos;s practice made me realize: AI&apos;s real value is not &quot;writing a few lines of copy&quot; but reshuffling an entire process. Send this to friends drowning in contracts and approvals--let&apos;s outsource the grunt work to a silicon brain.
+
+---
+
+Do you think this version works? If you plan to publish it on WeChat Official Account, I can **expand or condense it to your usual length and layout**, and tailor an &quot;action checklist&quot; for your company&apos;s scenario.
+
+* [theverge.com](https://www.theverge.com/news/839817/anthropic-claude-code-slack-integration?utm_source=chatgpt.com)
+* [reuters.com](https://www.reuters.com/business/media-telecom/anthropic-acquires-developer-tool-startup-bun-scale-ai-coding-2025-12-02/?utm_source=chatgpt.com)
+
+[1]: https://claude.com/blog/how-anthropic-uses-claude-legal &quot;How Anthropic uses Claude in Legal | Claude&quot;
+[2]: https://www.startuphub.ai/ai-news/ai-video/2025/claude-unlocks-legal-efficiency-at-anthropic/ &quot;Claude Unlocks Legal Efficiency at Anthropic&quot;
+[3]: https://www-cdn.anthropic.com/58284b19e702b49db9302d5b6f135ad8871e7658.pdf?utm_source=chatgpt.com &quot;How Anthropic teams use Claude Code&quot; --&gt;</content:encoded><category>Anthropic</category><category>Claude</category><category>Claude Code</category><category>Slack</category></item><item><title>China AI: 2026 Supply Chain Upside Becomes the Focus</title><link>https://www.vibesparking.com/en/blog/finance/china/2025-12-09-china-ai-supply-chain-outlook-2026/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/finance/china/2025-12-09-china-ai-supply-chain-outlook-2026/</guid><pubDate>Tue, 09 Dec 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # China AI: 2026 Supply Chain Upside Becomes the Focus --&gt;
+&lt;p&gt;For China’s AI story, this is merely the end of the beginning, and we do not view China’s AI as a bubble. 2025 has been a strong year for China’s AI, sparked by DeepSeek, but from the perspective of supply-chain development, the story is only concluding its opening chapter. We expect total capital expenditures (capex) by Chinese cloud service providers (CSPs) and telecom operators (telcos) to post a 13% compound annual growth rate (CAGR), with AI capex growing at a 25% CAGR to reach USD 172 billion by 2028. Crucially, this spending remains healthy: for listed companies, total capex accounts for only 40%-60% of free cash flow, or about 17% of revenue. The major CSPs have already signaled that they will raise their capex plans, most of which will be allocated to AI, creating USD 88 billion of AI chip demand by 2028.&lt;/p&gt;
+&lt;p&gt;The domestic supply chain is rapidly scaling to meet this surge in demand. The biggest bottleneck right now is the constraint on domestic advanced-logic capacity, which limits output of local AI chips. However, our channel checks point to a key inflection: advanced-logic capacity should start accelerating in 2026/27 (Figure 12). Given the typical three-to-four-quarter lag from foundry production to AI chip sales, this capacity increase will translate into a sharp rise in domestic AI chip sales in 2027/28 (Figure 14). We estimate domestic AI chip supply in 2028 will be five times 2025 levels, bringing the market into supply-demand balance. Notably, we do not expect NVIDIA to resume sales in China amid the ongoing “backdoor” investigations, so we anticipate domestic players will take over more than 90% of the market by 2028.&lt;/p&gt;
+&lt;p&gt;The leaders across China’s AI supply chain will benefit. We forecast a broad rebound in 2026 for the entire chain, ranked by industry as: AI chips &gt; semiconductor equipment &gt; foundry.&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+&lt;/p&gt;&lt;!-- ![](/assets/finance/china/china-ai-supply-chain-outlook-2026/12.png) --&gt;
+&lt;p&gt;
+
+&lt;/p&gt;</content:encoded><category>Finance</category><category>China</category><category>AI Supply Chain</category></item><item><title>Give Claude Long-Term Memory: Hands-on Guide to claude-mem</title><link>https://www.vibesparking.com/en/blog/ai/claude-code/claude-mem/2025-12-09-claude-mem-long-term-memory/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/claude-code/claude-mem/2025-12-09-claude-mem-long-term-memory/</guid><pubDate>Tue, 09 Dec 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;claude-mem actually lets Claude genuinely “remember you”&lt;/p&gt;
 &lt;p&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;Do you ever feel like this:&lt;/p&gt;
@@ -3358,255 +3819,4 @@ Do you want me to generate **the illustration assets** or further tighten **the 
 &lt;p&gt;For juniors, don’t fear AI—or resign yourself to being its typist. Treat AI as mentor and tool. Ask “why,” and use it to learn higher‑level knowledge. Surveys show many developers’ top AI use case is learning—new tech, best practices, and more. First, analyze and design on your own; then ask AI for alternative implementations and compare. Learn fast by closing the gap. Avoid tossing problems to AI without understanding—otherwise you risk hollowing out your skills. AI ultimately serves thinkers. Those who don’t think will fall behind—this only becomes more true in the AI era.&lt;/p&gt;
 &lt;p&gt;Finally, AI coding assistants don’t let our brains go off duty. Quite the opposite: they push us to understand where our value lies. If typing is automatable, we should invest time in understanding the business deeply, designing carefully, enforcing quality, and innovating continuously. That won’t make us obsolete—it will make us more effective and creative.&lt;/p&gt;
 &lt;p&gt;Let AI be the “code laborer.” Let us be better “system designers” and “problem‑solving experts.” As we learn to delegate implementation to AI, we’ll find ideas ship faster, and once‑daunting tasks become manageable because we have more time to think. The essence of software remains thinking—unchanged, only now with clearer division of labor: machines write obediently; humans think wisely.&lt;/p&gt;
-&lt;p&gt;May this piece encourage you to bet on thinking—and to embrace AI as leverage. Offload the repetitive; let your mind create more value. 🎉&lt;/p&gt;</content:encoded><category>AI</category></item><item><title>Bank Turmoil, Liquidity, and Tariffs: A Small‑Town Depositor’s Market Adventure</title><link>https://www.vibesparking.com/en/blog/finance/us-market/2025-10-18-bank-turmoil-liquidity-tariffs-small-town-depositors-market-adventure/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/finance/us-market/2025-10-18-bank-turmoil-liquidity-tariffs-small-town-depositors-market-adventure/</guid><pubDate>Sat, 18 Oct 2025 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
-&lt;p&gt;This is a story about where money comes from and where it goes. The protagonist isn’t Wall Street—it’s us: salaries coming in, buying funds, skimming headlines… When two US regional banks run into trouble, the Fed hints at a “stop to balance‑sheet runoff,” the 10‑year Treasury yield dips below 4%, and rumors swirl about a potential US–China meeting—how do these seemingly far‑off events end up walking straight into our accounts?&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;chapter-1--the-tellers-bad-news&quot;&gt;Chapter 1 | The Teller’s “Bad News”&lt;/h2&gt;&lt;a href=&quot;#chapter-1--the-tellers-bad-news&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Chapter 1 | The Teller’s “Bad News””&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;Early Friday, before the small‑town branch fills up, an alert flashes on the lobby display:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;“Zions Bank disclosed a $50 million loan loss; Western Alliance said it filed a lawsuit in August against a borrower called Cantor Group V, suspecting collateral fraud.”&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;The branch manager whispers: “Not a systemic blow‑up—likely idiosyncratic fraud—but the stocks will sell off first and ask questions later.” The fixed‑income manager chimes in: “Don’t underestimate this; ‘surprises’ like these make people more afraid of risk—so they rush for safer debt.” Sure enough, the 10‑year Treasury yield intraday dipped toward ~3.93%–4%—prices up, yields down.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Aside: This isn’t “all banks are in trouble.” It’s that isolated cases tighten market nerves. When nerves tighten, money hides in bonds—and stocks are more prone to a quick “jump scare.”&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;chapter-2--the-edge-of-the-pool&quot;&gt;Chapter 2 | The Edge of the Pool&lt;/h2&gt;&lt;a href=&quot;#chapter-2--the-edge-of-the-pool&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Chapter 2 | The Edge of the Pool”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;Think of the financial system as a giant pool:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Fed balance‑sheet runoff (QT) = water draining slowly.&lt;/li&gt;
-&lt;li&gt;Treasury General Account (TGA) = the government’s storage tank; when it’s very full, the banking system temporarily gets less water.&lt;/li&gt;
-&lt;li&gt;Overnight Reverse Repo (ON RRP) = a “backup bucket” in the corner; once it’s empty, you rely more on the main pool.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;On Tuesday, Chair Powell said:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;“We may be approaching, over the next few months, a point to stop the runoff. We’re seeing signs—like repo rates—that liquidity is getting tighter.”&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Meanwhile, the market is glued to the waterline of bank reserves—the main pool. As it drifts near ~$3 trillion, people ask: Can we keep draining without hitting the bottom? (See the weekly H.4.1.)
-The ON RRP “backup bucket” has almost been drained this year, meaning further “pulls” more directly touch bank reserves.
-On the fiscal side, the TGA sits around ~$850 billion in mid‑October—still quite full.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Aside: Low waterline + backup bucket near empty + a full storage tank makes people hug the “safe edge” (buy Treasuries). Equities get more selective.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;chapter-3--good-companies-still-get-rained-on&quot;&gt;Chapter 3 | Good Companies Still Get Rained On&lt;/h2&gt;&lt;a href=&quot;#chapter-3--good-companies-still-get-rained-on&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Chapter 3 | Good Companies Still Get Rained On”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;Ironically, fundamentals aren’t bad.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;ASML: Q3 net sales €7.5B, gross margin 51.6%; guided for a strong Q4 and even said 2026 won’t be below 2025.&lt;/li&gt;
-&lt;li&gt;TSMC: Q3 revenue $33.1B, gross margin 59.5%; Q4 outlook $32.2–$33.4B.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Aside: The rain isn’t falling from fundamentals; it’s coming from liquidity and sentiment. Companies with big umbrellas (strong cash flow, healthy balance sheets) dry off quickly.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;chapter-4--winds-from-overseas-rare-earths-and-tariffs&quot;&gt;Chapter 4 | Winds from Overseas: Rare Earths and Tariffs&lt;/h2&gt;&lt;a href=&quot;#chapter-4--winds-from-overseas-rare-earths-and-tariffs&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Chapter 4 | Winds from Overseas: Rare Earths and Tariffs”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;More gusts arrive from the sea:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;China expanded rare‑earth export controls on Oct 9 (added elements/tech), tightening global supply nerves.&lt;/li&gt;
-&lt;li&gt;In the US, talk of 100% tariffs ebbs and flows—headlines alternately harden and soften—while “will they meet around APEC” becomes a running cliffhanger.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Aside: These are exogenous shocks. Even if a company doesn’t change, its valuation may.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;chapter-5--a-rainyday-trio-for-new-investors&quot;&gt;Chapter 5 | A “Rainy‑Day Trio” for New Investors&lt;/h2&gt;&lt;a href=&quot;#chapter-5--a-rainyday-trio-for-new-investors&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Chapter 5 | A “Rainy‑Day Trio” for New Investors”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;First, watch the waterline (don’t be stubborn):&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Clearer signals of stopping QT + repo rates easing = lighter rain.&lt;/li&gt;
-&lt;li&gt;With ON RRP near empty, if reserve balances stop falling and stabilize, that’s an early “clearing” sign.&lt;/li&gt;
-&lt;li&gt;If the 10‑year yield holds around ~4% (or breaks lower and doesn’t snap back), risk appetite can recover.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Next, pick your umbrella (don’t over‑optimize):&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Leaders with steady cash flow and healthy balance sheets (e.g., upstream semi equipment/foundry) better withstand showers.&lt;/li&gt;
-&lt;li&gt;When bank idiosyncrasies pop up, keep sector exposure lighter and more diversified until disclosures are clearer.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Finally, mind the sea breeze (don’t tune it out):&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;The path of rare earths and tariffs drives manufacturing costs and valuations; around key meetings, read twice before acting.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;chapter-6--onepage-memo&quot;&gt;Chapter 6 | One‑Page Memo&lt;/h2&gt;&lt;a href=&quot;#chapter-6--onepage-memo&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Chapter 6 | One‑Page Memo”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;Spark for this bout: idiosyncratic regional‑bank credit issues → risk‑off → bonds up/yields down → equities pressured.&lt;/li&gt;
-&lt;li&gt;Deeper water forces: hints that QT is nearing its end + reserve “lower bound” + RRP near empty + elevated TGA.&lt;/li&gt;
-&lt;li&gt;Fundamental contrast: leaders still strong (ASML, TSMC).&lt;/li&gt;
-&lt;li&gt;Biggest external swing factor: rare‑earth and tariff headlines tug at valuations.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;One‑sentence strategy: Treat this as a “liquidity shower,” not a “house collapse.” Go lighter and stagger entries while it pours; run faster when it clears. Three weather gauges: (1) stop‑QT signals (2) reserves and RRP (3) the 10‑year yield.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;bonus--why-do-headlines-obsess-over-yields&quot;&gt;Bonus | “Why do headlines obsess over yields?”&lt;/h2&gt;&lt;a href=&quot;#bonus--why-do-headlines-obsess-over-yields&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Bonus | “Why do headlines obsess over yields?””&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;Because yields are like the market’s thermometer:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;When they fall (to ~4%), it shows people are grabbing Treasuries to hide from the rain.&lt;/li&gt;
-&lt;li&gt;When they stabilize or rise, it often means the rain has stopped—and there’s more sunshine for stocks.&lt;/li&gt;
-&lt;/ul&gt;&lt;!-- 
----
-
-* [Federal Reserve](https://www.federalreserve.gov/newsevents/speech/powell20251014a.htm?utm_source=chatgpt.com)
-* [Bloomberg](https://www.bloomberg.com/news/articles/2025-10-16/zions-western-alliance-disclose-bad-loans-tied-to-alleged-fraud?utm_source=chatgpt.com)
-* [Federal Reserve](https://www.federalreserve.gov/releases/h41/current/?utm_source=chatgpt.com)
-* [FRED](https://fred.stlouisfed.org/series/RRPONTSYD?utm_source=chatgpt.com)
-* [Bureau of the Fiscal Service](https://fiscal.treasury.gov/reports-statements/dts/index.html?utm_source=chatgpt.com)
-* [Taiwan Semiconductor](https://pr.tsmc.com/english/news/3264?utm_source=chatgpt.com)
-
-(Note: Key facts above come from official Fed remarks/data, listed‑company financials, and first‑tier media, cited inline.)
-
-[1]: https://www.bloomberg.com/news/articles/2025-10-16/zions-western-alliance-disclose-bad-loans-tied-to-alleged-fraud?utm_source=chatgpt.com &quot;Zions, Western Alliance Banks Disclose Bad Loans Tied to ...&quot;
-[2]: https://www.marketwatch.com/story/concerns-about-banks-credit-exposure-help-power-latest-leg-of-bond-market-rally-41119da6?utm_source=chatgpt.com &quot;Concerns about banks&apos; credit exposure help power latest leg of bond-market rally&quot;
-[3]: https://www.federalreserve.gov/newsevents/speech/powell20251014a.htm?utm_source=chatgpt.com &quot;Speech by Chair Powell on the economic outlook and ...&quot;
-[4]: https://www.federalreserve.gov/releases/h41/current/?utm_source=chatgpt.com &quot;Factors Affecting Reserve Balances - H.4.1&quot;
-[5]: https://fred.stlouisfed.org/series/RRPONTSYD?utm_source=chatgpt.com &quot;Overnight Reverse Repurchase Agreements: Treasury ... - FRED&quot;
-[6]: https://fiscal.treasury.gov/reports-statements/dts/index.html?utm_source=chatgpt.com &quot;Daily Treasury Statement&quot;
-[7]: https://www.asml.com/en/news/press-releases/2025/q3-2025-financial-results?utm_source=chatgpt.com &quot;ASML reports €7.5 billion total net sales and €2.1 ...&quot;
-[8]: https://pr.tsmc.com/english/news/3264?utm_source=chatgpt.com &quot;TSMC Reports Third Quarter EPS of NT$17.44&quot;
-[9]: https://www.reuters.com/world/china/china-tightens-rare-earth-export-controls-2025-10-09/?utm_source=chatgpt.com &quot;China expands rare earths restrictions, targets defense and ...&quot;
-[10]: https://www.reuters.com/world/china/trump-says-100-tariffs-china-not-sustainable-2025-10-17/?utm_source=chatgpt.com &quot;Trump says 100% tariffs on China not sustainable, still plans to meet Xi&quot; --&gt;</content:encoded><category>Finance</category><category>US Market</category><category>Investment</category><category>JPMorgan</category><category>Goldman Sachs</category><category>Citi</category><category>Wells Fargo</category><category>BlackRock</category><category>S&amp;P 500</category><category>Nasdaq</category><category>AI</category></item><item><title>Let Claude Skills Be Your Power‑Up: 3‑Step Quickstart, Highlights, and 8 Real‑World Scenarios</title><link>https://www.vibesparking.com/en/blog/ai/anthropic/2025-10-18-claude-skills-overview/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/anthropic/2025-10-18-claude-skills-overview/</guid><pubDate>Sat, 18 Oct 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Have you had this moment? You grind on reports like brick‑laying or pull all‑nighters on slides, but a teammate seems to have a cheat code—one prompt and they ship a brand‑compliant pack.
-The newly released Claude Skills is how to install that “cheat” into Claude. It wraps repetitive work into modules that auto‑match and auto‑run—like “expertise packs” on demand.&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;what-are-claude-skills-oneliner&quot;&gt;What are Claude Skills? (one‑liner)&lt;/h2&gt;&lt;a href=&quot;#what-are-claude-skills-oneliner&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “What are Claude Skills? (one‑liner)”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;One folder = one skill. Inside are instructions (&lt;code dir=&quot;auto&quot;&gt;SKILL.md&lt;/code&gt;), scripts, and resources. Claude auto‑loads and uses the skill for fitting tasks. You don’t need to code to turn your work patterns into reusable skills.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Quick highlights
-– Auto trigger: semantic matching to the right skill
-– Composable: multiple skills can collaborate
-– Code execution: run scripts when needed, stable and reproducible
-– Works everywhere: Claude.ai, Claude Code, and API
-– Enterprise‑ready: brand rules, compliance checks, spreadsheet automation&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;how-it-automates-5-moments-from-discovery-to-collaboration&quot;&gt;How it “automates”: 5 moments from discovery to collaboration&lt;/h2&gt;&lt;a href=&quot;#how-it-automates-5-moments-from-discovery-to-collaboration&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “How it “automates”: 5 moments from discovery to collaboration”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ol&gt;
-&lt;li&gt;Scan &amp;#x26; discover: on start, Claude scans available skills and reads short summaries (minimal context budget).&lt;/li&gt;
-&lt;li&gt;Match: when you ask, Claude checks whether a skill fits.&lt;/li&gt;
-&lt;li&gt;Activate: if matched, it loads the skill’s instructions/resources/scripts.&lt;/li&gt;
-&lt;li&gt;Execute: follows instructions and runs code tools when needed.&lt;/li&gt;
-&lt;li&gt;Collaborate: skills can run in parallel or in sequence.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;three-steps-to-install--use-2minute-liftoff&quot;&gt;Three steps to install &amp;#x26; use (2‑minute lift‑off)&lt;/h2&gt;&lt;a href=&quot;#three-steps-to-install--use-2minute-liftoff&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Three steps to install &amp;#x26; use (2‑minute lift‑off)”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;A. Install Claude Code (optional but recommended)&lt;/strong&gt;&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;npm&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;install&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;-g&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;@anthropic-ai/claude-code&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;B. Enable Skills in Claude / Claude Code&lt;/strong&gt;
-Turn on Code execution / File creation in settings, then enable Skills or upload a ZIP (for custom skills).&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;C. Create a custom skill (minimal structure)&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Create folder &lt;code dir=&quot;auto&quot;&gt;my-skill/&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Write &lt;code dir=&quot;auto&quot;&gt;SKILL.md&lt;/code&gt;: YAML header with &lt;code dir=&quot;auto&quot;&gt;name&lt;/code&gt; and &lt;code dir=&quot;auto&quot;&gt;description&lt;/code&gt;; body with steps and constraints; add &lt;code dir=&quot;auto&quot;&gt;resources/&lt;/code&gt; or scripts if needed.&lt;/li&gt;
-&lt;li&gt;Place it in your user or project area (e.g., &lt;code dir=&quot;auto&quot;&gt;.claude/skills&lt;/code&gt; or &lt;code dir=&quot;auto&quot;&gt;project/claude/skills&lt;/code&gt;) so Claude can discover it.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Want to start fast? Grab official/community examples and tweak.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;a-starter-template-copyready&quot;&gt;A starter template (copy‑ready)&lt;/h2&gt;&lt;a href=&quot;#a-starter-template-copyready&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “A starter template (copy‑ready)”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;&lt;code dir=&quot;auto&quot;&gt;SKILL.md&lt;/code&gt; snippet (example):&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;markdown&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;---&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#111111&quot;&gt;name&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;Branded PPT Maker&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#111111&quot;&gt;description&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;Convert an outline to a PPT with our brand fonts, colors, and slide layout rules.&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#111111&quot;&gt;allowed-tools&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;:&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;- &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;python:read-only&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;- &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;bash:read-only&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;---&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82B1FF;--1:#3B61B0&quot;&gt;# Instructions&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;-&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; Read /resources/brand-guidelines.pdf&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;-&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; Use title/body styles from page 5&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;-&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; Build slide outline from user&apos;s bullets&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;-&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; Export as .pptx&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;p&gt;Key idea: write human‑readable triggers, boundaries, inputs/outputs. Throw brand guides, templates, and examples into &lt;code dir=&quot;auto&quot;&gt;resources/&lt;/code&gt;. Add scripts for stable steps.&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;work-scenarios-4-this-saves-absurd-time-uses&quot;&gt;Work scenarios: 4 “this saves absurd time” uses&lt;/h2&gt;&lt;a href=&quot;#work-scenarios-4-this-saves-absurd-time-uses&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Work scenarios: 4 “this saves absurd time” uses”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h3 id=&quot;1-oneclick-excel-reports&quot;&gt;1) One‑click Excel reports&lt;/h3&gt;&lt;a href=&quot;#1-oneclick-excel-reports&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1) One‑click Excel reports”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;Feed templates + rules. Auto formulas, pivot tables, and chart palettes. Weekly reviews in 10 minutes.&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;2-brandconsistent-ppt-factory&quot;&gt;2) Brand‑consistent PPT factory&lt;/h3&gt;&lt;a href=&quot;#2-brandconsistent-ppt-factory&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2) Brand‑consistent PPT factory”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;Give brand guides and master slides. The skill applies layout, character counts, and alignment—and can output a presenter script.&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;3-web-app-smoke-tests&quot;&gt;3) Web app smoke tests&lt;/h3&gt;&lt;a href=&quot;#3-web-app-smoke-tests&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3) Web app smoke tests”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;Put cases and selectors in resources; scripts click/assert and the skill returns a screenshot report.&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;4-compliancelegal-clause-checks&quot;&gt;4) Compliance/legal clause checks&lt;/h3&gt;&lt;a href=&quot;#4-compliancelegal-clause-checks&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “4) Compliance/legal clause checks”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;Load policies and banned‑term lists; the skill flags risky sentences and suggests rewrites.&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;life-scenarios-4-youll-keep-using-it-ideas&quot;&gt;Life scenarios: 4 “you’ll keep using it” ideas&lt;/h2&gt;&lt;a href=&quot;#life-scenarios-4-youll-keep-using-it-ideas&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Life scenarios: 4 “you’ll keep using it” ideas”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h3 id=&quot;1-trip-planning--budget-sheet&quot;&gt;1) Trip planning + budget sheet&lt;/h3&gt;&lt;a href=&quot;#1-trip-planning--budget-sheet&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1) Trip planning + budget sheet”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;Provide city, days, and preferences. The skill builds itinerary, routes, and budget—and exports an Excel breakdown.&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;2-fitness--meal-plans&quot;&gt;2) Fitness + meal plans&lt;/h3&gt;&lt;a href=&quot;#2-fitness--meal-plans&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2) Fitness + meal plans”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;Encode goals and allergens in &lt;code dir=&quot;auto&quot;&gt;SKILL.md&lt;/code&gt;. The skill returns a weekly meal plan and shopping list.&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;3-household-bill-reconciliation--split&quot;&gt;3) Household bill reconciliation &amp;#x26; split&lt;/h3&gt;&lt;a href=&quot;#3-household-bill-reconciliation--split&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3) Household bill reconciliation &amp;#x26; split”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;Import utility CSVs. The skill categorizes, fixes errors, visualizes, and outputs who pays what.&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;4-familyfriends-event-organizing&quot;&gt;4) Family/friends event organizing&lt;/h3&gt;&lt;a href=&quot;#4-familyfriends-event-organizing&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “4) Family/friends event organizing”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;Bundle a template + checklists. The skill generates the group announcement, sign‑in sheet, and supplies list.&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;faqs&quot;&gt;FAQs&lt;/h2&gt;&lt;a href=&quot;#faqs&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “FAQs”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;Security? Only enable trusted skills; code‑executing skills run sandboxed with permissions.&lt;/li&gt;
-&lt;li&gt;Who gets it? Pro, Max, Team, Enterprise—available on Claude.ai, Claude Code, and API.&lt;/li&gt;
-&lt;li&gt;Where to find examples? Start with official/community repos—adapt a close match.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;closing&quot;&gt;Closing&lt;/h2&gt;&lt;a href=&quot;#closing&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Closing”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;In short, Claude Skills productize your workflow. Package experience, rules, and templates into triggerable, reusable, and composable skills. Install a “report skill” today, add a “brand skill” tomorrow—and your AI really will learn your way of working.&lt;/p&gt;
-&lt;p&gt;Which task would you skill‑ify first? Share in the comments.&lt;/p&gt;&lt;!-- 
----
-
-## Suggested titles (3 sets × multiple languages)
-
-1. Simplified Chinese: Claude Skills 上线：把你的工作流，一键做成“外挂”
-   English: Claude Skills: Turn Your Workflow into a Superpower
-   Traditional Chinese: Claude Skills 上線：把你的工作流做成「外掛」
-   Japanese: Claude Skills 登場：あなたの仕事術を“スキル化”
-   Français : Claude Skills : transformez votre flux de travail en super‑pouvoir
-   Español: Claude Skills: convierte tu flujo en superpoder
-   Português: Claude Skills: transforme seu fluxo em superpoder
-   Slug: `claude-skills-workflow-superpower`
-
-2. Simplified Chinese: 别再熬夜做PPT和报表了，用 Skill 一键生产力
-   English: Stop All‑Nighters: Ship PPTs &amp; Reports with Skills
-   Traditional Chinese: 別再熬夜做簡報與報表，用 Skills 一鍵搞定
-   Japanese: 徹夜は終了。Skills で資料＆レポ速成
-   Français : Fini les nuits blanches : générer PPT &amp; rapports avec Skills
-   Español: Adiós trasnochos: PPT y reportes con Skills
-   Português: Chega de virar noite: PPT e relatórios com Skills
-   Slug: `stop-all-nighters-claude-skills`
-
-3. Simplified Chinese: 2 分钟上手 Claude Skills：安装、模板、8 个高频场景
-   English: 2‑Minute Claude Skills: Install, Templates, 8 Real Use Cases
-   Traditional Chinese: 2 分鐘上手 Claude Skills：安裝、模板與 8 個場景
-   Japanese: 2分で始める Claude Skills：導入と実例8選
-   Français : Démarrage en 2 min : installation &amp; 8 cas concrets
-   Español: En 2 minutos: instalación y 8 casos reales
-   Português: Em 2 minutos: instalação e 8 casos reais
-   Slug: `claude-skills-quickstart-8-cases`
-
----
-
-## Artwork prompts (2:1, English‑only graphics)
-
-Cover: `A friendly AI assistant opening a toolbox labeled &quot;Skills&quot;, glowing folders inside (Excel, PPT, Policy), smooth gradients, clean vector illustration, 2:1 aspect ratio, modern tech vibes.`
-
-Key illustrations:
-1. Core concept: `Modular folders labeled SKILL.md, resources, scripts connecting to an AI brain, arrows &quot;match→activate→execute→compose&quot;, vector, 2:1.`
-2. Install &amp; use: `Terminal shows &quot;npm install -g @anthropic-ai/claude-code&quot;, settings panel toggling &quot;Skills&quot;, simple UI mock, 2:1.`
-3. Work scenarios: `Split canvas: brand‑compliant PPT, auto Excel charts, QA checklist with green checks, 2:1.`
-4. Life scenarios: `Travel plan board, grocery list, budget sheet, family event checklist, warm playful illustration, 2:1.`
-
----
-
-## Social copy (3 options)
-
-1. Turned my brand guide + PPT master into a Claude Skill—one prompt ships a complete deck. Clocking out on time today.
-2. Trip planning via Skills: itinerary, budget, packing list—automation does the work; I just enjoy the trip.
-3. Weekly report now auto‑generated with Skills—boss thinks I’m more diligent; I just installed a power‑up.
-
----
-
-Want me to draft a ready‑to‑use `SKILL.md` for any one scenario above—or expand this post into a series (team collaboration, versioning, testing/governance)? I can do that next.
-
-[1]: https://support.claude.com/en/articles/12512176-what-are-skills?utm_source=chatgpt.com &quot;What are Skills?&quot;
-[2]: https://docs.claude.com/en/docs/claude-code/skills?utm_source=chatgpt.com &quot;Agent Skills - Claude Docs&quot;
-[3]: https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills?utm_source=chatgpt.com &quot;Equipping agents for the real world with Agent Skills&quot;
-[4]: https://docs.claude.com/en/docs/claude-code/quickstart?utm_source=chatgpt.com &quot;Quickstart - Claude Docs&quot;
-[5]: https://support.claude.com/en/articles/12512180-using-skills-in-claude?utm_source=chatgpt.com &quot;Using Skills in Claude&quot;
-[6]: https://support.claude.com/en/articles/12512198-how-to-create-custom-skills?utm_source=chatgpt.com &quot;How to create custom Skills&quot;
-[7]: https://github.com/anthropics/skills?utm_source=chatgpt.com &quot;anthropics/skills: Public repository for Skills&quot;
-[8]: https://www.anthropic.com/news/skills?utm_source=chatgpt.com &quot;Claude Skills: Customize AI for your workflows&quot;
-[9]: https://www.tomsguide.com/ai/claude-just-got-customizable-skills-heres-how-they-could-supercharge-your-workflow?utm_source=chatgpt.com &quot;Claude just got customizable &apos;Skills&apos; - here&apos;s how they could supercharge your workflow&quot;
-[10]: https://www.theverge.com/ai-artificial-intelligence/800868/anthropic-claude-skills-ai-agents?utm_source=chatgpt.com &quot;Anthropic turns to &apos;skills&apos; to make Claude more useful at work&quot; --&gt;</content:encoded><category>Claude</category><category>Claude Code</category><category>Anthropic</category></item></channel></rss>
+&lt;p&gt;May this piece encourage you to bet on thinking—and to embrace AI as leverage. Offload the repetitive; let your mind create more value. 🎉&lt;/p&gt;</content:encoded><category>AI</category></item></channel></rss>
