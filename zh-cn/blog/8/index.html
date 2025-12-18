@@ -656,167 +656,7 @@ Two-Stepping 由创作者 Rob Lennon 在公开帖子与课程中持续推广，�
 [6]: https://selfrefine.info/?utm_source=chatgpt.com "Self-Refine: Iterative Refinement with Self-Feedback"
 [7]: https://openreview.net/forum?id=S37hOerQLB&utm_source=chatgpt.com "Self-Refine: Iterative Refinement with Self-Feedback"
 [8]: https://arxiv.org/pdf/2303.17651?utm_source=chatgpt.com "Self-Refine: Iterative Refinement with Self-Feedback"
-[9]: https://www.linkedin.com/posts/rob-lennon_getting-strict-with-your-ai-doesnt-make-activity-7196185900429553664-6Q-b?utm_source=chatgpt.com "Getting strict with your AI doesn't make you a bad person." --> </div> <footer class="astro-dr56dw7m"> <div class="astro-sg3lsd66"><b class="astro-sg3lsd66">Tags:</b><ul class="astro-sg3lsd66"><li class="astro-sg3lsd66"><a href="/zh-cn/blog/tags/prompt-engineering/" class="astro-sg3lsd66">Prompt Engineering</a></li></ul></div> </footer> </article> <article class="preview astro-dr56dw7m"> <header class="astro-dr56dw7m"> <h2 class="astro-dr56dw7m"> <a href="/zh-cn/blog/ai/vibe-coding/station/2025-08-15-station-ship-sub-agents-to-prod/" class="astro-dr56dw7m">Station 统一管理 Claude / Cursor 的 Agent</a> </h2> <div class="metadata not-content astro-2oxtfctb"> <div class="dates astro-2oxtfctb"> <time datetime="2025-08-15T00:00:00.000Z" class="astro-2oxtfctb"> 2025年8月15日 </time>  </div> <div class="authors astro-2oxtfctb"> <a href="https://www.vibesparking.com" class="author astro-kbhsbk7c"><img src="/assets/vibe-sparking-avatar-zh.jpg" alt="Vibe Sparking" loading="eager" decoding="async" fetchpriority="auto" width="40" height="40" class="astro-kbhsbk7c"><div class="text astro-kbhsbk7c"> <div class="name astro-kbhsbk7c">Vibe Sparking</div>  </div> </a>  </div>  </div>  </header> <div class="sl-markdown-content astro-dr56dw7m"> <!-- # Station 统一管理 Claude / Cursor 的 Agent -->
-<blockquote>
-<p>想要一套<strong>自托管、可版本、可打包</strong>的 Agent 运行时，让 Claude Code / Cursor 里产出的“小 Agent”真正落地上线？Station 就是为这件事而生的。</p>
-</blockquote>
-<hr>
-<div class="sl-heading-wrapper level-h2"><h2 id="引言">引言</h2><a class="sl-anchor-link" href="#引言"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “引言”</span></a></div>
-<p>最近这款 <strong>Station</strong> 在圈里挺火。它不是又一个“应用级”Agent 平台，而是专门给 <strong>可部署子代理（Sub-Agents）</strong> 准备的<strong>轻量运行时与打包分发体系</strong>。
-一句话理解：把你在 Claude Code、Cursor 里做出来的“能干活的小 Agent”，打包、上生产、接权限、可审计，还能版本化管理。</p>
-<hr>
-<div class="sl-heading-wrapper level-h2"><h2 id="亮点一览为内部场景而生">亮点一览（为“内部场景”而生）</h2><a class="sl-anchor-link" href="#亮点一览为内部场景而生"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “亮点一览（为“内部场景”而生）”</span></a></div>
-<p>**为什么用 Station？**因为内部自动化不同于普通 App：要拿密钥、要进数据库、要打 CI/CD、要过审计。</p>
-<ul>
-<li><strong>面向内部任务</strong>：子代理可以连生产库、监控基础设施、走 CI/CD、做安全扫描与应急响应。</li>
-<li><strong>安全内建</strong>：自托管、机密加密（AES）、多环境隔离（dev/staging/prod）、全量审计轨迹。</li>
-<li><strong>轻量可融入</strong>：<strong>单一约 45MB 二进制</strong>、本地 <strong>SQLite</strong> 即开箱，生产可切 <strong>PostgreSQL</strong>，天然 <strong>GitOps</strong>（配置可版本）。</li>
-<li><strong>MCP 原生</strong>：直接做 <strong>MCP 运行时</strong>，复用你团队已经批准的 MCP 工具（文件系统、Slack、AWS、K8s、DB…）。</li>
-<li><strong>开发体验</strong>：提供 <strong>Genkit 驱动的浏览器 Playground</strong> 与 <code dir="auto">stn develop</code>，可视化调试工具调用与执行流。</li>
-</ul>
-<blockquote>
-<p>MCP 是什么？简单说就是**让 LLM 用“受控工具”**的统一协议，Claude Desktop 官方教程里有快速上手与 Claude 配置示例。</p>
-</blockquote>
-<hr>
-<div class="sl-heading-wrapper level-h2"><h2 id="station-怎么工作">Station 怎么工作？</h2><a class="sl-anchor-link" href="#station-怎么工作"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “Station 怎么工作？”</span></a></div>
-<p><strong>核心结构</strong>很简单：
-<strong>一个 <code dir="auto">.prompt</code> 文件 + 一组 MCP 工具 = 一个可部署的子代理</strong>。
-环境以 <strong>dev/staging/prod</strong> 组织，工具定义在 <code dir="auto">template.json</code>，环境变量写 <code dir="auto">variables.yml</code>，最终可<strong>打包 Bundle</strong>并分发安装。</p>
-<hr>
-<div class="sl-heading-wrapper level-h2"><h2 id="安装与接入5-分钟上手">安装与接入（5 分钟上手）</h2><a class="sl-anchor-link" href="#安装与接入5-分钟上手"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “安装与接入（5 分钟上手）”</span></a></div>
-<ol>
-<li><strong>安装 &#x26; 初始化</strong></li>
-</ol>
-<div class="expressive-code"><link rel="stylesheet" href="/_astro/ec.v4551.css"><script type="module" src="/_astro/ec.8zarh.js"></script><figure class="frame is-terminal not-content"><figcaption class="header"><span class="title"></span><span class="sr-only">Terminal window</span></figcaption><pre data-language="bash"><code><div class="ec-line"><div class="code"><span style="--0:#82AAFF;--1:#3B61B0">curl</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#82AAFF;--1:#3B61B0">-fsSL</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">https://raw.githubusercontent.com/cloudshipai/station/main/install.sh</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#7FDBCA;--1:#096E72">|</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#82AAFF;--1:#3B61B0">bash</span></div></div><div class="ec-line"><div class="code"><span style="--0:#82AAFF;--1:#3B61B0">stn</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">init</span><span style="--0:#D6DEEB;--1:#403F53">   </span><span style="--0:#919F9F;--1:#5F636F"># 初始化数据库与加密</span></div></div></code></pre><div class="copy"><button title="Copy to clipboard" data-copied="Copied!" data-code="curl -fsSL https://raw.githubusercontent.com/cloudshipai/station/main/install.sh | bashstn init   # 初始化数据库与加密"><div></div></button></div></figure></div>
-<ol start="2">
-<li><strong>接入 Claude Desktop / Claude Code（MCP）</strong>
-在 Claude 配置里加入：</li>
-</ol>
-<div class="expressive-code"><figure class="frame not-content"><figcaption class="header"></figcaption><pre data-language="json"><code><div class="ec-line"><div class="code"><span style="--0:#D6DEEB;--1:#403F53">{</span></div></div><div class="ec-line"><div class="code"><span class="indent">  </span><span style="--0:#7FDBCA;--1:#096E72">"mcpServers"</span><span style="--0:#D6DEEB;--1:#403F53">: {</span></div></div><div class="ec-line"><div class="code"><span class="indent">    </span><span style="--0:#7FDBCA;--1:#096E72">"station"</span><span style="--0:#D6DEEB;--1:#403F53">: {</span></div></div><div class="ec-line"><div class="code"><span class="indent">      </span><span style="--0:#7FDBCA;--1:#096E72">"command"</span><span style="--0:#D6DEEB;--1:#403F53">: </span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#C789D6;--1:#7C5686">stn</span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#D6DEEB;--1:#403F53">,</span></div></div><div class="ec-line"><div class="code"><span class="indent">      </span><span style="--0:#7FDBCA;--1:#096E72">"args"</span><span style="--0:#D6DEEB;--1:#403F53">: [</span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#C789D6;--1:#7C5686">stdio</span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#D6DEEB;--1:#403F53">]</span></div></div><div class="ec-line"><div class="code"><span class="indent"><span style="--0:#D6DEEB;--1:#403F53">    </span></span><span style="--0:#D6DEEB;--1:#403F53">}</span></div></div><div class="ec-line"><div class="code"><span class="indent"><span style="--0:#D6DEEB;--1:#403F53">  </span></span><span style="--0:#D6DEEB;--1:#403F53">}</span></div></div><div class="ec-line"><div class="code"><span style="--0:#D6DEEB;--1:#403F53">}</span></div></div></code></pre><div class="copy"><button title="Copy to clipboard" data-copied="Copied!" data-code="{  &#x22;mcpServers&#x22;: {    &#x22;station&#x22;: {      &#x22;command&#x22;: &#x22;stn&#x22;,      &#x22;args&#x22;: [&#x22;stdio&#x22;]    }  }}"><div></div></button></div></figure></div>
-<p>现在，跟 Claude 说“创建一个安全审计代理”，它会自动给这个代理配好需要的工具（如文件扫描 + Slack）。</p>
-<ol start="3">
-<li><strong>一键打包 &#x26; 安装 Bundle（把环境搬去生产）</strong></li>
-</ol>
-<div class="expressive-code"><figure class="frame is-terminal not-content"><figcaption class="header"><span class="title"></span><span class="sr-only">Terminal window</span></figcaption><pre data-language="bash"><code><div class="ec-line"><div class="code"><span style="--0:#82AAFF;--1:#3B61B0">stn</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">template</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">create</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">prod-bundle</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#82AAFF;--1:#3B61B0">--env</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">default</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#82AAFF;--1:#3B61B0">--name</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#ECC48D;--1:#984E4D">Prod Bundle</span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#82AAFF;--1:#3B61B0">--author</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#ECC48D;--1:#984E4D">Team</span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#82AAFF;--1:#3B61B0">--description</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#ECC48D;--1:#984E4D">Prod env</span><span style="--0:#D9F5DD;--1:#111111">"</span></div></div><div class="ec-line"><div class="code"><span style="--0:#82AAFF;--1:#3B61B0">stn</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">template</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">bundle</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">prod-bundle</span></div></div><div class="ec-line"><div class="code"><span style="--0:#82AAFF;--1:#3B61B0">stn</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">template</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">install</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">prod-bundle.tar.gz</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">production</span></div></div><div class="ec-line"><div class="code"><span style="--0:#82AAFF;--1:#3B61B0">stn</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">sync</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">production</span></div></div></code></pre><div class="copy"><button title="Copy to clipboard" data-copied="Copied!" data-code="stn template create prod-bundle --env default --name &#x22;Prod Bundle&#x22; --author &#x22;Team&#x22; --description &#x22;Prod env&#x22;stn template bundle prod-bundlestn template install prod-bundle.tar.gz productionstn sync production"><div></div></button></div></figure></div>
-<p>完成后，一个包含 <strong>多子代理 + 多 MCP 服务器</strong> 的可部署包就到位了。</p>
-<blockquote>
-<p>想要<strong>可视化调试</strong>？本地跑：</p>
-</blockquote>
-<div class="expressive-code"><figure class="frame is-terminal not-content"><figcaption class="header"><span class="title"></span><span class="sr-only">Terminal window</span></figcaption><pre data-language="bash"><code><div class="ec-line"><div class="code"><span style="--0:#82AAFF;--1:#3B61B0">genkit</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">start</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#82AAFF;--1:#3B61B0">--</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">stn</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">develop</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#82AAFF;--1:#3B61B0">--env</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">dev</span></div></div></code></pre><div class="copy"><button title="Copy to clipboard" data-copied="Copied!" data-code="genkit start -- stn develop --env dev"><div></div></button></div></figure></div>
-<p>浏览器里即可测试输入、看实时调用轨迹与日志。</p>
-<hr>
-<div class="sl-heading-wrapper level-h2"><h2 id="推荐使用场景配可复制示例">推荐使用场景（配可复制示例）</h2><a class="sl-anchor-link" href="#推荐使用场景配可复制示例"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “推荐使用场景（配可复制示例）”</span></a></div>
-<div class="sl-heading-wrapper level-h3"><h3 id="1-安全合规--基线扫描-slack-告警">1) 安全合规 / 基线扫描（+ Slack 告警）</h3><a class="sl-anchor-link" href="#1-安全合规--基线扫描-slack-告警"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “1) 安全合规 / 基线扫描（+ Slack 告警）”</span></a></div>
-<ul>
-<li>目标：定时扫描敏感目录，发现异常即时推 Slack。</li>
-<li>做法：创建 <code dir="auto">SecurityScanner.prompt</code>，挂接 <strong>filesystem MCP</strong> + <strong>Slack MCP</strong>；在 Station 里设定执行元数据与步数上限。</li>
-<li>触发语句（Claude 内）：
-“运行安全扫描，目录 <code dir="auto">/etc</code>，把高危项发到 <code dir="auto">#sec-alerts</code>。”</li>
-<li>价值：自动化+可追踪，方便审计与回溯。</li>
-</ul>
-<div class="sl-heading-wrapper level-h3"><h3 id="2-基础设施巡检--成本看板aws-成本">2) 基础设施巡检 / 成本看板（AWS 成本）</h3><a class="sl-anchor-link" href="#2-基础设施巡检--成本看板aws-成本"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “2) 基础设施巡检 / 成本看板（AWS 成本）”</span></a></div>
-<ul>
-<li>目标：拉取近 7 天成本，生成日报，发 Slack。</li>
-<li>做法：Agent 组合 <strong>AWS 成本工具</strong> + <strong>Slack</strong>，输出 Markdown 周期推送。</li>
-<li>价值：把“AI+云成本”变成日常节拍，随手可得。</li>
-</ul>
-<div class="sl-heading-wrapper level-h3"><h3 id="3-cicd-部署自动化容器k8s">3) CI/CD 部署自动化（容器/K8s）</h3><a class="sl-anchor-link" href="#3-cicd-部署自动化容器k8s"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “3) CI/CD 部署自动化（容器/K8s）”</span></a></div>
-<ul>
-<li>目标：小版本上线，自动 <code dir="auto">docker exec</code> + <code dir="auto">kubectl apply</code>，回写变更单链接。</li>
-<li>做法：Agent 组合 <strong>Docker MCP</strong> + <strong>Kubernetes MCP</strong>；上线时只需一句话。</li>
-<li>价值：开发说人话，Agent 做苦活。</li>
-</ul>
-<div class="sl-heading-wrapper level-h3"><h3 id="4-生产库只读巡检--慢-sql-抓取">4) 生产库只读巡检 / 慢 SQL 抓取</h3><a class="sl-anchor-link" href="#4-生产库只读巡检--慢-sql-抓取"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “4) 生产库只读巡检 / 慢 SQL 抓取”</span></a></div>
-<ul>
-<li>目标：连接生产库（只读凭证），抽样检查慢查询与索引命中。</li>
-<li>做法：Agent 组合 <strong>DB MCP</strong> 与自定义分析脚本。</li>
-<li>价值：尽量靠近“问题源头”，减少排障往返。</li>
-</ul>
-<div class="sl-heading-wrapper level-h3"><h3 id="5-代码评审机器人内部规则版">5) 代码评审机器人（内部规则版）</h3><a class="sl-anchor-link" href="#5-代码评审机器人内部规则版"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “5) 代码评审机器人（内部规则版）”</span></a></div>
-<ul>
-<li>目标：按团队规范（安全/性能/风格）出评审建议。</li>
-<li>做法：在 <code dir="auto">.prompt</code> 写清评分维度与建议格式，挂 <strong>filesystem MCP</strong> 读取代码，输出结构化建议。</li>
-<li>价值：把“规范”产品化，持续一致。</li>
-</ul>
-<hr>
-<div class="sl-heading-wrapper level-h2"><h2 id="与应用型-agent-平台的区别">与应用型 Agent 平台的区别</h2><a class="sl-anchor-link" href="#与应用型-agent-平台的区别"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “与应用型 Agent 平台的区别”</span></a></div>
-<ul>
-<li>Station 默认面向 <strong>“能进你内网、需要权限与审计”</strong> 的任务；</li>
-<li>强调 <strong>自托管与数据主权</strong>；</li>
-<li><strong>单文件 + SQLite</strong> 的轻量形态，让它像一件运维工具，而不是一套平台。</li>
-</ul>
-<blockquote>
-<p>你也可以把 Station 当作 <strong>MCP“中枢”</strong>：它既能消费别的 MCP 服务器，也能对外暴露“调 Agent、列 Agent、建 Agent”的 MCP 工具给其他客户端使用。</p>
-</blockquote>
-<hr>
-<div class="sl-heading-wrapper level-h2"><h2 id="上线建议团队落地清单">上线建议（团队落地清单）</h2><a class="sl-anchor-link" href="#上线建议团队落地清单"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “上线建议（团队落地清单）”</span></a></div>
-<ul>
-<li><strong>凭证托管</strong>：密钥与连接串放入 Station 的加密存储，按环境隔离。</li>
-<li><strong>最小权限</strong>：为每个子代理单独配置只需的 MCP 工具，少即是多。</li>
-<li><strong>GitOps</strong>：<code dir="auto">template.json</code>、<code dir="auto">.prompt</code>、<code dir="auto">variables.yml</code> 全进仓库，走 MR 审核再发版。</li>
-<li><strong>审计留痕</strong>：所有执行都有轨迹，出事可回溯。</li>
-</ul>
-<hr>
-<div class="sl-heading-wrapper level-h2"><h2 id="结语">结语</h2><a class="sl-anchor-link" href="#结语"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “结语”</span></a></div>
-<p>Station 把“会干活的小 Agent”从桌面聊到的点子，落成<strong>可部署、可审计、可复制</strong>的内部自动化。你不用再为平台折腾，只需把 <code dir="auto">.prompt</code> 写好，工具接上，<strong>一打包就能到生产</strong>。
-这就是我最喜欢它的地方：<strong>简单、可控、能扩散</strong>。</p>
-<p>—</p>
-<p>**你觉得最值得先做的一个子代理是什么？**欢迎在评论区聊聊，也可以把这篇转给团队同事，一起设计你们的“内部 Agent 工厂”。</p>
-<!-- ---
-
-## 3 个多语言爆款标题 & slug
-
-1. **把 Claude 的小 Agent 送进生产：Station 自托管子代理运行时指南**
-   EN: Ship Your Claude Sub-Agents to Prod: A Hands-On Guide to Station
-   繁體: 把 Claude 小代理送進生產：Station 自託管子代理運行時指南
-   日本語: Claude の小さなエージェントを本番へ：Station 実践ガイド
-   Fr: Mettez vos sous-agents Claude en prod : guide pratique Station
-   Es: Lleva tus sub-agentes de Claude a producción: guía práctica de Station
-   Pt: Leve os sub-agentes do Claude para produção: guia prático do Station
-   **slug**: station-ship-sub-agents-to-prod
-
-2. **轻量、可审计、能打包：Station 打造你的内部 AI 自动化工厂**
-   EN: Lightweight, Auditable, Packable: Build an Internal AI Automation Factory with Station
-   繁體: 輕量、可稽核、可打包：用 Station 搭建內部 AI 自動化工廠
-   日本語: 軽量・監査可能・パッケージ化：Station で社内AI自動化工場を作る
-   Fr: Léger, traçable, empaquetable : votre usine d’automatisation interne avec Station
-   Es: Ligero, auditable y empaquetable: tu fábrica de automatización interna con Station
-   Pt: Leve, auditável e empacotável: sua fábrica interna de automação com Station
-   **slug**: station-internal-ai-automation-factory
-
-3. **不是平台，是运行时：Station 用 MCP 驱动可部署子代理**
-   EN: Not a Platform—A Runtime: Station Powers Deployable Sub-Agents with MCP
-   繁體: 不是平台，而是運行時：Station 以 MCP 驅動可部署子代理
-   日本語: プラットフォームではなくランタイム：Station が MCP で配備可能なサブエージェントを実現
-   Fr: Pas une plateforme, un runtime : Station active des sous-agents déployables avec MCP
-   Es: No es plataforma, es runtime: Station impulsa sub-agentes desplegables con MCP
-   Pt: Não é plataforma, é runtime: Station viabiliza sub-agentes com MCP
-   **slug**: station-runtime-not-platform
-
----
-
-## 封面与章节配图（插画风｜2:1｜英文文案，不含中文）
-
-**封面图 Prompt**
-“An illustration of a compact control room labeled ‘Station’ orchestrating many small ‘sub-agents’ as tool icons (file, database, Kubernetes, Slack) on conveyor belts; clean minimal lines, modern pastel palette, wide 2:1 composition; no text on image.”
-
-**章节配图 Prompt（“内部自动化工厂”）**
-“An illustration of a developer handing a `.prompt` file to a packaging robot that seals a ‘bundle’ crate, with arrows to ‘dev’, ‘staging’, ‘prod’ bays; modern pastel, minimal style, 2:1 aspect ratio, text-free.”
-
----
-
-## 3 条朋友圈/评论文案
-
-1. “把小 Agent 真正送进生产了！Station 自托管 + 打包分发，搞定权限、审计和多环境，团队自动化马上起飞🚀”
-2. “不是又一个平台，是能落地的运行时。`.prompt` + MCP 工具 = 子代理，打包就能拎包上生产，太爽了😎”
-3. “安全扫描、CI/CD、成本报表…一句话触发，Agent 干完活还留审计痕迹。这才是 AI 在开发团队的正确打开方式✅”
-
----
-
-想不想我再写一篇 **“用 Station 从 0 到 1 做一套团队模板（含示例 .prompt 与 template.json）”** 的实操篇？需要的话我现在就开写。
-
-[1]: https://github.com/cloudshipai/station "GitHub - cloudshipai/station"
-[2]: https://modelcontextprotocol.info/docs/quickstart/quickstart/ "Quickstart – Model Context Protocol （MCP）" --> </div> <footer class="astro-dr56dw7m"> <div class="astro-sg3lsd66"><b class="astro-sg3lsd66">Tags:</b><ul class="astro-sg3lsd66"><li class="astro-sg3lsd66"><a href="/zh-cn/blog/tags/station/" class="astro-sg3lsd66">Station</a></li><li class="astro-sg3lsd66"><a href="/zh-cn/blog/tags/claude-code/" class="astro-sg3lsd66">Claude Code</a></li><li class="astro-sg3lsd66"><a href="/zh-cn/blog/tags/cursor/" class="astro-sg3lsd66">Cursor</a></li><li class="astro-sg3lsd66"><a href="/zh-cn/blog/tags/vibe-coding/" class="astro-sg3lsd66">Vibe Coding</a></li></ul></div> </footer> </article> <article class="preview astro-dr56dw7m"> <header class="astro-dr56dw7m"> <h2 class="astro-dr56dw7m"> <a href="/zh-cn/blog/ai/claude-code/tamagotchi/2025-08-15-tamagotchi-in-claude-code/" class="astro-dr56dw7m">Claude Code 里养电子宠物 Tamagotchi，它居然会劝我别熬夜…</a> </h2> <div class="metadata not-content astro-2oxtfctb"> <div class="dates astro-2oxtfctb"> <time datetime="2025-08-15T00:00:00.000Z" class="astro-2oxtfctb"> 2025年8月15日 </time>  </div> <div class="authors astro-2oxtfctb"> <a href="https://www.vibesparking.com" class="author astro-kbhsbk7c"><img src="/assets/vibe-sparking-avatar-zh.jpg" alt="Vibe Sparking" loading="eager" decoding="async" fetchpriority="auto" width="40" height="40" class="astro-kbhsbk7c"><div class="text astro-kbhsbk7c"> <div class="name astro-kbhsbk7c">Vibe Sparking</div>  </div> </a>  </div>  </div>  </header> <div class="sl-markdown-content astro-dr56dw7m"> <!-- # 把“电子宠物”塞进 Claude Code：这只 Tamagotchi，懂你的代码也懂你 -->
+[9]: https://www.linkedin.com/posts/rob-lennon_getting-strict-with-your-ai-doesnt-make-activity-7196185900429553664-6Q-b?utm_source=chatgpt.com "Getting strict with your AI doesn't make you a bad person." --> </div> <footer class="astro-dr56dw7m"> <div class="astro-sg3lsd66"><b class="astro-sg3lsd66">Tags:</b><ul class="astro-sg3lsd66"><li class="astro-sg3lsd66"><a href="/zh-cn/blog/tags/prompt-engineering/" class="astro-sg3lsd66">Prompt Engineering</a></li></ul></div> </footer> </article> <article class="preview astro-dr56dw7m"> <header class="astro-dr56dw7m"> <h2 class="astro-dr56dw7m"> <a href="/zh-cn/blog/ai/claude-code/tamagotchi/2025-08-15-tamagotchi-in-claude-code/" class="astro-dr56dw7m">Claude Code 里养电子宠物 Tamagotchi，它居然会劝我别熬夜…</a> </h2> <div class="metadata not-content astro-2oxtfctb"> <div class="dates astro-2oxtfctb"> <time datetime="2025-08-15T00:00:00.000Z" class="astro-2oxtfctb"> 2025年8月15日 </time>  </div> <div class="authors astro-2oxtfctb"> <a href="https://www.vibesparking.com" class="author astro-kbhsbk7c"><img src="/assets/vibe-sparking-avatar-zh.jpg" alt="Vibe Sparking" loading="eager" decoding="async" fetchpriority="auto" width="40" height="40" class="astro-kbhsbk7c"><div class="text astro-kbhsbk7c"> <div class="name astro-kbhsbk7c">Vibe Sparking</div>  </div> </a>  </div>  </div>  </header> <div class="sl-markdown-content astro-dr56dw7m"> <!-- # 把“电子宠物”塞进 Claude Code：这只 Tamagotchi，懂你的代码也懂你 -->
 <p><strong>一个有点离谱、却很上头的小玩具。</strong>
 它住在 Claude Code 的状态栏里，会呼吸，会撒娇，会吐槽你的 TODO。你写久了它会饿，你调试崩了它会安慰你，还会提醒你去喝水吃饭。</p>
 <hr>
@@ -988,7 +828,167 @@ Claude Code 官方介绍与安装文档（理解本体与环境要求）。
 [1]: https://github.com/Ido-Levi/claude-code-tamagotchi "GitHub - Ido-Levi/claude-code-tamagotchi: The ultimate productivity companion/destroyer! This Tamagotchi tries its best to help but mostly just wants snacks."
 [2]: https://docs.anthropic.com/en/docs/claude-code/overview?utm_source=chatgpt.com "Claude Code overview"
 [3]: https://www.anthropic.com/claude-code?utm_source=chatgpt.com "Claude Code: Deep coding at terminal velocity ..."
-[4]: https://github.com/Ido-Levi/claude-code-tamagotchi/commits/main/ "Commits · Ido-Levi/claude-code-tamagotchi · GitHub" --> </div> <footer class="astro-dr56dw7m"> <div class="astro-sg3lsd66"><b class="astro-sg3lsd66">Tags:</b><ul class="astro-sg3lsd66"><li class="astro-sg3lsd66"><a href="/zh-cn/blog/tags/claude-code/" class="astro-sg3lsd66">Claude Code</a></li><li class="astro-sg3lsd66"><a href="/zh-cn/blog/tags/tamagotchi/" class="astro-sg3lsd66">Tamagotchi</a></li></ul></div> </footer> </article> <article class="preview astro-dr56dw7m"> <header class="astro-dr56dw7m"> <h2 class="astro-dr56dw7m"> <a href="/zh-cn/blog/ai/claude-code/2025-08-14-claude-code-save-money-right-model-lean-context-permissions/" class="astro-dr56dw7m">Claude Code 真省钱用法</a> </h2> <div class="metadata not-content astro-2oxtfctb"> <div class="dates astro-2oxtfctb"> <time datetime="2025-08-14T00:00:00.000Z" class="astro-2oxtfctb"> 2025年8月14日 </time>  </div> <div class="authors astro-2oxtfctb"> <a href="https://www.vibesparking.com" class="author astro-kbhsbk7c"><img src="/assets/vibe-sparking-avatar-zh.jpg" alt="Vibe Sparking" loading="eager" decoding="async" fetchpriority="auto" width="40" height="40" class="astro-kbhsbk7c"><div class="text astro-kbhsbk7c"> <div class="name astro-kbhsbk7c">Vibe Sparking</div>  </div> </a>  </div>  </div>  </header> <div class="sl-markdown-content astro-dr56dw7m"> <!-- # Claude Code 真省钱用法 -->
+[4]: https://github.com/Ido-Levi/claude-code-tamagotchi/commits/main/ "Commits · Ido-Levi/claude-code-tamagotchi · GitHub" --> </div> <footer class="astro-dr56dw7m"> <div class="astro-sg3lsd66"><b class="astro-sg3lsd66">Tags:</b><ul class="astro-sg3lsd66"><li class="astro-sg3lsd66"><a href="/zh-cn/blog/tags/claude-code/" class="astro-sg3lsd66">Claude Code</a></li><li class="astro-sg3lsd66"><a href="/zh-cn/blog/tags/tamagotchi/" class="astro-sg3lsd66">Tamagotchi</a></li></ul></div> </footer> </article> <article class="preview astro-dr56dw7m"> <header class="astro-dr56dw7m"> <h2 class="astro-dr56dw7m"> <a href="/zh-cn/blog/ai/vibe-coding/station/2025-08-15-station-ship-sub-agents-to-prod/" class="astro-dr56dw7m">Station 统一管理 Claude / Cursor 的 Agent</a> </h2> <div class="metadata not-content astro-2oxtfctb"> <div class="dates astro-2oxtfctb"> <time datetime="2025-08-15T00:00:00.000Z" class="astro-2oxtfctb"> 2025年8月15日 </time>  </div> <div class="authors astro-2oxtfctb"> <a href="https://www.vibesparking.com" class="author astro-kbhsbk7c"><img src="/assets/vibe-sparking-avatar-zh.jpg" alt="Vibe Sparking" loading="eager" decoding="async" fetchpriority="auto" width="40" height="40" class="astro-kbhsbk7c"><div class="text astro-kbhsbk7c"> <div class="name astro-kbhsbk7c">Vibe Sparking</div>  </div> </a>  </div>  </div>  </header> <div class="sl-markdown-content astro-dr56dw7m"> <!-- # Station 统一管理 Claude / Cursor 的 Agent -->
+<blockquote>
+<p>想要一套<strong>自托管、可版本、可打包</strong>的 Agent 运行时，让 Claude Code / Cursor 里产出的“小 Agent”真正落地上线？Station 就是为这件事而生的。</p>
+</blockquote>
+<hr>
+<div class="sl-heading-wrapper level-h2"><h2 id="引言">引言</h2><a class="sl-anchor-link" href="#引言"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “引言”</span></a></div>
+<p>最近这款 <strong>Station</strong> 在圈里挺火。它不是又一个“应用级”Agent 平台，而是专门给 <strong>可部署子代理（Sub-Agents）</strong> 准备的<strong>轻量运行时与打包分发体系</strong>。
+一句话理解：把你在 Claude Code、Cursor 里做出来的“能干活的小 Agent”，打包、上生产、接权限、可审计，还能版本化管理。</p>
+<hr>
+<div class="sl-heading-wrapper level-h2"><h2 id="亮点一览为内部场景而生">亮点一览（为“内部场景”而生）</h2><a class="sl-anchor-link" href="#亮点一览为内部场景而生"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “亮点一览（为“内部场景”而生）”</span></a></div>
+<p>**为什么用 Station？**因为内部自动化不同于普通 App：要拿密钥、要进数据库、要打 CI/CD、要过审计。</p>
+<ul>
+<li><strong>面向内部任务</strong>：子代理可以连生产库、监控基础设施、走 CI/CD、做安全扫描与应急响应。</li>
+<li><strong>安全内建</strong>：自托管、机密加密（AES）、多环境隔离（dev/staging/prod）、全量审计轨迹。</li>
+<li><strong>轻量可融入</strong>：<strong>单一约 45MB 二进制</strong>、本地 <strong>SQLite</strong> 即开箱，生产可切 <strong>PostgreSQL</strong>，天然 <strong>GitOps</strong>（配置可版本）。</li>
+<li><strong>MCP 原生</strong>：直接做 <strong>MCP 运行时</strong>，复用你团队已经批准的 MCP 工具（文件系统、Slack、AWS、K8s、DB…）。</li>
+<li><strong>开发体验</strong>：提供 <strong>Genkit 驱动的浏览器 Playground</strong> 与 <code dir="auto">stn develop</code>，可视化调试工具调用与执行流。</li>
+</ul>
+<blockquote>
+<p>MCP 是什么？简单说就是**让 LLM 用“受控工具”**的统一协议，Claude Desktop 官方教程里有快速上手与 Claude 配置示例。</p>
+</blockquote>
+<hr>
+<div class="sl-heading-wrapper level-h2"><h2 id="station-怎么工作">Station 怎么工作？</h2><a class="sl-anchor-link" href="#station-怎么工作"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “Station 怎么工作？”</span></a></div>
+<p><strong>核心结构</strong>很简单：
+<strong>一个 <code dir="auto">.prompt</code> 文件 + 一组 MCP 工具 = 一个可部署的子代理</strong>。
+环境以 <strong>dev/staging/prod</strong> 组织，工具定义在 <code dir="auto">template.json</code>，环境变量写 <code dir="auto">variables.yml</code>，最终可<strong>打包 Bundle</strong>并分发安装。</p>
+<hr>
+<div class="sl-heading-wrapper level-h2"><h2 id="安装与接入5-分钟上手">安装与接入（5 分钟上手）</h2><a class="sl-anchor-link" href="#安装与接入5-分钟上手"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “安装与接入（5 分钟上手）”</span></a></div>
+<ol>
+<li><strong>安装 &#x26; 初始化</strong></li>
+</ol>
+<div class="expressive-code"><link rel="stylesheet" href="/_astro/ec.v4551.css"><script type="module" src="/_astro/ec.8zarh.js"></script><figure class="frame is-terminal not-content"><figcaption class="header"><span class="title"></span><span class="sr-only">Terminal window</span></figcaption><pre data-language="bash"><code><div class="ec-line"><div class="code"><span style="--0:#82AAFF;--1:#3B61B0">curl</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#82AAFF;--1:#3B61B0">-fsSL</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">https://raw.githubusercontent.com/cloudshipai/station/main/install.sh</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#7FDBCA;--1:#096E72">|</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#82AAFF;--1:#3B61B0">bash</span></div></div><div class="ec-line"><div class="code"><span style="--0:#82AAFF;--1:#3B61B0">stn</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">init</span><span style="--0:#D6DEEB;--1:#403F53">   </span><span style="--0:#919F9F;--1:#5F636F"># 初始化数据库与加密</span></div></div></code></pre><div class="copy"><button title="Copy to clipboard" data-copied="Copied!" data-code="curl -fsSL https://raw.githubusercontent.com/cloudshipai/station/main/install.sh | bashstn init   # 初始化数据库与加密"><div></div></button></div></figure></div>
+<ol start="2">
+<li><strong>接入 Claude Desktop / Claude Code（MCP）</strong>
+在 Claude 配置里加入：</li>
+</ol>
+<div class="expressive-code"><figure class="frame not-content"><figcaption class="header"></figcaption><pre data-language="json"><code><div class="ec-line"><div class="code"><span style="--0:#D6DEEB;--1:#403F53">{</span></div></div><div class="ec-line"><div class="code"><span class="indent">  </span><span style="--0:#7FDBCA;--1:#096E72">"mcpServers"</span><span style="--0:#D6DEEB;--1:#403F53">: {</span></div></div><div class="ec-line"><div class="code"><span class="indent">    </span><span style="--0:#7FDBCA;--1:#096E72">"station"</span><span style="--0:#D6DEEB;--1:#403F53">: {</span></div></div><div class="ec-line"><div class="code"><span class="indent">      </span><span style="--0:#7FDBCA;--1:#096E72">"command"</span><span style="--0:#D6DEEB;--1:#403F53">: </span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#C789D6;--1:#7C5686">stn</span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#D6DEEB;--1:#403F53">,</span></div></div><div class="ec-line"><div class="code"><span class="indent">      </span><span style="--0:#7FDBCA;--1:#096E72">"args"</span><span style="--0:#D6DEEB;--1:#403F53">: [</span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#C789D6;--1:#7C5686">stdio</span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#D6DEEB;--1:#403F53">]</span></div></div><div class="ec-line"><div class="code"><span class="indent"><span style="--0:#D6DEEB;--1:#403F53">    </span></span><span style="--0:#D6DEEB;--1:#403F53">}</span></div></div><div class="ec-line"><div class="code"><span class="indent"><span style="--0:#D6DEEB;--1:#403F53">  </span></span><span style="--0:#D6DEEB;--1:#403F53">}</span></div></div><div class="ec-line"><div class="code"><span style="--0:#D6DEEB;--1:#403F53">}</span></div></div></code></pre><div class="copy"><button title="Copy to clipboard" data-copied="Copied!" data-code="{  &#x22;mcpServers&#x22;: {    &#x22;station&#x22;: {      &#x22;command&#x22;: &#x22;stn&#x22;,      &#x22;args&#x22;: [&#x22;stdio&#x22;]    }  }}"><div></div></button></div></figure></div>
+<p>现在，跟 Claude 说“创建一个安全审计代理”，它会自动给这个代理配好需要的工具（如文件扫描 + Slack）。</p>
+<ol start="3">
+<li><strong>一键打包 &#x26; 安装 Bundle（把环境搬去生产）</strong></li>
+</ol>
+<div class="expressive-code"><figure class="frame is-terminal not-content"><figcaption class="header"><span class="title"></span><span class="sr-only">Terminal window</span></figcaption><pre data-language="bash"><code><div class="ec-line"><div class="code"><span style="--0:#82AAFF;--1:#3B61B0">stn</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">template</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">create</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">prod-bundle</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#82AAFF;--1:#3B61B0">--env</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">default</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#82AAFF;--1:#3B61B0">--name</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#ECC48D;--1:#984E4D">Prod Bundle</span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#82AAFF;--1:#3B61B0">--author</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#ECC48D;--1:#984E4D">Team</span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#82AAFF;--1:#3B61B0">--description</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#ECC48D;--1:#984E4D">Prod env</span><span style="--0:#D9F5DD;--1:#111111">"</span></div></div><div class="ec-line"><div class="code"><span style="--0:#82AAFF;--1:#3B61B0">stn</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">template</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">bundle</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">prod-bundle</span></div></div><div class="ec-line"><div class="code"><span style="--0:#82AAFF;--1:#3B61B0">stn</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">template</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">install</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">prod-bundle.tar.gz</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">production</span></div></div><div class="ec-line"><div class="code"><span style="--0:#82AAFF;--1:#3B61B0">stn</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">sync</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">production</span></div></div></code></pre><div class="copy"><button title="Copy to clipboard" data-copied="Copied!" data-code="stn template create prod-bundle --env default --name &#x22;Prod Bundle&#x22; --author &#x22;Team&#x22; --description &#x22;Prod env&#x22;stn template bundle prod-bundlestn template install prod-bundle.tar.gz productionstn sync production"><div></div></button></div></figure></div>
+<p>完成后，一个包含 <strong>多子代理 + 多 MCP 服务器</strong> 的可部署包就到位了。</p>
+<blockquote>
+<p>想要<strong>可视化调试</strong>？本地跑：</p>
+</blockquote>
+<div class="expressive-code"><figure class="frame is-terminal not-content"><figcaption class="header"><span class="title"></span><span class="sr-only">Terminal window</span></figcaption><pre data-language="bash"><code><div class="ec-line"><div class="code"><span style="--0:#82AAFF;--1:#3B61B0">genkit</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">start</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#82AAFF;--1:#3B61B0">--</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">stn</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">develop</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#82AAFF;--1:#3B61B0">--env</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">dev</span></div></div></code></pre><div class="copy"><button title="Copy to clipboard" data-copied="Copied!" data-code="genkit start -- stn develop --env dev"><div></div></button></div></figure></div>
+<p>浏览器里即可测试输入、看实时调用轨迹与日志。</p>
+<hr>
+<div class="sl-heading-wrapper level-h2"><h2 id="推荐使用场景配可复制示例">推荐使用场景（配可复制示例）</h2><a class="sl-anchor-link" href="#推荐使用场景配可复制示例"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “推荐使用场景（配可复制示例）”</span></a></div>
+<div class="sl-heading-wrapper level-h3"><h3 id="1-安全合规--基线扫描-slack-告警">1) 安全合规 / 基线扫描（+ Slack 告警）</h3><a class="sl-anchor-link" href="#1-安全合规--基线扫描-slack-告警"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “1) 安全合规 / 基线扫描（+ Slack 告警）”</span></a></div>
+<ul>
+<li>目标：定时扫描敏感目录，发现异常即时推 Slack。</li>
+<li>做法：创建 <code dir="auto">SecurityScanner.prompt</code>，挂接 <strong>filesystem MCP</strong> + <strong>Slack MCP</strong>；在 Station 里设定执行元数据与步数上限。</li>
+<li>触发语句（Claude 内）：
+“运行安全扫描，目录 <code dir="auto">/etc</code>，把高危项发到 <code dir="auto">#sec-alerts</code>。”</li>
+<li>价值：自动化+可追踪，方便审计与回溯。</li>
+</ul>
+<div class="sl-heading-wrapper level-h3"><h3 id="2-基础设施巡检--成本看板aws-成本">2) 基础设施巡检 / 成本看板（AWS 成本）</h3><a class="sl-anchor-link" href="#2-基础设施巡检--成本看板aws-成本"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “2) 基础设施巡检 / 成本看板（AWS 成本）”</span></a></div>
+<ul>
+<li>目标：拉取近 7 天成本，生成日报，发 Slack。</li>
+<li>做法：Agent 组合 <strong>AWS 成本工具</strong> + <strong>Slack</strong>，输出 Markdown 周期推送。</li>
+<li>价值：把“AI+云成本”变成日常节拍，随手可得。</li>
+</ul>
+<div class="sl-heading-wrapper level-h3"><h3 id="3-cicd-部署自动化容器k8s">3) CI/CD 部署自动化（容器/K8s）</h3><a class="sl-anchor-link" href="#3-cicd-部署自动化容器k8s"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “3) CI/CD 部署自动化（容器/K8s）”</span></a></div>
+<ul>
+<li>目标：小版本上线，自动 <code dir="auto">docker exec</code> + <code dir="auto">kubectl apply</code>，回写变更单链接。</li>
+<li>做法：Agent 组合 <strong>Docker MCP</strong> + <strong>Kubernetes MCP</strong>；上线时只需一句话。</li>
+<li>价值：开发说人话，Agent 做苦活。</li>
+</ul>
+<div class="sl-heading-wrapper level-h3"><h3 id="4-生产库只读巡检--慢-sql-抓取">4) 生产库只读巡检 / 慢 SQL 抓取</h3><a class="sl-anchor-link" href="#4-生产库只读巡检--慢-sql-抓取"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “4) 生产库只读巡检 / 慢 SQL 抓取”</span></a></div>
+<ul>
+<li>目标：连接生产库（只读凭证），抽样检查慢查询与索引命中。</li>
+<li>做法：Agent 组合 <strong>DB MCP</strong> 与自定义分析脚本。</li>
+<li>价值：尽量靠近“问题源头”，减少排障往返。</li>
+</ul>
+<div class="sl-heading-wrapper level-h3"><h3 id="5-代码评审机器人内部规则版">5) 代码评审机器人（内部规则版）</h3><a class="sl-anchor-link" href="#5-代码评审机器人内部规则版"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “5) 代码评审机器人（内部规则版）”</span></a></div>
+<ul>
+<li>目标：按团队规范（安全/性能/风格）出评审建议。</li>
+<li>做法：在 <code dir="auto">.prompt</code> 写清评分维度与建议格式，挂 <strong>filesystem MCP</strong> 读取代码，输出结构化建议。</li>
+<li>价值：把“规范”产品化，持续一致。</li>
+</ul>
+<hr>
+<div class="sl-heading-wrapper level-h2"><h2 id="与应用型-agent-平台的区别">与应用型 Agent 平台的区别</h2><a class="sl-anchor-link" href="#与应用型-agent-平台的区别"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “与应用型 Agent 平台的区别”</span></a></div>
+<ul>
+<li>Station 默认面向 <strong>“能进你内网、需要权限与审计”</strong> 的任务；</li>
+<li>强调 <strong>自托管与数据主权</strong>；</li>
+<li><strong>单文件 + SQLite</strong> 的轻量形态，让它像一件运维工具，而不是一套平台。</li>
+</ul>
+<blockquote>
+<p>你也可以把 Station 当作 <strong>MCP“中枢”</strong>：它既能消费别的 MCP 服务器，也能对外暴露“调 Agent、列 Agent、建 Agent”的 MCP 工具给其他客户端使用。</p>
+</blockquote>
+<hr>
+<div class="sl-heading-wrapper level-h2"><h2 id="上线建议团队落地清单">上线建议（团队落地清单）</h2><a class="sl-anchor-link" href="#上线建议团队落地清单"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “上线建议（团队落地清单）”</span></a></div>
+<ul>
+<li><strong>凭证托管</strong>：密钥与连接串放入 Station 的加密存储，按环境隔离。</li>
+<li><strong>最小权限</strong>：为每个子代理单独配置只需的 MCP 工具，少即是多。</li>
+<li><strong>GitOps</strong>：<code dir="auto">template.json</code>、<code dir="auto">.prompt</code>、<code dir="auto">variables.yml</code> 全进仓库，走 MR 审核再发版。</li>
+<li><strong>审计留痕</strong>：所有执行都有轨迹，出事可回溯。</li>
+</ul>
+<hr>
+<div class="sl-heading-wrapper level-h2"><h2 id="结语">结语</h2><a class="sl-anchor-link" href="#结语"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “结语”</span></a></div>
+<p>Station 把“会干活的小 Agent”从桌面聊到的点子，落成<strong>可部署、可审计、可复制</strong>的内部自动化。你不用再为平台折腾，只需把 <code dir="auto">.prompt</code> 写好，工具接上，<strong>一打包就能到生产</strong>。
+这就是我最喜欢它的地方：<strong>简单、可控、能扩散</strong>。</p>
+<p>—</p>
+<p>**你觉得最值得先做的一个子代理是什么？**欢迎在评论区聊聊，也可以把这篇转给团队同事，一起设计你们的“内部 Agent 工厂”。</p>
+<!-- ---
+
+## 3 个多语言爆款标题 & slug
+
+1. **把 Claude 的小 Agent 送进生产：Station 自托管子代理运行时指南**
+   EN: Ship Your Claude Sub-Agents to Prod: A Hands-On Guide to Station
+   繁體: 把 Claude 小代理送進生產：Station 自託管子代理運行時指南
+   日本語: Claude の小さなエージェントを本番へ：Station 実践ガイド
+   Fr: Mettez vos sous-agents Claude en prod : guide pratique Station
+   Es: Lleva tus sub-agentes de Claude a producción: guía práctica de Station
+   Pt: Leve os sub-agentes do Claude para produção: guia prático do Station
+   **slug**: station-ship-sub-agents-to-prod
+
+2. **轻量、可审计、能打包：Station 打造你的内部 AI 自动化工厂**
+   EN: Lightweight, Auditable, Packable: Build an Internal AI Automation Factory with Station
+   繁體: 輕量、可稽核、可打包：用 Station 搭建內部 AI 自動化工廠
+   日本語: 軽量・監査可能・パッケージ化：Station で社内AI自動化工場を作る
+   Fr: Léger, traçable, empaquetable : votre usine d’automatisation interne avec Station
+   Es: Ligero, auditable y empaquetable: tu fábrica de automatización interna con Station
+   Pt: Leve, auditável e empacotável: sua fábrica interna de automação com Station
+   **slug**: station-internal-ai-automation-factory
+
+3. **不是平台，是运行时：Station 用 MCP 驱动可部署子代理**
+   EN: Not a Platform—A Runtime: Station Powers Deployable Sub-Agents with MCP
+   繁體: 不是平台，而是運行時：Station 以 MCP 驅動可部署子代理
+   日本語: プラットフォームではなくランタイム：Station が MCP で配備可能なサブエージェントを実現
+   Fr: Pas une plateforme, un runtime : Station active des sous-agents déployables avec MCP
+   Es: No es plataforma, es runtime: Station impulsa sub-agentes desplegables con MCP
+   Pt: Não é plataforma, é runtime: Station viabiliza sub-agentes com MCP
+   **slug**: station-runtime-not-platform
+
+---
+
+## 封面与章节配图（插画风｜2:1｜英文文案，不含中文）
+
+**封面图 Prompt**
+“An illustration of a compact control room labeled ‘Station’ orchestrating many small ‘sub-agents’ as tool icons (file, database, Kubernetes, Slack) on conveyor belts; clean minimal lines, modern pastel palette, wide 2:1 composition; no text on image.”
+
+**章节配图 Prompt（“内部自动化工厂”）**
+“An illustration of a developer handing a `.prompt` file to a packaging robot that seals a ‘bundle’ crate, with arrows to ‘dev’, ‘staging’, ‘prod’ bays; modern pastel, minimal style, 2:1 aspect ratio, text-free.”
+
+---
+
+## 3 条朋友圈/评论文案
+
+1. “把小 Agent 真正送进生产了！Station 自托管 + 打包分发，搞定权限、审计和多环境，团队自动化马上起飞🚀”
+2. “不是又一个平台，是能落地的运行时。`.prompt` + MCP 工具 = 子代理，打包就能拎包上生产，太爽了😎”
+3. “安全扫描、CI/CD、成本报表…一句话触发，Agent 干完活还留审计痕迹。这才是 AI 在开发团队的正确打开方式✅”
+
+---
+
+想不想我再写一篇 **“用 Station 从 0 到 1 做一套团队模板（含示例 .prompt 与 template.json）”** 的实操篇？需要的话我现在就开写。
+
+[1]: https://github.com/cloudshipai/station "GitHub - cloudshipai/station"
+[2]: https://modelcontextprotocol.info/docs/quickstart/quickstart/ "Quickstart – Model Context Protocol （MCP）" --> </div> <footer class="astro-dr56dw7m"> <div class="astro-sg3lsd66"><b class="astro-sg3lsd66">Tags:</b><ul class="astro-sg3lsd66"><li class="astro-sg3lsd66"><a href="/zh-cn/blog/tags/station/" class="astro-sg3lsd66">Station</a></li><li class="astro-sg3lsd66"><a href="/zh-cn/blog/tags/claude-code/" class="astro-sg3lsd66">Claude Code</a></li><li class="astro-sg3lsd66"><a href="/zh-cn/blog/tags/cursor/" class="astro-sg3lsd66">Cursor</a></li><li class="astro-sg3lsd66"><a href="/zh-cn/blog/tags/vibe-coding/" class="astro-sg3lsd66">Vibe Coding</a></li></ul></div> </footer> </article> <article class="preview astro-dr56dw7m"> <header class="astro-dr56dw7m"> <h2 class="astro-dr56dw7m"> <a href="/zh-cn/blog/ai/claude-code/2025-08-14-claude-code-save-money-right-model-lean-context-permissions/" class="astro-dr56dw7m">Claude Code 真省钱用法</a> </h2> <div class="metadata not-content astro-2oxtfctb"> <div class="dates astro-2oxtfctb"> <time datetime="2025-08-14T00:00:00.000Z" class="astro-2oxtfctb"> 2025年8月14日 </time>  </div> <div class="authors astro-2oxtfctb"> <a href="https://www.vibesparking.com" class="author astro-kbhsbk7c"><img src="/assets/vibe-sparking-avatar-zh.jpg" alt="Vibe Sparking" loading="eager" decoding="async" fetchpriority="auto" width="40" height="40" class="astro-kbhsbk7c"><div class="text astro-kbhsbk7c"> <div class="name astro-kbhsbk7c">Vibe Sparking</div>  </div> </a>  </div>  </div>  </header> <div class="sl-markdown-content astro-dr56dw7m"> <!-- # Claude Code 真省钱用法 -->
 <blockquote>
 <p>把对话瘦身、模型用对、权限管严，Claude Code 的账单能直接腰斩。</p>
 </blockquote>

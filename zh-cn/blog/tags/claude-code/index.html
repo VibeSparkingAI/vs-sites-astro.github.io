@@ -9234,206 +9234,7 @@ OpenAI 兼容端点<strong>需选“OpenAI 兼容”类型</strong>，并正确�
 [13]: https://docs.anthropic.com/en/docs/claude-code/cli-reference?utm_source=chatgpt.com "CLI reference"
 [14]: https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/be-clear-and-direct?utm_source=chatgpt.com "Be clear, direct, and detailed"
 [15]: https://docs.anthropic.com/en/docs/about-claude/pricing?utm_source=chatgpt.com "Pricing"
-[16]: https://docs.anthropic.com/en/docs/claude-code/costs?utm_source=chatgpt.com "Manage costs effectively" --> </div> <footer class="astro-dr56dw7m"> <div class="astro-sg3lsd66"><b class="astro-sg3lsd66">Tags:</b><ul class="astro-sg3lsd66"><li class="astro-sg3lsd66"><a href="/zh-cn/blog/tags/claude-code/" class="astro-sg3lsd66">Claude Code</a></li></ul></div> </footer> </article> <article class="preview astro-dr56dw7m"> <header class="astro-dr56dw7m"> <h2 class="astro-dr56dw7m"> <a href="/zh-cn/blog/ai/claude-code-proxy/2025-08-22-claude-code-proxy-openai-gemini-engine-swap/" class="astro-dr56dw7m">claude-code-proxy 用 Claude Code 跑 OpenAI/Gemini 模型</a> </h2> <div class="metadata not-content astro-2oxtfctb"> <div class="dates astro-2oxtfctb"> <time datetime="2025-08-21T00:00:00.000Z" class="astro-2oxtfctb"> 2025年8月21日 </time>  </div> <div class="authors astro-2oxtfctb"> <a href="https://www.vibesparking.com" class="author astro-kbhsbk7c"><img src="/assets/vibe-sparking-avatar-zh.jpg" alt="Vibe Sparking" loading="eager" decoding="async" fetchpriority="auto" width="40" height="40" class="astro-kbhsbk7c"><div class="text astro-kbhsbk7c"> <div class="name astro-kbhsbk7c">Vibe Sparking</div>  </div> </a>  </div>  </div>  </header> <div class="sl-markdown-content astro-dr56dw7m"> <!-- # claude-code-proxy 用 Claude Code 跑 OpenAI/Gemini 模型 -->
-<blockquote>
-<p>把 Claude Code 的请求“翻译”给 OpenAI 或 Gemini（也可直连 Anthropic），<strong>零改代码</strong>、一条命令接入、支持流式与模型前缀自动匹配。</p>
-</blockquote>
-<hr>
-<div class="sl-heading-wrapper level-h2"><h2 id="引言">引言</h2><a class="sl-anchor-link" href="#引言"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “引言”</span></a></div>
-<p>不少同学想用 <strong>Claude Code 的工作流</strong>，但又想走 <strong>OpenAI/Gemini 的模型与价格体系</strong>。
-切换 SDK、改调用格式、做权限与日志，一堆坑。</p>
-<p>这就是 <strong>claude-code-proxy</strong> 的用武之地：
-它让 <strong>Anthropic 协议的客户端（如 Claude Code）</strong>，无缝转到 <strong>OpenAI/Gemini</strong>，或<strong>继续走 Anthropic</strong>，还把响应转回 Anthropic 格式，前端毫无感知。</p>
-<p><starlight-image-zoom-zoomable><img src="/assets/ai/claude-code-proxy/intro.png" alt=""><button aria-label="Zoom image" class="starlight-image-zoom-control"><svg aria-hidden="true" fill="currentColor" viewBox="0 0 24 24"><use href="#starlight-image-zoom-icon-zoom"></use></svg></button></starlight-image-zoom-zoomable></p>
-<hr>
-<div class="sl-heading-wrapper level-h2"><h2 id="亮点速览">亮点速览</h2><a class="sl-anchor-link" href="#亮点速览"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “亮点速览”</span></a></div>
-<ul>
-<li>
-<p><strong>三种后端一键切换</strong>：<code dir="auto">PREFERRED_PROVIDER</code> 设为 <code dir="auto">openai / google / anthropic</code>。
-<em>不想映射？选 anthropic，走<strong>直连模式</strong>。</em></p>
-</li>
-<li>
-<p><strong>模型前缀自动处理</strong>：自动给 OpenAI/Gemini 模型加 <code dir="auto">openai/</code>、<code dir="auto">gemini/</code> 前缀，避免手抖写错。</p>
-</li>
-<li>
-<p><strong>Haiku/Sonnet 智能映射</strong>：
-<code dir="auto">haiku → SMALL_MODEL</code>，<code dir="auto">sonnet → BIG_MODEL</code>；默认映射到 <code dir="auto">gpt-4.1(-mini)</code> 或 <code dir="auto">gemini-2.5-pro / 2.0-flash</code>。</p>
-</li>
-<li>
-<p><strong>全程 LiteLLM 撑腰</strong>：统一网关、路由/回退、用量追踪、预算限额、日志与插件扩展。</p>
-</li>
-<li>
-<p><strong>完全兼容流式/非流式</strong>：对 Claude 客户端透明。</p>
-</li>
-</ul>
-<hr>
-<div class="sl-heading-wrapper level-h2"><h2 id="安装与快速启动">安装与快速启动</h2><a class="sl-anchor-link" href="#安装与快速启动"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “安装与快速启动”</span></a></div>
-<blockquote>
-<p>目标：本机起一个 8082 端口的代理，Claude Code 直接指向它。</p>
-</blockquote>
-<p><strong>1）克隆与安装依赖（用 uv 超快）</strong></p>
-<div class="expressive-code"><link rel="stylesheet" href="/_astro/ec.v4551.css"><script type="module" src="/_astro/ec.8zarh.js"></script><figure class="frame is-terminal not-content"><figcaption class="header"><span class="title"></span><span class="sr-only">Terminal window</span></figcaption><pre data-language="bash"><code><div class="ec-line"><div class="code"><span style="--0:#82AAFF;--1:#3B61B0">git</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">clone</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">https://github.com/1rgs/claude-code-proxy.git</span></div></div><div class="ec-line"><div class="code"><span style="--0:#C5E478;--1:#3B61B0">cd</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">claude-code-proxy</span></div></div><div class="ec-line"><div class="code">
-</div></div><div class="ec-line"><div class="code"><span style="--0:#919F9F;--1:#5F636F"># 安装 uv（一次性）</span></div></div><div class="ec-line"><div class="code"><span style="--0:#82AAFF;--1:#3B61B0">curl</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#82AAFF;--1:#3B61B0">-LsSf</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">https://astral.sh/uv/install.sh</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#7FDBCA;--1:#096E72">|</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#82AAFF;--1:#3B61B0">sh</span></div></div></code></pre><div class="copy"><button title="Copy to clipboard" data-copied="Copied!" data-code="git clone https://github.com/1rgs/claude-code-proxy.gitcd claude-code-proxycurl -LsSf https://astral.sh/uv/install.sh | sh"><div></div></button></div></figure></div>
-<p><code dir="auto">uv</code> 负责基于 <code dir="auto">pyproject.toml</code> 解析/安装依赖，省心省时。</p>
-<p><strong>2）配置环境变量</strong></p>
-<div class="expressive-code"><figure class="frame is-terminal not-content"><figcaption class="header"><span class="title"></span><span class="sr-only">Terminal window</span></figcaption><pre data-language="bash"><code><div class="ec-line"><div class="code"><span style="--0:#82AAFF;--1:#3B61B0">cp</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">.env.example</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">.env</span></div></div><div class="ec-line"><div class="code"><span style="--0:#919F9F;--1:#5F636F"># 编辑 .env，填好你的 API KEY、首选后端与模型</span></div></div></code></pre><div class="copy"><button title="Copy to clipboard" data-copied="Copied!" data-code="cp .env.example .env"><div></div></button></div></figure></div>
-<p>关键项：</p>
-<ul>
-<li><code dir="auto">OPENAI_API_KEY</code>、<code dir="auto">GEMINI_API_KEY</code>、（可选）<code dir="auto">ANTHROPIC_API_KEY</code></li>
-<li><code dir="auto">PREFERRED_PROVIDER=openai|google|anthropic</code></li>
-<li><code dir="auto">BIG_MODEL</code> / <code dir="auto">SMALL_MODEL</code>（用于 Sonnet/Haiku 映射）
-详见 README 表述。</li>
-</ul>
-<p><strong>Gemini API Key</strong> 可在 Google AI Studio 一键创建与配置为环境变量。</p>
-<p><strong>3）启动服务</strong></p>
-<div class="expressive-code"><figure class="frame is-terminal not-content"><figcaption class="header"><span class="title"></span><span class="sr-only">Terminal window</span></figcaption><pre data-language="bash"><code><div class="ec-line"><div class="code"><span style="--0:#82AAFF;--1:#3B61B0">uv</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">run</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">uvicorn</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">server:app</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#82AAFF;--1:#3B61B0">--host</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#F78C6C;--1:#AA0982">0.0.0.0</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#82AAFF;--1:#3B61B0">--port</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#F78C6C;--1:#AA0982">8082</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#82AAFF;--1:#3B61B0">--reload</span></div></div></code></pre><div class="copy"><button title="Copy to clipboard" data-copied="Copied!" data-code="uv run uvicorn server:app --host 0.0.0.0 --port 8082 --reload"><div></div></button></div></figure></div>
-<p><code dir="auto">--reload</code> 适合开发期。</p>
-<hr>
-<div class="sl-heading-wrapper level-h2"><h2 id="与-claude-code-搭配">与 Claude Code 搭配</h2><a class="sl-anchor-link" href="#与-claude-code-搭配"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “与 Claude Code 搭配”</span></a></div>
-<p><strong>安装 Claude Code：</strong></p>
-<div class="expressive-code"><figure class="frame is-terminal not-content"><figcaption class="header"><span class="title"></span><span class="sr-only">Terminal window</span></figcaption><pre data-language="bash"><code><div class="ec-line"><div class="code"><span style="--0:#82AAFF;--1:#3B61B0">npm</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">install</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#82AAFF;--1:#3B61B0">-g</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">@anthropic-ai/claude-code</span></div></div></code></pre><div class="copy"><button title="Copy to clipboard" data-copied="Copied!" data-code="npm install -g @anthropic-ai/claude-code"><div></div></button></div></figure></div>
-<p>官方建议别用 <code dir="auto">sudo</code>，权限问题请看文档。</p>
-<p><strong>指向代理并启动：</strong></p>
-<div class="expressive-code"><figure class="frame is-terminal not-content"><figcaption class="header"><span class="title"></span><span class="sr-only">Terminal window</span></figcaption><pre data-language="bash"><code><div class="ec-line"><div class="code"><span style="--0:#C5E478;--1:#3B61B0">ANTHROPIC_BASE_URL</span><span style="--0:#C792EA;--1:#8844AE">=</span><span style="--0:#ECC48D;--1:#3B61B0">http://localhost:8082</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#82AAFF;--1:#3B61B0">claude</span></div></div></code></pre><div class="copy"><button title="Copy to clipboard" data-copied="Copied!" data-code="ANTHROPIC_BASE_URL=http://localhost:8082 claude"><div></div></button></div></figure></div>
-<p>此后，Claude Code 的 Haiku/Sonnet 会按你的 <code dir="auto">.env</code> 映射到 OpenAI/Gemini 或直连 Anthropic。</p>
-<hr>
-<div class="sl-heading-wrapper level-h2"><h2 id="三种常用映射模板可直接复制">三种常用映射模板（可直接复制）</h2><a class="sl-anchor-link" href="#三种常用映射模板可直接复制"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “三种常用映射模板（可直接复制）”</span></a></div>
-<p><strong>A. 默认走 OpenAI（省事稳妥）</strong></p>
-<div class="expressive-code"><figure class="frame not-content"><figcaption class="header"></figcaption><pre data-language="env"><code><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">PREFERRED_PROVIDER=openai</span></div></div><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">OPENAI_API_KEY=sk-...</span></div></div><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53"># 可选：BIG_MODEL/SMALL_MODEL</span></div></div><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">BIG_MODEL=gpt-4.1</span></div></div><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">SMALL_MODEL=gpt-4.1-mini</span></div></div></code></pre><div class="copy"><button title="Copy to clipboard" data-copied="Copied!" data-code="PREFERRED_PROVIDER=openaiOPENAI_API_KEY=sk-...# 可选：BIG_MODEL/SMALL_MODELBIG_MODEL=gpt-4.1SMALL_MODEL=gpt-4.1-mini"><div></div></button></div></figure></div>
-<p>Haiku/Sonnet → <code dir="auto">openai/SMALL_MODEL</code> / <code dir="auto">openai/BIG_MODEL</code>。</p>
-<p><strong>B. 更偏爱 Gemini（成本友好/响应快）</strong></p>
-<div class="expressive-code"><figure class="frame not-content"><figcaption class="header"></figcaption><pre data-language="env"><code><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">PREFERRED_PROVIDER=google</span></div></div><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">GEMINI_API_KEY=...</span></div></div><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">OPENAI_API_KEY=sk-...   # 作为回退</span></div></div><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">BIG_MODEL=gemini-2.5-pro-preview-03-25</span></div></div><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">SMALL_MODEL=gemini-2.0-flash</span></div></div></code></pre><div class="copy"><button title="Copy to clipboard" data-copied="Copied!" data-code="PREFERRED_PROVIDER=googleGEMINI_API_KEY=...OPENAI_API_KEY=sk-...   # 作为回退BIG_MODEL=gemini-2.5-pro-preview-03-25SMALL_MODEL=gemini-2.0-flash"><div></div></button></div></figure></div>
-<p>Haiku/Sonnet → 对应 <code dir="auto">gemini/</code> 前缀；不在白名单时回退 OpenAI。</p>
-<p><strong>C. 只做「Anthropic 透明代理」</strong></p>
-<div class="expressive-code"><figure class="frame not-content"><figcaption class="header"></figcaption><pre data-language="env"><code><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">PREFERRED_PROVIDER=anthropic</span></div></div><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">ANTHROPIC_API_KEY=sk-ant-...</span></div></div><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53"># 忽略 BIG/SMALL，直传 Anthropic</span></div></div></code></pre><div class="copy"><button title="Copy to clipboard" data-copied="Copied!" data-code="PREFERRED_PROVIDER=anthropicANTHROPIC_API_KEY=sk-ant-...# 忽略 BIG/SMALL，直传 Anthropic"><div></div></button></div></figure></div>
-<p>好处：保留日志/中间件/统一入口，同时<strong>不做映射</strong>。</p>
-<hr>
-<div class="sl-heading-wrapper level-h2"><h2 id="为什么它稳litellm-网关能力">为什么它稳：LiteLLM 网关能力</h2><a class="sl-anchor-link" href="#为什么它稳litellm-网关能力"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “为什么它稳：LiteLLM 网关能力”</span></a></div>
-<ul>
-<li>统一接口接 100+ 模型（OpenAI、Anthropic、Google 等）。</li>
-<li>支持 <strong>路由/回退、负载均衡、预算限额与用量追踪</strong>。</li>
-<li>可定制 <strong>日志、告警、插件</strong>，方便合规与审计。</li>
-</ul>
-<hr>
-<div class="sl-heading-wrapper level-h2"><h2 id="推荐用法场景">推荐用法场景</h2><a class="sl-anchor-link" href="#推荐用法场景"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “推荐用法场景”</span></a></div>
-<p>1）<strong>团队网关</strong>：把 Claude Code、脚本与后端服务的 LLM 流量，都收敛到这台代理，集中控费与审计。</p>
-<p>2）<strong>成本/性能 AB 切</strong>：一键在 OpenAI 与 Gemini 间切换，看谁成本更优、谁推理更准。</p>
-<p>3）<strong>直连 Anthropic + 增强治理</strong>：保留真实模型与响应，同时复用代理的日志与限额模块。</p>
-<p>4）<strong>本地开发</strong>：开发机开 8082，Claude Code 直连，<strong>零改项目</strong>。</p>
-<p>5）<strong>多模型兜底</strong>：OpenAI 挂了自动回退，保障研发不中断（通过 LiteLLM 路由/回退）。</p>
-<hr>
-<div class="sl-heading-wrapper level-h2"><h2 id="常见坑--规避清单">常见坑 &#x26; 规避清单</h2><a class="sl-anchor-link" href="#常见坑--规避清单"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “常见坑 &#x26; 规避清单”</span></a></div>
-<ul>
-<li><strong>模型名前缀</strong>：交给代理自动加前缀，避免 <code dir="auto">gpt-4o</code> 写成 <code dir="auto">gemini/gpt-4o</code> 这种乌龙。</li>
-<li><strong>权限与密钥</strong>：Gemini Key 要到 Google AI Studio 申请；环境变量要在<strong>运行时可见</strong>。</li>
-<li><strong>NPM 权限</strong>：安装 Claude Code 报权限错，按官方指引处理，不要强行 <code dir="auto">sudo</code>。</li>
-<li><strong>端口冲突</strong>：8082 被占用就改 <code dir="auto">--port</code>。</li>
-<li><strong>生产部署</strong>：建议加反向代理与鉴权（如 Nginx + Basic Auth），并启用 LiteLLM 的<strong>预算/限频/日志</strong>。</li>
-</ul>
-<hr>
-<div class="sl-heading-wrapper level-h2"><h2 id="一分钟验证">一分钟验证</h2><a class="sl-anchor-link" href="#一分钟验证"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “一分钟验证”</span></a></div>
-<ul>
-<li>
-<p><code dir="auto">uv run uvicorn ...</code> 成功监听 8082。</p>
-</li>
-<li>
-<p><code dir="auto">npm i -g @anthropic-ai/claude-code</code> 安装无误，<code dir="auto">claude doctor</code> 自检通过。</p>
-</li>
-<li>
-<p>运行：</p>
-<div class="expressive-code"><figure class="frame is-terminal not-content"><figcaption class="header"><span class="title"></span><span class="sr-only">Terminal window</span></figcaption><pre data-language="bash"><code><div class="ec-line"><div class="code"><span style="--0:#C5E478;--1:#3B61B0">ANTHROPIC_BASE_URL</span><span style="--0:#C792EA;--1:#8844AE">=</span><span style="--0:#ECC48D;--1:#3B61B0">http://localhost:8082</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#82AAFF;--1:#3B61B0">claude</span></div></div></code></pre><div class="copy"><button title="Copy to clipboard" data-copied="Copied!" data-code="ANTHROPIC_BASE_URL=http://localhost:8082 claude"><div></div></button></div></figure></div>
-<p>发起一次简单对话，观察代理日志是否命中目标模型。</p>
-</li>
-</ul>
-<hr>
-<div class="sl-heading-wrapper level-h2"><h2 id="结语">结语</h2><a class="sl-anchor-link" href="#结语"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “结语”</span></a></div>
-<p><strong>claude-code-proxy</strong> 让你把 Claude Code 的生产力，和 OpenAI/Gemini 的性价比与生态，<strong>拼在一起</strong>。
-今天就把代理跑起来，一键切模型，立刻提效。</p>
-<!-- 
-
-## 配图（可直接投喂 Midjourney/Stable Diffusion）
-
-> **风格**：插画式；**比例**：2:1；**文字**：不要中文。
-
-**封面图 Prompt**
-“An illustration of a ‘Claude Code Proxy’ switchboard routing to OpenAI and Gemini: left side a terminal with Claude Code, center a clean proxy box, right side logos as abstract shapes; cables show traffic flowing; modern minimal lines, soft gradients, wide 2:1, no text.”
-
-**关键章节配图 1（映射逻辑）**
-“Diagram-style illustration showing Haiku → small model, Sonnet → big model; arrows labeled implicitly; boxes for openai/ and gemini/ prefixes; clean pastel palette, 2:1, no text.”
-
-**关键章节配图 2（部署）**
-“Server rack with a lightweight proxy sitting between developer laptops and cloud model icons; tiny badges for logging, budgets, fallback; minimal flat illustration, 2:1, no text.”
-
----
-
----
-
-### 参考与延伸
-
-* 项目 README（安装、映射、示例）
-* Claude Code 官方安装与使用
-* Google AI Studio：Gemini API Key 指南
-* LiteLLM 文档（网关、路由/回退、预算/日志）
-* uv 文档（容器与安装指南）
-
----
-
-## 互动小问题
-
-* 你更看重**成本**还是**延迟/稳定**？
-* 你会把哪个模型映射到 **Sonnet**，为什么？
-* 最想把代理接到哪条**自动化流水线**里？
-
----
-
-## 多语言爆款标题（3 组）
-
-1）**中文**：Claude Code 一键换心：用 OpenAI/Gemini 跑全套工作流
-**English**: Claude Code, New Engine: Run Your Workflow on OpenAI/Gemini
-**繁體**：Claude Code 一鍵換心：用 OpenAI/Gemini 跑全套工作流
-**日本語**：Claude Code を載せ替え：OpenAI/Gemini でワークフロー稼働
-**Français**：Claude Code, moteur interchangeable : exécuter via OpenAI/Gemini
-**Español**: Claude Code con nuevo motor: ejecuta en OpenAI/Gemini
-**Português**: Claude Code com motor novo: rode no OpenAI/Gemini
-**slug**：`claude-code-proxy-openai-gemini-engine-swap`
-
-2）**中文**：这台代理太会了：Haiku/Sonnet 智能映射、流式无感知
-**English**: The Smart Proxy: Haiku/Sonnet Mapping, Seamless Streaming
-**繁體**：這台代理太會了：Haiku/Sonnet 智能映射、串流無感
-**日本語**：賢いプロキシ：Haiku/Sonnet マッピングとシームレス配信
-**Français**：Un proxy futé : mapping Haiku/Sonnet, streaming transparent
-**Español**: Un proxy listo: mapeo Haiku/Sonnet y streaming sin fricción
-**Português**: Um proxy esperto: mapeamento Haiku/Sonnet e streaming contínuo
-**slug**：`smart-proxy-haiku-sonnet-mapping`
-
-3）**中文**：不想改代码？把 Claude Code 流量收口到一台代理就够了
-**English**: No Code Changes: Funnel Claude Code Through One Proxy
-**繁體**：不想改程式？把 Claude Code 流量收口到一台代理就夠
-**日本語**：コード変更不要：Claude Code を一台のプロキシに集約
-**Français**：Sans changer de code : un seul proxy pour Claude Code
-**Español**: Sin tocar código: centraliza Claude Code en un proxy
-**Português**: Sem mexer no código: centralize Claude Code num proxy
-**slug**：`no-code-change-claude-code-single-proxy`
-
----
-
-## 朋友圈/评论区文案（3 条）
-
-1）“把 Claude Code 接到 OpenAI/Gemini 上了，成本和速度都更香了。代理只占一台机，映射随手切，爽！”
-2）“直连 Anthropic 还是映射 OpenAI/Gemini？这代理一键切，配合预算/日志，团队治理舒服多了。”
-3）“Haiku ↔ mini，Sonnet ↔ pro，这映射太贴心。抄作业已成功，欢迎来抬杠～”
-
----
-
-需要我**把这篇改成「可直接发布」的公众号 Markdown**，或补一份 **Nginx+Systemd 生产部署脚本**吗？我可以继续补充。你也可以告诉我是否要**扩写实战案例**（比如多环境回退、代理层审计落地）。
-
-[1]: https://github.com/1rgs/claude-code-proxy "GitHub - 1rgs/claude-code-proxy: Run Claude Code on OpenAI models"
-[2]: https://docs.litellm.ai/docs/?utm_source=chatgpt.com "LiteLLM - Getting Started"
-[3]: https://docs.astral.sh/uv/guides/integration/docker/?utm_source=chatgpt.com "Using uv in Docker - Astral Docs"
-[4]: https://ai.google.dev/gemini-api/docs/api-key?utm_source=chatgpt.com "Using Gemini API keys | Google AI for Developers"
-[5]: https://docs.anthropic.com/en/docs/claude-code/setup?utm_source=chatgpt.com "Set up Claude Code"
-[6]: https://github.com/BerriAI/litellm?utm_source=chatgpt.com "BerriAI/litellm: Python SDK, Proxy Server (LLM Gateway) to ..."
-[7]: https://docs.litellm.ai/docs/simple_proxy?utm_source=chatgpt.com "LiteLLM Proxy Server (LLM Gateway)" --> </div> <footer class="astro-dr56dw7m"> <div class="astro-sg3lsd66"><b class="astro-sg3lsd66">Tags:</b><ul class="astro-sg3lsd66"><li class="astro-sg3lsd66"><a href="/zh-cn/blog/tags/claude-code-proxy/" class="astro-sg3lsd66">claude-code-proxy</a></li><li class="astro-sg3lsd66"><a href="/zh-cn/blog/tags/claude-code/" class="astro-sg3lsd66">Claude Code</a></li><li class="astro-sg3lsd66"><a href="/zh-cn/blog/tags/openai/" class="astro-sg3lsd66">OpenAI</a></li><li class="astro-sg3lsd66"><a href="/zh-cn/blog/tags/gemini/" class="astro-sg3lsd66">Gemini</a></li></ul></div> </footer> </article> <article class="preview astro-dr56dw7m"> <header class="astro-dr56dw7m"> <h2 class="astro-dr56dw7m"> <a href="/zh-cn/blog/ai/code-gpt/2025-08-21-claude-code-in-vscode-visual-plans-pause-edit/" class="astro-dr56dw7m">CodeGPT 让 Claude Code 集成 VSCode, JetBrains 和 Android Studio</a> </h2> <div class="metadata not-content astro-2oxtfctb"> <div class="dates astro-2oxtfctb"> <time datetime="2025-08-21T00:00:00.000Z" class="astro-2oxtfctb"> 2025年8月21日 </time>  </div> <div class="authors astro-2oxtfctb"> <a href="https://www.vibesparking.com" class="author astro-kbhsbk7c"><img src="/assets/vibe-sparking-avatar-zh.jpg" alt="Vibe Sparking" loading="eager" decoding="async" fetchpriority="auto" width="40" height="40" class="astro-kbhsbk7c"><div class="text astro-kbhsbk7c"> <div class="name astro-kbhsbk7c">Vibe Sparking</div>  </div> </a>  </div>  </div>  </header> <div class="sl-markdown-content astro-dr56dw7m"> <blockquote>
+[16]: https://docs.anthropic.com/en/docs/claude-code/costs?utm_source=chatgpt.com "Manage costs effectively" --> </div> <footer class="astro-dr56dw7m"> <div class="astro-sg3lsd66"><b class="astro-sg3lsd66">Tags:</b><ul class="astro-sg3lsd66"><li class="astro-sg3lsd66"><a href="/zh-cn/blog/tags/claude-code/" class="astro-sg3lsd66">Claude Code</a></li></ul></div> </footer> </article> <article class="preview astro-dr56dw7m"> <header class="astro-dr56dw7m"> <h2 class="astro-dr56dw7m"> <a href="/zh-cn/blog/ai/code-gpt/2025-08-21-claude-code-in-vscode-visual-plans-pause-edit/" class="astro-dr56dw7m">CodeGPT 让 Claude Code 集成 VSCode, JetBrains 和 Android Studio</a> </h2> <div class="metadata not-content astro-2oxtfctb"> <div class="dates astro-2oxtfctb"> <time datetime="2025-08-21T00:00:00.000Z" class="astro-2oxtfctb"> 2025年8月21日 </time>  </div> <div class="authors astro-2oxtfctb"> <a href="https://www.vibesparking.com" class="author astro-kbhsbk7c"><img src="/assets/vibe-sparking-avatar-zh.jpg" alt="Vibe Sparking" loading="eager" decoding="async" fetchpriority="auto" width="40" height="40" class="astro-kbhsbk7c"><div class="text astro-kbhsbk7c"> <div class="name astro-kbhsbk7c">Vibe Sparking</div>  </div> </a>  </div>  </div>  </header> <div class="sl-markdown-content astro-dr56dw7m"> <blockquote>
 <p>装上 CodeGPT 扩展，你就能在 VSCode 和 JetBrains 里直接跑 Claude Code，<strong>看得见计划</strong>、<strong>随时暂停</strong>、<strong>现场改任务</strong>，边干边纠偏，效率翻倍。支持 JetBrains 全家桶同理。</p>
 </blockquote>
 <hr>
@@ -9663,7 +9464,206 @@ OpenAI 兼容端点<strong>需选“OpenAI 兼容”类型</strong>，并正确�
 [8]: https://plugins.jetbrains.com/plugin/24372-codegpt-chat--ai-agents?utm_source=chatgpt.com "CodeGPT: Chat & AI Agents Plugin for JetBrains IDEs"
 [9]: https://codegpt.co/?utm_source=chatgpt.com "CodeGPT: AI Agents for Software Development"
 [10]: https://docs.anthropic.com/en/docs/claude-code/overview?utm_source=chatgpt.com "Claude Code overview - Anthropic API"
-[11]: https://x.com/dani_avila7/status/1958262193197289928?utm_source=chatgpt.com "Daniel San" --> </div> <footer class="astro-dr56dw7m"> <div class="astro-sg3lsd66"><b class="astro-sg3lsd66">Tags:</b><ul class="astro-sg3lsd66"><li class="astro-sg3lsd66"><a href="/zh-cn/blog/tags/codegpt/" class="astro-sg3lsd66">CodeGPT</a></li><li class="astro-sg3lsd66"><a href="/zh-cn/blog/tags/claude-code/" class="astro-sg3lsd66">Claude Code</a></li><li class="astro-sg3lsd66"><a href="/zh-cn/blog/tags/vscode/" class="astro-sg3lsd66">VSCode</a></li><li class="astro-sg3lsd66"><a href="/zh-cn/blog/tags/jetbrains/" class="astro-sg3lsd66">JetBrains</a></li><li class="astro-sg3lsd66"><a href="/zh-cn/blog/tags/android-studio/" class="astro-sg3lsd66">Android Studio</a></li></ul></div> </footer> </article> <article class="preview astro-dr56dw7m"> <header class="astro-dr56dw7m"> <h2 class="astro-dr56dw7m"> <a href="/zh-cn/blog/ai/anthropic/ios/2025-08-21-claude-subscription-nigeria-guide/" class="astro-dr56dw7m">用苹果 iOS 订阅 Claude Code 的独享会员账号，享受尼日利亚区 6 折优惠价</a> </h2> <div class="metadata not-content astro-2oxtfctb"> <div class="dates astro-2oxtfctb"> <time datetime="2025-08-21T00:00:00.000Z" class="astro-2oxtfctb"> 2025年8月21日 </time>  </div> <div class="authors astro-2oxtfctb"> <a href="https://www.vibesparking.com" class="author astro-kbhsbk7c"><img src="/assets/vibe-sparking-avatar-zh.jpg" alt="Vibe Sparking" loading="eager" decoding="async" fetchpriority="auto" width="40" height="40" class="astro-kbhsbk7c"><div class="text astro-kbhsbk7c"> <div class="name astro-kbhsbk7c">Vibe Sparking</div>  </div> </a>  </div>  </div>  </header> <div class="sl-markdown-content astro-dr56dw7m"> <!-- # 用苹果 iOS 订阅 Claude Code 会员，享受尼日利亚区 6 折优惠价   -->
+[11]: https://x.com/dani_avila7/status/1958262193197289928?utm_source=chatgpt.com "Daniel San" --> </div> <footer class="astro-dr56dw7m"> <div class="astro-sg3lsd66"><b class="astro-sg3lsd66">Tags:</b><ul class="astro-sg3lsd66"><li class="astro-sg3lsd66"><a href="/zh-cn/blog/tags/codegpt/" class="astro-sg3lsd66">CodeGPT</a></li><li class="astro-sg3lsd66"><a href="/zh-cn/blog/tags/claude-code/" class="astro-sg3lsd66">Claude Code</a></li><li class="astro-sg3lsd66"><a href="/zh-cn/blog/tags/vscode/" class="astro-sg3lsd66">VSCode</a></li><li class="astro-sg3lsd66"><a href="/zh-cn/blog/tags/jetbrains/" class="astro-sg3lsd66">JetBrains</a></li><li class="astro-sg3lsd66"><a href="/zh-cn/blog/tags/android-studio/" class="astro-sg3lsd66">Android Studio</a></li></ul></div> </footer> </article> <article class="preview astro-dr56dw7m"> <header class="astro-dr56dw7m"> <h2 class="astro-dr56dw7m"> <a href="/zh-cn/blog/ai/claude-code-proxy/2025-08-22-claude-code-proxy-openai-gemini-engine-swap/" class="astro-dr56dw7m">claude-code-proxy 用 Claude Code 跑 OpenAI/Gemini 模型</a> </h2> <div class="metadata not-content astro-2oxtfctb"> <div class="dates astro-2oxtfctb"> <time datetime="2025-08-21T00:00:00.000Z" class="astro-2oxtfctb"> 2025年8月21日 </time>  </div> <div class="authors astro-2oxtfctb"> <a href="https://www.vibesparking.com" class="author astro-kbhsbk7c"><img src="/assets/vibe-sparking-avatar-zh.jpg" alt="Vibe Sparking" loading="eager" decoding="async" fetchpriority="auto" width="40" height="40" class="astro-kbhsbk7c"><div class="text astro-kbhsbk7c"> <div class="name astro-kbhsbk7c">Vibe Sparking</div>  </div> </a>  </div>  </div>  </header> <div class="sl-markdown-content astro-dr56dw7m"> <!-- # claude-code-proxy 用 Claude Code 跑 OpenAI/Gemini 模型 -->
+<blockquote>
+<p>把 Claude Code 的请求“翻译”给 OpenAI 或 Gemini（也可直连 Anthropic），<strong>零改代码</strong>、一条命令接入、支持流式与模型前缀自动匹配。</p>
+</blockquote>
+<hr>
+<div class="sl-heading-wrapper level-h2"><h2 id="引言">引言</h2><a class="sl-anchor-link" href="#引言"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “引言”</span></a></div>
+<p>不少同学想用 <strong>Claude Code 的工作流</strong>，但又想走 <strong>OpenAI/Gemini 的模型与价格体系</strong>。
+切换 SDK、改调用格式、做权限与日志，一堆坑。</p>
+<p>这就是 <strong>claude-code-proxy</strong> 的用武之地：
+它让 <strong>Anthropic 协议的客户端（如 Claude Code）</strong>，无缝转到 <strong>OpenAI/Gemini</strong>，或<strong>继续走 Anthropic</strong>，还把响应转回 Anthropic 格式，前端毫无感知。</p>
+<p><starlight-image-zoom-zoomable><img src="/assets/ai/claude-code-proxy/intro.png" alt=""><button aria-label="Zoom image" class="starlight-image-zoom-control"><svg aria-hidden="true" fill="currentColor" viewBox="0 0 24 24"><use href="#starlight-image-zoom-icon-zoom"></use></svg></button></starlight-image-zoom-zoomable></p>
+<hr>
+<div class="sl-heading-wrapper level-h2"><h2 id="亮点速览">亮点速览</h2><a class="sl-anchor-link" href="#亮点速览"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “亮点速览”</span></a></div>
+<ul>
+<li>
+<p><strong>三种后端一键切换</strong>：<code dir="auto">PREFERRED_PROVIDER</code> 设为 <code dir="auto">openai / google / anthropic</code>。
+<em>不想映射？选 anthropic，走<strong>直连模式</strong>。</em></p>
+</li>
+<li>
+<p><strong>模型前缀自动处理</strong>：自动给 OpenAI/Gemini 模型加 <code dir="auto">openai/</code>、<code dir="auto">gemini/</code> 前缀，避免手抖写错。</p>
+</li>
+<li>
+<p><strong>Haiku/Sonnet 智能映射</strong>：
+<code dir="auto">haiku → SMALL_MODEL</code>，<code dir="auto">sonnet → BIG_MODEL</code>；默认映射到 <code dir="auto">gpt-4.1(-mini)</code> 或 <code dir="auto">gemini-2.5-pro / 2.0-flash</code>。</p>
+</li>
+<li>
+<p><strong>全程 LiteLLM 撑腰</strong>：统一网关、路由/回退、用量追踪、预算限额、日志与插件扩展。</p>
+</li>
+<li>
+<p><strong>完全兼容流式/非流式</strong>：对 Claude 客户端透明。</p>
+</li>
+</ul>
+<hr>
+<div class="sl-heading-wrapper level-h2"><h2 id="安装与快速启动">安装与快速启动</h2><a class="sl-anchor-link" href="#安装与快速启动"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “安装与快速启动”</span></a></div>
+<blockquote>
+<p>目标：本机起一个 8082 端口的代理，Claude Code 直接指向它。</p>
+</blockquote>
+<p><strong>1）克隆与安装依赖（用 uv 超快）</strong></p>
+<div class="expressive-code"><link rel="stylesheet" href="/_astro/ec.v4551.css"><script type="module" src="/_astro/ec.8zarh.js"></script><figure class="frame is-terminal not-content"><figcaption class="header"><span class="title"></span><span class="sr-only">Terminal window</span></figcaption><pre data-language="bash"><code><div class="ec-line"><div class="code"><span style="--0:#82AAFF;--1:#3B61B0">git</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">clone</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">https://github.com/1rgs/claude-code-proxy.git</span></div></div><div class="ec-line"><div class="code"><span style="--0:#C5E478;--1:#3B61B0">cd</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">claude-code-proxy</span></div></div><div class="ec-line"><div class="code">
+</div></div><div class="ec-line"><div class="code"><span style="--0:#919F9F;--1:#5F636F"># 安装 uv（一次性）</span></div></div><div class="ec-line"><div class="code"><span style="--0:#82AAFF;--1:#3B61B0">curl</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#82AAFF;--1:#3B61B0">-LsSf</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">https://astral.sh/uv/install.sh</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#7FDBCA;--1:#096E72">|</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#82AAFF;--1:#3B61B0">sh</span></div></div></code></pre><div class="copy"><button title="Copy to clipboard" data-copied="Copied!" data-code="git clone https://github.com/1rgs/claude-code-proxy.gitcd claude-code-proxycurl -LsSf https://astral.sh/uv/install.sh | sh"><div></div></button></div></figure></div>
+<p><code dir="auto">uv</code> 负责基于 <code dir="auto">pyproject.toml</code> 解析/安装依赖，省心省时。</p>
+<p><strong>2）配置环境变量</strong></p>
+<div class="expressive-code"><figure class="frame is-terminal not-content"><figcaption class="header"><span class="title"></span><span class="sr-only">Terminal window</span></figcaption><pre data-language="bash"><code><div class="ec-line"><div class="code"><span style="--0:#82AAFF;--1:#3B61B0">cp</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">.env.example</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">.env</span></div></div><div class="ec-line"><div class="code"><span style="--0:#919F9F;--1:#5F636F"># 编辑 .env，填好你的 API KEY、首选后端与模型</span></div></div></code></pre><div class="copy"><button title="Copy to clipboard" data-copied="Copied!" data-code="cp .env.example .env"><div></div></button></div></figure></div>
+<p>关键项：</p>
+<ul>
+<li><code dir="auto">OPENAI_API_KEY</code>、<code dir="auto">GEMINI_API_KEY</code>、（可选）<code dir="auto">ANTHROPIC_API_KEY</code></li>
+<li><code dir="auto">PREFERRED_PROVIDER=openai|google|anthropic</code></li>
+<li><code dir="auto">BIG_MODEL</code> / <code dir="auto">SMALL_MODEL</code>（用于 Sonnet/Haiku 映射）
+详见 README 表述。</li>
+</ul>
+<p><strong>Gemini API Key</strong> 可在 Google AI Studio 一键创建与配置为环境变量。</p>
+<p><strong>3）启动服务</strong></p>
+<div class="expressive-code"><figure class="frame is-terminal not-content"><figcaption class="header"><span class="title"></span><span class="sr-only">Terminal window</span></figcaption><pre data-language="bash"><code><div class="ec-line"><div class="code"><span style="--0:#82AAFF;--1:#3B61B0">uv</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">run</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">uvicorn</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">server:app</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#82AAFF;--1:#3B61B0">--host</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#F78C6C;--1:#AA0982">0.0.0.0</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#82AAFF;--1:#3B61B0">--port</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#F78C6C;--1:#AA0982">8082</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#82AAFF;--1:#3B61B0">--reload</span></div></div></code></pre><div class="copy"><button title="Copy to clipboard" data-copied="Copied!" data-code="uv run uvicorn server:app --host 0.0.0.0 --port 8082 --reload"><div></div></button></div></figure></div>
+<p><code dir="auto">--reload</code> 适合开发期。</p>
+<hr>
+<div class="sl-heading-wrapper level-h2"><h2 id="与-claude-code-搭配">与 Claude Code 搭配</h2><a class="sl-anchor-link" href="#与-claude-code-搭配"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “与 Claude Code 搭配”</span></a></div>
+<p><strong>安装 Claude Code：</strong></p>
+<div class="expressive-code"><figure class="frame is-terminal not-content"><figcaption class="header"><span class="title"></span><span class="sr-only">Terminal window</span></figcaption><pre data-language="bash"><code><div class="ec-line"><div class="code"><span style="--0:#82AAFF;--1:#3B61B0">npm</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">install</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#82AAFF;--1:#3B61B0">-g</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">@anthropic-ai/claude-code</span></div></div></code></pre><div class="copy"><button title="Copy to clipboard" data-copied="Copied!" data-code="npm install -g @anthropic-ai/claude-code"><div></div></button></div></figure></div>
+<p>官方建议别用 <code dir="auto">sudo</code>，权限问题请看文档。</p>
+<p><strong>指向代理并启动：</strong></p>
+<div class="expressive-code"><figure class="frame is-terminal not-content"><figcaption class="header"><span class="title"></span><span class="sr-only">Terminal window</span></figcaption><pre data-language="bash"><code><div class="ec-line"><div class="code"><span style="--0:#C5E478;--1:#3B61B0">ANTHROPIC_BASE_URL</span><span style="--0:#C792EA;--1:#8844AE">=</span><span style="--0:#ECC48D;--1:#3B61B0">http://localhost:8082</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#82AAFF;--1:#3B61B0">claude</span></div></div></code></pre><div class="copy"><button title="Copy to clipboard" data-copied="Copied!" data-code="ANTHROPIC_BASE_URL=http://localhost:8082 claude"><div></div></button></div></figure></div>
+<p>此后，Claude Code 的 Haiku/Sonnet 会按你的 <code dir="auto">.env</code> 映射到 OpenAI/Gemini 或直连 Anthropic。</p>
+<hr>
+<div class="sl-heading-wrapper level-h2"><h2 id="三种常用映射模板可直接复制">三种常用映射模板（可直接复制）</h2><a class="sl-anchor-link" href="#三种常用映射模板可直接复制"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “三种常用映射模板（可直接复制）”</span></a></div>
+<p><strong>A. 默认走 OpenAI（省事稳妥）</strong></p>
+<div class="expressive-code"><figure class="frame not-content"><figcaption class="header"></figcaption><pre data-language="env"><code><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">PREFERRED_PROVIDER=openai</span></div></div><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">OPENAI_API_KEY=sk-...</span></div></div><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53"># 可选：BIG_MODEL/SMALL_MODEL</span></div></div><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">BIG_MODEL=gpt-4.1</span></div></div><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">SMALL_MODEL=gpt-4.1-mini</span></div></div></code></pre><div class="copy"><button title="Copy to clipboard" data-copied="Copied!" data-code="PREFERRED_PROVIDER=openaiOPENAI_API_KEY=sk-...# 可选：BIG_MODEL/SMALL_MODELBIG_MODEL=gpt-4.1SMALL_MODEL=gpt-4.1-mini"><div></div></button></div></figure></div>
+<p>Haiku/Sonnet → <code dir="auto">openai/SMALL_MODEL</code> / <code dir="auto">openai/BIG_MODEL</code>。</p>
+<p><strong>B. 更偏爱 Gemini（成本友好/响应快）</strong></p>
+<div class="expressive-code"><figure class="frame not-content"><figcaption class="header"></figcaption><pre data-language="env"><code><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">PREFERRED_PROVIDER=google</span></div></div><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">GEMINI_API_KEY=...</span></div></div><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">OPENAI_API_KEY=sk-...   # 作为回退</span></div></div><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">BIG_MODEL=gemini-2.5-pro-preview-03-25</span></div></div><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">SMALL_MODEL=gemini-2.0-flash</span></div></div></code></pre><div class="copy"><button title="Copy to clipboard" data-copied="Copied!" data-code="PREFERRED_PROVIDER=googleGEMINI_API_KEY=...OPENAI_API_KEY=sk-...   # 作为回退BIG_MODEL=gemini-2.5-pro-preview-03-25SMALL_MODEL=gemini-2.0-flash"><div></div></button></div></figure></div>
+<p>Haiku/Sonnet → 对应 <code dir="auto">gemini/</code> 前缀；不在白名单时回退 OpenAI。</p>
+<p><strong>C. 只做「Anthropic 透明代理」</strong></p>
+<div class="expressive-code"><figure class="frame not-content"><figcaption class="header"></figcaption><pre data-language="env"><code><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">PREFERRED_PROVIDER=anthropic</span></div></div><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">ANTHROPIC_API_KEY=sk-ant-...</span></div></div><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53"># 忽略 BIG/SMALL，直传 Anthropic</span></div></div></code></pre><div class="copy"><button title="Copy to clipboard" data-copied="Copied!" data-code="PREFERRED_PROVIDER=anthropicANTHROPIC_API_KEY=sk-ant-...# 忽略 BIG/SMALL，直传 Anthropic"><div></div></button></div></figure></div>
+<p>好处：保留日志/中间件/统一入口，同时<strong>不做映射</strong>。</p>
+<hr>
+<div class="sl-heading-wrapper level-h2"><h2 id="为什么它稳litellm-网关能力">为什么它稳：LiteLLM 网关能力</h2><a class="sl-anchor-link" href="#为什么它稳litellm-网关能力"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “为什么它稳：LiteLLM 网关能力”</span></a></div>
+<ul>
+<li>统一接口接 100+ 模型（OpenAI、Anthropic、Google 等）。</li>
+<li>支持 <strong>路由/回退、负载均衡、预算限额与用量追踪</strong>。</li>
+<li>可定制 <strong>日志、告警、插件</strong>，方便合规与审计。</li>
+</ul>
+<hr>
+<div class="sl-heading-wrapper level-h2"><h2 id="推荐用法场景">推荐用法场景</h2><a class="sl-anchor-link" href="#推荐用法场景"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “推荐用法场景”</span></a></div>
+<p>1）<strong>团队网关</strong>：把 Claude Code、脚本与后端服务的 LLM 流量，都收敛到这台代理，集中控费与审计。</p>
+<p>2）<strong>成本/性能 AB 切</strong>：一键在 OpenAI 与 Gemini 间切换，看谁成本更优、谁推理更准。</p>
+<p>3）<strong>直连 Anthropic + 增强治理</strong>：保留真实模型与响应，同时复用代理的日志与限额模块。</p>
+<p>4）<strong>本地开发</strong>：开发机开 8082，Claude Code 直连，<strong>零改项目</strong>。</p>
+<p>5）<strong>多模型兜底</strong>：OpenAI 挂了自动回退，保障研发不中断（通过 LiteLLM 路由/回退）。</p>
+<hr>
+<div class="sl-heading-wrapper level-h2"><h2 id="常见坑--规避清单">常见坑 &#x26; 规避清单</h2><a class="sl-anchor-link" href="#常见坑--规避清单"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “常见坑 &#x26; 规避清单”</span></a></div>
+<ul>
+<li><strong>模型名前缀</strong>：交给代理自动加前缀，避免 <code dir="auto">gpt-4o</code> 写成 <code dir="auto">gemini/gpt-4o</code> 这种乌龙。</li>
+<li><strong>权限与密钥</strong>：Gemini Key 要到 Google AI Studio 申请；环境变量要在<strong>运行时可见</strong>。</li>
+<li><strong>NPM 权限</strong>：安装 Claude Code 报权限错，按官方指引处理，不要强行 <code dir="auto">sudo</code>。</li>
+<li><strong>端口冲突</strong>：8082 被占用就改 <code dir="auto">--port</code>。</li>
+<li><strong>生产部署</strong>：建议加反向代理与鉴权（如 Nginx + Basic Auth），并启用 LiteLLM 的<strong>预算/限频/日志</strong>。</li>
+</ul>
+<hr>
+<div class="sl-heading-wrapper level-h2"><h2 id="一分钟验证">一分钟验证</h2><a class="sl-anchor-link" href="#一分钟验证"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “一分钟验证”</span></a></div>
+<ul>
+<li>
+<p><code dir="auto">uv run uvicorn ...</code> 成功监听 8082。</p>
+</li>
+<li>
+<p><code dir="auto">npm i -g @anthropic-ai/claude-code</code> 安装无误，<code dir="auto">claude doctor</code> 自检通过。</p>
+</li>
+<li>
+<p>运行：</p>
+<div class="expressive-code"><figure class="frame is-terminal not-content"><figcaption class="header"><span class="title"></span><span class="sr-only">Terminal window</span></figcaption><pre data-language="bash"><code><div class="ec-line"><div class="code"><span style="--0:#C5E478;--1:#3B61B0">ANTHROPIC_BASE_URL</span><span style="--0:#C792EA;--1:#8844AE">=</span><span style="--0:#ECC48D;--1:#3B61B0">http://localhost:8082</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#82AAFF;--1:#3B61B0">claude</span></div></div></code></pre><div class="copy"><button title="Copy to clipboard" data-copied="Copied!" data-code="ANTHROPIC_BASE_URL=http://localhost:8082 claude"><div></div></button></div></figure></div>
+<p>发起一次简单对话，观察代理日志是否命中目标模型。</p>
+</li>
+</ul>
+<hr>
+<div class="sl-heading-wrapper level-h2"><h2 id="结语">结语</h2><a class="sl-anchor-link" href="#结语"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “结语”</span></a></div>
+<p><strong>claude-code-proxy</strong> 让你把 Claude Code 的生产力，和 OpenAI/Gemini 的性价比与生态，<strong>拼在一起</strong>。
+今天就把代理跑起来，一键切模型，立刻提效。</p>
+<!-- 
+
+## 配图（可直接投喂 Midjourney/Stable Diffusion）
+
+> **风格**：插画式；**比例**：2:1；**文字**：不要中文。
+
+**封面图 Prompt**
+“An illustration of a ‘Claude Code Proxy’ switchboard routing to OpenAI and Gemini: left side a terminal with Claude Code, center a clean proxy box, right side logos as abstract shapes; cables show traffic flowing; modern minimal lines, soft gradients, wide 2:1, no text.”
+
+**关键章节配图 1（映射逻辑）**
+“Diagram-style illustration showing Haiku → small model, Sonnet → big model; arrows labeled implicitly; boxes for openai/ and gemini/ prefixes; clean pastel palette, 2:1, no text.”
+
+**关键章节配图 2（部署）**
+“Server rack with a lightweight proxy sitting between developer laptops and cloud model icons; tiny badges for logging, budgets, fallback; minimal flat illustration, 2:1, no text.”
+
+---
+
+---
+
+### 参考与延伸
+
+* 项目 README（安装、映射、示例）
+* Claude Code 官方安装与使用
+* Google AI Studio：Gemini API Key 指南
+* LiteLLM 文档（网关、路由/回退、预算/日志）
+* uv 文档（容器与安装指南）
+
+---
+
+## 互动小问题
+
+* 你更看重**成本**还是**延迟/稳定**？
+* 你会把哪个模型映射到 **Sonnet**，为什么？
+* 最想把代理接到哪条**自动化流水线**里？
+
+---
+
+## 多语言爆款标题（3 组）
+
+1）**中文**：Claude Code 一键换心：用 OpenAI/Gemini 跑全套工作流
+**English**: Claude Code, New Engine: Run Your Workflow on OpenAI/Gemini
+**繁體**：Claude Code 一鍵換心：用 OpenAI/Gemini 跑全套工作流
+**日本語**：Claude Code を載せ替え：OpenAI/Gemini でワークフロー稼働
+**Français**：Claude Code, moteur interchangeable : exécuter via OpenAI/Gemini
+**Español**: Claude Code con nuevo motor: ejecuta en OpenAI/Gemini
+**Português**: Claude Code com motor novo: rode no OpenAI/Gemini
+**slug**：`claude-code-proxy-openai-gemini-engine-swap`
+
+2）**中文**：这台代理太会了：Haiku/Sonnet 智能映射、流式无感知
+**English**: The Smart Proxy: Haiku/Sonnet Mapping, Seamless Streaming
+**繁體**：這台代理太會了：Haiku/Sonnet 智能映射、串流無感
+**日本語**：賢いプロキシ：Haiku/Sonnet マッピングとシームレス配信
+**Français**：Un proxy futé : mapping Haiku/Sonnet, streaming transparent
+**Español**: Un proxy listo: mapeo Haiku/Sonnet y streaming sin fricción
+**Português**: Um proxy esperto: mapeamento Haiku/Sonnet e streaming contínuo
+**slug**：`smart-proxy-haiku-sonnet-mapping`
+
+3）**中文**：不想改代码？把 Claude Code 流量收口到一台代理就够了
+**English**: No Code Changes: Funnel Claude Code Through One Proxy
+**繁體**：不想改程式？把 Claude Code 流量收口到一台代理就夠
+**日本語**：コード変更不要：Claude Code を一台のプロキシに集約
+**Français**：Sans changer de code : un seul proxy pour Claude Code
+**Español**: Sin tocar código: centraliza Claude Code en un proxy
+**Português**: Sem mexer no código: centralize Claude Code num proxy
+**slug**：`no-code-change-claude-code-single-proxy`
+
+---
+
+## 朋友圈/评论区文案（3 条）
+
+1）“把 Claude Code 接到 OpenAI/Gemini 上了，成本和速度都更香了。代理只占一台机，映射随手切，爽！”
+2）“直连 Anthropic 还是映射 OpenAI/Gemini？这代理一键切，配合预算/日志，团队治理舒服多了。”
+3）“Haiku ↔ mini，Sonnet ↔ pro，这映射太贴心。抄作业已成功，欢迎来抬杠～”
+
+---
+
+需要我**把这篇改成「可直接发布」的公众号 Markdown**，或补一份 **Nginx+Systemd 生产部署脚本**吗？我可以继续补充。你也可以告诉我是否要**扩写实战案例**（比如多环境回退、代理层审计落地）。
+
+[1]: https://github.com/1rgs/claude-code-proxy "GitHub - 1rgs/claude-code-proxy: Run Claude Code on OpenAI models"
+[2]: https://docs.litellm.ai/docs/?utm_source=chatgpt.com "LiteLLM - Getting Started"
+[3]: https://docs.astral.sh/uv/guides/integration/docker/?utm_source=chatgpt.com "Using uv in Docker - Astral Docs"
+[4]: https://ai.google.dev/gemini-api/docs/api-key?utm_source=chatgpt.com "Using Gemini API keys | Google AI for Developers"
+[5]: https://docs.anthropic.com/en/docs/claude-code/setup?utm_source=chatgpt.com "Set up Claude Code"
+[6]: https://github.com/BerriAI/litellm?utm_source=chatgpt.com "BerriAI/litellm: Python SDK, Proxy Server (LLM Gateway) to ..."
+[7]: https://docs.litellm.ai/docs/simple_proxy?utm_source=chatgpt.com "LiteLLM Proxy Server (LLM Gateway)" --> </div> <footer class="astro-dr56dw7m"> <div class="astro-sg3lsd66"><b class="astro-sg3lsd66">Tags:</b><ul class="astro-sg3lsd66"><li class="astro-sg3lsd66"><a href="/zh-cn/blog/tags/claude-code-proxy/" class="astro-sg3lsd66">claude-code-proxy</a></li><li class="astro-sg3lsd66"><a href="/zh-cn/blog/tags/claude-code/" class="astro-sg3lsd66">Claude Code</a></li><li class="astro-sg3lsd66"><a href="/zh-cn/blog/tags/openai/" class="astro-sg3lsd66">OpenAI</a></li><li class="astro-sg3lsd66"><a href="/zh-cn/blog/tags/gemini/" class="astro-sg3lsd66">Gemini</a></li></ul></div> </footer> </article> <article class="preview astro-dr56dw7m"> <header class="astro-dr56dw7m"> <h2 class="astro-dr56dw7m"> <a href="/zh-cn/blog/ai/anthropic/ios/2025-08-21-claude-subscription-nigeria-guide/" class="astro-dr56dw7m">用苹果 iOS 订阅 Claude Code 的独享会员账号，享受尼日利亚区 6 折优惠价</a> </h2> <div class="metadata not-content astro-2oxtfctb"> <div class="dates astro-2oxtfctb"> <time datetime="2025-08-21T00:00:00.000Z" class="astro-2oxtfctb"> 2025年8月21日 </time>  </div> <div class="authors astro-2oxtfctb"> <a href="https://www.vibesparking.com" class="author astro-kbhsbk7c"><img src="/assets/vibe-sparking-avatar-zh.jpg" alt="Vibe Sparking" loading="eager" decoding="async" fetchpriority="auto" width="40" height="40" class="astro-kbhsbk7c"><div class="text astro-kbhsbk7c"> <div class="name astro-kbhsbk7c">Vibe Sparking</div>  </div> </a>  </div>  </div>  </header> <div class="sl-markdown-content astro-dr56dw7m"> <!-- # 用苹果 iOS 订阅 Claude Code 会员，享受尼日利亚区 6 折优惠价   -->
 <p>最近，不少小伙伴问我：<strong>Claude Code 太好用了，但要么没海外信用卡订阅，要么觉得订阅太贵，有没有省力、省钱的办法？</strong><br>
 有的！今天就来分享一份<strong>超实用保姆级攻略</strong>，手把手教你用苹果 iOS 账号跨区（尼日利亚区），再用礼品卡充值，低价拿下 Claude Code 会员。</p>
 <p>整个流程不复杂，准备好手机和一点耐心，跟着做就行啦～</p>
@@ -11071,167 +11071,7 @@ Anthropic 官方建议<strong>生产环境固定到具体 Snapshot</strong>，�
 [6]: https://www.anthropic.com/claude-code?utm_source=chatgpt.com "Claude Code: Deep coding at terminal velocity \ Anthropic"
 [7]: https://github.com/linjiw/claude-code-but-zelda "GitHub - linjiw/claude-code-but-zelda: claude-code-but-zelda"
 [8]: https://justin.searls.co/posts/notify-your-iphone-or-watch-when-claude-code-finishes/?utm_source=chatgpt.com "Notify your iPhone or Watch when Claude Code finishes"
-[9]: https://daveschumaker.net/claude-sounds-better-notifications-for-claude-code/ "claude-sounds: better notifications for claude code - Dave Schumaker" --> </div> <footer class="astro-dr56dw7m"> <div class="astro-sg3lsd66"><b class="astro-sg3lsd66">Tags:</b><ul class="astro-sg3lsd66"><li class="astro-sg3lsd66"><a href="/zh-cn/blog/tags/zelda-claude-code/" class="astro-sg3lsd66">zelda-claude-code</a></li><li class="astro-sg3lsd66"><a href="/zh-cn/blog/tags/claude-code/" class="astro-sg3lsd66">Claude Code</a></li><li class="astro-sg3lsd66"><a href="/zh-cn/blog/tags/zelda/" class="astro-sg3lsd66">Zelda</a></li></ul></div> </footer> </article> <article class="preview astro-dr56dw7m"> <header class="astro-dr56dw7m"> <h2 class="astro-dr56dw7m"> <a href="/zh-cn/blog/ai/vibe-coding/station/2025-08-15-station-ship-sub-agents-to-prod/" class="astro-dr56dw7m">Station 统一管理 Claude / Cursor 的 Agent</a> </h2> <div class="metadata not-content astro-2oxtfctb"> <div class="dates astro-2oxtfctb"> <time datetime="2025-08-15T00:00:00.000Z" class="astro-2oxtfctb"> 2025年8月15日 </time>  </div> <div class="authors astro-2oxtfctb"> <a href="https://www.vibesparking.com" class="author astro-kbhsbk7c"><img src="/assets/vibe-sparking-avatar-zh.jpg" alt="Vibe Sparking" loading="eager" decoding="async" fetchpriority="auto" width="40" height="40" class="astro-kbhsbk7c"><div class="text astro-kbhsbk7c"> <div class="name astro-kbhsbk7c">Vibe Sparking</div>  </div> </a>  </div>  </div>  </header> <div class="sl-markdown-content astro-dr56dw7m"> <!-- # Station 统一管理 Claude / Cursor 的 Agent -->
-<blockquote>
-<p>想要一套<strong>自托管、可版本、可打包</strong>的 Agent 运行时，让 Claude Code / Cursor 里产出的“小 Agent”真正落地上线？Station 就是为这件事而生的。</p>
-</blockquote>
-<hr>
-<div class="sl-heading-wrapper level-h2"><h2 id="引言">引言</h2><a class="sl-anchor-link" href="#引言"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “引言”</span></a></div>
-<p>最近这款 <strong>Station</strong> 在圈里挺火。它不是又一个“应用级”Agent 平台，而是专门给 <strong>可部署子代理（Sub-Agents）</strong> 准备的<strong>轻量运行时与打包分发体系</strong>。
-一句话理解：把你在 Claude Code、Cursor 里做出来的“能干活的小 Agent”，打包、上生产、接权限、可审计，还能版本化管理。</p>
-<hr>
-<div class="sl-heading-wrapper level-h2"><h2 id="亮点一览为内部场景而生">亮点一览（为“内部场景”而生）</h2><a class="sl-anchor-link" href="#亮点一览为内部场景而生"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “亮点一览（为“内部场景”而生）”</span></a></div>
-<p>**为什么用 Station？**因为内部自动化不同于普通 App：要拿密钥、要进数据库、要打 CI/CD、要过审计。</p>
-<ul>
-<li><strong>面向内部任务</strong>：子代理可以连生产库、监控基础设施、走 CI/CD、做安全扫描与应急响应。</li>
-<li><strong>安全内建</strong>：自托管、机密加密（AES）、多环境隔离（dev/staging/prod）、全量审计轨迹。</li>
-<li><strong>轻量可融入</strong>：<strong>单一约 45MB 二进制</strong>、本地 <strong>SQLite</strong> 即开箱，生产可切 <strong>PostgreSQL</strong>，天然 <strong>GitOps</strong>（配置可版本）。</li>
-<li><strong>MCP 原生</strong>：直接做 <strong>MCP 运行时</strong>，复用你团队已经批准的 MCP 工具（文件系统、Slack、AWS、K8s、DB…）。</li>
-<li><strong>开发体验</strong>：提供 <strong>Genkit 驱动的浏览器 Playground</strong> 与 <code dir="auto">stn develop</code>，可视化调试工具调用与执行流。</li>
-</ul>
-<blockquote>
-<p>MCP 是什么？简单说就是**让 LLM 用“受控工具”**的统一协议，Claude Desktop 官方教程里有快速上手与 Claude 配置示例。</p>
-</blockquote>
-<hr>
-<div class="sl-heading-wrapper level-h2"><h2 id="station-怎么工作">Station 怎么工作？</h2><a class="sl-anchor-link" href="#station-怎么工作"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “Station 怎么工作？”</span></a></div>
-<p><strong>核心结构</strong>很简单：
-<strong>一个 <code dir="auto">.prompt</code> 文件 + 一组 MCP 工具 = 一个可部署的子代理</strong>。
-环境以 <strong>dev/staging/prod</strong> 组织，工具定义在 <code dir="auto">template.json</code>，环境变量写 <code dir="auto">variables.yml</code>，最终可<strong>打包 Bundle</strong>并分发安装。</p>
-<hr>
-<div class="sl-heading-wrapper level-h2"><h2 id="安装与接入5-分钟上手">安装与接入（5 分钟上手）</h2><a class="sl-anchor-link" href="#安装与接入5-分钟上手"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “安装与接入（5 分钟上手）”</span></a></div>
-<ol>
-<li><strong>安装 &#x26; 初始化</strong></li>
-</ol>
-<div class="expressive-code"><link rel="stylesheet" href="/_astro/ec.v4551.css"><script type="module" src="/_astro/ec.8zarh.js"></script><figure class="frame is-terminal not-content"><figcaption class="header"><span class="title"></span><span class="sr-only">Terminal window</span></figcaption><pre data-language="bash"><code><div class="ec-line"><div class="code"><span style="--0:#82AAFF;--1:#3B61B0">curl</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#82AAFF;--1:#3B61B0">-fsSL</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">https://raw.githubusercontent.com/cloudshipai/station/main/install.sh</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#7FDBCA;--1:#096E72">|</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#82AAFF;--1:#3B61B0">bash</span></div></div><div class="ec-line"><div class="code"><span style="--0:#82AAFF;--1:#3B61B0">stn</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">init</span><span style="--0:#D6DEEB;--1:#403F53">   </span><span style="--0:#919F9F;--1:#5F636F"># 初始化数据库与加密</span></div></div></code></pre><div class="copy"><button title="Copy to clipboard" data-copied="Copied!" data-code="curl -fsSL https://raw.githubusercontent.com/cloudshipai/station/main/install.sh | bashstn init   # 初始化数据库与加密"><div></div></button></div></figure></div>
-<ol start="2">
-<li><strong>接入 Claude Desktop / Claude Code（MCP）</strong>
-在 Claude 配置里加入：</li>
-</ol>
-<div class="expressive-code"><figure class="frame not-content"><figcaption class="header"></figcaption><pre data-language="json"><code><div class="ec-line"><div class="code"><span style="--0:#D6DEEB;--1:#403F53">{</span></div></div><div class="ec-line"><div class="code"><span class="indent">  </span><span style="--0:#7FDBCA;--1:#096E72">"mcpServers"</span><span style="--0:#D6DEEB;--1:#403F53">: {</span></div></div><div class="ec-line"><div class="code"><span class="indent">    </span><span style="--0:#7FDBCA;--1:#096E72">"station"</span><span style="--0:#D6DEEB;--1:#403F53">: {</span></div></div><div class="ec-line"><div class="code"><span class="indent">      </span><span style="--0:#7FDBCA;--1:#096E72">"command"</span><span style="--0:#D6DEEB;--1:#403F53">: </span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#C789D6;--1:#7C5686">stn</span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#D6DEEB;--1:#403F53">,</span></div></div><div class="ec-line"><div class="code"><span class="indent">      </span><span style="--0:#7FDBCA;--1:#096E72">"args"</span><span style="--0:#D6DEEB;--1:#403F53">: [</span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#C789D6;--1:#7C5686">stdio</span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#D6DEEB;--1:#403F53">]</span></div></div><div class="ec-line"><div class="code"><span class="indent"><span style="--0:#D6DEEB;--1:#403F53">    </span></span><span style="--0:#D6DEEB;--1:#403F53">}</span></div></div><div class="ec-line"><div class="code"><span class="indent"><span style="--0:#D6DEEB;--1:#403F53">  </span></span><span style="--0:#D6DEEB;--1:#403F53">}</span></div></div><div class="ec-line"><div class="code"><span style="--0:#D6DEEB;--1:#403F53">}</span></div></div></code></pre><div class="copy"><button title="Copy to clipboard" data-copied="Copied!" data-code="{  &#x22;mcpServers&#x22;: {    &#x22;station&#x22;: {      &#x22;command&#x22;: &#x22;stn&#x22;,      &#x22;args&#x22;: [&#x22;stdio&#x22;]    }  }}"><div></div></button></div></figure></div>
-<p>现在，跟 Claude 说“创建一个安全审计代理”，它会自动给这个代理配好需要的工具（如文件扫描 + Slack）。</p>
-<ol start="3">
-<li><strong>一键打包 &#x26; 安装 Bundle（把环境搬去生产）</strong></li>
-</ol>
-<div class="expressive-code"><figure class="frame is-terminal not-content"><figcaption class="header"><span class="title"></span><span class="sr-only">Terminal window</span></figcaption><pre data-language="bash"><code><div class="ec-line"><div class="code"><span style="--0:#82AAFF;--1:#3B61B0">stn</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">template</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">create</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">prod-bundle</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#82AAFF;--1:#3B61B0">--env</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">default</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#82AAFF;--1:#3B61B0">--name</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#ECC48D;--1:#984E4D">Prod Bundle</span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#82AAFF;--1:#3B61B0">--author</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#ECC48D;--1:#984E4D">Team</span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#82AAFF;--1:#3B61B0">--description</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#ECC48D;--1:#984E4D">Prod env</span><span style="--0:#D9F5DD;--1:#111111">"</span></div></div><div class="ec-line"><div class="code"><span style="--0:#82AAFF;--1:#3B61B0">stn</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">template</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">bundle</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">prod-bundle</span></div></div><div class="ec-line"><div class="code"><span style="--0:#82AAFF;--1:#3B61B0">stn</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">template</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">install</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">prod-bundle.tar.gz</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">production</span></div></div><div class="ec-line"><div class="code"><span style="--0:#82AAFF;--1:#3B61B0">stn</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">sync</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">production</span></div></div></code></pre><div class="copy"><button title="Copy to clipboard" data-copied="Copied!" data-code="stn template create prod-bundle --env default --name &#x22;Prod Bundle&#x22; --author &#x22;Team&#x22; --description &#x22;Prod env&#x22;stn template bundle prod-bundlestn template install prod-bundle.tar.gz productionstn sync production"><div></div></button></div></figure></div>
-<p>完成后，一个包含 <strong>多子代理 + 多 MCP 服务器</strong> 的可部署包就到位了。</p>
-<blockquote>
-<p>想要<strong>可视化调试</strong>？本地跑：</p>
-</blockquote>
-<div class="expressive-code"><figure class="frame is-terminal not-content"><figcaption class="header"><span class="title"></span><span class="sr-only">Terminal window</span></figcaption><pre data-language="bash"><code><div class="ec-line"><div class="code"><span style="--0:#82AAFF;--1:#3B61B0">genkit</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">start</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#82AAFF;--1:#3B61B0">--</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">stn</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">develop</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#82AAFF;--1:#3B61B0">--env</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">dev</span></div></div></code></pre><div class="copy"><button title="Copy to clipboard" data-copied="Copied!" data-code="genkit start -- stn develop --env dev"><div></div></button></div></figure></div>
-<p>浏览器里即可测试输入、看实时调用轨迹与日志。</p>
-<hr>
-<div class="sl-heading-wrapper level-h2"><h2 id="推荐使用场景配可复制示例">推荐使用场景（配可复制示例）</h2><a class="sl-anchor-link" href="#推荐使用场景配可复制示例"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “推荐使用场景（配可复制示例）”</span></a></div>
-<div class="sl-heading-wrapper level-h3"><h3 id="1-安全合规--基线扫描-slack-告警">1) 安全合规 / 基线扫描（+ Slack 告警）</h3><a class="sl-anchor-link" href="#1-安全合规--基线扫描-slack-告警"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “1) 安全合规 / 基线扫描（+ Slack 告警）”</span></a></div>
-<ul>
-<li>目标：定时扫描敏感目录，发现异常即时推 Slack。</li>
-<li>做法：创建 <code dir="auto">SecurityScanner.prompt</code>，挂接 <strong>filesystem MCP</strong> + <strong>Slack MCP</strong>；在 Station 里设定执行元数据与步数上限。</li>
-<li>触发语句（Claude 内）：
-“运行安全扫描，目录 <code dir="auto">/etc</code>，把高危项发到 <code dir="auto">#sec-alerts</code>。”</li>
-<li>价值：自动化+可追踪，方便审计与回溯。</li>
-</ul>
-<div class="sl-heading-wrapper level-h3"><h3 id="2-基础设施巡检--成本看板aws-成本">2) 基础设施巡检 / 成本看板（AWS 成本）</h3><a class="sl-anchor-link" href="#2-基础设施巡检--成本看板aws-成本"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “2) 基础设施巡检 / 成本看板（AWS 成本）”</span></a></div>
-<ul>
-<li>目标：拉取近 7 天成本，生成日报，发 Slack。</li>
-<li>做法：Agent 组合 <strong>AWS 成本工具</strong> + <strong>Slack</strong>，输出 Markdown 周期推送。</li>
-<li>价值：把“AI+云成本”变成日常节拍，随手可得。</li>
-</ul>
-<div class="sl-heading-wrapper level-h3"><h3 id="3-cicd-部署自动化容器k8s">3) CI/CD 部署自动化（容器/K8s）</h3><a class="sl-anchor-link" href="#3-cicd-部署自动化容器k8s"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “3) CI/CD 部署自动化（容器/K8s）”</span></a></div>
-<ul>
-<li>目标：小版本上线，自动 <code dir="auto">docker exec</code> + <code dir="auto">kubectl apply</code>，回写变更单链接。</li>
-<li>做法：Agent 组合 <strong>Docker MCP</strong> + <strong>Kubernetes MCP</strong>；上线时只需一句话。</li>
-<li>价值：开发说人话，Agent 做苦活。</li>
-</ul>
-<div class="sl-heading-wrapper level-h3"><h3 id="4-生产库只读巡检--慢-sql-抓取">4) 生产库只读巡检 / 慢 SQL 抓取</h3><a class="sl-anchor-link" href="#4-生产库只读巡检--慢-sql-抓取"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “4) 生产库只读巡检 / 慢 SQL 抓取”</span></a></div>
-<ul>
-<li>目标：连接生产库（只读凭证），抽样检查慢查询与索引命中。</li>
-<li>做法：Agent 组合 <strong>DB MCP</strong> 与自定义分析脚本。</li>
-<li>价值：尽量靠近“问题源头”，减少排障往返。</li>
-</ul>
-<div class="sl-heading-wrapper level-h3"><h3 id="5-代码评审机器人内部规则版">5) 代码评审机器人（内部规则版）</h3><a class="sl-anchor-link" href="#5-代码评审机器人内部规则版"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “5) 代码评审机器人（内部规则版）”</span></a></div>
-<ul>
-<li>目标：按团队规范（安全/性能/风格）出评审建议。</li>
-<li>做法：在 <code dir="auto">.prompt</code> 写清评分维度与建议格式，挂 <strong>filesystem MCP</strong> 读取代码，输出结构化建议。</li>
-<li>价值：把“规范”产品化，持续一致。</li>
-</ul>
-<hr>
-<div class="sl-heading-wrapper level-h2"><h2 id="与应用型-agent-平台的区别">与应用型 Agent 平台的区别</h2><a class="sl-anchor-link" href="#与应用型-agent-平台的区别"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “与应用型 Agent 平台的区别”</span></a></div>
-<ul>
-<li>Station 默认面向 <strong>“能进你内网、需要权限与审计”</strong> 的任务；</li>
-<li>强调 <strong>自托管与数据主权</strong>；</li>
-<li><strong>单文件 + SQLite</strong> 的轻量形态，让它像一件运维工具，而不是一套平台。</li>
-</ul>
-<blockquote>
-<p>你也可以把 Station 当作 <strong>MCP“中枢”</strong>：它既能消费别的 MCP 服务器，也能对外暴露“调 Agent、列 Agent、建 Agent”的 MCP 工具给其他客户端使用。</p>
-</blockquote>
-<hr>
-<div class="sl-heading-wrapper level-h2"><h2 id="上线建议团队落地清单">上线建议（团队落地清单）</h2><a class="sl-anchor-link" href="#上线建议团队落地清单"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “上线建议（团队落地清单）”</span></a></div>
-<ul>
-<li><strong>凭证托管</strong>：密钥与连接串放入 Station 的加密存储，按环境隔离。</li>
-<li><strong>最小权限</strong>：为每个子代理单独配置只需的 MCP 工具，少即是多。</li>
-<li><strong>GitOps</strong>：<code dir="auto">template.json</code>、<code dir="auto">.prompt</code>、<code dir="auto">variables.yml</code> 全进仓库，走 MR 审核再发版。</li>
-<li><strong>审计留痕</strong>：所有执行都有轨迹，出事可回溯。</li>
-</ul>
-<hr>
-<div class="sl-heading-wrapper level-h2"><h2 id="结语">结语</h2><a class="sl-anchor-link" href="#结语"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “结语”</span></a></div>
-<p>Station 把“会干活的小 Agent”从桌面聊到的点子，落成<strong>可部署、可审计、可复制</strong>的内部自动化。你不用再为平台折腾，只需把 <code dir="auto">.prompt</code> 写好，工具接上，<strong>一打包就能到生产</strong>。
-这就是我最喜欢它的地方：<strong>简单、可控、能扩散</strong>。</p>
-<p>—</p>
-<p>**你觉得最值得先做的一个子代理是什么？**欢迎在评论区聊聊，也可以把这篇转给团队同事，一起设计你们的“内部 Agent 工厂”。</p>
-<!-- ---
-
-## 3 个多语言爆款标题 & slug
-
-1. **把 Claude 的小 Agent 送进生产：Station 自托管子代理运行时指南**
-   EN: Ship Your Claude Sub-Agents to Prod: A Hands-On Guide to Station
-   繁體: 把 Claude 小代理送進生產：Station 自託管子代理運行時指南
-   日本語: Claude の小さなエージェントを本番へ：Station 実践ガイド
-   Fr: Mettez vos sous-agents Claude en prod : guide pratique Station
-   Es: Lleva tus sub-agentes de Claude a producción: guía práctica de Station
-   Pt: Leve os sub-agentes do Claude para produção: guia prático do Station
-   **slug**: station-ship-sub-agents-to-prod
-
-2. **轻量、可审计、能打包：Station 打造你的内部 AI 自动化工厂**
-   EN: Lightweight, Auditable, Packable: Build an Internal AI Automation Factory with Station
-   繁體: 輕量、可稽核、可打包：用 Station 搭建內部 AI 自動化工廠
-   日本語: 軽量・監査可能・パッケージ化：Station で社内AI自動化工場を作る
-   Fr: Léger, traçable, empaquetable : votre usine d’automatisation interne avec Station
-   Es: Ligero, auditable y empaquetable: tu fábrica de automatización interna con Station
-   Pt: Leve, auditável e empacotável: sua fábrica interna de automação com Station
-   **slug**: station-internal-ai-automation-factory
-
-3. **不是平台，是运行时：Station 用 MCP 驱动可部署子代理**
-   EN: Not a Platform—A Runtime: Station Powers Deployable Sub-Agents with MCP
-   繁體: 不是平台，而是運行時：Station 以 MCP 驅動可部署子代理
-   日本語: プラットフォームではなくランタイム：Station が MCP で配備可能なサブエージェントを実現
-   Fr: Pas une plateforme, un runtime : Station active des sous-agents déployables avec MCP
-   Es: No es plataforma, es runtime: Station impulsa sub-agentes desplegables con MCP
-   Pt: Não é plataforma, é runtime: Station viabiliza sub-agentes com MCP
-   **slug**: station-runtime-not-platform
-
----
-
-## 封面与章节配图（插画风｜2:1｜英文文案，不含中文）
-
-**封面图 Prompt**
-“An illustration of a compact control room labeled ‘Station’ orchestrating many small ‘sub-agents’ as tool icons (file, database, Kubernetes, Slack) on conveyor belts; clean minimal lines, modern pastel palette, wide 2:1 composition; no text on image.”
-
-**章节配图 Prompt（“内部自动化工厂”）**
-“An illustration of a developer handing a `.prompt` file to a packaging robot that seals a ‘bundle’ crate, with arrows to ‘dev’, ‘staging’, ‘prod’ bays; modern pastel, minimal style, 2:1 aspect ratio, text-free.”
-
----
-
-## 3 条朋友圈/评论文案
-
-1. “把小 Agent 真正送进生产了！Station 自托管 + 打包分发，搞定权限、审计和多环境，团队自动化马上起飞🚀”
-2. “不是又一个平台，是能落地的运行时。`.prompt` + MCP 工具 = 子代理，打包就能拎包上生产，太爽了😎”
-3. “安全扫描、CI/CD、成本报表…一句话触发，Agent 干完活还留审计痕迹。这才是 AI 在开发团队的正确打开方式✅”
-
----
-
-想不想我再写一篇 **“用 Station 从 0 到 1 做一套团队模板（含示例 .prompt 与 template.json）”** 的实操篇？需要的话我现在就开写。
-
-[1]: https://github.com/cloudshipai/station "GitHub - cloudshipai/station"
-[2]: https://modelcontextprotocol.info/docs/quickstart/quickstart/ "Quickstart – Model Context Protocol （MCP）" --> </div> <footer class="astro-dr56dw7m"> <div class="astro-sg3lsd66"><b class="astro-sg3lsd66">Tags:</b><ul class="astro-sg3lsd66"><li class="astro-sg3lsd66"><a href="/zh-cn/blog/tags/station/" class="astro-sg3lsd66">Station</a></li><li class="astro-sg3lsd66"><a href="/zh-cn/blog/tags/claude-code/" class="astro-sg3lsd66">Claude Code</a></li><li class="astro-sg3lsd66"><a href="/zh-cn/blog/tags/cursor/" class="astro-sg3lsd66">Cursor</a></li><li class="astro-sg3lsd66"><a href="/zh-cn/blog/tags/vibe-coding/" class="astro-sg3lsd66">Vibe Coding</a></li></ul></div> </footer> </article> <article class="preview astro-dr56dw7m"> <header class="astro-dr56dw7m"> <h2 class="astro-dr56dw7m"> <a href="/zh-cn/blog/ai/claude-code/tamagotchi/2025-08-15-tamagotchi-in-claude-code/" class="astro-dr56dw7m">Claude Code 里养电子宠物 Tamagotchi，它居然会劝我别熬夜…</a> </h2> <div class="metadata not-content astro-2oxtfctb"> <div class="dates astro-2oxtfctb"> <time datetime="2025-08-15T00:00:00.000Z" class="astro-2oxtfctb"> 2025年8月15日 </time>  </div> <div class="authors astro-2oxtfctb"> <a href="https://www.vibesparking.com" class="author astro-kbhsbk7c"><img src="/assets/vibe-sparking-avatar-zh.jpg" alt="Vibe Sparking" loading="eager" decoding="async" fetchpriority="auto" width="40" height="40" class="astro-kbhsbk7c"><div class="text astro-kbhsbk7c"> <div class="name astro-kbhsbk7c">Vibe Sparking</div>  </div> </a>  </div>  </div>  </header> <div class="sl-markdown-content astro-dr56dw7m"> <!-- # 把“电子宠物”塞进 Claude Code：这只 Tamagotchi，懂你的代码也懂你 -->
+[9]: https://daveschumaker.net/claude-sounds-better-notifications-for-claude-code/ "claude-sounds: better notifications for claude code - Dave Schumaker" --> </div> <footer class="astro-dr56dw7m"> <div class="astro-sg3lsd66"><b class="astro-sg3lsd66">Tags:</b><ul class="astro-sg3lsd66"><li class="astro-sg3lsd66"><a href="/zh-cn/blog/tags/zelda-claude-code/" class="astro-sg3lsd66">zelda-claude-code</a></li><li class="astro-sg3lsd66"><a href="/zh-cn/blog/tags/claude-code/" class="astro-sg3lsd66">Claude Code</a></li><li class="astro-sg3lsd66"><a href="/zh-cn/blog/tags/zelda/" class="astro-sg3lsd66">Zelda</a></li></ul></div> </footer> </article> <article class="preview astro-dr56dw7m"> <header class="astro-dr56dw7m"> <h2 class="astro-dr56dw7m"> <a href="/zh-cn/blog/ai/claude-code/tamagotchi/2025-08-15-tamagotchi-in-claude-code/" class="astro-dr56dw7m">Claude Code 里养电子宠物 Tamagotchi，它居然会劝我别熬夜…</a> </h2> <div class="metadata not-content astro-2oxtfctb"> <div class="dates astro-2oxtfctb"> <time datetime="2025-08-15T00:00:00.000Z" class="astro-2oxtfctb"> 2025年8月15日 </time>  </div> <div class="authors astro-2oxtfctb"> <a href="https://www.vibesparking.com" class="author astro-kbhsbk7c"><img src="/assets/vibe-sparking-avatar-zh.jpg" alt="Vibe Sparking" loading="eager" decoding="async" fetchpriority="auto" width="40" height="40" class="astro-kbhsbk7c"><div class="text astro-kbhsbk7c"> <div class="name astro-kbhsbk7c">Vibe Sparking</div>  </div> </a>  </div>  </div>  </header> <div class="sl-markdown-content astro-dr56dw7m"> <!-- # 把“电子宠物”塞进 Claude Code：这只 Tamagotchi，懂你的代码也懂你 -->
 <p><strong>一个有点离谱、却很上头的小玩具。</strong>
 它住在 Claude Code 的状态栏里，会呼吸，会撒娇，会吐槽你的 TODO。你写久了它会饿，你调试崩了它会安慰你，还会提醒你去喝水吃饭。</p>
 <hr>
@@ -11403,7 +11243,167 @@ Claude Code 官方介绍与安装文档（理解本体与环境要求）。
 [1]: https://github.com/Ido-Levi/claude-code-tamagotchi "GitHub - Ido-Levi/claude-code-tamagotchi: The ultimate productivity companion/destroyer! This Tamagotchi tries its best to help but mostly just wants snacks."
 [2]: https://docs.anthropic.com/en/docs/claude-code/overview?utm_source=chatgpt.com "Claude Code overview"
 [3]: https://www.anthropic.com/claude-code?utm_source=chatgpt.com "Claude Code: Deep coding at terminal velocity ..."
-[4]: https://github.com/Ido-Levi/claude-code-tamagotchi/commits/main/ "Commits · Ido-Levi/claude-code-tamagotchi · GitHub" --> </div> <footer class="astro-dr56dw7m"> <div class="astro-sg3lsd66"><b class="astro-sg3lsd66">Tags:</b><ul class="astro-sg3lsd66"><li class="astro-sg3lsd66"><a href="/zh-cn/blog/tags/claude-code/" class="astro-sg3lsd66">Claude Code</a></li><li class="astro-sg3lsd66"><a href="/zh-cn/blog/tags/tamagotchi/" class="astro-sg3lsd66">Tamagotchi</a></li></ul></div> </footer> </article> <article class="preview astro-dr56dw7m"> <header class="astro-dr56dw7m"> <h2 class="astro-dr56dw7m"> <a href="/zh-cn/blog/ai/claude-code/2025-08-14-claude-code-save-money-right-model-lean-context-permissions/" class="astro-dr56dw7m">Claude Code 真省钱用法</a> </h2> <div class="metadata not-content astro-2oxtfctb"> <div class="dates astro-2oxtfctb"> <time datetime="2025-08-14T00:00:00.000Z" class="astro-2oxtfctb"> 2025年8月14日 </time>  </div> <div class="authors astro-2oxtfctb"> <a href="https://www.vibesparking.com" class="author astro-kbhsbk7c"><img src="/assets/vibe-sparking-avatar-zh.jpg" alt="Vibe Sparking" loading="eager" decoding="async" fetchpriority="auto" width="40" height="40" class="astro-kbhsbk7c"><div class="text astro-kbhsbk7c"> <div class="name astro-kbhsbk7c">Vibe Sparking</div>  </div> </a>  </div>  </div>  </header> <div class="sl-markdown-content astro-dr56dw7m"> <!-- # Claude Code 真省钱用法 -->
+[4]: https://github.com/Ido-Levi/claude-code-tamagotchi/commits/main/ "Commits · Ido-Levi/claude-code-tamagotchi · GitHub" --> </div> <footer class="astro-dr56dw7m"> <div class="astro-sg3lsd66"><b class="astro-sg3lsd66">Tags:</b><ul class="astro-sg3lsd66"><li class="astro-sg3lsd66"><a href="/zh-cn/blog/tags/claude-code/" class="astro-sg3lsd66">Claude Code</a></li><li class="astro-sg3lsd66"><a href="/zh-cn/blog/tags/tamagotchi/" class="astro-sg3lsd66">Tamagotchi</a></li></ul></div> </footer> </article> <article class="preview astro-dr56dw7m"> <header class="astro-dr56dw7m"> <h2 class="astro-dr56dw7m"> <a href="/zh-cn/blog/ai/vibe-coding/station/2025-08-15-station-ship-sub-agents-to-prod/" class="astro-dr56dw7m">Station 统一管理 Claude / Cursor 的 Agent</a> </h2> <div class="metadata not-content astro-2oxtfctb"> <div class="dates astro-2oxtfctb"> <time datetime="2025-08-15T00:00:00.000Z" class="astro-2oxtfctb"> 2025年8月15日 </time>  </div> <div class="authors astro-2oxtfctb"> <a href="https://www.vibesparking.com" class="author astro-kbhsbk7c"><img src="/assets/vibe-sparking-avatar-zh.jpg" alt="Vibe Sparking" loading="eager" decoding="async" fetchpriority="auto" width="40" height="40" class="astro-kbhsbk7c"><div class="text astro-kbhsbk7c"> <div class="name astro-kbhsbk7c">Vibe Sparking</div>  </div> </a>  </div>  </div>  </header> <div class="sl-markdown-content astro-dr56dw7m"> <!-- # Station 统一管理 Claude / Cursor 的 Agent -->
+<blockquote>
+<p>想要一套<strong>自托管、可版本、可打包</strong>的 Agent 运行时，让 Claude Code / Cursor 里产出的“小 Agent”真正落地上线？Station 就是为这件事而生的。</p>
+</blockquote>
+<hr>
+<div class="sl-heading-wrapper level-h2"><h2 id="引言">引言</h2><a class="sl-anchor-link" href="#引言"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “引言”</span></a></div>
+<p>最近这款 <strong>Station</strong> 在圈里挺火。它不是又一个“应用级”Agent 平台，而是专门给 <strong>可部署子代理（Sub-Agents）</strong> 准备的<strong>轻量运行时与打包分发体系</strong>。
+一句话理解：把你在 Claude Code、Cursor 里做出来的“能干活的小 Agent”，打包、上生产、接权限、可审计，还能版本化管理。</p>
+<hr>
+<div class="sl-heading-wrapper level-h2"><h2 id="亮点一览为内部场景而生">亮点一览（为“内部场景”而生）</h2><a class="sl-anchor-link" href="#亮点一览为内部场景而生"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “亮点一览（为“内部场景”而生）”</span></a></div>
+<p>**为什么用 Station？**因为内部自动化不同于普通 App：要拿密钥、要进数据库、要打 CI/CD、要过审计。</p>
+<ul>
+<li><strong>面向内部任务</strong>：子代理可以连生产库、监控基础设施、走 CI/CD、做安全扫描与应急响应。</li>
+<li><strong>安全内建</strong>：自托管、机密加密（AES）、多环境隔离（dev/staging/prod）、全量审计轨迹。</li>
+<li><strong>轻量可融入</strong>：<strong>单一约 45MB 二进制</strong>、本地 <strong>SQLite</strong> 即开箱，生产可切 <strong>PostgreSQL</strong>，天然 <strong>GitOps</strong>（配置可版本）。</li>
+<li><strong>MCP 原生</strong>：直接做 <strong>MCP 运行时</strong>，复用你团队已经批准的 MCP 工具（文件系统、Slack、AWS、K8s、DB…）。</li>
+<li><strong>开发体验</strong>：提供 <strong>Genkit 驱动的浏览器 Playground</strong> 与 <code dir="auto">stn develop</code>，可视化调试工具调用与执行流。</li>
+</ul>
+<blockquote>
+<p>MCP 是什么？简单说就是**让 LLM 用“受控工具”**的统一协议，Claude Desktop 官方教程里有快速上手与 Claude 配置示例。</p>
+</blockquote>
+<hr>
+<div class="sl-heading-wrapper level-h2"><h2 id="station-怎么工作">Station 怎么工作？</h2><a class="sl-anchor-link" href="#station-怎么工作"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “Station 怎么工作？”</span></a></div>
+<p><strong>核心结构</strong>很简单：
+<strong>一个 <code dir="auto">.prompt</code> 文件 + 一组 MCP 工具 = 一个可部署的子代理</strong>。
+环境以 <strong>dev/staging/prod</strong> 组织，工具定义在 <code dir="auto">template.json</code>，环境变量写 <code dir="auto">variables.yml</code>，最终可<strong>打包 Bundle</strong>并分发安装。</p>
+<hr>
+<div class="sl-heading-wrapper level-h2"><h2 id="安装与接入5-分钟上手">安装与接入（5 分钟上手）</h2><a class="sl-anchor-link" href="#安装与接入5-分钟上手"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “安装与接入（5 分钟上手）”</span></a></div>
+<ol>
+<li><strong>安装 &#x26; 初始化</strong></li>
+</ol>
+<div class="expressive-code"><link rel="stylesheet" href="/_astro/ec.v4551.css"><script type="module" src="/_astro/ec.8zarh.js"></script><figure class="frame is-terminal not-content"><figcaption class="header"><span class="title"></span><span class="sr-only">Terminal window</span></figcaption><pre data-language="bash"><code><div class="ec-line"><div class="code"><span style="--0:#82AAFF;--1:#3B61B0">curl</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#82AAFF;--1:#3B61B0">-fsSL</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">https://raw.githubusercontent.com/cloudshipai/station/main/install.sh</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#7FDBCA;--1:#096E72">|</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#82AAFF;--1:#3B61B0">bash</span></div></div><div class="ec-line"><div class="code"><span style="--0:#82AAFF;--1:#3B61B0">stn</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">init</span><span style="--0:#D6DEEB;--1:#403F53">   </span><span style="--0:#919F9F;--1:#5F636F"># 初始化数据库与加密</span></div></div></code></pre><div class="copy"><button title="Copy to clipboard" data-copied="Copied!" data-code="curl -fsSL https://raw.githubusercontent.com/cloudshipai/station/main/install.sh | bashstn init   # 初始化数据库与加密"><div></div></button></div></figure></div>
+<ol start="2">
+<li><strong>接入 Claude Desktop / Claude Code（MCP）</strong>
+在 Claude 配置里加入：</li>
+</ol>
+<div class="expressive-code"><figure class="frame not-content"><figcaption class="header"></figcaption><pre data-language="json"><code><div class="ec-line"><div class="code"><span style="--0:#D6DEEB;--1:#403F53">{</span></div></div><div class="ec-line"><div class="code"><span class="indent">  </span><span style="--0:#7FDBCA;--1:#096E72">"mcpServers"</span><span style="--0:#D6DEEB;--1:#403F53">: {</span></div></div><div class="ec-line"><div class="code"><span class="indent">    </span><span style="--0:#7FDBCA;--1:#096E72">"station"</span><span style="--0:#D6DEEB;--1:#403F53">: {</span></div></div><div class="ec-line"><div class="code"><span class="indent">      </span><span style="--0:#7FDBCA;--1:#096E72">"command"</span><span style="--0:#D6DEEB;--1:#403F53">: </span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#C789D6;--1:#7C5686">stn</span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#D6DEEB;--1:#403F53">,</span></div></div><div class="ec-line"><div class="code"><span class="indent">      </span><span style="--0:#7FDBCA;--1:#096E72">"args"</span><span style="--0:#D6DEEB;--1:#403F53">: [</span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#C789D6;--1:#7C5686">stdio</span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#D6DEEB;--1:#403F53">]</span></div></div><div class="ec-line"><div class="code"><span class="indent"><span style="--0:#D6DEEB;--1:#403F53">    </span></span><span style="--0:#D6DEEB;--1:#403F53">}</span></div></div><div class="ec-line"><div class="code"><span class="indent"><span style="--0:#D6DEEB;--1:#403F53">  </span></span><span style="--0:#D6DEEB;--1:#403F53">}</span></div></div><div class="ec-line"><div class="code"><span style="--0:#D6DEEB;--1:#403F53">}</span></div></div></code></pre><div class="copy"><button title="Copy to clipboard" data-copied="Copied!" data-code="{  &#x22;mcpServers&#x22;: {    &#x22;station&#x22;: {      &#x22;command&#x22;: &#x22;stn&#x22;,      &#x22;args&#x22;: [&#x22;stdio&#x22;]    }  }}"><div></div></button></div></figure></div>
+<p>现在，跟 Claude 说“创建一个安全审计代理”，它会自动给这个代理配好需要的工具（如文件扫描 + Slack）。</p>
+<ol start="3">
+<li><strong>一键打包 &#x26; 安装 Bundle（把环境搬去生产）</strong></li>
+</ol>
+<div class="expressive-code"><figure class="frame is-terminal not-content"><figcaption class="header"><span class="title"></span><span class="sr-only">Terminal window</span></figcaption><pre data-language="bash"><code><div class="ec-line"><div class="code"><span style="--0:#82AAFF;--1:#3B61B0">stn</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">template</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">create</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">prod-bundle</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#82AAFF;--1:#3B61B0">--env</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">default</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#82AAFF;--1:#3B61B0">--name</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#ECC48D;--1:#984E4D">Prod Bundle</span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#82AAFF;--1:#3B61B0">--author</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#ECC48D;--1:#984E4D">Team</span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#82AAFF;--1:#3B61B0">--description</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#ECC48D;--1:#984E4D">Prod env</span><span style="--0:#D9F5DD;--1:#111111">"</span></div></div><div class="ec-line"><div class="code"><span style="--0:#82AAFF;--1:#3B61B0">stn</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">template</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">bundle</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">prod-bundle</span></div></div><div class="ec-line"><div class="code"><span style="--0:#82AAFF;--1:#3B61B0">stn</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">template</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">install</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">prod-bundle.tar.gz</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">production</span></div></div><div class="ec-line"><div class="code"><span style="--0:#82AAFF;--1:#3B61B0">stn</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">sync</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">production</span></div></div></code></pre><div class="copy"><button title="Copy to clipboard" data-copied="Copied!" data-code="stn template create prod-bundle --env default --name &#x22;Prod Bundle&#x22; --author &#x22;Team&#x22; --description &#x22;Prod env&#x22;stn template bundle prod-bundlestn template install prod-bundle.tar.gz productionstn sync production"><div></div></button></div></figure></div>
+<p>完成后，一个包含 <strong>多子代理 + 多 MCP 服务器</strong> 的可部署包就到位了。</p>
+<blockquote>
+<p>想要<strong>可视化调试</strong>？本地跑：</p>
+</blockquote>
+<div class="expressive-code"><figure class="frame is-terminal not-content"><figcaption class="header"><span class="title"></span><span class="sr-only">Terminal window</span></figcaption><pre data-language="bash"><code><div class="ec-line"><div class="code"><span style="--0:#82AAFF;--1:#3B61B0">genkit</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">start</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#82AAFF;--1:#3B61B0">--</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">stn</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">develop</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#82AAFF;--1:#3B61B0">--env</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">dev</span></div></div></code></pre><div class="copy"><button title="Copy to clipboard" data-copied="Copied!" data-code="genkit start -- stn develop --env dev"><div></div></button></div></figure></div>
+<p>浏览器里即可测试输入、看实时调用轨迹与日志。</p>
+<hr>
+<div class="sl-heading-wrapper level-h2"><h2 id="推荐使用场景配可复制示例">推荐使用场景（配可复制示例）</h2><a class="sl-anchor-link" href="#推荐使用场景配可复制示例"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “推荐使用场景（配可复制示例）”</span></a></div>
+<div class="sl-heading-wrapper level-h3"><h3 id="1-安全合规--基线扫描-slack-告警">1) 安全合规 / 基线扫描（+ Slack 告警）</h3><a class="sl-anchor-link" href="#1-安全合规--基线扫描-slack-告警"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “1) 安全合规 / 基线扫描（+ Slack 告警）”</span></a></div>
+<ul>
+<li>目标：定时扫描敏感目录，发现异常即时推 Slack。</li>
+<li>做法：创建 <code dir="auto">SecurityScanner.prompt</code>，挂接 <strong>filesystem MCP</strong> + <strong>Slack MCP</strong>；在 Station 里设定执行元数据与步数上限。</li>
+<li>触发语句（Claude 内）：
+“运行安全扫描，目录 <code dir="auto">/etc</code>，把高危项发到 <code dir="auto">#sec-alerts</code>。”</li>
+<li>价值：自动化+可追踪，方便审计与回溯。</li>
+</ul>
+<div class="sl-heading-wrapper level-h3"><h3 id="2-基础设施巡检--成本看板aws-成本">2) 基础设施巡检 / 成本看板（AWS 成本）</h3><a class="sl-anchor-link" href="#2-基础设施巡检--成本看板aws-成本"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “2) 基础设施巡检 / 成本看板（AWS 成本）”</span></a></div>
+<ul>
+<li>目标：拉取近 7 天成本，生成日报，发 Slack。</li>
+<li>做法：Agent 组合 <strong>AWS 成本工具</strong> + <strong>Slack</strong>，输出 Markdown 周期推送。</li>
+<li>价值：把“AI+云成本”变成日常节拍，随手可得。</li>
+</ul>
+<div class="sl-heading-wrapper level-h3"><h3 id="3-cicd-部署自动化容器k8s">3) CI/CD 部署自动化（容器/K8s）</h3><a class="sl-anchor-link" href="#3-cicd-部署自动化容器k8s"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “3) CI/CD 部署自动化（容器/K8s）”</span></a></div>
+<ul>
+<li>目标：小版本上线，自动 <code dir="auto">docker exec</code> + <code dir="auto">kubectl apply</code>，回写变更单链接。</li>
+<li>做法：Agent 组合 <strong>Docker MCP</strong> + <strong>Kubernetes MCP</strong>；上线时只需一句话。</li>
+<li>价值：开发说人话，Agent 做苦活。</li>
+</ul>
+<div class="sl-heading-wrapper level-h3"><h3 id="4-生产库只读巡检--慢-sql-抓取">4) 生产库只读巡检 / 慢 SQL 抓取</h3><a class="sl-anchor-link" href="#4-生产库只读巡检--慢-sql-抓取"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “4) 生产库只读巡检 / 慢 SQL 抓取”</span></a></div>
+<ul>
+<li>目标：连接生产库（只读凭证），抽样检查慢查询与索引命中。</li>
+<li>做法：Agent 组合 <strong>DB MCP</strong> 与自定义分析脚本。</li>
+<li>价值：尽量靠近“问题源头”，减少排障往返。</li>
+</ul>
+<div class="sl-heading-wrapper level-h3"><h3 id="5-代码评审机器人内部规则版">5) 代码评审机器人（内部规则版）</h3><a class="sl-anchor-link" href="#5-代码评审机器人内部规则版"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “5) 代码评审机器人（内部规则版）”</span></a></div>
+<ul>
+<li>目标：按团队规范（安全/性能/风格）出评审建议。</li>
+<li>做法：在 <code dir="auto">.prompt</code> 写清评分维度与建议格式，挂 <strong>filesystem MCP</strong> 读取代码，输出结构化建议。</li>
+<li>价值：把“规范”产品化，持续一致。</li>
+</ul>
+<hr>
+<div class="sl-heading-wrapper level-h2"><h2 id="与应用型-agent-平台的区别">与应用型 Agent 平台的区别</h2><a class="sl-anchor-link" href="#与应用型-agent-平台的区别"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “与应用型 Agent 平台的区别”</span></a></div>
+<ul>
+<li>Station 默认面向 <strong>“能进你内网、需要权限与审计”</strong> 的任务；</li>
+<li>强调 <strong>自托管与数据主权</strong>；</li>
+<li><strong>单文件 + SQLite</strong> 的轻量形态，让它像一件运维工具，而不是一套平台。</li>
+</ul>
+<blockquote>
+<p>你也可以把 Station 当作 <strong>MCP“中枢”</strong>：它既能消费别的 MCP 服务器，也能对外暴露“调 Agent、列 Agent、建 Agent”的 MCP 工具给其他客户端使用。</p>
+</blockquote>
+<hr>
+<div class="sl-heading-wrapper level-h2"><h2 id="上线建议团队落地清单">上线建议（团队落地清单）</h2><a class="sl-anchor-link" href="#上线建议团队落地清单"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “上线建议（团队落地清单）”</span></a></div>
+<ul>
+<li><strong>凭证托管</strong>：密钥与连接串放入 Station 的加密存储，按环境隔离。</li>
+<li><strong>最小权限</strong>：为每个子代理单独配置只需的 MCP 工具，少即是多。</li>
+<li><strong>GitOps</strong>：<code dir="auto">template.json</code>、<code dir="auto">.prompt</code>、<code dir="auto">variables.yml</code> 全进仓库，走 MR 审核再发版。</li>
+<li><strong>审计留痕</strong>：所有执行都有轨迹，出事可回溯。</li>
+</ul>
+<hr>
+<div class="sl-heading-wrapper level-h2"><h2 id="结语">结语</h2><a class="sl-anchor-link" href="#结语"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “结语”</span></a></div>
+<p>Station 把“会干活的小 Agent”从桌面聊到的点子，落成<strong>可部署、可审计、可复制</strong>的内部自动化。你不用再为平台折腾，只需把 <code dir="auto">.prompt</code> 写好，工具接上，<strong>一打包就能到生产</strong>。
+这就是我最喜欢它的地方：<strong>简单、可控、能扩散</strong>。</p>
+<p>—</p>
+<p>**你觉得最值得先做的一个子代理是什么？**欢迎在评论区聊聊，也可以把这篇转给团队同事，一起设计你们的“内部 Agent 工厂”。</p>
+<!-- ---
+
+## 3 个多语言爆款标题 & slug
+
+1. **把 Claude 的小 Agent 送进生产：Station 自托管子代理运行时指南**
+   EN: Ship Your Claude Sub-Agents to Prod: A Hands-On Guide to Station
+   繁體: 把 Claude 小代理送進生產：Station 自託管子代理運行時指南
+   日本語: Claude の小さなエージェントを本番へ：Station 実践ガイド
+   Fr: Mettez vos sous-agents Claude en prod : guide pratique Station
+   Es: Lleva tus sub-agentes de Claude a producción: guía práctica de Station
+   Pt: Leve os sub-agentes do Claude para produção: guia prático do Station
+   **slug**: station-ship-sub-agents-to-prod
+
+2. **轻量、可审计、能打包：Station 打造你的内部 AI 自动化工厂**
+   EN: Lightweight, Auditable, Packable: Build an Internal AI Automation Factory with Station
+   繁體: 輕量、可稽核、可打包：用 Station 搭建內部 AI 自動化工廠
+   日本語: 軽量・監査可能・パッケージ化：Station で社内AI自動化工場を作る
+   Fr: Léger, traçable, empaquetable : votre usine d’automatisation interne avec Station
+   Es: Ligero, auditable y empaquetable: tu fábrica de automatización interna con Station
+   Pt: Leve, auditável e empacotável: sua fábrica interna de automação com Station
+   **slug**: station-internal-ai-automation-factory
+
+3. **不是平台，是运行时：Station 用 MCP 驱动可部署子代理**
+   EN: Not a Platform—A Runtime: Station Powers Deployable Sub-Agents with MCP
+   繁體: 不是平台，而是運行時：Station 以 MCP 驅動可部署子代理
+   日本語: プラットフォームではなくランタイム：Station が MCP で配備可能なサブエージェントを実現
+   Fr: Pas une plateforme, un runtime : Station active des sous-agents déployables avec MCP
+   Es: No es plataforma, es runtime: Station impulsa sub-agentes desplegables con MCP
+   Pt: Não é plataforma, é runtime: Station viabiliza sub-agentes com MCP
+   **slug**: station-runtime-not-platform
+
+---
+
+## 封面与章节配图（插画风｜2:1｜英文文案，不含中文）
+
+**封面图 Prompt**
+“An illustration of a compact control room labeled ‘Station’ orchestrating many small ‘sub-agents’ as tool icons (file, database, Kubernetes, Slack) on conveyor belts; clean minimal lines, modern pastel palette, wide 2:1 composition; no text on image.”
+
+**章节配图 Prompt（“内部自动化工厂”）**
+“An illustration of a developer handing a `.prompt` file to a packaging robot that seals a ‘bundle’ crate, with arrows to ‘dev’, ‘staging’, ‘prod’ bays; modern pastel, minimal style, 2:1 aspect ratio, text-free.”
+
+---
+
+## 3 条朋友圈/评论文案
+
+1. “把小 Agent 真正送进生产了！Station 自托管 + 打包分发，搞定权限、审计和多环境，团队自动化马上起飞🚀”
+2. “不是又一个平台，是能落地的运行时。`.prompt` + MCP 工具 = 子代理，打包就能拎包上生产，太爽了😎”
+3. “安全扫描、CI/CD、成本报表…一句话触发，Agent 干完活还留审计痕迹。这才是 AI 在开发团队的正确打开方式✅”
+
+---
+
+想不想我再写一篇 **“用 Station 从 0 到 1 做一套团队模板（含示例 .prompt 与 template.json）”** 的实操篇？需要的话我现在就开写。
+
+[1]: https://github.com/cloudshipai/station "GitHub - cloudshipai/station"
+[2]: https://modelcontextprotocol.info/docs/quickstart/quickstart/ "Quickstart – Model Context Protocol （MCP）" --> </div> <footer class="astro-dr56dw7m"> <div class="astro-sg3lsd66"><b class="astro-sg3lsd66">Tags:</b><ul class="astro-sg3lsd66"><li class="astro-sg3lsd66"><a href="/zh-cn/blog/tags/station/" class="astro-sg3lsd66">Station</a></li><li class="astro-sg3lsd66"><a href="/zh-cn/blog/tags/claude-code/" class="astro-sg3lsd66">Claude Code</a></li><li class="astro-sg3lsd66"><a href="/zh-cn/blog/tags/cursor/" class="astro-sg3lsd66">Cursor</a></li><li class="astro-sg3lsd66"><a href="/zh-cn/blog/tags/vibe-coding/" class="astro-sg3lsd66">Vibe Coding</a></li></ul></div> </footer> </article> <article class="preview astro-dr56dw7m"> <header class="astro-dr56dw7m"> <h2 class="astro-dr56dw7m"> <a href="/zh-cn/blog/ai/claude-code/2025-08-14-claude-code-save-money-right-model-lean-context-permissions/" class="astro-dr56dw7m">Claude Code 真省钱用法</a> </h2> <div class="metadata not-content astro-2oxtfctb"> <div class="dates astro-2oxtfctb"> <time datetime="2025-08-14T00:00:00.000Z" class="astro-2oxtfctb"> 2025年8月14日 </time>  </div> <div class="authors astro-2oxtfctb"> <a href="https://www.vibesparking.com" class="author astro-kbhsbk7c"><img src="/assets/vibe-sparking-avatar-zh.jpg" alt="Vibe Sparking" loading="eager" decoding="async" fetchpriority="auto" width="40" height="40" class="astro-kbhsbk7c"><div class="text astro-kbhsbk7c"> <div class="name astro-kbhsbk7c">Vibe Sparking</div>  </div> </a>  </div>  </div>  </header> <div class="sl-markdown-content astro-dr56dw7m"> <!-- # Claude Code 真省钱用法 -->
 <blockquote>
 <p>把对话瘦身、模型用对、权限管严，Claude Code 的账单能直接腰斩。</p>
 </blockquote>

@@ -1579,113 +1579,7 @@ slug-uri: claude-relay-service-guide -->
 <p><starlight-image-zoom-zoomable><img src="/assets/ai/anthropic/claude-code/claude-relay-service/team.png" alt=""><button aria-label="Zoom image" class="starlight-image-zoom-control"><svg aria-hidden="true" fill="currentColor" viewBox="0 0 24 24"><use href="#starlight-image-zoom-icon-zoom"></use></svg></button></starlight-image-zoom-zoomable></p>
 <div class="sl-heading-wrapper level-h2"><h2 id="conclusion">Conclusion</h2><a class="sl-anchor-link" href="#conclusion"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “Conclusion”</span></a></div>
 <p>With Claude Relay Service, we no longer need to rack our brains over team Claude account sharing. Whether you’re unable to directly access Claude due to regional restrictions or want to <strong>split the cost of expensive Claude Max subscriptions</strong> with teammates, this open-source project provides a <strong>flexible, reliable, secure, and private</strong> solution. We’ve detailed its core features: multi-account pools, OpenAI interface compatibility, custom API keys, OAuth account addition, and more, showing you clearly how it meets team collaboration needs. At the same time, we’ve demonstrated Docker Compose deployment step-by-step, from configuring environment variables to starting services – we believe even readers who aren’t DevOps experts can follow along and quickly set up their own Claude relay station.</p>
-<p>It’s easy to imagine that with Claude Relay Service, late-night coding sessions no longer fear Claude account quota depletion, and colleagues don’t need to each open separate accounts and pay duplicate fees. Everyone shares one “Claude resource pool,” taking what they need while keeping everything <strong>transparent and clear</strong> – truly achieving cost savings and peace of mind!</p> </div> <footer class="astro-dr56dw7m"> <div class="astro-sg3lsd66"><b class="astro-sg3lsd66">Tags:</b><ul class="astro-sg3lsd66"><li class="astro-sg3lsd66"><a href="/en/blog/tags/claude-code/" class="astro-sg3lsd66">Claude Code</a></li><li class="astro-sg3lsd66"><a href="/en/blog/tags/anthropic/" class="astro-sg3lsd66">Anthropic</a></li><li class="astro-sg3lsd66"><a href="/en/blog/tags/claude-relay-service/" class="astro-sg3lsd66">Claude Relay Service</a></li></ul></div> </footer> </article> <article class="preview astro-dr56dw7m"> <header class="astro-dr56dw7m"> <h2 class="astro-dr56dw7m"> <a href="/en/blog/ai/vibe-coding/2025-07-29-code-privacy-battle/" class="astro-dr56dw7m">Will Trae, Cursor, or Copilot Use My Code to Train Their Models?</a> </h2> <div class="metadata not-content astro-2oxtfctb"> <div class="dates astro-2oxtfctb"> <time datetime="2025-07-29T00:00:00.000Z" class="astro-2oxtfctb"> Jul 29, 2025 </time>  </div> <div class="authors astro-2oxtfctb"> <a href="https://www.vibesparking.com" class="author astro-kbhsbk7c"><img src="/assets/vibe-sparking-avatar-zh.jpg" alt="Vibe Sparking" loading="eager" decoding="async" fetchpriority="auto" width="40" height="40" class="astro-kbhsbk7c"><div class="text astro-kbhsbk7c"> <div class="name astro-kbhsbk7c">Vibe Sparking</div>  </div> </a>  </div>  </div>  </header> <div class="sl-markdown-content astro-dr56dw7m"> <!-- **What Are Trae, Cursor, and Copilot Secretly Doing? — Your Code Privacy Ultimate Comparison** -->
-<!-- **Trae vs Cursor vs Copilot: Who Respects Your Code?** -->
-<!-- slug: code-privacy-battle -->
-<hr>
-<!-- ### Introduction -->
-<p>Yesterday, a post on V2EX went viral: the author discovered that <strong>Trae IDE</strong> continuously uploads code data, and even complaints on Discord were “silenced.” This revelation stirred up a hornet’s nest—developers have only one burning question:
-<strong>Is my code actually safe?</strong></p>
-<p><starlight-image-zoom-zoomable><img src="/assets/ai/vibe-coding/trae-privacy-police-v2ex.png" alt=""><button aria-label="Zoom image" class="starlight-image-zoom-control"><svg aria-hidden="true" fill="currentColor" viewBox="0 0 24 24"><use href="#starlight-image-zoom-icon-zoom"></use></svg></button></starlight-image-zoom-zoomable></p>
-<hr>
-<div class="sl-heading-wrapper level-h2"><h2 id="1️⃣-official-statements-at-a-glance">1️⃣ Official Statements at a Glance</h2><a class="sl-anchor-link" href="#1️⃣-official-statements-at-a-glance"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “1️⃣ Official Statements at a Glance”</span></a></div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<table><thead><tr><th>Tool</th><th>Uploads to Cloud</th><th>Long-term Storage</th><th>Used for Model Training</th><th>Can Be Disabled</th></tr></thead><tbody><tr><td><strong>Trae (Domestic/Global)</strong></td><td>Yes, temporary uploads for indexing/chat</td><td>Plain code deleted after processing, only embeddings retained</td><td><strong>No</strong>, official statement: “won’t train models except for computing embeddings”</td><td><strong>No privacy toggle</strong></td></tr><tr><td><strong>Cursor</strong></td><td>Yes, for completion &#x26; indexing</td><td>May retain by default; zero retention in <strong>Privacy Mode</strong></td><td>Used for model improvement by default; <strong>no training</strong> in privacy mode</td><td><strong>Has privacy mode</strong></td></tr><tr><td><strong>GitHub Copilot</strong></td><td>Yes, processed via Azure</td><td>No plain text saved, only for immediate inference</td><td><strong>No training</strong> by default; personal users can opt-in</td><td>Manual training toggle available</td></tr></tbody></table>
-<blockquote>
-<p><strong>Bottom Line:</strong> All three require “uploads,” but Copilot and Trae officially claim they <strong>don’t</strong> train on code; Cursor requires manual privacy mode activation for “zero training.”</p>
-</blockquote>
-<hr>
-<div class="sl-heading-wrapper level-h2"><h2 id="2️⃣-detailed-breakdown">2️⃣ Detailed Breakdown</h2><a class="sl-anchor-link" href="#2️⃣-detailed-breakdown"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “2️⃣ Detailed Breakdown”</span></a></div>
-<div class="sl-heading-wrapper level-h3"><h3 id="-trae-official-promise-of-embeddings-only">🟢 Trae: Official Promise of “Embeddings Only”</h3><a class="sl-anchor-link" href="#-trae-official-promise-of-embeddings-only"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “🟢 Trae: Official Promise of “Embeddings Only””</span></a></div>
-<ul>
-<li>Privacy policy clearly states: <strong>“We do not use Your Content as training data for model training.”</strong></li>
-<li>Still sends code snippets to the cloud for vector indexing, deletes plain text, only retains embeddings.</li>
-<li><em>Pain Point</em>: <strong>No</strong> “privacy mode” like Cursor—users can’t disable uploads.</li>
-</ul>
-<div class="sl-heading-wrapper level-h3"><h3 id="-cursor-only-truly-private-with-privacy-mode">🔵 Cursor: Only Truly Private with “Privacy Mode”</h3><a class="sl-anchor-link" href="#-cursor-only-truly-private-with-privacy-mode"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “🔵 Cursor: Only Truly Private with “Privacy Mode””</span></a></div>
-<ul>
-<li>Collects telemetry by default for model improvement.</li>
-<li>Enable <strong>Privacy Mode</strong> → No storage, no training, but requests still processed by third-party LLMs (OpenAI/Anthropic).</li>
-<li>Privacy mode requires manual activation—new users shouldn’t forget this.</li>
-</ul>
-<div class="sl-heading-wrapper level-h3"><h3 id="-github-copilot-enterprise-friendly-personal-optional">🟣 GitHub Copilot: Enterprise-Friendly, Personal Optional</h3><a class="sl-anchor-link" href="#-github-copilot-enterprise-friendly-personal-optional"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “🟣 GitHub Copilot: Enterprise-Friendly, Personal Optional”</span></a></div>
-<ul>
-<li>Copilot Business/Enterprise: Code <strong>never</strong> used for model training.</li>
-<li>Personal subscriptions: Also no training by default, with optional “Improve Copilot” toggle in settings.</li>
-<li>Still uploads to Azure; completely offline solutions not yet available.</li>
-</ul>
-<hr>
-<div class="sl-heading-wrapper level-h2"><h2 id="3️⃣-practical-advice-for-developers">3️⃣ Practical Advice for Developers</h2><a class="sl-anchor-link" href="#3️⃣-practical-advice-for-developers"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “3️⃣ Practical Advice for Developers”</span></a></div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<table><thead><tr><th>Scenario</th><th>Recommendation</th></tr></thead><tbody><tr><td><strong>Highly Confidential (Finance, Core Algorithms)</strong></td><td><strong>Go offline</strong>. Use local LLMs or private cloud; disable any auto-completion.</td></tr><tr><td><strong>Pure Open Source/Public Projects</strong></td><td>Choose Copilot or Cursor with minimal impact. Trae acceptable but requires accepting uploads.</td></tr><tr><td><strong>Middle Ground (Partial Closed Source + Need Efficiency)</strong></td><td>Enable Cursor privacy mode or use Copilot; Trae currently lacks disable option—evaluate carefully.</td></tr></tbody></table>
-<hr>
-<div class="sl-heading-wrapper level-h2"><h2 id="4️⃣-friendly-reminders-for-tool-providers">4️⃣ Friendly Reminders for Tool Providers</h2><a class="sl-anchor-link" href="#4️⃣-friendly-reminders-for-tool-providers"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “4️⃣ Friendly Reminders for Tool Providers”</span></a></div>
-<ul>
-<li><strong>Make privacy mode the default</strong>, rather than making users dig through settings.</li>
-<li><strong>Publish transparency reports</strong>: What’s uploaded? How long is it stored? Is it actually deleted?</li>
-<li><strong>Granular controls</strong>: Indexing OK, training NO—let users decide.</li>
-</ul>
-<hr>
-<div class="sl-heading-wrapper level-h3"><h3 id="conclusion">Conclusion</h3><a class="sl-anchor-link" href="#conclusion"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “Conclusion”</span></a></div>
-<p>No matter how sweet AI-assisted coding gets, remember:</p>
-<blockquote>
-<p><strong>Code is productivity, but also a risk vector.</strong></p>
-</blockquote>
-<p>Periodically review your tools’ privacy policies—don’t let silent updates quietly shift your security boundaries.</p>
-<hr>
-<p>💬 <strong>Which AI IDE does your team currently use? Have you resolved privacy concerns? Share in the comments!</strong></p> </div> <footer class="astro-dr56dw7m"> <div class="astro-sg3lsd66"><b class="astro-sg3lsd66">Tags:</b><ul class="astro-sg3lsd66"><li class="astro-sg3lsd66"><a href="/en/blog/tags/ai-agent/" class="astro-sg3lsd66">AI Agent</a></li><li class="astro-sg3lsd66"><a href="/en/blog/tags/vibe-coding/" class="astro-sg3lsd66">Vibe Coding</a></li><li class="astro-sg3lsd66"><a href="/en/blog/tags/trae/" class="astro-sg3lsd66">Trae</a></li><li class="astro-sg3lsd66"><a href="/en/blog/tags/trae-cn/" class="astro-sg3lsd66">Trae CN</a></li><li class="astro-sg3lsd66"><a href="/en/blog/tags/cursor/" class="astro-sg3lsd66">Cursor</a></li><li class="astro-sg3lsd66"><a href="/en/blog/tags/github-copilot/" class="astro-sg3lsd66">GitHub Copilot</a></li></ul></div> </footer> </article> <article class="preview astro-dr56dw7m"> <header class="astro-dr56dw7m"> <h2 class="astro-dr56dw7m"> <a href="/en/blog/ai/vibe-coding/2025-07-29-ultimate-ai-tier-faceoff-pro-vs-ultra-vs-max-vs-heavy/" class="astro-dr56dw7m">Ultimate AI Tier Face-Off: Are $200+ Memberships Worth It? ChatGPT Pro vs Gemini Ultra vs Claude Max vs SuperGrok Heavy</a> </h2> <div class="metadata not-content astro-2oxtfctb"> <div class="dates astro-2oxtfctb"> <time datetime="2025-07-29T00:00:00.000Z" class="astro-2oxtfctb"> Jul 29, 2025 </time>  </div> <div class="authors astro-2oxtfctb"> <a href="https://www.vibesparking.com" class="author astro-kbhsbk7c"><img src="/assets/vibe-sparking-avatar-zh.jpg" alt="Vibe Sparking" loading="eager" decoding="async" fetchpriority="auto" width="40" height="40" class="astro-kbhsbk7c"><div class="text astro-kbhsbk7c"> <div class="name astro-kbhsbk7c">Vibe Sparking</div>  </div> </a>  </div>  </div>  </header> <div class="sl-markdown-content astro-dr56dw7m"> <!-- # Ultimate AI Tier Face-Off: Are $200+ Memberships Worth It? ChatGPT Pro vs Gemini Ultra vs Claude Max vs SuperGrok Heavy -->
+<p>It’s easy to imagine that with Claude Relay Service, late-night coding sessions no longer fear Claude account quota depletion, and colleagues don’t need to each open separate accounts and pay duplicate fees. Everyone shares one “Claude resource pool,” taking what they need while keeping everything <strong>transparent and clear</strong> – truly achieving cost savings and peace of mind!</p> </div> <footer class="astro-dr56dw7m"> <div class="astro-sg3lsd66"><b class="astro-sg3lsd66">Tags:</b><ul class="astro-sg3lsd66"><li class="astro-sg3lsd66"><a href="/en/blog/tags/claude-code/" class="astro-sg3lsd66">Claude Code</a></li><li class="astro-sg3lsd66"><a href="/en/blog/tags/anthropic/" class="astro-sg3lsd66">Anthropic</a></li><li class="astro-sg3lsd66"><a href="/en/blog/tags/claude-relay-service/" class="astro-sg3lsd66">Claude Relay Service</a></li></ul></div> </footer> </article> <article class="preview astro-dr56dw7m"> <header class="astro-dr56dw7m"> <h2 class="astro-dr56dw7m"> <a href="/en/blog/ai/vibe-coding/2025-07-29-ultimate-ai-tier-faceoff-pro-vs-ultra-vs-max-vs-heavy/" class="astro-dr56dw7m">Ultimate AI Tier Face-Off: Are $200+ Memberships Worth It? ChatGPT Pro vs Gemini Ultra vs Claude Max vs SuperGrok Heavy</a> </h2> <div class="metadata not-content astro-2oxtfctb"> <div class="dates astro-2oxtfctb"> <time datetime="2025-07-29T00:00:00.000Z" class="astro-2oxtfctb"> Jul 29, 2025 </time>  </div> <div class="authors astro-2oxtfctb"> <a href="https://www.vibesparking.com" class="author astro-kbhsbk7c"><img src="/assets/vibe-sparking-avatar-zh.jpg" alt="Vibe Sparking" loading="eager" decoding="async" fetchpriority="auto" width="40" height="40" class="astro-kbhsbk7c"><div class="text astro-kbhsbk7c"> <div class="name astro-kbhsbk7c">Vibe Sparking</div>  </div> </a>  </div>  </div>  </header> <div class="sl-markdown-content astro-dr56dw7m"> <!-- # Ultimate AI Tier Face-Off: Are $200+ Memberships Worth It? ChatGPT Pro vs Gemini Ultra vs Claude Max vs SuperGrok Heavy -->
 <!-- ChatGPT Pro, Gemini Ultra, Claude Max, and SuperGrok Heavy all start at $200/month, but are they really worth it for regular users? It feels like it's no longer about competing on models, but on wallet thickness 😂 -->
 <!-- --- -->
 <p>Over the past 12 months, the four major AI providers have successively launched <strong>$200-$300/month</strong> “platinum memberships.” Some cry “AI is ridiculously expensive,” while others treat them as productivity powerhouses. Today, we’ll break down this high-stakes battle across six dimensions: <strong>pricing, exclusive models, deep research, media generation, coding experience, and additional benefits</strong>.</p>
@@ -1837,7 +1731,113 @@ slug-uri: claude-relay-service-guide -->
 <hr>
 <div class="sl-heading-wrapper level-h2"><h2 id="conclusion">Conclusion</h2><a class="sl-anchor-link" href="#conclusion"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “Conclusion”</span></a></div>
 <p>Premium memberships aren’t for the masses, but serve heavy users where “<strong>time is more valuable than money</strong>.”
-<strong>Which one would you pay for? Share your choice in the comments!</strong></p> </div> <footer class="astro-dr56dw7m"> <div class="astro-sg3lsd66"><b class="astro-sg3lsd66">Tags:</b><ul class="astro-sg3lsd66"><li class="astro-sg3lsd66"><a href="/en/blog/tags/chatgpt-pro/" class="astro-sg3lsd66">ChatGPT Pro</a></li><li class="astro-sg3lsd66"><a href="/en/blog/tags/gemini-ultra/" class="astro-sg3lsd66">Gemini Ultra</a></li><li class="astro-sg3lsd66"><a href="/en/blog/tags/claude-max/" class="astro-sg3lsd66">Claude Max</a></li><li class="astro-sg3lsd66"><a href="/en/blog/tags/supergrok-heavy/" class="astro-sg3lsd66">SuperGrok Heavy</a></li></ul></div> </footer> </article> <article class="preview astro-dr56dw7m"> <header class="astro-dr56dw7m"> <h2 class="astro-dr56dw7m"> <a href="/en/blog/ai/2025-07-28-hedge-ai-risk-hold-nvidia-for-internet-workers/" class="astro-dr56dw7m">Hedge AI Risk: Why Internet Workers Should Hold Nvidia Instead of Worrying About Pay Cuts and Layoffs</a> </h2> <div class="metadata not-content astro-2oxtfctb"> <div class="dates astro-2oxtfctb"> <time datetime="2025-07-28T00:00:00.000Z" class="astro-2oxtfctb"> Jul 28, 2025 </time>  </div> <div class="authors astro-2oxtfctb"> <a href="https://www.vibesparking.com" class="author astro-kbhsbk7c"><img src="/assets/vibe-sparking-avatar-zh.jpg" alt="Vibe Sparking" loading="eager" decoding="async" fetchpriority="auto" width="40" height="40" class="astro-kbhsbk7c"><div class="text astro-kbhsbk7c"> <div class="name astro-kbhsbk7c">Vibe Sparking</div>  </div> </a>  </div>  </div>  </header> <div class="sl-markdown-content astro-dr56dw7m"> <!-- # Hedge AI Risk: Why Internet Workers Should Hold Nvidia Instead of Worrying About Pay Cuts and Layoffs -->
+<strong>Which one would you pay for? Share your choice in the comments!</strong></p> </div> <footer class="astro-dr56dw7m"> <div class="astro-sg3lsd66"><b class="astro-sg3lsd66">Tags:</b><ul class="astro-sg3lsd66"><li class="astro-sg3lsd66"><a href="/en/blog/tags/chatgpt-pro/" class="astro-sg3lsd66">ChatGPT Pro</a></li><li class="astro-sg3lsd66"><a href="/en/blog/tags/gemini-ultra/" class="astro-sg3lsd66">Gemini Ultra</a></li><li class="astro-sg3lsd66"><a href="/en/blog/tags/claude-max/" class="astro-sg3lsd66">Claude Max</a></li><li class="astro-sg3lsd66"><a href="/en/blog/tags/supergrok-heavy/" class="astro-sg3lsd66">SuperGrok Heavy</a></li></ul></div> </footer> </article> <article class="preview astro-dr56dw7m"> <header class="astro-dr56dw7m"> <h2 class="astro-dr56dw7m"> <a href="/en/blog/ai/vibe-coding/2025-07-29-code-privacy-battle/" class="astro-dr56dw7m">Will Trae, Cursor, or Copilot Use My Code to Train Their Models?</a> </h2> <div class="metadata not-content astro-2oxtfctb"> <div class="dates astro-2oxtfctb"> <time datetime="2025-07-29T00:00:00.000Z" class="astro-2oxtfctb"> Jul 29, 2025 </time>  </div> <div class="authors astro-2oxtfctb"> <a href="https://www.vibesparking.com" class="author astro-kbhsbk7c"><img src="/assets/vibe-sparking-avatar-zh.jpg" alt="Vibe Sparking" loading="eager" decoding="async" fetchpriority="auto" width="40" height="40" class="astro-kbhsbk7c"><div class="text astro-kbhsbk7c"> <div class="name astro-kbhsbk7c">Vibe Sparking</div>  </div> </a>  </div>  </div>  </header> <div class="sl-markdown-content astro-dr56dw7m"> <!-- **What Are Trae, Cursor, and Copilot Secretly Doing? — Your Code Privacy Ultimate Comparison** -->
+<!-- **Trae vs Cursor vs Copilot: Who Respects Your Code?** -->
+<!-- slug: code-privacy-battle -->
+<hr>
+<!-- ### Introduction -->
+<p>Yesterday, a post on V2EX went viral: the author discovered that <strong>Trae IDE</strong> continuously uploads code data, and even complaints on Discord were “silenced.” This revelation stirred up a hornet’s nest—developers have only one burning question:
+<strong>Is my code actually safe?</strong></p>
+<p><starlight-image-zoom-zoomable><img src="/assets/ai/vibe-coding/trae-privacy-police-v2ex.png" alt=""><button aria-label="Zoom image" class="starlight-image-zoom-control"><svg aria-hidden="true" fill="currentColor" viewBox="0 0 24 24"><use href="#starlight-image-zoom-icon-zoom"></use></svg></button></starlight-image-zoom-zoomable></p>
+<hr>
+<div class="sl-heading-wrapper level-h2"><h2 id="1️⃣-official-statements-at-a-glance">1️⃣ Official Statements at a Glance</h2><a class="sl-anchor-link" href="#1️⃣-official-statements-at-a-glance"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “1️⃣ Official Statements at a Glance”</span></a></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Tool</th><th>Uploads to Cloud</th><th>Long-term Storage</th><th>Used for Model Training</th><th>Can Be Disabled</th></tr></thead><tbody><tr><td><strong>Trae (Domestic/Global)</strong></td><td>Yes, temporary uploads for indexing/chat</td><td>Plain code deleted after processing, only embeddings retained</td><td><strong>No</strong>, official statement: “won’t train models except for computing embeddings”</td><td><strong>No privacy toggle</strong></td></tr><tr><td><strong>Cursor</strong></td><td>Yes, for completion &#x26; indexing</td><td>May retain by default; zero retention in <strong>Privacy Mode</strong></td><td>Used for model improvement by default; <strong>no training</strong> in privacy mode</td><td><strong>Has privacy mode</strong></td></tr><tr><td><strong>GitHub Copilot</strong></td><td>Yes, processed via Azure</td><td>No plain text saved, only for immediate inference</td><td><strong>No training</strong> by default; personal users can opt-in</td><td>Manual training toggle available</td></tr></tbody></table>
+<blockquote>
+<p><strong>Bottom Line:</strong> All three require “uploads,” but Copilot and Trae officially claim they <strong>don’t</strong> train on code; Cursor requires manual privacy mode activation for “zero training.”</p>
+</blockquote>
+<hr>
+<div class="sl-heading-wrapper level-h2"><h2 id="2️⃣-detailed-breakdown">2️⃣ Detailed Breakdown</h2><a class="sl-anchor-link" href="#2️⃣-detailed-breakdown"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “2️⃣ Detailed Breakdown”</span></a></div>
+<div class="sl-heading-wrapper level-h3"><h3 id="-trae-official-promise-of-embeddings-only">🟢 Trae: Official Promise of “Embeddings Only”</h3><a class="sl-anchor-link" href="#-trae-official-promise-of-embeddings-only"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “🟢 Trae: Official Promise of “Embeddings Only””</span></a></div>
+<ul>
+<li>Privacy policy clearly states: <strong>“We do not use Your Content as training data for model training.”</strong></li>
+<li>Still sends code snippets to the cloud for vector indexing, deletes plain text, only retains embeddings.</li>
+<li><em>Pain Point</em>: <strong>No</strong> “privacy mode” like Cursor—users can’t disable uploads.</li>
+</ul>
+<div class="sl-heading-wrapper level-h3"><h3 id="-cursor-only-truly-private-with-privacy-mode">🔵 Cursor: Only Truly Private with “Privacy Mode”</h3><a class="sl-anchor-link" href="#-cursor-only-truly-private-with-privacy-mode"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “🔵 Cursor: Only Truly Private with “Privacy Mode””</span></a></div>
+<ul>
+<li>Collects telemetry by default for model improvement.</li>
+<li>Enable <strong>Privacy Mode</strong> → No storage, no training, but requests still processed by third-party LLMs (OpenAI/Anthropic).</li>
+<li>Privacy mode requires manual activation—new users shouldn’t forget this.</li>
+</ul>
+<div class="sl-heading-wrapper level-h3"><h3 id="-github-copilot-enterprise-friendly-personal-optional">🟣 GitHub Copilot: Enterprise-Friendly, Personal Optional</h3><a class="sl-anchor-link" href="#-github-copilot-enterprise-friendly-personal-optional"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “🟣 GitHub Copilot: Enterprise-Friendly, Personal Optional”</span></a></div>
+<ul>
+<li>Copilot Business/Enterprise: Code <strong>never</strong> used for model training.</li>
+<li>Personal subscriptions: Also no training by default, with optional “Improve Copilot” toggle in settings.</li>
+<li>Still uploads to Azure; completely offline solutions not yet available.</li>
+</ul>
+<hr>
+<div class="sl-heading-wrapper level-h2"><h2 id="3️⃣-practical-advice-for-developers">3️⃣ Practical Advice for Developers</h2><a class="sl-anchor-link" href="#3️⃣-practical-advice-for-developers"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “3️⃣ Practical Advice for Developers”</span></a></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Scenario</th><th>Recommendation</th></tr></thead><tbody><tr><td><strong>Highly Confidential (Finance, Core Algorithms)</strong></td><td><strong>Go offline</strong>. Use local LLMs or private cloud; disable any auto-completion.</td></tr><tr><td><strong>Pure Open Source/Public Projects</strong></td><td>Choose Copilot or Cursor with minimal impact. Trae acceptable but requires accepting uploads.</td></tr><tr><td><strong>Middle Ground (Partial Closed Source + Need Efficiency)</strong></td><td>Enable Cursor privacy mode or use Copilot; Trae currently lacks disable option—evaluate carefully.</td></tr></tbody></table>
+<hr>
+<div class="sl-heading-wrapper level-h2"><h2 id="4️⃣-friendly-reminders-for-tool-providers">4️⃣ Friendly Reminders for Tool Providers</h2><a class="sl-anchor-link" href="#4️⃣-friendly-reminders-for-tool-providers"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “4️⃣ Friendly Reminders for Tool Providers”</span></a></div>
+<ul>
+<li><strong>Make privacy mode the default</strong>, rather than making users dig through settings.</li>
+<li><strong>Publish transparency reports</strong>: What’s uploaded? How long is it stored? Is it actually deleted?</li>
+<li><strong>Granular controls</strong>: Indexing OK, training NO—let users decide.</li>
+</ul>
+<hr>
+<div class="sl-heading-wrapper level-h3"><h3 id="conclusion">Conclusion</h3><a class="sl-anchor-link" href="#conclusion"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “Conclusion”</span></a></div>
+<p>No matter how sweet AI-assisted coding gets, remember:</p>
+<blockquote>
+<p><strong>Code is productivity, but also a risk vector.</strong></p>
+</blockquote>
+<p>Periodically review your tools’ privacy policies—don’t let silent updates quietly shift your security boundaries.</p>
+<hr>
+<p>💬 <strong>Which AI IDE does your team currently use? Have you resolved privacy concerns? Share in the comments!</strong></p> </div> <footer class="astro-dr56dw7m"> <div class="astro-sg3lsd66"><b class="astro-sg3lsd66">Tags:</b><ul class="astro-sg3lsd66"><li class="astro-sg3lsd66"><a href="/en/blog/tags/ai-agent/" class="astro-sg3lsd66">AI Agent</a></li><li class="astro-sg3lsd66"><a href="/en/blog/tags/vibe-coding/" class="astro-sg3lsd66">Vibe Coding</a></li><li class="astro-sg3lsd66"><a href="/en/blog/tags/trae/" class="astro-sg3lsd66">Trae</a></li><li class="astro-sg3lsd66"><a href="/en/blog/tags/trae-cn/" class="astro-sg3lsd66">Trae CN</a></li><li class="astro-sg3lsd66"><a href="/en/blog/tags/cursor/" class="astro-sg3lsd66">Cursor</a></li><li class="astro-sg3lsd66"><a href="/en/blog/tags/github-copilot/" class="astro-sg3lsd66">GitHub Copilot</a></li></ul></div> </footer> </article> <article class="preview astro-dr56dw7m"> <header class="astro-dr56dw7m"> <h2 class="astro-dr56dw7m"> <a href="/en/blog/ai/2025-07-28-hedge-ai-risk-hold-nvidia-for-internet-workers/" class="astro-dr56dw7m">Hedge AI Risk: Why Internet Workers Should Hold Nvidia Instead of Worrying About Pay Cuts and Layoffs</a> </h2> <div class="metadata not-content astro-2oxtfctb"> <div class="dates astro-2oxtfctb"> <time datetime="2025-07-28T00:00:00.000Z" class="astro-2oxtfctb"> Jul 28, 2025 </time>  </div> <div class="authors astro-2oxtfctb"> <a href="https://www.vibesparking.com" class="author astro-kbhsbk7c"><img src="/assets/vibe-sparking-avatar-zh.jpg" alt="Vibe Sparking" loading="eager" decoding="async" fetchpriority="auto" width="40" height="40" class="astro-kbhsbk7c"><div class="text astro-kbhsbk7c"> <div class="name astro-kbhsbk7c">Vibe Sparking</div>  </div> </a>  </div>  </div>  </header> <div class="sl-markdown-content astro-dr56dw7m"> <!-- # Hedge AI Risk: Why Internet Workers Should Hold Nvidia Instead of Worrying About Pay Cuts and Layoffs -->
 <blockquote>
 <p>The internet era had near-zero marginal costs for “information flow”; the AI era has persistently high marginal costs for “information generation” that scale linearly with usage. Resources shift from “people” to “computing power + electricity,” as companies accelerate from light-asset tertiary industries toward “secondary industrialization.” As internet workers, we should upgrade our knowledge and skills with one hand, while using asset allocation (like Nvidia) to hedge the risk of dilution in the value chain with the other.</p>
 </blockquote>
