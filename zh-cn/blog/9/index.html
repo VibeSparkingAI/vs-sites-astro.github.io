@@ -623,121 +623,7 @@ olmOCR/MonkeyOCR → Markdown → Dify RAG → 前端挂 Chat Widget。
 [47]: https://olmocr.allenai.org/?utm_source=chatgpt.com "olmOCR – Open-Source OCR for Accurate Document ..."
 [48]: https://arxiv.org/html/2506.05218v1?utm_source=chatgpt.com "MonkeyOCR: Document Parsing with a Structure ..."
 [49]: https://ocrflux.pdfparser.io/?utm_source=chatgpt.com "OCRFlux"
-[50]: https://huggingface.co/Mungert/OCRFlux-3B-GGUF?utm_source=chatgpt.com "Mungert/OCRFlux-3B-GGUF" --> </div> <footer class="astro-dr56dw7m"> <div class="astro-sg3lsd66"><b class="astro-sg3lsd66">Tags:</b><ul class="astro-sg3lsd66"><li class="astro-sg3lsd66"><a href="/zh-cn/blog/tags/gpt-5/" class="astro-sg3lsd66">GPT-5</a></li><li class="astro-sg3lsd66"><a href="/zh-cn/blog/tags/claude-code/" class="astro-sg3lsd66">Claude Code</a></li></ul></div> </footer> </article> <article class="preview astro-dr56dw7m"> <header class="astro-dr56dw7m"> <h2 class="astro-dr56dw7m"> <a href="/zh-cn/blog/ai/google/gemini/2025-08-09-storybook-cn-voice-styles-pdf/" class="astro-dr56dw7m">Gemini Storybook 支持中文配音，PDF下载打印就能成漫画书</a> </h2> <div class="metadata not-content astro-2oxtfctb"> <div class="dates astro-2oxtfctb"> <time datetime="2025-08-09T00:00:00.000Z" class="astro-2oxtfctb"> 2025年8月9日 </time>  </div> <div class="authors astro-2oxtfctb"> <a href="https://www.vibesparking.com" class="author astro-kbhsbk7c"><img src="/assets/vibe-sparking-avatar-zh.jpg" alt="Vibe Sparking" loading="eager" decoding="async" fetchpriority="auto" width="40" height="40" class="astro-kbhsbk7c"><div class="text astro-kbhsbk7c"> <div class="name astro-kbhsbk7c">Vibe Sparking</div>  </div> </a>  </div>  </div>  </header> <div class="sl-markdown-content astro-dr56dw7m"> <!-- # Gemini Storybook 支持中文配音，PDF下载打印就能成漫画书 -->
-<p><strong>一句话版本</strong>：Gemini 的 Storybook 新功能上新了——<strong>支持中文朗读</strong>、<strong>多风格插画可选</strong>、<strong>网页直接打印/导出 PDF</strong>，做一本孩子专属绘本，不到 1 分钟。</p>
-<hr>
-<div class="sl-heading-wrapper level-h2"><h2 id="引言">引言</h2><a class="sl-anchor-link" href="#引言"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “引言”</span></a></div>
-<p>你是不是也有这种瞬间：临睡前，孩子突然想听“恐龙超人去火星”；家里抽屉塞满了小朋友的画，舍不得丢。
-<strong>Storybook 把这些灵感一键变成 10 页插画故事 + 语音朗读</strong>，还能把孩子的照片、手绘一起“收编”进画面里。</p>
-<hr>
-<div class="sl-heading-wrapper level-h2"><h2 id="这次升级有三点最香">这次升级，有三点最香</h2><a class="sl-anchor-link" href="#这次升级有三点最香"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “这次升级，有三点最香”</span></a></div>
-<div class="sl-heading-wrapper level-h3"><h3 id="1-原生中文配音到位">1) <strong>原生中文配音，到位</strong></h3><a class="sl-anchor-link" href="#1-原生中文配音到位"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “1) 原生中文配音，到位”</span></a></div>
-<p>官方已上线**“朗读（read-aloud）”<strong>，并说明支持语言会逐步扩展；媒体报道与实测显示</strong>中文已可用**，家长能直接听中文讲故事。效果自然流畅，适合床边故事。</p>
-<blockquote>
-<p>要点：<strong>45+ 语言覆盖</strong>（文本与音频），移动端与网页端均可用。</p>
-</blockquote>
-<hr>
-<div class="sl-heading-wrapper level-h3"><h3 id="2-无限画风自由切换">2) <strong>“无限画风”自由切换</strong></h3><a class="sl-anchor-link" href="#2-无限画风自由切换"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “2) “无限画风”自由切换”</span></a></div>
-<p>想水彩、动漫、像素、橡皮泥、涂色书？<strong>一句话换风格</strong>，还能<strong>上传孩子的照片或手绘</strong>，当作灵感生成插图。<strong>角色名、场景细节</strong>也能随时改，再生成新版本。</p>
-<blockquote>
-<p>官方举例：从“讲太阳系”到“讲搬家”，<strong>教育场景</strong>同样适用。</p>
-</blockquote>
-<hr>
-<div class="sl-heading-wrapper level-h3"><h3 id="3-一键成册分享打印都省心">3) <strong>一键成册，分享/打印都省心</strong></h3><a class="sl-anchor-link" href="#3-一键成册分享打印都省心"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “3) 一键成册，分享/打印都省心”</span></a></div>
-<p>每本故事都能<strong>生成分享链接</strong>；网页端<strong>直接打印</strong>。实际操作里，<strong>打印为 PDF</strong> 就能得到可直接去打印店出纸的文件。</p>
-<hr>
-<div class="sl-heading-wrapper level-h2"><h2 id="怎么用三步走">怎么用，三步走</h2><a class="sl-anchor-link" href="#怎么用三步走"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “怎么用，三步走”</span></a></div>
-<ol>
-<li><strong>打开 Gemini</strong>，发起对话：
-“帮我做一本《胆小恐龙学跳舞》故事书，画风水彩，适合 5 岁。”</li>
-<li><strong>加料</strong>：上传孩子画的恐龙/照片，指定主角名字、小怪兽爱吃什么。</li>
-<li><strong>微调</strong>：让它“更搞笑一点”“把风格换成动漫”，生成新版本；<strong>点朗读</strong>直接播放。</li>
-</ol>
-<h2 id=""><starlight-image-zoom-zoomable><img src="/assets/ai/google/gemini/dili.png" alt=""><button aria-label="Zoom image" class="starlight-image-zoom-control"><svg aria-hidden="true" fill="currentColor" viewBox="0 0 24 24"><use href="#starlight-image-zoom-icon-zoom"></use></svg></button></starlight-image-zoom-zoomable></h2>
-<div class="sl-heading-wrapper level-h2"><h2 id="真实场景立刻能用">真实场景，立刻能用</h2><a class="sl-anchor-link" href="#真实场景立刻能用"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “真实场景，立刻能用”</span></a></div>
-<ul>
-<li><strong>睡前 10 分钟</strong>：把“今天在幼儿园的小冲突”，改写成和解冒险故事。</li>
-<li><strong>知识小课</strong>：用“涂色书风格”讲清“太阳系/垃圾分类/交通安全”。</li>
-<li><strong>纪念册</strong>：把旅行照片/家庭合影，串成“我们在济州的奇遇记”。</li>
-</ul>
-<hr>
-<div class="sl-heading-wrapper level-h2"><h2 id="使用小贴士避坑指南">使用小贴士（避坑指南）</h2><a class="sl-anchor-link" href="#使用小贴士避坑指南"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “使用小贴士（避坑指南）”</span></a></div>
-<ul>
-<li><strong>朗读语言</strong>：官方注记“<strong>朗读目前仅在部分语言开放</strong>”，若没看到按钮，换语言或等更新。</li>
-<li><strong>角色一致性</strong>：AI 插画偶尔“离谱”，比如角色细节前后不一。<strong>用照片/重复强调设定</strong>能明显改善。</li>
-<li><strong>分享权限</strong>：<strong>工作/学生账号</strong>可能<strong>不能分享公开链接</strong>；用<strong>个人账号</strong>最稳。</li>
-</ul>
-<hr>
-<div class="sl-heading-wrapper level-h2"><h2 id="为什么这波值得关注">为什么这波值得关注？</h2><a class="sl-anchor-link" href="#为什么这波值得关注"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “为什么这波值得关注？”</span></a></div>
-<ul>
-<li><strong>门槛降到“开口即创作”</strong>：家长、老师、创作者都能把想法快速落地。</li>
-<li><strong>陪伴质量更稳定</strong>：忙碌时有“AI 讲读”，有空时再亲自读，灵活切换。</li>
-<li><strong>风格量级自由</strong>：从<strong>像素风</strong>到<strong>橡皮泥</strong>，再到<strong>孩子亲笔画</strong>，<strong>个性化强</strong>。</li>
-</ul>
-<hr>
-<div class="sl-heading-wrapper level-h2"><h2 id="结语">结语</h2><a class="sl-anchor-link" href="#结语"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “结语”</span></a></div>
-<p><strong>Storybook 把“讲一个好故事”的门槛，降到了“说一句话”。</strong>
-中文能听、风格能玩、打印能带走。你负责想，<strong>它负责把故事装订成爱</strong>。
-你会先做哪一本？<strong>留言告诉我你的第一个主题</strong>。</p>
-<!-- 
----
-
-# 推荐标题（3 组，多语 & slug）
-
-1. **中文**：Storybook 升级真香：中文配音、千变画风、PDF 一键成册
-   **English**: Storybook gets real: Chinese narration, style freedom, and instant PDF
-   **繁體**：Storybook 升級真香：中文配音、千變畫風、PDF 一鍵成冊
-   **日本語**：Storybook大型アップデート：中文ナレーション、無限スタイル、PDF出力
-   **Français** : Storybook se met à niveau : narration chinoise, styles illimités, PDF instantané
-   **Español**: Storybook sube de nivel: narración en chino, estilos ilimitados y PDF al instante
-   **Português**: Storybook atualizado: narração em chinês, estilos livres e PDF imediato
-   **slug**：storybook-cn-voice-styles-pdf
-
-2. **中文**：用 1 分钟装订爱：Storybook 的中文朗读与自由画风
-   **English**: Bind love in 1 minute: Storybook’s Chinese read-aloud & free styles
-   **繁體**：用 1 分鐘裝訂愛：Storybook 的中文朗讀與自由畫風
-   **日本語**：1分で物語を製本：Storybookの中国語朗読と自由な画風
-   **Français** : Relié en 1 minute : narration chinoise & styles libres
-   **Español**: En 1 minuto: narración en chino y estilos libres
-   **Português**: Em 1 minuto: narração em chinês e estilos livres
-   **slug**：storybook-one-minute-chinese-readaloud
-
-3. **中文**：把孩子的画变成书：Storybook 新版 3 大亮点
-   **English**: Turn kids’ doodles into books: 3 big Storybook upgrades
-   **繁體**：把孩子的畫變成書：Storybook 新版 3 大亮點
-   **日本語**：子どもの絵が本になる：Storybook 3つの進化
-   **Français** : Les dessins deviennent des livres : 3 atouts de Storybook
-   **Español**: Los dibujos se vuelven libros: 3 mejoras clave
-   **Português**: Rabiscos viram livros: 3 destaques do Storybook
-   **slug**：storybook-turn-doodles-into-books
-
----
-
-# 配图建议（插画风｜2:1｜图中文字请用英文）
-
-* **封面**：Parent and child reading a colorful AI-generated picture book; floating icons for “voice”, “styles”, “print”. Soft watercolor vibes, cozy bedtime.
-* **章节图 1（中文配音）**：A speech bubble icon over a storybook page; a simple “Play” button; subtle Chinese characters in the narration waveform UI.
-* **章节图 2（自由画风）**：A grid of mini-pages in different styles: watercolor, pixel art, claymation, coloring book.
-* **章节图 3（打印/分享）**：Browser window with “Print” dialog previewing a 10-page booklet; next to it a “Share link” card.
-
----
-
-# 朋友圈评论（3 条）
-
-1. “睡前临时编故事不再熬脑：Storybook 中文朗读 + 多画风，我家 5 岁直接上头😂”
-2. “把娃的涂鸦做成真书，网页一键导出 PDF，送到打印店 30 分钟拿成品，爽！”
-3. “教育场景也好用：用像素风讲太阳系，孩子第一次听完不跑神👍”
-
----
-
-需要我把**上手话术模版**和**高质量提示词**也配好，或者直接做一套**可打印 PDF 样本**吗？你说主题，我来排。
-
-[1]: https://blog.google/products/gemini/storybooks/?utm_source=chatgpt.com "Create personal illustrated storybooks in the Gemini app."
-[2]: https://gemini.google/overview/storybook/ "Gemini Storybook — for the stories only you could imagine"
-[3]: https://blog.google/intl/en-mena/product-updates/explore-get-answers/google-launches-storybook-feature-on-gemini-arabic/?utm_source=chatgpt.com "Create custom stories with Storybook on Gemini"
-[4]: https://cn.technode.com/post/2025-08-08/google-gemini-story-book/?utm_source=chatgpt.com "谷歌想让你用AI助手，为孩子一键生成专属睡前故事书"
-[5]: https://www.fonearena.com/blog/461045/gemini-storybook-generation.html?utm_source=chatgpt.com "Gemini adds 10-page illustrated Storybook generation with ..."
-[6]: https://www.techradar.com/ai-platforms-assistants/gemini/gemini-ai-can-turn-prompts-into-picture-books-but-i-still-prefer-paddington?utm_source=chatgpt.com "Gemini AI can turn prompts into picture books, but I still prefer Paddington" --> </div> <footer class="astro-dr56dw7m"> <div class="astro-sg3lsd66"><b class="astro-sg3lsd66">Tags:</b><ul class="astro-sg3lsd66"><li class="astro-sg3lsd66"><a href="/zh-cn/blog/tags/ai/" class="astro-sg3lsd66">AI</a></li><li class="astro-sg3lsd66"><a href="/zh-cn/blog/tags/google-gemini/" class="astro-sg3lsd66">Google Gemini</a></li><li class="astro-sg3lsd66"><a href="/zh-cn/blog/tags/story-book/" class="astro-sg3lsd66">Story Book</a></li></ul></div> </footer> </article> <article class="preview astro-dr56dw7m"> <header class="astro-dr56dw7m"> <h2 class="astro-dr56dw7m"> <a href="/zh-cn/blog/ai/chatgpt/gpt-5/2025-08-09-gpt5-fe-long-context-stack/" class="astro-dr56dw7m">GPT-5 AI 前端 Web 开发最佳推荐</a> </h2> <div class="metadata not-content astro-2oxtfctb"> <div class="dates astro-2oxtfctb"> <time datetime="2025-08-09T00:00:00.000Z" class="astro-2oxtfctb"> 2025年8月9日 </time>  </div> <div class="authors astro-2oxtfctb"> <a href="https://www.vibesparking.com" class="author astro-kbhsbk7c"><img src="/assets/vibe-sparking-avatar-zh.jpg" alt="Vibe Sparking" loading="eager" decoding="async" fetchpriority="auto" width="40" height="40" class="astro-kbhsbk7c"><div class="text astro-kbhsbk7c"> <div class="name astro-kbhsbk7c">Vibe Sparking</div>  </div> </a>  </div>  </div>  </header> <div class="sl-markdown-content astro-dr56dw7m"> <!-- # GPT-5 AI 前端 Web 开发最佳推荐 -->
+[50]: https://huggingface.co/Mungert/OCRFlux-3B-GGUF?utm_source=chatgpt.com "Mungert/OCRFlux-3B-GGUF" --> </div> <footer class="astro-dr56dw7m"> <div class="astro-sg3lsd66"><b class="astro-sg3lsd66">Tags:</b><ul class="astro-sg3lsd66"><li class="astro-sg3lsd66"><a href="/zh-cn/blog/tags/gpt-5/" class="astro-sg3lsd66">GPT-5</a></li><li class="astro-sg3lsd66"><a href="/zh-cn/blog/tags/claude-code/" class="astro-sg3lsd66">Claude Code</a></li></ul></div> </footer> </article> <article class="preview astro-dr56dw7m"> <header class="astro-dr56dw7m"> <h2 class="astro-dr56dw7m"> <a href="/zh-cn/blog/ai/chatgpt/gpt-5/2025-08-09-gpt5-fe-long-context-stack/" class="astro-dr56dw7m">GPT-5 AI 前端 Web 开发最佳推荐</a> </h2> <div class="metadata not-content astro-2oxtfctb"> <div class="dates astro-2oxtfctb"> <time datetime="2025-08-09T00:00:00.000Z" class="astro-2oxtfctb"> 2025年8月9日 </time>  </div> <div class="authors astro-2oxtfctb"> <a href="https://www.vibesparking.com" class="author astro-kbhsbk7c"><img src="/assets/vibe-sparking-avatar-zh.jpg" alt="Vibe Sparking" loading="eager" decoding="async" fetchpriority="auto" width="40" height="40" class="astro-kbhsbk7c"><div class="text astro-kbhsbk7c"> <div class="name astro-kbhsbk7c">Vibe Sparking</div>  </div> </a>  </div>  </div>  </header> <div class="sl-markdown-content astro-dr56dw7m"> <!-- # GPT-5 AI 前端 Web 开发最佳推荐 -->
 <!-- **结论先说在前面：** -->
 <p>如果你准备在前端用上 GPT-5，我强烈推荐这套组合——<strong>Next.js(Typescript) + Tailwind CSS + shadcn/ui + Radix + Motion +（Material Symbols / Heroicons / Lucide）+ Inter/Geist/Mona Sans/IBM Plex Sans/Manrope 字体</strong>。
 这套栈，既「稳」、又「快」，还非常适合让 GPT-5 发挥长上下文和新语料的优势。GPT-5 官方给了<strong>40 万 tokens 总上下文（输入 27.2 万 + 输出/思考 12.8 万）</strong>，更能装下整页需求、组件库 API、样式约定和长代码段，<strong>对 TS / CSS / HTML 的跟手度明显更好</strong>。</p>
@@ -890,7 +776,121 @@ olmOCR/MonkeyOCR → Markdown → Dify RAG → 前端挂 Chat Widget。
 [18]: https://github.blog/news-insights/company-news/introducing-mona-sans-and-hubot-sans/?utm_source=chatgpt.com "Introducing Mona Sans and Hubot Sans"
 [19]: https://www.ibm.com/plex/specs/?utm_source=chatgpt.com "06 Specs | IBM Plex"
 [20]: https://fonts.google.com/specimen/IBM%2BPlex%2BSans?utm_source=chatgpt.com "IBM Plex Sans"
-[21]: https://ui.shadcn.com/?utm_source=chatgpt.com "The Foundation for your Design System - shadcn/ui" --> </div> <footer class="astro-dr56dw7m"> <div class="astro-sg3lsd66"><b class="astro-sg3lsd66">Tags:</b><ul class="astro-sg3lsd66"><li class="astro-sg3lsd66"><a href="/zh-cn/blog/tags/gpt-5/" class="astro-sg3lsd66">GPT-5</a></li><li class="astro-sg3lsd66"><a href="/zh-cn/blog/tags/openai/" class="astro-sg3lsd66">OpenAI</a></li><li class="astro-sg3lsd66"><a href="/zh-cn/blog/tags/web/" class="astro-sg3lsd66">Web</a></li><li class="astro-sg3lsd66"><a href="/zh-cn/blog/tags/ai-model/" class="astro-sg3lsd66">AI Model</a></li></ul></div> </footer> </article> <article class="preview astro-dr56dw7m"> <header class="astro-dr56dw7m"> <h2 class="astro-dr56dw7m"> <a href="/zh-cn/blog/ai/2025-08-08-gpt5-claude-workflow-playbook/" class="astro-dr56dw7m">GPT-5 规划设计 + Claude Code 生成代码 + GPT-5 评审总结</a> </h2> <div class="metadata not-content astro-2oxtfctb"> <div class="dates astro-2oxtfctb"> <time datetime="2025-08-08T00:00:00.000Z" class="astro-2oxtfctb"> 2025年8月8日 </time>  </div> <div class="authors astro-2oxtfctb"> <a href="https://www.vibesparking.com" class="author astro-kbhsbk7c"><img src="/assets/vibe-sparking-avatar-zh.jpg" alt="Vibe Sparking" loading="eager" decoding="async" fetchpriority="auto" width="40" height="40" class="astro-kbhsbk7c"><div class="text astro-kbhsbk7c"> <div class="name astro-kbhsbk7c">Vibe Sparking</div>  </div> </a>  </div>  </div>  </header> <div class="sl-markdown-content astro-dr56dw7m"> <!-- # GPT-5 规划设计 + Claude Code 生成代码 + GPT-5 评审总结 -->
+[21]: https://ui.shadcn.com/?utm_source=chatgpt.com "The Foundation for your Design System - shadcn/ui" --> </div> <footer class="astro-dr56dw7m"> <div class="astro-sg3lsd66"><b class="astro-sg3lsd66">Tags:</b><ul class="astro-sg3lsd66"><li class="astro-sg3lsd66"><a href="/zh-cn/blog/tags/gpt-5/" class="astro-sg3lsd66">GPT-5</a></li><li class="astro-sg3lsd66"><a href="/zh-cn/blog/tags/openai/" class="astro-sg3lsd66">OpenAI</a></li><li class="astro-sg3lsd66"><a href="/zh-cn/blog/tags/web/" class="astro-sg3lsd66">Web</a></li><li class="astro-sg3lsd66"><a href="/zh-cn/blog/tags/ai-model/" class="astro-sg3lsd66">AI Model</a></li></ul></div> </footer> </article> <article class="preview astro-dr56dw7m"> <header class="astro-dr56dw7m"> <h2 class="astro-dr56dw7m"> <a href="/zh-cn/blog/ai/google/gemini/2025-08-09-storybook-cn-voice-styles-pdf/" class="astro-dr56dw7m">Gemini Storybook 支持中文配音，PDF下载打印就能成漫画书</a> </h2> <div class="metadata not-content astro-2oxtfctb"> <div class="dates astro-2oxtfctb"> <time datetime="2025-08-09T00:00:00.000Z" class="astro-2oxtfctb"> 2025年8月9日 </time>  </div> <div class="authors astro-2oxtfctb"> <a href="https://www.vibesparking.com" class="author astro-kbhsbk7c"><img src="/assets/vibe-sparking-avatar-zh.jpg" alt="Vibe Sparking" loading="eager" decoding="async" fetchpriority="auto" width="40" height="40" class="astro-kbhsbk7c"><div class="text astro-kbhsbk7c"> <div class="name astro-kbhsbk7c">Vibe Sparking</div>  </div> </a>  </div>  </div>  </header> <div class="sl-markdown-content astro-dr56dw7m"> <!-- # Gemini Storybook 支持中文配音，PDF下载打印就能成漫画书 -->
+<p><strong>一句话版本</strong>：Gemini 的 Storybook 新功能上新了——<strong>支持中文朗读</strong>、<strong>多风格插画可选</strong>、<strong>网页直接打印/导出 PDF</strong>，做一本孩子专属绘本，不到 1 分钟。</p>
+<hr>
+<div class="sl-heading-wrapper level-h2"><h2 id="引言">引言</h2><a class="sl-anchor-link" href="#引言"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “引言”</span></a></div>
+<p>你是不是也有这种瞬间：临睡前，孩子突然想听“恐龙超人去火星”；家里抽屉塞满了小朋友的画，舍不得丢。
+<strong>Storybook 把这些灵感一键变成 10 页插画故事 + 语音朗读</strong>，还能把孩子的照片、手绘一起“收编”进画面里。</p>
+<hr>
+<div class="sl-heading-wrapper level-h2"><h2 id="这次升级有三点最香">这次升级，有三点最香</h2><a class="sl-anchor-link" href="#这次升级有三点最香"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “这次升级，有三点最香”</span></a></div>
+<div class="sl-heading-wrapper level-h3"><h3 id="1-原生中文配音到位">1) <strong>原生中文配音，到位</strong></h3><a class="sl-anchor-link" href="#1-原生中文配音到位"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “1) 原生中文配音，到位”</span></a></div>
+<p>官方已上线**“朗读（read-aloud）”<strong>，并说明支持语言会逐步扩展；媒体报道与实测显示</strong>中文已可用**，家长能直接听中文讲故事。效果自然流畅，适合床边故事。</p>
+<blockquote>
+<p>要点：<strong>45+ 语言覆盖</strong>（文本与音频），移动端与网页端均可用。</p>
+</blockquote>
+<hr>
+<div class="sl-heading-wrapper level-h3"><h3 id="2-无限画风自由切换">2) <strong>“无限画风”自由切换</strong></h3><a class="sl-anchor-link" href="#2-无限画风自由切换"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “2) “无限画风”自由切换”</span></a></div>
+<p>想水彩、动漫、像素、橡皮泥、涂色书？<strong>一句话换风格</strong>，还能<strong>上传孩子的照片或手绘</strong>，当作灵感生成插图。<strong>角色名、场景细节</strong>也能随时改，再生成新版本。</p>
+<blockquote>
+<p>官方举例：从“讲太阳系”到“讲搬家”，<strong>教育场景</strong>同样适用。</p>
+</blockquote>
+<hr>
+<div class="sl-heading-wrapper level-h3"><h3 id="3-一键成册分享打印都省心">3) <strong>一键成册，分享/打印都省心</strong></h3><a class="sl-anchor-link" href="#3-一键成册分享打印都省心"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “3) 一键成册，分享/打印都省心”</span></a></div>
+<p>每本故事都能<strong>生成分享链接</strong>；网页端<strong>直接打印</strong>。实际操作里，<strong>打印为 PDF</strong> 就能得到可直接去打印店出纸的文件。</p>
+<hr>
+<div class="sl-heading-wrapper level-h2"><h2 id="怎么用三步走">怎么用，三步走</h2><a class="sl-anchor-link" href="#怎么用三步走"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “怎么用，三步走”</span></a></div>
+<ol>
+<li><strong>打开 Gemini</strong>，发起对话：
+“帮我做一本《胆小恐龙学跳舞》故事书，画风水彩，适合 5 岁。”</li>
+<li><strong>加料</strong>：上传孩子画的恐龙/照片，指定主角名字、小怪兽爱吃什么。</li>
+<li><strong>微调</strong>：让它“更搞笑一点”“把风格换成动漫”，生成新版本；<strong>点朗读</strong>直接播放。</li>
+</ol>
+<h2 id=""><starlight-image-zoom-zoomable><img src="/assets/ai/google/gemini/dili.png" alt=""><button aria-label="Zoom image" class="starlight-image-zoom-control"><svg aria-hidden="true" fill="currentColor" viewBox="0 0 24 24"><use href="#starlight-image-zoom-icon-zoom"></use></svg></button></starlight-image-zoom-zoomable></h2>
+<div class="sl-heading-wrapper level-h2"><h2 id="真实场景立刻能用">真实场景，立刻能用</h2><a class="sl-anchor-link" href="#真实场景立刻能用"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “真实场景，立刻能用”</span></a></div>
+<ul>
+<li><strong>睡前 10 分钟</strong>：把“今天在幼儿园的小冲突”，改写成和解冒险故事。</li>
+<li><strong>知识小课</strong>：用“涂色书风格”讲清“太阳系/垃圾分类/交通安全”。</li>
+<li><strong>纪念册</strong>：把旅行照片/家庭合影，串成“我们在济州的奇遇记”。</li>
+</ul>
+<hr>
+<div class="sl-heading-wrapper level-h2"><h2 id="使用小贴士避坑指南">使用小贴士（避坑指南）</h2><a class="sl-anchor-link" href="#使用小贴士避坑指南"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “使用小贴士（避坑指南）”</span></a></div>
+<ul>
+<li><strong>朗读语言</strong>：官方注记“<strong>朗读目前仅在部分语言开放</strong>”，若没看到按钮，换语言或等更新。</li>
+<li><strong>角色一致性</strong>：AI 插画偶尔“离谱”，比如角色细节前后不一。<strong>用照片/重复强调设定</strong>能明显改善。</li>
+<li><strong>分享权限</strong>：<strong>工作/学生账号</strong>可能<strong>不能分享公开链接</strong>；用<strong>个人账号</strong>最稳。</li>
+</ul>
+<hr>
+<div class="sl-heading-wrapper level-h2"><h2 id="为什么这波值得关注">为什么这波值得关注？</h2><a class="sl-anchor-link" href="#为什么这波值得关注"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “为什么这波值得关注？”</span></a></div>
+<ul>
+<li><strong>门槛降到“开口即创作”</strong>：家长、老师、创作者都能把想法快速落地。</li>
+<li><strong>陪伴质量更稳定</strong>：忙碌时有“AI 讲读”，有空时再亲自读，灵活切换。</li>
+<li><strong>风格量级自由</strong>：从<strong>像素风</strong>到<strong>橡皮泥</strong>，再到<strong>孩子亲笔画</strong>，<strong>个性化强</strong>。</li>
+</ul>
+<hr>
+<div class="sl-heading-wrapper level-h2"><h2 id="结语">结语</h2><a class="sl-anchor-link" href="#结语"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only">Section titled “结语”</span></a></div>
+<p><strong>Storybook 把“讲一个好故事”的门槛，降到了“说一句话”。</strong>
+中文能听、风格能玩、打印能带走。你负责想，<strong>它负责把故事装订成爱</strong>。
+你会先做哪一本？<strong>留言告诉我你的第一个主题</strong>。</p>
+<!-- 
+---
+
+# 推荐标题（3 组，多语 & slug）
+
+1. **中文**：Storybook 升级真香：中文配音、千变画风、PDF 一键成册
+   **English**: Storybook gets real: Chinese narration, style freedom, and instant PDF
+   **繁體**：Storybook 升級真香：中文配音、千變畫風、PDF 一鍵成冊
+   **日本語**：Storybook大型アップデート：中文ナレーション、無限スタイル、PDF出力
+   **Français** : Storybook se met à niveau : narration chinoise, styles illimités, PDF instantané
+   **Español**: Storybook sube de nivel: narración en chino, estilos ilimitados y PDF al instante
+   **Português**: Storybook atualizado: narração em chinês, estilos livres e PDF imediato
+   **slug**：storybook-cn-voice-styles-pdf
+
+2. **中文**：用 1 分钟装订爱：Storybook 的中文朗读与自由画风
+   **English**: Bind love in 1 minute: Storybook’s Chinese read-aloud & free styles
+   **繁體**：用 1 分鐘裝訂愛：Storybook 的中文朗讀與自由畫風
+   **日本語**：1分で物語を製本：Storybookの中国語朗読と自由な画風
+   **Français** : Relié en 1 minute : narration chinoise & styles libres
+   **Español**: En 1 minuto: narración en chino y estilos libres
+   **Português**: Em 1 minuto: narração em chinês e estilos livres
+   **slug**：storybook-one-minute-chinese-readaloud
+
+3. **中文**：把孩子的画变成书：Storybook 新版 3 大亮点
+   **English**: Turn kids’ doodles into books: 3 big Storybook upgrades
+   **繁體**：把孩子的畫變成書：Storybook 新版 3 大亮點
+   **日本語**：子どもの絵が本になる：Storybook 3つの進化
+   **Français** : Les dessins deviennent des livres : 3 atouts de Storybook
+   **Español**: Los dibujos se vuelven libros: 3 mejoras clave
+   **Português**: Rabiscos viram livros: 3 destaques do Storybook
+   **slug**：storybook-turn-doodles-into-books
+
+---
+
+# 配图建议（插画风｜2:1｜图中文字请用英文）
+
+* **封面**：Parent and child reading a colorful AI-generated picture book; floating icons for “voice”, “styles”, “print”. Soft watercolor vibes, cozy bedtime.
+* **章节图 1（中文配音）**：A speech bubble icon over a storybook page; a simple “Play” button; subtle Chinese characters in the narration waveform UI.
+* **章节图 2（自由画风）**：A grid of mini-pages in different styles: watercolor, pixel art, claymation, coloring book.
+* **章节图 3（打印/分享）**：Browser window with “Print” dialog previewing a 10-page booklet; next to it a “Share link” card.
+
+---
+
+# 朋友圈评论（3 条）
+
+1. “睡前临时编故事不再熬脑：Storybook 中文朗读 + 多画风，我家 5 岁直接上头😂”
+2. “把娃的涂鸦做成真书，网页一键导出 PDF，送到打印店 30 分钟拿成品，爽！”
+3. “教育场景也好用：用像素风讲太阳系，孩子第一次听完不跑神👍”
+
+---
+
+需要我把**上手话术模版**和**高质量提示词**也配好，或者直接做一套**可打印 PDF 样本**吗？你说主题，我来排。
+
+[1]: https://blog.google/products/gemini/storybooks/?utm_source=chatgpt.com "Create personal illustrated storybooks in the Gemini app."
+[2]: https://gemini.google/overview/storybook/ "Gemini Storybook — for the stories only you could imagine"
+[3]: https://blog.google/intl/en-mena/product-updates/explore-get-answers/google-launches-storybook-feature-on-gemini-arabic/?utm_source=chatgpt.com "Create custom stories with Storybook on Gemini"
+[4]: https://cn.technode.com/post/2025-08-08/google-gemini-story-book/?utm_source=chatgpt.com "谷歌想让你用AI助手，为孩子一键生成专属睡前故事书"
+[5]: https://www.fonearena.com/blog/461045/gemini-storybook-generation.html?utm_source=chatgpt.com "Gemini adds 10-page illustrated Storybook generation with ..."
+[6]: https://www.techradar.com/ai-platforms-assistants/gemini/gemini-ai-can-turn-prompts-into-picture-books-but-i-still-prefer-paddington?utm_source=chatgpt.com "Gemini AI can turn prompts into picture books, but I still prefer Paddington" --> </div> <footer class="astro-dr56dw7m"> <div class="astro-sg3lsd66"><b class="astro-sg3lsd66">Tags:</b><ul class="astro-sg3lsd66"><li class="astro-sg3lsd66"><a href="/zh-cn/blog/tags/ai/" class="astro-sg3lsd66">AI</a></li><li class="astro-sg3lsd66"><a href="/zh-cn/blog/tags/google-gemini/" class="astro-sg3lsd66">Google Gemini</a></li><li class="astro-sg3lsd66"><a href="/zh-cn/blog/tags/story-book/" class="astro-sg3lsd66">Story Book</a></li></ul></div> </footer> </article> <article class="preview astro-dr56dw7m"> <header class="astro-dr56dw7m"> <h2 class="astro-dr56dw7m"> <a href="/zh-cn/blog/ai/2025-08-08-gpt5-claude-workflow-playbook/" class="astro-dr56dw7m">GPT-5 规划设计 + Claude Code 生成代码 + GPT-5 评审总结</a> </h2> <div class="metadata not-content astro-2oxtfctb"> <div class="dates astro-2oxtfctb"> <time datetime="2025-08-08T00:00:00.000Z" class="astro-2oxtfctb"> 2025年8月8日 </time>  </div> <div class="authors astro-2oxtfctb"> <a href="https://www.vibesparking.com" class="author astro-kbhsbk7c"><img src="/assets/vibe-sparking-avatar-zh.jpg" alt="Vibe Sparking" loading="eager" decoding="async" fetchpriority="auto" width="40" height="40" class="astro-kbhsbk7c"><div class="text astro-kbhsbk7c"> <div class="name astro-kbhsbk7c">Vibe Sparking</div>  </div> </a>  </div>  </div>  </header> <div class="sl-markdown-content astro-dr56dw7m"> <!-- # GPT-5 规划设计 + Claude Code 生成代码 + GPT-5 评审总结 -->
 <blockquote>
 <p><strong>结论先说</strong>：**GPT-5 适合做规划、结构化设计与评审总结协作；Claude Code（Sonnet / Opus）更稳于“动手执行、缝合改造”。**实际落地，用“<strong>GPT-5 规划设计 + Claude Code 生成代码 + GPT-5 评审总结</strong>”的组合，效率更高、翻车更少。你觉得呢？</p>
 </blockquote>
