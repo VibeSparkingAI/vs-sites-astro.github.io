@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#16213e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0f3460;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4361ee;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#7209b7;stop-opacity:0.8" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1600" height="900" fill="url(#bgGrad)"/>
+  
+  <!-- Grid pattern -->
+  <g stroke="#4361ee" stroke-opacity="0.1" stroke-width="1">
+    <line x1="0" y1="100" x2="1600" y2="100"/>
+    <line x1="0" y1="200" x2="1600" y2="200"/>
+    <line x1="0" y1="300" x2="1600" y2="300"/>
+    <line x1="0" y1="400" x2="1600" y2="400"/>
+    <line x1="0" y1="500" x2="1600" y2="500"/>
+    <line x1="0" y1="600" x2="1600" y2="600"/>
+    <line x1="0" y1="700" x2="1600" y2="700"/>
+    <line x1="0" y1="800" x2="1600" y2="800"/>
+    <line x1="200" y1="0" x2="200" y2="900"/>
+    <line x1="400" y1="0" x2="400" y2="900"/>
+    <line x1="600" y1="0" x2="600" y2="900"/>
+    <line x1="800" y1="0" x2="800" y2="900"/>
+    <line x1="1000" y1="0" x2="1000" y2="900"/>
+    <line x1="1200" y1="0" x2="1200" y2="900"/>
+    <line x1="1400" y1="0" x2="1400" y2="900"/>
+  </g>
+  
+  <!-- Connection lines -->
+  <g stroke="#4cc9f0" stroke-width="2" stroke-opacity="0.5" fill="none">
+    <path d="M400,450 Q600,300 800,350"/>
+    <path d="M800,350 Q1000,400 1200,320"/>
+    <path d="M400,450 Q500,550 700,500"/>
+    <path d="M700,500 Q900,480 1000,550"/>
+    <path d="M1000,550 Q1150,500 1200,580"/>
+  </g>
+  
+  <!-- Agent nodes -->
+  <g filter="url(#glow)">
+    <circle cx="400" cy="450" r="30" fill="#4361ee"/>
+    <circle cx="800" cy="350" r="25" fill="#7209b7"/>
+    <circle cx="1200" cy="320" r="28" fill="#4361ee"/>
+    <circle cx="700" cy="500" r="22" fill="#3a0ca3"/>
+    <circle cx="1000" cy="550" r="26" fill="#7209b7"/>
+    <circle cx="1200" cy="580" r="24" fill="#4361ee"/>
+  </g>
+  
+  <!-- UI Component Cards -->
+  <g>
+    <!-- Card 1 - Button -->
+    <rect x="150" y="180" width="180" height="80" rx="12" fill="url(#cardGrad)" opacity="0.9"/>
+    <rect x="175" y="210" width="100" height="30" rx="6" fill="#4cc9f0"/>
+    <text x="225" y="230" font-family="Arial, sans-serif" font-size="14" fill="white" text-anchor="middle">Button</text>
+    
+    <!-- Card 2 - TextField -->
+    <rect x="1270" y="150" width="200" height="90" rx="12" fill="url(#cardGrad)" opacity="0.9"/>
+    <rect x="1290" y="180" width="160" height="35" rx="4" fill="#1a1a2e" stroke="#4cc9f0" stroke-width="2"/>
+    <text x="1370" y="202" font-family="Arial, sans-serif" font-size="12" fill="#888">TextField</text>
+    
+    <!-- Card 3 - DataTable -->
+    <rect x="100" y="600" width="220" height="120" rx="12" fill="url(#cardGrad)" opacity="0.9"/>
+    <rect x="120" y="630" width="180" height="20" fill="#3a0ca3" rx="4"/>
+    <rect x="120" y="655" width="180" height="15" fill="#1a1a2e" opacity="0.5" rx="2"/>
+    <rect x="120" y="675" width="180" height="15" fill="#1a1a2e" opacity="0.3" rx="2"/>
+    <rect x="120" y="695" width="180" height="15" fill="#1a1a2e" opacity="0.5" rx="2"/>
+    <text x="210" y="645" font-family="Arial, sans-serif" font-size="11" fill="white" text-anchor="middle">DataTable</text>
+    
+    <!-- Card 4 - Form -->
+    <rect x="1300" y="650" width="180" height="130" rx="12" fill="url(#cardGrad)" opacity="0.9"/>
+    <rect x="1320" y="680" width="140" height="25" rx="4" fill="#1a1a2e" stroke="#4cc9f0"/>
+    <rect x="1320" y="715" width="140" height="25" rx="4" fill="#1a1a2e" stroke="#4cc9f0"/>
+    <rect x="1350" y="755" width="80" height="22" rx="6" fill="#4cc9f0"/>
+    <text x="1390" y="770" font-family="Arial, sans-serif" font-size="10" fill="white" text-anchor="middle">Submit</text>
+  </g>
+  
+  <!-- Platform icons -->
+  <g fill="#4cc9f0" opacity="0.7">
+    <!-- Web -->
+    <rect x="550" y="750" width="60" height="45" rx="5" fill="none" stroke="#4cc9f0" stroke-width="2"/>
+    <rect x="575" y="795" width="10" height="15" fill="#4cc9f0"/>
+    <rect x="560" y="810" width="40" height="5" rx="2" fill="#4cc9f0"/>
+    
+    <!-- Mobile -->
+    <rect x="700" y="745" width="35" height="60" rx="5" fill="none" stroke="#4cc9f0" stroke-width="2"/>
+    <circle cx="717.5" cy="795" r="5" fill="none" stroke="#4cc9f0" stroke-width="1.5"/>
+    
+    <!-- Desktop -->
+    <rect x="830" y="750" width="70" height="50" rx="5" fill="none" stroke="#4cc9f0" stroke-width="2"/>
+    <rect x="855" y="800" width="20" height="10" fill="#4cc9f0"/>
+    <rect x="840" y="810" width="50" height="5" rx="2" fill="#4cc9f0"/>
+  </g>
+  
+  <!-- Main Title -->
+  <text x="800" y="420" font-family="Arial Black, sans-serif" font-size="120" font-weight="bold" fill="white" text-anchor="middle" filter="url(#glow)">A2UI</text>
+  
+  <!-- Subtitle -->
+  <text x="800" y="500" font-family="Arial, sans-serif" font-size="36" fill="#4cc9f0" text-anchor="middle">Agent-Driven Interfaces</text>
+  
+  <!-- Tag line -->
+  <text x="800" y="560" font-family="Arial, sans-serif" font-size="22" fill="#888" text-anchor="middle">Declarative UI Protocol for AI Agents • Cross-Platform Native Rendering</text>
+  
+  <!-- Google attribution -->
+  <text x="800" y="850" font-family="Arial, sans-serif" font-size="18" fill="#666" text-anchor="middle">Powered by Google • Apache 2.0 Licensed</text>
+</svg>
