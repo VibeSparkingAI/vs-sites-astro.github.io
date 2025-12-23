@@ -4625,207 +4625,7 @@ A: 导出功能在路线图上。目前文档存在于 codewiki.google。&lt;/p&
 &lt;li&gt;&lt;a href=&quot;https://api4.ai/blog/top-ai-trends-in-manufacturing-for-2025-industry-40-insights&quot;&gt;2025 年制造业顶级 AI 趋势&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.modelcamtechnologies.com/AI-in-Manufacturing-Key-Trends-and-Innovations-for-2025&quot;&gt;2025 年制造业 AI：关键趋势与创新&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.iiot-world.com/smart-manufacturing/discrete-manufacturing/2025-smart-manufacturing-trends-innovations/&quot;&gt;2025 智能制造展望&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content:encoded><category>AI Agent</category><category>智能制造</category><category>工业 4.0</category><category>预测性维护</category><category>数字化转型</category></item><item><title>Claude Chrome 扩展：普通人也可以用强大的 Claude Code 处理日常工作</title><link>https://www.vibesparking.com/zh-cn/blog/ai/claude-code/chrome-extension/2025-12-20-claude-chrome-extension-chatgpt-moment/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/claude-code/chrome-extension/2025-12-20-claude-chrome-extension-chatgpt-moment/</guid><pubDate>Sat, 20 Dec 2025 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
-&lt;p&gt;Claude Chrome 浏览器扩展：Claude Code 的 ChatGPT 时刻来了&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;当 Claude Code 不再只是对话框，而是真正走进你的 Chrome 浏览器&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;引言属于-anthropic-的chatgpt-时刻&quot;&gt;引言：属于 Anthropic 的”ChatGPT 时刻”&lt;/h2&gt;&lt;a href=&quot;#引言属于-anthropic-的chatgpt-时刻&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “引言：属于 Anthropic 的”ChatGPT 时刻””&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;还记得 ChatGPT 刚发布时的震撼吗？那一刻，AI 从实验室走向了千家万户。&lt;/p&gt;
-&lt;p&gt;现在，Anthropic 正在创造属于自己的”ChatGPT 时刻”——不是通过聊天框，而是通过 &lt;strong&gt;Claude Chrome 扩展&lt;/strong&gt;，让 AI 真正成为你浏览器里的”数字员工”。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Claude Chrome 扩展&lt;/strong&gt; 把 Claude Code 的强大能力带给了普通用户——你不需要懂代码，不需要了解 API，只需要在浏览器里告诉 Claude 你想做什么，它就能帮你完成。&lt;/p&gt;
-&lt;p&gt;这不仅仅是一个浏览器插件，这是 AI 走进日常工作流程的重要一步。&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;什么是-claude-chrome-扩展&quot;&gt;什么是 Claude Chrome 扩展？&lt;/h2&gt;&lt;a href=&quot;#什么是-claude-chrome-扩展&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “什么是 Claude Chrome 扩展？”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;通过 Claude Chrome 扩展，你可以直接在浏览器中告诉 Claude 你想做什么，它就能帮你完成。&lt;/p&gt;
-&lt;p&gt;Claude Chrome 扩展让 Claude 能够：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;导航网页&lt;/strong&gt;：自动打开和浏览任何网站&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;点击按钮&lt;/strong&gt;：模拟用户操作，执行点击动作&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;填写表单&lt;/strong&gt;：自动填充各种表单和输入框&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;后台执行任务&lt;/strong&gt;：你可以继续做其他事，Claude 在后台帮你干活&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;定时执行工作流&lt;/strong&gt;：设置每日或每周的自动化任务&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;核心能力四大使用场景&quot;&gt;核心能力：四大使用场景&lt;/h2&gt;&lt;a href=&quot;#核心能力四大使用场景&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “核心能力：四大使用场景”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h3 id=&quot;1-与-claude-code-无缝协作&quot;&gt;1. 与 Claude Code 无缝协作&lt;/h3&gt;&lt;a href=&quot;#1-与-claude-code-无缝协作&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1. 与 Claude Code 无缝协作”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;开发者可以在 Claude Code 中直接连接 Chrome，实现：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;在浏览器中测试和迭代代码&lt;/li&gt;
-&lt;li&gt;自动化前端测试流程&lt;/li&gt;
-&lt;li&gt;开发与调试的完美结合&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h3 id=&quot;2-融入日常工具&quot;&gt;2. 融入日常工具&lt;/h3&gt;&lt;a href=&quot;#2-融入日常工具&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2. 融入日常工具”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;Claude Chrome 扩展能够操作你每天使用的各种应用：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Google Drive 文件整理&lt;/li&gt;
-&lt;li&gt;日历管理和会议准备&lt;/li&gt;
-&lt;li&gt;CRM 系统数据录入&lt;/li&gt;
-&lt;li&gt;邮件清理和分类&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h3 id=&quot;3-后台任务执行&quot;&gt;3. 后台任务执行&lt;/h3&gt;&lt;a href=&quot;#3-后台任务执行&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3. 后台任务执行”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;Claude Chrome 扩展启动一个工作流程后，你可以继续做其他事：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Claude 会在后台默默完成任务&lt;/li&gt;
-&lt;li&gt;不占用你的注意力&lt;/li&gt;
-&lt;li&gt;结果自动同步&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h3 id=&quot;4-定时工作流&quot;&gt;4. 定时工作流&lt;/h3&gt;&lt;a href=&quot;#4-定时工作流&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “4. 定时工作流”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;Claude Chrome 扩展设置周期性任务，无需手动触发：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;每日数据报告生成&lt;/li&gt;
-&lt;li&gt;每周进度更新&lt;/li&gt;
-&lt;li&gt;定期数据同步和备份&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;实际应用场景&quot;&gt;实际应用场景&lt;/h2&gt;&lt;a href=&quot;#实际应用场景&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “实际应用场景”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;场景&lt;/th&gt;&lt;th&gt;Claude Chrome 扩展 能做什么&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;分析仪表盘数据&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;自动导航到分析平台，提取关键指标，整理成报告&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;整理 Google Drive&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;扫描文件，创建文件夹结构，自动分类归档&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;日历准备&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;读取日程，从邮件中提取上下文，标记需要准备的会议&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;跨站产品比较&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;同时读取多个产品页面，统一格式对比，生成对比表&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;CRM 通话记录&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;自动匹配会议参与者和联系人，生成活动日志&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;清理推广邮件&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;扫描收件箱，识别营销邮件和新闻通讯，批量处理&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;anthropic-vs-openai竞争格局正在改变&quot;&gt;Anthropic vs OpenAI：竞争格局正在改变&lt;/h2&gt;&lt;a href=&quot;#anthropic-vs-openai竞争格局正在改变&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Anthropic vs OpenAI：竞争格局正在改变”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;Claude Chrome 扩展的发布，是 Anthropic 战略的重要一步。让我们看看最新的市场数据：&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;营收对比&quot;&gt;营收对比&lt;/h3&gt;&lt;a href=&quot;#营收对比&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “营收对比”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;指标&lt;/th&gt;&lt;th&gt;Anthropic&lt;/th&gt;&lt;th&gt;OpenAI&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;2024年营收&lt;/td&gt;&lt;td&gt;10亿美元&lt;/td&gt;&lt;td&gt;37亿美元&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2025年预测&lt;/td&gt;&lt;td&gt;70亿美元+&lt;/td&gt;&lt;td&gt;127亿美元&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;增长速度&lt;/td&gt;&lt;td&gt;8000%（21个月）&lt;/td&gt;&lt;td&gt;243%&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
-&lt;div&gt;&lt;h3 id=&quot;用户对比&quot;&gt;用户对比&lt;/h3&gt;&lt;a href=&quot;#用户对比&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “用户对比”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;指标&lt;/th&gt;&lt;th&gt;Claude&lt;/th&gt;&lt;th&gt;ChatGPT&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;月活跃用户&lt;/td&gt;&lt;td&gt;1890万&lt;/td&gt;&lt;td&gt;8亿周活跃&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;企业客户占比&lt;/td&gt;&lt;td&gt;70-80%&lt;/td&gt;&lt;td&gt;-&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
-&lt;div&gt;&lt;h3 id=&quot;关键洞察&quot;&gt;关键洞察&lt;/h3&gt;&lt;a href=&quot;#关键洞察&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “关键洞察”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;差距正在快速缩小&lt;/strong&gt;：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;2024年初，OpenAI 的规模是 Anthropic 的 &lt;strong&gt;15倍&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;2024年底，这个差距缩小到 &lt;strong&gt;5倍&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;Anthropic 的 ARR 已达到 OpenAI 的 &lt;strong&gt;40%&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;企业市场是 Anthropic 的强项&lt;/strong&gt;：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Claude 的消费端用户只有 ChatGPT 的 5%&lt;/li&gt;
-&lt;li&gt;但 ARR 已达 40%，说明企业客户贡献巨大&lt;/li&gt;
-&lt;li&gt;企业客户意味着更稳定的收入和更高的客单价&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;为什么说这是chatgpt-时刻&quot;&gt;为什么说这是”ChatGPT 时刻”？&lt;/h2&gt;&lt;a href=&quot;#为什么说这是chatgpt-时刻&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “为什么说这是”ChatGPT 时刻”？”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;ChatGPT 的成功在于它让普通人与 AI 对话变得触手可及。Claude Chrome 扩展做的是同样的事，但方向不同：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;从对话到行动&lt;/strong&gt;：ChatGPT 让人们学会和 AI 对话，Claude 让 AI 真正帮你做事&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;从开发者到普通用户&lt;/strong&gt;：Claude Code 的能力，现在人人都能用&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;从单点工具到全局助手&lt;/strong&gt;：不再是一个网页应用，而是贯穿整个浏览器体验&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;这正是 Anthropic 需要的突破口——用差异化的产品体验，在 ChatGPT 主导的市场中开辟新赛道。&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;如何开始使用&quot;&gt;如何开始使用？&lt;/h2&gt;&lt;a href=&quot;#如何开始使用&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “如何开始使用？”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ol&gt;
-&lt;li&gt;前往 &lt;a href=&quot;https://chromewebstore.google.com/detail/claude/fcoeoabgfenejglbffodgkkbkcdhcgfn&quot;&gt;Chrome 网上应用店&lt;/a&gt; 安装扩展&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;ol start=&quot;2&quot;&gt;
-&lt;li&gt;点击扩展图标，点击”打开 Claude” 开始使用&lt;/li&gt;
-&lt;li&gt;从简单任务开始，逐步探索更复杂的工作流&lt;/li&gt;
-&lt;/ol&gt;
-&lt;blockquote&gt;
-&lt;p&gt;也可配合 Claude Code 或 Claude Desktop 使用&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;div&gt;&lt;h3 id=&quot;安全提示&quot;&gt;安全提示&lt;/h3&gt;&lt;a href=&quot;#安全提示&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “安全提示”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;Claude Chrome 扩展虽然强大，但请注意：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;从信任的网站开始使用&lt;/li&gt;
-&lt;li&gt;涉及财务、密码等敏感操作时要格外谨慎&lt;/li&gt;
-&lt;li&gt;如发现异常行为，及时暂停并反馈&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;总结&quot;&gt;总结&lt;/h2&gt;&lt;a href=&quot;#总结&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “总结”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;Claude Chrome 扩展代表了 AI 发展的新方向：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;不只是聊天&lt;/strong&gt;，而是真正的任务执行&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;不只是开发者工具&lt;/strong&gt;，而是人人可用&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;不只是功能叠加&lt;/strong&gt;，而是工作流程的革命&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;对于 Anthropic 来说，这可能是改变市场格局的关键一步。虽然 ChatGPT 在用户数量上仍遥遥领先，但 Anthropic 正在用不同的方式追赶——更深入企业场景，更贴近实际工作。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;AI 竞争的下半场，不再只看谁的对话更聪明，而是看谁能真正帮用户做事。&lt;/strong&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;参考资料&quot;&gt;参考资料&lt;/h2&gt;&lt;a href=&quot;#参考资料&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “参考资料”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.claude.com/chrome&quot;&gt;Claude in Chrome 官方页面&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://support.claude.com/en/articles/12902428-using-claude-for-chrome-safely&quot;&gt;Anthropic 安全使用指南&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://sqmagazine.co.uk/openai-vs-anthropic-statistics/&quot;&gt;OpenAI vs Anthropic Statistics 2025&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://sacra.com/c/anthropic/&quot;&gt;Anthropic Revenue and Valuation&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content:encoded><category>AI Agent</category><category>Claude Code</category><category>Claude Chrome Extension</category><category>Anthropic</category></item><item><title>Claude Code + MCP：几分钟内自动发布文章到微信公众号</title><link>https://www.vibesparking.com/zh-cn/blog/ai/claude-code/mcp-wechat/2025-12-20-claude-code-mcp-wechat-auto-publish/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/claude-code/mcp-wechat/2025-12-20-claude-code-mcp-wechat-auto-publish/</guid><pubDate>Sat, 20 Dec 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;/p&gt;
+&lt;/ul&gt;</content:encoded><category>AI Agent</category><category>智能制造</category><category>工业 4.0</category><category>预测性维护</category><category>数字化转型</category></item><item><title>Claude Code + MCP：几分钟内自动发布文章到微信公众号</title><link>https://www.vibesparking.com/zh-cn/blog/ai/claude-code/mcp-wechat/2025-12-20-claude-code-mcp-wechat-auto-publish/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/claude-code/mcp-wechat/2025-12-20-claude-code-mcp-wechat-auto-publish/</guid><pubDate>Sat, 20 Dec 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;/p&gt;
 &lt;div&gt;&lt;h2 id=&quot;引言&quot;&gt;引言&lt;/h2&gt;&lt;a href=&quot;#引言&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “引言”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
 &lt;p&gt;想象一下，从一个简单的想法到一篇经过充分研究、专业撰写的文章发布到你的微信公众号——整个过程只需几分钟，而且不用离开终端？&lt;/p&gt;
 &lt;p&gt;这不是科幻小说。通过 &lt;strong&gt;Claude Code&lt;/strong&gt; 和 &lt;strong&gt;wenyan-mcp&lt;/strong&gt;（模型上下文协议）服务器，你可以创建一个端到端的内容自动化流水线：&lt;/p&gt;
@@ -5029,7 +4829,207 @@ A: 导出功能在路线图上。目前文档存在于 codewiki.google。&lt;/p&
 &lt;li&gt;&lt;a href=&quot;https://github.com/caol64/wenyan-mcp&quot;&gt;wenyan-mcp GitHub 仓库&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://modelcontextprotocol.io/&quot;&gt;MCP 协议规范&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://developers.weixin.qq.com/doc/offiaccount/Getting_Started/Overview.html&quot;&gt;微信公众号 API&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content:encoded><category>AI Agent</category><category>Claude Code</category><category>MCP</category><category>微信公众号</category><category>自动化</category><category>内容创作</category></item><item><title>日报 - 2025-12-17 Accenture and Anthropic partnership</title><link>https://www.vibesparking.com/zh-cn/blog/journals/2025-12-17/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/journals/2025-12-17/</guid><pubDate>Wed, 17 Dec 2025 00:00:00 GMT</pubDate><content:encoded>&lt;div&gt;&lt;h2 id=&quot;accenture-and-anthropic-launch-multi-year-partnership-to-move-enterprises-from-ai-pilots-to-production&quot;&gt;Accenture and Anthropic launch multi-year partnership to move enterprises from AI pilots to production&lt;/h2&gt;&lt;a href=&quot;#accenture-and-anthropic-launch-multi-year-partnership-to-move-enterprises-from-ai-pilots-to-production&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Accenture and Anthropic launch multi-year partnership to move enterprises from AI pilots to production”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;/ul&gt;</content:encoded><category>AI Agent</category><category>Claude Code</category><category>MCP</category><category>微信公众号</category><category>自动化</category><category>内容创作</category></item><item><title>Claude Chrome 扩展：普通人也可以用强大的 Claude Code 处理日常工作</title><link>https://www.vibesparking.com/zh-cn/blog/ai/claude-code/chrome-extension/2025-12-20-claude-chrome-extension-chatgpt-moment/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/claude-code/chrome-extension/2025-12-20-claude-chrome-extension-chatgpt-moment/</guid><pubDate>Sat, 20 Dec 2025 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+&lt;p&gt;Claude Chrome 浏览器扩展：Claude Code 的 ChatGPT 时刻来了&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;当 Claude Code 不再只是对话框，而是真正走进你的 Chrome 浏览器&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;引言属于-anthropic-的chatgpt-时刻&quot;&gt;引言：属于 Anthropic 的”ChatGPT 时刻”&lt;/h2&gt;&lt;a href=&quot;#引言属于-anthropic-的chatgpt-时刻&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “引言：属于 Anthropic 的”ChatGPT 时刻””&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;还记得 ChatGPT 刚发布时的震撼吗？那一刻，AI 从实验室走向了千家万户。&lt;/p&gt;
+&lt;p&gt;现在，Anthropic 正在创造属于自己的”ChatGPT 时刻”——不是通过聊天框，而是通过 &lt;strong&gt;Claude Chrome 扩展&lt;/strong&gt;，让 AI 真正成为你浏览器里的”数字员工”。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Claude Chrome 扩展&lt;/strong&gt; 把 Claude Code 的强大能力带给了普通用户——你不需要懂代码，不需要了解 API，只需要在浏览器里告诉 Claude 你想做什么，它就能帮你完成。&lt;/p&gt;
+&lt;p&gt;这不仅仅是一个浏览器插件，这是 AI 走进日常工作流程的重要一步。&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;什么是-claude-chrome-扩展&quot;&gt;什么是 Claude Chrome 扩展？&lt;/h2&gt;&lt;a href=&quot;#什么是-claude-chrome-扩展&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “什么是 Claude Chrome 扩展？”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;通过 Claude Chrome 扩展，你可以直接在浏览器中告诉 Claude 你想做什么，它就能帮你完成。&lt;/p&gt;
+&lt;p&gt;Claude Chrome 扩展让 Claude 能够：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;导航网页&lt;/strong&gt;：自动打开和浏览任何网站&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;点击按钮&lt;/strong&gt;：模拟用户操作，执行点击动作&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;填写表单&lt;/strong&gt;：自动填充各种表单和输入框&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;后台执行任务&lt;/strong&gt;：你可以继续做其他事，Claude 在后台帮你干活&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;定时执行工作流&lt;/strong&gt;：设置每日或每周的自动化任务&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;核心能力四大使用场景&quot;&gt;核心能力：四大使用场景&lt;/h2&gt;&lt;a href=&quot;#核心能力四大使用场景&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “核心能力：四大使用场景”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3 id=&quot;1-与-claude-code-无缝协作&quot;&gt;1. 与 Claude Code 无缝协作&lt;/h3&gt;&lt;a href=&quot;#1-与-claude-code-无缝协作&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1. 与 Claude Code 无缝协作”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;开发者可以在 Claude Code 中直接连接 Chrome，实现：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;在浏览器中测试和迭代代码&lt;/li&gt;
+&lt;li&gt;自动化前端测试流程&lt;/li&gt;
+&lt;li&gt;开发与调试的完美结合&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;2-融入日常工具&quot;&gt;2. 融入日常工具&lt;/h3&gt;&lt;a href=&quot;#2-融入日常工具&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2. 融入日常工具”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Claude Chrome 扩展能够操作你每天使用的各种应用：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Google Drive 文件整理&lt;/li&gt;
+&lt;li&gt;日历管理和会议准备&lt;/li&gt;
+&lt;li&gt;CRM 系统数据录入&lt;/li&gt;
+&lt;li&gt;邮件清理和分类&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;3-后台任务执行&quot;&gt;3. 后台任务执行&lt;/h3&gt;&lt;a href=&quot;#3-后台任务执行&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3. 后台任务执行”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Claude Chrome 扩展启动一个工作流程后，你可以继续做其他事：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Claude 会在后台默默完成任务&lt;/li&gt;
+&lt;li&gt;不占用你的注意力&lt;/li&gt;
+&lt;li&gt;结果自动同步&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;4-定时工作流&quot;&gt;4. 定时工作流&lt;/h3&gt;&lt;a href=&quot;#4-定时工作流&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “4. 定时工作流”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Claude Chrome 扩展设置周期性任务，无需手动触发：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;每日数据报告生成&lt;/li&gt;
+&lt;li&gt;每周进度更新&lt;/li&gt;
+&lt;li&gt;定期数据同步和备份&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;实际应用场景&quot;&gt;实际应用场景&lt;/h2&gt;&lt;a href=&quot;#实际应用场景&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “实际应用场景”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;场景&lt;/th&gt;&lt;th&gt;Claude Chrome 扩展 能做什么&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;分析仪表盘数据&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;自动导航到分析平台，提取关键指标，整理成报告&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;整理 Google Drive&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;扫描文件，创建文件夹结构，自动分类归档&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;日历准备&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;读取日程，从邮件中提取上下文，标记需要准备的会议&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;跨站产品比较&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;同时读取多个产品页面，统一格式对比，生成对比表&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;CRM 通话记录&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;自动匹配会议参与者和联系人，生成活动日志&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;清理推广邮件&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;扫描收件箱，识别营销邮件和新闻通讯，批量处理&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;anthropic-vs-openai竞争格局正在改变&quot;&gt;Anthropic vs OpenAI：竞争格局正在改变&lt;/h2&gt;&lt;a href=&quot;#anthropic-vs-openai竞争格局正在改变&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Anthropic vs OpenAI：竞争格局正在改变”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Claude Chrome 扩展的发布，是 Anthropic 战略的重要一步。让我们看看最新的市场数据：&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;营收对比&quot;&gt;营收对比&lt;/h3&gt;&lt;a href=&quot;#营收对比&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “营收对比”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;指标&lt;/th&gt;&lt;th&gt;Anthropic&lt;/th&gt;&lt;th&gt;OpenAI&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;2024年营收&lt;/td&gt;&lt;td&gt;10亿美元&lt;/td&gt;&lt;td&gt;37亿美元&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2025年预测&lt;/td&gt;&lt;td&gt;70亿美元+&lt;/td&gt;&lt;td&gt;127亿美元&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;增长速度&lt;/td&gt;&lt;td&gt;8000%（21个月）&lt;/td&gt;&lt;td&gt;243%&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;div&gt;&lt;h3 id=&quot;用户对比&quot;&gt;用户对比&lt;/h3&gt;&lt;a href=&quot;#用户对比&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “用户对比”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;指标&lt;/th&gt;&lt;th&gt;Claude&lt;/th&gt;&lt;th&gt;ChatGPT&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;月活跃用户&lt;/td&gt;&lt;td&gt;1890万&lt;/td&gt;&lt;td&gt;8亿周活跃&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;企业客户占比&lt;/td&gt;&lt;td&gt;70-80%&lt;/td&gt;&lt;td&gt;-&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;div&gt;&lt;h3 id=&quot;关键洞察&quot;&gt;关键洞察&lt;/h3&gt;&lt;a href=&quot;#关键洞察&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “关键洞察”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;差距正在快速缩小&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;2024年初，OpenAI 的规模是 Anthropic 的 &lt;strong&gt;15倍&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;2024年底，这个差距缩小到 &lt;strong&gt;5倍&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Anthropic 的 ARR 已达到 OpenAI 的 &lt;strong&gt;40%&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;企业市场是 Anthropic 的强项&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Claude 的消费端用户只有 ChatGPT 的 5%&lt;/li&gt;
+&lt;li&gt;但 ARR 已达 40%，说明企业客户贡献巨大&lt;/li&gt;
+&lt;li&gt;企业客户意味着更稳定的收入和更高的客单价&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;为什么说这是chatgpt-时刻&quot;&gt;为什么说这是”ChatGPT 时刻”？&lt;/h2&gt;&lt;a href=&quot;#为什么说这是chatgpt-时刻&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “为什么说这是”ChatGPT 时刻”？”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;ChatGPT 的成功在于它让普通人与 AI 对话变得触手可及。Claude Chrome 扩展做的是同样的事，但方向不同：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;从对话到行动&lt;/strong&gt;：ChatGPT 让人们学会和 AI 对话，Claude 让 AI 真正帮你做事&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;从开发者到普通用户&lt;/strong&gt;：Claude Code 的能力，现在人人都能用&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;从单点工具到全局助手&lt;/strong&gt;：不再是一个网页应用，而是贯穿整个浏览器体验&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;这正是 Anthropic 需要的突破口——用差异化的产品体验，在 ChatGPT 主导的市场中开辟新赛道。&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;如何开始使用&quot;&gt;如何开始使用？&lt;/h2&gt;&lt;a href=&quot;#如何开始使用&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “如何开始使用？”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ol&gt;
+&lt;li&gt;前往 &lt;a href=&quot;https://chromewebstore.google.com/detail/claude/fcoeoabgfenejglbffodgkkbkcdhcgfn&quot;&gt;Chrome 网上应用店&lt;/a&gt; 安装扩展&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;ol start=&quot;2&quot;&gt;
+&lt;li&gt;点击扩展图标，点击”打开 Claude” 开始使用&lt;/li&gt;
+&lt;li&gt;从简单任务开始，逐步探索更复杂的工作流&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;也可配合 Claude Code 或 Claude Desktop 使用&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div&gt;&lt;h3 id=&quot;安全提示&quot;&gt;安全提示&lt;/h3&gt;&lt;a href=&quot;#安全提示&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “安全提示”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Claude Chrome 扩展虽然强大，但请注意：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;从信任的网站开始使用&lt;/li&gt;
+&lt;li&gt;涉及财务、密码等敏感操作时要格外谨慎&lt;/li&gt;
+&lt;li&gt;如发现异常行为，及时暂停并反馈&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;总结&quot;&gt;总结&lt;/h2&gt;&lt;a href=&quot;#总结&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “总结”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Claude Chrome 扩展代表了 AI 发展的新方向：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;不只是聊天&lt;/strong&gt;，而是真正的任务执行&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;不只是开发者工具&lt;/strong&gt;，而是人人可用&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;不只是功能叠加&lt;/strong&gt;，而是工作流程的革命&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;对于 Anthropic 来说，这可能是改变市场格局的关键一步。虽然 ChatGPT 在用户数量上仍遥遥领先，但 Anthropic 正在用不同的方式追赶——更深入企业场景，更贴近实际工作。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;AI 竞争的下半场，不再只看谁的对话更聪明，而是看谁能真正帮用户做事。&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;参考资料&quot;&gt;参考资料&lt;/h2&gt;&lt;a href=&quot;#参考资料&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “参考资料”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.claude.com/chrome&quot;&gt;Claude in Chrome 官方页面&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://support.claude.com/en/articles/12902428-using-claude-for-chrome-safely&quot;&gt;Anthropic 安全使用指南&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://sqmagazine.co.uk/openai-vs-anthropic-statistics/&quot;&gt;OpenAI vs Anthropic Statistics 2025&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://sacra.com/c/anthropic/&quot;&gt;Anthropic Revenue and Valuation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded><category>AI Agent</category><category>Claude Code</category><category>Claude Chrome Extension</category><category>Anthropic</category></item><item><title>日报 - 2025-12-17 Accenture and Anthropic partnership</title><link>https://www.vibesparking.com/zh-cn/blog/journals/2025-12-17/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/journals/2025-12-17/</guid><pubDate>Wed, 17 Dec 2025 00:00:00 GMT</pubDate><content:encoded>&lt;div&gt;&lt;h2 id=&quot;accenture-and-anthropic-launch-multi-year-partnership-to-move-enterprises-from-ai-pilots-to-production&quot;&gt;Accenture and Anthropic launch multi-year partnership to move enterprises from AI pilots to production&lt;/h2&gt;&lt;a href=&quot;#accenture-and-anthropic-launch-multi-year-partnership-to-move-enterprises-from-ai-pilots-to-production&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Accenture and Anthropic launch multi-year partnership to move enterprises from AI pilots to production”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;[[Forward Deployed Engineer]] / [[Reinvention Deployed Engineer]]&lt;/p&gt;
