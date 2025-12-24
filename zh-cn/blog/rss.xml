@@ -1,4 +1,317 @@
-<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Vibe Sparking AI | Blog</title><description/><link>https://www.vibesparking.com/</link><language>zh-CN</language><item><title>MoneyMind（省钱思维）iOS 应用送审 App Store</title><link>https://www.vibesparking.com/zh-cn/blog/compounding-life/money-mind/ios-app-store/2025-12-24-ios-app-store-submission-guide/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/compounding-life/money-mind/ios-app-store/2025-12-24-ios-app-store-submission-guide/</guid><pubDate>Wed, 24 Dec 2025 00:00:00 GMT</pubDate><content:encoded>&lt;div&gt;&lt;h1 id=&quot;moneymind省钱思维ios-应用送审-app-store&quot;&gt;MoneyMind（省钱思维）iOS 应用送审 App Store&lt;/h1&gt;&lt;a href=&quot;#moneymind省钱思维ios-应用送审-app-store&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “MoneyMind（省钱思维）iOS 应用送审 App Store”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Vibe Sparking AI | Blog</title><description/><link>https://www.vibesparking.com/</link><language>zh-CN</language><item><title>Agent Skills 上下文工程指南：构建生产级 AI 智能体系统</title><link>https://www.vibesparking.com/zh-cn/blog/ai/agent-skills/context-engineering/2025-12-24-agent-skills-context-engineering-comprehensive-guide/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/agent-skills/context-engineering/2025-12-24-agent-skills-context-engineering-comprehensive-guide/</guid><pubDate>Wed, 24 Dec 2025 00:00:00 GMT</pubDate><content:encoded>&lt;div&gt;&lt;h1 id=&quot;agent-skills-上下文工程指南构建生产级-ai-智能体系统&quot;&gt;Agent Skills 上下文工程指南：构建生产级 AI 智能体系统&lt;/h1&gt;&lt;a href=&quot;#agent-skills-上下文工程指南构建生产级-ai-智能体系统&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Agent Skills 上下文工程指南：构建生产级 AI 智能体系统”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;在快速发展的 AI 开发领域，&lt;strong&gt;上下文工程（Context Engineering）&lt;/strong&gt; 已成为构建有效智能体系统最关键的学科之一。与专注于编写有效指令的提示工程不同，上下文工程解决的是如何全面管理进入模型有限注意力窗口的所有信息。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Agent Skills for Context Engineering&lt;/strong&gt; 是由 Murat Can Koylan 创建的一个全面、开源的技能集合，旨在教授策划上下文的艺术和科学，以最大化任何平台上的智能体效能。&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;什么是上下文工程&quot;&gt;什么是上下文工程？&lt;/h2&gt;&lt;a href=&quot;#什么是上下文工程&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “什么是上下文工程？”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;上下文工程是管理语言模型上下文窗口的学科。核心挑战在于上下文窗口不是受原始 token 容量限制，而是受&lt;strong&gt;注意力机制&lt;/strong&gt;限制。&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;核心问题&quot;&gt;核心问题&lt;/h3&gt;&lt;a href=&quot;#核心问题&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “核心问题”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;随着上下文长度增加，模型会表现出可预测的退化模式：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;中间丢失现象（Lost-in-the-Middle）&lt;/strong&gt; - 长上下文中间的信息获得的注意力更少&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;U形注意力曲线&lt;/strong&gt; - 模型更关注上下文的开头和结尾&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;注意力稀缺&lt;/strong&gt; - 有限的”注意力预算”必须明智分配&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;解决方案&quot;&gt;解决方案&lt;/h3&gt;&lt;a href=&quot;#解决方案&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “解决方案”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;有效的上下文工程意味着找到&lt;strong&gt;最小可能的高信号 token 集合&lt;/strong&gt;，以最大化预期结果的可能性。这需要理解什么是上下文、它如何退化，以及如何优化它。&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;技能概览&quot;&gt;技能概览&lt;/h2&gt;&lt;a href=&quot;#技能概览&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “技能概览”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;该集合按照复杂度递增分为三个层级。&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;基础技能&quot;&gt;基础技能&lt;/h3&gt;&lt;a href=&quot;#基础技能&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “基础技能”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;这些技能建立了后续所有上下文工程工作所需的基础理解。&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;技能&lt;/th&gt;&lt;th&gt;描述&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;context-fundamentals&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;理解什么是上下文、为什么重要，以及智能体系统中上下文的结构&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;context-degradation&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;识别上下文失效模式：中间丢失、污染、干扰和冲突&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;context-compression&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;为长时运行会话设计和评估压缩策略&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;div&gt;&lt;h3 id=&quot;架构技能&quot;&gt;架构技能&lt;/h3&gt;&lt;a href=&quot;#架构技能&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “架构技能”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;这些技能涵盖构建有效智能体系统的模式和结构。&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;技能&lt;/th&gt;&lt;th&gt;描述&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;multi-agent-patterns&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;掌握编排器、点对点和分层多智能体架构&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;memory-systems&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;设计短期、长期和基于图的记忆架构&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;tool-design&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;构建智能体可以有效使用的工具&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;div&gt;&lt;h3 id=&quot;运维技能&quot;&gt;运维技能&lt;/h3&gt;&lt;a href=&quot;#运维技能&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “运维技能”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;这些技能解决智能体系统的持续运行和优化问题。&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;技能&lt;/th&gt;&lt;th&gt;描述&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;context-optimization&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;应用压缩、掩码和缓存策略&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;evaluation&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;为智能体系统构建评估框架&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;div&gt;&lt;h2 id=&quot;关键概念深入解析&quot;&gt;关键概念深入解析&lt;/h2&gt;&lt;a href=&quot;#关键概念深入解析&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “关键概念深入解析”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3 id=&quot;1-上下文基础&quot;&gt;1. 上下文基础&lt;/h3&gt;&lt;a href=&quot;#1-上下文基础&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1. 上下文基础”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;理解智能体系统中上下文的结构至关重要：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;上下文组成部分：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;系统提示词&lt;/li&gt;
+&lt;li&gt;工具定义&lt;/li&gt;
+&lt;li&gt;检索到的文档&lt;/li&gt;
+&lt;li&gt;消息历史&lt;/li&gt;
+&lt;li&gt;工具输出&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;每个组成部分都在竞争有限的注意力。有效的智能体会优先处理高信号信息，压缩或消除低信号内容。&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;2-上下文退化模式&quot;&gt;2. 上下文退化模式&lt;/h3&gt;&lt;a href=&quot;#2-上下文退化模式&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2. 上下文退化模式”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;识别失效模式有助于预防它们：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;中间丢失（Lost-in-Middle）：&lt;/strong&gt;
+放置在长上下文中间的关键信息获得的模型注意力较少。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;上下文污染（Context Poisoning）：&lt;/strong&gt;
+错误或冲突的信息破坏模型的理解。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;上下文干扰（Context Distraction）：&lt;/strong&gt;
+无关信息分散了对重要内容的注意力。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;上下文冲突（Context Clash）：&lt;/strong&gt;
+矛盾的指令或数据造成混乱。&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;3-多智能体模式&quot;&gt;3. 多智能体模式&lt;/h3&gt;&lt;a href=&quot;#3-多智能体模式&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3. 多智能体模式”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;多智能体系统的三种主要架构：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;编排器模式（Orchestrator Pattern）：&lt;/strong&gt;
+一个中央智能体协调专门的子智能体，管理任务委派和结果汇总。&lt;/p&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;plaintext&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;     &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;[编排器]&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;        &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;/|\&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;       &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;/ | \&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;      &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;/  |  \&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;[智能体][智能体][智能体]&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;点对点模式（Peer-to-Peer Pattern）：&lt;/strong&gt;
+智能体直接通信，无需中央协调，适合协作任务。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;分层模式（Hierarchical Pattern）：&lt;/strong&gt;
+分层的智能体结构，高层智能体管理低层智能体组。&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;4-记忆系统&quot;&gt;4. 记忆系统&lt;/h3&gt;&lt;a href=&quot;#4-记忆系统&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “4. 记忆系统”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;有效的智能体需要多种记忆类型：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;短期记忆：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;最近的对话上下文&lt;/li&gt;
+&lt;li&gt;当前任务状态&lt;/li&gt;
+&lt;li&gt;即时工作记忆&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;长期记忆：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;持久知识存储&lt;/li&gt;
+&lt;li&gt;用户偏好&lt;/li&gt;
+&lt;li&gt;历史模式&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;基于图的记忆：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;概念之间的关系图&lt;/li&gt;
+&lt;li&gt;实体连接&lt;/li&gt;
+&lt;li&gt;语义网络&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h2 id=&quot;安装和使用&quot;&gt;安装和使用&lt;/h2&gt;&lt;a href=&quot;#安装和使用&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “安装和使用”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3 id=&quot;用于-claude-code&quot;&gt;用于 Claude Code&lt;/h3&gt;&lt;a href=&quot;#用于-claude-code&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “用于 Claude Code”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;通过引用仓库或将技能文件夹复制到配置的技能目录来安装技能：&lt;/p&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# 克隆仓库&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;git&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;clone&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering.git&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# 复制技能到你的项目&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;cp&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;-r&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;Agent-Skills-for-Context-Engineering/skills/&lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;*&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;./skills/&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;p&gt;在处理上下文工程任务时，激活相关技能以加载其指令。&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;用于-cursor&quot;&gt;用于 Cursor&lt;/h3&gt;&lt;a href=&quot;#用于-cursor&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “用于 Cursor”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;将技能内容复制到 &lt;code dir=&quot;auto&quot;&gt;.cursorrules&lt;/code&gt; 或创建项目特定的规则文件：&lt;/p&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# 创建规则文件&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;cat&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;skills/context-fundamentals/SKILL.md&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&gt;&gt;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;.cursorrules&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;button title=&quot;Copy to clipboard&quot; data-copied=&quot;Copied!&quot; data-code=&quot;&quot;&gt;&gt; .cursorrules&quot;&gt;&lt;div&gt;&lt;/div&gt;&lt;/button&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;p&gt;这些技能提供 Cursor 智能体进行有效上下文工程所需的上下文和指南。&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;用于自定义实现&quot;&gt;用于自定义实现&lt;/h3&gt;&lt;a href=&quot;#用于自定义实现&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “用于自定义实现”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;从任何技能中提取原则和模式，在你的智能体框架中实现它们。这些技能故意设计为平台无关，使其适用于任何基于 LLM 的系统。&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;推荐使用场景&quot;&gt;推荐使用场景&lt;/h2&gt;&lt;a href=&quot;#推荐使用场景&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “推荐使用场景”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3 id=&quot;1-构建生产智能体系统&quot;&gt;1. 构建生产智能体系统&lt;/h3&gt;&lt;a href=&quot;#1-构建生产智能体系统&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1. 构建生产智能体系统”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;开发面向实际部署的智能体时：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;从基础开始&lt;/strong&gt; - 在优化之前理解上下文结构&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;尽早设计记忆&lt;/strong&gt; - 记忆架构影响所有下游决策&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;规划退化应对&lt;/strong&gt; - 内置监控和恢复机制&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;规模测试&lt;/strong&gt; - 评估框架在生产前捕获问题&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;2-优化现有智能体&quot;&gt;2. 优化现有智能体&lt;/h3&gt;&lt;a href=&quot;#2-优化现有智能体&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2. 优化现有智能体”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;对于已有智能体系统的团队：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;诊断上下文问题&lt;/strong&gt; - 使用退化模式识别问题&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;应用压缩策略&lt;/strong&gt; - 在不丢失信号的情况下减少 token 使用&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;实现缓存&lt;/strong&gt; - 避免冗余的上下文加载&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;添加监控&lt;/strong&gt; - 建立对上下文使用的可见性&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;3-多智能体架构设计&quot;&gt;3. 多智能体架构设计&lt;/h3&gt;&lt;a href=&quot;#3-多智能体架构设计&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3. 多智能体架构设计”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;构建多个协调智能体的系统时：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;选择正确的模式&lt;/strong&gt; - 编排器 vs 点对点 vs 分层&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;设计通信协议&lt;/strong&gt; - 智能体如何共享上下文&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;管理共享记忆&lt;/strong&gt; - 无冲突的协调&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;优雅处理故障&lt;/strong&gt; - 智能体失败时的恢复&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;4-教育和培训目的&quot;&gt;4. 教育和培训目的&lt;/h3&gt;&lt;a href=&quot;#4-教育和培训目的&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “4. 教育和培训目的”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;用于学习智能体开发：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;渐进式披露&lt;/strong&gt; - 技能按逻辑顺序相互构建&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;实用示例&lt;/strong&gt; - Python 伪代码演示概念&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;平台无关&lt;/strong&gt; - 学习原则，而非供应商锁定&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;开源&lt;/strong&gt; - 学习、修改和贡献&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h2 id=&quot;日常工作流示例&quot;&gt;日常工作流示例&lt;/h2&gt;&lt;a href=&quot;#日常工作流示例&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “日常工作流示例”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3 id=&quot;早间上下文审查&quot;&gt;早间上下文审查&lt;/h3&gt;&lt;a href=&quot;#早间上下文审查&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “早间上下文审查”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;plaintext&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;1. 加载 context-fundamentals 技能&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;2. 审查夜间智能体日志中的退化模式&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;3. 识别上下文瓶颈&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;4. 规划优化任务&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;5. 更新监控仪表板&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3 id=&quot;新智能体开发&quot;&gt;新智能体开发&lt;/h3&gt;&lt;a href=&quot;#新智能体开发&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “新智能体开发”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;plaintext&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;1. 激活 multi-agent-patterns 技能&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;2. 设计智能体架构图&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;3. 为每个智能体定义上下文边界&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;4. 实现记忆系统&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;5. 构建评估框架&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;6. 使用 context-degradation 检查进行测试&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3 id=&quot;调试智能体问题&quot;&gt;调试智能体问题&lt;/h3&gt;&lt;a href=&quot;#调试智能体问题&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “调试智能体问题”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;plaintext&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;1. 加载 context-degradation 技能&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;2. 识别症状（中间丢失？污染？）&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;3. 追踪系统中的上下文流&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;4. 应用适当的修复策略&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;5. 使用 evaluation 技能验证&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h2 id=&quot;最佳实践&quot;&gt;最佳实践&lt;/h2&gt;&lt;a href=&quot;#最佳实践&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “最佳实践”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3 id=&quot;设计理念&quot;&gt;设计理念&lt;/h3&gt;&lt;a href=&quot;#设计理念&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “设计理念”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;该集合遵循三个关键原则：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1. 渐进式披露&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;每个技能都为高效上下文使用而结构化。启动时，智能体只加载技能名称和描述。只有在为相关任务激活技能时才加载完整内容。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2. 平台无关性&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;这些技能专注于可转移的原则，而非供应商特定的实现。这些模式适用于 Claude Code、Cursor 以及任何支持技能或允许自定义指令的智能体平台。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;3. 概念基础与实用示例相结合&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;脚本和示例使用 Python 伪代码演示概念，可在不需要特定依赖安装的情况下跨环境工作。&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;技能结构&quot;&gt;技能结构&lt;/h3&gt;&lt;a href=&quot;#技能结构&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “技能结构”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;每个技能遵循 Agent Skills 规范：&lt;/p&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;plaintext&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;skill-name/&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;├── SKILL.md              # 必需：指令 + 元数据&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;├── scripts/              # 可选：可执行代码&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;└── references/           # 可选：额外文档&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3 id=&quot;贡献指南&quot;&gt;贡献指南&lt;/h3&gt;&lt;a href=&quot;#贡献指南&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “贡献指南”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;贡献新技能时：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;遵循技能模板结构&lt;/li&gt;
+&lt;li&gt;提供清晰、可操作的指令&lt;/li&gt;
+&lt;li&gt;在适当时包含工作示例&lt;/li&gt;
+&lt;li&gt;记录权衡和潜在问题&lt;/li&gt;
+&lt;li&gt;保持 SKILL.md 在 500 行以内以获得最佳性能&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div&gt;&lt;h2 id=&quot;与替代方案对比&quot;&gt;与替代方案对比&lt;/h2&gt;&lt;a href=&quot;#与替代方案对比&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “与替代方案对比”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;功能&lt;/th&gt;&lt;th&gt;Agent Skills&lt;/th&gt;&lt;th&gt;自定义规则&lt;/th&gt;&lt;th&gt;框架文档&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;平台支持&lt;/td&gt;&lt;td&gt;任何&lt;/td&gt;&lt;td&gt;平台特定&lt;/td&gt;&lt;td&gt;框架特定&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;焦点&lt;/td&gt;&lt;td&gt;上下文工程&lt;/td&gt;&lt;td&gt;通用&lt;/td&gt;&lt;td&gt;框架使用&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;结构&lt;/td&gt;&lt;td&gt;标准化&lt;/td&gt;&lt;td&gt;可变&lt;/td&gt;&lt;td&gt;可变&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;渐进加载&lt;/td&gt;&lt;td&gt;是&lt;/td&gt;&lt;td&gt;否&lt;/td&gt;&lt;td&gt;否&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;开源&lt;/td&gt;&lt;td&gt;MIT&lt;/td&gt;&lt;td&gt;不定&lt;/td&gt;&lt;td&gt;不定&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;示例&lt;/td&gt;&lt;td&gt;Python 伪代码&lt;/td&gt;&lt;td&gt;不定&lt;/td&gt;&lt;td&gt;框架特定&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;div&gt;&lt;h3 id=&quot;为什么选择-agent-skills&quot;&gt;为什么选择 Agent Skills？&lt;/h3&gt;&lt;a href=&quot;#为什么选择-agent-skills&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “为什么选择 Agent Skills？”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;相比自定义规则：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;标准化结构实现共享和复用&lt;/li&gt;
+&lt;li&gt;渐进式披露减少初始上下文成本&lt;/li&gt;
+&lt;li&gt;社区贡献扩展覆盖范围&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;相比框架文档：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;专注于原则，而非实现细节&lt;/li&gt;
+&lt;li&gt;可跨平台转移&lt;/li&gt;
+&lt;li&gt;面向生产系统的实用导向&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h2 id=&quot;故障排除与常见问题&quot;&gt;故障排除与常见问题&lt;/h2&gt;&lt;a href=&quot;#故障排除与常见问题&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “故障排除与常见问题”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3 id=&quot;常见问题&quot;&gt;常见问题&lt;/h3&gt;&lt;a href=&quot;#常见问题&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “常见问题”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Q: 这些技能适用于任何 LLM 吗？&lt;/strong&gt;
+A: 是的，这些原则与 LLM 无关。示例使用 Python 伪代码，可以适应任何环境。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Q: 我怎么知道使用哪个技能？&lt;/strong&gt;
+A: 从基础开始，然后为设计决策使用架构技能，为优化使用运维技能。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Q: 我可以贡献新技能吗？&lt;/strong&gt;
+A: 当然可以！遵循模板结构并提交 pull request。欢迎社区贡献。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Q: 使用这些技能有相关费用吗？&lt;/strong&gt;
+A: 没有，仓库采用 MIT 许可证。但是，你使用这些技能的 LLM 可能有相关费用。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Q: 技能如何处理上下文限制？&lt;/strong&gt;
+A: 渐进式披露意味着只加载相关内容。每个技能设计为保持在 500 行以内。&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;故障排除&quot;&gt;故障排除&lt;/h3&gt;&lt;a href=&quot;#故障排除&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “故障排除”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;技能无法加载：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;确保技能文件夹结构正确&lt;/li&gt;
+&lt;li&gt;检查技能目录中是否存在 SKILL.md&lt;/li&gt;
+&lt;li&gt;验证文件权限&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;智能体性能不佳：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;查看 context-degradation 技能以获取诊断模式&lt;/li&gt;
+&lt;li&gt;检查是否超出上下文窗口&lt;/li&gt;
+&lt;li&gt;评估信息信噪比&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;多智能体协调问题：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;查看 multi-agent-patterns 技能&lt;/li&gt;
+&lt;li&gt;检查消息传递协议&lt;/li&gt;
+&lt;li&gt;验证共享记忆访问模式&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h2 id=&quot;参考链接&quot;&gt;参考链接&lt;/h2&gt;&lt;a href=&quot;#参考链接&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “参考链接”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;GitHub 仓库&lt;/strong&gt;: &lt;a href=&quot;https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering&quot;&gt;muratcankoylan/Agent-Skills-for-Context-Engineering&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;技能模板&lt;/strong&gt;: &lt;a href=&quot;https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering/tree/main/template&quot;&gt;仓库中的模板文件夹&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;示例&lt;/strong&gt;: &lt;a href=&quot;https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering/tree/main/examples/x-to-book-system&quot;&gt;X-to-Book 系统示例&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Agent Skills 规范&lt;/strong&gt;: 关注仓库获取更新&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h2 id=&quot;结语&quot;&gt;结语&lt;/h2&gt;&lt;a href=&quot;#结语&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “结语”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;上下文工程正在成为 AI 开发中与软件工程原则对传统开发一样基础的学科。&lt;strong&gt;Agent Skills for Context Engineering&lt;/strong&gt; 为掌握这一关键学科提供了结构化、开放和平台无关的基础。&lt;/p&gt;
+&lt;p&gt;无论你是在构建第一个智能体还是优化生产多智能体系统，这些技能都提供了成功所需的概念基础和实用指导。渐进式披露设计意味着你可以从小处开始，根据需要扩展，而平台无关的方法确保你的学习可以跨工具和框架转移。&lt;/p&gt;
+&lt;p&gt;AI 智能体生态系统正在快速成熟，上下文工程将成为区分”能工作”和”工作得好”的智能体的关键差异化因素。从基础开始，理解退化模式，构建有效管理上下文的系统。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;em&gt;在 &lt;a href=&quot;https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering&quot;&gt;Agent Skills for Context Engineering&lt;/a&gt; 探索完整集合，加入构建更好智能体系统的社区。&lt;/em&gt;&lt;/p&gt;</content:encoded><category>AI</category><category>Agent Skills</category><category>上下文工程</category><category>多智能体</category><category>Claude Code</category><category>Cursor</category><category>LLM</category><category>生产系统</category></item><item><title>MoneyMind（省钱思维）iOS 应用送审 App Store</title><link>https://www.vibesparking.com/zh-cn/blog/compounding-life/money-mind/ios-app-store/2025-12-24-ios-app-store-submission-guide/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/compounding-life/money-mind/ios-app-store/2025-12-24-ios-app-store-submission-guide/</guid><pubDate>Wed, 24 Dec 2025 00:00:00 GMT</pubDate><content:encoded>&lt;div&gt;&lt;h1 id=&quot;moneymind省钱思维ios-应用送审-app-store&quot;&gt;MoneyMind（省钱思维）iOS 应用送审 App Store&lt;/h1&gt;&lt;a href=&quot;#moneymind省钱思维ios-应用送审-app-store&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “MoneyMind（省钱思维）iOS 应用送审 App Store”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
 &lt;blockquote&gt;
 &lt;p&gt;MoneyMind（省钱思维）是一款帮助用户设定储蓄目标并通过日常小额存钱实现目标的 App 应用。从 2025 年 11 月初开始开发，断断续续画了一个多月，终于在 2025 年 12 月初完成代码开发。这段时间忙于处理其它项目，一直懒得提交审核。今天赶在圣诞节前夕，终于把应用提交到 App Store 审核。整个过程花了不少时间，遇到了一些坑，也学到了不少经验。本文将详细记录从准备应用图标、配置证书、上传构建到最终提交审核的完整流程，希望能帮助到同样准备上架 iOS 应用的开发者朋友们。&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -5126,208 +5439,4 @@ A: 导出功能在路线图上。目前文档存在于 codewiki.google。&lt;/p&
 &lt;li&gt;&lt;a href=&quot;https://support.claude.com/en/articles/12902428-using-claude-for-chrome-safely&quot;&gt;Anthropic 安全使用指南&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://sqmagazine.co.uk/openai-vs-anthropic-statistics/&quot;&gt;OpenAI vs Anthropic Statistics 2025&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://sacra.com/c/anthropic/&quot;&gt;Anthropic Revenue and Valuation&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content:encoded><category>AI Agent</category><category>Claude Code</category><category>Claude Chrome Extension</category><category>Anthropic</category></item><item><title>Claude Code + MCP：几分钟内自动发布文章到微信公众号</title><link>https://www.vibesparking.com/zh-cn/blog/ai/claude-code/mcp-wechat/2025-12-20-claude-code-mcp-wechat-auto-publish/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/claude-code/mcp-wechat/2025-12-20-claude-code-mcp-wechat-auto-publish/</guid><pubDate>Sat, 20 Dec 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;/p&gt;
-&lt;div&gt;&lt;h2 id=&quot;引言&quot;&gt;引言&lt;/h2&gt;&lt;a href=&quot;#引言&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “引言”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;想象一下，从一个简单的想法到一篇经过充分研究、专业撰写的文章发布到你的微信公众号——整个过程只需几分钟，而且不用离开终端？&lt;/p&gt;
-&lt;p&gt;这不是科幻小说。通过 &lt;strong&gt;Claude Code&lt;/strong&gt; 和 &lt;strong&gt;wenyan-mcp&lt;/strong&gt;（模型上下文协议）服务器，你可以创建一个端到端的内容自动化流水线：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;使用网络搜索研究主题&lt;/li&gt;
-&lt;li&gt;生成高质量的中英双语文章&lt;/li&gt;
-&lt;li&gt;自动发布到微信草稿箱&lt;/li&gt;
-&lt;li&gt;应用精美的格式主题&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;让我来展示具体的配置方法。&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;准备工作&quot;&gt;准备工作&lt;/h2&gt;&lt;a href=&quot;#准备工作&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “准备工作”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;开始之前，请确保你有：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Claude Code&lt;/strong&gt; 已安装（推荐 v2.0+）&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Docker&lt;/strong&gt; 在你的机器上运行&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;微信公众号&lt;/strong&gt; 及其 API 凭据（AppID 和 AppSecret）&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;第一步安装-claude-code&quot;&gt;第一步：安装 Claude Code&lt;/h2&gt;&lt;a href=&quot;#第一步安装-claude-code&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “第一步：安装 Claude Code”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;如果你还没有安装 Claude Code：&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# 使用 npm&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;npm&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;install&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;-g&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;@anthropic-ai/claude-code&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# 或使用 Homebrew (macOS)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;brew&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;install&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;claude-code&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;p&gt;验证安装：&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;claude&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;--version&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# Claude Code v2.0.74&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;第二步配置-wenyan-mcp-连接微信&quot;&gt;第二步：配置 wenyan-mcp 连接微信&lt;/h2&gt;&lt;a href=&quot;#第二步配置-wenyan-mcp-连接微信&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “第二步：配置 wenyan-mcp 连接微信”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;魔法发生在 MCP（模型上下文协议）——这是一个允许 Claude 与外部工具和服务交互的标准。&lt;/p&gt;
-&lt;p&gt;在你的 Claude Code MCP 设置中添加以下配置（&lt;code dir=&quot;auto&quot;&gt;~/.claude/settings.json&lt;/code&gt; 或项目级别的 &lt;code dir=&quot;auto&quot;&gt;.claude/settings.local.json&lt;/code&gt;）：&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;json&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;{&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;mcpServers&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: {&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;wenyan-mcp&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: {&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;      &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;name&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;公众号助手&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;      &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;command&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;docker&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;      &lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;&quot;args&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: [&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;        &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;run&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;        &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;--rm&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;        &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;-i&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;        &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;-v&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;        &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;/你的图片路径:/mnt/host-downloads&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;        &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;-e&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;        &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;WECHAT_APP_ID=你的微信AppID&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;        &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;-e&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;        &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;WECHAT_APP_SECRET=你的微信AppSecret&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;        &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;-e&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;        &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;HOST_IMAGE_PATH=/你的图片路径&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;        &lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;--0:#C789D6;--1:#7C5686&quot;&gt;caol64/wenyan-mcp&lt;/span&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;      &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;]&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;    &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;配置说明：&lt;/strong&gt;&lt;/p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;参数&lt;/th&gt;&lt;th&gt;描述&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;code dir=&quot;auto&quot;&gt;WECHAT_APP_ID&lt;/code&gt;&lt;/td&gt;&lt;td&gt;你的微信公众号 AppID&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code dir=&quot;auto&quot;&gt;WECHAT_APP_SECRET&lt;/code&gt;&lt;/td&gt;&lt;td&gt;你的微信公众号 AppSecret&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code dir=&quot;auto&quot;&gt;HOST_IMAGE_PATH&lt;/code&gt;&lt;/td&gt;&lt;td&gt;本地图片存储路径（用于封面图片）&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code dir=&quot;auto&quot;&gt;-v&lt;/code&gt; 挂载&lt;/td&gt;&lt;td&gt;将本地图片目录映射到容器&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;提示：&lt;/strong&gt; 在&lt;a href=&quot;https://mp.weixin.qq.com/&quot;&gt;微信公众平台&lt;/a&gt;获取你的 AppID 和 AppSecret。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;第三步创建任务文件&quot;&gt;第三步：创建任务文件&lt;/h2&gt;&lt;a href=&quot;#第三步创建任务文件&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “第三步：创建任务文件”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;这个工作流的关键是在 &lt;strong&gt;issue 文件&lt;/strong&gt; 中定义你的任务。这告诉 Claude 你想要完成什么。&lt;/p&gt;
-&lt;p&gt;创建类似 &lt;code dir=&quot;auto&quot;&gt;engineering/00-issues/my-article-task.md&lt;/code&gt; 的文件：&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;markdown&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;---&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#111111&quot;&gt;slug&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;engineering/00-issues/my-article-task&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;---&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82B1FF;--1:#3B61B0&quot;&gt;# Issue: 撰写关于 [&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--0td:underline;--1:#403F53;--1td:underline&quot;&gt;你的主题&lt;/span&gt;&lt;span style=&quot;--0:#82B1FF;--1:#3B61B0&quot;&gt;] 的博客&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82B1FF;--1:#3B61B0&quot;&gt;## 描述&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;需要涵盖的要点：&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;-&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; 要点 1&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;-&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; 要点 2&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;-&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; 要点 3&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82B1FF;--1:#3B61B0&quot;&gt;## 要求&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;-&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; 语言：简体中文、英文&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;-&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; 使用 &lt;/span&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;`wenyan-mcp`&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; 发布（简体中文）&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D9F5DD;--1:#111111&quot;&gt;-&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; 研究最新趋势和数据&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;第四步执行工作流&quot;&gt;第四步：执行工作流&lt;/h2&gt;&lt;a href=&quot;#第四步执行工作流&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “第四步：执行工作流”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;现在是激动人心的部分。启动 Claude Code 并引用你的任务：&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;claude&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;p&gt;然后在 Claude Code 提示符中：&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;plaintext&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;Execute @engineering/00-issues/my-article-task.md&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;接下来会自动发生什么&quot;&gt;接下来会自动发生什么&lt;/h2&gt;&lt;a href=&quot;#接下来会自动发生什么&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “接下来会自动发生什么”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h3 id=&quot;1-研究阶段&quot;&gt;1. 研究阶段&lt;/h3&gt;&lt;a href=&quot;#1-研究阶段&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1. 研究阶段”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;Claude 在网上搜索相关的最新信息：&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;2-内容整合&quot;&gt;2. 内容整合&lt;/h3&gt;&lt;a href=&quot;#2-内容整合&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2. 内容整合”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;Claude 获取并分析多个来源以创建全面的内容：&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;3-文章生成与发布&quot;&gt;3. 文章生成与发布&lt;/h3&gt;&lt;a href=&quot;#3-文章生成与发布&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3. 文章生成与发布”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;Claude 生成文章并直接发布到你的微信草稿箱：&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;4-在微信中查看&quot;&gt;4. 在微信中查看&lt;/h3&gt;&lt;a href=&quot;#4-在微信中查看&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “4. 在微信中查看”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;打开你的微信公众号管理后台——文章已经在草稿箱中等待：&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;可用主题&quot;&gt;可用主题&lt;/h2&gt;&lt;a href=&quot;#可用主题&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “可用主题”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;wenyan-mcp 服务器支持多种精美主题：&lt;/p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;主题&lt;/th&gt;&lt;th&gt;风格&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;code dir=&quot;auto&quot;&gt;default&lt;/code&gt;&lt;/td&gt;&lt;td&gt;简洁、极简&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code dir=&quot;auto&quot;&gt;orangeheart&lt;/code&gt;&lt;/td&gt;&lt;td&gt;温暖的橙色点缀&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code dir=&quot;auto&quot;&gt;rainbow&lt;/code&gt;&lt;/td&gt;&lt;td&gt;彩色标题&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code dir=&quot;auto&quot;&gt;lapis&lt;/code&gt;&lt;/td&gt;&lt;td&gt;专业蓝色&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code dir=&quot;auto&quot;&gt;pie&lt;/code&gt;&lt;/td&gt;&lt;td&gt;活泼设计&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code dir=&quot;auto&quot;&gt;maize&lt;/code&gt;&lt;/td&gt;&lt;td&gt;金色高亮&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code dir=&quot;auto&quot;&gt;purple&lt;/code&gt;&lt;/td&gt;&lt;td&gt;优雅紫色&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code dir=&quot;auto&quot;&gt;phycat&lt;/code&gt;&lt;/td&gt;&lt;td&gt;科技风格&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
-&lt;p&gt;发布时指定你喜欢的主题：&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;plaintext&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;发布到微信时使用 orangeheart 主题&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;完整工作流总结&quot;&gt;完整工作流总结&lt;/h2&gt;&lt;a href=&quot;#完整工作流总结&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “完整工作流总结”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;plaintext&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;┌─────────────────────────────────────────────────────────────┐&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;│                      你的工作流                              │&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;├─────────────────────────────────────────────────────────────┤&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;│                                                              │&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;│   1. 定义任务              📝 在 .md 文件中创建任务          │&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;│          ↓                                                   │&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;│   2. 启动 Claude Code      💻 执行任务                       │&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;│          ↓                                                   │&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;│   3. 自动研究              🔍 网络搜索与分析                 │&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;│          ↓                                                   │&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;│   4. 生成内容              ✍️  双语文章                      │&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;│          ↓                                                   │&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;│   5. 发布到微信            📱 直接到草稿箱                   │&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;│                                                              │&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;└─────────────────────────────────────────────────────────────┘&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;专业技巧&quot;&gt;专业技巧&lt;/h2&gt;&lt;a href=&quot;#专业技巧&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “专业技巧”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h3 id=&quot;1-多语言输出&quot;&gt;1. 多语言输出&lt;/h3&gt;&lt;a href=&quot;#1-多语言输出&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1. 多语言输出”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;在任务文件中指定语言：&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;markdown&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;语言：简体中文、英文&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;p&gt;Claude 会自动生成两个版本。&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;2-包含截图&quot;&gt;2. 包含截图&lt;/h3&gt;&lt;a href=&quot;#2-包含截图&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2. 包含截图”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;在任务中引用本地图片：&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;markdown&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82B1FF;--1:#3B61B0&quot;&gt;## 截图&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;![&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--0td:underline;--1:#403F53;--1td:underline&quot;&gt;步骤 1&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;]&lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;--0:#FF869A;--0td:underline;--1:#954F5A;--1td:underline&quot;&gt;path/to/screenshot1.png&lt;/span&gt;&lt;span style=&quot;--0:#7FDBCA;--1:#096E72&quot;&gt;)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h3 id=&quot;3-自定义输出位置&quot;&gt;3. 自定义输出位置&lt;/h3&gt;&lt;a href=&quot;#3-自定义输出位置&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3. 自定义输出位置”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;指定你想要保存博客文件的位置：&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;markdown&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt;输出到：src/content/docs/blog/my-topic/&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h3 id=&quot;4-发布前审核&quot;&gt;4. 发布前审核&lt;/h3&gt;&lt;a href=&quot;#4-发布前审核&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “4. 发布前审核”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;文章首先进入你的&lt;strong&gt;草稿箱&lt;/strong&gt;——你总是有机会在最终发布给订阅者之前进行审核和编辑。&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;故障排除&quot;&gt;故障排除&lt;/h2&gt;&lt;a href=&quot;#故障排除&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “故障排除”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;问题&lt;/th&gt;&lt;th&gt;解决方案&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;Docker 连接失败&lt;/td&gt;&lt;td&gt;确保 Docker Desktop 正在运行&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;微信 API 错误&lt;/td&gt;&lt;td&gt;验证 AppID/AppSecret 是否正确&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;图片上传失败&lt;/td&gt;&lt;td&gt;检查 HOST_IMAGE_PATH 是否正确映射&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;找不到 MCP 服务器&lt;/td&gt;&lt;td&gt;运行 &lt;code dir=&quot;auto&quot;&gt;claude mcp list&lt;/code&gt; 验证配置&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;总结&quot;&gt;总结&lt;/h2&gt;&lt;a href=&quot;#总结&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “总结”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;这个工作流将内容创作从繁琐的多步骤过程转变为流畅的自动化流水线。使用 Claude Code + wenyan-mcp，你可以：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;节省数小时&lt;/strong&gt;的研究和写作时间&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;保持一致性&lt;/strong&gt;跨双语内容&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;直接发布&lt;/strong&gt;无需复制粘贴的繁琐操作&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;专注于创意&lt;/strong&gt;而不是执行细节&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;内容创作的未来已经到来——它就在你的终端里。&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;参考资料&quot;&gt;参考资料&lt;/h2&gt;&lt;a href=&quot;#参考资料&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “参考资料”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://docs.anthropic.com/en/docs/claude-code&quot;&gt;Claude Code 文档&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/caol64/wenyan-mcp&quot;&gt;wenyan-mcp GitHub 仓库&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://modelcontextprotocol.io/&quot;&gt;MCP 协议规范&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://developers.weixin.qq.com/doc/offiaccount/Getting_Started/Overview.html&quot;&gt;微信公众号 API&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content:encoded><category>AI Agent</category><category>Claude Code</category><category>MCP</category><category>微信公众号</category><category>自动化</category><category>内容创作</category></item></channel></rss>
+&lt;/ul&gt;</content:encoded><category>AI Agent</category><category>Claude Code</category><category>Claude Chrome Extension</category><category>Anthropic</category></item></channel></rss>
