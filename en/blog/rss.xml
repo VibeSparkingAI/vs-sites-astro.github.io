@@ -1,4 +1,135 @@
-<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Vibe Sparking AI | Blog</title><description/><link>https://www.vibesparking.com/</link><language>en</language><item><title>Rube: The MCP Server That Connects Your AI to 500+ Apps</title><link>https://www.vibesparking.com/en/blog/ai/rube/2025-12-25-rube-mcp-server-ai-automation-guide/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/rube/2025-12-25-rube-mcp-server-ai-automation-guide/</guid><pubDate>Thu, 25 Dec 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Vibe Sparking AI | Blog</title><description/><link>https://www.vibesparking.com/</link><language>en</language><item><title>Alma: One Elegant Desktop App to Rule All Your AI Providers</title><link>https://www.vibesparking.com/en/blog/ai/alma/2025-12-25-alma-elegant-ai-provider-orchestration/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/alma/2025-12-25-alma-elegant-ai-provider-orchestration/</guid><pubDate>Thu, 25 Dec 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # Alma: One Elegant Desktop App to Rule All Your AI Providers --&gt;
+&lt;div&gt;&lt;h2 id=&quot;the-ai-provider-juggling-problem&quot;&gt;The AI Provider Juggling Problem&lt;/h2&gt;&lt;a href=&quot;#the-ai-provider-juggling-problem&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “The AI Provider Juggling Problem”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;If you’re like most AI power users, your workflow probably looks something like this:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;ChatGPT tab for quick conversations&lt;/li&gt;
+&lt;li&gt;Claude tab for coding and analysis&lt;/li&gt;
+&lt;li&gt;Gemini tab for Google integration tasks&lt;/li&gt;
+&lt;li&gt;DeepSeek tab when you need cost-effective alternatives&lt;/li&gt;
+&lt;li&gt;A growing collection of API keys scattered across different tools&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Sound familiar?&lt;/strong&gt; You’re not alone. Managing multiple AI providers has become the new “too many browser tabs” problem.&lt;/p&gt;
+&lt;p&gt;Enter &lt;strong&gt;Alma&lt;/strong&gt; — an elegant desktop solution that brings order to this chaos.&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;what-is-alma&quot;&gt;What is Alma?&lt;/h2&gt;&lt;a href=&quot;#what-is-alma&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “What is Alma?”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;a href=&quot;https://alma.now/&quot;&gt;Alma&lt;/a&gt; is a beautifully designed macOS desktop application that serves as your unified command center for AI. Instead of switching between web interfaces, you access all your AI providers through one clean, intuitive interface.&lt;/p&gt;
+&lt;p&gt;Think of it as &lt;strong&gt;the universal remote for AI&lt;/strong&gt; — one interface, multiple brains.&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;who-built-this&quot;&gt;Who Built This?&lt;/h2&gt;&lt;a href=&quot;#who-built-this&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Who Built This?”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Alma comes from &lt;strong&gt;yetone&lt;/strong&gt;, the same developer behind &lt;a href=&quot;https://github.com/yetone/openai-translator&quot;&gt;OpenAI Translator&lt;/a&gt; — a wildly popular project with &lt;strong&gt;23.1k+ GitHub stars&lt;/strong&gt;. That project evolved from a Chrome extension into a multi-platform desktop app, demonstrating yetone’s ability to build polished, production-ready tools.&lt;/p&gt;
+&lt;p&gt;This pedigree matters. Alma isn’t a weekend project — it’s built by someone with proven experience delivering AI-powered desktop applications that people actually use daily.&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;core-features&quot;&gt;Core Features&lt;/h2&gt;&lt;a href=&quot;#core-features&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Core Features”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3 id=&quot;unified-chat-interface&quot;&gt;Unified Chat Interface&lt;/h3&gt;&lt;a href=&quot;#unified-chat-interface&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Unified Chat Interface”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;A clean, intuitive chat interface that brings all your AI conversations together:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Markdown rendering&lt;/strong&gt; for beautifully formatted responses&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Code highlighting&lt;/strong&gt; with syntax awareness&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Real-time streaming&lt;/strong&gt; responses as they’re generated&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Dark/light theme toggle&lt;/strong&gt; with smooth View Transitions API animations&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;intelligent-memory-system&quot;&gt;Intelligent Memory System&lt;/h3&gt;&lt;a href=&quot;#intelligent-memory-system&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Intelligent Memory System”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Alma remembers context across conversations:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;User preferences persist between sessions&lt;/li&gt;
+&lt;li&gt;Conversation context carries forward&lt;/li&gt;
+&lt;li&gt;Dedicated memory management panel for organization&lt;/li&gt;
+&lt;li&gt;View, organize, and prune memories as needed&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;web-search-integration&quot;&gt;Web Search Integration&lt;/h3&gt;&lt;a href=&quot;#web-search-integration&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Web Search Integration”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Built-in capability to access real-time information:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;AI can retrieve live web data when answering&lt;/li&gt;
+&lt;li&gt;No need to manually paste URLs or context&lt;/li&gt;
+&lt;li&gt;Current, accurate answers powered by actual web data&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;advanced-tool-use&quot;&gt;Advanced Tool Use&lt;/h3&gt;&lt;a href=&quot;#advanced-tool-use&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Advanced Tool Use”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Beyond chat, Alma enables AI to perform complex tasks:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Mathematical calculations&lt;/li&gt;
+&lt;li&gt;Data analysis operations&lt;/li&gt;
+&lt;li&gt;Intelligent tool integration&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;supported-ai-providers&quot;&gt;Supported AI Providers&lt;/h2&gt;&lt;a href=&quot;#supported-ai-providers&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Supported AI Providers”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Provider&lt;/th&gt;&lt;th&gt;Status&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;OpenAI (GPT-4, etc.)&lt;/td&gt;&lt;td&gt;Supported&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Anthropic (Claude)&lt;/td&gt;&lt;td&gt;Supported&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Google Gemini&lt;/td&gt;&lt;td&gt;Supported&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;DeepSeek&lt;/td&gt;&lt;td&gt;Supported&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Custom APIs&lt;/td&gt;&lt;td&gt;Supported&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;p&gt;This provider-agnostic approach means you’re never locked in. Use whatever model fits your task — whether that’s GPT-4 for creative work, Claude for analysis, or DeepSeek for cost-conscious inference.&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;platform-status&quot;&gt;Platform Status&lt;/h2&gt;&lt;a href=&quot;#platform-status&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Platform Status”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Currently Available:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;macOS Apple Silicon (.dmg)&lt;/li&gt;
+&lt;li&gt;macOS Intel (.dmg)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Coming Soon:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Windows&lt;/li&gt;
+&lt;li&gt;Linux&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Note: Only macOS versions are currently tested and guaranteed to work. Windows and Linux support is in development.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;why-alma-matters&quot;&gt;Why Alma Matters&lt;/h2&gt;&lt;a href=&quot;#why-alma-matters&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Why Alma Matters”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3 id=&quot;1-provider-flexibility&quot;&gt;1. Provider Flexibility&lt;/h3&gt;&lt;a href=&quot;#1-provider-flexibility&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1. Provider Flexibility”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Different models excel at different tasks. Claude might be your go-to for code, while GPT-4 shines at creative writing. Alma lets you switch contexts without switching apps.&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;2-api-cost-control&quot;&gt;2. API Cost Control&lt;/h3&gt;&lt;a href=&quot;#2-api-cost-control&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2. API Cost Control”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;By using your own API keys, you control costs directly. No middleman markup, no subscription surprises.&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;3-privacy-first-design&quot;&gt;3. Privacy-First Design&lt;/h3&gt;&lt;a href=&quot;#3-privacy-first-design&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3. Privacy-First Design”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;As a desktop application using your own API keys, your conversations don’t route through third-party services. The data stays between you and your chosen provider.&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;4-memory-continuity&quot;&gt;4. Memory Continuity&lt;/h3&gt;&lt;a href=&quot;#4-memory-continuity&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “4. Memory Continuity”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Unlike web interfaces that lose context, Alma’s memory system maintains continuity across sessions — making it feel less like a tool and more like a persistent assistant.&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;quick-start&quot;&gt;Quick Start&lt;/h2&gt;&lt;a href=&quot;#quick-start&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Quick Start”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Visit&lt;/strong&gt; &lt;a href=&quot;https://alma.now/&quot;&gt;alma.now&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Download&lt;/strong&gt; the appropriate macOS version (Apple Silicon or Intel)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Configure&lt;/strong&gt; your API keys for preferred providers&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Start chatting&lt;/strong&gt; with unified access to multiple AI models&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;the-bottom-line&quot;&gt;The Bottom Line&lt;/h2&gt;&lt;a href=&quot;#the-bottom-line&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “The Bottom Line”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Alma represents a shift from &lt;strong&gt;AI as scattered web services&lt;/strong&gt; to &lt;strong&gt;AI as unified desktop infrastructure&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;For users who regularly switch between multiple AI providers, this consolidation isn’t just convenient — it’s a workflow transformation. One app, multiple models, persistent memory, and an interface designed for daily use.&lt;/p&gt;
+&lt;p&gt;If you’re tired of juggling browser tabs and want a more sophisticated approach to AI provider management, Alma deserves a spot on your dock.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;Resources:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Official Website: &lt;a href=&quot;https://alma.now/&quot;&gt;alma.now&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Releases: &lt;a href=&quot;https://github.com/yetone/alma-releases&quot;&gt;GitHub - yetone/alma-releases&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Feedback: &lt;a href=&quot;https://feedback.alma.now&quot;&gt;feedback.alma.now&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Related Project: &lt;a href=&quot;https://github.com/yetone/openai-translator&quot;&gt;OpenAI Translator&lt;/a&gt; (23.1k+ stars)&lt;/li&gt;
+&lt;/ul&gt;</content:encoded><category>AI Tools</category><category>AI Provider</category><category>Desktop App</category><category>macOS</category><category>OpenAI</category><category>Anthropic</category><category>Gemini</category><category>DeepSeek</category></item><item><title>Rube: The MCP Server That Connects Your AI to 500+ Apps</title><link>https://www.vibesparking.com/en/blog/ai/rube/2025-12-25-rube-mcp-server-ai-automation-guide/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/rube/2025-12-25-rube-mcp-server-ai-automation-guide/</guid><pubDate>Thu, 25 Dec 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;/p&gt;
 &lt;div&gt;&lt;h1 id=&quot;rube-the-mcp-server-that-connects-your-ai-to-500-apps&quot;&gt;Rube: The MCP Server That Connects Your AI to 500+ Apps&lt;/h1&gt;&lt;a href=&quot;#rube-the-mcp-server-that-connects-your-ai-to-500-apps&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Rube: The MCP Server That Connects Your AI to 500+ Apps”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;“Something connects to something, something happens.”&lt;/strong&gt; — The philosophy behind Rube, where AI automation becomes as simple as having a conversation.&lt;/p&gt;
@@ -523,124 +654,7 @@ Invite team members with appropriate roles. Share research collections while mai
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/MODSetter/SurfSense&quot;&gt;MODSetter/SurfSense GitHub Repository&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://techwithmanav.substack.com/p/surfsense-the-open-source-perplexity&quot;&gt;SurfSense: The Open Source Perplexity Alternative&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content:encoded><category>AI Agent</category><category>SurfSense</category><category>Research</category><category>Knowledge Management</category><category>Open Source</category></item><item><title>Boris Cherny: How the Creator of Claude Code Grew His Career from Meta to Anthropic</title><link>https://www.vibesparking.com/en/blog/ai/claude-code/career/2025-12-25-boris-cherny-claude-code-creator-career-insights/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/claude-code/career/2025-12-25-boris-cherny-claude-code-creator-career-insights/</guid><pubDate>Thu, 25 Dec 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # Boris Cherny: How the Creator of Claude Code Grew His Career from Meta to Anthropic --&gt;
-&lt;div&gt;&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;&lt;a href=&quot;#introduction&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Introduction”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;Behind every revolutionary product is a story of personal growth, strategic thinking, and relentless curiosity. &lt;strong&gt;Boris Cherny&lt;/strong&gt;, the creator of Claude Code at Anthropic, exemplifies this truth. His journey from startups to venture capital, through a decade at Meta (Facebook/Instagram), to leading one of the most impactful AI developer tools demonstrates key principles that any engineer can apply.&lt;/p&gt;
-&lt;p&gt;This article distills Boris’s career insights, revealing how he went from a mid-level engineer to principal at Meta, and finally to creating Claude Code—a tool that now writes 80-90% of its own codebase.&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;the-unconventional-path&quot;&gt;The Unconventional Path&lt;/h2&gt;&lt;a href=&quot;#the-unconventional-path&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “The Unconventional Path”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;Boris started his first startup at 18, worked at a hedge fund, and notably &lt;strong&gt;has no CS degree&lt;/strong&gt;—he studied economics before dropping out to pursue startups. His trajectory proves that programming is a practical skill learned on the job, not in classrooms.&lt;/p&gt;
-&lt;p&gt;Key milestones at Meta (2012-2022):&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;IC4 (Mid-level)&lt;/strong&gt;: Joined “under-leveled” working on Messenger-Groups integration&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;IC5-IC6&lt;/strong&gt;: Led Groups web migration; created the Undux state management library&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;IC7 (Senior Staff)&lt;/strong&gt;: Drove Public Groups feature with complex data model migrations&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;IC8 (Principal)&lt;/strong&gt;: Scoped work for hundreds of engineers; led Instagram’s Python-to-Hack migration&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;five-principles-for-career-growth&quot;&gt;Five Principles for Career Growth&lt;/h2&gt;&lt;a href=&quot;#five-principles-for-career-growth&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Five Principles for Career Growth”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h3 id=&quot;1-design-for-the-model-six-months-from-now&quot;&gt;1. Design for the Model Six Months from Now&lt;/h3&gt;&lt;a href=&quot;#1-design-for-the-model-six-months-from-now&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1. Design for the Model Six Months from Now”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;In the fast-evolving AI landscape, don’t build for current model capabilities—design for future ones.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;“Don’t build for today’s model, build for the model six months from now.” — Ben Mann, Boris’s manager at Anthropic&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;This forward-thinking approach explains why Claude Code initially felt underwhelming but became transformative after Claude 4 series launched. Early products may have mediocre experiences, but when new models drop, you achieve quantum leaps.&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;2-discover-latent-demand&quot;&gt;2. Discover Latent Demand&lt;/h3&gt;&lt;a href=&quot;#2-discover-latent-demand&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2. Discover Latent Demand”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;The most successful products don’t invent new behaviors—they satisfy hidden, existing ones.&lt;/p&gt;
-&lt;p&gt;Boris observed at Facebook that users were “abusing” Groups for commerce 40% of the time. This observation birthed Facebook Marketplace. Similarly, Dating emerged from observing how people were already using the platform for connections.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Lesson&lt;/strong&gt;: Watch what users are hacking together with your existing features—that’s where product-market fit hides.&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;3-side-projects-are-your-biggest-career-lever&quot;&gt;3. Side Projects Are Your Biggest Career Lever&lt;/h3&gt;&lt;a href=&quot;#3-side-projects-are-your-biggest-career-lever&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3. Side Projects Are Your Biggest Career Lever”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;Through solving repeated pain points and promoting solutions as company-wide tools, Boris accumulated cross-team influence rapidly.&lt;/p&gt;
-&lt;p&gt;His “20% time” projects included:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Undux&lt;/strong&gt;: A state management library for React&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;TypeScript Book &amp;#x26; Meetup&lt;/strong&gt;: Community building in the developer space&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Lint Rule Automation&lt;/strong&gt;: Turning repeated code review comments into automated checks&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Large Dataset Testing Framework&lt;/strong&gt;: Infrastructure benefiting thousands of engineers&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;“Better engineering is the easiest way to grow your network and gain influence as an engineer.”&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;div&gt;&lt;h3 id=&quot;4-become-a-generalist-who-breaks-swim-lanes&quot;&gt;4. Become a Generalist Who Breaks Swim Lanes&lt;/h3&gt;&lt;a href=&quot;#4-become-a-generalist-who-breaks-swim-lanes&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “4. Become a Generalist Who Breaks Swim Lanes”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;High-impact engineers don’t just write code—they develop product sense, design ability, and user research skills.&lt;/p&gt;
-&lt;p&gt;At both Meta and Anthropic, there are no formal titles. Everyone is a “Member of Technical Staff” regardless of whether they’re an engineer, PM, or designer. This culture forces constant re-validation through execution rather than title.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;“Just because you’re a product engineer doesn’t mean you can’t build infra.”&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;div&gt;&lt;h3 id=&quot;5-common-sense-is-your-superpower&quot;&gt;5. Common Sense Is Your Superpower&lt;/h3&gt;&lt;a href=&quot;#5-common-sense-is-your-superpower&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “5. Common Sense Is Your Superpower”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;In complex organizations with historical baggage and process inertia, the most reliable decision-making framework is returning to basics:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;What does the user actually need?&lt;/li&gt;
-&lt;li&gt;Does this make sense?&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Rather than being led by organizational momentum, successful leaders constantly ask these fundamental questions.&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;the-claude-code-creation-story&quot;&gt;The Claude Code Creation Story&lt;/h2&gt;&lt;a href=&quot;#the-claude-code-creation-story&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “The Claude Code Creation Story”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h3 id=&quot;origin&quot;&gt;Origin&lt;/h3&gt;&lt;a href=&quot;#origin&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Origin”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;Claude Code started as an accidental discovery during internal experiments at Anthropic. Boris’s manager pushed beyond autocomplete thinking, encouraging design for future model capabilities.&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;the-struggle&quot;&gt;The Struggle&lt;/h3&gt;&lt;a href=&quot;#the-struggle&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “The Struggle”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;Initially, Boris only used Claude Code for about 10% of his work. The product wasn’t viable until Sonnet/Opus 4 launched in March 2024.&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;the-breakthrough&quot;&gt;The Breakthrough&lt;/h3&gt;&lt;a href=&quot;#the-breakthrough&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “The Breakthrough”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;After model improvements, usage jumped to 50% of coding work. Today, 80-90% of Claude Code is written by Claude Code itself. Surprisingly, adoption spread beyond engineers to data scientists and sales teams—unexpected use cases the team hadn’t anticipated.&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;hiring-philosophy-look-for-side-quests&quot;&gt;Hiring Philosophy: Look for “Side Quests”&lt;/h2&gt;&lt;a href=&quot;#hiring-philosophy-look-for-side-quests&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Hiring Philosophy: Look for “Side Quests””&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;Boris actively seeks engineers with curiosity beyond daily work:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;“When I hire engineers, this is definitely something I look for… cool weekend projects, like someone who’s really into making kombucha.”&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;This signals growth mindset and intellectual curiosity—traits that separate good engineers from great ones.&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;key-quotes-for-your-career&quot;&gt;Key Quotes for Your Career&lt;/h2&gt;&lt;a href=&quot;#key-quotes-for-your-career&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Key Quotes for Your Career”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;On imposter syndrome:&lt;/strong&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;“No one knows what they’re doing at any level. If you don’t feel it, you’re not pushing hard enough.”&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;On focus vs. breadth:&lt;/strong&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;“Writing code anchors you to reality. Without it, you lose intuition quickly—dangerous place to be.”&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;On team dynamics:&lt;/strong&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;“You never want to tell anyone what to do. Understand what they want, then present opportunity—it always works better.”&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;On organizational change:&lt;/strong&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;“Just do it. Sometimes you need consensus, sometimes you act. Leaders juggle both constantly.”&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;actionable-takeaways&quot;&gt;Actionable Takeaways&lt;/h2&gt;&lt;a href=&quot;#actionable-takeaways&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Actionable Takeaways”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Stop chasing titles&lt;/strong&gt;—pursue interesting problems and impact. Promotions follow naturally.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Invest in side projects&lt;/strong&gt;—even small automations that help your team compound into massive influence over time.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Become the generalist&lt;/strong&gt;—learn product, design, and user research alongside engineering. The most valuable engineers are those who can wear multiple hats.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Apply common sense liberally&lt;/strong&gt;—when lost in organizational complexity, ask “what does the user actually need?”&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Build for the future&lt;/strong&gt;—whether in AI or any fast-moving field, design for where technology will be, not where it is today.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;&lt;a href=&quot;#conclusion&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Conclusion”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;Boris Cherny’s career offers a masterclass in engineering growth: start by solving your own problems, scale solutions to help others, earn trust through execution rather than titles, and always design for the future.&lt;/p&gt;
-&lt;p&gt;Claude Code exists because Boris spent a decade building products (many failed), learning what great developer experience feels like, and positioning himself at the intersection of code quality and AI capability.&lt;/p&gt;
-&lt;p&gt;For engineers seeking rapid career growth, his formula is clear: &lt;strong&gt;Be curious. Build side projects. Think in systems. Design for tomorrow.&lt;/strong&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;&lt;a href=&quot;#references&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “References”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.developing.dev/p/boris-cherny-creator-of-claude-code&quot;&gt;Boris Cherny on The Peterman Pod - Career Journey and Claude Code&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.linkedin.com/in/bcherny/&quot;&gt;Boris Cherny LinkedIn Profile&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://x.com/bcherny/status/2000575036436955240&quot;&gt;Boris Cherny on X (Twitter)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.anthropic.com/webinars/claude-code-for-financial-services-a-session-with-the-creator-boris-cherny&quot;&gt;Claude Code for Financial Services Webinar&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://youtube.com/watch?v=AmdLVWMdjOk&quot;&gt;YouTube: Boris Cherny Interview&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content:encoded><category>AI Agent</category><category>Claude Code</category><category>Career Growth</category><category>Anthropic</category><category>Meta</category></item><item><title>Using Google Antigravity to Fix App Store Review Issues: A Real-World Case Study</title><link>https://www.vibesparking.com/en/blog/ai/google/antigravity/2025-12-25-google-antigravity-fix-app-store-review-issues/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/google/antigravity/2025-12-25-google-antigravity-fix-app-store-review-issues/</guid><pubDate>Thu, 25 Dec 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;/p&gt;
+&lt;/ul&gt;</content:encoded><category>AI Agent</category><category>SurfSense</category><category>Research</category><category>Knowledge Management</category><category>Open Source</category></item><item><title>Using Google Antigravity to Fix App Store Review Issues: A Real-World Case Study</title><link>https://www.vibesparking.com/en/blog/ai/google/antigravity/2025-12-25-google-antigravity-fix-app-store-review-issues/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/google/antigravity/2025-12-25-google-antigravity-fix-app-store-review-issues/</guid><pubDate>Thu, 25 Dec 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;/p&gt;
 &lt;div&gt;&lt;h1 id=&quot;using-google-antigravity-to-fix-app-store-review-issues-a-real-world-case-study&quot;&gt;Using Google Antigravity to Fix App Store Review Issues: A Real-World Case Study&lt;/h1&gt;&lt;a href=&quot;#using-google-antigravity-to-fix-app-store-review-issues-a-real-world-case-study&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Using Google Antigravity to Fix App Store Review Issues: A Real-World Case Study”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;“Deploy agents that autonomously plan, execute, and verify complex tasks across your editor, terminal, and browser.”&lt;/strong&gt; — Google Antigravity, the agent-first IDE that transforms how we solve development problems.&lt;/p&gt;
@@ -1036,7 +1050,125 @@ Invite team members with appropriate roles. Share research collections while mai
 &lt;li&gt;&lt;a href=&quot;https://engineering.atspotify.com/2025/12/feedback-loops-background-coding-agents-part-3&quot;&gt;Background Coding Agents: Predictable Results Through Feedback Loops - Spotify Engineering&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.augmentcode.com/guides/ai-agent-quality-7-frameworks-to-go-beyond-vibe-coding&quot;&gt;AI Agent Quality: 7 Frameworks to Go Beyond Vibe Coding - Augment Code&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://addyo.substack.com/p/coding-for-the-future-agentic-world&quot;&gt;Coding for the Future Agentic World - Addy Osmani&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title>Banana-Slides: AI-Native PPT Generator - Create Professional Presentations with Natural Language</title><link>https://www.vibesparking.com/en/blog/ai/banana-slides/2025-12-24-banana-slides-ai-native-ppt-generator/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/banana-slides/2025-12-24-banana-slides-ai-native-ppt-generator/</guid><pubDate>Wed, 24 Dec 2025 00:00:00 GMT</pubDate><content:encoded>&lt;div&gt;&lt;h1 id=&quot;banana-slides-ai-native-ppt-generator---the-future-of-vibe-ppt&quot;&gt;Banana-Slides: AI-Native PPT Generator - The Future of “Vibe PPT”&lt;/h1&gt;&lt;a href=&quot;#banana-slides-ai-native-ppt-generator---the-future-of-vibe-ppt&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Banana-Slides: AI-Native PPT Generator - The Future of “Vibe PPT””&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;/ul&gt;</content:encoded></item><item><title>Boris Cherny: How the Creator of Claude Code Grew His Career from Meta to Anthropic</title><link>https://www.vibesparking.com/en/blog/ai/claude-code/career/2025-12-25-boris-cherny-claude-code-creator-career-insights/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/claude-code/career/2025-12-25-boris-cherny-claude-code-creator-career-insights/</guid><pubDate>Thu, 25 Dec 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # Boris Cherny: How the Creator of Claude Code Grew His Career from Meta to Anthropic --&gt;
+&lt;div&gt;&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;&lt;a href=&quot;#introduction&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Introduction”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Behind every revolutionary product is a story of personal growth, strategic thinking, and relentless curiosity. &lt;strong&gt;Boris Cherny&lt;/strong&gt;, the creator of Claude Code at Anthropic, exemplifies this truth. His journey from startups to venture capital, through a decade at Meta (Facebook/Instagram), to leading one of the most impactful AI developer tools demonstrates key principles that any engineer can apply.&lt;/p&gt;
+&lt;p&gt;This article distills Boris’s career insights, revealing how he went from a mid-level engineer to principal at Meta, and finally to creating Claude Code—a tool that now writes 80-90% of its own codebase.&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;the-unconventional-path&quot;&gt;The Unconventional Path&lt;/h2&gt;&lt;a href=&quot;#the-unconventional-path&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “The Unconventional Path”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Boris started his first startup at 18, worked at a hedge fund, and notably &lt;strong&gt;has no CS degree&lt;/strong&gt;—he studied economics before dropping out to pursue startups. His trajectory proves that programming is a practical skill learned on the job, not in classrooms.&lt;/p&gt;
+&lt;p&gt;Key milestones at Meta (2012-2022):&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;IC4 (Mid-level)&lt;/strong&gt;: Joined “under-leveled” working on Messenger-Groups integration&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;IC5-IC6&lt;/strong&gt;: Led Groups web migration; created the Undux state management library&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;IC7 (Senior Staff)&lt;/strong&gt;: Drove Public Groups feature with complex data model migrations&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;IC8 (Principal)&lt;/strong&gt;: Scoped work for hundreds of engineers; led Instagram’s Python-to-Hack migration&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;five-principles-for-career-growth&quot;&gt;Five Principles for Career Growth&lt;/h2&gt;&lt;a href=&quot;#five-principles-for-career-growth&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Five Principles for Career Growth”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3 id=&quot;1-design-for-the-model-six-months-from-now&quot;&gt;1. Design for the Model Six Months from Now&lt;/h3&gt;&lt;a href=&quot;#1-design-for-the-model-six-months-from-now&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1. Design for the Model Six Months from Now”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;In the fast-evolving AI landscape, don’t build for current model capabilities—design for future ones.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“Don’t build for today’s model, build for the model six months from now.” — Ben Mann, Boris’s manager at Anthropic&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;This forward-thinking approach explains why Claude Code initially felt underwhelming but became transformative after Claude 4 series launched. Early products may have mediocre experiences, but when new models drop, you achieve quantum leaps.&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;2-discover-latent-demand&quot;&gt;2. Discover Latent Demand&lt;/h3&gt;&lt;a href=&quot;#2-discover-latent-demand&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2. Discover Latent Demand”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;The most successful products don’t invent new behaviors—they satisfy hidden, existing ones.&lt;/p&gt;
+&lt;p&gt;Boris observed at Facebook that users were “abusing” Groups for commerce 40% of the time. This observation birthed Facebook Marketplace. Similarly, Dating emerged from observing how people were already using the platform for connections.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Lesson&lt;/strong&gt;: Watch what users are hacking together with your existing features—that’s where product-market fit hides.&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;3-side-projects-are-your-biggest-career-lever&quot;&gt;3. Side Projects Are Your Biggest Career Lever&lt;/h3&gt;&lt;a href=&quot;#3-side-projects-are-your-biggest-career-lever&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3. Side Projects Are Your Biggest Career Lever”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Through solving repeated pain points and promoting solutions as company-wide tools, Boris accumulated cross-team influence rapidly.&lt;/p&gt;
+&lt;p&gt;His “20% time” projects included:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Undux&lt;/strong&gt;: A state management library for React&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;TypeScript Book &amp;#x26; Meetup&lt;/strong&gt;: Community building in the developer space&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Lint Rule Automation&lt;/strong&gt;: Turning repeated code review comments into automated checks&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Large Dataset Testing Framework&lt;/strong&gt;: Infrastructure benefiting thousands of engineers&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“Better engineering is the easiest way to grow your network and gain influence as an engineer.”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div&gt;&lt;h3 id=&quot;4-become-a-generalist-who-breaks-swim-lanes&quot;&gt;4. Become a Generalist Who Breaks Swim Lanes&lt;/h3&gt;&lt;a href=&quot;#4-become-a-generalist-who-breaks-swim-lanes&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “4. Become a Generalist Who Breaks Swim Lanes”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;High-impact engineers don’t just write code—they develop product sense, design ability, and user research skills.&lt;/p&gt;
+&lt;p&gt;At both Meta and Anthropic, there are no formal titles. Everyone is a “Member of Technical Staff” regardless of whether they’re an engineer, PM, or designer. This culture forces constant re-validation through execution rather than title.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“Just because you’re a product engineer doesn’t mean you can’t build infra.”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div&gt;&lt;h3 id=&quot;5-common-sense-is-your-superpower&quot;&gt;5. Common Sense Is Your Superpower&lt;/h3&gt;&lt;a href=&quot;#5-common-sense-is-your-superpower&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “5. Common Sense Is Your Superpower”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;In complex organizations with historical baggage and process inertia, the most reliable decision-making framework is returning to basics:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;What does the user actually need?&lt;/li&gt;
+&lt;li&gt;Does this make sense?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Rather than being led by organizational momentum, successful leaders constantly ask these fundamental questions.&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;the-claude-code-creation-story&quot;&gt;The Claude Code Creation Story&lt;/h2&gt;&lt;a href=&quot;#the-claude-code-creation-story&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “The Claude Code Creation Story”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3 id=&quot;origin&quot;&gt;Origin&lt;/h3&gt;&lt;a href=&quot;#origin&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Origin”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Claude Code started as an accidental discovery during internal experiments at Anthropic. Boris’s manager pushed beyond autocomplete thinking, encouraging design for future model capabilities.&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;the-struggle&quot;&gt;The Struggle&lt;/h3&gt;&lt;a href=&quot;#the-struggle&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “The Struggle”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Initially, Boris only used Claude Code for about 10% of his work. The product wasn’t viable until Sonnet/Opus 4 launched in March 2024.&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;the-breakthrough&quot;&gt;The Breakthrough&lt;/h3&gt;&lt;a href=&quot;#the-breakthrough&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “The Breakthrough”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;After model improvements, usage jumped to 50% of coding work. Today, 80-90% of Claude Code is written by Claude Code itself. Surprisingly, adoption spread beyond engineers to data scientists and sales teams—unexpected use cases the team hadn’t anticipated.&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;hiring-philosophy-look-for-side-quests&quot;&gt;Hiring Philosophy: Look for “Side Quests”&lt;/h2&gt;&lt;a href=&quot;#hiring-philosophy-look-for-side-quests&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Hiring Philosophy: Look for “Side Quests””&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Boris actively seeks engineers with curiosity beyond daily work:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“When I hire engineers, this is definitely something I look for… cool weekend projects, like someone who’s really into making kombucha.”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;This signals growth mindset and intellectual curiosity—traits that separate good engineers from great ones.&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;key-quotes-for-your-career&quot;&gt;Key Quotes for Your Career&lt;/h2&gt;&lt;a href=&quot;#key-quotes-for-your-career&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Key Quotes for Your Career”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;On imposter syndrome:&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“No one knows what they’re doing at any level. If you don’t feel it, you’re not pushing hard enough.”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;On focus vs. breadth:&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“Writing code anchors you to reality. Without it, you lose intuition quickly—dangerous place to be.”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;On team dynamics:&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“You never want to tell anyone what to do. Understand what they want, then present opportunity—it always works better.”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;On organizational change:&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“Just do it. Sometimes you need consensus, sometimes you act. Leaders juggle both constantly.”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;actionable-takeaways&quot;&gt;Actionable Takeaways&lt;/h2&gt;&lt;a href=&quot;#actionable-takeaways&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Actionable Takeaways”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Stop chasing titles&lt;/strong&gt;—pursue interesting problems and impact. Promotions follow naturally.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Invest in side projects&lt;/strong&gt;—even small automations that help your team compound into massive influence over time.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Become the generalist&lt;/strong&gt;—learn product, design, and user research alongside engineering. The most valuable engineers are those who can wear multiple hats.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Apply common sense liberally&lt;/strong&gt;—when lost in organizational complexity, ask “what does the user actually need?”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Build for the future&lt;/strong&gt;—whether in AI or any fast-moving field, design for where technology will be, not where it is today.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;&lt;a href=&quot;#conclusion&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Conclusion”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Boris Cherny’s career offers a masterclass in engineering growth: start by solving your own problems, scale solutions to help others, earn trust through execution rather than titles, and always design for the future.&lt;/p&gt;
+&lt;p&gt;Claude Code exists because Boris spent a decade building products (many failed), learning what great developer experience feels like, and positioning himself at the intersection of code quality and AI capability.&lt;/p&gt;
+&lt;p&gt;For engineers seeking rapid career growth, his formula is clear: &lt;strong&gt;Be curious. Build side projects. Think in systems. Design for tomorrow.&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;&lt;a href=&quot;#references&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “References”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.developing.dev/p/boris-cherny-creator-of-claude-code&quot;&gt;Boris Cherny on The Peterman Pod - Career Journey and Claude Code&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.linkedin.com/in/bcherny/&quot;&gt;Boris Cherny LinkedIn Profile&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://x.com/bcherny/status/2000575036436955240&quot;&gt;Boris Cherny on X (Twitter)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.anthropic.com/webinars/claude-code-for-financial-services-a-session-with-the-creator-boris-cherny&quot;&gt;Claude Code for Financial Services Webinar&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://youtube.com/watch?v=AmdLVWMdjOk&quot;&gt;YouTube: Boris Cherny Interview&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded><category>AI Agent</category><category>Claude Code</category><category>Career Growth</category><category>Anthropic</category><category>Meta</category></item><item><title>Gemini CLI Extensions: Supercharge Your AI Command Line</title><link>https://www.vibesparking.com/en/blog/ai/gemini-cli-extensions/2025-12-24-gemini-cli-extensions-guide/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/gemini-cli-extensions/2025-12-24-gemini-cli-extensions-guide/</guid><pubDate>Wed, 24 Dec 2025 00:00:00 GMT</pubDate><content:encoded>&lt;div&gt;&lt;h1 id=&quot;gemini-cli-extensions-supercharge-your-ai-command-line&quot;&gt;Gemini CLI Extensions: Supercharge Your AI Command Line&lt;/h1&gt;&lt;a href=&quot;#gemini-cli-extensions-supercharge-your-ai-command-line&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Gemini CLI Extensions: Supercharge Your AI Command Line”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;(Content truncated for brevity, assume full content here)&lt;/p&gt;</content:encoded><category>AI</category><category>Gemini CLI</category><category>Google</category><category>Extensions</category><category>MCP</category><category>Command Line</category><category>Developer Tools</category><category>Terminal</category></item><item><title>Banana-Slides: AI-Native PPT Generator - Create Professional Presentations with Natural Language</title><link>https://www.vibesparking.com/en/blog/ai/banana-slides/2025-12-24-banana-slides-ai-native-ppt-generator/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/banana-slides/2025-12-24-banana-slides-ai-native-ppt-generator/</guid><pubDate>Wed, 24 Dec 2025 00:00:00 GMT</pubDate><content:encoded>&lt;div&gt;&lt;h1 id=&quot;banana-slides-ai-native-ppt-generator---the-future-of-vibe-ppt&quot;&gt;Banana-Slides: AI-Native PPT Generator - The Future of “Vibe PPT”&lt;/h1&gt;&lt;a href=&quot;#banana-slides-ai-native-ppt-generator---the-future-of-vibe-ppt&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Banana-Slides: AI-Native PPT Generator - The Future of “Vibe PPT””&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
 &lt;blockquote&gt;
 &lt;p&gt;🍌 Create professional presentations with just one sentence - welcome to the era of AI-native PPT generation!&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -1296,8 +1428,7 @@ For precise control, describe each slide individually and let AI handle the desi
 &lt;li&gt;&lt;a href=&quot;https://github.com/Anionex/banana-slides&quot;&gt;Banana-Slides GitHub Repository&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/Anionex/banana-slides&quot;&gt;nano banana pro Model&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://ai.google.dev/docs&quot;&gt;Google Gemini API Documentation&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content:encoded><category>AI</category><category>PPT</category><category>Presentation</category><category>Banana-Slides</category><category>Vibe PPT</category><category>Natural Language</category><category>Open Source</category></item><item><title>Gemini CLI Extensions: Supercharge Your AI Command Line</title><link>https://www.vibesparking.com/en/blog/ai/gemini-cli-extensions/2025-12-24-gemini-cli-extensions-guide/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/gemini-cli-extensions/2025-12-24-gemini-cli-extensions-guide/</guid><pubDate>Wed, 24 Dec 2025 00:00:00 GMT</pubDate><content:encoded>&lt;div&gt;&lt;h1 id=&quot;gemini-cli-extensions-supercharge-your-ai-command-line&quot;&gt;Gemini CLI Extensions: Supercharge Your AI Command Line&lt;/h1&gt;&lt;a href=&quot;#gemini-cli-extensions-supercharge-your-ai-command-line&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Gemini CLI Extensions: Supercharge Your AI Command Line”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;(Content truncated for brevity, assume full content here)&lt;/p&gt;</content:encoded><category>AI</category><category>Gemini CLI</category><category>Google</category><category>Extensions</category><category>MCP</category><category>Command Line</category><category>Developer Tools</category><category>Terminal</category></item><item><title>OpenSkills: Universal Skills Loader for AI Coding Agents</title><link>https://www.vibesparking.com/en/blog/ai/openskills/2025-12-24-openskills-universal-skills-loader-ai-coding-agents/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/openskills/2025-12-24-openskills-universal-skills-loader-ai-coding-agents/</guid><pubDate>Wed, 24 Dec 2025 00:00:00 GMT</pubDate><content:encoded>&lt;div&gt;&lt;h1 id=&quot;openskills-universal-skills-loader-for-ai-coding-agents&quot;&gt;OpenSkills: Universal Skills Loader for AI Coding Agents&lt;/h1&gt;&lt;a href=&quot;#openskills-universal-skills-loader-for-ai-coding-agents&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “OpenSkills: Universal Skills Loader for AI Coding Agents”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;/ul&gt;</content:encoded><category>AI</category><category>PPT</category><category>Presentation</category><category>Banana-Slides</category><category>Vibe PPT</category><category>Natural Language</category><category>Open Source</category></item><item><title>OpenSkills: Universal Skills Loader for AI Coding Agents</title><link>https://www.vibesparking.com/en/blog/ai/openskills/2025-12-24-openskills-universal-skills-loader-ai-coding-agents/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/openskills/2025-12-24-openskills-universal-skills-loader-ai-coding-agents/</guid><pubDate>Wed, 24 Dec 2025 00:00:00 GMT</pubDate><content:encoded>&lt;div&gt;&lt;h1 id=&quot;openskills-universal-skills-loader-for-ai-coding-agents&quot;&gt;OpenSkills: Universal Skills Loader for AI Coding Agents&lt;/h1&gt;&lt;a href=&quot;#openskills-universal-skills-loader-for-ai-coding-agents&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “OpenSkills: Universal Skills Loader for AI Coding Agents”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
 &lt;p&gt;AI coding agents have revolutionized software development, but each agent operates in its own ecosystem with unique capabilities. &lt;strong&gt;OpenSkills&lt;/strong&gt; bridges this gap by bringing Anthropic’s powerful skills system to all AI coding agents.&lt;/p&gt;
 &lt;div&gt;&lt;h2 id=&quot;what-is-openskills&quot;&gt;What is OpenSkills?&lt;/h2&gt;&lt;a href=&quot;#what-is-openskills&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “What is OpenSkills?”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
 &lt;p&gt;OpenSkills is a universal skills loader that implements Anthropic’s Agent Skills specification for any AI coding agent. It brings Claude Code’s skills system to Cursor, Windsurf, Aider, and other agents with &lt;strong&gt;100% compatibility&lt;/strong&gt;.&lt;/p&gt;
@@ -4427,322 +4558,4 @@ A: Yes, you can chain patterns with different models using shell pipes.&lt;/p&gt
 &lt;li&gt;&lt;a href=&quot;https://www.ebi.ac.uk/chembl/&quot;&gt;ChEMBL Database&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.uniprot.org/&quot;&gt;UniProt&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://clinicaltrials.gov/&quot;&gt;ClinicalTrials.gov&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content:encoded><category>AI</category><category>Claude</category><category>Scientific Research</category><category>MCP</category><category>Bioinformatics</category><category>Cheminformatics</category><category>Machine Learning</category><category>Data Science</category></item><item><title>PromptHub: Open-Source Local-First AI Prompt Management Tool</title><link>https://www.vibesparking.com/en/blog/ai/legeling/prompthub/2025-12-22-prompthub-local-ai-prompt-management/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/legeling/prompthub/2025-12-22-prompthub-local-ai-prompt-management/</guid><pubDate>Mon, 22 Dec 2025 00:00:00 GMT</pubDate><content:encoded>&lt;div&gt;&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;&lt;a href=&quot;#introduction&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Introduction”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;Are you tired of searching through notebooks, documents, and chat histories to find your AI prompts? &lt;strong&gt;PromptHub&lt;/strong&gt; solves this problem elegantly - it lets you manage prompts like code with version control, variable templates, and multi-model testing, while keeping all your data stored locally for maximum privacy.&lt;/p&gt;
-&lt;p&gt;PromptHub is an open-source, free AI prompt management tool developed by &lt;a href=&quot;https://github.com/legeling&quot;&gt;legeling&lt;/a&gt;. Built with Electron, React, and TypeScript, it provides a modern desktop experience across macOS, Windows, and Linux platforms.&lt;/p&gt;
-&lt;div&gt;&lt;h2 id=&quot;key-features-and-highlights&quot;&gt;Key Features and Highlights&lt;/h2&gt;&lt;a href=&quot;#key-features-and-highlights&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Key Features and Highlights”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h3 id=&quot;comprehensive-prompt-management&quot;&gt;Comprehensive Prompt Management&lt;/h3&gt;&lt;a href=&quot;#comprehensive-prompt-management&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Comprehensive Prompt Management”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;PromptHub offers a complete suite for organizing your AI prompts:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Create, Edit, and Delete&lt;/strong&gt; - Full CRUD operations with intuitive interface&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Folder and Tag System&lt;/strong&gt; - Organize prompts with hierarchical folders and customizable tags&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Favorites&lt;/strong&gt; - Quick access to frequently used prompts&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Full-Text Search&lt;/strong&gt; - Search across titles, descriptions, and content&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Multiple View Modes&lt;/strong&gt; - Card, Gallery, and List views for different workflows&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h3 id=&quot;version-control&quot;&gt;Version Control&lt;/h3&gt;&lt;a href=&quot;#version-control&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Version Control”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;Never lose a good prompt again:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Automatic History&lt;/strong&gt; - Every edit is automatically saved&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Version Comparison&lt;/strong&gt; - Side-by-side diff view for changes&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Rollback Support&lt;/strong&gt; - Restore any previous version with one click&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h3 id=&quot;variable-templates&quot;&gt;Variable Templates&lt;/h3&gt;&lt;a href=&quot;#variable-templates&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Variable Templates”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;Make your prompts dynamic and reusable:&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;plaintext&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;Translate the following {{source_lang}} text to {{target_lang}}:&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;{{text}}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;p&gt;When copying or testing, PromptHub prompts you to fill in the variables, making templates infinitely reusable.&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;multi-model-ai-testing&quot;&gt;Multi-Model AI Testing&lt;/h3&gt;&lt;a href=&quot;#multi-model-ai-testing&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Multi-Model AI Testing”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;Test your prompts across different AI models:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;18+ Providers Supported&lt;/strong&gt; - OpenAI, Claude, Gemini, DeepSeek, Qwen, and more&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Parallel Testing&lt;/strong&gt; - Compare responses from multiple models simultaneously&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Image Generation&lt;/strong&gt; - Support for DALL-E and Stability AI&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Result Persistence&lt;/strong&gt; - Save test results with each prompt&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h3 id=&quot;data-security-and-privacy&quot;&gt;Data Security and Privacy&lt;/h3&gt;&lt;a href=&quot;#data-security-and-privacy&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Data Security and Privacy”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;Your data stays yours:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Local-First Storage&lt;/strong&gt; - All data stored in local SQLite database&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Master Password Protection&lt;/strong&gt; - Application-level security&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Private Folders&lt;/strong&gt; - Encrypted storage for sensitive prompts (Beta)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Full Backup/Restore&lt;/strong&gt; - Export everything in &lt;code dir=&quot;auto&quot;&gt;.phub.gz&lt;/code&gt; format&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;WebDAV Sync&lt;/strong&gt; - Optional cloud sync with services like Nextcloud&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h2 id=&quot;prerequisites-and-installation&quot;&gt;Prerequisites and Installation&lt;/h2&gt;&lt;a href=&quot;#prerequisites-and-installation&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Prerequisites and Installation”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h3 id=&quot;system-requirements&quot;&gt;System Requirements&lt;/h3&gt;&lt;a href=&quot;#system-requirements&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “System Requirements”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;PromptHub runs on:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;macOS&lt;/strong&gt; - Intel and Apple Silicon (M1/M2/M3/M4)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Windows&lt;/strong&gt; - x64 architecture&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Linux&lt;/strong&gt; - x64 (AppImage and .deb formats)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h3 id=&quot;download-and-install&quot;&gt;Download and Install&lt;/h3&gt;&lt;a href=&quot;#download-and-install&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Download and Install”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;Download the latest release from &lt;a href=&quot;https://github.com/legeling/PromptHub/releases&quot;&gt;GitHub Releases&lt;/a&gt;:&lt;/p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Platform&lt;/th&gt;&lt;th&gt;Architecture&lt;/th&gt;&lt;th&gt;Format&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;Windows&lt;/td&gt;&lt;td&gt;x64&lt;/td&gt;&lt;td&gt;&lt;code dir=&quot;auto&quot;&gt;.exe&lt;/code&gt; installer&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;macOS&lt;/td&gt;&lt;td&gt;Apple Silicon&lt;/td&gt;&lt;td&gt;&lt;code dir=&quot;auto&quot;&gt;.dmg&lt;/code&gt; image&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;macOS&lt;/td&gt;&lt;td&gt;Intel&lt;/td&gt;&lt;td&gt;&lt;code dir=&quot;auto&quot;&gt;.dmg&lt;/code&gt; image&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Linux&lt;/td&gt;&lt;td&gt;x64&lt;/td&gt;&lt;td&gt;&lt;code dir=&quot;auto&quot;&gt;.AppImage&lt;/code&gt; / &lt;code dir=&quot;auto&quot;&gt;.deb&lt;/code&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
-&lt;div&gt;&lt;h3 id=&quot;macos-first-launch&quot;&gt;macOS First Launch&lt;/h3&gt;&lt;a href=&quot;#macos-first-launch&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “macOS First Launch”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;Due to unsigned code, macOS may show security warnings. Run this command in Terminal:&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;sudo&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;xattr&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;-rd&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;com.apple.quarantine&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;/Applications/PromptHub.app&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;p&gt;Or go to System Settings &gt; Privacy &amp;#x26; Security &gt; Click “Open Anyway”.&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;build-from-source&quot;&gt;Build From Source&lt;/h3&gt;&lt;a href=&quot;#build-from-source&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Build From Source”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# Clone repository&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;git&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;clone&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;https://github.com/legeling/PromptHub.git&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;cd&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;PromptHub&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# Install dependencies&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;pnpm&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;install&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# Development mode&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;pnpm&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;dev&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# Build application&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;pnpm&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;build&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h2 id=&quot;recommended-usage-scenarios&quot;&gt;Recommended Usage Scenarios&lt;/h2&gt;&lt;a href=&quot;#recommended-usage-scenarios&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Recommended Usage Scenarios”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h3 id=&quot;daily-workflow-for-ai-professionals&quot;&gt;Daily Workflow for AI Professionals&lt;/h3&gt;&lt;a href=&quot;#daily-workflow-for-ai-professionals&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Daily Workflow for AI Professionals”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;Morning Setup:&lt;/strong&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Open PromptHub with your master password&lt;/li&gt;
-&lt;li&gt;Review favorites for quick access to common prompts&lt;/li&gt;
-&lt;li&gt;Use search to find specific prompts by context&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;strong&gt;During Work:&lt;/strong&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Create new prompts as you develop them&lt;/li&gt;
-&lt;li&gt;Use variable templates for repetitive tasks&lt;/li&gt;
-&lt;li&gt;Test prompts across models before finalizing&lt;/li&gt;
-&lt;li&gt;Tag and categorize for future retrieval&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;strong&gt;End of Day:&lt;/strong&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Review version history for any changes&lt;/li&gt;
-&lt;li&gt;Sync to WebDAV for backup&lt;/li&gt;
-&lt;li&gt;Export important prompts for sharing&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div&gt;&lt;h3 id=&quot;use-cases&quot;&gt;Use Cases&lt;/h3&gt;&lt;a href=&quot;#use-cases&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Use Cases”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Scenario&lt;/th&gt;&lt;th&gt;How PromptHub Helps&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Content Creation&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Store writing prompts with style variables&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Code Generation&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Manage coding templates with language/framework variables&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Translation Work&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Template prompts with source/target language placeholders&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Research Analysis&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Compare AI responses across models&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Customer Support&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Standardize response templates with personalization&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
-&lt;div&gt;&lt;h3 id=&quot;best-practices&quot;&gt;Best Practices&lt;/h3&gt;&lt;a href=&quot;#best-practices&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Best Practices”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Organize Early&lt;/strong&gt; - Set up folder structure before adding many prompts&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Use Meaningful Tags&lt;/strong&gt; - Tags like &lt;code dir=&quot;auto&quot;&gt;production&lt;/code&gt;, &lt;code dir=&quot;auto&quot;&gt;experimental&lt;/code&gt;, &lt;code dir=&quot;auto&quot;&gt;deprecated&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Template Variables&lt;/strong&gt; - Make prompts reusable with &lt;code dir=&quot;auto&quot;&gt;{{variable}}&lt;/code&gt; syntax&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Regular Backups&lt;/strong&gt; - Enable WebDAV sync or manual exports&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Version Notes&lt;/strong&gt; - Add descriptions when making significant changes&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div&gt;&lt;h2 id=&quot;precautions-and-troubleshooting&quot;&gt;Precautions and Troubleshooting&lt;/h2&gt;&lt;a href=&quot;#precautions-and-troubleshooting&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Precautions and Troubleshooting”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h3 id=&quot;common-issues&quot;&gt;Common Issues&lt;/h3&gt;&lt;a href=&quot;#common-issues&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Common Issues”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;Application Won’t Start on macOS:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Run the &lt;code dir=&quot;auto&quot;&gt;xattr&lt;/code&gt; command mentioned in installation&lt;/li&gt;
-&lt;li&gt;Check System Settings &gt; Privacy &amp;#x26; Security&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Database Corruption:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Use the backup feature regularly&lt;/li&gt;
-&lt;li&gt;Keep the &lt;code dir=&quot;auto&quot;&gt;.phub.gz&lt;/code&gt; backup file safe&lt;/li&gt;
-&lt;li&gt;Restore from backup if needed&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;AI Testing Fails:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Verify API key is correct&lt;/li&gt;
-&lt;li&gt;Check API endpoint URL&lt;/li&gt;
-&lt;li&gt;Ensure model name matches provider’s specification&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;WebDAV Sync Issues:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Verify WebDAV URL ends with correct path&lt;/li&gt;
-&lt;li&gt;Test connection in settings before enabling auto-sync&lt;/li&gt;
-&lt;li&gt;Check firewall/proxy settings&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h3 id=&quot;faq&quot;&gt;FAQ&lt;/h3&gt;&lt;a href=&quot;#faq&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “FAQ”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;Q: Is my data sent to any cloud service?&lt;/strong&gt;
-A: No, all data is stored locally. WebDAV sync is optional and user-controlled.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Q: Can I share prompts with colleagues?&lt;/strong&gt;
-A: Yes, export individual prompts or full backups in &lt;code dir=&quot;auto&quot;&gt;.phub.gz&lt;/code&gt; format.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Q: What happens if I forget my master password?&lt;/strong&gt;
-A: Unfortunately, encrypted data cannot be recovered without the password.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Q: Does it work offline?&lt;/strong&gt;
-A: The prompt management features work fully offline. Only AI testing requires internet.&lt;/p&gt;
-&lt;div&gt;&lt;h2 id=&quot;comparison-with-similar-tools&quot;&gt;Comparison with Similar Tools&lt;/h2&gt;&lt;a href=&quot;#comparison-with-similar-tools&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Comparison with Similar Tools”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Feature&lt;/th&gt;&lt;th&gt;PromptHub&lt;/th&gt;&lt;th&gt;Notion&lt;/th&gt;&lt;th&gt;PromptLayer&lt;/th&gt;&lt;th&gt;Snipd&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Local Storage&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Yes&lt;/td&gt;&lt;td&gt;Cloud-only&lt;/td&gt;&lt;td&gt;Cloud&lt;/td&gt;&lt;td&gt;Cloud&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Version Control&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Built-in&lt;/td&gt;&lt;td&gt;Limited&lt;/td&gt;&lt;td&gt;Yes&lt;/td&gt;&lt;td&gt;No&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Multi-Model Testing&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Yes&lt;/td&gt;&lt;td&gt;No&lt;/td&gt;&lt;td&gt;Yes&lt;/td&gt;&lt;td&gt;No&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Variable Templates&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Yes&lt;/td&gt;&lt;td&gt;Partial&lt;/td&gt;&lt;td&gt;Yes&lt;/td&gt;&lt;td&gt;No&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Free&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Yes&lt;/td&gt;&lt;td&gt;Freemium&lt;/td&gt;&lt;td&gt;Paid&lt;/td&gt;&lt;td&gt;Freemium&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Open Source&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;AGPL-3.0&lt;/td&gt;&lt;td&gt;No&lt;/td&gt;&lt;td&gt;No&lt;/td&gt;&lt;td&gt;No&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Desktop App&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Yes&lt;/td&gt;&lt;td&gt;Web/App&lt;/td&gt;&lt;td&gt;Web&lt;/td&gt;&lt;td&gt;Web&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Offline Mode&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Full&lt;/td&gt;&lt;td&gt;Limited&lt;/td&gt;&lt;td&gt;No&lt;/td&gt;&lt;td&gt;No&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
-&lt;div&gt;&lt;h3 id=&quot;why-choose-prompthub&quot;&gt;Why Choose PromptHub?&lt;/h3&gt;&lt;a href=&quot;#why-choose-prompthub&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Why Choose PromptHub?”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;Advantages:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Complete privacy with local-first storage&lt;/li&gt;
-&lt;li&gt;No subscription fees or usage limits&lt;/li&gt;
-&lt;li&gt;Full feature set in free open-source package&lt;/li&gt;
-&lt;li&gt;Cross-platform desktop experience&lt;/li&gt;
-&lt;li&gt;Active development with responsive maintainer&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Considerations:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Requires manual backup strategy (or WebDAV setup)&lt;/li&gt;
-&lt;li&gt;No mobile app (desktop only)&lt;/li&gt;
-&lt;li&gt;AI testing requires your own API keys&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h2 id=&quot;technology-stack&quot;&gt;Technology Stack&lt;/h2&gt;&lt;a href=&quot;#technology-stack&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Technology Stack”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;PromptHub is built with modern technologies:&lt;/p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Category&lt;/th&gt;&lt;th&gt;Technology&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;Framework&lt;/td&gt;&lt;td&gt;Electron 33&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Frontend&lt;/td&gt;&lt;td&gt;React 18 + TypeScript 5&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Styling&lt;/td&gt;&lt;td&gt;TailwindCSS&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;State Management&lt;/td&gt;&lt;td&gt;Zustand&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Local Storage&lt;/td&gt;&lt;td&gt;IndexedDB + SQLite&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Build Tools&lt;/td&gt;&lt;td&gt;Vite + electron-builder&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
-&lt;div&gt;&lt;h2 id=&quot;reference-links&quot;&gt;Reference Links&lt;/h2&gt;&lt;a href=&quot;#reference-links&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Reference Links”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;GitHub Repository&lt;/strong&gt;: &lt;a href=&quot;https://github.com/legeling/PromptHub&quot;&gt;https://github.com/legeling/PromptHub&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Releases&lt;/strong&gt;: &lt;a href=&quot;https://github.com/legeling/PromptHub/releases&quot;&gt;https://github.com/legeling/PromptHub/releases&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Issues&lt;/strong&gt;: &lt;a href=&quot;https://github.com/legeling/PromptHub/issues&quot;&gt;https://github.com/legeling/PromptHub/issues&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Discussions&lt;/strong&gt;: &lt;a href=&quot;https://github.com/legeling/PromptHub/discussions&quot;&gt;https://github.com/legeling/PromptHub/discussions&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;License&lt;/strong&gt;: AGPL-3.0&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;&lt;a href=&quot;#conclusion&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Conclusion”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;PromptHub represents a thoughtful approach to AI prompt management - prioritizing privacy, functionality, and user experience without the overhead of cloud dependencies or subscription fees. For anyone serious about AI productivity who values data ownership, PromptHub is worth exploring.&lt;/p&gt;
-&lt;p&gt;The project is actively maintained with regular updates and an engaged community. Whether you’re a content creator, developer, researcher, or anyone who regularly uses AI tools, PromptHub can bring order to your prompt chaos.&lt;/p&gt;
-&lt;p&gt;Give it a star on GitHub if you find it useful!&lt;/p&gt;</content:encoded><category>PromptHub</category><category>AI Tools</category><category>Prompt Management</category><category>Open Source</category><category>Local-First</category><category>Version Control</category><category>Electron</category><category>Desktop App</category><category>Privacy</category></item></channel></rss>
+&lt;/ul&gt;</content:encoded><category>AI</category><category>Claude</category><category>Scientific Research</category><category>MCP</category><category>Bioinformatics</category><category>Cheminformatics</category><category>Machine Learning</category><category>Data Science</category></item></channel></rss>

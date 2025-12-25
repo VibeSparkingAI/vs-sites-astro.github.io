@@ -1,4 +1,135 @@
-<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Vibe Sparking AI | Blog</title><description/><link>https://www.vibesparking.com/</link><language>zh-CN</language><item><title>Rube：连接 AI 与 500+ 应用的 MCP 服务器</title><link>https://www.vibesparking.com/zh-cn/blog/ai/rube/2025-12-25-rube-mcp-server-ai-automation-guide/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/rube/2025-12-25-rube-mcp-server-ai-automation-guide/</guid><pubDate>Thu, 25 Dec 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Vibe Sparking AI | Blog</title><description/><link>https://www.vibesparking.com/</link><language>zh-CN</language><item><title>Alma：一款优雅的桌面应用，统一管理你的所有 AI 服务</title><link>https://www.vibesparking.com/zh-cn/blog/ai/alma/2025-12-25-alma-elegant-ai-provider-orchestration/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/alma/2025-12-25-alma-elegant-ai-provider-orchestration/</guid><pubDate>Thu, 25 Dec 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # Alma：一款优雅的桌面应用，统一管理你的所有 AI 服务 --&gt;
+&lt;div&gt;&lt;h2 id=&quot;ai-服务商的多开困境&quot;&gt;AI 服务商的”多开”困境&lt;/h2&gt;&lt;a href=&quot;#ai-服务商的多开困境&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “AI 服务商的”多开”困境”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;如果你是 AI 深度用户，你的日常工作流程可能是这样的：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;一个 ChatGPT 标签页用于快速对话&lt;/li&gt;
+&lt;li&gt;一个 Claude 标签页专门写代码和分析&lt;/li&gt;
+&lt;li&gt;一个 Gemini 标签页处理 Google 生态任务&lt;/li&gt;
+&lt;li&gt;一个 DeepSeek 标签页用于性价比场景&lt;/li&gt;
+&lt;li&gt;散落在各处的 API 密钥，越来越多…&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;是不是很熟悉？&lt;/strong&gt; 你不是一个人。管理多个 AI 服务商，已经成为新时代的”浏览器标签页焦虑症”。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Alma&lt;/strong&gt; 就是为解决这个问题而生的。&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;alma-是什么&quot;&gt;Alma 是什么？&lt;/h2&gt;&lt;a href=&quot;#alma-是什么&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Alma 是什么？”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;a href=&quot;https://alma.now/&quot;&gt;Alma&lt;/a&gt; 是一款设计精美的 macOS 桌面应用，充当你 AI 能力的统一指挥中心。不用再在各个网页界面之间来回切换，你可以在一个简洁直观的界面中访问所有 AI 服务商。&lt;/p&gt;
+&lt;p&gt;把它想象成 &lt;strong&gt;AI 的万能遥控器&lt;/strong&gt; —— 一个界面，多个大脑。&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;谁做的&quot;&gt;谁做的？&lt;/h2&gt;&lt;a href=&quot;#谁做的&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “谁做的？”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Alma 出自 &lt;strong&gt;yetone&lt;/strong&gt; 之手，他正是 &lt;a href=&quot;https://github.com/yetone/openai-translator&quot;&gt;OpenAI Translator&lt;/a&gt; 的开发者 —— 这个项目在 GitHub 上斩获了 &lt;strong&gt;23100+ 星标&lt;/strong&gt;。那个项目从一个 Chrome 插件进化成了多平台桌面应用，充分证明了 yetone 交付高质量 AI 驱动桌面应用的能力。&lt;/p&gt;
+&lt;p&gt;这个背景很重要。Alma 不是一个周末小项目 —— 它来自一个有着丰富经验、能够打造人们每天实际使用的工具的开发者。&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;核心功能&quot;&gt;核心功能&lt;/h2&gt;&lt;a href=&quot;#核心功能&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “核心功能”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3 id=&quot;统一聊天界面&quot;&gt;统一聊天界面&lt;/h3&gt;&lt;a href=&quot;#统一聊天界面&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “统一聊天界面”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;简洁直观的聊天界面，将你所有的 AI 对话整合在一起：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Markdown 渲染&lt;/strong&gt;，响应格式精美&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;代码高亮&lt;/strong&gt;，具备语法感知能力&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;实时流式输出&lt;/strong&gt;，生成过程即时呈现&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;深色/浅色主题切换&lt;/strong&gt;，采用 View Transitions API 实现丝滑动画&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;智能记忆系统&quot;&gt;智能记忆系统&lt;/h3&gt;&lt;a href=&quot;#智能记忆系统&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “智能记忆系统”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Alma 能够跨对话记住上下文：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;用户偏好在会话间持久保存&lt;/li&gt;
+&lt;li&gt;对话上下文向前延续&lt;/li&gt;
+&lt;li&gt;专门的记忆管理面板便于组织&lt;/li&gt;
+&lt;li&gt;可查看、整理、清理记忆&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;网页搜索集成&quot;&gt;网页搜索集成&lt;/h3&gt;&lt;a href=&quot;#网页搜索集成&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “网页搜索集成”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;内置实时信息获取能力：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;AI 回答时可检索实时网页数据&lt;/li&gt;
+&lt;li&gt;无需手动粘贴 URL 或上下文&lt;/li&gt;
+&lt;li&gt;基于真实网页数据提供当前、准确的答案&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;高级工具调用&quot;&gt;高级工具调用&lt;/h3&gt;&lt;a href=&quot;#高级工具调用&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “高级工具调用”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;不仅是聊天，Alma 还能让 AI 执行复杂任务：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;数学计算&lt;/li&gt;
+&lt;li&gt;数据分析操作&lt;/li&gt;
+&lt;li&gt;智能工具集成&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;支持的-ai-服务商&quot;&gt;支持的 AI 服务商&lt;/h2&gt;&lt;a href=&quot;#支持的-ai-服务商&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “支持的 AI 服务商”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;服务商&lt;/th&gt;&lt;th&gt;状态&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;OpenAI (GPT-4 等)&lt;/td&gt;&lt;td&gt;已支持&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Anthropic (Claude)&lt;/td&gt;&lt;td&gt;已支持&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Google Gemini&lt;/td&gt;&lt;td&gt;已支持&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;DeepSeek&lt;/td&gt;&lt;td&gt;已支持&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;自定义 API&lt;/td&gt;&lt;td&gt;已支持&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;p&gt;这种服务商无关的设计意味着你永远不会被锁定。根据任务需要选择模型 —— 创意写作用 GPT-4，分析用 Claude，控制成本用 DeepSeek。&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;平台支持&quot;&gt;平台支持&lt;/h2&gt;&lt;a href=&quot;#平台支持&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “平台支持”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;目前可用：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;macOS Apple Silicon (.dmg)&lt;/li&gt;
+&lt;li&gt;macOS Intel (.dmg)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;即将推出：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Windows&lt;/li&gt;
+&lt;li&gt;Linux&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;注意：目前只有 macOS 版本经过测试并保证可用。Windows 和 Linux 支持正在开发中。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;为什么选择-alma&quot;&gt;为什么选择 Alma？&lt;/h2&gt;&lt;a href=&quot;#为什么选择-alma&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “为什么选择 Alma？”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3 id=&quot;1-服务商灵活性&quot;&gt;1. 服务商灵活性&lt;/h3&gt;&lt;a href=&quot;#1-服务商灵活性&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1. 服务商灵活性”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;不同模型擅长不同任务。Claude 可能是你写代码的首选，而 GPT-4 在创意写作方面表现更佳。Alma 让你无需切换应用就能切换上下文。&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;2-api-成本可控&quot;&gt;2. API 成本可控&lt;/h3&gt;&lt;a href=&quot;#2-api-成本可控&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2. API 成本可控”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;使用自己的 API 密钥，成本完全由你掌控。没有中间商加价，没有订阅费意外。&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;3-隐私优先设计&quot;&gt;3. 隐私优先设计&lt;/h3&gt;&lt;a href=&quot;#3-隐私优先设计&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3. 隐私优先设计”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;作为使用你自己 API 密钥的桌面应用，你的对话不会经过第三方服务。数据只在你和选定的服务商之间流转。&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;4-记忆连续性&quot;&gt;4. 记忆连续性&lt;/h3&gt;&lt;a href=&quot;#4-记忆连续性&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “4. 记忆连续性”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;与网页界面容易丢失上下文不同，Alma 的记忆系统在会话间保持连续性 —— 让它更像一个持久的助手，而不只是一个工具。&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;快速开始&quot;&gt;快速开始&lt;/h2&gt;&lt;a href=&quot;#快速开始&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “快速开始”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;访问&lt;/strong&gt; &lt;a href=&quot;https://alma.now/&quot;&gt;alma.now&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;下载&lt;/strong&gt;对应的 macOS 版本（Apple Silicon 或 Intel）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;配置&lt;/strong&gt;你偏好服务商的 API 密钥&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;开始聊天&lt;/strong&gt;，统一访问多个 AI 模型&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;总结&quot;&gt;总结&lt;/h2&gt;&lt;a href=&quot;#总结&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “总结”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Alma 代表着一种转变：从 &lt;strong&gt;分散的 AI 网页服务&lt;/strong&gt; 到 &lt;strong&gt;统一的 AI 桌面基础设施&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;对于经常在多个 AI 服务商之间切换的用户来说，这种整合不仅是方便 —— 而是工作流程的变革。一个应用，多个模型，持久记忆，以及专为日常使用设计的界面。&lt;/p&gt;
+&lt;p&gt;如果你厌倦了在浏览器标签页之间来回切换，想要一种更精致的 AI 服务商管理方式，Alma 值得在你的 Dock 栏占有一席之地。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;相关资源：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;官方网站：&lt;a href=&quot;https://alma.now/&quot;&gt;alma.now&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;发布版本：&lt;a href=&quot;https://github.com/yetone/alma-releases&quot;&gt;GitHub - yetone/alma-releases&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;反馈渠道：&lt;a href=&quot;https://feedback.alma.now&quot;&gt;feedback.alma.now&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;相关项目：&lt;a href=&quot;https://github.com/yetone/openai-translator&quot;&gt;OpenAI Translator&lt;/a&gt;（23100+ 星标）&lt;/li&gt;
+&lt;/ul&gt;</content:encoded><category>AI 工具</category><category>AI 服务商</category><category>桌面应用</category><category>macOS</category><category>OpenAI</category><category>Anthropic</category><category>Gemini</category><category>DeepSeek</category></item><item><title>Rube：连接 AI 与 500+ 应用的 MCP 服务器</title><link>https://www.vibesparking.com/zh-cn/blog/ai/rube/2025-12-25-rube-mcp-server-ai-automation-guide/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/rube/2025-12-25-rube-mcp-server-ai-automation-guide/</guid><pubDate>Thu, 25 Dec 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;/p&gt;
 &lt;div&gt;&lt;h1 id=&quot;rube连接-ai-与-500-应用的-mcp-服务器&quot;&gt;Rube：连接 AI 与 500+ 应用的 MCP 服务器&lt;/h1&gt;&lt;a href=&quot;#rube连接-ai-与-500-应用的-mcp-服务器&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Rube：连接 AI 与 500+ 应用的 MCP 服务器”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;“连接万物，触发一切。”&lt;/strong&gt; — Rube 的核心理念，让 AI 自动化如同日常对话般简单自然。&lt;/p&gt;
@@ -523,124 +654,7 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/MODSetter/SurfSense&quot;&gt;MODSetter/SurfSense GitHub 仓库&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://techwithmanav.substack.com/p/surfsense-the-open-source-perplexity&quot;&gt;SurfSense: The Open Source Perplexity Alternative&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content:encoded><category>AI Agent</category><category>SurfSense</category><category>Research</category><category>Knowledge Management</category><category>Open Source</category></item><item><title>Boris Cherny：Claude Code 创建者从 Meta 到 Anthropic 的职业成长之路</title><link>https://www.vibesparking.com/zh-cn/blog/ai/claude-code/career/2025-12-25-boris-cherny-claude-code-creator-career-insights/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/claude-code/career/2025-12-25-boris-cherny-claude-code-creator-career-insights/</guid><pubDate>Thu, 25 Dec 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # Boris Cherny：Claude Code 创建者从 Meta 到 Anthropic 的职业成长之路 --&gt;
-&lt;div&gt;&lt;h2 id=&quot;引言&quot;&gt;引言&lt;/h2&gt;&lt;a href=&quot;#引言&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “引言”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;每一个革命性产品的背后，都有一个关于个人成长、战略思考和持续求知的故事。&lt;strong&gt;Boris Cherny&lt;/strong&gt;，Anthropic 的 Claude Code 创建者，就是这个道理的最佳诠释。他的职业历程——从创业到风险投资，在 Meta（Facebook/Instagram）工作十年，再到领导开发最具影响力的 AI 开发工具之一——展示了每个工程师都可以应用的核心原则。&lt;/p&gt;
-&lt;p&gt;本文提炼了 Boris 的职业洞见，揭示他如何从一名中级工程师成长为 Meta 的首席工程师，最终创造出 Claude Code——一个如今能够自己编写 80-90% 代码的工具。&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;非传统的成长路径&quot;&gt;非传统的成长路径&lt;/h2&gt;&lt;a href=&quot;#非传统的成长路径&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “非传统的成长路径”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;Boris 在 18 岁时创立了他的第一家创业公司，曾在对冲基金工作，值得注意的是&lt;strong&gt;他没有计算机科学学位&lt;/strong&gt;——他学的是经济学，后来辍学去追求创业。他的轨迹证明，编程是一项在工作中学习的实用技能，而非在课堂上习得。&lt;/p&gt;
-&lt;p&gt;Meta 职业里程碑（2012-2022）：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;IC4（中级）&lt;/strong&gt;：以”低于应有水平”入职，负责 Messenger-Groups 集成项目&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;IC5-IC6&lt;/strong&gt;：领导 Groups 网页端迁移；创建了 Undux 状态管理库&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;IC7（高级主任工程师）&lt;/strong&gt;：推动 Public Groups 功能，涉及复杂的数据模型迁移&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;IC8（首席工程师）&lt;/strong&gt;：为数百名工程师规划工作范围；领导 Instagram 从 Python 迁移到 Hack 语言&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;职业成长的五大法则&quot;&gt;职业成长的五大法则&lt;/h2&gt;&lt;a href=&quot;#职业成长的五大法则&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “职业成长的五大法则”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h3 id=&quot;1-为六个月后的模型设计产品&quot;&gt;1. 为六个月后的模型设计产品&lt;/h3&gt;&lt;a href=&quot;#1-为六个月后的模型设计产品&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1. 为六个月后的模型设计产品”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;在快速演进的 AI 领域，不要基于当前模型的能力来构建产品——要为未来的模型设计。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;“不要为今天的模型构建产品，而要为六个月后的模型构建。” — Ben Mann，Boris 在 Anthropic 的上级&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;这种前瞻性思维解释了为什么 Claude Code 最初感觉不太理想，但在 Claude 4 系列发布后变得具有变革性。早期产品可能体验一般，但当新模型发布时，你就能实现质的飞跃。&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;2-挖掘潜在需求&quot;&gt;2. 挖掘潜在需求&lt;/h3&gt;&lt;a href=&quot;#2-挖掘潜在需求&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2. 挖掘潜在需求”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;最成功的产品不是发明新行为——而是满足已存在但被隐藏的需求。&lt;/p&gt;
-&lt;p&gt;Boris 在 Facebook 观察到，用户有 40% 的时间在”滥用” Groups 进行商业交易。这一观察催生了 Facebook Marketplace。同样，Dating 功能也是从观察人们已经如何使用平台建立联系中诞生的。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;教训&lt;/strong&gt;：观察用户正在用你现有功能拼凑出什么——那才是产品市场契合点的藏身之处。&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;3-副业项目是你最大的职业杠杆&quot;&gt;3. 副业项目是你最大的职业杠杆&lt;/h3&gt;&lt;a href=&quot;#3-副业项目是你最大的职业杠杆&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3. 副业项目是你最大的职业杠杆”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;通过解决重复出现的痛点并将解决方案推广为公司级工具，Boris 快速积累了跨团队的影响力。&lt;/p&gt;
-&lt;p&gt;他的”20%时间”项目包括：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Undux&lt;/strong&gt;：一个 React 状态管理库&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;TypeScript 书籍与聚会&lt;/strong&gt;：在开发者社区中的影响力建设&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Lint 规则自动化&lt;/strong&gt;：将重复的代码审查评论转化为自动化检查&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;大数据集测试框架&lt;/strong&gt;：惠及数千名工程师的基础设施&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;“更好的工程是工程师拓展人脉和获得影响力的最简单方式。“&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;div&gt;&lt;h3 id=&quot;4-成为打破专业泳道的通才&quot;&gt;4. 成为打破专业泳道的通才&lt;/h3&gt;&lt;a href=&quot;#4-成为打破专业泳道的通才&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “4. 成为打破专业泳道的通才”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;高影响力的工程师不只是写代码——他们发展产品感觉、设计能力和用户研究技能。&lt;/p&gt;
-&lt;p&gt;在 Meta 和 Anthropic，都没有正式的职称。无论是工程师、产品经理还是设计师，每个人都是”技术成员（Member of Technical Staff）“。这种文化迫使人们通过执行力而非头衔来不断证明自己的价值。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;“仅仅因为你是产品工程师，不代表你不能做基础设施。“&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;div&gt;&lt;h3 id=&quot;5-常识是你最大的超能力&quot;&gt;5. 常识是你最大的超能力&lt;/h3&gt;&lt;a href=&quot;#5-常识是你最大的超能力&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “5. 常识是你最大的超能力”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;在历史包袱沉重、流程惯性强大的复杂组织中，最可靠的决策框架就是回归本质：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;用户真正需要什么？&lt;/li&gt;
-&lt;li&gt;这件事合理吗？&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;成功的领导者不会被组织惯性牵着走，而是持续追问这些根本问题。&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;claude-code-的诞生故事&quot;&gt;Claude Code 的诞生故事&lt;/h2&gt;&lt;a href=&quot;#claude-code-的诞生故事&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Claude Code 的诞生故事”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h3 id=&quot;起源&quot;&gt;起源&lt;/h3&gt;&lt;a href=&quot;#起源&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “起源”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;Claude Code 始于 Anthropic 内部实验中的一次意外发现。Boris 的上级推动他超越自动补全的思维局限，鼓励他为未来的模型能力进行设计。&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;艰难时期&quot;&gt;艰难时期&lt;/h3&gt;&lt;a href=&quot;#艰难时期&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “艰难时期”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;最初，Boris 只在大约 10% 的工作中使用 Claude Code。直到 2024 年 3 月 Sonnet/Opus 4 发布，这个产品才真正可用。&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;突破时刻&quot;&gt;突破时刻&lt;/h3&gt;&lt;a href=&quot;#突破时刻&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “突破时刻”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;模型改进后，使用率跃升至 50%。如今，Claude Code 的 80-90% 代码都是由 Claude Code 自己编写的。出乎意料的是，使用者从工程师扩展到了数据科学家和销售团队——这是团队从未预料到的使用场景。&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;招聘哲学寻找有副本任务的人&quot;&gt;招聘哲学：寻找有”副本任务”的人&lt;/h2&gt;&lt;a href=&quot;#招聘哲学寻找有副本任务的人&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “招聘哲学：寻找有”副本任务”的人”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;Boris 积极寻找那些在日常工作之外保持好奇心的工程师：&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;“在招聘工程师时，我确实会寻找这一点……有酷炫的周末项目，比如某个特别热衷于酿造康普茶的人。”&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;这体现了成长型思维和求知欲——这些特质将优秀工程师与卓越工程师区分开来。&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;送给你职业生涯的金句&quot;&gt;送给你职业生涯的金句&lt;/h2&gt;&lt;a href=&quot;#送给你职业生涯的金句&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “送给你职业生涯的金句”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;关于冒充者综合症：&lt;/strong&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;“没有人在任何层级真正知道自己在做什么。如果你没有这种感觉，说明你还不够努力。”&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;关于专注与广度：&lt;/strong&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;“写代码让你脚踏实地。失去它，你会很快失去直觉——那是很危险的状态。”&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;关于团队协作：&lt;/strong&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;“你永远不想直接告诉别人做什么。理解他们想要什么，然后呈现机会——这总是更有效。”&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;关于组织变革：&lt;/strong&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;“直接做。有时你需要共识，有时你需要行动。领导者需要不断在两者之间平衡。“&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;可行动的要点&quot;&gt;可行动的要点&lt;/h2&gt;&lt;a href=&quot;#可行动的要点&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “可行动的要点”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;停止追逐头衔&lt;/strong&gt;——追求有趣的问题和影响力。晋升自然会随之而来。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;投资副业项目&lt;/strong&gt;——即使是帮助团队的小自动化，也会随时间复利成巨大的影响力。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;成为通才&lt;/strong&gt;——在工程技能之外学习产品、设计和用户研究。最有价值的工程师是那些能够身兼多职的人。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;大量运用常识&lt;/strong&gt;——当迷失在组织复杂性中时，问问”用户真正需要什么？”&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;为未来构建&lt;/strong&gt;——无论是在 AI 还是任何快速发展的领域，为技术将要到达的地方设计，而不是今天的位置。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;结论&quot;&gt;结论&lt;/h2&gt;&lt;a href=&quot;#结论&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “结论”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;Boris Cherny 的职业生涯为工程师的成长提供了一堂大师课：从解决自己的问题开始，将解决方案扩展为帮助他人的工具，通过执行力而非头衔赢得信任，并始终为未来设计。&lt;/p&gt;
-&lt;p&gt;Claude Code 之所以存在，是因为 Boris 花了十年时间构建产品（很多失败了），学习什么是出色的开发者体验，并将自己定位在代码质量与 AI 能力的交汇点。&lt;/p&gt;
-&lt;p&gt;对于寻求快速职业成长的工程师，他的公式很清晰：&lt;strong&gt;保持好奇。做副业项目。系统性思考。为明天设计。&lt;/strong&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;参考资料&quot;&gt;参考资料&lt;/h2&gt;&lt;a href=&quot;#参考资料&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “参考资料”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.developing.dev/p/boris-cherny-creator-of-claude-code&quot;&gt;Boris Cherny 在 The Peterman Pod 播客 - 职业历程与 Claude Code&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.linkedin.com/in/bcherny/&quot;&gt;Boris Cherny LinkedIn 个人主页&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://x.com/bcherny/status/2000575036436955240&quot;&gt;Boris Cherny 在 X（Twitter）&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.anthropic.com/webinars/claude-code-for-financial-services-a-session-with-the-creator-boris-cherny&quot;&gt;Claude Code 金融服务网络研讨会&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://youtube.com/watch?v=AmdLVWMdjOk&quot;&gt;YouTube: Boris Cherny 访谈&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content:encoded><category>AI Agent</category><category>Claude Code</category><category>职业成长</category><category>Anthropic</category><category>Meta</category></item><item><title>用 Google Antigravity 快速修复 App Store 审核问题：真实案例分享</title><link>https://www.vibesparking.com/zh-cn/blog/ai/google/antigravity/2025-12-25-google-antigravity-fix-app-store-review-issues/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/google/antigravity/2025-12-25-google-antigravity-fix-app-store-review-issues/</guid><pubDate>Thu, 25 Dec 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;/p&gt;
+&lt;/ul&gt;</content:encoded><category>AI Agent</category><category>SurfSense</category><category>Research</category><category>Knowledge Management</category><category>Open Source</category></item><item><title>用 Google Antigravity 快速修复 App Store 审核问题：真实案例分享</title><link>https://www.vibesparking.com/zh-cn/blog/ai/google/antigravity/2025-12-25-google-antigravity-fix-app-store-review-issues/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/google/antigravity/2025-12-25-google-antigravity-fix-app-store-review-issues/</guid><pubDate>Thu, 25 Dec 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;/p&gt;
 &lt;div&gt;&lt;h1 id=&quot;用-google-antigravity-快速修复-app-store-审核问题真实案例分享&quot;&gt;用 Google Antigravity 快速修复 App Store 审核问题：真实案例分享&lt;/h1&gt;&lt;a href=&quot;#用-google-antigravity-快速修复-app-store-审核问题真实案例分享&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “用 Google Antigravity 快速修复 App Store 审核问题：真实案例分享”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;“部署可以自主规划、执行和验证复杂任务的 AI 代理，横跨编辑器、终端和浏览器。”&lt;/strong&gt; — Google Antigravity，一款革新开发方式的 Agent 优先 IDE。&lt;/p&gt;
@@ -1036,7 +1050,126 @@
 &lt;li&gt;&lt;a href=&quot;https://engineering.atspotify.com/2025/12/feedback-loops-background-coding-agents-part-3&quot;&gt;后台编码智能体：通过反馈循环实现可预测结果 - Spotify 工程&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.augmentcode.com/guides/ai-agent-quality-7-frameworks-to-go-beyond-vibe-coding&quot;&gt;AI 智能体质量：超越氛围编程的 7 个框架 - Augment Code&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://addyo.substack.com/p/coding-for-the-future-agentic-world&quot;&gt;为未来的智能体世界编码 - Addy Osmani&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title>Banana-Slides：AI原生PPT生成器 - 用自然语言创建专业演示文稿</title><link>https://www.vibesparking.com/zh-cn/blog/ai/banana-slides/2025-12-24-banana-slides-ai-native-ppt-generator/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/banana-slides/2025-12-24-banana-slides-ai-native-ppt-generator/</guid><pubDate>Wed, 24 Dec 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;/p&gt;
+&lt;/ul&gt;</content:encoded></item><item><title>Boris Cherny：Claude Code 创建者从 Meta 到 Anthropic 的职业成长之路</title><link>https://www.vibesparking.com/zh-cn/blog/ai/claude-code/career/2025-12-25-boris-cherny-claude-code-creator-career-insights/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/claude-code/career/2025-12-25-boris-cherny-claude-code-creator-career-insights/</guid><pubDate>Thu, 25 Dec 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # Boris Cherny：Claude Code 创建者从 Meta 到 Anthropic 的职业成长之路 --&gt;
+&lt;div&gt;&lt;h2 id=&quot;引言&quot;&gt;引言&lt;/h2&gt;&lt;a href=&quot;#引言&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “引言”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;每一个革命性产品的背后，都有一个关于个人成长、战略思考和持续求知的故事。&lt;strong&gt;Boris Cherny&lt;/strong&gt;，Anthropic 的 Claude Code 创建者，就是这个道理的最佳诠释。他的职业历程——从创业到风险投资，在 Meta（Facebook/Instagram）工作十年，再到领导开发最具影响力的 AI 开发工具之一——展示了每个工程师都可以应用的核心原则。&lt;/p&gt;
+&lt;p&gt;本文提炼了 Boris 的职业洞见，揭示他如何从一名中级工程师成长为 Meta 的首席工程师，最终创造出 Claude Code——一个如今能够自己编写 80-90% 代码的工具。&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;非传统的成长路径&quot;&gt;非传统的成长路径&lt;/h2&gt;&lt;a href=&quot;#非传统的成长路径&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “非传统的成长路径”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Boris 在 18 岁时创立了他的第一家创业公司，曾在对冲基金工作，值得注意的是&lt;strong&gt;他没有计算机科学学位&lt;/strong&gt;——他学的是经济学，后来辍学去追求创业。他的轨迹证明，编程是一项在工作中学习的实用技能，而非在课堂上习得。&lt;/p&gt;
+&lt;p&gt;Meta 职业里程碑（2012-2022）：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;IC4（中级）&lt;/strong&gt;：以”低于应有水平”入职，负责 Messenger-Groups 集成项目&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;IC5-IC6&lt;/strong&gt;：领导 Groups 网页端迁移；创建了 Undux 状态管理库&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;IC7（高级主任工程师）&lt;/strong&gt;：推动 Public Groups 功能，涉及复杂的数据模型迁移&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;IC8（首席工程师）&lt;/strong&gt;：为数百名工程师规划工作范围；领导 Instagram 从 Python 迁移到 Hack 语言&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;职业成长的五大法则&quot;&gt;职业成长的五大法则&lt;/h2&gt;&lt;a href=&quot;#职业成长的五大法则&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “职业成长的五大法则”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3 id=&quot;1-为六个月后的模型设计产品&quot;&gt;1. 为六个月后的模型设计产品&lt;/h3&gt;&lt;a href=&quot;#1-为六个月后的模型设计产品&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1. 为六个月后的模型设计产品”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;在快速演进的 AI 领域，不要基于当前模型的能力来构建产品——要为未来的模型设计。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“不要为今天的模型构建产品，而要为六个月后的模型构建。” — Ben Mann，Boris 在 Anthropic 的上级&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这种前瞻性思维解释了为什么 Claude Code 最初感觉不太理想，但在 Claude 4 系列发布后变得具有变革性。早期产品可能体验一般，但当新模型发布时，你就能实现质的飞跃。&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;2-挖掘潜在需求&quot;&gt;2. 挖掘潜在需求&lt;/h3&gt;&lt;a href=&quot;#2-挖掘潜在需求&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2. 挖掘潜在需求”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;最成功的产品不是发明新行为——而是满足已存在但被隐藏的需求。&lt;/p&gt;
+&lt;p&gt;Boris 在 Facebook 观察到，用户有 40% 的时间在”滥用” Groups 进行商业交易。这一观察催生了 Facebook Marketplace。同样，Dating 功能也是从观察人们已经如何使用平台建立联系中诞生的。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;教训&lt;/strong&gt;：观察用户正在用你现有功能拼凑出什么——那才是产品市场契合点的藏身之处。&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;3-副业项目是你最大的职业杠杆&quot;&gt;3. 副业项目是你最大的职业杠杆&lt;/h3&gt;&lt;a href=&quot;#3-副业项目是你最大的职业杠杆&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3. 副业项目是你最大的职业杠杆”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;通过解决重复出现的痛点并将解决方案推广为公司级工具，Boris 快速积累了跨团队的影响力。&lt;/p&gt;
+&lt;p&gt;他的”20%时间”项目包括：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Undux&lt;/strong&gt;：一个 React 状态管理库&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;TypeScript 书籍与聚会&lt;/strong&gt;：在开发者社区中的影响力建设&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Lint 规则自动化&lt;/strong&gt;：将重复的代码审查评论转化为自动化检查&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;大数据集测试框架&lt;/strong&gt;：惠及数千名工程师的基础设施&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“更好的工程是工程师拓展人脉和获得影响力的最简单方式。“&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div&gt;&lt;h3 id=&quot;4-成为打破专业泳道的通才&quot;&gt;4. 成为打破专业泳道的通才&lt;/h3&gt;&lt;a href=&quot;#4-成为打破专业泳道的通才&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “4. 成为打破专业泳道的通才”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;高影响力的工程师不只是写代码——他们发展产品感觉、设计能力和用户研究技能。&lt;/p&gt;
+&lt;p&gt;在 Meta 和 Anthropic，都没有正式的职称。无论是工程师、产品经理还是设计师，每个人都是”技术成员（Member of Technical Staff）“。这种文化迫使人们通过执行力而非头衔来不断证明自己的价值。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“仅仅因为你是产品工程师，不代表你不能做基础设施。“&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div&gt;&lt;h3 id=&quot;5-常识是你最大的超能力&quot;&gt;5. 常识是你最大的超能力&lt;/h3&gt;&lt;a href=&quot;#5-常识是你最大的超能力&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “5. 常识是你最大的超能力”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;在历史包袱沉重、流程惯性强大的复杂组织中，最可靠的决策框架就是回归本质：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;用户真正需要什么？&lt;/li&gt;
+&lt;li&gt;这件事合理吗？&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;成功的领导者不会被组织惯性牵着走，而是持续追问这些根本问题。&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;claude-code-的诞生故事&quot;&gt;Claude Code 的诞生故事&lt;/h2&gt;&lt;a href=&quot;#claude-code-的诞生故事&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Claude Code 的诞生故事”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3 id=&quot;起源&quot;&gt;起源&lt;/h3&gt;&lt;a href=&quot;#起源&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “起源”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Claude Code 始于 Anthropic 内部实验中的一次意外发现。Boris 的上级推动他超越自动补全的思维局限，鼓励他为未来的模型能力进行设计。&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;艰难时期&quot;&gt;艰难时期&lt;/h3&gt;&lt;a href=&quot;#艰难时期&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “艰难时期”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;最初，Boris 只在大约 10% 的工作中使用 Claude Code。直到 2024 年 3 月 Sonnet/Opus 4 发布，这个产品才真正可用。&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;突破时刻&quot;&gt;突破时刻&lt;/h3&gt;&lt;a href=&quot;#突破时刻&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “突破时刻”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;模型改进后，使用率跃升至 50%。如今，Claude Code 的 80-90% 代码都是由 Claude Code 自己编写的。出乎意料的是，使用者从工程师扩展到了数据科学家和销售团队——这是团队从未预料到的使用场景。&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;招聘哲学寻找有副本任务的人&quot;&gt;招聘哲学：寻找有”副本任务”的人&lt;/h2&gt;&lt;a href=&quot;#招聘哲学寻找有副本任务的人&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “招聘哲学：寻找有”副本任务”的人”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Boris 积极寻找那些在日常工作之外保持好奇心的工程师：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“在招聘工程师时，我确实会寻找这一点……有酷炫的周末项目，比如某个特别热衷于酿造康普茶的人。”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这体现了成长型思维和求知欲——这些特质将优秀工程师与卓越工程师区分开来。&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;送给你职业生涯的金句&quot;&gt;送给你职业生涯的金句&lt;/h2&gt;&lt;a href=&quot;#送给你职业生涯的金句&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “送给你职业生涯的金句”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;关于冒充者综合症：&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“没有人在任何层级真正知道自己在做什么。如果你没有这种感觉，说明你还不够努力。”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;关于专注与广度：&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“写代码让你脚踏实地。失去它，你会很快失去直觉——那是很危险的状态。”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;关于团队协作：&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“你永远不想直接告诉别人做什么。理解他们想要什么，然后呈现机会——这总是更有效。”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;关于组织变革：&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“直接做。有时你需要共识，有时你需要行动。领导者需要不断在两者之间平衡。“&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;可行动的要点&quot;&gt;可行动的要点&lt;/h2&gt;&lt;a href=&quot;#可行动的要点&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “可行动的要点”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;停止追逐头衔&lt;/strong&gt;——追求有趣的问题和影响力。晋升自然会随之而来。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;投资副业项目&lt;/strong&gt;——即使是帮助团队的小自动化，也会随时间复利成巨大的影响力。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;成为通才&lt;/strong&gt;——在工程技能之外学习产品、设计和用户研究。最有价值的工程师是那些能够身兼多职的人。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;大量运用常识&lt;/strong&gt;——当迷失在组织复杂性中时，问问”用户真正需要什么？”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;为未来构建&lt;/strong&gt;——无论是在 AI 还是任何快速发展的领域，为技术将要到达的地方设计，而不是今天的位置。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;结论&quot;&gt;结论&lt;/h2&gt;&lt;a href=&quot;#结论&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “结论”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Boris Cherny 的职业生涯为工程师的成长提供了一堂大师课：从解决自己的问题开始，将解决方案扩展为帮助他人的工具，通过执行力而非头衔赢得信任，并始终为未来设计。&lt;/p&gt;
+&lt;p&gt;Claude Code 之所以存在，是因为 Boris 花了十年时间构建产品（很多失败了），学习什么是出色的开发者体验，并将自己定位在代码质量与 AI 能力的交汇点。&lt;/p&gt;
+&lt;p&gt;对于寻求快速职业成长的工程师，他的公式很清晰：&lt;strong&gt;保持好奇。做副业项目。系统性思考。为明天设计。&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;参考资料&quot;&gt;参考资料&lt;/h2&gt;&lt;a href=&quot;#参考资料&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “参考资料”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.developing.dev/p/boris-cherny-creator-of-claude-code&quot;&gt;Boris Cherny 在 The Peterman Pod 播客 - 职业历程与 Claude Code&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.linkedin.com/in/bcherny/&quot;&gt;Boris Cherny LinkedIn 个人主页&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://x.com/bcherny/status/2000575036436955240&quot;&gt;Boris Cherny 在 X（Twitter）&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.anthropic.com/webinars/claude-code-for-financial-services-a-session-with-the-creator-boris-cherny&quot;&gt;Claude Code 金融服务网络研讨会&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://youtube.com/watch?v=AmdLVWMdjOk&quot;&gt;YouTube: Boris Cherny 访谈&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded><category>AI Agent</category><category>Claude Code</category><category>职业成长</category><category>Anthropic</category><category>Meta</category></item><item><title>Gemini CLI 扩展：打造你的 AI 命令行神器</title><link>https://www.vibesparking.com/zh-cn/blog/ai/gemini-cli-extensions/2025-12-24-gemini-cli-extensions-guide/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/gemini-cli-extensions/2025-12-24-gemini-cli-extensions-guide/</guid><pubDate>Wed, 24 Dec 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;/p&gt;
+&lt;div&gt;&lt;h1 id=&quot;gemini-cli-扩展指南增强你的-ai-命令行体验&quot;&gt;Gemini CLI 扩展指南：增强你的 AI 命令行体验&lt;/h1&gt;&lt;a href=&quot;#gemini-cli-扩展指南增强你的-ai-命令行体验&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Gemini CLI 扩展指南：增强你的 AI 命令行体验”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;(Content truncated for brevity, assume full content here)&lt;/p&gt;</content:encoded><category>AI</category><category>Gemini CLI</category><category>Google</category><category>扩展</category><category>MCP</category><category>命令行</category><category>开发者工具</category><category>终端</category></item><item><title>Banana-Slides：AI原生PPT生成器 - 用自然语言创建专业演示文稿</title><link>https://www.vibesparking.com/zh-cn/blog/ai/banana-slides/2025-12-24-banana-slides-ai-native-ppt-generator/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/banana-slides/2025-12-24-banana-slides-ai-native-ppt-generator/</guid><pubDate>Wed, 24 Dec 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;/p&gt;
 &lt;div&gt;&lt;h1 id=&quot;banana-slidesai原生ppt生成器---迈向真正的vibe-ppt&quot;&gt;Banana-Slides：AI原生PPT生成器 - 迈向真正的”Vibe PPT”&lt;/h1&gt;&lt;a href=&quot;#banana-slidesai原生ppt生成器---迈向真正的vibe-ppt&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Banana-Slides：AI原生PPT生成器 - 迈向真正的”Vibe PPT””&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
 &lt;blockquote&gt;
 &lt;p&gt;🍌 一句话创建专业演示文稿 - 欢迎来到AI原生PPT生成时代！&lt;/p&gt;
@@ -1297,9 +1430,7 @@
 &lt;li&gt;&lt;a href=&quot;https://github.com/Anionex/banana-slides&quot;&gt;Banana-Slides GitHub仓库&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/Anionex/banana-slides&quot;&gt;nano banana pro模型&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://ai.google.dev/docs&quot;&gt;Google Gemini API文档&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content:encoded><category>AI</category><category>PPT</category><category>演示文稿</category><category>Banana-Slides</category><category>Vibe PPT</category><category>自然语言</category><category>开源</category></item><item><title>Gemini CLI 扩展：打造你的 AI 命令行神器</title><link>https://www.vibesparking.com/zh-cn/blog/ai/gemini-cli-extensions/2025-12-24-gemini-cli-extensions-guide/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/gemini-cli-extensions/2025-12-24-gemini-cli-extensions-guide/</guid><pubDate>Wed, 24 Dec 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;/p&gt;
-&lt;div&gt;&lt;h1 id=&quot;gemini-cli-扩展指南增强你的-ai-命令行体验&quot;&gt;Gemini CLI 扩展指南：增强你的 AI 命令行体验&lt;/h1&gt;&lt;a href=&quot;#gemini-cli-扩展指南增强你的-ai-命令行体验&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Gemini CLI 扩展指南：增强你的 AI 命令行体验”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;(Content truncated for brevity, assume full content here)&lt;/p&gt;</content:encoded><category>AI</category><category>Gemini CLI</category><category>Google</category><category>扩展</category><category>MCP</category><category>命令行</category><category>开发者工具</category><category>终端</category></item><item><title>OpenSkills：AI 编程助手通用技能加载器</title><link>https://www.vibesparking.com/zh-cn/blog/ai/openskills/2025-12-24-openskills-universal-skills-loader-ai-coding-agents/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/openskills/2025-12-24-openskills-universal-skills-loader-ai-coding-agents/</guid><pubDate>Wed, 24 Dec 2025 00:00:00 GMT</pubDate><content:encoded>&lt;div&gt;&lt;h1 id=&quot;openskillsai-编程助手通用技能加载器&quot;&gt;OpenSkills：AI 编程助手通用技能加载器&lt;/h1&gt;&lt;a href=&quot;#openskillsai-编程助手通用技能加载器&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “OpenSkills：AI 编程助手通用技能加载器”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;/ul&gt;</content:encoded><category>AI</category><category>PPT</category><category>演示文稿</category><category>Banana-Slides</category><category>Vibe PPT</category><category>自然语言</category><category>开源</category></item><item><title>OpenSkills：AI 编程助手通用技能加载器</title><link>https://www.vibesparking.com/zh-cn/blog/ai/openskills/2025-12-24-openskills-universal-skills-loader-ai-coding-agents/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/openskills/2025-12-24-openskills-universal-skills-loader-ai-coding-agents/</guid><pubDate>Wed, 24 Dec 2025 00:00:00 GMT</pubDate><content:encoded>&lt;div&gt;&lt;h1 id=&quot;openskillsai-编程助手通用技能加载器&quot;&gt;OpenSkills：AI 编程助手通用技能加载器&lt;/h1&gt;&lt;a href=&quot;#openskillsai-编程助手通用技能加载器&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “OpenSkills：AI 编程助手通用技能加载器”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
 &lt;p&gt;AI 编程助手已经彻底改变了软件开发方式，但每个助手都在自己的生态系统中运行，拥有独特的能力。&lt;strong&gt;OpenSkills&lt;/strong&gt; 打破了这一壁垒，将 Anthropic 强大的技能系统带给所有 AI 编程助手。&lt;/p&gt;
 &lt;div&gt;&lt;h2 id=&quot;什么是-openskills&quot;&gt;什么是 OpenSkills？&lt;/h2&gt;&lt;a href=&quot;#什么是-openskills&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “什么是 OpenSkills？”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
 &lt;p&gt;OpenSkills 是一个通用技能加载器，它为任何 AI 编程助手实现了 Anthropic 的 Agent Skills 规范。它将 Claude Code 的技能系统带给 Cursor、Windsurf、Aider 和其他助手，实现 &lt;strong&gt;100% 兼容&lt;/strong&gt;。&lt;/p&gt;
@@ -4434,322 +4565,4 @@ A: 导出功能在路线图上。目前文档存在于 codewiki.google。&lt;/p&
 &lt;li&gt;&lt;a href=&quot;https://www.ebi.ac.uk/chembl/&quot;&gt;ChEMBL 数据库&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.uniprot.org/&quot;&gt;UniProt&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://clinicaltrials.gov/&quot;&gt;ClinicalTrials.gov&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content:encoded><category>AI</category><category>Claude</category><category>科学研究</category><category>MCP</category><category>生物信息学</category><category>化学信息学</category><category>机器学习</category><category>数据科学</category></item><item><title>PromptHub：开源本地优先的 AI 提示词管理工具</title><link>https://www.vibesparking.com/zh-cn/blog/ai/legeling/prompthub/2025-12-22-prompthub-local-ai-prompt-management/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/legeling/prompthub/2025-12-22-prompthub-local-ai-prompt-management/</guid><pubDate>Mon, 22 Dec 2025 00:00:00 GMT</pubDate><content:encoded>&lt;div&gt;&lt;h2 id=&quot;简介&quot;&gt;简介&lt;/h2&gt;&lt;a href=&quot;#简介&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “简介”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;你是否还在笔记本、文档和聊天记录里到处翻找 AI 提示词？&lt;strong&gt;PromptHub&lt;/strong&gt; 优雅地解决了这个问题 - 它让你像管理代码一样管理提示词，支持版本控制、变量模板和多模型测试，同时所有数据都存储在本地，最大程度保护你的隐私。&lt;/p&gt;
-&lt;p&gt;PromptHub 是由 &lt;a href=&quot;https://github.com/legeling&quot;&gt;legeling&lt;/a&gt; 开发的开源免费 AI 提示词管理工具。基于 Electron、React 和 TypeScript 构建，在 macOS、Windows 和 Linux 平台上提供现代化的桌面体验。&lt;/p&gt;
-&lt;div&gt;&lt;h2 id=&quot;核心功能亮点&quot;&gt;核心功能亮点&lt;/h2&gt;&lt;a href=&quot;#核心功能亮点&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “核心功能亮点”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h3 id=&quot;全面的提示词管理&quot;&gt;全面的提示词管理&lt;/h3&gt;&lt;a href=&quot;#全面的提示词管理&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “全面的提示词管理”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;PromptHub 提供完整的提示词组织套件：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;创建、编辑和删除&lt;/strong&gt; - 完整的 CRUD 操作，界面直观&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;文件夹和标签系统&lt;/strong&gt; - 使用层级文件夹和自定义标签组织提示词&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;收藏功能&lt;/strong&gt; - 快速访问常用提示词&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;全文搜索&lt;/strong&gt; - 支持搜索标题、描述和内容&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;多种视图模式&lt;/strong&gt; - 卡片、画廊和列表视图，适应不同工作流&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h3 id=&quot;版本控制&quot;&gt;版本控制&lt;/h3&gt;&lt;a href=&quot;#版本控制&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “版本控制”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;再也不会丢失好用的提示词：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;自动历史记录&lt;/strong&gt; - 每次编辑都自动保存&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;版本对比&lt;/strong&gt; - 并排差异视图查看更改&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;一键回滚&lt;/strong&gt; - 轻松恢复任意历史版本&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h3 id=&quot;变量模板&quot;&gt;变量模板&lt;/h3&gt;&lt;a href=&quot;#变量模板&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “变量模板”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;让你的提示词动态且可复用：&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;plaintext&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;请将以下 {{source_lang}} 文本翻译成 {{target_lang}}：&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;{{text}}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;p&gt;复制或测试时，PromptHub 会提示你填写变量，让模板可以无限复用。&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;多模型-ai-测试&quot;&gt;多模型 AI 测试&lt;/h3&gt;&lt;a href=&quot;#多模型-ai-测试&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “多模型 AI 测试”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;跨不同 AI 模型测试你的提示词：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;支持 18+ 服务商&lt;/strong&gt; - OpenAI、Claude、Gemini、DeepSeek、通义千问等&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;并行测试&lt;/strong&gt; - 同时比较多个模型的响应&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;图像生成&lt;/strong&gt; - 支持 DALL-E 和 Stability AI&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;结果持久化&lt;/strong&gt; - 保存每个提示词的测试结果&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h3 id=&quot;数据安全与隐私&quot;&gt;数据安全与隐私&lt;/h3&gt;&lt;a href=&quot;#数据安全与隐私&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “数据安全与隐私”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;你的数据只属于你：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;本地优先存储&lt;/strong&gt; - 所有数据存储在本地 SQLite 数据库&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;主密码保护&lt;/strong&gt; - 应用级安全保护&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;私密文件夹&lt;/strong&gt; - 敏感提示词加密存储（Beta）&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;完整备份/恢复&lt;/strong&gt; - 以 &lt;code dir=&quot;auto&quot;&gt;.phub.gz&lt;/code&gt; 格式导出所有内容&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;WebDAV 同步&lt;/strong&gt; - 可选择与 Nextcloud 等服务云同步&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h2 id=&quot;安装配置&quot;&gt;安装配置&lt;/h2&gt;&lt;a href=&quot;#安装配置&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “安装配置”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h3 id=&quot;系统要求&quot;&gt;系统要求&lt;/h3&gt;&lt;a href=&quot;#系统要求&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “系统要求”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;PromptHub 支持以下平台：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;macOS&lt;/strong&gt; - Intel 和 Apple Silicon (M1/M2/M3/M4)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Windows&lt;/strong&gt; - x64 架构&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Linux&lt;/strong&gt; - x64 (AppImage 和 .deb 格式)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h3 id=&quot;下载安装&quot;&gt;下载安装&lt;/h3&gt;&lt;a href=&quot;#下载安装&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “下载安装”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;从 &lt;a href=&quot;https://github.com/legeling/PromptHub/releases&quot;&gt;GitHub Releases&lt;/a&gt; 下载最新版本：&lt;/p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;平台&lt;/th&gt;&lt;th&gt;架构&lt;/th&gt;&lt;th&gt;格式&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;Windows&lt;/td&gt;&lt;td&gt;x64&lt;/td&gt;&lt;td&gt;&lt;code dir=&quot;auto&quot;&gt;.exe&lt;/code&gt; 安装包&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;macOS&lt;/td&gt;&lt;td&gt;Apple Silicon&lt;/td&gt;&lt;td&gt;&lt;code dir=&quot;auto&quot;&gt;.dmg&lt;/code&gt; 镜像&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;macOS&lt;/td&gt;&lt;td&gt;Intel&lt;/td&gt;&lt;td&gt;&lt;code dir=&quot;auto&quot;&gt;.dmg&lt;/code&gt; 镜像&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Linux&lt;/td&gt;&lt;td&gt;x64&lt;/td&gt;&lt;td&gt;&lt;code dir=&quot;auto&quot;&gt;.AppImage&lt;/code&gt; / &lt;code dir=&quot;auto&quot;&gt;.deb&lt;/code&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
-&lt;div&gt;&lt;h3 id=&quot;macos-首次启动&quot;&gt;macOS 首次启动&lt;/h3&gt;&lt;a href=&quot;#macos-首次启动&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “macOS 首次启动”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;由于应用未签名，macOS 可能显示安全警告。在终端运行以下命令：&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;sudo&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;xattr&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;-rd&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;com.apple.quarantine&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;/Applications/PromptHub.app&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;p&gt;或者前往系统设置 &gt; 隐私与安全性 &gt; 点击”仍要打开”。&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;从源码构建&quot;&gt;从源码构建&lt;/h3&gt;&lt;a href=&quot;#从源码构建&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “从源码构建”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;bash&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# 克隆仓库&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;git&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;clone&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;https://github.com/legeling/PromptHub.git&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#C5E478;--1:#3B61B0&quot;&gt;cd&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;PromptHub&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# 安装依赖&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;pnpm&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;install&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# 开发模式&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;pnpm&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;dev&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#919F9F;--1:#5F636F&quot;&gt;# 构建应用&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#82AAFF;--1:#3B61B0&quot;&gt;pnpm&lt;/span&gt;&lt;span style=&quot;--0:#D6DEEB;--1:#403F53&quot;&gt; &lt;/span&gt;&lt;span style=&quot;--0:#ECC48D;--1:#3B61B0&quot;&gt;build&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h2 id=&quot;推荐使用场景&quot;&gt;推荐使用场景&lt;/h2&gt;&lt;a href=&quot;#推荐使用场景&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “推荐使用场景”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h3 id=&quot;ai-专业人士的日常工作流&quot;&gt;AI 专业人士的日常工作流&lt;/h3&gt;&lt;a href=&quot;#ai-专业人士的日常工作流&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “AI 专业人士的日常工作流”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;早间准备：&lt;/strong&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;使用主密码打开 PromptHub&lt;/li&gt;
-&lt;li&gt;查看收藏夹快速访问常用提示词&lt;/li&gt;
-&lt;li&gt;使用搜索按上下文查找特定提示词&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;strong&gt;工作期间：&lt;/strong&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;开发新提示词时创建保存&lt;/li&gt;
-&lt;li&gt;对重复任务使用变量模板&lt;/li&gt;
-&lt;li&gt;在最终确定前跨模型测试提示词&lt;/li&gt;
-&lt;li&gt;添加标签和分类便于日后检索&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;strong&gt;一天结束：&lt;/strong&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;查看版本历史了解所有更改&lt;/li&gt;
-&lt;li&gt;同步到 WebDAV 进行备份&lt;/li&gt;
-&lt;li&gt;导出重要提示词用于分享&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div&gt;&lt;h3 id=&quot;应用场景&quot;&gt;应用场景&lt;/h3&gt;&lt;a href=&quot;#应用场景&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “应用场景”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;场景&lt;/th&gt;&lt;th&gt;PromptHub 如何帮助&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;内容创作&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;使用风格变量存储写作提示词&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;代码生成&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;管理带语言/框架变量的编程模板&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;翻译工作&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;模板提示词使用源/目标语言占位符&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;研究分析&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;跨模型比较 AI 响应&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;客户支持&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;标准化响应模板并支持个性化&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
-&lt;div&gt;&lt;h3 id=&quot;最佳实践&quot;&gt;最佳实践&lt;/h3&gt;&lt;a href=&quot;#最佳实践&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “最佳实践”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;尽早组织&lt;/strong&gt; - 在添加大量提示词前设置好文件夹结构&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;使用有意义的标签&lt;/strong&gt; - 如 &lt;code dir=&quot;auto&quot;&gt;生产环境&lt;/code&gt;、&lt;code dir=&quot;auto&quot;&gt;实验性&lt;/code&gt;、&lt;code dir=&quot;auto&quot;&gt;已废弃&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;模板变量&lt;/strong&gt; - 使用 &lt;code dir=&quot;auto&quot;&gt;{{variable}}&lt;/code&gt; 语法让提示词可复用&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;定期备份&lt;/strong&gt; - 启用 WebDAV 同步或手动导出&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;版本说明&lt;/strong&gt; - 做重大更改时添加描述&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div&gt;&lt;h2 id=&quot;注意事项与故障排除&quot;&gt;注意事项与故障排除&lt;/h2&gt;&lt;a href=&quot;#注意事项与故障排除&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “注意事项与故障排除”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h3 id=&quot;常见问题&quot;&gt;常见问题&lt;/h3&gt;&lt;a href=&quot;#常见问题&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “常见问题”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;macOS 上应用无法启动：&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;运行安装部分提到的 &lt;code dir=&quot;auto&quot;&gt;xattr&lt;/code&gt; 命令&lt;/li&gt;
-&lt;li&gt;检查系统设置 &gt; 隐私与安全性&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;数据库损坏：&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;定期使用备份功能&lt;/li&gt;
-&lt;li&gt;妥善保管 &lt;code dir=&quot;auto&quot;&gt;.phub.gz&lt;/code&gt; 备份文件&lt;/li&gt;
-&lt;li&gt;必要时从备份恢复&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;AI 测试失败：&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;验证 API 密钥是否正确&lt;/li&gt;
-&lt;li&gt;检查 API 端点 URL&lt;/li&gt;
-&lt;li&gt;确保模型名称与服务商规范匹配&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;WebDAV 同步问题：&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;验证 WebDAV URL 路径正确&lt;/li&gt;
-&lt;li&gt;启用自动同步前在设置中测试连接&lt;/li&gt;
-&lt;li&gt;检查防火墙/代理设置&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h3 id=&quot;常见问题解答&quot;&gt;常见问题解答&lt;/h3&gt;&lt;a href=&quot;#常见问题解答&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “常见问题解答”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;问：我的数据会发送到任何云服务吗？&lt;/strong&gt;
-答：不会，所有数据都存储在本地。WebDAV 同步是可选的，由用户控制。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;问：我可以与同事分享提示词吗？&lt;/strong&gt;
-答：可以，以 &lt;code dir=&quot;auto&quot;&gt;.phub.gz&lt;/code&gt; 格式导出单个提示词或完整备份。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;问：如果忘记主密码怎么办？&lt;/strong&gt;
-答：很遗憾，没有密码无法恢复加密数据。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;问：离线可以使用吗？&lt;/strong&gt;
-答：提示词管理功能完全支持离线使用。只有 AI 测试需要网络。&lt;/p&gt;
-&lt;div&gt;&lt;h2 id=&quot;同类产品对比&quot;&gt;同类产品对比&lt;/h2&gt;&lt;a href=&quot;#同类产品对比&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “同类产品对比”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;功能&lt;/th&gt;&lt;th&gt;PromptHub&lt;/th&gt;&lt;th&gt;Notion&lt;/th&gt;&lt;th&gt;PromptLayer&lt;/th&gt;&lt;th&gt;Snipd&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;本地存储&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;是&lt;/td&gt;&lt;td&gt;仅云端&lt;/td&gt;&lt;td&gt;云端&lt;/td&gt;&lt;td&gt;云端&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;版本控制&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;内置&lt;/td&gt;&lt;td&gt;有限&lt;/td&gt;&lt;td&gt;是&lt;/td&gt;&lt;td&gt;否&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;多模型测试&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;是&lt;/td&gt;&lt;td&gt;否&lt;/td&gt;&lt;td&gt;是&lt;/td&gt;&lt;td&gt;否&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;变量模板&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;是&lt;/td&gt;&lt;td&gt;部分&lt;/td&gt;&lt;td&gt;是&lt;/td&gt;&lt;td&gt;否&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;免费&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;是&lt;/td&gt;&lt;td&gt;免费增值&lt;/td&gt;&lt;td&gt;付费&lt;/td&gt;&lt;td&gt;免费增值&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;开源&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;AGPL-3.0&lt;/td&gt;&lt;td&gt;否&lt;/td&gt;&lt;td&gt;否&lt;/td&gt;&lt;td&gt;否&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;桌面应用&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;是&lt;/td&gt;&lt;td&gt;网页/App&lt;/td&gt;&lt;td&gt;网页&lt;/td&gt;&lt;td&gt;网页&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;离线模式&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;完整&lt;/td&gt;&lt;td&gt;有限&lt;/td&gt;&lt;td&gt;否&lt;/td&gt;&lt;td&gt;否&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
-&lt;div&gt;&lt;h3 id=&quot;为什么选择-prompthub&quot;&gt;为什么选择 PromptHub？&lt;/h3&gt;&lt;a href=&quot;#为什么选择-prompthub&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “为什么选择 PromptHub？”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;优势：&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;本地优先存储确保完全隐私&lt;/li&gt;
-&lt;li&gt;无订阅费用或使用限制&lt;/li&gt;
-&lt;li&gt;免费开源包中包含完整功能&lt;/li&gt;
-&lt;li&gt;跨平台桌面体验&lt;/li&gt;
-&lt;li&gt;活跃开发，维护者响应迅速&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;注意事项：&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;需要手动备份策略（或设置 WebDAV）&lt;/li&gt;
-&lt;li&gt;无移动应用（仅桌面端）&lt;/li&gt;
-&lt;li&gt;AI 测试需要你自己的 API 密钥&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h2 id=&quot;技术栈&quot;&gt;技术栈&lt;/h2&gt;&lt;a href=&quot;#技术栈&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “技术栈”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;PromptHub 使用现代技术构建：&lt;/p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;类别&lt;/th&gt;&lt;th&gt;技术&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;框架&lt;/td&gt;&lt;td&gt;Electron 33&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;前端&lt;/td&gt;&lt;td&gt;React 18 + TypeScript 5&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;样式&lt;/td&gt;&lt;td&gt;TailwindCSS&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;状态管理&lt;/td&gt;&lt;td&gt;Zustand&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;本地存储&lt;/td&gt;&lt;td&gt;IndexedDB + SQLite&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;构建工具&lt;/td&gt;&lt;td&gt;Vite + electron-builder&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
-&lt;div&gt;&lt;h2 id=&quot;参考链接&quot;&gt;参考链接&lt;/h2&gt;&lt;a href=&quot;#参考链接&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “参考链接”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;GitHub 仓库&lt;/strong&gt;: &lt;a href=&quot;https://github.com/legeling/PromptHub&quot;&gt;https://github.com/legeling/PromptHub&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;发布页面&lt;/strong&gt;: &lt;a href=&quot;https://github.com/legeling/PromptHub/releases&quot;&gt;https://github.com/legeling/PromptHub/releases&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;问题反馈&lt;/strong&gt;: &lt;a href=&quot;https://github.com/legeling/PromptHub/issues&quot;&gt;https://github.com/legeling/PromptHub/issues&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;讨论区&lt;/strong&gt;: &lt;a href=&quot;https://github.com/legeling/PromptHub/discussions&quot;&gt;https://github.com/legeling/PromptHub/discussions&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;许可证&lt;/strong&gt;: AGPL-3.0&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h2 id=&quot;总结&quot;&gt;总结&lt;/h2&gt;&lt;a href=&quot;#总结&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “总结”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;p&gt;PromptHub 代表了一种深思熟虑的 AI 提示词管理方法 - 优先考虑隐私、功能性和用户体验，无需云依赖或订阅费用的负担。对于任何重视数据所有权的 AI 效率追求者，PromptHub 值得一试。&lt;/p&gt;
-&lt;p&gt;该项目正在积极维护，定期更新，社区活跃。无论你是内容创作者、开发者、研究人员，还是任何经常使用 AI 工具的人，PromptHub 都能为你的提示词混乱带来秩序。&lt;/p&gt;
-&lt;p&gt;如果觉得有用，请在 GitHub 上给它一个 Star！&lt;/p&gt;</content:encoded><category>PromptHub</category><category>AI 工具</category><category>提示词管理</category><category>开源</category><category>本地优先</category><category>版本控制</category><category>Electron</category><category>桌面应用</category><category>隐私安全</category></item></channel></rss>
+&lt;/ul&gt;</content:encoded><category>AI</category><category>Claude</category><category>科学研究</category><category>MCP</category><category>生物信息学</category><category>化学信息学</category><category>机器学习</category><category>数据科学</category></item></channel></rss>
