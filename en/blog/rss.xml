@@ -1,4 +1,457 @@
-<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Vibe Sparking AI | Blog</title><description/><link>https://www.vibesparking.com/</link><language>en</language><item><title>BMAD Method v6.0.0-alpha.23 Upgrade Experience: A Fresh Install Journey</title><link>https://www.vibesparking.com/en/blog/ai/bmad-method/2026-01-15-bmad-upgrade-experience/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/bmad-method/2026-01-15-bmad-upgrade-experience/</guid><pubDate>Thu, 15 Jan 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Upgrading BMAD Method from alpha.19 to alpha.23 turned into an unexpected fresh install journey. Here’s what happened, what changed, and why it might be the right time for you to upgrade too.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Vibe Sparking AI | Blog</title><description/><link>https://www.vibesparking.com/</link><language>en</language><item><title>BMAD Architecture Deep Dive: 26 Agents, 68 Workflows, and 655 Files</title><link>https://www.vibesparking.com/en/blog/ai/bmad/2026-01-15-bmad-agents-workflows-tasks-files-architecture/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/bmad/2026-01-15-bmad-agents-workflows-tasks-files-architecture/</guid><pubDate>Thu, 15 Jan 2026 00:00:00 GMT</pubDate><content:encoded>&lt;div&gt;&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;&lt;a href=&quot;#introduction&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Introduction”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;BMAD (Business Method Agent Development) represents a paradigm shift in how we approach software development and project management. It’s not just another AI assistant—it’s a comprehensive multi-agent system with &lt;strong&gt;26 specialized agents&lt;/strong&gt;, &lt;strong&gt;68 registered workflows&lt;/strong&gt;, &lt;strong&gt;4 core tasks&lt;/strong&gt;, and &lt;strong&gt;655 files&lt;/strong&gt; working in harmony.&lt;/p&gt;
+&lt;p&gt;This article takes you deep into BMAD’s architecture, revealing how its modular design enables specialized expertise across business/IT projects, game development, creative innovation, and system building.&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;system-overview-six-modules&quot;&gt;System Overview: Six Modules&lt;/h2&gt;&lt;a href=&quot;#system-overview-six-modules&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “System Overview: Six Modules”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;BMAD’s architecture is organized into six main modules, each serving a distinct purpose:&lt;/p&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;plaintext&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;_bmad/&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;├── bmad-core/     # Foundation system&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;├── bmm/           # Business Method Module (IT projects)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;├── bmb/           # BMAD Builder Module (extending platform)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;├── bmgd/          # BMAD Game Development module&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;├── cis/           # Creative Innovation Suite&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;└── _config/       # Configuration and manifests&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div aria-live=&quot;polite&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h2 id=&quot;1-agents-26-specialized-personas&quot;&gt;1. Agents: 26 Specialized Personas&lt;/h2&gt;&lt;a href=&quot;#1-agents-26-specialized-personas&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1. Agents: 26 Specialized Personas”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3 id=&quot;core-module-1-agent&quot;&gt;Core Module (1 Agent)&lt;/h3&gt;&lt;a href=&quot;#core-module-1-agent&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Core Module (1 Agent)”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;bmad-master&lt;/strong&gt; - The master executor and workflow orchestrator that coordinates all other agents.&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;bmm-module-business--it-9-agents&quot;&gt;BMM Module: Business &amp;#x26; IT (9 Agents)&lt;/h3&gt;&lt;a href=&quot;#bmm-module-business--it-9-agents&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “BMM Module: Business &amp;#x26; IT (9 Agents)”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;The Business Method Module contains agents for traditional software development:&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Agent&lt;/th&gt;&lt;th&gt;Persona&lt;/th&gt;&lt;th&gt;Specialization&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;analyst&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Mary&lt;/td&gt;&lt;td&gt;Business analyst, market research, requirements&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;architect&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Winston&lt;/td&gt;&lt;td&gt;System architect, technical design&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;dev&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Amelia&lt;/td&gt;&lt;td&gt;Senior software engineer, implementation&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;pm&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;John&lt;/td&gt;&lt;td&gt;Product manager, PRD creation&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;sm&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Bob&lt;/td&gt;&lt;td&gt;Scrum master, agile ceremonies&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;tea&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Murat&lt;/td&gt;&lt;td&gt;Master test architect, quality assurance&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;tech-writer&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Paige&lt;/td&gt;&lt;td&gt;Technical documentation specialist&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;ux-designer&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Sally&lt;/td&gt;&lt;td&gt;UX/UI designer&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;quick-flow-solo-dev&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Barry&lt;/td&gt;&lt;td&gt;Full-stack developer with Quick Flow focus&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;div&gt;&lt;h3 id=&quot;bmb-module-system-builders-3-agents&quot;&gt;BMB Module: System Builders (3 Agents)&lt;/h3&gt;&lt;a href=&quot;#bmb-module-system-builders-3-agents&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “BMB Module: System Builders (3 Agents)”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;For extending the BMAD platform itself:&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Agent&lt;/th&gt;&lt;th&gt;Persona&lt;/th&gt;&lt;th&gt;Specialization&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;agent-builder&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Bond&lt;/td&gt;&lt;td&gt;Agent architecture specialist&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;module-builder&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Morgan&lt;/td&gt;&lt;td&gt;Module architecture specialist&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;workflow-builder&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Wendy&lt;/td&gt;&lt;td&gt;Workflow architecture specialist&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;div&gt;&lt;h3 id=&quot;bmgd-module-game-development-6-agents&quot;&gt;BMGD Module: Game Development (6 Agents)&lt;/h3&gt;&lt;a href=&quot;#bmgd-module-game-development-6-agents&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “BMGD Module: Game Development (6 Agents)”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Specialized agents for game creation:&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Agent&lt;/th&gt;&lt;th&gt;Persona&lt;/th&gt;&lt;th&gt;Specialization&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;game-architect&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Cloud Dragonborn&lt;/td&gt;&lt;td&gt;Game systems architect&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;game-designer&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Samus Shepard&lt;/td&gt;&lt;td&gt;Lead game designer&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;game-dev&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Link Freeman&lt;/td&gt;&lt;td&gt;Game developer&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;game-qa&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;GLaDOS&lt;/td&gt;&lt;td&gt;Game QA architect&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;game-scrum-master&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Max&lt;/td&gt;&lt;td&gt;Game development scrum master&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;game-solo-dev&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Indie&lt;/td&gt;&lt;td&gt;Elite indie game developer&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;div&gt;&lt;h3 id=&quot;cis-module-creative-innovation-6-agents&quot;&gt;CIS Module: Creative Innovation (6 Agents)&lt;/h3&gt;&lt;a href=&quot;#cis-module-creative-innovation-6-agents&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “CIS Module: Creative Innovation (6 Agents)”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;For creativity and innovation:&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Agent&lt;/th&gt;&lt;th&gt;Persona&lt;/th&gt;&lt;th&gt;Specialization&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;brainstorming-coach&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Carson&lt;/td&gt;&lt;td&gt;Master brainstorming facilitator&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;creative-problem-solver&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Dr. Quinn&lt;/td&gt;&lt;td&gt;Systematic problem-solving expert&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;design-thinking-coach&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Maya&lt;/td&gt;&lt;td&gt;Human-centered design expert&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;innovation-strategist&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Victor&lt;/td&gt;&lt;td&gt;Business model innovator&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;presentation-master&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Caravaggio&lt;/td&gt;&lt;td&gt;Visual communication expert&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;storyteller&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Sophia&lt;/td&gt;&lt;td&gt;Master storyteller&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;div&gt;&lt;h3 id=&quot;agent-characteristics&quot;&gt;Agent Characteristics&lt;/h3&gt;&lt;a href=&quot;#agent-characteristics&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Agent Characteristics”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Each BMAD agent features:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Unique persona&lt;/strong&gt; with distinct communication style&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Domain expertise&lt;/strong&gt; in specific areas&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;BMAD compliance&lt;/strong&gt; standards&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Menu-based interface&lt;/strong&gt; for workflow execution&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Multi-language support&lt;/strong&gt; with configuration-driven communication&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h2 id=&quot;2-workflows-68-registered--481-implementation-files&quot;&gt;2. Workflows: 68 Registered + 481 Implementation Files&lt;/h2&gt;&lt;a href=&quot;#2-workflows-68-registered--481-implementation-files&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2. Workflows: 68 Registered + 481 Implementation Files”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3 id=&quot;core-workflows-2&quot;&gt;Core Workflows (2)&lt;/h3&gt;&lt;a href=&quot;#core-workflows-2&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Core Workflows (2)”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;brainstorming&lt;/strong&gt; - Interactive brainstorming sessions&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;party-mode&lt;/strong&gt; - Multi-agent conversation orchestration&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;bmm-workflows-business-method-22&quot;&gt;BMM Workflows: Business Method (22)&lt;/h3&gt;&lt;a href=&quot;#bmm-workflows-business-method-22&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “BMM Workflows: Business Method (22)”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Covering the complete software development lifecycle:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Analysis Phase:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;research&lt;/code&gt; - Comprehensive research across domains&lt;/li&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;create-product-brief&lt;/code&gt; - Product brief discovery&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Planning Phase:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;create-ux-design&lt;/code&gt; - UX patterns and design planning&lt;/li&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;prd&lt;/code&gt; - PRD creation, validation, and editing&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Solutioning Phase:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;create-architecture&lt;/code&gt; - Architecture decision facilitation&lt;/li&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;create-epics-and-stories&lt;/code&gt; - Transform PRDs into actionable stories&lt;/li&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;check-implementation-readiness&lt;/code&gt; - Pre-implementation validation&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Implementation Phase:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;code-review&lt;/code&gt; - Adversarial senior developer review&lt;/li&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;dev-story&lt;/code&gt; - Execute user stories with implementation&lt;/li&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;sprint-planning&lt;/code&gt; - Sprint status tracking&lt;/li&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;retrospective&lt;/code&gt; - Post-epic review and lessons learned&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Quick Flow:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;quick-dev&lt;/code&gt; - Flexible development execution&lt;/li&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;quick-spec&lt;/code&gt; - Conversational spec engineering&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;bmb-workflows-builders-3&quot;&gt;BMB Workflows: Builders (3)&lt;/h3&gt;&lt;a href=&quot;#bmb-workflows-builders-3&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “BMB Workflows: Builders (3)”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;agent&lt;/code&gt; - Tri-modal agent creation/editing&lt;/li&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;module&lt;/code&gt; - Quad-modal module creation&lt;/li&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;workflow&lt;/code&gt; - Workflow creation architecture&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;bmgd-workflows-game-development-29&quot;&gt;BMGD Workflows: Game Development (29)&lt;/h3&gt;&lt;a href=&quot;#bmgd-workflows-game-development-29&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “BMGD Workflows: Game Development (29)”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;The most comprehensive suite for game development:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Preproduction:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;brainstorm-game&lt;/code&gt; - Game-specific brainstorming&lt;/li&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;create-game-brief&lt;/code&gt; - Game brief through discovery&lt;/li&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;game-brief&lt;/code&gt; - Game brief creation&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Design:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;create-gdd&lt;/code&gt; - Game Design Document creation&lt;/li&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;gdd&lt;/code&gt; - Game Design Document workflows&lt;/li&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;narrative&lt;/code&gt; - Narrative design workflows&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Technical:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;game-architecture&lt;/code&gt; - Game architecture workflow&lt;/li&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;generate-project-context&lt;/code&gt; - Project context generation&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Production:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;code-review&lt;/code&gt; - Game-specific code reviews&lt;/li&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;correct-course&lt;/code&gt; - Sprint course correction&lt;/li&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;dev-story&lt;/code&gt; - Game story execution&lt;/li&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;retrospective&lt;/code&gt; - Game development retrospective&lt;/li&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;sprint-planning&lt;/code&gt; - Game sprint planning&lt;/li&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;sprint-status&lt;/code&gt; - Game sprint status&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Quick Flow:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;quick-dev&lt;/code&gt; - Flexible game development&lt;/li&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;quick-prototype&lt;/code&gt; - Rapid prototyping&lt;/li&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;quick-spec&lt;/code&gt; - Game spec engineering&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Testing (6 workflows):&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;gametest-automate&lt;/code&gt; - Automated game test generation&lt;/li&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;gametest-performance&lt;/code&gt; - Performance testing&lt;/li&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;gametest-playtest-plan&lt;/code&gt; - Playtest planning&lt;/li&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;gametest-test-design&lt;/code&gt; - Test design&lt;/li&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;gametest-framework&lt;/code&gt; - Test framework initialization&lt;/li&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;gametest-test-review&lt;/code&gt; - Test quality review&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Workflow Management:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;workflow-init&lt;/code&gt; - Initialize BMAD game projects&lt;/li&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;workflow-status&lt;/code&gt; - Status checking&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;cis-workflows-creative-innovation-12&quot;&gt;CIS Workflows: Creative Innovation (12)&lt;/h3&gt;&lt;a href=&quot;#cis-workflows-creative-innovation-12&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “CIS Workflows: Creative Innovation (12)”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Innovation and creativity workflows:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Brainstorming sessions&lt;/li&gt;
+&lt;li&gt;Design thinking facilitation&lt;/li&gt;
+&lt;li&gt;Problem-solving workshops&lt;/li&gt;
+&lt;li&gt;Innovation strategy sessions&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;workflow-architecture-patterns&quot;&gt;Workflow Architecture Patterns&lt;/h3&gt;&lt;a href=&quot;#workflow-architecture-patterns&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Workflow Architecture Patterns”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;BMAD employs several architectural patterns:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Step-file architecture&lt;/strong&gt; - Each step loads fresh to combat “lost in the middle” syndrome&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Micro-file architecture&lt;/strong&gt; - Sequential conversation orchestration&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Tri-modal workflows&lt;/strong&gt; - Create, Validate, Edit capabilities&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Quad-modal workflows&lt;/strong&gt; - Brief, Create, Edit, Validate&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div&gt;&lt;h2 id=&quot;3-tasks-4-core-tasks&quot;&gt;3. Tasks: 4 Core Tasks&lt;/h2&gt;&lt;a href=&quot;#3-tasks-4-core-tasks&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3. Tasks: 4 Core Tasks”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Tasks are implemented as XML files in the core module:&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Task&lt;/th&gt;&lt;th&gt;Description&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;workflow&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Execute workflow configurations&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;review-adversarial-general&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Cynical content review&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;shard-doc&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Split large documents into smaller files&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;index-docs&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Generate/update documentation indexes&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;div&gt;&lt;h2 id=&quot;4-files-655-total-files&quot;&gt;4. Files: 655 Total Files&lt;/h2&gt;&lt;a href=&quot;#4-files-655-total-files&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “4. Files: 655 Total Files”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3 id=&quot;file-distribution&quot;&gt;File Distribution&lt;/h3&gt;&lt;a href=&quot;#file-distribution&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “File Distribution”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Type&lt;/th&gt;&lt;th&gt;Count&lt;/th&gt;&lt;th&gt;Purpose&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;Markdown (.md)&lt;/td&gt;&lt;td&gt;537&lt;/td&gt;&lt;td&gt;Documentation, templates, workflows&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;YAML (.yaml)&lt;/td&gt;&lt;td&gt;80&lt;/td&gt;&lt;td&gt;Configuration files, workflow definitions&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;CSV (.csv)&lt;/td&gt;&lt;td&gt;24&lt;/td&gt;&lt;td&gt;Manifests and data files&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XML (.xml)&lt;/td&gt;&lt;td&gt;11&lt;/td&gt;&lt;td&gt;Task definitions&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;JSON (.json)&lt;/td&gt;&lt;td&gt;2&lt;/td&gt;&lt;td&gt;Configuration data&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;div&gt;&lt;h3 id=&quot;key-manifest-files&quot;&gt;Key Manifest Files&lt;/h3&gt;&lt;a href=&quot;#key-manifest-files&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Key Manifest Files”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;agent-manifest.csv&lt;/strong&gt; - 27 registered agents with metadata&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;workflow-manifest.csv&lt;/strong&gt; - 68 registered workflows&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;task-manifest.csv&lt;/strong&gt; - 4 core tasks&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;files-manifest.csv&lt;/strong&gt; - Complete file inventory (655 files)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;tool-manifest.csv&lt;/strong&gt; - Available tools and capabilities&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h2 id=&quot;notable-architectural-patterns&quot;&gt;Notable Architectural Patterns&lt;/h2&gt;&lt;a href=&quot;#notable-architectural-patterns&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Notable Architectural Patterns”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3 id=&quot;1-modular-design&quot;&gt;1. Modular Design&lt;/h3&gt;&lt;a href=&quot;#1-modular-design&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1. Modular Design”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Clear separation of concerns across domains:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Each module operates independently&lt;/li&gt;
+&lt;li&gt;Shared core functionality&lt;/li&gt;
+&lt;li&gt;Extensible architecture&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;2-manifest-driven-system&quot;&gt;2. Manifest-Driven System&lt;/h3&gt;&lt;a href=&quot;#2-manifest-driven-system&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2. Manifest-Driven System”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;CSV manifests provide:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Complete inventory of components&lt;/li&gt;
+&lt;li&gt;Metadata for each agent/workflow/task&lt;/li&gt;
+&lt;li&gt;Version tracking and management&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;3-workflow-centric-execution&quot;&gt;3. Workflow-Centric Execution&lt;/h3&gt;&lt;a href=&quot;#3-workflow-centric-execution&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3. Workflow-Centric Execution”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Agents execute through structured workflows:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Consistent patterns across modules&lt;/li&gt;
+&lt;li&gt;State management via variables&lt;/li&gt;
+&lt;li&gt;Sequential progression through phases&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;4-quality-assurance-built-in&quot;&gt;4. Quality Assurance Built-In&lt;/h3&gt;&lt;a href=&quot;#4-quality-assurance-built-in&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “4. Quality Assurance Built-In”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;Adversarial code reviews in all modules&lt;/li&gt;
+&lt;li&gt;Implementation readiness validation&lt;/li&gt;
+&lt;li&gt;Test architecture specialists&lt;/li&gt;
+&lt;li&gt;Sprint retrospectives and corrections&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h2 id=&quot;recommended-use-cases&quot;&gt;Recommended Use Cases&lt;/h2&gt;&lt;a href=&quot;#recommended-use-cases&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Recommended Use Cases”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3 id=&quot;bmm-best-for&quot;&gt;BMM Best For&lt;/h3&gt;&lt;a href=&quot;#bmm-best-for&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “BMM Best For”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;Traditional software development projects&lt;/li&gt;
+&lt;li&gt;Business analysis and requirement gathering&lt;/li&gt;
+&lt;li&gt;Enterprise application development&lt;/li&gt;
+&lt;li&gt;Teams following agile methodologies&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;bmgd-best-for&quot;&gt;BMGD Best For&lt;/h3&gt;&lt;a href=&quot;#bmgd-best-for&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “BMGD Best For”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;Game development (Unity, Unreal, Godot)&lt;/li&gt;
+&lt;li&gt;Indie game developers&lt;/li&gt;
+&lt;li&gt;Game design documentation&lt;/li&gt;
+&lt;li&gt;Game testing and quality assurance&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;bmb-best-for&quot;&gt;BMB Best For&lt;/h3&gt;&lt;a href=&quot;#bmb-best-for&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “BMB Best For”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;Creating custom BMAD agents&lt;/li&gt;
+&lt;li&gt;Building new BMAD modules&lt;/li&gt;
+&lt;li&gt;Workflow architecture design&lt;/li&gt;
+&lt;li&gt;System integration&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;cis-best-for&quot;&gt;CIS Best For&lt;/h3&gt;&lt;a href=&quot;#cis-best-for&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “CIS Best For”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;Innovation workshops&lt;/li&gt;
+&lt;li&gt;Design thinking sessions&lt;/li&gt;
+&lt;li&gt;Problem-solving breakthroughs&lt;/li&gt;
+&lt;li&gt;Creative brainstorming&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h2 id=&quot;unique-features&quot;&gt;Unique Features&lt;/h2&gt;&lt;a href=&quot;#unique-features&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Unique Features”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3 id=&quot;party-mode&quot;&gt;Party Mode&lt;/h3&gt;&lt;a href=&quot;#party-mode&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Party Mode”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Multi-agent conversations for complex decision-making through agent collaboration.&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;quick-flow&quot;&gt;Quick Flow&lt;/h3&gt;&lt;a href=&quot;#quick-flow&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Quick Flow”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Rapid development methodologies for fast iteration and prototyping.&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;game-specific-tools&quot;&gt;Game-Specific Tools&lt;/h3&gt;&lt;a href=&quot;#game-specific-tools&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Game-Specific Tools”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Specialized workflows for game development needs, from design to testing.&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;creative-suite&quot;&gt;Creative Suite&lt;/h3&gt;&lt;a href=&quot;#creative-suite&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Creative Suite”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Innovation and design thinking tools for creative problem-solving.&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;&lt;a href=&quot;#conclusion&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Conclusion”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;BMAD represents a sophisticated approach to multi-agent systems, with:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;26 agents&lt;/strong&gt; across 4 specialized domains&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;68 workflows&lt;/strong&gt; covering complete development lifecycles&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;4 core tasks&lt;/strong&gt; for system operations&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;655 files&lt;/strong&gt; implementing the entire platform&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The modular design, manifest-driven architecture, and workflow-centric execution make BMAD a powerful tool for teams looking to leverage AI agents across diverse domains—from traditional software development to game creation and creative innovation.&lt;/p&gt;
+&lt;p&gt;Whether you’re building enterprise applications, developing games, or facilitating innovation workshops, BMAD has specialized agents and workflows designed to help you succeed.&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;&lt;a href=&quot;#references&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “References”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/your-repo/bmad&quot;&gt;BMAD Documentation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.vibesparking.com/blog/ai/bmad-method/2026-01-14-bmad-method-getting-started-guide/&quot;&gt;BMAD Getting Started Guide&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.vibesparking.com/blog/ai/bmad-method/2026-01-15-bmad-upgrade-experience/&quot;&gt;BMAD Upgrade Experience&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded><category>BMAD</category><category>AI Agents</category><category>Workflow Automation</category><category>Game Development</category><category>Software Architecture</category></item><item><title>BMAD Method v6.0.0-alpha.23 Upgrade Experience: A Fresh Install Journey</title><link>https://www.vibesparking.com/en/blog/ai/bmad-method/2026-01-15-bmad-upgrade-experience/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/bmad-method/2026-01-15-bmad-upgrade-experience/</guid><pubDate>Thu, 15 Jan 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Upgrading BMAD Method from alpha.19 to alpha.23 turned into an unexpected fresh install journey. Here’s what happened, what changed, and why it might be the right time for you to upgrade too.&lt;/p&gt;
 &lt;div&gt;&lt;h2 id=&quot;the-version-gap-problem&quot;&gt;The Version Gap Problem&lt;/h2&gt;&lt;a href=&quot;#the-version-gap-problem&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “The Version Gap Problem”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
 &lt;p&gt;When I ran &lt;code dir=&quot;auto&quot;&gt;bunx bmad-method@alpha install&lt;/code&gt;, I was greeted with a version warning:&lt;/p&gt;
 &lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;plaintext&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;⚠️  VERSION WARNING&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;────────────────────────────────────────────────────────────────────────────────&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;You are updating from 6.0.0-alpha.19 to 6.0.0-alpha.23.&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;This is 4 alpha versions behind.&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
@@ -1126,7 +1579,7 @@ An enterprise producing software can be dramatically more ambitious in what they
 &lt;li&gt;&lt;a href=&quot;https://x.com/karpathy/status/2002118205729562949&quot;&gt;Andrej Karpathy’s 2025 Roundup&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://x.com/simonw/status/2006514122977063350&quot;&gt;Simon Willison’s 2025 Roundup&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://x.com/illscience/status/1945498739000635651&quot;&gt;Narrow Startups Framework&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content:encoded><category>AI</category><category>AI Apps</category><category>Product Strategy</category><category>Enterprise</category><category>2026 Trends</category></item><item><title>Optimizing Claude Code Experience with CCometixLine: A High-Performance Rust Statusline</title><link>https://www.vibesparking.com/en/blog/ai/2026-01-06-ccometixline-claude-code-statusline-in-rust/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/2026-01-06-ccometixline-claude-code-statusline-in-rust/</guid><pubDate>Tue, 06 Jan 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;In the rapidly evolving world of AI-assisted development, efficient tooling is paramount. &lt;strong&gt;CCometixLine&lt;/strong&gt; emerges as a powerful solution for developers using Claude Code, offering a high-performance statusline written in Rust that integrates seamlessly with your workflow.&lt;/p&gt;
+&lt;/ul&gt;</content:encoded><category>AI</category><category>AI Apps</category><category>Product Strategy</category><category>Enterprise</category><category>2026 Trends</category></item><item><title>Awesome Agentic Patterns: A Curated Catalogue of Production-Ready AI Agent Patterns</title><link>https://www.vibesparking.com/en/blog/ai/2026-01-06-awesome-agentic-patterns-curated-catalogue/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/2026-01-06-awesome-agentic-patterns-curated-catalogue/</guid><pubDate>Tue, 06 Jan 2026 00:00:00 GMT</pubDate><content:encoded/></item><item><title>Optimizing Claude Code Experience with CCometixLine: A High-Performance Rust Statusline</title><link>https://www.vibesparking.com/en/blog/ai/2026-01-06-ccometixline-claude-code-statusline-in-rust/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/2026-01-06-ccometixline-claude-code-statusline-in-rust/</guid><pubDate>Tue, 06 Jan 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;In the rapidly evolving world of AI-assisted development, efficient tooling is paramount. &lt;strong&gt;CCometixLine&lt;/strong&gt; emerges as a powerful solution for developers using Claude Code, offering a high-performance statusline written in Rust that integrates seamlessly with your workflow.&lt;/p&gt;
 &lt;div&gt;&lt;h2 id=&quot;what-is-ccometixline&quot;&gt;What is CCometixLine?&lt;/h2&gt;&lt;a href=&quot;#what-is-ccometixline&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “What is CCometixLine?”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
 &lt;p&gt;&lt;a href=&quot;https://github.com/Haleclipse/CCometixLine&quot;&gt;CCometixLine&lt;/a&gt; is a statusline tool designed specifically for Claude Code. Built with Rust, it prioritizes performance and reliability while delivering a rich set of features including Git integration, usage tracking, and an interactive Terminal User Interface (TUI) for configuration.&lt;/p&gt;
 &lt;div&gt;&lt;h2 id=&quot;key-features&quot;&gt;Key Features&lt;/h2&gt;&lt;a href=&quot;#key-features&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Key Features”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
@@ -1163,7 +1616,7 @@ An enterprise producing software can be dramatically more ambitious in what they
 &lt;div&gt;&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;&lt;a href=&quot;#conclusion&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Conclusion”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
 &lt;p&gt;CCometixLine represents a significant upgrade to the default Claude Code experience. Whether you need better visibility into your git status, want to track your token usage more effectively, or simply desire a customized aesthetic, CCometixLine delivers on all fronts.&lt;/p&gt;
 &lt;p&gt;Give it a try and elevate your coding setup today!&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/Haleclipse/CCometixLine&quot;&gt;View on GitHub&lt;/a&gt;&lt;/p&gt;</content:encoded><category>claude-code</category><category>rust</category><category>developer-tools</category><category>cli</category><category>productivity</category></item><item><title>Awesome Agentic Patterns: A Curated Catalogue of Production-Ready AI Agent Patterns</title><link>https://www.vibesparking.com/en/blog/ai/2026-01-06-awesome-agentic-patterns-curated-catalogue/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/2026-01-06-awesome-agentic-patterns-curated-catalogue/</guid><pubDate>Tue, 06 Jan 2026 00:00:00 GMT</pubDate><content:encoded/></item><item><title>Claude Skills in 15 Minutes: AI Will&apos;s Step-by-Step Tutorial for Non-Technical Users</title><link>https://www.vibesparking.com/en/blog/ai/2026-01-06-claude-skills-15-minute-tutorial/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/2026-01-06-claude-skills-15-minute-tutorial/</guid><pubDate>Tue, 06 Jan 2026 00:00:00 GMT</pubDate><content:encoded>&lt;div&gt;&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;&lt;a href=&quot;#introduction&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Introduction”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/Haleclipse/CCometixLine&quot;&gt;View on GitHub&lt;/a&gt;&lt;/p&gt;</content:encoded><category>claude-code</category><category>rust</category><category>developer-tools</category><category>cli</category><category>productivity</category></item><item><title>Claude Skills in 15 Minutes: AI Will&apos;s Step-by-Step Tutorial for Non-Technical Users</title><link>https://www.vibesparking.com/en/blog/ai/2026-01-06-claude-skills-15-minute-tutorial/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/2026-01-06-claude-skills-15-minute-tutorial/</guid><pubDate>Tue, 06 Jan 2026 00:00:00 GMT</pubDate><content:encoded>&lt;div&gt;&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;&lt;a href=&quot;#introduction&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “Introduction”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
 &lt;p&gt;Claude Code has revolutionized how developers interact with AI, but many users are intimidated by the concept of “Skills” — custom capabilities that extend Claude’s functionality. &lt;strong&gt;AI Will (@FinanceYF5)&lt;/strong&gt;, a growth consultant and AI industry analyst, has created a comprehensive tutorial that breaks down this barrier, enabling non-technical users to set up Claude Skills in just 15 minutes.&lt;/p&gt;
 &lt;p&gt;This blog post explores AI Will’s approach and provides additional context to help you get started with Claude Skills quickly and confidently.&lt;/p&gt;
 &lt;div&gt;&lt;h2 id=&quot;what-are-claude-skills&quot;&gt;What Are Claude Skills?&lt;/h2&gt;&lt;a href=&quot;#what-are-claude-skills&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “What Are Claude Skills?”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
@@ -2089,4 +2542,4 @@ An enterprise producing software can be dramatically more ambitious in what they
 &lt;div&gt;&lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;&lt;a href=&quot;#references&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “References”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://x.com/naki2012/status/2008218147464081510&quot;&gt;Original Thread by @naki2012&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content:encoded><category>AI</category><category>Productivity</category><category>Mindset</category><category>Agency</category><category>Personal Development</category></item><item><title>OWL: Optimized Workforce Learning for General Multi-Agent Assistance</title><link>https://www.vibesparking.com/en/blog/ai/2026-01-06-owl-optimized-workforce-learning-multi-agent-framework/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/2026-01-06-owl-optimized-workforce-learning-multi-agent-framework/</guid><pubDate>Tue, 06 Jan 2026 00:00:00 GMT</pubDate><content:encoded/><category>AI</category><category>Multi-Agent Systems</category><category>CAMEL-AI</category><category>OWL</category><category>Open Source</category><category>GAIA Benchmark</category></item></channel></rss>
+&lt;/ul&gt;</content:encoded><category>AI</category><category>Productivity</category><category>Mindset</category><category>Agency</category><category>Personal Development</category></item></channel></rss>

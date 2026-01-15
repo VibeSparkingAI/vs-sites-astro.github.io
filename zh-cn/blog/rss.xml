@@ -1,4 +1,457 @@
-<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Vibe Sparking AI | Blog</title><description/><link>https://www.vibesparking.com/</link><language>zh-CN</language><item><title>BMAD 方法 v6.0.0-alpha.23 升级体验：全新安装之旅</title><link>https://www.vibesparking.com/zh-cn/blog/ai/bmad-method/2026-01-15-bmad-upgrade-experience/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/bmad-method/2026-01-15-bmad-upgrade-experience/</guid><pubDate>Thu, 15 Jan 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;将 BMAD Method 从 alpha.19 升级到 alpha.23 变成了一次意外的全新安装之旅。以下是发生的事情、有什么变化，以及为什么这可能也是你升级的好时机。&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Vibe Sparking AI | Blog</title><description/><link>https://www.vibesparking.com/</link><language>zh-CN</language><item><title>BMAD 架构深度解析：26 个代理、68 个工作流和 655 个文件</title><link>https://www.vibesparking.com/zh-cn/blog/ai/bmad/2026-01-15-bmad-agents-workflows-tasks-files-architecture/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/bmad/2026-01-15-bmad-agents-workflows-tasks-files-architecture/</guid><pubDate>Thu, 15 Jan 2026 00:00:00 GMT</pubDate><content:encoded>&lt;div&gt;&lt;h2 id=&quot;简介&quot;&gt;简介&lt;/h2&gt;&lt;a href=&quot;#简介&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “简介”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;BMAD（Business Method Agent Development，业务方法代理开发）代表了我们在软件开发和项目管理方式上的范式转变。它不仅仅是另一个 AI 助手——而是一个综合性的多代理系统，拥有 &lt;strong&gt;26 个专业化代理&lt;/strong&gt;、&lt;strong&gt;68 个注册工作流&lt;/strong&gt;、&lt;strong&gt;4 个核心任务&lt;/strong&gt; 和 &lt;strong&gt;655 个文件&lt;/strong&gt;协同工作。&lt;/p&gt;
+&lt;p&gt;本文将带您深入了解 BMAD 的架构，揭示其模块化设计如何实现商业/IT 项目、游戏开发、创意创新和系统构建等专业化领域的专业知识。&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;系统概览六大模块&quot;&gt;系统概览：六大模块&lt;/h2&gt;&lt;a href=&quot;#系统概览六大模块&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “系统概览：六大模块”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;BMAD 的架构组织为六个主要模块，每个模块都有独特的用途：&lt;/p&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;plaintext&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;_bmad/&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;├── bmad-core/     # 基础系统&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;├── bmm/           # 业务方法模块（IT 项目）&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;├── bmb/           # BMAD 构建器模块（扩展平台）&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;├── bmgd/          # BMAD 游戏开发模块&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;├── cis/           # 创意创新套件&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;└── _config/       # 配置和清单&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div aria-live=&quot;polite&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h2 id=&quot;1-代理26-个专业化角色&quot;&gt;1. 代理：26 个专业化角色&lt;/h2&gt;&lt;a href=&quot;#1-代理26-个专业化角色&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1. 代理：26 个专业化角色”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3 id=&quot;核心模块1-个代理&quot;&gt;核心模块（1 个代理）&lt;/h3&gt;&lt;a href=&quot;#核心模块1-个代理&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “核心模块（1 个代理）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;bmad-master&lt;/strong&gt; - 主执行器和工作流编排器，协调所有其他代理。&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;bmm-模块商业与-it9-个代理&quot;&gt;BMM 模块：商业与 IT（9 个代理）&lt;/h3&gt;&lt;a href=&quot;#bmm-模块商业与-it9-个代理&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “BMM 模块：商业与 IT（9 个代理）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;业务方法模块包含传统软件开发的代理：&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;代理&lt;/th&gt;&lt;th&gt;角色&lt;/th&gt;&lt;th&gt;专长&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;analyst&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Mary&lt;/td&gt;&lt;td&gt;商业分析师、市场研究、需求分析&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;architect&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Winston&lt;/td&gt;&lt;td&gt;系统架构师、技术设计&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;dev&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Amelia&lt;/td&gt;&lt;td&gt;高级软件工程师、实现&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;pm&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;John&lt;/td&gt;&lt;td&gt;产品经理、PRD 创建&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;sm&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Bob&lt;/td&gt;&lt;td&gt;Scrum 主管、敏捷仪式&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;tea&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Murat&lt;/td&gt;&lt;td&gt;测试架构大师、质量保证&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;tech-writer&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Paige&lt;/td&gt;&lt;td&gt;技术文档专家&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;ux-designer&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Sally&lt;/td&gt;&lt;td&gt;UX/UI 设计师&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;quick-flow-solo-dev&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Barry&lt;/td&gt;&lt;td&gt;全栈开发者，专注快速流程&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;div&gt;&lt;h3 id=&quot;bmb-模块系统构建者3-个代理&quot;&gt;BMB 模块：系统构建者（3 个代理）&lt;/h3&gt;&lt;a href=&quot;#bmb-模块系统构建者3-个代理&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “BMB 模块：系统构建者（3 个代理）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;用于扩展 BMAD 平台本身：&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;代理&lt;/th&gt;&lt;th&gt;角色&lt;/th&gt;&lt;th&gt;专长&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;agent-builder&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Bond&lt;/td&gt;&lt;td&gt;代理架构专家&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;module-builder&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Morgan&lt;/td&gt;&lt;td&gt;模块架构专家&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;workflow-builder&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Wendy&lt;/td&gt;&lt;td&gt;工作流架构专家&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;div&gt;&lt;h3 id=&quot;bmgd-模块游戏开发6-个代理&quot;&gt;BMGD 模块：游戏开发（6 个代理）&lt;/h3&gt;&lt;a href=&quot;#bmgd-模块游戏开发6-个代理&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “BMGD 模块：游戏开发（6 个代理）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;专门用于游戏创建的代理：&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;代理&lt;/th&gt;&lt;th&gt;角色&lt;/th&gt;&lt;th&gt;专长&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;game-architect&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Cloud Dragonborn&lt;/td&gt;&lt;td&gt;游戏系统架构师&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;game-designer&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Samus Shepard&lt;/td&gt;&lt;td&gt;首席游戏设计师&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;game-dev&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Link Freeman&lt;/td&gt;&lt;td&gt;游戏开发者&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;game-qa&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;GLaDOS&lt;/td&gt;&lt;td&gt;游戏 QA 架构师&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;game-scrum-master&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Max&lt;/td&gt;&lt;td&gt;游戏开发 Scrum 主管&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;game-solo-dev&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Indie&lt;/td&gt;&lt;td&gt;精英独立游戏开发者&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;div&gt;&lt;h3 id=&quot;cis-模块创意创新6-个代理&quot;&gt;CIS 模块：创意创新（6 个代理）&lt;/h3&gt;&lt;a href=&quot;#cis-模块创意创新6-个代理&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “CIS 模块：创意创新（6 个代理）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;用于创造力和创新：&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;代理&lt;/th&gt;&lt;th&gt;角色&lt;/th&gt;&lt;th&gt;专长&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;brainstorming-coach&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Carson&lt;/td&gt;&lt;td&gt;头脑风暴大师&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;creative-problem-solver&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Dr. Quinn&lt;/td&gt;&lt;td&gt;系统性问题解决专家&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;design-thinking-coach&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Maya&lt;/td&gt;&lt;td&gt;以人为中心的设计专家&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;innovation-strategist&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Victor&lt;/td&gt;&lt;td&gt;商业模式创新者&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;presentation-master&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Caravaggio&lt;/td&gt;&lt;td&gt;视觉传达专家&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;storyteller&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Sophia&lt;/td&gt;&lt;td&gt;讲故事大师&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;div&gt;&lt;h3 id=&quot;代理特点&quot;&gt;代理特点&lt;/h3&gt;&lt;a href=&quot;#代理特点&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “代理特点”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;每个 BMAD 代理都具有：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;独特的角色&lt;/strong&gt;，具有独特的沟通风格&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;领域专业知识&lt;/strong&gt;，专注特定领域&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;BMAD 合规&lt;/strong&gt; 标准&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;基于菜单的界面&lt;/strong&gt;，用于工作流执行&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;多语言支持&lt;/strong&gt;，配置驱动的通信&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h2 id=&quot;2-工作流68-个注册--481-个实现文件&quot;&gt;2. 工作流：68 个注册 + 481 个实现文件&lt;/h2&gt;&lt;a href=&quot;#2-工作流68-个注册--481-个实现文件&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2. 工作流：68 个注册 + 481 个实现文件”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3 id=&quot;核心工作流2-个&quot;&gt;核心工作流（2 个）&lt;/h3&gt;&lt;a href=&quot;#核心工作流2-个&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “核心工作流（2 个）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;brainstorming&lt;/strong&gt; - 互动式头脑风暴会话&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;party-mode&lt;/strong&gt; - 多代理对话编排&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;bmm-工作流业务方法22-个&quot;&gt;BMM 工作流：业务方法（22 个）&lt;/h3&gt;&lt;a href=&quot;#bmm-工作流业务方法22-个&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “BMM 工作流：业务方法（22 个）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;覆盖完整的软件开发生命周期：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;分析阶段：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;research&lt;/code&gt; - 跨领域的综合研究&lt;/li&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;create-product-brief&lt;/code&gt; - 产品简报发现&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;规划阶段：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;create-ux-design&lt;/code&gt; - UX 模式和设计规划&lt;/li&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;prd&lt;/code&gt; - PRD 创建、验证和编辑&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;解决方案阶段：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;create-architecture&lt;/code&gt; - 架构决策促进&lt;/li&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;create-epics-and-stories&lt;/code&gt; - 将 PRD 转化为可执行的用户故事&lt;/li&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;check-implementation-readiness&lt;/code&gt; - 实现前验证&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;实现阶段：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;code-review&lt;/code&gt; - 对抗性高级开发者审查&lt;/li&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;dev-story&lt;/code&gt; - 执行用户故事的实现&lt;/li&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;sprint-planning&lt;/code&gt; - Sprint 状态跟踪&lt;/li&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;retrospective&lt;/code&gt; - Epic 后回顾和经验总结&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;快速流程：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;quick-dev&lt;/code&gt; - 灵活的开发执行&lt;/li&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;quick-spec&lt;/code&gt; - 对话式规格工程&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;bmb-工作流构建者3-个&quot;&gt;BMB 工作流：构建者（3 个）&lt;/h3&gt;&lt;a href=&quot;#bmb-工作流构建者3-个&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “BMB 工作流：构建者（3 个）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;agent&lt;/code&gt; - 三模式代理创建/编辑&lt;/li&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;module&lt;/code&gt; - 四模式模块创建&lt;/li&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;workflow&lt;/code&gt; - 工作流创建架构&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;bmgd-工作流游戏开发29-个&quot;&gt;BMGD 工作流：游戏开发（29 个）&lt;/h3&gt;&lt;a href=&quot;#bmgd-工作流游戏开发29-个&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “BMGD 工作流：游戏开发（29 个）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;游戏开发最全面的套件：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;前期制作：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;brainstorm-game&lt;/code&gt; - 游戏特定的头脑风暴&lt;/li&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;create-game-brief&lt;/code&gt; - 通过发现创建游戏简报&lt;/li&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;game-brief&lt;/code&gt; - 游戏简报创建&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;设计：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;create-gdd&lt;/code&gt; - 游戏设计文档创建&lt;/li&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;gdd&lt;/code&gt; - 游戏设计文档工作流&lt;/li&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;narrative&lt;/code&gt; - 叙事设计工作流&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;技术：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;game-architecture&lt;/code&gt; - 游戏架构工作流&lt;/li&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;generate-project-context&lt;/code&gt; - 项目上下文生成&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;制作：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;code-review&lt;/code&gt; - 游戏特定的代码审查&lt;/li&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;correct-course&lt;/code&gt; - Sprint 航向修正&lt;/li&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;dev-story&lt;/code&gt; - 游戏故事执行&lt;/li&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;retrospective&lt;/code&gt; - 游戏开发回顾&lt;/li&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;sprint-planning&lt;/code&gt; - 游戏 Sprint 规划&lt;/li&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;sprint-status&lt;/code&gt; - 游戏 Sprint 状态&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;快速流程：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;quick-dev&lt;/code&gt; - 灵活的游戏开发&lt;/li&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;quick-prototype&lt;/code&gt; - 快速原型制作&lt;/li&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;quick-spec&lt;/code&gt; - 游戏规格工程&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;测试（6 个工作流）：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;gametest-automate&lt;/code&gt; - 自动化游戏测试生成&lt;/li&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;gametest-performance&lt;/code&gt; - 性能测试&lt;/li&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;gametest-playtest-plan&lt;/code&gt; - 游玩测试规划&lt;/li&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;gametest-test-design&lt;/code&gt; - 测试设计&lt;/li&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;gametest-framework&lt;/code&gt; - 测试框架初始化&lt;/li&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;gametest-test-review&lt;/code&gt; - 测试质量审查&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;工作流管理：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;workflow-init&lt;/code&gt; - 初始化 BMAD 游戏项目&lt;/li&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;workflow-status&lt;/code&gt; - 状态检查&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;cis-工作流创意创新12-个&quot;&gt;CIS 工作流：创意创新（12 个）&lt;/h3&gt;&lt;a href=&quot;#cis-工作流创意创新12-个&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “CIS 工作流：创意创新（12 个）”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;创新和创造力工作流：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;头脑风暴会话&lt;/li&gt;
+&lt;li&gt;设计思维促进&lt;/li&gt;
+&lt;li&gt;问题解决研讨会&lt;/li&gt;
+&lt;li&gt;创新策略会话&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;工作流架构模式&quot;&gt;工作流架构模式&lt;/h3&gt;&lt;a href=&quot;#工作流架构模式&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “工作流架构模式”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;BMAD 采用了几种架构模式：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;步骤文件架构&lt;/strong&gt; - 每个步骤都重新加载，以避免”中间迷失”综合症&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;微文件架构&lt;/strong&gt; - 顺序对话编排&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;三模式工作流&lt;/strong&gt; - 创建、验证、编辑能力&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;四模式工作流&lt;/strong&gt; - 简报、创建、编辑、验证&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div&gt;&lt;h2 id=&quot;3-任务4-个核心任务&quot;&gt;3. 任务：4 个核心任务&lt;/h2&gt;&lt;a href=&quot;#3-任务4-个核心任务&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3. 任务：4 个核心任务”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;任务实现为核心模块中的 XML 文件：&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;任务&lt;/th&gt;&lt;th&gt;描述&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;workflow&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;执行工作流配置&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;review-adversarial-general&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;对抗性内容审查&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;shard-doc&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;将大型文档拆分为较小文件&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;index-docs&lt;/strong&gt; - 生成/更新文档索引&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;div&gt;&lt;h2 id=&quot;4-文件655-个总文件&quot;&gt;4. 文件：655 个总文件&lt;/h2&gt;&lt;a href=&quot;#4-文件655-个总文件&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “4. 文件：655 个总文件”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3 id=&quot;文件分布&quot;&gt;文件分布&lt;/h3&gt;&lt;a href=&quot;#文件分布&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “文件分布”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;类型&lt;/th&gt;&lt;th&gt;数量&lt;/th&gt;&lt;th&gt;用途&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;Markdown (.md)&lt;/td&gt;&lt;td&gt;537&lt;/td&gt;&lt;td&gt;文档、模板、工作流&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;YAML (.yaml)&lt;/td&gt;&lt;td&gt;80&lt;/td&gt;&lt;td&gt;配置文件、工作流定义&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;CSV (.csv)&lt;/td&gt;&lt;td&gt;24&lt;/td&gt;&lt;td&gt;清单和数据文件&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XML (.xml)&lt;/td&gt;&lt;td&gt;11&lt;/td&gt;&lt;td&gt;任务定义&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;JSON (.json)&lt;/td&gt;&lt;td&gt;2&lt;/td&gt;&lt;td&gt;配置数据&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;div&gt;&lt;h3 id=&quot;关键清单文件&quot;&gt;关键清单文件&lt;/h3&gt;&lt;a href=&quot;#关键清单文件&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “关键清单文件”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;agent-manifest.csv&lt;/strong&gt; - 27 个注册代理及其元数据&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;workflow-manifest.csv&lt;/strong&gt; - 68 个注册工作流&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;task-manifest.csv&lt;/strong&gt; - 4 个核心任务&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;files-manifest.csv&lt;/strong&gt; - 完整文件清单（655 个文件）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;tool-manifest.csv&lt;/strong&gt; - 可用工具和功能&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h2 id=&quot;显着的架构模式&quot;&gt;显着的架构模式&lt;/h2&gt;&lt;a href=&quot;#显着的架构模式&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “显着的架构模式”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3 id=&quot;1-模块化设计&quot;&gt;1. 模块化设计&lt;/h3&gt;&lt;a href=&quot;#1-模块化设计&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “1. 模块化设计”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;跨领域的清晰关注点分离：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;每个模块独立运行&lt;/li&gt;
+&lt;li&gt;共享核心功能&lt;/li&gt;
+&lt;li&gt;可扩展架构&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;2-清单驱动系统&quot;&gt;2. 清单驱动系统&lt;/h3&gt;&lt;a href=&quot;#2-清单驱动系统&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “2. 清单驱动系统”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;CSV 清单提供：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;组件的完整清单&lt;/li&gt;
+&lt;li&gt;每个代理/工作流/任务的元数据&lt;/li&gt;
+&lt;li&gt;版本跟踪和管理&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;3-以工作流为中心的执行&quot;&gt;3. 以工作流为中心的执行&lt;/h3&gt;&lt;a href=&quot;#3-以工作流为中心的执行&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “3. 以工作流为中心的执行”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;代理通过结构化工作流执行：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;跨模块的一致模式&lt;/li&gt;
+&lt;li&gt;通过变量进行状态管理&lt;/li&gt;
+&lt;li&gt;通过阶段顺序推进&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;4-内置质量保证&quot;&gt;4. 内置质量保证&lt;/h3&gt;&lt;a href=&quot;#4-内置质量保证&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “4. 内置质量保证”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;所有模块中的对抗性代码审查&lt;/li&gt;
+&lt;li&gt;实现就绪性验证&lt;/li&gt;
+&lt;li&gt;测试架构专家&lt;/li&gt;
+&lt;li&gt;Sprint 回顾和修正&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h2 id=&quot;推荐使用场景&quot;&gt;推荐使用场景&lt;/h2&gt;&lt;a href=&quot;#推荐使用场景&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “推荐使用场景”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3 id=&quot;bmm-最适合&quot;&gt;BMM 最适合&lt;/h3&gt;&lt;a href=&quot;#bmm-最适合&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “BMM 最适合”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;传统软件开发项目&lt;/li&gt;
+&lt;li&gt;业务分析和需求收集&lt;/li&gt;
+&lt;li&gt;企业应用程序开发&lt;/li&gt;
+&lt;li&gt;遵循敏捷方法的团队&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;bmgd-最适合&quot;&gt;BMGD 最适合&lt;/h3&gt;&lt;a href=&quot;#bmgd-最适合&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “BMGD 最适合”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;游戏开发（Unity、Unreal、Godot）&lt;/li&gt;
+&lt;li&gt;独立游戏开发者&lt;/li&gt;
+&lt;li&gt;游戏设计文档&lt;/li&gt;
+&lt;li&gt;游戏测试和质量保证&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;bmb-最适合&quot;&gt;BMB 最适合&lt;/h3&gt;&lt;a href=&quot;#bmb-最适合&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “BMB 最适合”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;创建自定义 BMAD 代理&lt;/li&gt;
+&lt;li&gt;构建新的 BMAD 模块&lt;/li&gt;
+&lt;li&gt;工作流架构设计&lt;/li&gt;
+&lt;li&gt;系统集成&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;cis-最适合&quot;&gt;CIS 最适合&lt;/h3&gt;&lt;a href=&quot;#cis-最适合&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “CIS 最适合”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;创新研讨会&lt;/li&gt;
+&lt;li&gt;设计思维会话&lt;/li&gt;
+&lt;li&gt;问题解决突破&lt;/li&gt;
+&lt;li&gt;创意头脑风暴&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h2 id=&quot;独特功能&quot;&gt;独特功能&lt;/h2&gt;&lt;a href=&quot;#独特功能&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “独特功能”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3 id=&quot;派对模式&quot;&gt;派对模式&lt;/h3&gt;&lt;a href=&quot;#派对模式&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “派对模式”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;多代理对话，通过代理协作进行复杂决策。&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;快速流程&quot;&gt;快速流程&lt;/h3&gt;&lt;a href=&quot;#快速流程&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “快速流程”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;快速迭代和原型制作的快速开发方法论。&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;游戏专用工具&quot;&gt;游戏专用工具&lt;/h3&gt;&lt;a href=&quot;#游戏专用工具&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “游戏专用工具”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;专门用于游戏开发需求的工作流，从设计到测试。&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;创意套件&quot;&gt;创意套件&lt;/h3&gt;&lt;a href=&quot;#创意套件&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “创意套件”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;用于创意问题解决的创新和设计思维工具。&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;结论&quot;&gt;结论&lt;/h2&gt;&lt;a href=&quot;#结论&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “结论”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;BMAD 代表了多代理系统的复杂方法，具有：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;26 个代理&lt;/strong&gt;，跨 4 个专业化领域&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;68 个工作流&lt;/strong&gt;，覆盖完整的开发生命周期&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;4 个核心任务&lt;/strong&gt;，用于系统操作&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;655 个文件&lt;/strong&gt;，实现整个平台&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;模块化设计、清单驱动架构和以工作流为中心的执行使 BMAD 成为希望跨多个领域利用 AI 代理的团队的强大工具——从传统软件开发到游戏创作和创意创新。&lt;/p&gt;
+&lt;p&gt;无论您是在构建企业应用程序、开发游戏，还是促进创新研讨会，BMAD 都有专门的代理和工作流来帮助您成功。&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;参考资料&quot;&gt;参考资料&lt;/h2&gt;&lt;a href=&quot;#参考资料&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “参考资料”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/your-repo/bmad&quot;&gt;BMAD 文档&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.vibesparking.com/blog/ai/bmad-method/2026-01-14-bmad-method-getting-started-guide/&quot;&gt;BMAD 入门指南&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.vibesparking.com/blog/ai/bmad-method/2026-01-15-bmad-upgrade-experience/&quot;&gt;BMAD 升级体验&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded><category>BMAD</category><category>AI代理</category><category>工作流自动化</category><category>游戏开发</category><category>软件架构</category></item><item><title>BMAD 方法 v6.0.0-alpha.23 升级体验：全新安装之旅</title><link>https://www.vibesparking.com/zh-cn/blog/ai/bmad-method/2026-01-15-bmad-upgrade-experience/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/bmad-method/2026-01-15-bmad-upgrade-experience/</guid><pubDate>Thu, 15 Jan 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;将 BMAD Method 从 alpha.19 升级到 alpha.23 变成了一次意外的全新安装之旅。以下是发生的事情、有什么变化，以及为什么这可能也是你升级的好时机。&lt;/p&gt;
 &lt;div&gt;&lt;h2 id=&quot;版本差距问题&quot;&gt;版本差距问题&lt;/h2&gt;&lt;a href=&quot;#版本差距问题&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “版本差距问题”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
 &lt;p&gt;当我运行 &lt;code dir=&quot;auto&quot;&gt;bunx bmad-method@alpha install&lt;/code&gt; 时，收到了版本警告：&lt;/p&gt;
 &lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre data-language=&quot;plaintext&quot;&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;⚠️  VERSION WARNING&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;────────────────────────────────────────────────────────────────────────────────&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;You are updating from 6.0.0-alpha.19 to 6.0.0-alpha.23.&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;--0:#d6deeb;--1:#403f53&quot;&gt;This is 4 alpha versions behind.&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
@@ -1167,7 +1620,7 @@
 &lt;li&gt;&lt;a href=&quot;https://x.com/karpathy/status/2002118205729562949&quot;&gt;Andrej Karpathy的2025年回顾&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://x.com/simonw/status/2006514122977063350&quot;&gt;Simon Willison的2025年回顾&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://x.com/illscience/status/1945498739000635651&quot;&gt;利基初创公司框架&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content:encoded><category>AI</category><category>AI应用</category><category>产品策略</category><category>企业</category><category>2026趋势</category></item><item><title>CCometixLine：基于 Rust 的高性能 Claude Code 状态栏工具</title><link>https://www.vibesparking.com/zh-cn/blog/ai/2026-01-06-ccometixline-claude-code-statusline-in-rust/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/2026-01-06-ccometixline-claude-code-statusline-in-rust/</guid><pubDate>Tue, 06 Jan 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;在 AI 辅助开发快速发展的今天，高效的工具至关重要。&lt;strong&gt;CCometixLine&lt;/strong&gt; 作为一款专为 Claude Code 打造的高性能状态栏工具，凭借其基于 Rust 的构建和无缝的工作流集成，成为了开发者的强大助手。&lt;/p&gt;
+&lt;/ul&gt;</content:encoded><category>AI</category><category>AI应用</category><category>产品策略</category><category>企业</category><category>2026趋势</category></item><item><title>Awesome Agentic Patterns：生产级AI代理模式精选目录</title><link>https://www.vibesparking.com/zh-cn/blog/ai/2026-01-06-awesome-agentic-patterns-curated-catalogue/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/2026-01-06-awesome-agentic-patterns-curated-catalogue/</guid><pubDate>Tue, 06 Jan 2026 00:00:00 GMT</pubDate><content:encoded/></item><item><title>CCometixLine：基于 Rust 的高性能 Claude Code 状态栏工具</title><link>https://www.vibesparking.com/zh-cn/blog/ai/2026-01-06-ccometixline-claude-code-statusline-in-rust/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/2026-01-06-ccometixline-claude-code-statusline-in-rust/</guid><pubDate>Tue, 06 Jan 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;在 AI 辅助开发快速发展的今天，高效的工具至关重要。&lt;strong&gt;CCometixLine&lt;/strong&gt; 作为一款专为 Claude Code 打造的高性能状态栏工具，凭借其基于 Rust 的构建和无缝的工作流集成，成为了开发者的强大助手。&lt;/p&gt;
 &lt;div&gt;&lt;h2 id=&quot;什么是-ccometixline&quot;&gt;什么是 CCometixLine？&lt;/h2&gt;&lt;a href=&quot;#什么是-ccometixline&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “什么是 CCometixLine？”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
 &lt;p&gt;&lt;a href=&quot;https://github.com/Haleclipse/CCometixLine&quot;&gt;CCometixLine&lt;/a&gt; 是一个为 Claude Code 量身定制的状态栏工具。它采用 Rust 语言编写，在提供丰富功能的同时，通过优先考虑性能和稳定性，确保了极致的使用体验。其主要功能包括 Git 集成、使用量追踪以及用于配置的交互式终端用户界面（TUI）。&lt;/p&gt;
 &lt;div&gt;&lt;h2 id=&quot;核心功能&quot;&gt;核心功能&lt;/h2&gt;&lt;a href=&quot;#核心功能&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “核心功能”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
@@ -1204,7 +1657,7 @@
 &lt;div&gt;&lt;h2 id=&quot;结语&quot;&gt;结语&lt;/h2&gt;&lt;a href=&quot;#结语&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “结语”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
 &lt;p&gt;CCometixLine 为 Claude Code 带来了显著的体验提升。无论您是需要更清晰的 Git 状态概览，还是希望更有效地追踪 Token 使用，亦或是单纯想要一个个性化的美观界面，CCometixLine 都能满足您的需求。&lt;/p&gt;
 &lt;p&gt;立即尝试，升级您的开发环境！&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/Haleclipse/CCometixLine&quot;&gt;查看 GitHub 项目&lt;/a&gt;&lt;/p&gt;</content:encoded><category>claude-code</category><category>rust</category><category>developer-tools</category><category>cli</category><category>productivity</category></item><item><title>Awesome Agentic Patterns：生产级AI代理模式精选目录</title><link>https://www.vibesparking.com/zh-cn/blog/ai/2026-01-06-awesome-agentic-patterns-curated-catalogue/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/2026-01-06-awesome-agentic-patterns-curated-catalogue/</guid><pubDate>Tue, 06 Jan 2026 00:00:00 GMT</pubDate><content:encoded/></item><item><title>Claude Skills 15分钟快速入门：AI Will 为非技术用户打造的详细教程</title><link>https://www.vibesparking.com/zh-cn/blog/ai/2026-01-06-claude-skills-15-minute-tutorial/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/2026-01-06-claude-skills-15-minute-tutorial/</guid><pubDate>Tue, 06 Jan 2026 00:00:00 GMT</pubDate><content:encoded>&lt;div&gt;&lt;h2 id=&quot;简介&quot;&gt;简介&lt;/h2&gt;&lt;a href=&quot;#简介&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “简介”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/Haleclipse/CCometixLine&quot;&gt;查看 GitHub 项目&lt;/a&gt;&lt;/p&gt;</content:encoded><category>claude-code</category><category>rust</category><category>developer-tools</category><category>cli</category><category>productivity</category></item><item><title>Claude Skills 15分钟快速入门：AI Will 为非技术用户打造的详细教程</title><link>https://www.vibesparking.com/zh-cn/blog/ai/2026-01-06-claude-skills-15-minute-tutorial/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/2026-01-06-claude-skills-15-minute-tutorial/</guid><pubDate>Tue, 06 Jan 2026 00:00:00 GMT</pubDate><content:encoded>&lt;div&gt;&lt;h2 id=&quot;简介&quot;&gt;简介&lt;/h2&gt;&lt;a href=&quot;#简介&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “简介”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
 &lt;p&gt;Claude Code 彻底改变了开发者与 AI 交互的方式，但许多用户对”Skills”（技能）——扩展 Claude 功能的自定义能力——感到畏惧。&lt;strong&gt;AI Will (@FinanceYF5)&lt;/strong&gt; 是一位增长顾问和 AI 行业分析师，他创建了一个全面的教程，打破了这一障碍，让非技术用户也能在 15 分钟内轻松设置 Claude Skills。&lt;/p&gt;
 &lt;p&gt;本文将探讨 AI Will 的方法，并提供额外的上下文，帮助你快速、自信地开始使用 Claude Skills。&lt;/p&gt;
 &lt;div&gt;&lt;h2 id=&quot;什么是-claude-skills&quot;&gt;什么是 Claude Skills？&lt;/h2&gt;&lt;a href=&quot;#什么是-claude-skills&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “什么是 Claude Skills？”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
@@ -2343,4 +2796,4 @@ pip install git+&lt;a href=&quot;https://github.com/NevaMind-AI/memU.git&quot;&g
 &lt;div&gt;&lt;h2 id=&quot;参考资料&quot;&gt;参考资料&lt;/h2&gt;&lt;a href=&quot;#参考资料&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;currentcolor&quot; d=&quot;m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Section titled “参考资料”&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://x.com/naki2012/status/2008218147464081510&quot;&gt;@naki2012 原始推文&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content:encoded><category>AI</category><category>生产力</category><category>思维模式</category><category>主观能动性</category><category>个人成长</category></item><item><title>OWL：通用多代理任务自动化中的优化劳动力学习框架</title><link>https://www.vibesparking.com/zh-cn/blog/ai/2026-01-06-owl-optimized-workforce-learning-multi-agent-framework/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/2026-01-06-owl-optimized-workforce-learning-multi-agent-framework/</guid><pubDate>Tue, 06 Jan 2026 00:00:00 GMT</pubDate><content:encoded/><category>AI</category><category>多代理系统</category><category>CAMEL-AI</category><category>OWL</category><category>开源</category><category>GAIA基准</category></item></channel></rss>
+&lt;/ul&gt;</content:encoded><category>AI</category><category>生产力</category><category>思维模式</category><category>主观能动性</category><category>个人成长</category></item></channel></rss>
