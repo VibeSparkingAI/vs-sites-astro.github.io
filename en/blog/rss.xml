@@ -282,7 +282,141 @@
 &lt;li&gt;Discord: &lt;a href=&quot;https://discord.gg/gk8jAdXWmj&quot;&gt;https://discord.gg/gk8jAdXWmj&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;p&gt;BMAD is 100% free. No paywalls, no gated Discord. If you find it useful, star the repo or subscribe to the YouTube channel.&lt;/p&gt;</content:encoded><category>BMAD</category><category>AI Development</category><category>Vibe Coding</category><category>AI Agents</category><category>Testing</category></item><item><title>BMAD Phases + Ralph Execution Loop: A Unified AI Development Framework for Claude Code</title><link>https://www.vibesparking.com/en/blog/ai/2026-02-14-bmad-ralph-execution-loop-claude-code/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/2026-02-14-bmad-ralph-execution-loop-claude-code/</guid><pubDate>Sat, 14 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;div&gt;&lt;h1 id=&quot;bmad-phases--ralph-execution-loop-a-unified-ai-development-framework-for-claude-code&quot;&gt;BMAD Phases + Ralph Execution Loop: A Unified AI Development Framework for Claude Code&lt;/h1&gt;&lt;/div&gt;
+&lt;p&gt;BMAD is 100% free. No paywalls, no gated Discord. If you find it useful, star the repo or subscribe to the YouTube channel.&lt;/p&gt;</content:encoded><category>BMAD</category><category>AI Development</category><category>Vibe Coding</category><category>AI Agents</category><category>Testing</category></item><item><title>Stop Arguing About Modeling: AMDD and the Art of Just Barely Good Enough</title><link>https://www.vibesparking.com/en/blog/ai/2026-03-02-amdd-agile-model-driven-development/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/2026-03-02-amdd-agile-model-driven-development/</guid><pubDate>Mon, 02 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Most agile teams I’ve seen fall into one of two traps. The first group spends three months drawing UML diagrams that nobody reads past page five. The second group interprets “working software over documentation” as “let’s just wing it” — then wonders why they’re rebuilding the authentication system for the fourth time.&lt;/p&gt;
+&lt;p&gt;Both groups are convinced the other group is the problem. They’re both wrong.&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;the-false-choice&quot;&gt;The False Choice&lt;/h2&gt;&lt;/div&gt;
+&lt;p&gt;Software development has been stuck in this argument for decades. Model Driven Development (MDD) says: think everything through before you code. Comprehensive models, exhaustive specifications, detailed diagrams. Only then do you start writing code.&lt;/p&gt;
+&lt;p&gt;The agile counter-argument: that’s a fantasy. Requirements change. Markets shift. Customers don’t know what they want until they see it. Just build something and iterate.&lt;/p&gt;
+&lt;p&gt;Both contain truth. Both fail when taken to extremes.&lt;/p&gt;
+&lt;p&gt;MDD teams deliver detailed specs for systems nobody wants anymore. Agile teams without design discipline accumulate architectural debt until the system buckles. Both point at each other: “See? That’s what happens.”&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;what-high-performing-teams-actually-do&quot;&gt;What High-Performing Teams Actually Do&lt;/h2&gt;&lt;/div&gt;
+&lt;p&gt;Watch a productive agile team — not the kind that just renamed their waterfall process. You’ll see something interesting. They don’t skip modeling. They don’t spend weeks on it, either.&lt;/p&gt;
+&lt;p&gt;A typical scene: two developers at a whiteboard. One draws a rough diagram of how a new service should interact with existing components. The other challenges an assumption. They debate for about ten minutes, erase half the diagram, agree on an approach, and go back to their desks to write code. They might do this three or four times during a sprint.&lt;/p&gt;
+&lt;p&gt;That’s Agile Model Driven Development. AMDD.&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;the-core-idea&quot;&gt;The Core Idea&lt;/h2&gt;&lt;/div&gt;
+&lt;p&gt;AMDD’s central concept is captured in one phrase: &lt;strong&gt;just barely good enough&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Not “no models.” Not “perfect models.” Models that are sufficient to move forward and not one diagram more.&lt;/p&gt;
+&lt;p&gt;The lifecycle has four parts:&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;1-envisioning&quot;&gt;1. Envisioning&lt;/h3&gt;&lt;/div&gt;
+&lt;p&gt;At the start of an initiative, spend a few days on high-level requirements and architecture. You’re answering two questions: “What are we building?” and “How might we build it?”&lt;/p&gt;
+&lt;p&gt;A whiteboard sketch of the architecture. User stories on index cards. A rough domain model. That’s enough to estimate costs and organize the team.&lt;/p&gt;
+&lt;p&gt;Don’t invest more than a couple of weeks here, regardless of project size. Going longer means you’re accumulating risk without the concrete feedback that real implementation provides.&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;2-iteration-modeling&quot;&gt;2. Iteration Modeling&lt;/h3&gt;&lt;/div&gt;
+&lt;p&gt;At the beginning of each sprint, model enough to estimate and plan. This is analysis and design for the sprint’s requirements, done during planning itself. Not a separate phase.&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;3-model-storming&quot;&gt;3. Model Storming&lt;/h3&gt;&lt;/div&gt;
+&lt;p&gt;This is where most actual modeling happens. Two or three people, five to ten minutes, rarely more than thirty. Someone has a question they can’t resolve alone. They grab a colleague, sketch it out, resolve the question, and go back to coding.&lt;/p&gt;
+&lt;p&gt;Extreme Programming practitioners called these “stand-up design sessions.” The name doesn’t matter. The practice does: get stuck, grab someone, sketch, resolve, move on.&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;4-tdd-as-specification&quot;&gt;4. TDD as Specification&lt;/h3&gt;&lt;/div&gt;
+&lt;p&gt;Test-driven development isn’t just about testing. Your tests are your detailed specification. Customer tests capture requirements. Developer tests capture design decisions. One source of truth that executes and validates itself. No separate specification document that goes stale the moment it’s printed.&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;why-timing-beats-volume&quot;&gt;Why Timing Beats Volume&lt;/h2&gt;&lt;/div&gt;
+&lt;p&gt;AMDD works because of &lt;em&gt;when&lt;/em&gt; you model, not &lt;em&gt;how much&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;On day one of a project, you know the least about the domain. Your questions are shallow. Stakeholders answer in abstractions because they haven’t seen anything concrete. Every assumption is unvalidated.&lt;/p&gt;
+&lt;p&gt;By iteration four, you’ve delivered working software three times. Stakeholders have used it. Your domain knowledge has depth. You ask better questions. Stakeholders give better answers because they’re reacting to real software, not theoretical specs.&lt;/p&gt;
+&lt;p&gt;JIT modeling focuses effort on what you’re actually building. Traditional upfront modeling often specifies features that never get used. That’s not planning. That’s waste.&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;the-uncomfortable-implication&quot;&gt;The Uncomfortable Implication&lt;/h2&gt;&lt;/div&gt;
+&lt;p&gt;AMDD changes who you need on your team.&lt;/p&gt;
+&lt;p&gt;If modeling sessions last ten minutes and coding lasts hours, a full-time modeler has nothing to do between sessions. The role doesn’t make sense.&lt;/p&gt;
+&lt;p&gt;What AMDD needs is the &lt;strong&gt;generalizing specialist&lt;/strong&gt; — someone with deep expertise in one or two areas and broad competence across the lifecycle. They can model. They can code. They can test. They switch modes as the work demands.&lt;/p&gt;
+&lt;p&gt;This isn’t about being mediocre at everything. It’s about being excellent at your specialty while being competent enough to contribute wherever you’re needed.&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;amdd-vs-other-approaches&quot;&gt;AMDD vs. Other Approaches&lt;/h2&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;vs. Traditional MDD:&lt;/strong&gt; MDD creates extensive models before coding. AMDD creates minimal models throughout. MDD tends toward serial development; AMDD is iterative by nature.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;vs. Feature Driven Development (FDD):&lt;/strong&gt; FDD insists features are your primary requirement artifact. AMDD doesn’t specify which artifacts to use — it says use the right one for the situation.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;vs. Use Case Driven Development:&lt;/strong&gt; Same flexibility. AMDD is compatible with use cases, user stories, or any other requirements format. The message is the same: think before you code, but don’t overthink.&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;getting-started&quot;&gt;Getting Started&lt;/h2&gt;&lt;/div&gt;
+&lt;p&gt;You don’t need a process overhaul to start doing AMDD:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Before coding a feature, spend five minutes sketching the approach on paper or a whiteboard. Throw the sketch away when you’re done coding.&lt;/li&gt;
+&lt;li&gt;When stuck on how two components should interact, grab a teammate and model storm it. Set a timer for fifteen minutes.&lt;/li&gt;
+&lt;li&gt;Write tests first. Let them serve as your specification. Stop maintaining separate design documents that nobody updates.&lt;/li&gt;
+&lt;li&gt;At the start of each project, spend a few days sketching the high-level architecture and key requirements. Enough to estimate. Not enough to be “complete.”&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Most teams (70-80%) do this with whiteboards and sticky notes. That’s fine. The practice matters more than the tooling.&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;the-point&quot;&gt;The Point&lt;/h2&gt;&lt;/div&gt;
+&lt;p&gt;The debate between “plan everything” and “plan nothing” is a false choice. The answer: plan just enough, at the right moment, then get back to building.&lt;/p&gt;
+&lt;p&gt;Stop arguing about modeling. Start modeling at the right time.&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://agilemodeling.com/essays/amdd.htm&quot;&gt;Agile Model Driven Development (AMDD)&lt;/a&gt; — Scott Ambler’s original essay&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://agilemodeling.com/&quot;&gt;Agile Modeling&lt;/a&gt; — The AM method home&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://agilemodeling.com/essays/initialRequirementsModeling.htm&quot;&gt;Initial Requirements Modeling&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://agilemodeling.com/essays/initialArchitectureModeling.htm&quot;&gt;Initial Architecture Modeling&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://agilemodeling.com/essays/modelStorming.htm&quot;&gt;Model Storming&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://agilemodeling.com/essays/barelyGoodEnough.htm&quot;&gt;Just Barely Good Enough Models&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://agilemodeling.com/essays/generalizingSpecialists.htm&quot;&gt;Generalizing Specialists&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded><category>AMDD</category><category>Agile Modeling</category><category>Software Architecture</category><category>TDD</category><category>Model Storming</category><category>Agile Development</category></item><item><title>The Self-Driving Codebase: Background Agents and the Next Era of Software Delivery</title><link>https://www.vibesparking.com/en/blog/ai/background-agents/2026-03-02-the-self-driving-codebase-background-agents/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/background-agents/2026-03-02-the-self-driving-codebase-background-agents/</guid><pubDate>Mon, 02 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;While most people slept, Cursor’s AI system generated roughly 8,000 commits. That was in a single eight-hour stretch. Over seven days, the system accumulated 10 million tool calls, running several hundred agents concurrently, with peak throughput of approximately 1,000 commits per hour. The humans in the room weren’t writing code. They were watching dashboards and calibrating direction.&lt;/p&gt;
+&lt;p&gt;That’s the self-driving codebase. It’s already here.&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;the-thing-youve-been-calling-a-bot-is-different-now&quot;&gt;The Thing You’ve Been Calling a Bot Is Different Now&lt;/h2&gt;&lt;/div&gt;
+&lt;p&gt;We’ve had automated code for years. Build servers. Linting pipelines. Dependency bots that open a PR when a library releases a new version. These are scripted systems. They execute predetermined steps.&lt;/p&gt;
+&lt;p&gt;Background agents are different in one meaningful way: they reason.&lt;/p&gt;
+&lt;p&gt;When a background agent gets triggered by a security disclosure, it doesn’t follow a flowchart. It reads the CVE, examines the affected code, generates a fix, runs tests against the fix, and creates a pull request explaining what it changed and why. The agent made decisions at each step. The humans review the output.&lt;/p&gt;
+&lt;p&gt;That gap — between executing a script and making decisions — is the entire story.&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;what-cursor-proved&quot;&gt;What Cursor Proved&lt;/h2&gt;&lt;/div&gt;
+&lt;p&gt;Cursor published their self-driving codebase research in early 2026. The numbers are worth sitting with.&lt;/p&gt;
+&lt;p&gt;A multi-agent system ran for seven days without stopping. Peak throughput: roughly 1,000 commits per hour. Total tool calls: 10 million. The project was a web browser — not a toy demo. Hundreds of agents operated concurrently on real engineering work.&lt;/p&gt;
+&lt;p&gt;The architecture that made this work wasn’t obvious. Earlier attempts failed.&lt;/p&gt;
+&lt;p&gt;A single powerful model (Opus 4.5) lost track of what it was doing. It “frequently stopped to proclaim success despite being far from it.” Self-coordination with equal-role agents sharing state files reduced 20 effective agents down to 1-3 due to lock contention. Agents avoided complex tasks to minimize conflicts. Neither approach scaled.&lt;/p&gt;
+&lt;p&gt;What worked was a hierarchy:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A &lt;strong&gt;root planner&lt;/strong&gt; that owned the entire scope but never wrote code&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Recursive subplanners&lt;/strong&gt; that subdivided work while maintaining ownership&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Independent workers&lt;/strong&gt; that operated on isolated repository copies and delivered handoffs&lt;/li&gt;
+&lt;li&gt;Information flowing upward without global synchronization&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Individual failures didn’t cascade. The system was anti-fragile.&lt;/p&gt;
+&lt;p&gt;The system also accepted a small constant error rate. Fixing errors quickly across distributed agents proved more efficient than preventing all errors upfront. When Agent A broke the build, Agent B noticed and fixed it. Ultimate CI/CD — where the CI can fix the bugs it finds.&lt;/p&gt;
+&lt;p&gt;Three prompting insights that shaped the architecture:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Constraints outperform instructions.&lt;/strong&gt; “No TODOs, no partial implementations” worked better than prescriptive guidance.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Avoid checkbox mentality.&lt;/strong&gt; High-level intent with agent autonomy outperformed granular task lists.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Quantify scope.&lt;/strong&gt; “Generate 20-100 tasks” conveyed intent better than “generate many tasks.”&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The researchers noted: “Agents have immense engineering skill but will follow instructions to the end, good or bad.”&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;the-infrastructure-story&quot;&gt;The Infrastructure Story&lt;/h2&gt;&lt;/div&gt;
+&lt;p&gt;Running a few agents on a laptop is not background agents. Enterprise-grade background agents need three things.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Isolated compute.&lt;/strong&gt; Each agent gets its own sandboxed environment that spins up on demand and tears down when the task is done. No shared state that can corrupt between jobs. No resource contention between parallel workstreams.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Event routing.&lt;/strong&gt; Something has to decide when to trigger agents. A new pull request. A security advisory. A failing test in CI. A scheduled dependency audit. The event routing layer watches for these signals and dispatches agents with appropriate context and scope.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Governance.&lt;/strong&gt; Permissions and blast radius controls — what can an agent touch, what can it not touch. Audit trails for every action an agent takes. Human review gates via pull requests before anything merges. Failure isolation so one agent’s broken state doesn’t propagate to others.&lt;/p&gt;
+&lt;p&gt;The key safety insight: agents are as safe as their surrounding infrastructure. A well-governed agent with limited blast radius is safer than an engineer with unconstrained production access. The pull request remains the critical human review point. That doesn’t change.&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;the-role-thats-changing&quot;&gt;The Role That’s Changing&lt;/h2&gt;&lt;/div&gt;
+&lt;p&gt;The phrase from background-agents.com captures it well: developers move “on the loop” rather than “in the loop.”&lt;/p&gt;
+&lt;p&gt;In the traditional model, a developer is in the loop — writing every line, making every decision keystroke by keystroke. In the background agent model, developers are on the loop — they set direction, review outputs, calibrate agent behavior, and handle judgment calls that agents can’t resolve.&lt;/p&gt;
+&lt;p&gt;The skills that shift in importance:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Prompt engineering and constraint design.&lt;/strong&gt; What constraints produce reliable agent output? “No partial implementations” is more effective than “finish the task fully.” Learning what to say — and what to leave unsaid — is a skill.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;System architecture for agent work.&lt;/strong&gt; How do you structure a codebase so agents can operate independently? Small, self-contained modules. Clear interface contracts. Minimal cross-cutting dependencies. These aren’t new principles. They become more important when agents are the primary workers.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Review at the right depth.&lt;/strong&gt; An agent’s technically-correct solution can introduce the subtle wrong — an approach that compiles, passes tests, and still misses the intent. Developers who catch this are valuable. Developers who rubber-stamp agent output are not.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Trust calibration.&lt;/strong&gt; Knowing when to let the agent run and when to intervene. Reading the signals that indicate an agent is off-track. Setting the right amount of autonomy for the task at hand.&lt;/p&gt;
+&lt;p&gt;The coding itself becomes one skill among many, not the defining skill.&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;what-this-looks-like-in-practice&quot;&gt;What This Looks Like in Practice&lt;/h2&gt;&lt;/div&gt;
+&lt;p&gt;Background agent use cases that are deployed today:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Dependency updates.&lt;/strong&gt; An agent audits all dependencies on a schedule, generates PRs for safe minor updates, reads changelogs for major versions and flags breaking changes for human review. Not a bot opening issues — an agent that understands the upgrade.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;CVE remediation.&lt;/strong&gt; Triggered by a security advisory, the agent locates affected code, generates a fix, tests it, and creates a PR with an explanation of the vulnerability and the fix. Time from disclosure to reviewed patch PR: minutes, not sprint cycles.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;CI/CD migration.&lt;/strong&gt; A legacy build pipeline needs to move to a new platform. An agent handles the translation file by file, testing each step. The engineer reviews the plan and approves the output. No one has to manually rewrite 200 pipeline steps.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Test coverage expansion.&lt;/strong&gt; An agent analyzes coverage gaps, writes tests for uncovered paths, runs them to verify correctness, and submits for review. Targeted coverage, not random test generation.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Linting and standards enforcement.&lt;/strong&gt; New coding standards rolled out across multiple repositories. An agent applies them consistently, without the coordination cost of distributing the work across a team.&lt;/p&gt;
+&lt;p&gt;None of these require the agent to make product decisions. They’re all well-scoped, reviewable, and bounded. That’s the pattern: background agents handle the work that’s clear enough to specify and important enough to do consistently.&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;the-uncomfortable-implication&quot;&gt;The Uncomfortable Implication&lt;/h2&gt;&lt;/div&gt;
+&lt;p&gt;The agents will follow instructions to the end, good or bad.&lt;/p&gt;
+&lt;p&gt;Cursor documented this directly. Vague directives led agents to pursue obscure features. Explicit specifications improved outcomes. When a single executor received too many simultaneous objectives — plan, explore, research, spawn tasks, review code, merge outputs — it exhibited dysfunction: sleeping randomly, refusing to delegate, claiming premature completion.&lt;/p&gt;
+&lt;p&gt;This means the human’s job is to be a good architect of agent work. Structure problems so agents can solve them. Provide constraints that produce good outcomes. Set clear scope boundaries. Review with enough domain knowledge to catch the wrong that passes all tests.&lt;/p&gt;
+&lt;p&gt;The developer who does this well is more valuable than the developer who types faster.&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;getting-started&quot;&gt;Getting Started&lt;/h2&gt;&lt;/div&gt;
+&lt;p&gt;You don’t need a full background agent platform to start developing these skills.&lt;/p&gt;
+&lt;p&gt;Use Claude Code, Cursor, or GitHub Copilot Agent mode to run longer autonomous tasks and practice reviewing the outputs. Notice when the agent produces technically correct but contextually wrong results — that’s the review skill you’re developing.&lt;/p&gt;
+&lt;p&gt;Structure your next project with cleaner module boundaries and clearer interfaces. Not because agents are reading your code yet, but because it’s practice for the architecture principles that make agent work reliable.&lt;/p&gt;
+&lt;p&gt;When you write prompts for AI coding tools, focus on constraints over instructions. “Never add new dependencies without explicit approval” is a constraint. “Think carefully before adding dependencies” is not.&lt;/p&gt;
+&lt;p&gt;Pay attention to the background agent infrastructure landscape. The three pillars — isolated compute, event routing, governance — are where the enterprise tooling is consolidating.&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;the-point&quot;&gt;The Point&lt;/h2&gt;&lt;/div&gt;
+&lt;p&gt;The self-driving codebase isn’t a future state. For specific workloads — dependency maintenance, security patches, standards enforcement, test coverage — it’s operational today.&lt;/p&gt;
+&lt;p&gt;The infrastructure question is: isolated compute, event routing, governance. Without all three, you have a powerful laptop assistant, not background agents.&lt;/p&gt;
+&lt;p&gt;The role question is: on the loop, not in the loop. Review, calibrate, direct. Architect agent work rather than execute it.&lt;/p&gt;
+&lt;p&gt;The positioning question is: which skills matter in this structure? Constraint design. System architecture. Deep review. Trust calibration.&lt;/p&gt;
+&lt;p&gt;The developer who learns to work this way has a larger effective output than the developer who optimizes for typing speed. The transition is already underway.&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;reference-links&quot;&gt;Reference Links&lt;/h2&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://background-agents.com/&quot;&gt;The Self-Driving Codebase — Background Agents and Enterprise Delivery&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://cursor.com/blog/self-driving-codebases&quot;&gt;Towards Self-Driving Codebases — Cursor Research Blog&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://news.ycombinator.com/item?id=47199107&quot;&gt;Self-Driving Codebases: Hacker News Discussion&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded><category>Background Agents</category><category>AI Coding</category><category>Cursor</category><category>Enterprise Software</category><category>Autonomous Agents</category></item><item><title>BMAD Phases + Ralph Execution Loop: A Unified AI Development Framework for Claude Code</title><link>https://www.vibesparking.com/en/blog/ai/2026-02-14-bmad-ralph-execution-loop-claude-code/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/2026-02-14-bmad-ralph-execution-loop-claude-code/</guid><pubDate>Sat, 14 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;div&gt;&lt;h1 id=&quot;bmad-phases--ralph-execution-loop-a-unified-ai-development-framework-for-claude-code&quot;&gt;BMAD Phases + Ralph Execution Loop: A Unified AI Development Framework for Claude Code&lt;/h1&gt;&lt;/div&gt;
 &lt;p&gt;&lt;starlight-image-zoom-zoomable&gt;&lt;img src=&quot;https://mmbiz.qpic.cn/mmbiz_png/Km3icl8Q2fQmaZ3qe3yzIgwHicKd2LLX1cicm8rvgpibq9pzXNtt4hz3MY4nibVFIe5IrFH3uWMRRWIJmqXgagO7KnA/0?wx_fmt=png&quot; alt=&quot;BMAD Ralph Execution Loop&quot;&gt;&lt;button aria-label=&quot;Zoom image: BMAD Ralph Execution Loop&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; fill=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;use href=&quot;#starlight-image-zoom-icon-zoom&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/button&gt;&lt;/starlight-image-zoom-zoomable&gt;&lt;/p&gt;
 &lt;p&gt;When coding with Claude Code, you’ve likely encountered two extremes:&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;“Vibe Coding” mode&lt;/strong&gt;: Describe what you want, AI generates code, copy-paste. Fast, but as conversations grow long, the AI starts “forgetting” earlier decisions, and code quality becomes inconsistent.&lt;/p&gt;
@@ -3465,393 +3599,4 @@ source ~/.bashrc  # or source ~/.zshrc
 &lt;li&gt;Terminal log of this session: &lt;code dir=&quot;auto&quot;&gt;.terminal-logs/terminal_20260124_210313_1769259793512.log&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;p&gt;&lt;em&gt;This game was built using BMad Method v6.0.0-alpha.23 with Claude Opus 4.5. Total time from blank directory to playable game: approximately 2.5 hours.&lt;/em&gt;&lt;/p&gt;</content:encoded><category>BMad</category><category>AI-Assisted-Development</category><category>Phaser</category><category>Game-Development</category><category>Workflow</category><category>Quick-Dev</category></item><item><title>Clawdbot: Your Personal AI Assistant That Lives in Your Favorite Apps</title><link>https://www.vibesparking.com/en/blog/ai/2026-01-25-clawdbot-personal-ai-assistant/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/2026-01-25-clawdbot-personal-ai-assistant/</guid><pubDate>Sun, 25 Jan 2026 00:00:00 GMT</pubDate><content:encoded>&lt;div&gt;&lt;h1 id=&quot;clawdbot-your-personal-ai-assistant-that-lives-in-your-favorite-apps&quot;&gt;Clawdbot: Your Personal AI Assistant That Lives in Your Favorite Apps&lt;/h1&gt;&lt;/div&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;EXFOLIATE! EXFOLIATE!&lt;/strong&gt; 🦞&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Imagine having a personal AI assistant that doesn’t live in yet another app you need to download, but instead integrates directly into the messaging platforms you already use every day. That’s Clawdbot.&lt;/p&gt;
-&lt;div&gt;&lt;h2 id=&quot;what-is-clawdbot&quot;&gt;What is Clawdbot?&lt;/h2&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;Clawdbot&lt;/strong&gt; is an open-source personal AI assistant that you run on your own devices. It answers you on the channels you already use—WhatsApp, Telegram, Slack, Discord, Google Chat, Signal, iMessage, Microsoft Teams, and more. It has over &lt;strong&gt;12,000 stars on GitHub&lt;/strong&gt; and is growing rapidly.&lt;/p&gt;
-&lt;p&gt;Unlike ChatGPT or Claude’s web interfaces, Clawdbot meets you where you already are. No need to switch apps or open a browser. Just send a message like you would to a friend.&lt;/p&gt;
-&lt;p&gt;&lt;starlight-image-zoom-zoomable&gt;&lt;img src=&quot;https://raw.githubusercontent.com/clawdbot/clawdbot/main/docs/whatsapp-clawd.jpg&quot; alt=&quot;Clawdbot on WhatsApp&quot;&gt;&lt;button aria-label=&quot;Zoom image: Clawdbot on WhatsApp&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; fill=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;use href=&quot;#starlight-image-zoom-icon-zoom&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/button&gt;&lt;/starlight-image-zoom-zoomable&gt;&lt;/p&gt;
-&lt;div&gt;&lt;h2 id=&quot;why-this-matters&quot;&gt;Why This Matters&lt;/h2&gt;&lt;/div&gt;
-&lt;p&gt;Most AI assistants live in walled gardens. They want you to use their app, their interface, their ecosystem. Clawdbot takes a different approach:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Your data stays yours&lt;/strong&gt; — Self-hosted means your conversations never leave your infrastructure&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Your choice of interface&lt;/strong&gt; — Use WhatsApp on mobile, Slack at work, Discord with friends&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Always available&lt;/strong&gt; — Runs 24/7 on your server&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Extensible&lt;/strong&gt; — Build custom skills and automate your workflows&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h2 id=&quot;key-features&quot;&gt;Key Features&lt;/h2&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h3 id=&quot;multi-channel-inbox&quot;&gt;Multi-Channel Inbox&lt;/h3&gt;&lt;/div&gt;
-&lt;p&gt;Clawdbot supports 15+ messaging platforms:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;WhatsApp&lt;/strong&gt; — Most popular option, works via Baileys&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Telegram&lt;/strong&gt; — Fast and reliable via grammY&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Slack&lt;/strong&gt; — Perfect for work environments&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Discord&lt;/strong&gt; — Great for gaming communities&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Google Chat&lt;/strong&gt; — Workspace integration&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Signal&lt;/strong&gt; — Privacy-focused option&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;iMessage&lt;/strong&gt; — macOS only, native Apple experience&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Microsoft Teams&lt;/strong&gt; — Enterprise support&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;BlueBubbles&lt;/strong&gt; — Extension for iMessage&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Matrix&lt;/strong&gt; — Decentralized messaging&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Zalo&lt;/strong&gt; — Popular in Vietnam&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;WebChat&lt;/strong&gt; — Browser-based interface&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h3 id=&quot;voice-wake--talk-mode&quot;&gt;Voice Wake + Talk Mode&lt;/h3&gt;&lt;/div&gt;
-&lt;p&gt;On macOS, iOS, and Android, Clawdbot supports always-on voice activation:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Say “Hey Clawd” to wake it up&lt;/li&gt;
-&lt;li&gt;Continuous conversation mode&lt;/li&gt;
-&lt;li&gt;ElevenLabs integration for natural speech&lt;/li&gt;
-&lt;li&gt;Push-to-talk overlay on mobile&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h3 id=&quot;live-canvas&quot;&gt;Live Canvas&lt;/h3&gt;&lt;/div&gt;
-&lt;p&gt;A unique feature that lets the AI create visual workspaces you can control:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Agent-driven visual workspace&lt;/li&gt;
-&lt;li&gt;A2UI (Agent-to-UI) push and reset&lt;/li&gt;
-&lt;li&gt;Real-time updates from your assistant&lt;/li&gt;
-&lt;li&gt;Perfect for brainstorming and planning&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h3 id=&quot;browser-control&quot;&gt;Browser Control&lt;/h3&gt;&lt;/div&gt;
-&lt;p&gt;Clawdbot can control a dedicated browser instance:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Automated web browsing&lt;/li&gt;
-&lt;li&gt;Screenshot capture&lt;/li&gt;
-&lt;li&gt;Form filling&lt;/li&gt;
-&lt;li&gt;Research tasks&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h3 id=&quot;multi-agent-routing&quot;&gt;Multi-Agent Routing&lt;/h3&gt;&lt;/div&gt;
-&lt;p&gt;Run multiple isolated agents for different purposes:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Separate sessions for different contexts&lt;/li&gt;
-&lt;li&gt;Group chat isolation&lt;/li&gt;
-&lt;li&gt;Per-channel routing&lt;/li&gt;
-&lt;li&gt;Activation modes (mention or always-on)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h2 id=&quot;getting-started&quot;&gt;Getting Started&lt;/h2&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h3 id=&quot;prerequisites&quot;&gt;Prerequisites&lt;/h3&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;Node.js ≥22&lt;/li&gt;
-&lt;li&gt;npm, pnpm, or bun&lt;/li&gt;
-&lt;li&gt;For cloud deployment: a VPS (optional, ~$5/month)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h3 id=&quot;installation&quot;&gt;Installation&lt;/h3&gt;&lt;/div&gt;
-&lt;p&gt;The recommended installation uses the onboarding wizard:&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;# Install globally&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;npm&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;install&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;-g&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;clawdbot@latest&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;# Run the wizard&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;clawdbot&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;onboard&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;--install-daemon&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div aria-live=&quot;polite&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;p&gt;The wizard guides you through:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Gateway setup&lt;/li&gt;
-&lt;li&gt;Workspace configuration&lt;/li&gt;
-&lt;li&gt;Channel connection&lt;/li&gt;
-&lt;li&gt;Skills installation&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div&gt;&lt;h3 id=&quot;configuration&quot;&gt;Configuration&lt;/h3&gt;&lt;/div&gt;
-&lt;p&gt;A minimal &lt;code dir=&quot;auto&quot;&gt;~/.clawdbot/clawdbot.json&lt;/code&gt;:&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;{&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span&gt;&quot;agent&quot;&lt;/span&gt;&lt;span&gt;: {&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span&gt;&quot;model&quot;&lt;/span&gt;&lt;span&gt;: &lt;/span&gt;&lt;span&gt;&quot;&lt;/span&gt;&lt;span&gt;anthropic/claude-opus-4-5&lt;/span&gt;&lt;span&gt;&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span&gt;}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div aria-live=&quot;polite&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;p&gt;For Anthropic Claude, configure OAuth:&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;clawdbot&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;pairing&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;anthropic&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div aria-live=&quot;polite&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;p&gt;The recommended model is &lt;strong&gt;Claude Opus 4.5&lt;/strong&gt; for its long-context strength and better resistance to prompt injection.&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;channel-setup&quot;&gt;Channel Setup&lt;/h3&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;WhatsApp:&lt;/strong&gt;&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;clawdbot&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;channels&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;login&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div aria-live=&quot;polite&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;p&gt;Then scan the QR code with your phone.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Telegram:&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Set your bot token:&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;export&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;TELEGRAM_BOT_TOKEN&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;&lt;/span&gt;&lt;span&gt;your-bot-token&lt;/span&gt;&lt;span&gt;&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div aria-live=&quot;polite&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;Discord:&lt;/strong&gt;&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;export&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;DISCORD_BOT_TOKEN&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;&lt;/span&gt;&lt;span&gt;your-bot-token&lt;/span&gt;&lt;span&gt;&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div aria-live=&quot;polite&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h2 id=&quot;chat-commands&quot;&gt;Chat Commands&lt;/h2&gt;&lt;/div&gt;
-&lt;p&gt;Once Clawdbot is running, use these commands in any channel:&lt;/p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Command&lt;/th&gt;&lt;th&gt;Description&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;code dir=&quot;auto&quot;&gt;/status&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Show session status and model info&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code dir=&quot;auto&quot;&gt;/new&lt;/code&gt; or &lt;code dir=&quot;auto&quot;&gt;/reset&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Reset the conversation&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code dir=&quot;auto&quot;&gt;/compact&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Summarize and compress context&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code dir=&quot;auto&quot;&gt;/think &amp;#x3C;level&gt;&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Set thinking level (off/minimal/low/medium/high)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;`/verbose on&lt;/td&gt;&lt;td&gt;off`&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code dir=&quot;auto&quot;&gt;/usage&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Show token usage and costs&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
-&lt;div&gt;&lt;h2 id=&quot;architecture&quot;&gt;Architecture&lt;/h2&gt;&lt;/div&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;┌─────────────────────────────────────────┐&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;│  Messaging Channels (WhatsApp, TG, ...)  │&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;└─────────────────┬───────────────────────┘&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;                  &lt;/span&gt;&lt;/span&gt;&lt;span&gt;│&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;                  &lt;/span&gt;&lt;/span&gt;&lt;span&gt;▼&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;┌─────────────────────────────────────────┐&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;│           Gateway (Control Plane)        │&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;│       WebSocket: ws://127.0.0.1:18789   │&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;└───────┬──────────────────────────────────┘&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;        &lt;/span&gt;&lt;/span&gt;&lt;span&gt;│&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;        &lt;/span&gt;&lt;/span&gt;&lt;span&gt;├─→ Pi Agent (RPC)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;        &lt;/span&gt;&lt;/span&gt;&lt;span&gt;├─→ CLI&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;        &lt;/span&gt;&lt;/span&gt;&lt;span&gt;├─→ WebChat UI&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;        &lt;/span&gt;&lt;/span&gt;&lt;span&gt;├─→ macOS App&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;        &lt;/span&gt;&lt;/span&gt;&lt;span&gt;└─→ iOS / Android Nodes&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div aria-live=&quot;polite&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;p&gt;The &lt;strong&gt;Gateway&lt;/strong&gt; is the control plane. It manages sessions, channels, tools, and events. Everything connects to it via WebSocket.&lt;/p&gt;
-&lt;div&gt;&lt;h2 id=&quot;security&quot;&gt;Security&lt;/h2&gt;&lt;/div&gt;
-&lt;p&gt;Clawdbot connects to real messaging surfaces, so it treats inbound DMs as &lt;strong&gt;untrusted input&lt;/strong&gt; by default.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Default DM policy (pairing mode):&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Unknown senders receive a pairing code&lt;/li&gt;
-&lt;li&gt;The bot doesn’t process their message&lt;/li&gt;
-&lt;li&gt;You must explicitly approve with:&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;clawdbot&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;pairing&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;approve&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;&amp;#x3C;channel&gt;&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;&amp;#x3C;code&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div aria-live=&quot;polite&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;For public access&lt;/strong&gt;, explicitly opt in:&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;{&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span&gt;&quot;channels&quot;&lt;/span&gt;&lt;span&gt;: {&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span&gt;&quot;telegram&quot;&lt;/span&gt;&lt;span&gt;: {&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;      &lt;/span&gt;&lt;span&gt;&quot;dmPolicy&quot;&lt;/span&gt;&lt;span&gt;: &lt;/span&gt;&lt;span&gt;&quot;&lt;/span&gt;&lt;span&gt;open&lt;/span&gt;&lt;span&gt;&quot;&lt;/span&gt;&lt;span&gt;,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;      &lt;/span&gt;&lt;span&gt;&quot;allowFrom&quot;&lt;/span&gt;&lt;span&gt;: [&lt;/span&gt;&lt;span&gt;&quot;&lt;/span&gt;&lt;span&gt;*&lt;/span&gt;&lt;span&gt;&quot;&lt;/span&gt;&lt;span&gt;]&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;    &lt;/span&gt;&lt;/span&gt;&lt;span&gt;}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span&gt;}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div aria-live=&quot;polite&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;p&gt;Run &lt;code dir=&quot;auto&quot;&gt;clawdbot doctor&lt;/code&gt; to check for risky configurations.&lt;/p&gt;
-&lt;div&gt;&lt;h2 id=&quot;skills-and-automation&quot;&gt;Skills and Automation&lt;/h2&gt;&lt;/div&gt;
-&lt;p&gt;Clawdbot has a skills platform that lets you extend its capabilities:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Bundled skills&lt;/strong&gt; — Built-in functionality&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Managed skills&lt;/strong&gt; — Community-maintained&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Workspace skills&lt;/strong&gt; — Your custom automations&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;ClawdHub&lt;/strong&gt; is a skill registry where you can discover and install new skills.&lt;/p&gt;
-&lt;p&gt;Example skills include:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Email triage and drafting&lt;/li&gt;
-&lt;li&gt;Calendar management&lt;/li&gt;
-&lt;li&gt;Smart home control&lt;/li&gt;
-&lt;li&gt;Browser automation&lt;/li&gt;
-&lt;li&gt;Research and summarization&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h2 id=&quot;deployment-options&quot;&gt;Deployment Options&lt;/h2&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h3 id=&quot;local-development&quot;&gt;Local Development&lt;/h3&gt;&lt;/div&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;git&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;clone&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;https://github.com/clawdbot/clawdbot.git&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;cd&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;clawdbot&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;pnpm&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;install&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;pnpm&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;ui:build&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;pnpm&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;build&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;pnpm&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;clawdbot&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;onboard&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;--install-daemon&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;pnpm&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;gateway:watch&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div aria-live=&quot;polite&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h3 id=&quot;docker&quot;&gt;Docker&lt;/h3&gt;&lt;/div&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;docker&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;run&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;-d&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;\&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span&gt;-v&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;~/.clawdbot:/home/clawd/.clawdbot&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;\&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span&gt;-p&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;18789:18789&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;\&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span&gt;ghcr.io/clawdbot/clawdbot:latest&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div aria-live=&quot;polite&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h3 id=&quot;cloud-vps&quot;&gt;Cloud VPS&lt;/h3&gt;&lt;/div&gt;
-&lt;p&gt;Run the Gateway on a small Linux instance (~$5/month). Use Tailscale Serve or SSH tunnels for remote access.&lt;/p&gt;
-&lt;p&gt;The Gateway handles channel connections and exec tools. Device nodes (macOS/iOS/Android) run device-local actions via &lt;code dir=&quot;auto&quot;&gt;node.invoke&lt;/code&gt;.&lt;/p&gt;
-&lt;div&gt;&lt;h2 id=&quot;community&quot;&gt;Community&lt;/h2&gt;&lt;/div&gt;
-&lt;p&gt;Clawdbot is built by &lt;strong&gt;Peter Steinberger&lt;/strong&gt; (@steipete) and a growing community:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;GitHub&lt;/strong&gt;: &lt;a href=&quot;https://github.com/clawdbot/clawdbot&quot;&gt;https://github.com/clawdbot/clawdbot&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Discord&lt;/strong&gt;: &lt;a href=&quot;https://discord.gg/clawd&quot;&gt;https://discord.gg/clawd&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Documentation&lt;/strong&gt;: &lt;a href=&quot;https://docs.clawd.bot/&quot;&gt;https://docs.clawd.bot/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Showcase&lt;/strong&gt;: &lt;a href=&quot;https://docs.clawd.bot/start/showcase&quot;&gt;https://docs.clawd.bot/start/showcase&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Special thanks to Mario Zechner for &lt;strong&gt;pi-mono&lt;/strong&gt;, the agent runtime that powers Clawdbot.&lt;/p&gt;
-&lt;div&gt;&lt;h2 id=&quot;comparison-with-alternatives&quot;&gt;Comparison with Alternatives&lt;/h2&gt;&lt;/div&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Feature&lt;/th&gt;&lt;th&gt;Clawdbot&lt;/th&gt;&lt;th&gt;ChatGPT App&lt;/th&gt;&lt;th&gt;Claude App&lt;/th&gt;&lt;th&gt;Siri&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;Self-hosted&lt;/td&gt;&lt;td&gt;✅&lt;/td&gt;&lt;td&gt;❌&lt;/td&gt;&lt;td&gt;❌&lt;/td&gt;&lt;td&gt;❌&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Multi-channel&lt;/td&gt;&lt;td&gt;✅ 15+&lt;/td&gt;&lt;td&gt;❌&lt;/td&gt;&lt;td&gt;❌&lt;/td&gt;&lt;td&gt;❌&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Voice wake&lt;/td&gt;&lt;td&gt;✅&lt;/td&gt;&lt;td&gt;✅&lt;/td&gt;&lt;td&gt;✅&lt;/td&gt;&lt;td&gt;✅&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Browser control&lt;/td&gt;&lt;td&gt;✅&lt;/td&gt;&lt;td&gt;❌&lt;/td&gt;&lt;td&gt;❌&lt;/td&gt;&lt;td&gt;❌&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Custom skills&lt;/td&gt;&lt;td&gt;✅&lt;/td&gt;&lt;td&gt;❌&lt;/td&gt;&lt;td&gt;❌&lt;/td&gt;&lt;td&gt;❌&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Visual canvas&lt;/td&gt;&lt;td&gt;✅&lt;/td&gt;&lt;td&gt;❌&lt;/td&gt;&lt;td&gt;❌&lt;/td&gt;&lt;td&gt;❌&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Data ownership&lt;/td&gt;&lt;td&gt;✅&lt;/td&gt;&lt;td&gt;❌&lt;/td&gt;&lt;td&gt;❌&lt;/td&gt;&lt;td&gt;⚠️&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
-&lt;div&gt;&lt;h2 id=&quot;faq&quot;&gt;FAQ&lt;/h2&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;Q: Does Clawdbot work on Windows?&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;A: Yes, via WSL2 (Windows Subsystem for Linux). This is the recommended approach for Windows users.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Q: What’s the minimum server requirement?&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;A: The cheapest VPS options (~$4-5/month) are sufficient. For personal use, a 2GB RAM instance works well.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Q: Can I use it without programming knowledge?&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;A: Yes! The onboarding wizard (&lt;code dir=&quot;auto&quot;&gt;clawdbot onboard&lt;/code&gt;) guides you through everything. No coding required for basic usage.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Q: Which AI model should I use?&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;A: Claude Opus 4.5 is recommended for its long-context capabilities and better prompt-injection resistance. However, any model supported by Anthropic or OpenAI works.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Q: Is my data safe?&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;A: Clawdbot is self-hosted, so your data stays on your infrastructure. The only external connection is to the AI model provider (Anthropic/OpenAI).&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Q: Can I run multiple agents?&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;A: Yes! Clawdbot supports multi-agent routing. You can have separate agents for different contexts, channels, or purposes.&lt;/p&gt;
-&lt;div&gt;&lt;h2 id=&quot;whats-next&quot;&gt;What’s Next?&lt;/h2&gt;&lt;/div&gt;
-&lt;p&gt;Clawdbot represents a different vision for personal AI assistants—one that prioritizes:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Privacy&lt;/strong&gt; through self-hosting&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Flexibility&lt;/strong&gt; through multi-channel support&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Extensibility&lt;/strong&gt; through skills&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Control&lt;/strong&gt; through open source&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;If you’re tired of AI assistants locked in corporate walled gardens, Clawdbot might be exactly what you’ve been looking for.&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;resources&quot;&gt;Resources&lt;/h2&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/clawdbot/clawdbot&quot;&gt;GitHub Repository&lt;/a&gt; — Source code and issues&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://docs.clawd.bot/&quot;&gt;Documentation&lt;/a&gt; — Comprehensive guides&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://docs.clawd.bot/start/getting-started&quot;&gt;Getting Started&lt;/a&gt; — Installation guide&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.macstories.net/stories/clawdbot-showed-me-what-the-future-of-personal-ai-assistants-looks-like/&quot;&gt;MacStories Review&lt;/a&gt; — In-depth review&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://discord.gg/clawd&quot;&gt;Discord Community&lt;/a&gt; — Chat with other users&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;em&gt;Built by Peter Steinberger and the Clawdbot community. EXFOLIATE! 🦞&lt;/em&gt;&lt;/p&gt;</content:encoded><category>Clawdbot</category><category>Personal AI</category><category>Self-Hosted</category><category>Claude</category><category>AI Assistant</category></item><item><title>Cursor + Claude Code: How to Build an Agentic Workspace for Non-Technical People</title><link>https://www.vibesparking.com/en/blog/ai/2026-01-25-cursor-claude-code-agentic-workspace/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/2026-01-25-cursor-claude-code-agentic-workspace/</guid><pubDate>Sun, 25 Jan 2026 00:00:00 GMT</pubDate><content:encoded>&lt;div&gt;&lt;h1 id=&quot;cursor--claude-code-how-to-build-an-agentic-workspace-for-non-technical-people&quot;&gt;Cursor + Claude Code: How to Build an Agentic Workspace for Non-Technical People&lt;/h1&gt;&lt;/div&gt;
-&lt;p&gt;Claude Code has dominated the developer timeline in recent weeks—but almost exclusively among technical users. As a non-engineer, how do you use Claude Code, and why would you want to?&lt;/p&gt;
-&lt;p&gt;Unless you’re building new UI (like personal software), the best way for a prosumer to use Claude Code is through Cursor, giving it access to actions across Chrome and your local machine. Used this way, it’s the most powerful agent I’ve tested that can take action both on your browser and on your files.&lt;/p&gt;
-&lt;p&gt;This differs from Claude itself (mostly chat with limited agentic capability via Connectors), and from Manus and ChatGPT Agent. Both have browser agents, but ChatGPT Agent runs in a cloud sandbox and can’t access your local files or your actual browser sessions, while Manus can control the browser but not local files. They also tend to be slower—there’s VM spin-up time, network latency on every action, and when they go off track you can’t course-correct until they’re done.&lt;/p&gt;
-&lt;p&gt;I’ve also found Claude Code used in Chrome to be more powerful for some use cases than Claude Cowork, though Cowork can be more efficient—more on this below.&lt;/p&gt;
-&lt;div&gt;&lt;h2 id=&quot;what-makes-this-setup-different&quot;&gt;What Makes This Setup Different&lt;/h2&gt;&lt;/div&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Tool&lt;/th&gt;&lt;th&gt;Browser Access&lt;/th&gt;&lt;th&gt;Local Files&lt;/th&gt;&lt;th&gt;Real-time Control&lt;/th&gt;&lt;th&gt;Speed&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Claude Code + Cursor&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;✅ Playwright MCP&lt;/td&gt;&lt;td&gt;✅ Full workspace&lt;/td&gt;&lt;td&gt;✅ Step-by-step approval&lt;/td&gt;&lt;td&gt;Fast&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Claude Cowork&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;✅ Vision-based&lt;/td&gt;&lt;td&gt;❌ Cloud only&lt;/td&gt;&lt;td&gt;❌ Autonomous&lt;/td&gt;&lt;td&gt;Medium&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;ChatGPT Agent&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;✅ Cloud sandbox&lt;/td&gt;&lt;td&gt;❌ No&lt;/td&gt;&lt;td&gt;❌ Autonomous&lt;/td&gt;&lt;td&gt;Slow&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Manus&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;✅ Browser control&lt;/td&gt;&lt;td&gt;❌ No&lt;/td&gt;&lt;td&gt;❌ Autonomous&lt;/td&gt;&lt;td&gt;Slow&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
-&lt;p&gt;The key differentiator: Claude Code in Cursor gives you precision control. You see every action before it happens, catch mistakes immediately, and can guide the agent in real-time.&lt;/p&gt;
-&lt;div&gt;&lt;h2 id=&quot;account-setup&quot;&gt;Account Setup&lt;/h2&gt;&lt;/div&gt;
-&lt;p&gt;First, download and sign up for a few things:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://github.com/&quot;&gt;GitHub&lt;/a&gt;&lt;/strong&gt; – Create an account. Only used for identity and permissions—no git knowledge required&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://claude.ai/&quot;&gt;Claude&lt;/a&gt;&lt;/strong&gt; – Create an account. You’ll need Pro ($20/month) or Max ($100/month) for Claude Code&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://cursor.com/&quot;&gt;Cursor&lt;/a&gt;&lt;/strong&gt; – Create an account and download&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Next, go to the Claude web app, click “Code” in the upper left corner, and connect your GitHub.&lt;/p&gt;
-&lt;div&gt;&lt;h2 id=&quot;activate-claude-code&quot;&gt;Activate Claude Code&lt;/h2&gt;&lt;/div&gt;
-&lt;p&gt;Once GitHub is connected, you’ll see a terminal interface. This is Claude Code. First time setup will walk you through authentication and preferences.&lt;/p&gt;
-&lt;p&gt;For full browser control, install locally:&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;# Open Terminal (Cmd+Space → Terminal)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;npm&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;install&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;-g&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;@anthropic-ai/claude-code&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;# If you get &quot;npm not found&quot;, install Node.js first:&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;# Visit nodejs.org, download installer, run it, then retry above&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;# Launch Claude Code&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;claude&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div aria-live=&quot;polite&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h2 id=&quot;connect-claude-code-to-cursor&quot;&gt;Connect Claude Code to Cursor&lt;/h2&gt;&lt;/div&gt;
-&lt;p&gt;Claude Code is a supervised agent that reads/writes files in a chosen folder. Cursor is the UI that lets you watch and steer it.&lt;/p&gt;
-&lt;p&gt;The easiest method: the Claude Code extension.&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;In Cursor, click Extensions (left sidebar or Cmd+Shift+X)&lt;/li&gt;
-&lt;li&gt;Search “Claude Code” and install by Anthropic&lt;/li&gt;
-&lt;li&gt;Click the Claude icon in your sidebar&lt;/li&gt;
-&lt;li&gt;Open any folder—this becomes your “workspace” where Claude can see and edit files&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Claude can now see all workspace files, edit them, create new ones, and run commands—all through natural language.&lt;/p&gt;
-&lt;div&gt;&lt;h2 id=&quot;set-up-browser-control-playwright-mcp&quot;&gt;Set Up Browser Control (Playwright MCP)&lt;/h2&gt;&lt;/div&gt;
-&lt;p&gt;This is where it gets powerful. Give Claude the ability to control Chrome—clicking buttons, filling forms, reading pages, taking screenshots.&lt;/p&gt;
-&lt;p&gt;In your Claude Code session (inside Cursor’s terminal):&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;/mcp&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div aria-live=&quot;polite&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;p&gt;Select “Add MCP Server” → Choose “Playwright” → Follow prompts.&lt;/p&gt;
-&lt;p&gt;Once set up, you can ask Claude things like:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;“Go to my Google Calendar and find all meetings next week with external attendees”&lt;/li&gt;
-&lt;li&gt;“Read this PDF contract and summarize the key terms into a new doc on my Desktop”&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Claude Code uses Playwright’s accessibility tree to navigate—reading structured data about page elements rather than taking screenshots. I’ve found this faster and more reliable than Cowork’s vision-based approach.&lt;/p&gt;
-&lt;p&gt;This works best when you think of Claude as a junior operator sitting next to you, not an autonomous bot you walk away from. You’ll need to log in to various platforms (Twitter, LinkedIn, etc.) the first time as Playwright spins up a fresh browser.&lt;/p&gt;
-&lt;div&gt;&lt;h2 id=&quot;what-you-can-actually-do&quot;&gt;What You Can Actually Do&lt;/h2&gt;&lt;/div&gt;
-&lt;p&gt;With an agentic workspace spanning browser and local machine, here’s what becomes possible:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Research + organize:&lt;/strong&gt; “Go to Crunchbase, look up these 10 companies, and put their funding info into a spreadsheet in my Documents folder”&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Content creation:&lt;/strong&gt; “Help me edit this Twitter article I’m drafting” (yes, this article was edited with Claude Code)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Data entry:&lt;/strong&gt; “Fill out this expense report form with the receipts I have in my Downloads folder”&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Email cleanup:&lt;/strong&gt; “Go to my Gmail, find all the newsletters I haven’t opened in 3 months, and unsubscribe from them”&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h2 id=&quot;why-not-just-use-claude-cowork&quot;&gt;Why Not Just Use Claude Cowork?&lt;/h2&gt;&lt;/div&gt;
-&lt;p&gt;For many users and use cases, Claude Cowork is the better choice. It’s simpler (just the Claude desktop app), uses your existing Chrome sessions, and runs autonomously for long tasks. If you want simple file organization or fire-and-forget browser tasks, start with Cowork.&lt;/p&gt;
-&lt;p&gt;But Claude Code in Cursor is worth the extra setup for prosument who want fine-grained control:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Quota efficiency:&lt;/strong&gt; Cowork burned through my allowance fast. It runs autonomously, often taking more steps than necessary. Throughout the day, this adds up.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Real-time control:&lt;/strong&gt; You see every action. If it’s about to make a mistake, you catch it immediately—not after it’s reorganized 500 files wrong.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Precision:&lt;/strong&gt; For tasks that must be done exactly right, watching step-by-step beats hoping Cowork interpreted correctly.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Terminal access:&lt;/strong&gt; If your workflows involve scripts, git, or command-line tools, Claude Code can run them. Cowork can’t.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Reliability:&lt;/strong&gt; Cowork can stall mid-task on complex workflows. While writing this article, I asked Cowork to organize screenshots on my desktop and it completely stalled—Claude Code handled it instantly.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;I’d recommend trying both—your ideal workflow might involve using Cowork for autonomous tasks and Claude Code + Cursor for precision work.&lt;/p&gt;
-&lt;div&gt;&lt;h2 id=&quot;reference-links&quot;&gt;Reference Links&lt;/h2&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://claude.ai/code&quot;&gt;Claude Code&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://cursor.com/&quot;&gt;Cursor&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/modelcontextprotocol/servers&quot;&gt;Playwright MCP&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Original thread by &lt;a href=&quot;https://x.com/omooretweets/status/2014010732061638949&quot;&gt;@omooretweets&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content:encoded><category>ai</category><category>claude-code</category><category>cursor</category><category>agents</category><category>productivity</category><category>browser-automation</category><category>playwright</category></item></channel></rss>
+&lt;p&gt;&lt;em&gt;This game was built using BMad Method v6.0.0-alpha.23 with Claude Opus 4.5. Total time from blank directory to playable game: approximately 2.5 hours.&lt;/em&gt;&lt;/p&gt;</content:encoded><category>BMad</category><category>AI-Assisted-Development</category><category>Phaser</category><category>Game-Development</category><category>Workflow</category><category>Quick-Dev</category></item></channel></rss>
