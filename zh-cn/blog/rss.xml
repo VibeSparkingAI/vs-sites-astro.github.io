@@ -113,7 +113,61 @@
 &lt;/ol&gt;
 &lt;p&gt;23 条评论的 PR 可以避免。这两个命令让避免成为默认状态。&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;来源：&lt;a href=&quot;https://claudefa.st/blog/guide/mechanics/simplify-batch-commands&quot;&gt;claudefa.st - /simplify and /batch Commands Guide&lt;/a&gt;&lt;/p&gt;</content:encoded><category>Claude Code</category><category>代码审查</category><category>重构</category><category>开发工具</category><category>效率</category><category>AI 编程</category></item><item><title>BMAD v6.0.4：从 Beta 到正式版，两分钟搞定</title><link>https://www.vibesparking.com/zh-cn/blog/ai/bmad-method/2026-03-02-bmad-v6-stable-release-upgrade-guide/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/bmad-method/2026-03-02-bmad-v6-stable-release-upgrade-guide/</guid><pubDate>Mon, 02 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;div&gt;&lt;h2 id=&quot;一条命令两分钟&quot;&gt;一条命令，两分钟&lt;/h2&gt;&lt;/div&gt;
+&lt;p&gt;来源：&lt;a href=&quot;https://claudefa.st/blog/guide/mechanics/simplify-batch-commands&quot;&gt;claudefa.st - /simplify and /batch Commands Guide&lt;/a&gt;&lt;/p&gt;</content:encoded><category>Claude Code</category><category>代码审查</category><category>重构</category><category>开发工具</category><category>效率</category><category>AI 编程</category></item><item><title>BMad v6.0.4 + GDS v0.1.10：边缘用例猎手、多智能体测试和引擎知识库</title><link>https://www.vibesparking.com/zh-cn/blog/ai/bmad-method/2026-03-02-bmad-v604-gds-v0110-edge-case-hunter-test-architect/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/bmad-method/2026-03-02-bmad-v604-gds-v0110-edge-case-hunter-test-architect/</guid><pubDate>Mon, 02 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;div&gt;&lt;h2 id=&quot;你的代码审查有盲区&quot;&gt;你的代码审查有盲区&lt;/h2&gt;&lt;/div&gt;
+&lt;p&gt;对抗性代码审查能抓住设计缺陷、命名问题和逻辑错误。但有一类问题它不太擅长：多层嵌套的分支逻辑，输入值刚好卡在边界上的那种。数组为空会怎样？计数器正好归零呢？用户传了 null 而代码期望的是字符串？&lt;/p&gt;
+&lt;p&gt;BMAD v6.0.4 和 GDS v0.1.10 一起发布了。下面说说具体改了什么。&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;edge-case-hunter边缘用例猎手&quot;&gt;Edge Case Hunter（边缘用例猎手）&lt;/h2&gt;&lt;/div&gt;
+&lt;p&gt;新工具。方法驱动的审查，沿着代码里每条分支路径走一遍，检查边界条件。只报告没被处理的漏洞，不搞泛泛的建议。&lt;/p&gt;
+&lt;p&gt;它和对抗性审查是互补关系。对抗性审查找结构和设计问题，Edge Case Hunter 找执行路径上的问题。&lt;/p&gt;
+&lt;p&gt;开发过程中出了个有意思的事：第一版强制要求工具每次都必须报告发现。如果没找到问题，就停下来重试。结果呢？AI 开始编造问题。你逼一个大语言模型必须输出内容，它就真的会输出——哪怕实际上什么问题都没有。&lt;/p&gt;
+&lt;p&gt;修复方法反直觉：把”零发现则停止”的条件删掉（#1797）。让工具可以说”我检查了所有路径，没有遗漏”。就这一个改动，工具变得可信了。虚报问题对信任的破坏比漏掉 bug 还快。&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;test-architect-新功能&quot;&gt;Test Architect 新功能&lt;/h2&gt;&lt;/div&gt;
+&lt;p&gt;四个升级：&lt;/p&gt;
+&lt;p&gt;Agent Teams（智能体团队）——多个测试智能体并行工作。一个跑单元测试，一个跑集成测试，一个检查 API 契约。它们共享上下文，不重复干活。&lt;/p&gt;
+&lt;p&gt;Sub-agents（子智能体）——复杂测试场景拆给子智能体执行。父智能体定测试计划，子智能体各自负责一个测试套件。&lt;/p&gt;
+&lt;p&gt;可配置工具模式——在输入阶段就设定测试方式。严格 TDD、探索性测试、回归测试，跑第一个测试之前就选好。&lt;/p&gt;
+&lt;p&gt;Pact.io 契约测试——服务间契约测试直接集成到 BMAD 工作流。定义 API 承诺，验证消费者和提供者的约定一致，破坏性变更在上线前就能发现。&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;gds-v0110引擎知识库&quot;&gt;GDS v0.1.10：引擎知识库&lt;/h2&gt;&lt;/div&gt;
+&lt;p&gt;Game Dev Studio 现在了解你的引擎了。Unity、Unreal、Godot、Phaser 四个引擎各有一份知识库，内容包括：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;该引擎的性能优化模式&lt;/li&gt;
+&lt;li&gt;编码规范和最佳实践&lt;/li&gt;
+&lt;li&gt;常用的第三方插件&lt;/li&gt;
+&lt;li&gt;许可证和费用信息&lt;/li&gt;
+&lt;li&gt;各平台的注意事项&lt;/li&gt;
+&lt;li&gt;什么时候不该用这个引擎（说实话的建议）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;游戏架构工作流在 Step 3 选定引擎后自动加载对应知识。Step 4（决策）、Step 6（结构）、Step 7（模式）都会用到引擎相关的上下文。不再是笼统的”注意性能”——系统知道 Unity 的垃圾回收和 Godot 的场景树是两码事。&lt;/p&gt;
+&lt;p&gt;@sjennings 贡献了这个功能。&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;头脑风暴修复&quot;&gt;头脑风暴修复&lt;/h2&gt;&lt;/div&gt;
+&lt;p&gt;以前的行为：开一个新的头脑风暴会话，之前的内容直接被覆盖掉。&lt;/p&gt;
+&lt;p&gt;现在：系统检测到已有会话，会问你是继续还是重新开始。改动不大，但丢过上下文的人会懂这有多重要。&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;其他修复&quot;&gt;其他修复&lt;/h2&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;安装器模板&lt;/strong&gt;（#1769）：废弃的 &lt;code dir=&quot;auto&quot;&gt;@&lt;/code&gt; 路径前缀换成了明确的 &lt;code dir=&quot;auto&quot;&gt;{project-root}&lt;/code&gt; 语法。更可预测，更好调试。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;文档域名&lt;/strong&gt;（#1777）：README 和 issue 模板里坏掉的文档链接修好了。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h2 id=&quot;数字&quot;&gt;数字&lt;/h2&gt;&lt;/div&gt;
+&lt;p&gt;5 个提交，3 个 PR，4 位贡献者：@lum（2 个 PR）、@alex、@chrischen、@BMad。社区驱动，解决的都是实际碰到的问题。&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;v603-要点回顾&quot;&gt;v6.0.3 要点回顾&lt;/h2&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;Root Cause Analysis 技能（#1741）&lt;/li&gt;
+&lt;li&gt;嵌套目录安装器修复（#1735）&lt;/li&gt;
+&lt;li&gt;OpenCode 模式全量支持（#1764）&lt;/li&gt;
+&lt;li&gt;CSV manifest 引号修复（#1746）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h2 id=&quot;安装&quot;&gt;安装&lt;/h2&gt;&lt;/div&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;npx&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;bmad-method@6.0.4&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;install&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div aria-live=&quot;polite&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;p&gt;已经装过 BMAD 的，安装器会自动识别并提供快速更新选项。&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;链接&quot;&gt;链接&lt;/h2&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/bmad-code-org/BMAD-METHOD/releases&quot;&gt;GitHub Releases&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/bmad-code-org/BMAD-METHOD&quot;&gt;BMAD-METHOD 仓库&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://youtube.com/@BMadCode&quot;&gt;BMadCode YouTube&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://buymeacoffee.com/bmad&quot;&gt;支持项目&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/bmad-code-org/bmad-module-game-dev-studio&quot;&gt;GDS 模块仓库&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;BMAD Builder 即将到来。&lt;/p&gt;</content:encoded><category>BMAD</category><category>AI开发</category><category>代码审查</category><category>自动化测试</category><category>游戏开发</category></item><item><title>BMAD v6.0.4：从 Beta 到正式版，两分钟搞定</title><link>https://www.vibesparking.com/zh-cn/blog/ai/bmad-method/2026-03-02-bmad-v6-stable-release-upgrade-guide/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/bmad-method/2026-03-02-bmad-v6-stable-release-upgrade-guide/</guid><pubDate>Mon, 02 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;div&gt;&lt;h2 id=&quot;一条命令两分钟&quot;&gt;一条命令，两分钟&lt;/h2&gt;&lt;/div&gt;
 &lt;p&gt;终端里敲 &lt;code dir=&quot;auto&quot;&gt;bunx bmad-method install&lt;/code&gt;。安装器识别到 beta 8，给你一个 Quick Update 选项。两分钟后，82 个工作流、27 个代理、28 个 AI 工具的配置全部就位。你之前的设置一个没动。&lt;/p&gt;
 &lt;p&gt;升级就这么简单。但细节值得说说。&lt;/p&gt;
 &lt;div&gt;&lt;h2 id=&quot;beta-8-到-v604变了什么&quot;&gt;Beta 8 到 v6.0.4，变了什么&lt;/h2&gt;&lt;/div&gt;
@@ -3647,129 +3701,4 @@ Copilot（快速补全）+ Claude Code（架构设计和审查）&lt;/p&gt;
 &lt;li&gt;&lt;a href=&quot;https://cursor.com/&quot;&gt;Cursor&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/modelcontextprotocol/servers&quot;&gt;Playwright MCP&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;原推文 &lt;a href=&quot;https://x.com/omooretweets/status/2014010732061638949&quot;&gt;@omooretweets&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content:encoded><category>ai</category><category>claude-code</category><category>cursor</category><category>agents</category><category>productivity</category><category>browser-automation</category><category>playwright</category></item><item><title>Legal Guard RegTech：AI 驱动的法律合规工具</title><link>https://www.vibesparking.com/zh-cn/blog/ai/2026-01-25-legal-guard-regtech-ai-powered-legal-compliance/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/2026-01-25-legal-guard-regtech-ai-powered-legal-compliance/</guid><pubDate>Sun, 25 Jan 2026 00:00:00 GMT</pubDate><content:encoded>&lt;div&gt;&lt;h1 id=&quot;legal-guard-regtechai-驱动的法律合规工具&quot;&gt;Legal Guard RegTech：AI 驱动的法律合规工具&lt;/h1&gt;&lt;/div&gt;
-&lt;p&gt;法律文件以复杂著称。一份合同可能包含数十页密集的法律术语，律师需要数小时才能审阅完毕。对于负担不起专门法律团队的中小企业来说，这构成了一个重大风险。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Legal Guard RegTech&lt;/strong&gt; 是 2025 年 IBM TechXchange 黑客马拉松的参赛项目，它利用 AI 技术来解决这个问题，让法律智能变得更加普惠。&lt;/p&gt;
-&lt;div&gt;&lt;h2 id=&quot;解决的问题&quot;&gt;解决的问题&lt;/h2&gt;&lt;/div&gt;
-&lt;p&gt;数据很能说明问题：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;70%&lt;/strong&gt; 的企业因法律语言复杂而难以合规&lt;/li&gt;
-&lt;li&gt;每年因监管不合规损失 &lt;strong&gt;148 亿美元&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;中小企业往往负担不起专门的法律团队&lt;/li&gt;
-&lt;li&gt;法律文件越来越复杂&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;当企业无法真正理解自己的合同内容时，他们就是在盲目飞行——暴露于自己都不知道的风险之中。&lt;/p&gt;
-&lt;div&gt;&lt;h2 id=&quot;工作原理&quot;&gt;工作原理&lt;/h2&gt;&lt;/div&gt;
-&lt;p&gt;核心思路很简单：上传法律文件，立即获得通俗易懂的分析报告。&lt;/p&gt;
-&lt;p&gt;但实现方式相当精妙。系统通过 IBM WatsonX.ai 使用 Granite 基础模型来：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;提取文本&lt;/strong&gt;——从 PDF、DOCX 或 TXT 文件中&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;分析条款&lt;/strong&gt;——识别潜在的合规问题&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;交叉对照&lt;/strong&gt;——对照监管框架（GDPR、PDPA、CCPA、劳动法）&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;生成摘要&lt;/strong&gt;——三种格式：通俗语言、执行摘要、风险分析&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;风险评分&lt;/strong&gt;——0-100 分制，并提供可操作的建议&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;结果呢？过去需要数小时的法律审查，现在只需几分钟。&lt;/p&gt;
-&lt;div&gt;&lt;h2 id=&quot;技术架构&quot;&gt;技术架构&lt;/h2&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;后端技术栈：&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Python 3.12+ with FastAPI&lt;/li&gt;
-&lt;li&gt;IBM Watson X.ai Granite 模型&lt;/li&gt;
-&lt;li&gt;文档处理：PDFPlumber、python-docx&lt;/li&gt;
-&lt;li&gt;基于 JSON 的法规数据库&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;前端技术栈：&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;React 18 with TypeScript&lt;/li&gt;
-&lt;li&gt;Tailwind CSS 和 Radix UI 组件&lt;/li&gt;
-&lt;li&gt;Zustand 状态管理&lt;/li&gt;
-&lt;li&gt;Recharts 数据可视化&lt;/li&gt;
-&lt;li&gt;Vite 快速构建&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;核心 API 接口：&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;/contract/analyze&lt;/code&gt;——分析合同文本的合规性&lt;/li&gt;
-&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;/ai/summarize&lt;/code&gt;——生成通俗语言摘要&lt;/li&gt;
-&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;/ai/explain-clause&lt;/code&gt;——解释具体法律条款&lt;/li&gt;
-&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;/contract/risk-score&lt;/code&gt;——生成合规风险评分&lt;/li&gt;
-&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;/regulations/&lt;/code&gt;——列出支持的法规&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h2 id=&quot;支持的法规&quot;&gt;支持的法规&lt;/h2&gt;&lt;/div&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;法规&lt;/th&gt;&lt;th&gt;管辖范围&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;GDPR&lt;/td&gt;&lt;td&gt;欧盟&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;PDPA 2010&lt;/td&gt;&lt;td&gt;马来西亚&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;PDPA 2012&lt;/td&gt;&lt;td&gt;新加坡&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;CCPA&lt;/td&gt;&lt;td&gt;美国加州&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;劳动法 1955&lt;/td&gt;&lt;td&gt;马来西亚&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
-&lt;p&gt;多司法管辖区支持对于跨境运营的企业尤其有价值，因为不同地区的合规要求可能差异很大。&lt;/p&gt;
-&lt;div&gt;&lt;h2 id=&quot;实际应用场景&quot;&gt;实际应用场景&lt;/h2&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;对于中小企业：&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;签约前审查供应商合同&lt;/li&gt;
-&lt;li&gt;处理欧盟客户数据时确保 GDPR 合规&lt;/li&gt;
-&lt;li&gt;理解当地劳动法下的义务&lt;/li&gt;
-&lt;li&gt;无需支付律师费用即可获得风险评估&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;对于法律专业人士：&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;将文件审查流程加快 90%&lt;/li&gt;
-&lt;li&gt;为客户生成通俗语言摘要&lt;/li&gt;
-&lt;li&gt;自动识别高风险条款&lt;/li&gt;
-&lt;li&gt;导出专业 PDF 报告&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;对于企业：&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;跨多个司法管辖区监控合规状况&lt;/li&gt;
-&lt;li&gt;跟踪监管变化和漏洞&lt;/li&gt;
-&lt;li&gt;为利益相关者生成执行仪表板&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h2 id=&quot;更大的图景&quot;&gt;更大的图景&lt;/h2&gt;&lt;/div&gt;
-&lt;p&gt;Legal Guard 是 RegTech（监管科技）大趋势的一部分——这个行业预计将从 2025 年的约 150 亿美元增长到 2030 年的超过 400 亿美元。&lt;/p&gt;
-&lt;p&gt;这个项目的有趣之处在于它关注&lt;strong&gt;可及性&lt;/strong&gt;。它不是为已有法律部门的大公司打造另一个工具，而是针对服务不足的中小企业市场，这些企业需要负担得起的合规辅助。&lt;/p&gt;
-&lt;div&gt;&lt;h2 id=&quot;亲自试试&quot;&gt;亲自试试&lt;/h2&gt;&lt;/div&gt;
-&lt;p&gt;该项目在 GitHub 上开源：&lt;a href=&quot;https://github.com/nathangtg/legal-guard-regtech&quot;&gt;nathangtg/legal-guard-regtech&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;本地运行：&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;# 克隆并设置&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;git&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;clone&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;https://github.com/nathangtg/legal-guard-regtech&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;cd&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;legal-guard-regtech&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;# 后端&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;cd&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;backend&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;pip&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;install&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;-r&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;requirements.txt&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;uvicorn&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;main:app&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;--reload&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;--port&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;8000&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;# 前端（新终端）&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;cd&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;../frontend&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;npm&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;install&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;npm&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;run&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;dev&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div aria-live=&quot;polite&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;p&gt;访问 API 文档：&lt;code dir=&quot;auto&quot;&gt;http://localhost:8000/docs&lt;/code&gt;，或前端界面：&lt;code dir=&quot;auto&quot;&gt;http://localhost:5173&lt;/code&gt;。&lt;/p&gt;
-&lt;div&gt;&lt;h2 id=&quot;开发者&quot;&gt;开发者&lt;/h2&gt;&lt;/div&gt;
-&lt;p&gt;Legal Guard 由 Nathan G. 开发，他是马来西亚双威大学与兰卡斯特大学的软件工程学生，也是奔驰马来西亚技术公司的软件工程师。他的 Jangular-CLI 工具在 npm 上有超过 51,000 次下载，并发表过多篇 AI/ML 研究论文。&lt;/p&gt;
-&lt;div&gt;&lt;h2 id=&quot;未来展望&quot;&gt;未来展望&lt;/h2&gt;&lt;/div&gt;
-&lt;p&gt;项目列出了几个计划中的增强功能：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;多语言支持（马来语、普通话、泰米尔语）&lt;/li&gt;
-&lt;li&gt;iOS 和 Android 移动应用&lt;/li&gt;
-&lt;li&gt;用于对话式法律咨询的 AI 助手&lt;/li&gt;
-&lt;li&gt;高级合同谈判辅助&lt;/li&gt;
-&lt;li&gt;实时监管更新&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;合规不应该是瓶颈。有了 Legal Guard 这样的工具，企业可以在不破产的情况下理解自己的法律义务——这值得庆祝。&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;strong&gt;项目链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/nathangtg/legal-guard-regtech&quot;&gt;github.com/nathangtg/legal-guard-regtech&lt;/a&gt;
-&lt;strong&gt;演示视频：&lt;/strong&gt; &lt;a href=&quot;https://www.youtube.com/watch?v=v11iNBuYcpY&quot;&gt;YouTube&lt;/a&gt;
-&lt;strong&gt;黑客马拉松：&lt;/strong&gt; IBM TechXchange Hackathon 2025&lt;/p&gt;</content:encoded></item></channel></rss>
+&lt;/ul&gt;</content:encoded><category>ai</category><category>claude-code</category><category>cursor</category><category>agents</category><category>productivity</category><category>browser-automation</category><category>playwright</category></item></channel></rss>

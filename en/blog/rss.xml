@@ -113,7 +113,61 @@
 &lt;/ol&gt;
 &lt;p&gt;The 23-comment PR is avoidable. These two commands make it avoidable by default.&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;Source: &lt;a href=&quot;https://claudefa.st/blog/guide/mechanics/simplify-batch-commands&quot;&gt;claudefa.st - /simplify and /batch Commands Guide&lt;/a&gt;&lt;/p&gt;</content:encoded><category>Claude Code</category><category>Code Review</category><category>Refactoring</category><category>Developer Tools</category><category>Productivity</category><category>AI Coding</category></item><item><title>BMAD v6.0.4: Two Minutes from Beta to Stable</title><link>https://www.vibesparking.com/en/blog/ai/bmad-method/2026-03-02-bmad-v6-stable-release-upgrade-guide/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/bmad-method/2026-03-02-bmad-v6-stable-release-upgrade-guide/</guid><pubDate>Mon, 02 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;div&gt;&lt;h2 id=&quot;one-command-two-minutes&quot;&gt;One Command, Two Minutes&lt;/h2&gt;&lt;/div&gt;
+&lt;p&gt;Source: &lt;a href=&quot;https://claudefa.st/blog/guide/mechanics/simplify-batch-commands&quot;&gt;claudefa.st - /simplify and /batch Commands Guide&lt;/a&gt;&lt;/p&gt;</content:encoded><category>Claude Code</category><category>Code Review</category><category>Refactoring</category><category>Developer Tools</category><category>Productivity</category><category>AI Coding</category></item><item><title>BMad v6.0.4 + GDS v0.1.10: Edge Case Hunter, Multi-Agent Testing, and Engine Knowledge</title><link>https://www.vibesparking.com/en/blog/ai/bmad-method/2026-03-02-bmad-v604-gds-v0110-edge-case-hunter-test-architect/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/bmad-method/2026-03-02-bmad-v604-gds-v0110-edge-case-hunter-test-architect/</guid><pubDate>Mon, 02 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;div&gt;&lt;h2 id=&quot;your-code-review-has-a-blind-spot&quot;&gt;Your Code Review Has a Blind Spot&lt;/h2&gt;&lt;/div&gt;
+&lt;p&gt;Adversarial code review is good at catching design flaws, naming issues, and logic errors. But it has a gap. Branching paths with nested conditions - the ones where input values sit right at a boundary - tend to slip through. You know the kind: what happens when the array is empty? When the counter hits exactly zero? When the user passes null where a string was expected?&lt;/p&gt;
+&lt;p&gt;BMAD v6.0.4 and GDS v0.1.10 shipped together. Here’s what changed and why it matters.&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;edge-case-hunter&quot;&gt;Edge Case Hunter&lt;/h2&gt;&lt;/div&gt;
+&lt;p&gt;The new Edge Case Hunter is a method-driven review tool. It traces every branching path in your code and checks boundary conditions systematically. It reports only unhandled gaps - no noise, no generic suggestions.&lt;/p&gt;
+&lt;p&gt;It works alongside adversarial review, not instead of it. Adversarial review catches structural and design problems. Edge Case Hunter catches execution path problems.&lt;/p&gt;
+&lt;p&gt;Here’s what happened during development: the first version forced the tool to always report findings. If it found nothing, it would halt and retry. The result? The AI fabricated issues. When you pressure an LLM to always produce output, it will produce output - even if there’s nothing to report.&lt;/p&gt;
+&lt;p&gt;The fix was to remove the zero-findings halt condition (#1797). Let the tool say “I traced all paths, nothing is missing.” That single change made the tool trustworthy. False positives destroy confidence faster than missed bugs.&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;test-architect-enhancements&quot;&gt;Test Architect Enhancements&lt;/h2&gt;&lt;/div&gt;
+&lt;p&gt;Test Architect got four upgrades:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Agent Teams&lt;/strong&gt; - Coordinate multiple testing agents working in parallel. One agent handles unit tests, another runs integration tests, a third checks API contracts. They share context and avoid duplicating work.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Sub-agents&lt;/strong&gt; - Complex test scenarios that would overwhelm a single agent can be decomposed. A parent agent defines the test plan, sub-agents execute individual test suites.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Configurable tool modes&lt;/strong&gt; - Set the testing approach at input. Choose between strict TDD, exploratory testing, or regression-focused modes before the first test runs.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Pact.io contract testing&lt;/strong&gt; - Service-to-service contracts built into the BMAD workflow. Define what your API promises, verify that consumers and providers agree, catch breaking changes before they reach production.&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;gds-v0110-engine-knowledge&quot;&gt;GDS v0.1.10: Engine Knowledge&lt;/h2&gt;&lt;/div&gt;
+&lt;p&gt;Game Dev Studio now knows your engine. Knowledge bases were added for Unity, Unreal, Godot, and Phaser. Each one covers:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Performance optimization patterns specific to that engine&lt;/li&gt;
+&lt;li&gt;Coding conventions and best practices&lt;/li&gt;
+&lt;li&gt;Popular and useful third-party plugins&lt;/li&gt;
+&lt;li&gt;Licensing and cost details&lt;/li&gt;
+&lt;li&gt;Platform-specific caveats&lt;/li&gt;
+&lt;li&gt;When NOT to use this engine (honest guidance)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The game architecture workflow auto-loads the relevant knowledge fragment when you select your engine in Step 3. Steps 4 (Decisions), 6 (Structure), and 7 (Patterns) all use engine-specific context. No more generic “consider performance” advice - the system knows that Unity’s garbage collector has different constraints than Godot’s scene tree.&lt;/p&gt;
+&lt;p&gt;Credit to @sjennings for this contribution.&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;brainstorming-fix&quot;&gt;Brainstorming Fix&lt;/h2&gt;&lt;/div&gt;
+&lt;p&gt;Previous behavior: start a new brainstorming session and your existing one gets overwritten. All that context, gone.&lt;/p&gt;
+&lt;p&gt;New behavior: the system detects an existing session and prompts you to continue it or start fresh. Small change, but anyone who lost brainstorming context will appreciate it.&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;other-fixes&quot;&gt;Other Fixes&lt;/h2&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Installer templates&lt;/strong&gt; (#1769): Legacy &lt;code dir=&quot;auto&quot;&gt;@&lt;/code&gt; path prefixes replaced with explicit &lt;code dir=&quot;auto&quot;&gt;{project-root}&lt;/code&gt; syntax. More predictable, easier to debug.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Docs domain&lt;/strong&gt; (#1777): Broken documentation domain references in README and issue templates are fixed.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h2 id=&quot;the-numbers&quot;&gt;The Numbers&lt;/h2&gt;&lt;/div&gt;
+&lt;p&gt;5 commits, 3 PRs, 4 contributors: @lum (2 PRs), @alex, @chrischen, @BMad. Community-driven, solving problems people actually hit.&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;v603-highlights-if-you-missed-it&quot;&gt;v6.0.3 Highlights (If You Missed It)&lt;/h2&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;Root Cause Analysis skill (#1741)&lt;/li&gt;
+&lt;li&gt;Fixed nested directory installer (#1735)&lt;/li&gt;
+&lt;li&gt;OpenCode mode: all support (#1764)&lt;/li&gt;
+&lt;li&gt;CSV manifest quotes fixed (#1746)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h2 id=&quot;install&quot;&gt;Install&lt;/h2&gt;&lt;/div&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;npx&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;bmad-method@6.0.4&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;install&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div aria-live=&quot;polite&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;p&gt;If you already have BMAD installed, the installer detects your setup and offers a quick update path.&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;links&quot;&gt;Links&lt;/h2&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/bmad-code-org/BMAD-METHOD/releases&quot;&gt;GitHub Releases&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/bmad-code-org/BMAD-METHOD&quot;&gt;BMAD-METHOD Repository&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://youtube.com/@BMadCode&quot;&gt;BMadCode YouTube&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://buymeacoffee.com/bmad&quot;&gt;Support the Project&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/bmad-code-org/bmad-module-game-dev-studio&quot;&gt;GDS Module Repository&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;BMAD Builder is coming next.&lt;/p&gt;</content:encoded><category>BMAD</category><category>AI Development</category><category>Code Review</category><category>Testing</category><category>Game Development</category></item><item><title>BMAD v6.0.4: Two Minutes from Beta to Stable</title><link>https://www.vibesparking.com/en/blog/ai/bmad-method/2026-03-02-bmad-v6-stable-release-upgrade-guide/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/bmad-method/2026-03-02-bmad-v6-stable-release-upgrade-guide/</guid><pubDate>Mon, 02 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;div&gt;&lt;h2 id=&quot;one-command-two-minutes&quot;&gt;One Command, Two Minutes&lt;/h2&gt;&lt;/div&gt;
 &lt;p&gt;You type &lt;code dir=&quot;auto&quot;&gt;bunx bmad-method install&lt;/code&gt;. The installer sees your beta 8 setup and offers a Quick Update. Two minutes later, you have a stable platform with 82 workflows, 27 agents, and configurations for 28 AI tools. Your existing settings are untouched.&lt;/p&gt;
 &lt;p&gt;That’s the whole upgrade story. But the details are worth knowing.&lt;/p&gt;
 &lt;div&gt;&lt;h2 id=&quot;what-changed-beta-8-to-v604&quot;&gt;What Changed: Beta 8 to v6.0.4&lt;/h2&gt;&lt;/div&gt;
@@ -3800,220 +3854,4 @@ source ~/.bashrc  # or source ~/.zshrc
 &lt;li&gt;&lt;a href=&quot;https://cursor.com/&quot;&gt;Cursor&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/modelcontextprotocol/servers&quot;&gt;Playwright MCP&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Original thread by &lt;a href=&quot;https://x.com/omooretweets/status/2014010732061638949&quot;&gt;@omooretweets&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content:encoded><category>ai</category><category>claude-code</category><category>cursor</category><category>agents</category><category>productivity</category><category>browser-automation</category><category>playwright</category></item><item><title>Goodbye Vibe Coding: Spec-Driven Development Frameworks for Professional AI Software Development</title><link>https://www.vibesparking.com/en/blog/ai/2026-01-25-spec-driven-development-frameworks-bmad-gsd-ralph/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/2026-01-25-spec-driven-development-frameworks-bmad-gsd-ralph/</guid><pubDate>Sun, 25 Jan 2026 00:00:00 GMT</pubDate><content:encoded>&lt;div&gt;&lt;h1 id=&quot;goodbye-vibe-coding-spec-driven-development-frameworks-for-professional-ai-software-development&quot;&gt;Goodbye Vibe Coding: Spec-Driven Development Frameworks for Professional AI Software Development&lt;/h1&gt;&lt;/div&gt;
-&lt;p&gt;&lt;starlight-image-zoom-zoomable&gt;&lt;img src=&quot;https://mmbiz.qpic.cn/mmbiz_png/Km3icl8Q2fQmaZ3qe3yzIgwHicKd2LLX1cicm8rvgpibq9pzXNtt4hz3MY4nibVFIe5IrFH3uWMRRWIJmqXgagO7KnA/0?wx_fmt=png&quot; alt=&quot;Spec-Driven Development&quot;&gt;&lt;button aria-label=&quot;Zoom image: Spec-Driven Development&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; fill=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;use href=&quot;#starlight-image-zoom-icon-zoom&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/button&gt;&lt;/starlight-image-zoom-zoomable&gt;&lt;/p&gt;
-&lt;div&gt;&lt;h2 id=&quot;the-problem-with-vibe-coding&quot;&gt;The Problem with Vibe Coding&lt;/h2&gt;&lt;/div&gt;
-&lt;p&gt;“Vibe coding” - writing code “by feeling” and hoping the AI guesses your intentions - seemed efficient at first. You describe what you want, the AI generates code, you copy-paste. Fast, right?&lt;/p&gt;
-&lt;p&gt;But this apparent speed hides structural problems that inevitably emerge:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Context rot&lt;/strong&gt;: As conversations lengthen, the AI “forgets” previous decisions and generates code inconsistent with what was done before&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Emergent architecture&lt;/strong&gt; (in the worst sense): Without an overall vision, code grows chaotically and quickly becomes impossible to maintain&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Lack of traceability&lt;/strong&gt;: Impossible to understand why certain technical decisions were made&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Onboarding nightmare&lt;/strong&gt;: New team members have no references to understand the system&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h2 id=&quot;enter-spec-driven-development&quot;&gt;Enter Spec-Driven Development&lt;/h2&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;Spec-Driven Development (SDD)&lt;/strong&gt; is the professional answer. A methodology where specifications become first-class executable artifacts. You write the “spec” (structured documentation) first, then the AI generates code that respects that contract.&lt;/p&gt;
-&lt;p&gt;The spec becomes the source of truth for developers and AI agents, eliminating the ambiguities of vibe coding.&lt;/p&gt;
-&lt;p&gt;According to &lt;a href=&quot;https://www.thoughtworks.com/en-us/insights/blog/agile-engineering-practices/spec-driven-development-unpacking-2025-new-engineering-practices&quot;&gt;Thoughtworks&lt;/a&gt;, SDD is one of the most important engineering practices in recent years.&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;bmad-method-the-enterprise-powerhouse&quot;&gt;BMAD Method: The Enterprise Powerhouse&lt;/h2&gt;&lt;/div&gt;
-&lt;p&gt;The &lt;strong&gt;BMAD Method&lt;/strong&gt; (Build More, Architect Dreams) is the most complete SDD framework available today. With &lt;strong&gt;21 specialized AI agents&lt;/strong&gt;, over 50 guided workflows, and intelligence adaptive to project scale, BMAD simulates an entire agile team with specialized roles.&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;key-features&quot;&gt;Key Features&lt;/h3&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Multi-agent&lt;/strong&gt;: Business Analyst, Product Manager, System Architect, Scrum Master, Developer, UX Designer, QA and others&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Scale-adaptive&lt;/strong&gt;: Automatically adapts from bug fixes to enterprise systems&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Open source&lt;/strong&gt;: 100% free, no paywall&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Cross-domain&lt;/strong&gt;: Works for software, creative writing, business strategy, wellness&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h3 id=&quot;installation&quot;&gt;Installation&lt;/h3&gt;&lt;/div&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;# Basic installation&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;npx&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;bmad-method&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;install&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;# Or with skills for Claude Code&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;cd&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;/tmp&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;git&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;clone&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;https://github.com/aj-geddes/claude-code-bmad-skills.git&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;cd&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;claude-code-bmad-skills&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;chmod&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;+x&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;install-v6.sh&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;./install-v6.sh&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div aria-live=&quot;polite&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h3 id=&quot;typical-bmad-workflow&quot;&gt;Typical BMAD Workflow&lt;/h3&gt;&lt;/div&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Analysis&lt;/strong&gt;: Analyst agent gathers requirements and context&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Planning&lt;/strong&gt;: PM and Architect create PRD and architecture documents&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Stories&lt;/strong&gt;: Scrum Master converts docs into detailed dev stories&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Implementation&lt;/strong&gt;: Developer implements following the stories&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;QA&lt;/strong&gt;: Quality Assurance verifies the code&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div&gt;&lt;h3 id=&quot;documented-results&quot;&gt;Documented Results&lt;/h3&gt;&lt;/div&gt;
-&lt;p&gt;BMAD has been tested in enterprise contexts with measurable results:&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Banking System Migration&lt;/strong&gt;: A team of 3 developers used BMAD to convert a 50,000 LOC COBOL system to Java Spring Boot. Result: 40% reduction in integration time, zero critical regressions.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Fintech MVP&lt;/strong&gt;: An Italian startup developed a wealth management platform with MiFID II compliant documentation. Certification obtained on first attempt, estimated €80,000 savings in compliance consulting.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Links&lt;/strong&gt;: &lt;a href=&quot;https://github.com/bmad-code-org/BMAD-METHOD&quot;&gt;GitHub&lt;/a&gt; | &lt;a href=&quot;https://docs.bmad-method.org/&quot;&gt;Documentation&lt;/a&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;gsd-get-shit-done-the-anti-bureaucracy-framework&quot;&gt;GSD (Get Shit Done): The Anti-Bureaucracy Framework&lt;/h2&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;GSD&lt;/strong&gt; by TACHES was born as a reaction to perceived complexity. As the creator says: “I’m a solo developer. I don’t write code - Claude Code does. But other SDD tools seem to complicate everything with sprint ceremonies.”&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;philosophy-hidden-complexity-exposed-simplicity&quot;&gt;Philosophy: Hidden Complexity, Exposed Simplicity&lt;/h3&gt;&lt;/div&gt;
-&lt;p&gt;The complexity is in the system, not in your workflow.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Maximum 3 tasks per plan&lt;/strong&gt;: Each plan runs in a fresh sub-agent with 200k clean tokens&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Git-centric&lt;/strong&gt;: Each task is a separate commit, revertable and traceable&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Zero context rot&lt;/strong&gt;: Combats context loss through isolated sub-agents&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h3 id=&quot;installation-1&quot;&gt;Installation&lt;/h3&gt;&lt;/div&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;# Global installation&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;npx&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;get-shit-done-cc&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;--global&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;# Local installation&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;npx&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;get-shit-done-cc&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;--local&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div aria-live=&quot;polite&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h3 id=&quot;how-gsd-works&quot;&gt;How GSD Works&lt;/h3&gt;&lt;/div&gt;
-&lt;p&gt;GSD uses a 3-phase funnel:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;PLANNING prompt&lt;/strong&gt;: Performs gap analysis and generates prioritized TODO list&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;BUILDING prompt&lt;/strong&gt;: Implements tasks, runs tests, commits&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Loop&lt;/strong&gt;: Repeats until completion&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div&gt;&lt;h3 id=&quot;documented-results-1&quot;&gt;Documented Results&lt;/h3&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;Alex Lavaee’s Experiment&lt;/strong&gt;: A solo developer produced 100,000 lines of code in 2 weeks. Every commit traceable, git bisect finds exact bugs, zero context management overhead.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Enterprise Adoption&lt;/strong&gt;: Used by engineers at Amazon, Google, Shopify, and Webflow.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Link&lt;/strong&gt;: &lt;a href=&quot;https://github.com/glittercowboy/get-shit-done&quot;&gt;GitHub&lt;/a&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;ralph-loop-the-autonomous-iteration-method&quot;&gt;Ralph Loop: The Autonomous Iteration Method&lt;/h2&gt;&lt;/div&gt;
-&lt;p&gt;The &lt;strong&gt;Ralph Wiggum Loop&lt;/strong&gt; (or simply Ralph Loop), created by Geoffrey Huntley, represents a paradigm shift. Instead of maintaining perfect context, it embraces &lt;strong&gt;fresh starts&lt;/strong&gt; and lets git be the memory layer.&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;core-concept-git-as-memory&quot;&gt;Core Concept: Git As Memory&lt;/h3&gt;&lt;/div&gt;
-&lt;p&gt;Ralph runs AI agents in automated loops until specifications are met. Each iteration spawns a new agent process with a clean context window. The agent reads specs from disk, takes a task, implements it, and exits.&lt;/p&gt;
-&lt;p&gt;Unlike exit-hook plugins that force the same session to continue (causing context overflow), this approach cleanly terminates and restarts between tasks.&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;installation-2&quot;&gt;Installation&lt;/h3&gt;&lt;/div&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;# Official Anthropic plugin&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;/plugin&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;install&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;ralph-wiggum@claude-plugins-official&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;# Smart Ralph (with spec-driven workflow)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;# github.com/tzachbon/smart-ralph&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div aria-live=&quot;polite&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h3 id=&quot;how-it-works&quot;&gt;How It Works&lt;/h3&gt;&lt;/div&gt;
-&lt;p&gt;Claude Code automatically: works on the task, attempts to exit, the stop hook blocks the exit, the stop hook reinserts the same prompt, repeats until completion.&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;documented-results-2&quot;&gt;Documented Results&lt;/h3&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;DevOps Automation&lt;/strong&gt;: A DevOps team implemented Ralph Loop in CI/CD. When tests fail, Ralph automatically receives the report, analyzes code, proposes fixes, and reruns tests.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Results after 3 months&lt;/strong&gt;:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;67% of regression bugs resolved automatically&lt;/li&gt;
-&lt;li&gt;Average fix time reduced from 4 hours to 23 minutes&lt;/li&gt;
-&lt;li&gt;Zero manual interventions for 40% of failed builds&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Links&lt;/strong&gt;: &lt;a href=&quot;https://github.com/anthropics/claude-code/tree/main/plugins/ralph-wiggum&quot;&gt;Official Plugin&lt;/a&gt; | &lt;a href=&quot;https://github.com/tzachbon/smart-ralph&quot;&gt;Smart Ralph&lt;/a&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;github-spec-kit-the-open-source-standard&quot;&gt;GitHub Spec Kit: The Open Source Standard&lt;/h2&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;GitHub Spec Kit&lt;/strong&gt; is GitHub’s open source toolkit for Spec-Driven Development. It provides a structured process to bring SDD into workflows with GitHub Copilot, Claude Code, and Gemini CLI.&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;commands&quot;&gt;Commands&lt;/h3&gt;&lt;/div&gt;
-&lt;p&gt;The workflow follows 5 phases:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;/speckit.constitution&lt;/code&gt; - Set up principles and coding standards&lt;/li&gt;
-&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;/speckit.specify&lt;/code&gt; - Define the feature with requirements&lt;/li&gt;
-&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;/speckit.plan&lt;/code&gt; - Plan with architecture and dependencies&lt;/li&gt;
-&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;/speckit.tasks&lt;/code&gt; - Generate ordered task list&lt;/li&gt;
-&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;/speckit.implement&lt;/code&gt; - Execute tasks, create files, run tests&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div&gt;&lt;h3 id=&quot;documented-results-3&quot;&gt;Documented Results&lt;/h3&gt;&lt;/div&gt;
-&lt;p&gt;Several open source projects adopted Spec Kit for managing external contributions. Contributors first create a spec of the proposed feature, which is reviewed before writing code.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Observed results&lt;/strong&gt;:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;60% reduction in PRs rejected for “architecture misalignment”&lt;/li&gt;
-&lt;li&gt;Review time halved thanks to pre-existing documentation&lt;/li&gt;
-&lt;li&gt;New contributor onboarding accelerated by 70%&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Links&lt;/strong&gt;: &lt;a href=&quot;https://github.com/github/spec-kit&quot;&gt;GitHub&lt;/a&gt; | &lt;a href=&quot;https://github.blog/ai-and-ml/generative-ai/spec-driven-development-with-ai-get-started-with-a-new-open-source-toolkit/&quot;&gt;Blog Post&lt;/a&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;other-notable-sdd-frameworks&quot;&gt;Other Notable SDD Frameworks&lt;/h2&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h3 id=&quot;kiro-amazon&quot;&gt;Kiro (Amazon)&lt;/h3&gt;&lt;/div&gt;
-&lt;p&gt;Amazon’s agentic IDE based on Code OSS, designed from the ground up around an SDD workflow. Explicitly in contrast with vibe coding: spec → design → tasks → implementation.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Link&lt;/strong&gt;: &lt;a href=&quot;https://kiro.dev/&quot;&gt;kiro.dev&lt;/a&gt;&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;tessl&quot;&gt;Tessl&lt;/h3&gt;&lt;/div&gt;
-&lt;p&gt;The only tool that explicitly aspires to a spec-anchored approach. A Tessl spec can serve as the main artifact, with code marked &lt;code dir=&quot;auto&quot;&gt;// GENERATED FROM SPEC - DO NOT EDIT&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Link&lt;/strong&gt;: &lt;a href=&quot;https://tessl.io/&quot;&gt;tessl.io&lt;/a&gt;&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;cc-sdd&quot;&gt;cc-sdd&lt;/h3&gt;&lt;/div&gt;
-&lt;p&gt;Brings Kiro-style commands enforcing a structured requirements→design→tasks workflow. Supports Claude Code, Codex, Cursor, GitHub Copilot, Gemini CLI, and Windsurf.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Link&lt;/strong&gt;: &lt;a href=&quot;https://github.com/gotalab/cc-sdd&quot;&gt;GitHub&lt;/a&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;framework-comparison&quot;&gt;Framework Comparison&lt;/h2&gt;&lt;/div&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Framework&lt;/th&gt;&lt;th&gt;Ideal For&lt;/th&gt;&lt;th&gt;Complexity&lt;/th&gt;&lt;th&gt;Agents&lt;/th&gt;&lt;th&gt;Enterprise Ready&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;BMAD Method&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Enterprise teams, complex projects&lt;/td&gt;&lt;td&gt;High&lt;/td&gt;&lt;td&gt;21+&lt;/td&gt;&lt;td&gt;Yes&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;GSD&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Solo developers, fast iteration&lt;/td&gt;&lt;td&gt;Low&lt;/td&gt;&lt;td&gt;1-3&lt;/td&gt;&lt;td&gt;Partial&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Ralph Loop&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Autonomous tasks, CI/CD automation&lt;/td&gt;&lt;td&gt;Medium&lt;/td&gt;&lt;td&gt;1-7&lt;/td&gt;&lt;td&gt;Yes&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;GitHub Spec Kit&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Open standard, mixed teams&lt;/td&gt;&lt;td&gt;Medium&lt;/td&gt;&lt;td&gt;Variable&lt;/td&gt;&lt;td&gt;Yes&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Kiro&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;AWS ecosystem, greenfield projects&lt;/td&gt;&lt;td&gt;Medium-High&lt;/td&gt;&lt;td&gt;Integrated&lt;/td&gt;&lt;td&gt;Yes&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;when-sdd-makes-sense&quot;&gt;When SDD Makes Sense&lt;/h2&gt;&lt;/div&gt;
-&lt;p&gt;Not all projects benefit from Spec-Driven Development. For a small bug fix, the workflow is “like using a sledgehammer to crack a nut.”&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;use-sdd-when&quot;&gt;Use SDD When:&lt;/h3&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Greenfield projects&lt;/strong&gt;: New applications from scratch&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Complex features&lt;/strong&gt;: Functionality requiring architecture&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Distributed teams&lt;/strong&gt;: Where documentation is critical&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Strict compliance&lt;/strong&gt;: Regulated sectors (finance, healthcare)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Knowledge preservation&lt;/strong&gt;: When staff turnover is high&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h3 id=&quot;skip-sdd-for&quot;&gt;Skip SDD For:&lt;/h3&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;Small bug fixes&lt;/li&gt;
-&lt;li&gt;Quick prototypes&lt;/li&gt;
-&lt;li&gt;Large legacy codebases (retroactive SDD is impractical)&lt;/li&gt;
-&lt;li&gt;Minor UI changes&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;criticisms-and-limitations&quot;&gt;Criticisms and Limitations&lt;/h2&gt;&lt;/div&gt;
-&lt;p&gt;SDD has its critics. Some argue it “revives the old idea of heavy documentation before coding - an echo of the Waterfall era.”&lt;/p&gt;
-&lt;p&gt;Valid concerns:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Diminishing returns&lt;/strong&gt;: SDD shines for new projects, but specs can diverge from code reality as applications grow&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Legacy codebases&lt;/strong&gt;: Retroactive SDD is often impractical&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Initial overhead&lt;/strong&gt;: Requires time investment for setup and training&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Learning curve&lt;/strong&gt;: Teams must learn new workflows&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;getting-started&quot;&gt;Getting Started&lt;/h2&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h3 id=&quot;for-solo-developers&quot;&gt;For Solo Developers&lt;/h3&gt;&lt;/div&gt;
-&lt;p&gt;Start with &lt;strong&gt;GSD&lt;/strong&gt; on a personal project to understand the basic concepts.&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;npx&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;get-shit-done-cc&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;--global&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div aria-live=&quot;polite&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h3 id=&quot;for-teams&quot;&gt;For Teams&lt;/h3&gt;&lt;/div&gt;
-&lt;p&gt;Evaluate &lt;strong&gt;BMAD&lt;/strong&gt; with a limited pilot project. The multi-agent approach mirrors existing agile roles.&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;for-enterprise&quot;&gt;For Enterprise&lt;/h3&gt;&lt;/div&gt;
-&lt;p&gt;Consider &lt;strong&gt;GitHub Spec Kit&lt;/strong&gt; for its integration with existing GitHub ecosystem.&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;resources&quot;&gt;Resources&lt;/h2&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/bmad-code-org/BMAD-METHOD&quot;&gt;BMAD Method&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/glittercowboy/get-shit-done&quot;&gt;GSD (Get Shit Done)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/anthropics/claude-code/tree/main/plugins/ralph-wiggum&quot;&gt;Ralph Wiggum Plugin&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/github/spec-kit&quot;&gt;GitHub Spec Kit&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://kiro.dev/&quot;&gt;Kiro&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://tessl.io/&quot;&gt;Tessl&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.thoughtworks.com/en-us/insights/blog/agile-engineering-practices/spec-driven-development-unpacking-2025-new-engineering-practices&quot;&gt;Thoughtworks on SDD&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;strong&gt;Remember&lt;/strong&gt;: The right tool depends on your context. Start small, validate, then scale. Vibe coding might feel fast, but professional software development demands structure. Spec-Driven Development brings that structure without sacrificing the power of AI assistance.&lt;/p&gt;</content:encoded><category>AI Development</category><category>Spec-Driven Development</category><category>BMAD Method</category><category>Ralph Loop</category><category>Claude Code</category><category>Software Engineering</category><category>Frameworks</category></item></channel></rss>
+&lt;/ul&gt;</content:encoded><category>ai</category><category>claude-code</category><category>cursor</category><category>agents</category><category>productivity</category><category>browser-automation</category><category>playwright</category></item></channel></rss>
