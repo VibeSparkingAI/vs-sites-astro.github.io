@@ -1,4 +1,134 @@
-<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Vibe Sparking AI | Blog</title><description/><link>https://www.vibesparking.com/</link><language>zh-CN</language><item><title>/simplify 和 /batch：你可能没在用的两个 Claude Code 内置命令</title><link>https://www.vibesparking.com/zh-cn/blog/ai/claude-code/2026-03-02-claude-code-simplify-batch-commands-guide/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/claude-code/2026-03-02-claude-code-simplify-batch-commands-guide/</guid><pubDate>Mon, 02 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;div&gt;&lt;h1 id=&quot;simplify-和-batch你可能没在用的两个-claude-code-内置命令&quot;&gt;/simplify 和 /batch：你可能没在用的两个 Claude Code 内置命令&lt;/h1&gt;&lt;/div&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Vibe Sparking AI | Blog</title><description/><link>https://www.vibesparking.com/</link><language>zh-CN</language><item><title>VSDD：AI 写的代码，谁来查作业？</title><link>https://www.vibesparking.com/zh-cn/blog/ai/vibe-coding/2026-03-03-verified-spec-driven-development/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/vibe-coding/2026-03-03-verified-spec-driven-development/</guid><pubDate>Tue, 03 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;div&gt;&lt;h2 id=&quot;没人说的问题&quot;&gt;没人说的问题&lt;/h2&gt;&lt;/div&gt;
+&lt;p&gt;AI 写了一个函数。生成了测试。测试通过了。代码审查也没问题。&lt;/p&gt;
+&lt;p&gt;发版？&lt;/p&gt;
+&lt;p&gt;我反复看到一个现象：半年后用户撞上了一个边界条件。函数处理 null 没问题，但并发访问时挂了。测试覆盖了正常路径和两三个异常路径，偏偏漏掉了输入合法但病态巨大的情况。&lt;/p&gt;
+&lt;p&gt;AI 没有写错代码。它写了”差不多对”的代码。“差不多对”比”明显错”更难抓，因为它能通过所有为了抓”明显错”而设计的检查。&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;行业默认的舒适区&quot;&gt;行业默认的舒适区&lt;/h2&gt;&lt;/div&gt;
+&lt;p&gt;大多数团队用 AI 写代码的流程差不多：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;描述需求&lt;/li&gt;
+&lt;li&gt;AI 写代码（可能顺便写测试）&lt;/li&gt;
+&lt;li&gt;人看一眼，改一改，发版&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;有些团队加了 TDD。有些让另一个 AI 或者人做 code review。但底层假设没变：测试通过了、reviewer 觉得还行，就够了。&lt;/p&gt;
+&lt;p&gt;这个假设有盲区。&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;盲区在哪ai-太客气了&quot;&gt;盲区在哪：AI 太客气了&lt;/h2&gt;&lt;/div&gt;
+&lt;p&gt;标准的 LLM 交互天生合作导向。AI 想帮你。想和你达成一致。它审查代码的时候——哪怕审查自己写的代码——起手就带着善意。&lt;/p&gt;
+&lt;p&gt;“整体看起来不错，以下是一些小建议……”&lt;/p&gt;
+&lt;p&gt;这不叫审查。这叫夸你之后顺带提两句。&lt;/p&gt;
+&lt;p&gt;一次长对话里，AI 记得这代码是自己写的，记得你们讨论过的设计决策。它和这个代码库有了”关系”。有关系就有盲区。&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;什么是-vsdd&quot;&gt;什么是 VSDD&lt;/h2&gt;&lt;/div&gt;
+&lt;p&gt;VSDD（Verified Spec-Driven Development）来自开源社区，三位贡献者是 dollspace-gay、gitcnd 和 jtremback。他们把三套大多数团队当成互斥选项的方法论叠成了流水线上的三道闸门：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;规格驱动开发 (SDD)：&lt;/strong&gt; 先写契约再写代码。不光定义代码做什么，还要定义什么东西必须是可证明的。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;测试驱动开发 (TDD)：&lt;/strong&gt; 先写测试再写代码。红灯、绿灯、重构。没有失败的测试，就没有新代码。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;验证驱动开发 (VDD)：&lt;/strong&gt; 把活下来的代码扔给一个零容忍的对手反复审查，直到对手被迫编造不存在的缺陷。&lt;/p&gt;
+&lt;p&gt;三道闸门。规格定义”做什么”。测试执行”怎么做”。对抗性验证确保”没漏掉什么”。&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;四个角色&quot;&gt;四个角色&lt;/h2&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;架构师（人类开发者）&lt;/strong&gt; — 战略视野、领域专业知识、最终拍板权。你签字确认规格，仲裁 Builder 和 Adversary 的争议，做 AI 做不了的判断。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;建造者（Claude 或同类）&lt;/strong&gt; — 写规格、生成测试、实现代码、做重构。严格 TDD 约束。不许”我先把整个东西写出来再补测试”。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;追踪者（Chainlink）&lt;/strong&gt; — 分层 issue 管理。每个规格条目、测试用例、代码实现都映射到一个可追踪的工作单元。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;对手（Sarcasmotron）&lt;/strong&gt; — 一个不同的 AI 模型，配置为零容忍。审查规格、测试、代码实现。每次审查都用全新的上下文窗口。没有关系漂移，没有累积的人情。&lt;/p&gt;
+&lt;p&gt;对手是整个方法论里最关键的创新。用不同的模型家族（比如 Builder 用 Claude，Adversary 用 Gemini），引入真正的认知多样性。对手不关心你的感受，只关心你的不变量。&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;六个阶段&quot;&gt;六个阶段&lt;/h2&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3 id=&quot;阶段一把一切写进规格&quot;&gt;阶段一：把一切写进规格&lt;/h3&gt;&lt;/div&gt;
+&lt;p&gt;写代码之前，Builder 输出两样东西：行为规格和验证架构。&lt;/p&gt;
+&lt;p&gt;行为规格包含前置条件、后置条件、不变量。边界条件目录列举 null、空、最大值、负数、Unicode、并发等所有边界情况。&lt;/p&gt;
+&lt;p&gt;验证架构里最关键的一项是”纯度边界图”——把确定性的纯核心和有副作用的外壳（I/O、数据库、网络）明确分开。&lt;/p&gt;
+&lt;p&gt;为什么这很重要？一个从数据库读数据、做计算、写日志全放在一个函数里的设计，形式化验证工具拿它没办法。但一个接收数据、返回结果、让调用者处理持久化的纯函数——model checker 能推理它。&lt;/p&gt;
+&lt;p&gt;这个边界必须在规格阶段就画好。因为它决定了模块划分、依赖方向和后面的整个测试策略。&lt;/p&gt;
+&lt;p&gt;Adversary 在任何测试写出来之前就审查规格。它找歧义、找缺失的边界条件、找没说出来的隐含假设、找自相矛盾的地方。&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;阶段二红灯绿灯重构&quot;&gt;阶段二：红灯、绿灯、重构&lt;/h3&gt;&lt;/div&gt;
+&lt;p&gt;规格锁定之后，Builder 写测试。只写测试，不写实现。每个后置条件变成一个断言，每个边界条件变成一个测试。&lt;/p&gt;
+&lt;p&gt;所有测试必须先失败。如果某个测试没写实现就通过了，这个测试有问题。&lt;/p&gt;
+&lt;p&gt;然后：拿下一个失败的测试，写刚好让它通过的最少代码，跑全套测试，重复。经典 TDD，由 AI 执行。&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;阶段三过火焰山&quot;&gt;阶段三：过火焰山&lt;/h3&gt;&lt;/div&gt;
+&lt;p&gt;通过测试的代码库连同规格和测试一起交给 Adversary。全新的上下文窗口。&lt;/p&gt;
+&lt;p&gt;Adversary 查什么：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;实现真的满足规格了吗？还是测试把一个误解编码进去了？&lt;/li&gt;
+&lt;li&gt;有没有同义反复的测试——实现稍微改一下它也照样通过？&lt;/li&gt;
+&lt;li&gt;隐藏耦合、竞态条件、漏掉的资源清理&lt;/li&gt;
+&lt;li&gt;输入校验缺口、注入向量&lt;/li&gt;
+&lt;li&gt;代码里有的行为但规格里没提到的&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;不许写”整体不错”。每条反馈必须是一个具体缺陷，带具体位置。&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;阶段四反馈循环&quot;&gt;阶段四：反馈循环&lt;/h3&gt;&lt;/div&gt;
+&lt;p&gt;Adversary 的意见按类型回流：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;规格级缺陷 → 回到阶段一，改规格，重新审查&lt;/li&gt;
+&lt;li&gt;测试级缺陷 → 修测试，确认它会失败，再修实现&lt;/li&gt;
+&lt;li&gt;新发现的边界条件 → 加进规格，写失败测试，写实现&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;循环到收敛为止。&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;阶段五形式化验证&quot;&gt;阶段五：形式化验证&lt;/h3&gt;&lt;/div&gt;
+&lt;p&gt;因为架构从阶段一开始就是按可验证性设计的：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;形式化证明（Kani、Dafny、TLA+）&lt;/li&gt;
+&lt;li&gt;结构化模糊测试（AFL++、cargo-fuzz）&lt;/li&gt;
+&lt;li&gt;变异测试（mutmut、Stryker）&lt;/li&gt;
+&lt;li&gt;纯度边界审计&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;阶段六收敛&quot;&gt;阶段六：收敛&lt;/h3&gt;&lt;/div&gt;
+&lt;p&gt;四个维度同时收敛才算完：&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;维度&lt;/th&gt;&lt;th&gt;收敛信号&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;规格&lt;/td&gt;&lt;td&gt;Adversary 挑的毛病只剩措辞问题&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;测试&lt;/td&gt;&lt;td&gt;Adversary 找不出有意义的未测试场景&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;实现&lt;/td&gt;&lt;td&gt;Adversary 被迫捏造代码中不存在的问题&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;验证&lt;/td&gt;&lt;td&gt;所有形式化证明通过，fuzzer 啥也没找到&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;p&gt;这叫”幻觉终止”——对手必须靠幻觉来凑缺陷，因为真的缺陷已经找不到了。达到这个状态的软件被称为 “Zero-Slop”。&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;对-ai-辅助开发意味着什么&quot;&gt;对 AI 辅助开发意味着什么&lt;/h2&gt;&lt;/div&gt;
+&lt;p&gt;核心洞察：AI 的礼貌是系统性风险。&lt;/p&gt;
+&lt;p&gt;用合作型 AI 去审查合作型 AI 的产出，就像让朋友给你批改作业。能找到一些错，但需要对抗性思维才能发现的错——找不到。&lt;/p&gt;
+&lt;p&gt;VSDD 让 AI 对抗 AI。不同模型，新鲜上下文，零容忍。这不是 code review，这是压力测试。&lt;/p&gt;
+&lt;p&gt;而人在这个过程中不是被替代了。你是架构师——审批规格、仲裁争议、做 AI 无法替代的判断。你的角色是被抬高了。&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;什么时候用什么时候不用&quot;&gt;什么时候用，什么时候不用&lt;/h2&gt;&lt;/div&gt;
+&lt;p&gt;VSDD 仪式感很重。值得投入的场景：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;正确性不能妥协的系统（金融、医疗、基础设施）&lt;/li&gt;
+&lt;li&gt;需要长期维护的代码库&lt;/li&gt;
+&lt;li&gt;安全是核心关注点&lt;/li&gt;
+&lt;li&gt;团队有多个可用的 AI 模型&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;快速原型或者一次性脚本不需要这套。但即使只加阶段三——拿另一个 AI 做一轮零容忍审查——也能抓到不少隐藏债务。&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;怎么开始&quot;&gt;怎么开始&lt;/h2&gt;&lt;/div&gt;
+&lt;p&gt;不用明天就搞全六个阶段。先加一个：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;做一次对抗性审查。&lt;/strong&gt; 下次完成一个功能后，开一个新对话，用不同的 AI 模型。给它零容忍指令。把规格、测试、代码全贴进去。看它找出什么。&lt;/p&gt;
+&lt;p&gt;大多数试过的开发者会对结果感到不舒服。这种不舒服就对了——说明现有流程有盲区，而你现在知道盲区在哪了。&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;完整可追溯性&quot;&gt;完整可追溯性&lt;/h2&gt;&lt;/div&gt;
+&lt;p&gt;VSDD 最强的属性之一：每个产物都能追溯。&lt;/p&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;规格 → 验证属性 → 追踪的 Issue → 测试用例 → 代码实现 → 对抗性审查 → 形式化证明&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div aria-live=&quot;polite&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;p&gt;问”这行代码为什么存在？“能追溯到一条具体的规格需求。问”这个模块为什么是纯函数？“答案追溯到阶段一的纯度边界图。&lt;/p&gt;
+&lt;p&gt;没有无缘无故的代码。没有缺少证据的理由。&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;参考链接&quot;&gt;参考链接&lt;/h2&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://gist.github.com/dollspace-gay/d8d3bc3ecf4188df049d7a4726bb2a00&quot;&gt;Verified Spec-Driven Development 原始文档&lt;/a&gt; — dollspace-gay, gitcnd, jtremback&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/model-checking/kani&quot;&gt;Kani — Rust 模型检查器&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dafny-lang/dafny&quot;&gt;Dafny — 验证感知编程语言&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://lamport.azurewebsites.net/tla/tla.html&quot;&gt;TLA+ — 形式规格语言&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://aflplus.plus/&quot;&gt;AFL++ — 模糊测试框架&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://stryker-mutator.io/&quot;&gt;Stryker — 变异测试&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded><category>VSDD</category><category>TDD</category><category>AI 开发</category><category>代码质量</category><category>软件方法论</category><category>对抗性审查</category></item><item><title>/simplify 和 /batch：你可能没在用的两个 Claude Code 内置命令</title><link>https://www.vibesparking.com/zh-cn/blog/ai/claude-code/2026-03-02-claude-code-simplify-batch-commands-guide/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/claude-code/2026-03-02-claude-code-simplify-batch-commands-guide/</guid><pubDate>Mon, 02 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;div&gt;&lt;h1 id=&quot;simplify-和-batch你可能没在用的两个-claude-code-内置命令&quot;&gt;/simplify 和 /batch：你可能没在用的两个 Claude Code 内置命令&lt;/h1&gt;&lt;/div&gt;
 &lt;p&gt;&lt;starlight-image-zoom-zoomable&gt;&lt;img src=&quot;https://www.vibesparking.com/assets/ai/anthropic/claude-code/simplify-batch.png&quot; alt=&quot;Claude Code Commands&quot;&gt;&lt;button aria-label=&quot;Zoom image: Claude Code Commands&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; fill=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;use href=&quot;#starlight-image-zoom-icon-zoom&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/button&gt;&lt;/starlight-image-zoom-zoomable&gt;&lt;/p&gt;
 &lt;p&gt;刚写完一个功能。改了 47 个文件，测试通过，CI 全绿。提了 PR，同事留了 23 条评论——三处重复逻辑、一个 utils 里早就有的工具函数没用上、还有一个藏在循环里的 N+1 查询。&lt;/p&gt;
 &lt;p&gt;Claude Code 内置了两个命令，专治这种情况。多数人不知道它们存在。&lt;/p&gt;
@@ -3248,200 +3378,4 @@ Copilot（快速补全）+ Claude Code（架构设计和审查）&lt;/p&gt;
 &lt;li&gt;Phaser 3：&lt;a href=&quot;https://phaser.io/&quot;&gt;https://phaser.io/&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;p&gt;&lt;em&gt;本游戏使用 BMad Method v6.0.0-alpha.23 和 Claude Opus 4.5 构建。从空目录到可玩游戏的总时间：约 10 分钟。&lt;/em&gt;&lt;/p&gt;</content:encoded><category>BMad</category><category>AI辅助开发</category><category>Phaser</category><category>游戏开发</category><category>工作流</category><category>快速开发</category></item><item><title>BMad 安装指南：关键配置点和常见陷阱</title><link>https://www.vibesparking.com/zh-cn/blog/ai/2026-01-25-bmad-installation-key-points/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/2026-01-25-bmad-installation-key-points/</guid><pubDate>Sun, 25 Jan 2026 00:00:00 GMT</pubDate><content:encoded>&lt;!-- # BMad 安装指南：关键配置点和常见陷阱 --&gt;&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;blockquote&gt;
-&lt;p&gt;在项目目录下运行 &lt;code dir=&quot;auto&quot;&gt;bunx bmad-method@alpha install&lt;/code&gt;（别在 home 目录），关闭 TTS，选项目专属的 Codex 提示词，装上所有推荐模块。就这么简单。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;为什么写这篇&quot;&gt;为什么写这篇&lt;/h2&gt;&lt;/div&gt;
-&lt;p&gt;BMad Method 刚出到 alpha.23，67 个工作流、25 个智能体，整个安装流程都改了。我第一次装的时候踩了几个坑，特别是安装目录和 Codex 配置那块。整理下来，希望能帮你少走弯路。&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;一别在-home-目录装&quot;&gt;一、别在 Home 目录装&lt;/h2&gt;&lt;/div&gt;
-&lt;p&gt;先把话说清楚：&lt;strong&gt;不要在 &lt;code dir=&quot;auto&quot;&gt;~&lt;/code&gt; 下面跑安装命令&lt;/strong&gt;。&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;# 先进入你的项目目录&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;cd&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;/path/to/your/project&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;# 然后运行安装程序&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;bunx&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;bmad-method@alpha&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;install&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;# 或者&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;npx&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;bmad-method@alpha&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;install&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div aria-live=&quot;polite&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;p&gt;安装程序会确认路径和目录状态。为什么这很重要？因为 BMad 会创建一个 &lt;code dir=&quot;auto&quot;&gt;_bmad&lt;/code&gt; 文件夹，里面全是配置、工作流和智能体——你不想把这些东西弄到主目录里去。&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;二工具选择那些星标&quot;&gt;二、工具选择那些星标&lt;/h2&gt;&lt;/div&gt;
-&lt;p&gt;装的时候会让你选 AI 工具。带星标的是推荐工具，默认都勾上了。&lt;/p&gt;
-&lt;p&gt;为啥？因为这几个最稳：&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;带星标的（勾上就行）：&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Claude Code ⭐&lt;/li&gt;
-&lt;li&gt;Codex ⭐&lt;/li&gt;
-&lt;li&gt;Cursor ⭐&lt;/li&gt;
-&lt;li&gt;GitHub Copilot ⭐&lt;/li&gt;
-&lt;li&gt;Google Antigravity ⭐&lt;/li&gt;
-&lt;li&gt;OpenCode ⭐&lt;/li&gt;
-&lt;li&gt;Windsurf ⭐&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;其他的（可选）：&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Atlassian Rovo Dev&lt;/li&gt;
-&lt;li&gt;Auggie CLI&lt;/li&gt;
-&lt;li&gt;Cline&lt;/li&gt;
-&lt;li&gt;Crush&lt;/li&gt;
-&lt;li&gt;Gemini CLI&lt;/li&gt;
-&lt;li&gt;iFlow CLI&lt;/li&gt;
-&lt;li&gt;Kilo Code&lt;/li&gt;
-&lt;li&gt;Kiro CLI&lt;/li&gt;
-&lt;li&gt;Qwen Code&lt;/li&gt;
-&lt;li&gt;Roo Code&lt;/li&gt;
-&lt;li&gt;Trae&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;刚开始用的话，这几个够用了。其他的以后再说。&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;三tts-还是关了吧&quot;&gt;三、TTS 还是关了吧&lt;/h2&gt;&lt;/div&gt;
-&lt;p&gt;安装程序会问要不要开语音：&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;?&lt;/span&gt;&lt;span&gt; Claude Code supports TTS (&lt;/span&gt;&lt;span&gt;Text-to-Speech&lt;/span&gt;&lt;span&gt;). Would you like to enable it&lt;/span&gt;&lt;span&gt;?&lt;/span&gt;&lt;span&gt; No&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div aria-live=&quot;polite&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;p&gt;除非你一个人在家戴着耳机写代码，否则就关了。不然开会的时候突然读出来，挺尴尬的。&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;四四个模块都装上&quot;&gt;四、四个模块都装上&lt;/h2&gt;&lt;/div&gt;
-&lt;p&gt;BMad 有四个模块，没理由不装：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;BMB（BMad Builder）&lt;/strong&gt;：智能体、工作流和模块构建器&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;BMGD（BMad Game Development）&lt;/strong&gt;：游戏开发工作流&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;BMM（BMad Method）&lt;/strong&gt;：核心敏捷 AI 驱动开发方法论&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;CIS（Creative Innovation Suite）&lt;/strong&gt;：创意工作流&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;装的时候全选默认配置就行。&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;五codex-选-project-specific&quot;&gt;五、Codex 选 Project-specific&lt;/h2&gt;&lt;/div&gt;
-&lt;p&gt;配置 Codex 时会问提示词放哪：&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;?&lt;/span&gt;&lt;span&gt; Where would you like to install Codex CLI prompts&lt;/span&gt;&lt;span&gt;?&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span&gt;Global&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;-&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;Simple&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;for&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;single&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;project&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;❯&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;Project-specific&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;-&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;Recommended&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;for&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;real&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;work&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div aria-live=&quot;polite&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;p&gt;选 &lt;strong&gt;Project-specific&lt;/strong&gt;。这样提示词就跟着项目走，能进版本控制。&lt;/p&gt;
-&lt;p&gt;你还需要设置 &lt;code dir=&quot;auto&quot;&gt;CODEX_HOME&lt;/code&gt;：&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;# 添加到 ~/.bashrc 或 ~/.zshrc&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;alias&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;codex&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&apos;&lt;/span&gt;&lt;span&gt;CODEX_HOME=&quot;$PWD/.codex&quot; codex&lt;/span&gt;&lt;span&gt;&apos;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div aria-live=&quot;polite&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;六用团队名而不是个人名并配置语言为普通话中文&quot;&gt;六、用团队名而不是个人名，并配置语言为普通话/中文&lt;/h2&gt;&lt;/div&gt;
-&lt;p&gt;安装程序会问怎么称呼你：&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;?&lt;/span&gt;&lt;span&gt; What shall the agents call you (&lt;/span&gt;&lt;span&gt;TIP:&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;Use&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;a&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;team&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;name&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;if&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;using&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;with&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;a&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;group&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;&lt;span&gt;?&lt;/span&gt;&lt;span&gt; (&lt;/span&gt;&lt;span&gt;current:&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;Vibe&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;Sparking&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div aria-live=&quot;polite&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;p&gt;如果是团队协作，用团队名称。这样 AI 的回复会更符合团队语境。&lt;/p&gt;
-&lt;p&gt;接下来会询问你偏好的聊天语言和文档输出语言：&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;?&lt;/span&gt;&lt;span&gt; Preferred chat language/style&lt;/span&gt;&lt;span&gt;?&lt;/span&gt;&lt;span&gt; (&lt;/span&gt;&lt;span&gt;English,&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;Mandarin,&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;English&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;Pirate,&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;etc...&lt;/span&gt;&lt;span&gt;) (&lt;/span&gt;&lt;span&gt;current:&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;English&lt;/span&gt;&lt;span&gt;) Mandarin&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;?&lt;/span&gt;&lt;span&gt; Preferred document output language&lt;/span&gt;&lt;span&gt;?&lt;/span&gt;&lt;span&gt; (&lt;/span&gt;&lt;span&gt;current:&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;English&lt;/span&gt;&lt;span&gt;) Chinese Simplified&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div aria-live=&quot;polite&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;p&gt;如果希望使用中文，只需在提示时输入 “Mandarin”（普通话）或 “Chinese”，安装程序和生成的文档界面都会切换为中文显示。&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;七装完之后有什么&quot;&gt;七、装完之后有什么&lt;/h2&gt;&lt;/div&gt;
-&lt;p&gt;安装成功后，你的项目目录会多这些东西：&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;your-project/&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;├── _bmad/                    # 所有 BMad 配置&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;│   ├── bmm/                  # BMM 模块配置&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;│   ├── bmb/                  # Builder 模块配置&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;│   ├── bmgd/                 # 游戏开发模块配置&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;│   ├── cis/                  # 创意套件配置&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;│   └── workflows/            # 67 个工作流文件&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;└── .codex/                   # Codex 提示词（如果配置了）&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div aria-live=&quot;polite&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;p&gt;具体来说：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;67 个工作流&lt;/strong&gt;，覆盖各种开发场景&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;25 个智能体&lt;/strong&gt;，各有专门角色&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;96 个配置文件&lt;/strong&gt;，分布在所有工具中&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;八从旧版本升级&quot;&gt;八、从旧版本升级&lt;/h2&gt;&lt;/div&gt;
-&lt;p&gt;如果你从 alpha.21 之前的版本升级，需要&lt;strong&gt;全新安装&lt;/strong&gt;：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;删除 &lt;code dir=&quot;auto&quot;&gt;_bmad&lt;/code&gt; 文件夹&lt;/li&gt;
-&lt;li&gt;重新运行 &lt;code dir=&quot;auto&quot;&gt;bunx bmad-method@alpha install&lt;/code&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;这是 alpha 期间的坑，beta 之后应该会好很多。&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;九装完之后干嘛&quot;&gt;九、装完之后干嘛&lt;/h2&gt;&lt;/div&gt;
-&lt;ol&gt;
-&lt;li&gt;检查 &lt;code dir=&quot;auto&quot;&gt;_bmad&lt;/code&gt; 文件夹是不是在项目根目录&lt;/li&gt;
-&lt;li&gt;看 &lt;code dir=&quot;auto&quot;&gt;_bmad/bmm/workflows/&lt;/code&gt; 里面有哪些工作流&lt;/li&gt;
-&lt;li&gt;配置你的 IDE（Claude Code、Cursor 等）&lt;/li&gt;
-&lt;li&gt;读读 &lt;a href=&quot;https://docs.bmad-method.org/&quot;&gt;docs.bmad-method.org&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;第一个工作流可以试试 &lt;code dir=&quot;auto&quot;&gt;quick-dev&lt;/code&gt;（快速实现功能）或 &lt;code dir=&quot;auto&quot;&gt;quick-spec&lt;/code&gt;（写代码前先规划）。&lt;/p&gt;
-&lt;p&gt;启动 Claude Code, Codex, Gemini 等 AI CLI 或者 Cursor, VS Code, Antigravity 等 AI IDE，然后运行：&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;/bmad:bmm:workflows:quick-dev&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div aria-live=&quot;polite&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;p&gt;如果没有 &lt;code dir=&quot;auto&quot;&gt;/bmad:bmm:workflows:quick-dev&lt;/code&gt; 提示，可以试试 &lt;code dir=&quot;auto&quot;&gt;*bmad:bmm:workflows:quick-dev&lt;/code&gt; 一样可以启动 BMAD 的快速开发工作流。&lt;/p&gt;
-&lt;div&gt;&lt;h2 id=&quot;十重新安装或升级&quot;&gt;十、重新安装或升级&lt;/h2&gt;&lt;/div&gt;
-&lt;p&gt;如果需要重新安装或升级 BMad，只需在已有的 BMad 项目目录下再次运行安装命令即可。安装程序会自动检测当前目录下的 &lt;code dir=&quot;auto&quot;&gt;_bmad&lt;/code&gt; 文件夹，并提示你确认安装路径和选择操作方式。&lt;/p&gt;
-&lt;p&gt;你会看到类似下面的交互：&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;?&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;**&lt;/span&gt;&lt;span&gt;Installation directory:&lt;/span&gt;&lt;span&gt;**&lt;/span&gt;&lt;span&gt; /Volumes/vs-bmad/WorkSpaces/VibeSparking/vs-games/vs-games-stickman-bmadg&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;Resolved&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;installation&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;path:&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;**&lt;/span&gt;&lt;span&gt;/Volumes/vs-bmad/WorkSpaces/VibeSparking/vs-games/vs-games-stickman-bmadg&lt;/span&gt;&lt;span&gt;**&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;Directory&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;exists&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;and&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;contains&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;22&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;item&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span&gt;s&lt;/span&gt;&lt;span&gt;) &lt;/span&gt;&lt;span&gt;including&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;existing&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;BMAD&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;installation&lt;/span&gt;&lt;span&gt; (_bmad)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;?&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;**&lt;/span&gt;&lt;span&gt;Install to this directory&lt;/span&gt;&lt;span&gt;?**&lt;/span&gt;&lt;span&gt; Yes&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;?&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;**&lt;/span&gt;&lt;span&gt;What would you like to do&lt;/span&gt;&lt;span&gt;?**&lt;/span&gt;&lt;span&gt; (&lt;/span&gt;&lt;span&gt;Use&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;arrow&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;keys&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;❯&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;Quick&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;Update&lt;/span&gt;&lt;span&gt; (v6.0.0-alpha.23 &lt;/span&gt;&lt;span&gt;→&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;v6.0.0-alpha.23&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span&gt;Recompile&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;Agents&lt;/span&gt;&lt;span&gt; (apply &lt;/span&gt;&lt;span&gt;customizations&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;only&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span&gt;Modify&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;BMAD&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;Installation&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div aria-live=&quot;polite&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Quick Update&lt;/strong&gt;：快速升级到最新版，保留现有配置。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Recompile Agents&lt;/strong&gt;：只重新编译智能体，适合自定义过 agent 的情况。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Modify BMAD Installation&lt;/strong&gt;：修改已安装的模块或工具。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;根据实际需求选择对应操作即可，整个过程无需手动删除旧文件，升级体验比早期版本顺畅很多。&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;常见坑一览表&quot;&gt;常见坑一览表&lt;/h2&gt;&lt;/div&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;坑&lt;/th&gt;&lt;th&gt;怎么避&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;在 home 目录安装&lt;/td&gt;&lt;td&gt;&lt;code dir=&quot;auto&quot;&gt;cd&lt;/code&gt; 到项目目录再装&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;没装推荐工具&lt;/td&gt;&lt;td&gt;星标的都勾上&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;开了 TTS&lt;/td&gt;&lt;td&gt;非单人工作就关掉&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;选了全局 Codex 提示词&lt;/td&gt;&lt;td&gt;选 Project-specific&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;用了个人名&lt;/td&gt;&lt;td&gt;团队项目用团队名&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;最后说一句&quot;&gt;最后说一句&lt;/h2&gt;&lt;/div&gt;
-&lt;p&gt;BMad v6.0.0-alpha.23 是一次大升级，架构、工作流、工具集成都变好了。知道这些坑之后，安装其实挺顺的。&lt;/p&gt;
-&lt;p&gt;遇到问题就去看看 &lt;a href=&quot;https://github.com/bmad-code-org/BMAD-METHOD/blob/main/CHANGELOG.md&quot;&gt;更新日志&lt;/a&gt;，或者在 GitHub 提 issue。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;你的安装体验怎么样？有其他技巧欢迎分享。&lt;/strong&gt;&lt;/p&gt;
-&lt;div&gt;&lt;h2 id=&quot;附录完整安装过程参考&quot;&gt;附录：完整安装过程参考&lt;/h2&gt;&lt;/div&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span&gt;██████╗&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;███╗&lt;/span&gt;&lt;span&gt;   &lt;/span&gt;&lt;span&gt;███╗&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;█████╗&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;██████╗&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;™&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span&gt;██╔══██╗████╗&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;████║██╔══██╗██╔══██╗&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span&gt;██████╔╝██╔████╔██║███████║██║&lt;/span&gt;&lt;span&gt;  &lt;/span&gt;&lt;span&gt;██║&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span&gt;██╔══██╗██║╚██╔╝██║██╔══██║██║&lt;/span&gt;&lt;span&gt;  &lt;/span&gt;&lt;span&gt;██║&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span&gt;██████╔╝██║&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;╚═╝&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;██║██║&lt;/span&gt;&lt;span&gt;  &lt;/span&gt;&lt;span&gt;██║██████╔╝&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span&gt;╚═════╝&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;╚═╝&lt;/span&gt;&lt;span&gt;     &lt;/span&gt;&lt;span&gt;╚═╝╚═╝&lt;/span&gt;&lt;span&gt;  &lt;/span&gt;&lt;span&gt;╚═╝╚═════╝&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span&gt;Build&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;More,&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;Architect&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;Dreams&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;v6.0.0-alpha.23&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;⭐&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;IMPORTANT:&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;Version&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;Alpha.23&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;Changes&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;If&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;your&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;current&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;version&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;is&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;older&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;than&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;Alpha.21,&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;you&lt;/span&gt;&lt;span&gt;&apos;&lt;/span&gt;&lt;span&gt;ll need a fresh install:&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span&gt;- Remove .bmad folder and reinstall&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span&gt;- Only needed during final push to beta (ETA January 18th)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;📚 New Docs Site: http://docs.bmad-method.org/&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span&gt;- Tons of guides and articles coming soon!&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span&gt;- Everything is free. No paywalls. No gated content.&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span&gt;- Knowledge should be shared, not sold.&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;📺 YouTube Master Class &amp;#x26; Podcast launching February 1st!&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;💡 Love BMad? Please star us on GitHub &amp;#x26; subscribe on YouTube!&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span&gt;- GitHub: https://github.com/bmad-code-org/BMAD-METHOD/&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span&gt;- YouTube: https://www.youtube.com/@BMadCode&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;Latest updates: https://github.com/bmad-code-org/BMAD-METHOD/blob/main/CHANGELOG.md&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;? Installation directory: /Volumes/vs-bmad/WorkSpaces/VibeSparking/vs-games/vs-games-stickman-bmadg&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;Resolved installation path: /Volumes/vs-bmad/WorkSpaces/VibeSparking/vs-games/vs-games-stickman-bmadg&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;Directory exists and is empty&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;? Install to this directory? Yes&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;? Select tools to configure: Claude Code ⭐, Codex ⭐, Cursor ⭐, GitHub Copilot ⭐, Google Antigravity ⭐, OpenCode ⭐, Windsurf ⭐, Atlassian Rovo Dev, Auggie&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt; &lt;/span&gt;&lt;/span&gt;&lt;span&gt;CLI, Cline, Crush, Gemini CLI, iFlow CLI, Kilo Code, Kiro CLI, Qwen Code, Roo Code, Trae&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;? Claude Code supports TTS (Text-to-Speech). Would you like to enable it? No&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;? Will you be installing any official BMad modules (BMad Method, BMad Builder, Creative Innovation Suite)? Yes&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;? Select modules to install: BMB: BMad Builder - Agent, Workflow and Module Builder, BMGD: BMad Game Development, BMM: BMad Method Agile-AI Driven-Development,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;CIS: Creative Innovation Suite&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;? Would you like to install a local custom module (this includes custom agents and workflows also)? No&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;? BMad™  Core Configuration&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;? What shall the agents call you (TIP: Use a team name if using with a group)? vs-bmad&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;? Preferred chat language/style? (English, Mandarin, English Pirate, etc...) English&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;? Preferred document output language? English&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;? Where should default output files be saved unless specified in other modules? _bmad-output&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;? BMad Optimized Builder (BoMB) Module Configuration&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;? Accept Defaults (no to customize)? Yes&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;? BMad Game Development Module&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;? Accept Defaults (no to customize)? Yes&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;? BMad Method™: Breakthrough Method of Agile-Ai Driven-Dev&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;? Accept Defaults (no to customize)? Yes&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;? Creative Innovation Suite (CIS) Module&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;? Accept Defaults (no to customize)? Yes&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span&gt;✓ No custom configuration required - uses Core settings only&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;Configuring claude-code...&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;Configuring codex...&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;? Where would you like to install Codex CLI prompts? Project-specific - Recommended for real work (requires CODEX_HOME=&amp;#x3C;project-dir&gt;/.codex)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;══════════════════════════════════════════════════════════════════════&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span&gt;Project-Specific Codex Configuration&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;══════════════════════════════════════════════════════════════════════&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span&gt;Prompts will be installed to: &amp;#x3C;project&gt;/.codex/prompts&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span&gt;⚠️  REQUIRED: You must set CODEX_HOME to use these prompts&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span&gt;Add this alias to your ~/.bashrc or ~/.zshrc:&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;    &lt;/span&gt;&lt;/span&gt;&lt;span&gt;alias codex=&lt;/span&gt;&lt;span&gt;&apos;&lt;/span&gt;&lt;span&gt;CODEX_HOME=&lt;/span&gt;&lt;span&gt;&quot;&lt;/span&gt;&lt;span&gt;$PWD&lt;/span&gt;&lt;span&gt;/.codex&lt;/span&gt;&lt;span&gt;&quot;&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;codex&lt;/span&gt;&lt;span&gt;&apos;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span&gt;After adding, run: source ~/.bashrc  (or source ~/.zshrc)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span&gt;(The $PWD uses your current working directory)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span&gt;This tells Codex CLI to use prompts from this project instead of ~/.codex&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;══════════════════════════════════════════════════════════════════════&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;? Proceed with this installation option? Yes&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;✔ Core installed&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;✔ Dependencies resolved&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;✔ Module installed: bmb&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;✔ Module installed: bmgd&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;✔ Module installed: bmm&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;✔ Module installed: cis&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;✔ Module configurations generated&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;✔ Manifests generated: 67 workflows, 25 agents, 4 tasks, 0 tools, 96 files&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;✔ Configured: claude-code, codex, cursor, github-copilot, antigravity, opencode, windsurf, rovo-dev, auggie, cline, crush, gemini, iflow, kilo, kiro-cli, qwen, roo, trae&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;✔ Module-specific installers completed&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;✨ BMAD is ready to use!&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;Installed to: /Volumes/vs-bmad/WorkSpaces/VibeSparking/vs-games/vs-games-stickman-bmadg/_bmad&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;Modules: bmb, bmgd, bmm, cis&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;Thank you for helping test the early release version of the new BMad Core and BMad Method!&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;Stable Beta coming soon - please read the full README.md and linked documentation to get started!&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;📋 Want to see what&lt;/span&gt;&lt;span&gt;&apos;&lt;/span&gt;&lt;span&gt;s&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;new?&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;Check&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;out&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;the&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;changelog:&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;https://github.com/bmad-code-org/BMAD-METHOD/blob/main/CHANGELOG.md&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;════════════════════════════════════════════════════════════════════════════════&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;✨&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;BMAD&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;IS&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;READY!&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;Beta&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;is&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;just&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;days&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;away!&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;Thank&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;you&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;for&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;your&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;support!&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;🌟&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;BMad&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;is&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;100%&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;free&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;and&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;open&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;source.&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span&gt;-&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;No&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;gated&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;Discord.&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;No&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;paywalls.&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span&gt;-&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;We&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;believe&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;in&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;empowering&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;everyone,&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;not&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;just&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;those&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;who&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;can&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;pay.&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;🙏&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;SUPPORT&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;BMAD&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;DEVELOPMENT:&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span&gt;-&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;Donate:&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;https://buymeacoffee.com/bmad&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span&gt;-&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;Corporate&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;Sponsorship&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;available&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;-&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;DM&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;on&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;Discord&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;🎤&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;SPEAKING&lt;/span&gt;&lt;span&gt; &amp;#x26; &lt;/span&gt;&lt;span&gt;MEDIA:&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span&gt;-&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;Available&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;for&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;conferences,&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;podcasts,&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;and&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;media&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;appearances&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span&gt;-&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;Topics:&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;AI-Native&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;Transformation,&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;Spec&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;and&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;Context&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;Engineering,&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;BMad&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;Method&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span&gt;-&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;For&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;speaking&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;inquiries&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;or&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;interviews,&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;reach&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;out&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;to&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;BMad&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;on&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;Discord!&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;📚&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;RESOURCES:&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span&gt;-&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;Docs:&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;http://docs.bmad-method.org/&lt;/span&gt;&lt;span&gt; (bookmark &lt;/span&gt;&lt;span&gt;it!&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span&gt;-&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;Changelog:&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;https://github.com/bmad-code-org/BMAD-METHOD/blob/main/CHANGELOG.md&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;⭐⭐⭐&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;HELP&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;US&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;GROW:&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span&gt;-&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;Star&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;us&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;on&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;GitHub:&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;https://github.com/bmad-code-org/BMAD-METHOD/&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span&gt;-&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;Subscribe&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;on&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;YouTube:&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;https://www.youtube.com/@BMadCode&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span&gt;-&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;Every&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;star&lt;/span&gt;&lt;span&gt; &amp;#x26; &lt;/span&gt;&lt;span&gt;sub&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;helps&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;us&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;reach&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;more&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;developers!&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;════════════════════════════════════════════════════════════════════════════════&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div aria-live=&quot;polite&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</content:encoded><category>BMad</category><category>AI开发</category><category>敏捷开发</category><category>安装教程</category></item></channel></rss>
+&lt;p&gt;&lt;em&gt;本游戏使用 BMad Method v6.0.0-alpha.23 和 Claude Opus 4.5 构建。从空目录到可玩游戏的总时间：约 10 分钟。&lt;/em&gt;&lt;/p&gt;</content:encoded><category>BMad</category><category>AI辅助开发</category><category>Phaser</category><category>游戏开发</category><category>工作流</category><category>快速开发</category></item></channel></rss>

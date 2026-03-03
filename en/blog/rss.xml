@@ -1,4 +1,137 @@
-<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Vibe Sparking AI | Blog</title><description/><link>https://www.vibesparking.com/</link><language>en</language><item><title>/simplify and /batch: Two Claude Code Commands You&apos;re Probably Not Using</title><link>https://www.vibesparking.com/en/blog/ai/claude-code/2026-03-02-claude-code-simplify-batch-commands-guide/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/claude-code/2026-03-02-claude-code-simplify-batch-commands-guide/</guid><pubDate>Mon, 02 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;div&gt;&lt;h1 id=&quot;simplify-and-batch-two-claude-code-commands-youre-probably-not-using&quot;&gt;/simplify and /batch: Two Claude Code Commands You’re Probably Not Using&lt;/h1&gt;&lt;/div&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Vibe Sparking AI | Blog</title><description/><link>https://www.vibesparking.com/</link><language>en</language><item><title>VSDD: When Your AI Writes Code, Who Checks Its Homework?</title><link>https://www.vibesparking.com/en/blog/ai/vibe-coding/2026-03-03-verified-spec-driven-development/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/vibe-coding/2026-03-03-verified-spec-driven-development/</guid><pubDate>Tue, 03 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;div&gt;&lt;h2 id=&quot;the-problem-nobody-talks-about&quot;&gt;The Problem Nobody Talks About&lt;/h2&gt;&lt;/div&gt;
+&lt;p&gt;Your AI coding assistant wrote a function. It generated tests. The tests pass. The code review looks clean.&lt;/p&gt;
+&lt;p&gt;Ship it?&lt;/p&gt;
+&lt;p&gt;Here’s what I keep seeing: six months later, a user hits an edge case that nobody — human or AI — anticipated. The function handled null inputs fine but choked on concurrent access. The tests covered the happy path and two sad paths but missed the degenerate case where the input was valid but pathologically large.&lt;/p&gt;
+&lt;p&gt;The AI didn’t write bad code. It wrote &lt;em&gt;almost&lt;/em&gt; correct code. And “almost correct” is harder to catch than “obviously wrong” because it passes every check designed to catch obvious problems.&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;what-everyone-assumed&quot;&gt;What Everyone Assumed&lt;/h2&gt;&lt;/div&gt;
+&lt;p&gt;The industry settled into a comfortable pattern with AI coding tools:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Describe what you want&lt;/li&gt;
+&lt;li&gt;AI writes code (and maybe tests)&lt;/li&gt;
+&lt;li&gt;You review it, tweak it, ship it&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Some teams added TDD discipline. Some added code review by a second AI or a human. But the fundamental assumption remained: if the code passes tests and looks reasonable to a reviewer, it’s good enough.&lt;/p&gt;
+&lt;p&gt;That assumption has a blind spot.&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;the-blind-spot-ai-politeness&quot;&gt;The Blind Spot: AI Politeness&lt;/h2&gt;&lt;/div&gt;
+&lt;p&gt;Standard LLM interactions are cooperative by design. The AI wants to help you. It wants to agree with you. When it reviews code — even its own code — it starts from a position of goodwill.&lt;/p&gt;
+&lt;p&gt;“Overall this looks good, but here are a few minor suggestions…”&lt;/p&gt;
+&lt;p&gt;That’s not a review. That’s a compliment with footnotes.&lt;/p&gt;
+&lt;p&gt;The AI accumulates context over a long conversation. It remembers that &lt;em&gt;it&lt;/em&gt; wrote the code. It remembers the design decisions you discussed together. It has, for lack of a better word, a relationship with the codebase. And relationships create blind spots.&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;verified-spec-driven-development&quot;&gt;Verified Spec-Driven Development&lt;/h2&gt;&lt;/div&gt;
+&lt;p&gt;VSDD comes from the open-source community — specifically from contributors dollspace-gay, gitcnd, and jtremback. It takes three methodologies that most teams treat as competing philosophies and stacks them as sequential gates in a single pipeline:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Spec-Driven Development (SDD):&lt;/strong&gt; Define the contract before writing a line of implementation. Not just what the code does, but what must be &lt;em&gt;provable&lt;/em&gt; about it.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Test-Driven Development (TDD):&lt;/strong&gt; Write tests before code. Red, green, refactor. No code exists without a failing test that demanded it.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Verification-Driven Development (VDD):&lt;/strong&gt; Subject all surviving code to adversarial refinement until a hyper-critical reviewer is forced to invent flaws because real ones no longer exist.&lt;/p&gt;
+&lt;p&gt;Three gates. Specs define &lt;em&gt;what&lt;/em&gt;. Tests enforce &lt;em&gt;how&lt;/em&gt;. Adversarial verification ensures &lt;em&gt;nothing was missed&lt;/em&gt;.&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;four-roles-one-pipeline&quot;&gt;Four Roles, One Pipeline&lt;/h2&gt;&lt;/div&gt;
+&lt;p&gt;VSDD assigns distinct roles:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The Architect (Human Developer)&lt;/strong&gt; — Strategic vision, domain expertise, and final authority. You sign off on specs, resolve disputes, and make judgment calls that AI can’t.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The Builder (Claude or similar)&lt;/strong&gt; — Writes specs, generates tests, implements code, and refactors. Operates under strict TDD constraints. No “let me just write the whole thing and add tests after.”&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The Tracker (Chainlink)&lt;/strong&gt; — Hierarchical issue decomposition. Every spec, test, and implementation maps to a tracked unit of work. Nothing slips through the cracks.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The Adversary (Sarcasmotron)&lt;/strong&gt; — A different AI model configured for zero tolerance. Reviews specs, tests, &lt;em&gt;and&lt;/em&gt; implementation. Fresh context on every pass. No relationship drift. No accumulated goodwill.&lt;/p&gt;
+&lt;p&gt;The Adversary is the key innovation. Using a different model family (say, Gemini when Claude is your Builder) introduces genuine cognitive diversity. The Adversary doesn’t care about your feelings — it cares about your invariants.&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;the-six-phases&quot;&gt;The Six Phases&lt;/h2&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3 id=&quot;phase-1-spec-everything&quot;&gt;Phase 1: Spec Everything&lt;/h3&gt;&lt;/div&gt;
+&lt;p&gt;Before any code, the Builder produces a behavioral specification &lt;em&gt;and&lt;/em&gt; a verification architecture:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Behavioral contracts: preconditions, postconditions, invariants&lt;/li&gt;
+&lt;li&gt;Edge case catalog: null, empty, max size, negative, unicode, concurrent&lt;/li&gt;
+&lt;li&gt;A “purity boundary map” separating the deterministic core from the effectful shell (I/O, database, network)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;That last point matters most. If your system has side effects woven through core logic, no amount of testing will make it formally verifiable. A function that reads from a database, calculates, and writes to a log in one block cannot be formally verified. But a function that takes data in and returns a result — that’s a function a model checker can reason about.&lt;/p&gt;
+&lt;p&gt;This boundary must be drawn at the spec level because it shapes everything downstream.&lt;/p&gt;
+&lt;p&gt;The Adversary reviews the spec before any tests are written. It looks for ambiguous language, missing edge cases, implicit assumptions, and contradictions.&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;phase-2-red-green-refactor&quot;&gt;Phase 2: Red, Green, Refactor&lt;/h3&gt;&lt;/div&gt;
+&lt;p&gt;With an airtight spec, the Builder writes tests — only tests, no implementation yet. Every postcondition becomes an assertion. Every edge case becomes a test.&lt;/p&gt;
+&lt;p&gt;All tests must fail before implementation begins. If a test passes without implementation, something is wrong.&lt;/p&gt;
+&lt;p&gt;Then: pick the next failing test, write the minimum code to pass it, run the full suite, repeat. Classic TDD, enforced by AI.&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;phase-3-the-gauntlet&quot;&gt;Phase 3: The Gauntlet&lt;/h3&gt;&lt;/div&gt;
+&lt;p&gt;The verified, test-passing codebase goes to the Adversary in a &lt;em&gt;fresh context window&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;The Adversary checks:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Does the implementation actually satisfy the spec, or did the tests encode a misunderstanding?&lt;/li&gt;
+&lt;li&gt;Are there tautological tests that would pass even if the implementation were subtly wrong?&lt;/li&gt;
+&lt;li&gt;Hidden coupling, race conditions, missing resource cleanup&lt;/li&gt;
+&lt;li&gt;Input validation gaps, injection vectors&lt;/li&gt;
+&lt;li&gt;Behavior that exists in code but isn’t covered by the spec&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;No “overall this looks good” preamble. Every piece of feedback is a concrete flaw with a specific location.&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;phase-4-feedback-loop&quot;&gt;Phase 4: Feedback Loop&lt;/h3&gt;&lt;/div&gt;
+&lt;p&gt;The Adversary’s critique feeds back through the entire pipeline:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Spec-level flaws → update spec, re-review&lt;/li&gt;
+&lt;li&gt;Test-level flaws → fix tests, verify they fail, fix implementation&lt;/li&gt;
+&lt;li&gt;New edge cases → add to spec, write failing tests, implement&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This loop continues until convergence.&lt;/p&gt;
+&lt;div&gt;&lt;h3 id=&quot;phase-5-formal-verification&quot;&gt;Phase 5: Formal Verification&lt;/h3&gt;&lt;/div&gt;
+&lt;p&gt;Because the architecture was designed for verifiability from Phase 1:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Formal proof execution (Kani, Dafny, TLA+)&lt;/li&gt;
+&lt;li&gt;Structured fuzzing (AFL++, cargo-fuzz)&lt;/li&gt;
+&lt;li&gt;Mutation testing (mutmut, Stryker)&lt;/li&gt;
+&lt;li&gt;Purity boundary audit&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;h3 id=&quot;phase-6-convergence&quot;&gt;Phase 6: Convergence&lt;/h3&gt;&lt;/div&gt;
+&lt;p&gt;The system is done when four dimensions converge:&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Dimension&lt;/th&gt;&lt;th&gt;Signal&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;Spec&lt;/td&gt;&lt;td&gt;Adversary’s critiques are nitpicks about wording, not missing behavior&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Tests&lt;/td&gt;&lt;td&gt;Adversary can’t identify a meaningful untested scenario&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Implementation&lt;/td&gt;&lt;td&gt;Adversary is forced to invent problems that don’t exist&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Verification&lt;/td&gt;&lt;td&gt;All formal proofs pass, fuzzers find nothing&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;p&gt;This is called “hallucination-based termination” — the adversary must &lt;em&gt;hallucinate&lt;/em&gt; flaws because real ones no longer exist. The software is considered “Zero-Slop.”&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;why-this-matters-for-ai-assisted-development&quot;&gt;Why This Matters for AI-Assisted Development&lt;/h2&gt;&lt;/div&gt;
+&lt;p&gt;The key insight: AI politeness is a systematic risk. Using cooperative AI to review cooperative AI’s output is like asking your friend to grade your homework — they’ll find some mistakes, but they’ll miss the ones that require adversarial thinking.&lt;/p&gt;
+&lt;p&gt;VSDD uses AI &lt;em&gt;against&lt;/em&gt; AI. Different model, fresh context, zero tolerance. That’s not just a code review — that’s a stress test.&lt;/p&gt;
+&lt;p&gt;And the human developer isn’t diminished by this process. You’re elevated. You’re the Architect — the strategic layer that approves specs, resolves disputes, and makes the judgment calls that no amount of AI can replace.&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;when-to-use-it-and-when-not-to&quot;&gt;When to Use It (and When Not To)&lt;/h2&gt;&lt;/div&gt;
+&lt;p&gt;VSDD is high-ceremony by design. Worth the overhead when:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Correctness is non-negotiable (financial systems, medical software, infrastructure)&lt;/li&gt;
+&lt;li&gt;The codebase will be maintained long-term&lt;/li&gt;
+&lt;li&gt;Security is a primary concern&lt;/li&gt;
+&lt;li&gt;Multiple AI models are available&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For rapid prototyping or throwaway scripts, use the parts that make sense. Even adding just Phase 3 — an adversarial review pass with a different AI model — catches a surprising amount of hidden debt.&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;getting-started&quot;&gt;Getting Started&lt;/h2&gt;&lt;/div&gt;
+&lt;p&gt;You don’t need to adopt all six phases tomorrow. Start with one:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Add an adversarial pass.&lt;/strong&gt; After your next feature is “done,” open a fresh conversation with a different AI model. Give it zero-tolerance instructions. Paste in your spec, tests, and implementation. See what it finds.&lt;/p&gt;
+&lt;p&gt;Most developers who try this are uncomfortable with how much the adversary catches. That discomfort is the point. It means your current process has gaps, and now you know where they are.&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;full-traceability&quot;&gt;Full Traceability&lt;/h2&gt;&lt;/div&gt;
+&lt;p&gt;One of VSDD’s strongest properties: every artifact links back.&lt;/p&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;Spec → Verification Property → Tracked Issue → Test Case → Implementation → Adversarial Review → Formal Proof&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div aria-live=&quot;polite&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;p&gt;Ask “Why does this line of code exist?” and you can trace it back to a specific spec requirement. Ask “Why is this module a pure function?” and the answer traces to the Purity Boundary Map in Phase 1.&lt;/p&gt;
+&lt;p&gt;No line of code exists without a reason. No reason exists without evidence. That’s Zero-Slop.&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://gist.github.com/dollspace-gay/d8d3bc3ecf4188df049d7a4726bb2a00&quot;&gt;Verified Spec-Driven Development (Original Gist)&lt;/a&gt; — dollspace-gay, gitcnd, jtremback&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/model-checking/kani&quot;&gt;Kani — Rust Model Checker&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dafny-lang/dafny&quot;&gt;Dafny — Verification-Aware Programming Language&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://lamport.azurewebsites.net/tla/tla.html&quot;&gt;TLA+ — Formal Specification Language&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://aflplus.plus/&quot;&gt;AFL++ — Fuzzing Framework&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://stryker-mutator.io/&quot;&gt;Stryker — Mutation Testing&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded><category>VSDD</category><category>TDD</category><category>AI Development</category><category>Code Quality</category><category>Software Methodology</category><category>Adversarial Review</category></item><item><title>/simplify and /batch: Two Claude Code Commands You&apos;re Probably Not Using</title><link>https://www.vibesparking.com/en/blog/ai/claude-code/2026-03-02-claude-code-simplify-batch-commands-guide/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/claude-code/2026-03-02-claude-code-simplify-batch-commands-guide/</guid><pubDate>Mon, 02 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;div&gt;&lt;h1 id=&quot;simplify-and-batch-two-claude-code-commands-youre-probably-not-using&quot;&gt;/simplify and /batch: Two Claude Code Commands You’re Probably Not Using&lt;/h1&gt;&lt;/div&gt;
 &lt;p&gt;&lt;starlight-image-zoom-zoomable&gt;&lt;img src=&quot;https://www.vibesparking.com/assets/ai/anthropic/claude-code/simplify-batch.png&quot; alt=&quot;Claude Code Commands&quot;&gt;&lt;button aria-label=&quot;Zoom image: Claude Code Commands&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; fill=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;use href=&quot;#starlight-image-zoom-icon-zoom&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/button&gt;&lt;/starlight-image-zoom-zoomable&gt;&lt;/p&gt;
 &lt;p&gt;You just finished a feature. Forty-seven files touched, tests pass, CI is green. You open a PR and your teammate leaves 23 comments — duplicated logic in three places, a helper function that already exists in utils, and an N+1 query hiding inside a loop.&lt;/p&gt;
 &lt;p&gt;Claude Code ships with two commands that prevent this. Most people don’t know they exist.&lt;/p&gt;
@@ -3391,212 +3524,4 @@ source ~/.bashrc  # or source ~/.zshrc
 
 3. If you&apos;re trying BMad Method: don&apos;t install in your home directory, choose project-specific Codex prompts, and skip TTS unless you&apos;re working alone. Details inside.
 
---&gt;&lt;/body&gt;&lt;/html&gt;</content:encoded><category>BMad</category><category>AI Development</category><category>Agile</category><category>Installation Guide</category></item><item><title>BMad Quick Dev Workflow: Building a Game in 2.5 Hours</title><link>https://www.vibesparking.com/en/blog/ai/2026-01-25-bmad-quick-dev-workflow/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/2026-01-25-bmad-quick-dev-workflow/</guid><pubDate>Sun, 25 Jan 2026 00:00:00 GMT</pubDate><content:encoded>&lt;div&gt;&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;&lt;/div&gt;
-&lt;p&gt;Last week, I decided to test the BMad Method’s Quick Dev workflow by building something from scratch: a stickman fighting game using Phaser 3. The goal was simple—see how much AI could autonomously handle, and where human intervention was actually needed.&lt;/p&gt;
-&lt;p&gt;Two and a half hours later, I had a complete playable game with:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Procedurally rendered stickman characters (no sprite assets needed)&lt;/li&gt;
-&lt;li&gt;Player controls (A/D move, W jump, J punch, K kick)&lt;/li&gt;
-&lt;li&gt;An AI opponent with approach/attack/retreat behavior&lt;/li&gt;
-&lt;li&gt;Health bars, hit detection, and knockback physics&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Here’s how it went, step by step.&lt;/p&gt;
-&lt;div&gt;&lt;h2 id=&quot;what-is-quick-dev&quot;&gt;What is Quick Dev?&lt;/h2&gt;&lt;/div&gt;
-&lt;p&gt;Quick Dev is BMad’s streamlined workflow for focused implementation tasks. It’s designed for situations where you either:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Have a tech-spec ready to execute, or&lt;/li&gt;
-&lt;li&gt;Know exactly what you want to build and want to dive straight in&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;The workflow uses a “step-file architecture”—each phase loads fresh to combat the “lost in the middle” problem that plagues long AI sessions. State persists through variables rather than context, allowing for marathon coding sessions without degradation.&lt;/p&gt;
-&lt;div&gt;&lt;h2 id=&quot;the-6-step-process&quot;&gt;The 6-Step Process&lt;/h2&gt;&lt;/div&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;┌─────────────────────────────────────────────────────────────────┐&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;│                    QUICK DEV WORKFLOW                          │&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;├─────────────────────────────────────────────────────────────────┤&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;│                                                                  │&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;│  Step 1: Mode Detection     → Determine execution approach     │&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;│  Step 2: Context Gathering  → Analyze requirements             │&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;│  Step 3: Execute            → Build continuously               │&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;│  Step 4: Self-Check         → Verify implementation             │&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;│  Step 5: Adversarial Review → Find problems                     │&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;│  Step 6: Resolve Findings   → Fix issues                        │&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;│                                                                  │&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;└─────────────────────────────────────────────────────────────────┘&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div aria-live=&quot;polite&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h2 id=&quot;step-1-mode-detection&quot;&gt;Step 1: Mode Detection&lt;/h2&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;What happens:&lt;/strong&gt; The workflow captures a baseline commit (for diff tracking), loads project context if available, and determines whether you’re working from a tech-spec or direct instructions.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Human intervention required:&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;When I ran &lt;code dir=&quot;auto&quot;&gt;/bmad:bmm:workflows:quick-dev&lt;/code&gt; with the prompt “build a stickman fighting game in Phaser 3,” the workflow analyzed the scope and presented three options:&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;This looks like a focused feature with multiple components.&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;[t] Create tech-spec first (recommended)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;[w] Seems bigger than quick-dev - see what BMad Method recommends&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;[e] Execute directly&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div aria-live=&quot;polite&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;My choice:&lt;/strong&gt; I selected &lt;code dir=&quot;auto&quot;&gt;[e]&lt;/code&gt; - Execute directly. I wanted to see how far AI could go without formal planning.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Why this matters:&lt;/strong&gt; This checkpoint prevents AI from committing to approaches that might be wrong. For larger projects (platforms, multi-system work), the workflow would have escalated me to full BMad Method planning.&lt;/p&gt;
-&lt;div&gt;&lt;h2 id=&quot;step-2-context-gathering&quot;&gt;Step 2: Context Gathering&lt;/h2&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;What happens:&lt;/strong&gt; The workflow analyzes the request to identify:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Files to modify (or create, for new projects)&lt;/li&gt;
-&lt;li&gt;Relevant patterns (from existing code or frameworks)&lt;/li&gt;
-&lt;li&gt;Dependencies (external libraries, internal modules)&lt;/li&gt;
-&lt;li&gt;A mental plan with tasks and acceptance criteria&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;What was presented:&lt;/strong&gt;&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;Scope: Brand new Phaser 3 project (browser-based, PC)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;       &lt;/span&gt;&lt;/span&gt;&lt;span&gt;Stickman fighting game: Player vs AI&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;Game Systems Affected:&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;- Input system (keyboard controls)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;- Physics/collision (hitboxes, ground)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;- Animation (stickman limb movement)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;- Combat (attacks, damage, health)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;Plan:&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;1. Set up Vite + TypeScript + Phaser 3 project&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;2. Create game scene and canvas&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;3. Implement Stickman class with procedural rendering&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;4. Add player input controls&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;5. Implement AI opponent with state machine&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;6. Add combat system (hit detection, health, knockback)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;Ready to execute? (y/n/adjust)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div aria-live=&quot;polite&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;Human intervention required:&lt;/strong&gt; Confirmation to proceed. I could have adjusted the plan, but it looked solid.&lt;/p&gt;
-&lt;div&gt;&lt;h2 id=&quot;step-3-execute&quot;&gt;Step 3: Execute&lt;/h2&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;What happens:&lt;/strong&gt; This is where the magic happens. The workflow implements tasks &lt;em&gt;continuously&lt;/em&gt;—stopping only for blocking issues, not for approval between tasks.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Key principle:&lt;/strong&gt; Do NOT halt for milestones. Execute all tasks in sequence.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;What I watched happen:&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;The AI created a complete project structure:&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;vs-games-stickman-bmadg-cc/&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;├── package.json&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;├── tsconfig.json&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;├── vite.config.ts&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;├── index.html&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;└── src/&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;    &lt;/span&gt;&lt;/span&gt;&lt;span&gt;├── main.ts&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;    &lt;/span&gt;&lt;/span&gt;&lt;span&gt;├── Game.ts&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;    &lt;/span&gt;&lt;/span&gt;&lt;span&gt;├── Stickman.ts&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;    &lt;/span&gt;&lt;/span&gt;&lt;span&gt;└── types.ts&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div aria-live=&quot;polite&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;p&gt;Then it built each component:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Project scaffolding&lt;/strong&gt; - Vite + TypeScript + Phaser 3.80.1&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Stickman class&lt;/strong&gt; - Procedural rendering using Phaser Graphics API. Each body part (head, torso, arms, legs) drawn as lines with joints&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Animation system&lt;/strong&gt; - Pose-based animation with smooth transitions between idle, walk, jump, punch, kick states&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Combat system&lt;/strong&gt; - Hitbox detection, damage calculation, knockback physics&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;AI opponent&lt;/strong&gt; - Simple state machine: approach when far, attack when close, retreat when health low&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;strong&gt;Human intervention required:&lt;/strong&gt; None during execution. The workflow found a minor issue with jump animation (leg movement too subtle) and fixed it autonomously.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Total tokens used:&lt;/strong&gt; ~155,000
-&lt;strong&gt;Time:&lt;/strong&gt; About 90 minutes of continuous work&lt;/p&gt;
-&lt;div&gt;&lt;h2 id=&quot;step-4-self-check&quot;&gt;Step 4: Self-Check&lt;/h2&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;What happens:&lt;/strong&gt; Before presenting results, the workflow self-audits:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Are all tasks complete?&lt;/li&gt;
-&lt;li&gt;Do tests pass?&lt;/li&gt;
-&lt;li&gt;Are acceptance criteria satisfied?&lt;/li&gt;
-&lt;li&gt;Were existing patterns followed?&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;What was presented:&lt;/strong&gt;&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;Implementation Complete!&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;Summary: A complete Phaser 3 stickman fighting game&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;Files Modified: 7 files created&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;Tests: Build successful&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;AC Status: All satisfied&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;Proceeding to adversarial code review...&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div aria-live=&quot;polite&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;Human intervention required:&lt;/strong&gt; None—this is automatic. But if anything had failed, the workflow would have halted.&lt;/p&gt;
-&lt;div&gt;&lt;h2 id=&quot;step-5-adversarial-review&quot;&gt;Step 5: Adversarial Review&lt;/h2&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;What happens:&lt;/strong&gt; The workflow constructs a diff of all changes and invokes an adversarial code reviewer—a separate agent that has &lt;em&gt;only&lt;/em&gt; the diff, no context. This information asymmetry forces the reviewer to find real problems, not excuse things based on “what the AI was thinking.”&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;The process:&lt;/strong&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Git diff from baseline commit&lt;/li&gt;
-&lt;li&gt;New untracked files included&lt;/li&gt;
-&lt;li&gt;Separate subagent reviews &lt;em&gt;only&lt;/em&gt; the diff&lt;/li&gt;
-&lt;li&gt;Findings categorized by severity and validity&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;strong&gt;What was found:&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;The adversarial reviewer found &lt;strong&gt;3 findings&lt;/strong&gt;:&lt;/p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;ID&lt;/th&gt;&lt;th&gt;Severity&lt;/th&gt;&lt;th&gt;Validity&lt;/th&gt;&lt;th&gt;Description&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;F1&lt;/td&gt;&lt;td&gt;Low&lt;/td&gt;&lt;td&gt;Real&lt;/td&gt;&lt;td&gt;Jump pose hip offset hardcoded to 2, should use direction&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;F2&lt;/td&gt;&lt;td&gt;Low&lt;/td&gt;&lt;td&gt;Real&lt;/td&gt;&lt;td&gt;Body lean during jump too subtle (0.05), hard to notice&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;F3&lt;/td&gt;&lt;td&gt;Trivial&lt;/td&gt;&lt;td&gt;Noise&lt;/td&gt;&lt;td&gt;Comment style inconsistency&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
-&lt;p&gt;&lt;strong&gt;Human intervention required:&lt;/strong&gt; None yet—findings are presented for resolution in next step.&lt;/p&gt;
-&lt;div&gt;&lt;h2 id=&quot;step-6-resolve-findings&quot;&gt;Step 6: Resolve Findings&lt;/h2&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;What happens:&lt;/strong&gt; You choose how to handle the findings:&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;How would you like to handle these findings?&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;[1] Walk through - Discuss each finding individually&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;[2] Auto-fix - Automatically fix issues classified as &quot;real&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;[3] Skip - Acknowledge and proceed to commit&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div aria-live=&quot;polite&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;Human intervention required:&lt;/strong&gt; Decision on resolution approach.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;My choice:&lt;/strong&gt; &lt;code dir=&quot;auto&quot;&gt;[2]&lt;/code&gt; - Auto-fix. The findings were minor and the AI understood what needed fixing.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;What was fixed:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;F1: Changed &lt;code dir=&quot;auto&quot;&gt;hipOffsetX: dir * 2&lt;/code&gt; to include both direction and air phase&lt;/li&gt;
-&lt;li&gt;F2: Increased body lean from &lt;code dir=&quot;auto&quot;&gt;0.05&lt;/code&gt; to &lt;code dir=&quot;auto&quot;&gt;0.1&lt;/code&gt; + air phase adjustment&lt;/li&gt;
-&lt;li&gt;F3: Skipped (noise)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Final result:&lt;/strong&gt;&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;Review complete. Ready to commit.&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;Implementation Summary:&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;- Phaser 3 stickman fighting game&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;- 7 files created&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;- Build successful&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;- Review findings: 2 addressed, 1 skipped&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div aria-live=&quot;polite&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h2 id=&quot;the-game-that-was-built&quot;&gt;The Game That Was Built&lt;/h2&gt;&lt;/div&gt;
-&lt;p&gt;Here’s what 2.5 hours produced:&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;// Procedural stickman rendering - no sprites needed&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;class&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;Stickman&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;extends&lt;/span&gt;&lt;span&gt; Phaser&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;GameObjects&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;Container&lt;/span&gt;&lt;span&gt; {&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span&gt;private&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;render&lt;/span&gt;&lt;span&gt;()&lt;/span&gt;&lt;span&gt; {&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span&gt;const&lt;/span&gt;&lt;span&gt; { &lt;/span&gt;&lt;span&gt;head&lt;/span&gt;&lt;span&gt;, &lt;/span&gt;&lt;span&gt;torso&lt;/span&gt;&lt;span&gt;, &lt;/span&gt;&lt;span&gt;leftUpperArm&lt;/span&gt;&lt;span&gt;, &lt;/span&gt;&lt;span&gt;rightUpperArm&lt;/span&gt;&lt;span&gt;, &lt;/span&gt;&lt;span&gt;leftForearm&lt;/span&gt;&lt;span&gt;,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;            &lt;/span&gt;&lt;span&gt;rightForearm&lt;/span&gt;&lt;span&gt;, &lt;/span&gt;&lt;span&gt;leftThigh&lt;/span&gt;&lt;span&gt;, &lt;/span&gt;&lt;span&gt;rightThigh&lt;/span&gt;&lt;span&gt;, &lt;/span&gt;&lt;span&gt;leftShin&lt;/span&gt;&lt;span&gt;, &lt;/span&gt;&lt;span&gt;rightShin&lt;/span&gt;&lt;span&gt; } = &lt;/span&gt;&lt;span&gt;this&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;getPose&lt;/span&gt;&lt;span&gt;();&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span&gt;// Draw each body part as a line with joints&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span&gt;this&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;drawLine&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span&gt;this&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;torsoStart&lt;/span&gt;&lt;span&gt;, &lt;/span&gt;&lt;span&gt;this&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;torsoEnd&lt;/span&gt;&lt;span&gt;, &lt;/span&gt;&lt;span&gt;BODY_WIDTH&lt;/span&gt;&lt;span&gt;);&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span&gt;this&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;drawLimb&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span&gt;/* ... */&lt;/span&gt;&lt;span&gt;);&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span&gt;// ...&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span&gt;}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span&gt;private&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;getPose&lt;/span&gt;&lt;span&gt;()&lt;/span&gt;&lt;span&gt;:&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;Pose&lt;/span&gt;&lt;span&gt; {&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span&gt;// Returns joint angles based on current state&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span&gt;switch&lt;/span&gt;&lt;span&gt; (&lt;/span&gt;&lt;span&gt;this&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;state&lt;/span&gt;&lt;span&gt;) {&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;      &lt;/span&gt;&lt;span&gt;case&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;&apos;&lt;/span&gt;&lt;span&gt;idle&lt;/span&gt;&lt;span&gt;&apos;&lt;/span&gt;&lt;span&gt;: &lt;/span&gt;&lt;span&gt;return&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;this&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;getIdlePose&lt;/span&gt;&lt;span&gt;();&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;      &lt;/span&gt;&lt;span&gt;case&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;&apos;&lt;/span&gt;&lt;span&gt;walk&lt;/span&gt;&lt;span&gt;&apos;&lt;/span&gt;&lt;span&gt;: &lt;/span&gt;&lt;span&gt;return&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;this&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;getWalkPose&lt;/span&gt;&lt;span&gt;();&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;      &lt;/span&gt;&lt;span&gt;case&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;&apos;&lt;/span&gt;&lt;span&gt;jump&lt;/span&gt;&lt;span&gt;&apos;&lt;/span&gt;&lt;span&gt;: &lt;/span&gt;&lt;span&gt;return&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;this&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;getJumpPose&lt;/span&gt;&lt;span&gt;();&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;      &lt;/span&gt;&lt;span&gt;case&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;&apos;&lt;/span&gt;&lt;span&gt;punch&lt;/span&gt;&lt;span&gt;&apos;&lt;/span&gt;&lt;span&gt;: &lt;/span&gt;&lt;span&gt;return&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;this&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;getPunchPose&lt;/span&gt;&lt;span&gt;();&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;      &lt;/span&gt;&lt;span&gt;// ...&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;    &lt;/span&gt;&lt;/span&gt;&lt;span&gt;}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span&gt;}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div aria-live=&quot;polite&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;p&gt;The complete game is about 600 lines of TypeScript, with:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Smooth pose-based animation&lt;/li&gt;
-&lt;li&gt;Responsive keyboard controls&lt;/li&gt;
-&lt;li&gt;Basic AI that actually fights back&lt;/li&gt;
-&lt;li&gt;Health UI and game-over state&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h2 id=&quot;what-ai-did-autonomously&quot;&gt;What AI Did Autonomously&lt;/h2&gt;&lt;/div&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Phase&lt;/th&gt;&lt;th&gt;Tasks&lt;/th&gt;&lt;th&gt;Human Input&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;Setup&lt;/td&gt;&lt;td&gt;Project initialization, dependency installation&lt;/td&gt;&lt;td&gt;1 choice (execute mode)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Analysis&lt;/td&gt;&lt;td&gt;Scope breakdown, task planning&lt;/td&gt;&lt;td&gt;1 confirmation&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Implementation&lt;/td&gt;&lt;td&gt;600+ lines of code, all files&lt;/td&gt;&lt;td&gt;0 interventions&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Testing&lt;/td&gt;&lt;td&gt;Build verification, runtime testing&lt;/td&gt;&lt;td&gt;0 interventions&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Review&lt;/td&gt;&lt;td&gt;Adversarial analysis, 3 findings found&lt;/td&gt;&lt;td&gt;0 interventions&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Fixes&lt;/td&gt;&lt;td&gt;Applied 2 fixes automatically&lt;/td&gt;&lt;td&gt;1 choice (auto-fix)&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
-&lt;div&gt;&lt;h2 id=&quot;where-humans-are-still-needed&quot;&gt;Where Humans Are Still Needed&lt;/h2&gt;&lt;/div&gt;
-&lt;p&gt;After this experiment, here’s where human input proved essential:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Initial direction&lt;/strong&gt; - The workflow can’t decide &lt;em&gt;what&lt;/em&gt; to build&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Mode selection&lt;/strong&gt; - Understanding whether formal planning is needed&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Complex decisions&lt;/strong&gt; - Major architectural choices still benefit from human judgment&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Creative direction&lt;/strong&gt; - Art style, game feel, these are human domains&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div&gt;&lt;h2 id=&quot;key-takeaways&quot;&gt;Key Takeaways&lt;/h2&gt;&lt;/div&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Step-file architecture works&lt;/strong&gt; - 2.5 hours of continuous execution without context degradation&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Adversarial review finds real issues&lt;/strong&gt; - The separate reviewer caught subtle bugs the main agent missed&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;YOLO mode is viable for focused work&lt;/strong&gt; - With proper guardrails, AI can execute autonomously&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Human attention is precious&lt;/strong&gt; - The workflow preserves it for decision points, not implementation&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div&gt;&lt;h2 id=&quot;would-i-use-this-again&quot;&gt;Would I Use This Again?&lt;/h2&gt;&lt;/div&gt;
-&lt;p&gt;Absolutely. For focused implementation tasks—features, refactorings, bug fixes—Quick Dev is significantly faster than traditional coding. The adversarial review catches issues I would have missed, and the step-file architecture enables marathon sessions.&lt;/p&gt;
-&lt;p&gt;Would I use it for a platform rewrite? No—that’s what the full BMad Method is for. But for a game, a feature, a service? Quick Dev delivers.&lt;/p&gt;
-&lt;div&gt;&lt;h2 id=&quot;resources&quot;&gt;Resources&lt;/h2&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;BMad Method Documentation: &lt;a href=&quot;https://docs.bmad-method.org/&quot;&gt;https://docs.bmad-method.org/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;BMad GitHub: &lt;a href=&quot;https://github.com/bmad-code-org/BMAD-METHOD&quot;&gt;https://github.com/bmad-code-org/BMAD-METHOD&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Phaser 3: &lt;a href=&quot;https://phaser.io/&quot;&gt;https://phaser.io/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Terminal log of this session: &lt;code dir=&quot;auto&quot;&gt;.terminal-logs/terminal_20260124_210313_1769259793512.log&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;em&gt;This game was built using BMad Method v6.0.0-alpha.23 with Claude Opus 4.5. Total time from blank directory to playable game: approximately 2.5 hours.&lt;/em&gt;&lt;/p&gt;</content:encoded><category>BMad</category><category>AI-Assisted-Development</category><category>Phaser</category><category>Game-Development</category><category>Workflow</category><category>Quick-Dev</category></item></channel></rss>
+--&gt;&lt;/body&gt;&lt;/html&gt;</content:encoded><category>BMad</category><category>AI Development</category><category>Agile</category><category>Installation Guide</category></item></channel></rss>
