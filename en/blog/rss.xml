@@ -1,4 +1,103 @@
-<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Vibe Sparking AI | Blog</title><description/><link>https://www.vibesparking.com/</link><language>en</language><item><title>Harness Engineering: Your Job Isn&apos;t Writing Code Anymore</title><link>https://www.vibesparking.com/en/blog/ai/context-engineering/2026-03-06-harness-engineering-agents-first-world/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/context-engineering/2026-03-06-harness-engineering-agents-first-world/</guid><pubDate>Fri, 06 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;div&gt;&lt;h1 id=&quot;harness-engineering-your-job-isnt-writing-code-anymore&quot;&gt;Harness Engineering: Your Job Isn’t Writing Code Anymore&lt;/h1&gt;&lt;/div&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Vibe Sparking AI | Blog</title><description/><link>https://www.vibesparking.com/</link><language>en</language><item><title>Claude Code 2.1.70: The Most Boring Changelog Is the Most Bullish Signal</title><link>https://www.vibesparking.com/en/blog/ai/claude-code/changelog/2026-03-06-claude-code-2170-boring-changelog-bullish-signal/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/claude-code/changelog/2026-03-06-claude-code-2170-boring-changelog-bullish-signal/</guid><pubDate>Fri, 06 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;div&gt;&lt;h1 id=&quot;claude-code-2170-the-most-boring-changelog-is-the-most-bullish-signal&quot;&gt;Claude Code 2.1.70: The Most Boring Changelog Is the Most Bullish Signal&lt;/h1&gt;&lt;/div&gt;
+&lt;p&gt;Claude Code 2.1.70 shipped with zero new headline features. Over 20 bug fixes, a handful of performance improvements, and some VS Code polish. On paper, the least exciting release in months. In practice, maybe the most important one.&lt;/p&gt;
+&lt;p&gt;&lt;starlight-image-zoom-zoomable&gt;&lt;img src=&quot;https://www.vibesparking.com/assets/ai/anthropic/claude-code/intro.png&quot; alt=&quot;&quot;&gt;&lt;button aria-label=&quot;Zoom image&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; fill=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;use href=&quot;#starlight-image-zoom-icon-zoom&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/button&gt;&lt;/starlight-image-zoom-zoomable&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;what-everyone-assumed&quot;&gt;What everyone assumed&lt;/h2&gt;&lt;/div&gt;
+&lt;p&gt;The AI coding tool space has a pattern. New release drops, Twitter lights up, everyone debates whether the demo is real or cherry-picked. We’ve been trained to expect fireworks from every changelog. A new model, a bigger context window, a feature that “changes everything.”&lt;/p&gt;
+&lt;p&gt;2.1.70 breaks that pattern.&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;what-the-changelog-actually-says&quot;&gt;What the changelog actually says&lt;/h2&gt;&lt;/div&gt;
+&lt;p&gt;The changelog reads like a bug tracker, not a press release.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;API and proxy compatibility:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Fixed API 400 errors when using &lt;code dir=&quot;auto&quot;&gt;ANTHROPIC_BASE_URL&lt;/code&gt; with third-party gateways — tool search now correctly detects proxy endpoints and disables &lt;code dir=&quot;auto&quot;&gt;tool_reference&lt;/code&gt; blocks&lt;/li&gt;
+&lt;li&gt;Fixed the &lt;code dir=&quot;auto&quot;&gt;effort&lt;/code&gt; parameter crashing on custom Bedrock inference profiles or model identifiers that don’t match standard Claude naming patterns&lt;/li&gt;
+&lt;li&gt;Fixed empty model responses right after ToolSearch — the server was rendering tool schemas with system-prompt-style tags at the prompt tail, confusing models into stopping early&lt;/li&gt;
+&lt;li&gt;Fixed prompt-cache bust when an MCP server with instructions connects after the first turn&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Cross-platform fixes:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Fixed clipboard corrupting non-ASCII text (CJK, emoji) on Windows/WSL by switching to PowerShell’s &lt;code dir=&quot;auto&quot;&gt;Set-Clipboard&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Fixed Enter inserting a newline instead of submitting when typing over a slow SSH connection&lt;/li&gt;
+&lt;li&gt;Fixed extra VS Code windows opening at startup on Windows from the integrated terminal&lt;/li&gt;
+&lt;li&gt;Fixed voice mode failing on Windows native binary with “native audio module could not be loaded”&lt;/li&gt;
+&lt;li&gt;Fixed push-to-talk not activating on session start when &lt;code dir=&quot;auto&quot;&gt;voiceEnabled: true&lt;/code&gt; was set&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;UI and developer ergonomics:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Fixed markdown links containing &lt;code dir=&quot;auto&quot;&gt;#NNN&lt;/code&gt; references pointing to the current repository instead of the linked URL&lt;/li&gt;
+&lt;li&gt;Fixed repeated “Model updated to Opus 4.6” notification when a legacy model string was pinned in &lt;code dir=&quot;auto&quot;&gt;.claude/settings.json&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Fixed plugins showing as inaccurately installed in &lt;code dir=&quot;auto&quot;&gt;/plugin&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Fixed plugins showing “not found in marketplace” errors on fresh startup by auto-refreshing after marketplace installation&lt;/li&gt;
+&lt;li&gt;Fixed &lt;code dir=&quot;auto&quot;&gt;/security-review&lt;/code&gt; failing with &lt;code dir=&quot;auto&quot;&gt;unknown option merge-base&lt;/code&gt; on older git versions&lt;/li&gt;
+&lt;li&gt;Fixed &lt;code dir=&quot;auto&quot;&gt;/color&lt;/code&gt; command having no way to reset — &lt;code dir=&quot;auto&quot;&gt;/color default&lt;/code&gt;, &lt;code dir=&quot;auto&quot;&gt;/color gray&lt;/code&gt;, &lt;code dir=&quot;auto&quot;&gt;/color reset&lt;/code&gt;, and &lt;code dir=&quot;auto&quot;&gt;/color none&lt;/code&gt; now restore defaults&lt;/li&gt;
+&lt;li&gt;Fixed a performance regression in the AskUserQuestion preview dialog that re-ran markdown rendering on every keystroke&lt;/li&gt;
+&lt;li&gt;Fixed feature flags read during early startup never refreshing their disk cache, causing stale values across sessions&lt;/li&gt;
+&lt;li&gt;Fixed permissions &lt;code dir=&quot;auto&quot;&gt;defaultMode&lt;/code&gt; values other than &lt;code dir=&quot;auto&quot;&gt;acceptEdits&lt;/code&gt; or &lt;code dir=&quot;auto&quot;&gt;plan&lt;/code&gt; being applied in Claude Code Remote — they’re now ignored&lt;/li&gt;
+&lt;li&gt;Fixed skill listing re-injected on every &lt;code dir=&quot;auto&quot;&gt;--resume&lt;/code&gt; (~600 tokens saved per resume)&lt;/li&gt;
+&lt;li&gt;Fixed teleport marker not rendering in VS Code teleported sessions&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;These are not demo bugs. These are the bugs you find when thousands of developers use the tool daily, on different operating systems, over unreliable connections, plugged into third-party infrastructure.&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;the-performance-story&quot;&gt;The performance story&lt;/h2&gt;&lt;/div&gt;
+&lt;p&gt;The numbers tell the same story as the bug fixes.&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Improvement&lt;/th&gt;&lt;th&gt;Impact&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;Prompt input re-renders&lt;/td&gt;&lt;td&gt;Reduced by ~74%&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Startup memory (no custom CA certs)&lt;/td&gt;&lt;td&gt;Reduced by ~426KB&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Remote Control polling (while connected)&lt;/td&gt;&lt;td&gt;From 1-2s to 10min (~300x reduction)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Skill listing on &lt;code dir=&quot;auto&quot;&gt;--resume&lt;/code&gt;&lt;/td&gt;&lt;td&gt;~600 tokens saved per resume&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Compaction&lt;/td&gt;&lt;td&gt;Now preserves images, enabling prompt cache reuse&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Microphone error messages&lt;/td&gt;&lt;td&gt;Now distinguishes silence from “no speech detected”&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code dir=&quot;auto&quot;&gt;/rename&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Works while Claude is processing instead of being queued&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;p&gt;None of this is visible to someone watching a demo. All of it is visible to someone using the tool eight hours a day.&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;vs-code-goes-deeper&quot;&gt;VS Code goes deeper&lt;/h2&gt;&lt;/div&gt;
+&lt;p&gt;Three additions that signal where the team sees the primary surface heading.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Session management&lt;/strong&gt; — A spark icon in the VS Code activity bar lists all Claude Code sessions. Sessions open as full editors, not just terminal panes.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Plan views&lt;/strong&gt; — Plans get a full markdown document view with comment support. You can add feedback directly on plans instead of switching to the chat panel.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Native MCP management&lt;/strong&gt; — Use &lt;code dir=&quot;auto&quot;&gt;/mcp&lt;/code&gt; in the chat panel to enable/disable servers, reconnect, and manage OAuth authentication. No more switching to terminal for MCP configuration.&lt;/p&gt;
+&lt;p&gt;These aren’t bolt-on features. They’re investments in making Claude Code feel native to VS Code rather than grafted on.&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;the-quiet-flex-at-the-end&quot;&gt;The quiet flex at the end&lt;/h2&gt;&lt;/div&gt;
+&lt;p&gt;The last line of the changelog is two words: &lt;strong&gt;YOLO mode.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;After 30+ fixes for edge cases that most teams would have shipped around for months, it lands differently. Not as a gimmick, but as a team that earned the right to have some fun after grinding through the backlog.&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;what-this-means-for-developers-evaluating-ai-coding-tools&quot;&gt;What this means for developers evaluating AI coding tools&lt;/h2&gt;&lt;/div&gt;
+&lt;p&gt;Next time you see an AI tool changelog full of bug fixes instead of flashy features, read it more carefully. A polish-heavy release is the strongest vote of confidence a team can make — it means the core works and they’re betting on long-term adoption over short-term hype.&lt;/p&gt;
+&lt;p&gt;The bugs they fixed tell you more about the tool’s maturity than any feature announcement ever could.&lt;/p&gt;
+&lt;p&gt;Claude Code 2.1.70 is the kind of release you don’t tweet about. It’s the kind you update to.&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;reference-links&quot;&gt;Reference links&lt;/h2&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://docs.anthropic.com/en/docs/claude-code/changelog&quot;&gt;Claude Code changelog&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://docs.anthropic.com/en/docs/claude-code&quot;&gt;Claude Code documentation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://marketplace.visualstudio.com/items?itemName=anthropic.claude-code&quot;&gt;VS Code extension&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded><category>Claude Code</category><category>Changelog</category><category>Developer Experience</category><category>Developer Tools</category><category>AI Coding</category><category>Bug Fixes</category><category>Performance</category></item><item><title>Harness Engineering: Your Job Isn&apos;t Writing Code Anymore</title><link>https://www.vibesparking.com/en/blog/ai/context-engineering/2026-03-06-harness-engineering-agents-first-world/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/ai/context-engineering/2026-03-06-harness-engineering-agents-first-world/</guid><pubDate>Fri, 06 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;div&gt;&lt;h1 id=&quot;harness-engineering-your-job-isnt-writing-code-anymore&quot;&gt;Harness Engineering: Your Job Isn’t Writing Code Anymore&lt;/h1&gt;&lt;/div&gt;
 &lt;p&gt;Your best engineer spent the morning rewriting an error message. Not fixing a bug. Rewriting a linter output so that an AI agent could understand what went wrong and fix it on its own.&lt;/p&gt;
 &lt;p&gt;This is what engineering looks like in 2026.&lt;/p&gt;
 &lt;div&gt;&lt;h2 id=&quot;what-openai-actually-did&quot;&gt;What OpenAI Actually Did&lt;/h2&gt;&lt;/div&gt;
@@ -2797,524 +2896,4 @@ Node.js v18 or later.&lt;/p&gt;
 &lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Signal&lt;/th&gt;&lt;th&gt;Action&lt;/th&gt;&lt;th&gt;Size&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;FY2027 DC revenue YoY &gt;60% + GM &gt;73% for 2Qs&lt;/td&gt;&lt;td&gt;Add&lt;/td&gt;&lt;td&gt;20%&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;DC revenue QoQ growth &amp;#x3C;5% for 2Qs&lt;/td&gt;&lt;td&gt;Trim&lt;/td&gt;&lt;td&gt;30%&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Non-GAAP GM &amp;#x3C;70% for 3Qs + ASIC share &gt;30%&lt;/td&gt;&lt;td&gt;Exit&lt;/td&gt;&lt;td&gt;All&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Price pullback to $145-$155&lt;/td&gt;&lt;td&gt;Significant add&lt;/td&gt;&lt;td&gt;30%&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Price breaks $250 without new fundamentals&lt;/td&gt;&lt;td&gt;Trim&lt;/td&gt;&lt;td&gt;20%&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
 &lt;hr&gt;
 &lt;div&gt;&lt;h2 id=&quot;disclaimer&quot;&gt;Disclaimer&lt;/h2&gt;&lt;/div&gt;
-&lt;p&gt;This analysis is based on public information and model estimates, for research purposes only. &lt;strong&gt;Not investment advice.&lt;/strong&gt; All valuations and judgments contain subjective assumptions; actual results may differ materially. Invest with caution.&lt;/p&gt;</content:encoded><category>Finance</category><category>Nvidia</category><category>NASDAQ: NVDA</category><category>AI</category><category>Semiconductor</category><category>Valuation</category></item><item><title>Palantir (PLTR): AI Operating System Thesis is Real — But the Market Already Knows It</title><link>https://www.vibesparking.com/en/blog/finance/pltr/2026-03-03-pltr-ai-operating-system-thesis/</link><guid isPermaLink="true">https://www.vibesparking.com/en/blog/finance/pltr/2026-03-03-pltr-ai-operating-system-thesis/</guid><pubDate>Tue, 03 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;div&gt;&lt;h1 id=&quot;pltr-the-ai-operating-system-thesis-is-real--but-the-market-already-knows-it&quot;&gt;$PLTR: The “AI Operating System” Thesis is Real — But the Market Already Knows It&lt;/h1&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h2 id=&quot;executive-summary&quot;&gt;Executive Summary&lt;/h2&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;Verdict:&lt;/strong&gt; PASS at current levels.
-&lt;strong&gt;Action Price:&lt;/strong&gt; $85-95 for initial position.&lt;/p&gt;
-&lt;p&gt;Palantir delivered what CEO Alex Karp called “the best results in tech in the last decade” — Q4 2025 revenue of $1.41B (+70% YoY), US commercial revenue exploding +137% YoY, and FY2026 guidance of $7.19B (+61%) that obliterated consensus by $970M. The business is genuinely exceptional: 85% gross margins, 57% adjusted operating margins, $7.2B net cash, zero debt, and a Rule of 40 score of 127%.&lt;/p&gt;
-&lt;p&gt;The problem is price, not business quality. At ~200x trailing P/E and 76x EV/Revenue, PLTR trades at 5-7x the multiple of its next most expensive comp (Snowflake at 13.5x). The stock is priced for perfection across a decade — any deceleration from 60%+ growth to even 40% would trigger severe multiple compression.&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;tldr&quot;&gt;TL;DR&lt;/h3&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;PASS at $137-146&lt;/strong&gt; — IRR insufficient to compensate for valuation risk.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Key Force:&lt;/strong&gt; AIP/Ontology creating genuine “AI operating system” moat with 139% NDR.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Kill Condition:&lt;/strong&gt; US Commercial revenue growth decelerating below 50% YoY for 2 consecutive quarters.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Action Price:&lt;/strong&gt; $85-95 (implies ~55x 2026 EV/Revenue — still premium, but adequate IRR).&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;key-forces-decisive-factors&quot;&gt;Key Forces (Decisive Factors)&lt;/h2&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h3 id=&quot;key-force-1-aip--ontology--the-ai-operating-system-moat&quot;&gt;Key Force #1: AIP + Ontology = The AI Operating System Moat&lt;/h3&gt;&lt;/div&gt;
-&lt;p&gt;The Ontology is a semantic layer translating raw enterprise data into “Objects” and “Actions” for AI agents. Unlike competitors (Snowflake, Databricks) who store/query data, Palantir allows LLMs to take governed, auditable actions on real processes.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Evidence:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;NDR:&lt;/strong&gt; 139% in Q4 (+500bps QoQ).&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;US Commercial TCV:&lt;/strong&gt; $1.34B in Q4 (+67% YoY).&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;AIP Bootcamps:&lt;/strong&gt; 1,300+ completed; conversion rates of 5-10% drive pipeline velocity.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h3 id=&quot;key-force-2-us-government-ai-spending-super-cycle&quot;&gt;Key Force #2: US Government AI Spending Super-Cycle&lt;/h3&gt;&lt;/div&gt;
-&lt;p&gt;Palantir is the primary beneficiary of increased government AI spending driven by China competition, DOGE-driven modernization, and active military conflicts.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Evidence:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;US Army:&lt;/strong&gt; $10B enterprise agreement (Summer 2025).&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;US Navy:&lt;/strong&gt; $448M ShipOS deal (Dec 2025).&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;US Gov Revenue:&lt;/strong&gt; Grew 66% YoY in Q4 to $570M.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h3 id=&quot;key-force-3-extreme-valuation-vs-exceptional-execution&quot;&gt;Key Force #3: Extreme Valuation vs. Exceptional Execution&lt;/h3&gt;&lt;/div&gt;
-&lt;p&gt;At ~$140/share, the market assumes $11-12B revenue by 2030 and sustained 40%+ margins. Any break in these assumptions risks a 40-60% downside via multiple compression.&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;a-revenue-scale--quality&quot;&gt;A. Revenue Scale &amp;#x26; Quality&lt;/h2&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h3 id=&quot;a1-revenue-composition-q4-2025&quot;&gt;A1. Revenue Composition (Q4 2025)&lt;/h3&gt;&lt;/div&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th align=&quot;left&quot;&gt;Segment&lt;/th&gt;&lt;th align=&quot;left&quot;&gt;Q4 2025&lt;/th&gt;&lt;th align=&quot;left&quot;&gt;% of Total&lt;/th&gt;&lt;th align=&quot;left&quot;&gt;YoY&lt;/th&gt;&lt;th align=&quot;left&quot;&gt;QoQ&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td align=&quot;left&quot;&gt;US Commercial&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;$507M&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;36%&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;+137%&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;+28%&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td align=&quot;left&quot;&gt;US Government&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;$570M&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;41%&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;+66%&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;+17%&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td align=&quot;left&quot;&gt;Intl Commercial&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;$171M&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;12%&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;+8%&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;+12%&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td align=&quot;left&quot;&gt;Intl Government&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;$160M&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;11%&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;+43%&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;—&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td align=&quot;left&quot;&gt;&lt;strong&gt;Total&lt;/strong&gt;&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;&lt;strong&gt;$1,407M&lt;/strong&gt;&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;&lt;strong&gt;100%&lt;/strong&gt;&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;&lt;strong&gt;+70%&lt;/strong&gt;&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;&lt;strong&gt;+19%&lt;/strong&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
-&lt;div&gt;&lt;h3 id=&quot;a2-fy2025-summary&quot;&gt;A2. FY2025 Summary&lt;/h3&gt;&lt;/div&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th align=&quot;left&quot;&gt;Segment&lt;/th&gt;&lt;th align=&quot;left&quot;&gt;FY2025&lt;/th&gt;&lt;th align=&quot;left&quot;&gt;YoY&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td align=&quot;left&quot;&gt;US Commercial&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;$1,465M&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;+109%&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td align=&quot;left&quot;&gt;Government (Total)&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;$2,402M&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;+53%&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td align=&quot;left&quot;&gt;Intl Commercial&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;$608M&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;+2%&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td align=&quot;left&quot;&gt;&lt;strong&gt;Total&lt;/strong&gt;&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;&lt;strong&gt;$4,475M&lt;/strong&gt;&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;&lt;strong&gt;+56%&lt;/strong&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;b-profitability--margin-trends&quot;&gt;B. Profitability &amp;#x26; Margin Trends&lt;/h2&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h3 id=&quot;b1-margin-tracking&quot;&gt;B1. Margin Tracking&lt;/h3&gt;&lt;/div&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th align=&quot;left&quot;&gt;Metric&lt;/th&gt;&lt;th align=&quot;left&quot;&gt;Q4 2025&lt;/th&gt;&lt;th align=&quot;left&quot;&gt;Q3 2025&lt;/th&gt;&lt;th align=&quot;left&quot;&gt;Q4 2024&lt;/th&gt;&lt;th align=&quot;left&quot;&gt;YoY Change&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td align=&quot;left&quot;&gt;GAAP Gross Margin&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;~85%&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;~82%&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;~80%&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;+500bps&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td align=&quot;left&quot;&gt;GAAP Operating Margin&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;41%&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;~31%&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;~1.3%&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;+3,970bps&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td align=&quot;left&quot;&gt;GAAP Net Margin&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;43%&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;~30%&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;~9.5%&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;+3,350bps&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td align=&quot;left&quot;&gt;Adj Operating Margin&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;57%&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;~52%&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;—&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;—&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
-&lt;div&gt;&lt;h3 id=&quot;b2-gaap-vs-non-gaap-gap-q4&quot;&gt;B2. GAAP vs Non-GAAP Gap (Q4)&lt;/h3&gt;&lt;/div&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th align=&quot;left&quot;&gt;Metric&lt;/th&gt;&lt;th align=&quot;left&quot;&gt;GAAP&lt;/th&gt;&lt;th align=&quot;left&quot;&gt;Non-GAAP&lt;/th&gt;&lt;th align=&quot;left&quot;&gt;Delta&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td align=&quot;left&quot;&gt;Op Income&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;$575M&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;$798M&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;$223M (SBC-driven)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td align=&quot;left&quot;&gt;Op Margin&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;41%&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;57%&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;16pts&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td align=&quot;left&quot;&gt;EPS&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;$0.24&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;$0.25&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;$0.01&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;c-cash-flow--balance-sheet&quot;&gt;C. Cash Flow &amp;#x26; Balance Sheet&lt;/h2&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h3 id=&quot;c1-cash-flow-quality&quot;&gt;C1. Cash Flow Quality&lt;/h3&gt;&lt;/div&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th align=&quot;left&quot;&gt;Metric&lt;/th&gt;&lt;th align=&quot;left&quot;&gt;Q4 2025&lt;/th&gt;&lt;th align=&quot;left&quot;&gt;FY2025&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td align=&quot;left&quot;&gt;Operating Cash Flow&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;$777M (55% margin)&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;$2.13B (48% margin)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td align=&quot;left&quot;&gt;Adj Free Cash Flow&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;$791M (56% margin)&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;$2.27B (51% margin)&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
-&lt;div&gt;&lt;h3 id=&quot;c2-balance-sheet&quot;&gt;C2. Balance Sheet&lt;/h3&gt;&lt;/div&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th align=&quot;left&quot;&gt;Metric&lt;/th&gt;&lt;th align=&quot;left&quot;&gt;Value&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td align=&quot;left&quot;&gt;Cash + ST Investments&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;$7.2B&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td align=&quot;left&quot;&gt;Total Debt&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;$0&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td align=&quot;left&quot;&gt;Current Ratio&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;7.11&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;d-forward-guidance-fy2026&quot;&gt;D. Forward Guidance (FY2026)&lt;/h2&gt;&lt;/div&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th align=&quot;left&quot;&gt;Metric&lt;/th&gt;&lt;th align=&quot;left&quot;&gt;Amount&lt;/th&gt;&lt;th align=&quot;left&quot;&gt;Consensus&lt;/th&gt;&lt;th align=&quot;left&quot;&gt;Beat&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td align=&quot;left&quot;&gt;Revenue&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;$7.182-7.198B&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;$6.22B&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;+$970M (+15.6%)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td align=&quot;left&quot;&gt;US Commercial Rev&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;&gt;$3.144B&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;—&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;+115% YoY&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td align=&quot;left&quot;&gt;Adj Op Income&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;$4.126-4.142B&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;—&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;~57% margin&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td align=&quot;left&quot;&gt;Adj FCF&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;$3.925-4.125B&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;—&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;~55% margin&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;e-competitive-landscape--valuation&quot;&gt;E. Competitive Landscape &amp;#x26; Valuation&lt;/h2&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h3 id=&quot;e1-comparable-valuations&quot;&gt;E1. Comparable Valuations&lt;/h3&gt;&lt;/div&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th align=&quot;left&quot;&gt;Company&lt;/th&gt;&lt;th align=&quot;left&quot;&gt;EV/Revenue&lt;/th&gt;&lt;th align=&quot;left&quot;&gt;EV/EBITDA&lt;/th&gt;&lt;th align=&quot;left&quot;&gt;P/E&lt;/th&gt;&lt;th align=&quot;left&quot;&gt;Rev Growth&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td align=&quot;left&quot;&gt;&lt;strong&gt;PLTR&lt;/strong&gt;&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;&lt;strong&gt;76x&lt;/strong&gt;&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;&lt;strong&gt;236x&lt;/strong&gt;&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;&lt;strong&gt;230x&lt;/strong&gt;&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;&lt;strong&gt;70%&lt;/strong&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td align=&quot;left&quot;&gt;Snowflake&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;13.5x&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;128.7x&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;141.8x&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;~28%&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td align=&quot;left&quot;&gt;Datadog&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;11.7x&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;47.7x&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;58.3x&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;~26%&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td align=&quot;left&quot;&gt;NVDA (Peak)&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;~30x&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;~60x&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;~65x&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;122%&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;f-kpi-dashboard&quot;&gt;F. KPI Dashboard&lt;/h2&gt;&lt;/div&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th align=&quot;left&quot;&gt;#&lt;/th&gt;&lt;th align=&quot;left&quot;&gt;KPI&lt;/th&gt;&lt;th align=&quot;left&quot;&gt;Q4 2025&lt;/th&gt;&lt;th align=&quot;left&quot;&gt;Q3 2025&lt;/th&gt;&lt;th align=&quot;left&quot;&gt;Q4 2024&lt;/th&gt;&lt;th align=&quot;left&quot;&gt;Alert Level&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td align=&quot;left&quot;&gt;1&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;US Commercial YoY&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;137%&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;121%&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;64%&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;&amp;#x3C;50% for 2 Qs&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td align=&quot;left&quot;&gt;2&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;Net Dollar Retention&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;139%&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;134%&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;~118%&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;&amp;#x3C;120%&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td align=&quot;left&quot;&gt;3&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;Rule of 40 Score&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;127%&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;114%&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;81%&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;&amp;#x3C;80%&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td align=&quot;left&quot;&gt;4&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;US Commercial RDV&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;$4.38B&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;$3.62B&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;$1.79B&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;QoQ decline&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td align=&quot;left&quot;&gt;5&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;SBC % of Revenue&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;~14%&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;~15%&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;~34%&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;&gt;25%&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;k-valuation-matrix--scenarios&quot;&gt;K. Valuation Matrix &amp;#x26; Scenarios&lt;/h2&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h3 id=&quot;k1-sensitivity-analysis-2028e-fair-value&quot;&gt;K1. Sensitivity Analysis (2028E Fair Value)&lt;/h3&gt;&lt;/div&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th align=&quot;left&quot;&gt;2026-2028 Rev CAGR&lt;/th&gt;&lt;th align=&quot;left&quot;&gt;50%&lt;/th&gt;&lt;th align=&quot;left&quot;&gt;40%&lt;/th&gt;&lt;th align=&quot;left&quot;&gt;30%&lt;/th&gt;&lt;th align=&quot;left&quot;&gt;20%&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td align=&quot;left&quot;&gt;&lt;strong&gt;40x EV/Rev&lt;/strong&gt;&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;$188&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;$152&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;$122&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;$97&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td align=&quot;left&quot;&gt;&lt;strong&gt;30x EV/Rev&lt;/strong&gt;&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;$141&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;$114&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;$92&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;$73&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td align=&quot;left&quot;&gt;&lt;strong&gt;20x EV/Rev&lt;/strong&gt;&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;$94&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;$76&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;$61&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;$49&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
-&lt;div&gt;&lt;h3 id=&quot;k2-scenario-analysis&quot;&gt;K2. Scenario Analysis&lt;/h3&gt;&lt;/div&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th align=&quot;left&quot;&gt;Scenario&lt;/th&gt;&lt;th align=&quot;left&quot;&gt;Prob&lt;/th&gt;&lt;th align=&quot;left&quot;&gt;Target (2028)&lt;/th&gt;&lt;th align=&quot;left&quot;&gt;Return from $140&lt;/th&gt;&lt;th align=&quot;left&quot;&gt;Key Assumption&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td align=&quot;left&quot;&gt;Bull&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;20%&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;$220&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;+57%&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;50% CAGR, 40x EV/Rev&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td align=&quot;left&quot;&gt;Base&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;50%&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;$120&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;-14%&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;35% CAGR, 25x EV/Rev&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td align=&quot;left&quot;&gt;Bear&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;30%&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;$60&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;-57%&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;25% CAGR, 15x EV/Rev&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
-&lt;p&gt;&lt;strong&gt;Probability-weighted expected return:&lt;/strong&gt; $118 (-16% from $140).&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;l-ownership--governance&quot;&gt;L. Ownership &amp;#x26; Governance&lt;/h2&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h3 id=&quot;l1-institutional-ownership&quot;&gt;L1. Institutional Ownership&lt;/h3&gt;&lt;/div&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th align=&quot;left&quot;&gt;Holder&lt;/th&gt;&lt;th align=&quot;left&quot;&gt;Shares&lt;/th&gt;&lt;th align=&quot;left&quot;&gt;%&lt;/th&gt;&lt;th align=&quot;left&quot;&gt;Recent Change&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td align=&quot;left&quot;&gt;Vanguard&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;212.8M&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;9.32%&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;+4%&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td align=&quot;left&quot;&gt;BlackRock&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;124.6M&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;5.45%&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;+5%&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td align=&quot;left&quot;&gt;State Street&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;101.3M&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;4.43%&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;+7%&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
-&lt;p&gt;&lt;strong&gt;Governance Red Flag:&lt;/strong&gt; Three-class share structure. Founders control ~70% of votes via Class F shares despite owning minimal economic equity.&lt;/p&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;h2 id=&quot;action-triggers&quot;&gt;Action Triggers&lt;/h2&gt;&lt;/div&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th align=&quot;left&quot;&gt;Signal&lt;/th&gt;&lt;th align=&quot;left&quot;&gt;Action&lt;/th&gt;&lt;th align=&quot;left&quot;&gt;Size&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td align=&quot;left&quot;&gt;Stock reaches $85-95&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;Initial position&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;2-3%&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td align=&quot;left&quot;&gt;US Commercial growth &gt;100% at $85-95&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;Add position&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;+1-2%&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td align=&quot;left&quot;&gt;NDR drops below 120% for 2 quarters&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;Avoid / Trim&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;All&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td align=&quot;left&quot;&gt;US Commercial growth &amp;#x3C;50% for 2 quarters&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;Exit entirely&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;All&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;strong&gt;Final Verdict:&lt;/strong&gt; PASS (Wait for Action Price: $85-95).
-&lt;strong&gt;Next Review:&lt;/strong&gt; May 5, 2026 (Q1 2026 Earnings).&lt;/p&gt;
-&lt;div&gt;&lt;h2 id=&quot;disclaimer&quot;&gt;Disclaimer&lt;/h2&gt;&lt;/div&gt;
-&lt;p&gt;This analysis is based on public information and model estimates, for research purposes only. &lt;strong&gt;Not investment advice.&lt;/strong&gt; All valuations and judgments contain subjective assumptions; actual results may differ materially. Invest with caution.&lt;/p&gt;</content:encoded><category>Finance</category><category>Palantir</category><category>NASDAQ: PLTR</category><category>US Stock Market</category><category>AI</category><category>Big Data</category></item></channel></rss>
+&lt;p&gt;This analysis is based on public information and model estimates, for research purposes only. &lt;strong&gt;Not investment advice.&lt;/strong&gt; All valuations and judgments contain subjective assumptions; actual results may differ materially. Invest with caution.&lt;/p&gt;</content:encoded><category>Finance</category><category>Nvidia</category><category>NASDAQ: NVDA</category><category>AI</category><category>Semiconductor</category><category>Valuation</category></item></channel></rss>

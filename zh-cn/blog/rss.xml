@@ -1,4 +1,103 @@
-<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Vibe Sparking AI | Blog</title><description/><link>https://www.vibesparking.com/</link><language>zh-CN</language><item><title>Harness Engineering: 你的工作不再是写代码</title><link>https://www.vibesparking.com/zh-cn/blog/ai/context-engineering/2026-03-06-harness-engineering-agents-first-world/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/context-engineering/2026-03-06-harness-engineering-agents-first-world/</guid><pubDate>Fri, 06 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;div&gt;&lt;h1 id=&quot;harness-engineering-你的工作不再是写代码&quot;&gt;Harness Engineering: 你的工作不再是写代码&lt;/h1&gt;&lt;/div&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Vibe Sparking AI | Blog</title><description/><link>https://www.vibesparking.com/</link><language>zh-CN</language><item><title>Claude Code 2.1.70：最无聊的更新日志，最看好的信号</title><link>https://www.vibesparking.com/zh-cn/blog/ai/claude-code/changelog/2026-03-06-claude-code-2170-boring-changelog-bullish-signal/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/claude-code/changelog/2026-03-06-claude-code-2170-boring-changelog-bullish-signal/</guid><pubDate>Fri, 06 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;div&gt;&lt;h1 id=&quot;claude-code-2170最无聊的更新日志最看好的信号&quot;&gt;Claude Code 2.1.70：最无聊的更新日志，最看好的信号&lt;/h1&gt;&lt;/div&gt;
+&lt;p&gt;Claude Code 2.1.70 没上什么新功能。20 多个 bug 修复，几个性能优化，VS Code 做了点打磨。看更新日志，你可能直接划过去。但仔细看完，你的判断可能会变。&lt;/p&gt;
+&lt;p&gt;&lt;starlight-image-zoom-zoomable&gt;&lt;img src=&quot;https://www.vibesparking.com/assets/ai/anthropic/claude-code/intro.png&quot; alt=&quot;&quot;&gt;&lt;button aria-label=&quot;Zoom image&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; fill=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;use href=&quot;#starlight-image-zoom-icon-zoom&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/button&gt;&lt;/starlight-image-zoom-zoomable&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;大家习惯了什么&quot;&gt;大家习惯了什么&lt;/h2&gt;&lt;/div&gt;
+&lt;p&gt;AI 编程工具圈子有个套路。新版本一发，Twitter 先炸，然后大家争论 demo 是不是真的。我们已经被训练成每次看更新日志都期待炸裂——新模型、更长的上下文、“改变一切”的功能。&lt;/p&gt;
+&lt;p&gt;2.1.70 没走这个路线。&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;更新日志到底写了什么&quot;&gt;更新日志到底写了什么&lt;/h2&gt;&lt;/div&gt;
+&lt;p&gt;读起来像 bug tracker，不像新闻稿。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;API 和代理兼容性：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;用 &lt;code dir=&quot;auto&quot;&gt;ANTHROPIC_BASE_URL&lt;/code&gt; 接第三方网关时 API 报 400——修了。tool search 现在能正确识别代理端点，自动关掉 &lt;code dir=&quot;auto&quot;&gt;tool_reference&lt;/code&gt; 块&lt;/li&gt;
+&lt;li&gt;自定义 Bedrock 推理配置文件或非标准 Claude 模型标识符，&lt;code dir=&quot;auto&quot;&gt;effort&lt;/code&gt; 参数直接崩——修了&lt;/li&gt;
+&lt;li&gt;ToolSearch 之后模型返回空响应——原因是服务端在 prompt 尾部用 system-prompt 风格的标签渲染工具 schema，模型被骗得提前停了。修了&lt;/li&gt;
+&lt;li&gt;MCP 服务器在第一轮之后连接时 prompt cache 被打爆——修了&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;跨平台修复：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Windows/WSL 下复制 CJK 文字和 emoji 剪贴板乱码——改用 PowerShell 的 &lt;code dir=&quot;auto&quot;&gt;Set-Clipboard&lt;/code&gt;，修了&lt;/li&gt;
+&lt;li&gt;慢速 SSH 连接下按 Enter 变成插入换行而不是提交——修了&lt;/li&gt;
+&lt;li&gt;Windows 上从 VS Code 集成终端启动时多开窗口——修了&lt;/li&gt;
+&lt;li&gt;Windows 原生二进制的语音模式报 “native audio module could not be loaded”——修了&lt;/li&gt;
+&lt;li&gt;设置了 &lt;code dir=&quot;auto&quot;&gt;voiceEnabled: true&lt;/code&gt;，按住说话在会话启动时不触发——修了&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;UI 和开发体验：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Markdown 链接里带 &lt;code dir=&quot;auto&quot;&gt;#NNN&lt;/code&gt; 的引用指向了当前仓库而不是链接 URL——修了&lt;/li&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;.claude/settings.json&lt;/code&gt; 里固定了旧版 Opus 模型字符串，反复弹 “Model updated to Opus 4.6”——修了&lt;/li&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;/plugin&lt;/code&gt; 里插件显示为已安装但实际没装——修了&lt;/li&gt;
+&lt;li&gt;新启动时插件报 “not found in marketplace”，现在自动刷新 marketplace 安装状态——修了&lt;/li&gt;
+&lt;li&gt;老版本 git 上 &lt;code dir=&quot;auto&quot;&gt;/security-review&lt;/code&gt; 报 &lt;code dir=&quot;auto&quot;&gt;unknown option merge-base&lt;/code&gt;——修了&lt;/li&gt;
+&lt;li&gt;&lt;code dir=&quot;auto&quot;&gt;/color&lt;/code&gt; 命令没法重置回默认——现在 &lt;code dir=&quot;auto&quot;&gt;/color default&lt;/code&gt;、&lt;code dir=&quot;auto&quot;&gt;/color gray&lt;/code&gt;、&lt;code dir=&quot;auto&quot;&gt;/color reset&lt;/code&gt;、&lt;code dir=&quot;auto&quot;&gt;/color none&lt;/code&gt; 都能用了&lt;/li&gt;
+&lt;li&gt;AskUserQuestion 预览框有性能回退，每敲一个字都重新跑 markdown 渲染——修了&lt;/li&gt;
+&lt;li&gt;启动时读的 feature flag 从不刷新磁盘缓存，旧值跨会话一直生效——修了&lt;/li&gt;
+&lt;li&gt;Claude Code Remote 环境里 &lt;code dir=&quot;auto&quot;&gt;acceptEdits&lt;/code&gt; 和 &lt;code dir=&quot;auto&quot;&gt;plan&lt;/code&gt; 之外的 &lt;code dir=&quot;auto&quot;&gt;defaultMode&lt;/code&gt; 值被错误应用——现在忽略了&lt;/li&gt;
+&lt;li&gt;每次 &lt;code dir=&quot;auto&quot;&gt;--resume&lt;/code&gt; 都重新注入技能列表，每次浪费约 600 token——修了&lt;/li&gt;
+&lt;li&gt;VS Code teleport 会话里 teleport 标记不渲染——修了&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这些 bug 不是 demo 里能找到的。得有成千上万的开发者每天在不同系统上、通过不稳定的网络、接着第三方基础设施用，才能踩到这些坑。&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;性能数据&quot;&gt;性能数据&lt;/h2&gt;&lt;/div&gt;
+&lt;p&gt;数字和 bug 修复说的是同一件事。&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;优化项&lt;/th&gt;&lt;th&gt;效果&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;Prompt 输入重渲染&lt;/td&gt;&lt;td&gt;减少约 74%&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;启动内存（无自定义 CA 证书）&lt;/td&gt;&lt;td&gt;减少约 426KB&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Remote Control 轮询（连接状态）&lt;/td&gt;&lt;td&gt;从 1-2 秒降到 10 分钟，约 300 倍&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code dir=&quot;auto&quot;&gt;--resume&lt;/code&gt; 时技能列表注入&lt;/td&gt;&lt;td&gt;每次省约 600 token&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;压缩（compaction）&lt;/td&gt;&lt;td&gt;保留图片，可复用 prompt cache&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;麦克风错误提示&lt;/td&gt;&lt;td&gt;能区分”静音”和”没检测到语音”了&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code dir=&quot;auto&quot;&gt;/rename&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Claude 处理中也能用了，不再排队&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;p&gt;看 demo 看不出来这些。每天用八小时的人全能感知到。&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;vs-code-往深里走了&quot;&gt;VS Code 往深里走了&lt;/h2&gt;&lt;/div&gt;
+&lt;p&gt;三个改动，方向很明确。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;会话管理&lt;/strong&gt; — VS Code 活动栏多了个 spark 图标，列出所有 Claude Code 会话。会话以完整编辑器打开，不是终端面板。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;计划视图&lt;/strong&gt; — 计划有了完整的 markdown 文档视图，支持添加评论。直接在计划上写反馈，不用切到聊天面板。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;原生 MCP 管理&lt;/strong&gt; — 在聊天面板里用 &lt;code dir=&quot;auto&quot;&gt;/mcp&lt;/code&gt; 就能启用/禁用服务器、重连、管理 OAuth 认证。不用再切终端搞 MCP 配置。&lt;/p&gt;
+&lt;p&gt;这不是贴上去的功能。是在让 Claude Code 在 VS Code 里越来越像原生的东西。&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;最后两个字&quot;&gt;最后两个字&lt;/h2&gt;&lt;/div&gt;
+&lt;p&gt;更新日志最后一行就两个词：&lt;strong&gt;YOLO mode。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;前面 30 多个边缘情况的修复，大多数团队可能拖上几个月。读到最后这一行，感觉不一样。不是噱头，是干完苦活之后的底气。&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;对你的判断有什么用&quot;&gt;对你的判断有什么用&lt;/h2&gt;&lt;/div&gt;
+&lt;p&gt;下次看到一个 AI 工具的更新日志全是 bug 修复、没有炸裂功能，多看两眼。一个全力打磨的版本是团队能投出的最强信任票——说明核心能力已经 work 了，他们在赌长期留存，不是短期传播。&lt;/p&gt;
+&lt;p&gt;修的 bug 比发的功能更能说明一个工具的成熟度。&lt;/p&gt;
+&lt;p&gt;Claude Code 2.1.70 不是那种你会发推的版本。是那种你会更新的版本。&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;h2 id=&quot;参考链接&quot;&gt;参考链接&lt;/h2&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://docs.anthropic.com/en/docs/claude-code/changelog&quot;&gt;Claude Code 更新日志&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://docs.anthropic.com/en/docs/claude-code&quot;&gt;Claude Code 文档&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://marketplace.visualstudio.com/items?itemName=anthropic.claude-code&quot;&gt;VS Code 扩展&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded><category>Claude Code</category><category>Changelog</category><category>开发者体验</category><category>开发工具</category><category>AI 编程</category><category>Bug 修复</category><category>性能优化</category></item><item><title>Harness Engineering: 你的工作不再是写代码</title><link>https://www.vibesparking.com/zh-cn/blog/ai/context-engineering/2026-03-06-harness-engineering-agents-first-world/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/context-engineering/2026-03-06-harness-engineering-agents-first-world/</guid><pubDate>Fri, 06 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;div&gt;&lt;h1 id=&quot;harness-engineering-你的工作不再是写代码&quot;&gt;Harness Engineering: 你的工作不再是写代码&lt;/h1&gt;&lt;/div&gt;
 &lt;p&gt;你们组最强的工程师，今天上午在改一条报错信息。不是修 bug。是重写 linter 的错误输出，让 AI 智能体能看懂哪里出了问题，自己把它修好。&lt;/p&gt;
 &lt;p&gt;2026 年，工程师的日常就是这样的。&lt;/p&gt;
 &lt;div&gt;&lt;h2 id=&quot;openai-到底做了什么&quot;&gt;OpenAI 到底做了什么&lt;/h2&gt;&lt;/div&gt;
@@ -2903,134 +3002,4 @@ v18 或更高。&lt;/p&gt;
 &lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th align=&quot;left&quot;&gt;Signal&lt;/th&gt;&lt;th align=&quot;left&quot;&gt;Action&lt;/th&gt;&lt;th align=&quot;left&quot;&gt;Size&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td align=&quot;left&quot;&gt;Stock reaches $85-95&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;Initial position&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;2-3%&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td align=&quot;left&quot;&gt;US Commercial growth &gt;100% at $85-95&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;Add position&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;+1-2%&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td align=&quot;left&quot;&gt;NDR drops below 120% for 2 quarters&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;Avoid / Trim&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;All&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td align=&quot;left&quot;&gt;US Commercial growth &amp;#x3C;50% for 2 quarters&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;Exit entirely&lt;/td&gt;&lt;td align=&quot;left&quot;&gt;All&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
 &lt;hr&gt;
 &lt;p&gt;&lt;strong&gt;Final Verdict:&lt;/strong&gt; PASS (Wait for Action Price: $85-95).&lt;br&gt;
-&lt;strong&gt;Next Review:&lt;/strong&gt; May 5, 2026 (Q1 2026 Earnings).&lt;/p&gt;</content:encoded><category>Finance</category><category>Palantir</category><category>NASDAQ: PLTR</category><category>US Stock Market</category><category>AI</category><category>Big Data</category></item><item><title>VSDD：AI 写的代码，谁来查作业？</title><link>https://www.vibesparking.com/zh-cn/blog/ai/vibe-coding/2026-03-03-verified-spec-driven-development/</link><guid isPermaLink="true">https://www.vibesparking.com/zh-cn/blog/ai/vibe-coding/2026-03-03-verified-spec-driven-development/</guid><pubDate>Tue, 03 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;div&gt;&lt;h2 id=&quot;没人说的问题&quot;&gt;没人说的问题&lt;/h2&gt;&lt;/div&gt;
-&lt;p&gt;AI 写了一个函数。生成了测试。测试通过了。代码审查也没问题。&lt;/p&gt;
-&lt;p&gt;发版？&lt;/p&gt;
-&lt;p&gt;我反复看到一个现象：半年后用户撞上了一个边界条件。函数处理 null 没问题，但并发访问时挂了。测试覆盖了正常路径和两三个异常路径，偏偏漏掉了输入合法但病态巨大的情况。&lt;/p&gt;
-&lt;p&gt;AI 没有写错代码。它写了”差不多对”的代码。“差不多对”比”明显错”更难抓，因为它能通过所有为了抓”明显错”而设计的检查。&lt;/p&gt;
-&lt;div&gt;&lt;h2 id=&quot;行业默认的舒适区&quot;&gt;行业默认的舒适区&lt;/h2&gt;&lt;/div&gt;
-&lt;p&gt;大多数团队用 AI 写代码的流程差不多：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;描述需求&lt;/li&gt;
-&lt;li&gt;AI 写代码（可能顺便写测试）&lt;/li&gt;
-&lt;li&gt;人看一眼，改一改，发版&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;有些团队加了 TDD。有些让另一个 AI 或者人做 code review。但底层假设没变：测试通过了、reviewer 觉得还行，就够了。&lt;/p&gt;
-&lt;p&gt;这个假设有盲区。&lt;/p&gt;
-&lt;div&gt;&lt;h2 id=&quot;盲区在哪ai-太客气了&quot;&gt;盲区在哪：AI 太客气了&lt;/h2&gt;&lt;/div&gt;
-&lt;p&gt;标准的 LLM 交互天生合作导向。AI 想帮你。想和你达成一致。它审查代码的时候——哪怕审查自己写的代码——起手就带着善意。&lt;/p&gt;
-&lt;p&gt;“整体看起来不错，以下是一些小建议……”&lt;/p&gt;
-&lt;p&gt;这不叫审查。这叫夸你之后顺带提两句。&lt;/p&gt;
-&lt;p&gt;一次长对话里，AI 记得这代码是自己写的，记得你们讨论过的设计决策。它和这个代码库有了”关系”。有关系就有盲区。&lt;/p&gt;
-&lt;div&gt;&lt;h2 id=&quot;什么是-vsdd&quot;&gt;什么是 VSDD&lt;/h2&gt;&lt;/div&gt;
-&lt;p&gt;VSDD（Verified Spec-Driven Development）来自开源社区，三位贡献者是 dollspace-gay、gitcnd 和 jtremback。他们把三套大多数团队当成互斥选项的方法论叠成了流水线上的三道闸门：&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;规格驱动开发 (SDD)：&lt;/strong&gt; 先写契约再写代码。不光定义代码做什么，还要定义什么东西必须是可证明的。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;测试驱动开发 (TDD)：&lt;/strong&gt; 先写测试再写代码。红灯、绿灯、重构。没有失败的测试，就没有新代码。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;验证驱动开发 (VDD)：&lt;/strong&gt; 把活下来的代码扔给一个零容忍的对手反复审查，直到对手被迫编造不存在的缺陷。&lt;/p&gt;
-&lt;p&gt;三道闸门。规格定义”做什么”。测试执行”怎么做”。对抗性验证确保”没漏掉什么”。&lt;/p&gt;
-&lt;div&gt;&lt;h2 id=&quot;四个角色&quot;&gt;四个角色&lt;/h2&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;架构师（人类开发者）&lt;/strong&gt; — 战略视野、领域专业知识、最终拍板权。你签字确认规格，仲裁 Builder 和 Adversary 的争议，做 AI 做不了的判断。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;建造者（Claude 或同类）&lt;/strong&gt; — 写规格、生成测试、实现代码、做重构。严格 TDD 约束。不许”我先把整个东西写出来再补测试”。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;追踪者（Chainlink）&lt;/strong&gt; — 分层 issue 管理。每个规格条目、测试用例、代码实现都映射到一个可追踪的工作单元。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;对手（Sarcasmotron）&lt;/strong&gt; — 一个不同的 AI 模型，配置为零容忍。审查规格、测试、代码实现。每次审查都用全新的上下文窗口。没有关系漂移，没有累积的人情。&lt;/p&gt;
-&lt;p&gt;对手是整个方法论里最关键的创新。用不同的模型家族（比如 Builder 用 Claude，Adversary 用 Gemini），引入真正的认知多样性。对手不关心你的感受，只关心你的不变量。&lt;/p&gt;
-&lt;div&gt;&lt;h2 id=&quot;六个阶段&quot;&gt;六个阶段&lt;/h2&gt;&lt;/div&gt;
-&lt;div&gt;&lt;h3 id=&quot;阶段一把一切写进规格&quot;&gt;阶段一：把一切写进规格&lt;/h3&gt;&lt;/div&gt;
-&lt;p&gt;写代码之前，Builder 输出两样东西：行为规格和验证架构。&lt;/p&gt;
-&lt;p&gt;行为规格包含前置条件、后置条件、不变量。边界条件目录列举 null、空、最大值、负数、Unicode、并发等所有边界情况。&lt;/p&gt;
-&lt;p&gt;验证架构里最关键的一项是”纯度边界图”——把确定性的纯核心和有副作用的外壳（I/O、数据库、网络）明确分开。&lt;/p&gt;
-&lt;p&gt;为什么这很重要？一个从数据库读数据、做计算、写日志全放在一个函数里的设计，形式化验证工具拿它没办法。但一个接收数据、返回结果、让调用者处理持久化的纯函数——model checker 能推理它。&lt;/p&gt;
-&lt;p&gt;这个边界必须在规格阶段就画好。因为它决定了模块划分、依赖方向和后面的整个测试策略。&lt;/p&gt;
-&lt;p&gt;Adversary 在任何测试写出来之前就审查规格。它找歧义、找缺失的边界条件、找没说出来的隐含假设、找自相矛盾的地方。&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;阶段二红灯绿灯重构&quot;&gt;阶段二：红灯、绿灯、重构&lt;/h3&gt;&lt;/div&gt;
-&lt;p&gt;规格锁定之后，Builder 写测试。只写测试，不写实现。每个后置条件变成一个断言，每个边界条件变成一个测试。&lt;/p&gt;
-&lt;p&gt;所有测试必须先失败。如果某个测试没写实现就通过了，这个测试有问题。&lt;/p&gt;
-&lt;p&gt;然后：拿下一个失败的测试，写刚好让它通过的最少代码，跑全套测试，重复。经典 TDD，由 AI 执行。&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;阶段三过火焰山&quot;&gt;阶段三：过火焰山&lt;/h3&gt;&lt;/div&gt;
-&lt;p&gt;通过测试的代码库连同规格和测试一起交给 Adversary。全新的上下文窗口。&lt;/p&gt;
-&lt;p&gt;Adversary 查什么：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;实现真的满足规格了吗？还是测试把一个误解编码进去了？&lt;/li&gt;
-&lt;li&gt;有没有同义反复的测试——实现稍微改一下它也照样通过？&lt;/li&gt;
-&lt;li&gt;隐藏耦合、竞态条件、漏掉的资源清理&lt;/li&gt;
-&lt;li&gt;输入校验缺口、注入向量&lt;/li&gt;
-&lt;li&gt;代码里有的行为但规格里没提到的&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;不许写”整体不错”。每条反馈必须是一个具体缺陷，带具体位置。&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;阶段四反馈循环&quot;&gt;阶段四：反馈循环&lt;/h3&gt;&lt;/div&gt;
-&lt;p&gt;Adversary 的意见按类型回流：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;规格级缺陷 → 回到阶段一，改规格，重新审查&lt;/li&gt;
-&lt;li&gt;测试级缺陷 → 修测试，确认它会失败，再修实现&lt;/li&gt;
-&lt;li&gt;新发现的边界条件 → 加进规格，写失败测试，写实现&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;循环到收敛为止。&lt;/p&gt;
-&lt;div&gt;&lt;h3 id=&quot;阶段五形式化验证&quot;&gt;阶段五：形式化验证&lt;/h3&gt;&lt;/div&gt;
-&lt;p&gt;因为架构从阶段一开始就是按可验证性设计的：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;形式化证明（Kani、Dafny、TLA+）&lt;/li&gt;
-&lt;li&gt;结构化模糊测试（AFL++、cargo-fuzz）&lt;/li&gt;
-&lt;li&gt;变异测试（mutmut、Stryker）&lt;/li&gt;
-&lt;li&gt;纯度边界审计&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;&lt;h3 id=&quot;阶段六收敛&quot;&gt;阶段六：收敛&lt;/h3&gt;&lt;/div&gt;
-&lt;p&gt;四个维度同时收敛才算完：&lt;/p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;维度&lt;/th&gt;&lt;th&gt;收敛信号&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;规格&lt;/td&gt;&lt;td&gt;Adversary 挑的毛病只剩措辞问题&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;测试&lt;/td&gt;&lt;td&gt;Adversary 找不出有意义的未测试场景&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;实现&lt;/td&gt;&lt;td&gt;Adversary 被迫捏造代码中不存在的问题&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;验证&lt;/td&gt;&lt;td&gt;所有形式化证明通过，fuzzer 啥也没找到&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
-&lt;p&gt;这叫”幻觉终止”——对手必须靠幻觉来凑缺陷，因为真的缺陷已经找不到了。达到这个状态的软件被称为 “Zero-Slop”。&lt;/p&gt;
-&lt;div&gt;&lt;h2 id=&quot;对-ai-辅助开发意味着什么&quot;&gt;对 AI 辅助开发意味着什么&lt;/h2&gt;&lt;/div&gt;
-&lt;p&gt;核心洞察：AI 的礼貌是系统性风险。&lt;/p&gt;
-&lt;p&gt;用合作型 AI 去审查合作型 AI 的产出，就像让朋友给你批改作业。能找到一些错，但需要对抗性思维才能发现的错——找不到。&lt;/p&gt;
-&lt;p&gt;VSDD 让 AI 对抗 AI。不同模型，新鲜上下文，零容忍。这不是 code review，这是压力测试。&lt;/p&gt;
-&lt;p&gt;而人在这个过程中不是被替代了。你是架构师——审批规格、仲裁争议、做 AI 无法替代的判断。你的角色是被抬高了。&lt;/p&gt;
-&lt;div&gt;&lt;h2 id=&quot;什么时候用什么时候不用&quot;&gt;什么时候用，什么时候不用&lt;/h2&gt;&lt;/div&gt;
-&lt;p&gt;VSDD 仪式感很重。值得投入的场景：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;正确性不能妥协的系统（金融、医疗、基础设施）&lt;/li&gt;
-&lt;li&gt;需要长期维护的代码库&lt;/li&gt;
-&lt;li&gt;安全是核心关注点&lt;/li&gt;
-&lt;li&gt;团队有多个可用的 AI 模型&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;快速原型或者一次性脚本不需要这套。但即使只加阶段三——拿另一个 AI 做一轮零容忍审查——也能抓到不少隐藏债务。&lt;/p&gt;
-&lt;div&gt;&lt;h2 id=&quot;怎么开始&quot;&gt;怎么开始&lt;/h2&gt;&lt;/div&gt;
-&lt;p&gt;不用明天就搞全六个阶段。先加一个：&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;做一次对抗性审查。&lt;/strong&gt; 下次完成一个功能后，开一个新对话，用不同的 AI 模型。给它零容忍指令。把规格、测试、代码全贴进去。看它找出什么。&lt;/p&gt;
-&lt;p&gt;大多数试过的开发者会对结果感到不舒服。这种不舒服就对了——说明现有流程有盲区，而你现在知道盲区在哪了。&lt;/p&gt;
-&lt;div&gt;&lt;h2 id=&quot;完整可追溯性&quot;&gt;完整可追溯性&lt;/h2&gt;&lt;/div&gt;
-&lt;p&gt;VSDD 最强的属性之一：每个产物都能追溯。&lt;/p&gt;
-&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;规格 → 验证属性 → 追踪的 Issue → 测试用例 → 代码实现 → 对抗性审查 → 形式化证明&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div aria-live=&quot;polite&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;p&gt;问”这行代码为什么存在？“能追溯到一条具体的规格需求。问”这个模块为什么是纯函数？“答案追溯到阶段一的纯度边界图。&lt;/p&gt;
-&lt;p&gt;没有无缘无故的代码。没有缺少证据的理由。&lt;/p&gt;
-&lt;div&gt;&lt;h2 id=&quot;参考链接&quot;&gt;参考链接&lt;/h2&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://gist.github.com/dollspace-gay/d8d3bc3ecf4188df049d7a4726bb2a00&quot;&gt;Verified Spec-Driven Development 原始文档&lt;/a&gt; — dollspace-gay, gitcnd, jtremback&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/model-checking/kani&quot;&gt;Kani — Rust 模型检查器&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/dafny-lang/dafny&quot;&gt;Dafny — 验证感知编程语言&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://lamport.azurewebsites.net/tla/tla.html&quot;&gt;TLA+ — 形式规格语言&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://aflplus.plus/&quot;&gt;AFL++ — 模糊测试框架&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://stryker-mutator.io/&quot;&gt;Stryker — 变异测试&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content:encoded><category>VSDD</category><category>TDD</category><category>AI 开发</category><category>代码质量</category><category>软件方法论</category><category>对抗性审查</category></item></channel></rss>
+&lt;strong&gt;Next Review:&lt;/strong&gt; May 5, 2026 (Q1 2026 Earnings).&lt;/p&gt;</content:encoded><category>Finance</category><category>Palantir</category><category>NASDAQ: PLTR</category><category>US Stock Market</category><category>AI</category><category>Big Data</category></item></channel></rss>
