@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="120" y1="40" x2="1500" y2="860" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#06111e"/>
+      <stop offset="0.54" stop-color="#0b1932"/>
+      <stop offset="1" stop-color="#020712"/>
+    </linearGradient>
+    <linearGradient id="cyanGlow" x1="250" y1="180" x2="1120" y2="760" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#25d9ff" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#1e7fff" stop-opacity="0.16"/>
+    </linearGradient>
+    <linearGradient id="amberGlow" x1="890" y1="120" x2="1320" y2="820" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffae4a" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#ff6476" stop-opacity="0.16"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="260" y1="220" x2="1160" y2="720" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#11243f" stop-opacity="0.92"/>
+      <stop offset="1" stop-color="#08111e" stop-opacity="0.96"/>
+    </linearGradient>
+    <filter id="blur" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="28"/>
+    </filter>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="28" flood-color="#000000" flood-opacity="0.45"/>
+    </filter>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M 48 0 H 0 V 48" stroke="#7adfff" stroke-opacity="0.08" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#grid)"/>
+
+  <circle cx="344" cy="222" r="202" fill="#17c6ff" fill-opacity="0.16" filter="url(#blur)"/>
+  <circle cx="1238" cy="178" r="178" fill="#ff9b3d" fill-opacity="0.16" filter="url(#blur)"/>
+  <circle cx="1168" cy="660" r="262" fill="#ff5470" fill-opacity="0.08" filter="url(#blur)"/>
+
+  <path d="M176 642C334 520 436 480 610 464C767 449 908 474 1038 520C1149 559 1254 596 1420 534" stroke="#25d9ff" stroke-opacity="0.35" stroke-width="4" stroke-linecap="round"/>
+  <path d="M214 690C382 602 498 564 647 553C785 542 926 566 1072 628C1185 676 1310 700 1444 648" stroke="#ffae4a" stroke-opacity="0.28" stroke-width="4" stroke-linecap="round"/>
+
+  <g filter="url(#shadow)">
+    <rect x="210" y="175" width="1180" height="550" rx="36" fill="url(#panel)" stroke="#6ddcff" stroke-opacity="0.18"/>
+    <rect x="246" y="210" width="310" height="470" rx="28" fill="#0d1729" stroke="#25d6ff" stroke-opacity="0.18"/>
+    <rect x="594" y="210" width="412" height="470" rx="28" fill="#0d1729" stroke="#ffffff" stroke-opacity="0.10"/>
+    <rect x="1038" y="210" width="316" height="470" rx="28" fill="#0d1729" stroke="#ff9d44" stroke-opacity="0.18"/>
+  </g>
+
+  <g opacity="0.95">
+    <rect x="282" y="258" width="140" height="28" rx="14" fill="#143554"/>
+    <rect x="282" y="304" width="214" height="20" rx="10" fill="#1f3958"/>
+    <rect x="282" y="336" width="184" height="20" rx="10" fill="#1f3958"/>
+    <rect x="282" y="392" width="210" height="58" rx="20" fill="#102847"/>
+    <rect x="282" y="468" width="168" height="20" rx="10" fill="#1f3958"/>
+    <rect x="282" y="500" width="228" height="20" rx="10" fill="#1f3958"/>
+    <rect x="282" y="560" width="198" height="58" rx="20" fill="#102847"/>
+  </g>
+
+  <g opacity="0.96">
+    <rect x="642" y="254" width="232" height="42" rx="18" fill="#173455"/>
+    <rect x="642" y="316" width="296" height="18" rx="9" fill="#203d5f"/>
+    <rect x="642" y="348" width="260" height="18" rx="9" fill="#203d5f"/>
+    <rect x="642" y="404" width="176" height="50" rx="18" fill="#102847"/>
+    <rect x="842" y="404" width="126" height="50" rx="18" fill="#1b3b60"/>
+    <rect x="642" y="478" width="284" height="18" rx="9" fill="#203d5f"/>
+    <rect x="642" y="510" width="236" height="18" rx="9" fill="#203d5f"/>
+    <rect x="642" y="562" width="310" height="82" rx="24" fill="#0f2745"/>
+  </g>
+
+  <g opacity="0.96">
+    <rect x="1078" y="258" width="168" height="30" rx="15" fill="#5a3110"/>
+    <rect x="1078" y="304" width="208" height="20" rx="10" fill="#3a3640"/>
+    <rect x="1078" y="336" width="176" height="20" rx="10" fill="#3a3640"/>
+    <rect x="1078" y="392" width="214" height="62" rx="22" fill="#33210f"/>
+    <rect x="1078" y="478" width="250" height="20" rx="10" fill="#3a3640"/>
+    <rect x="1078" y="510" width="194" height="20" rx="10" fill="#3a3640"/>
+    <rect x="1078" y="562" width="206" height="82" rx="24" fill="#40240f"/>
+  </g>
+
+  <g stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <path d="M528 396 C 594 396, 610 396, 642 396" stroke="#25d9ff" stroke-width="5"/>
+    <path d="M528 444 C 588 444, 606 444, 642 444" stroke="#ffae4a" stroke-width="5"/>
+    <path d="M958 396 C 1012 396, 1032 396, 1078 396" stroke="#25d9ff" stroke-width="5"/>
+    <path d="M958 448 C 1014 448, 1030 448, 1078 448" stroke="#ffae4a" stroke-width="5"/>
+    <path d="M800 332 C 800 360, 800 372, 800 404" stroke="#ffffff" stroke-opacity="0.32" stroke-width="4"/>
+    <path d="M800 454 C 800 488, 800 504, 800 560" stroke="#ffffff" stroke-opacity="0.22" stroke-width="4"/>
+    <path d="M800 404 L 760 372" stroke="#25d9ff" stroke-opacity="0.65" stroke-width="4"/>
+    <path d="M800 404 L 842 372" stroke="#25d9ff" stroke-opacity="0.65" stroke-width="4"/>
+    <path d="M800 454 L 760 490" stroke="#ffae4a" stroke-opacity="0.65" stroke-width="4"/>
+    <path d="M800 454 L 842 490" stroke="#ffae4a" stroke-opacity="0.65" stroke-width="4"/>
+  </g>
+
+  <g>
+    <circle cx="800" cy="378" r="54" fill="#0f2745" stroke="#25d9ff" stroke-opacity="0.42" stroke-width="4"/>
+    <circle cx="800" cy="378" r="18" fill="#25d9ff" fill-opacity="0.78"/>
+    <circle cx="800" cy="454" r="54" fill="#331d0d" stroke="#ffae4a" stroke-opacity="0.42" stroke-width="4"/>
+    <circle cx="800" cy="454" r="18" fill="#ffae4a" fill-opacity="0.78"/>
+  </g>
+
+  <g opacity="0.95">
+    <rect x="246" y="118" width="224" height="48" rx="18" fill="#10233d" stroke="#25d9ff" stroke-opacity="0.18"/>
+    <text x="278" y="150" fill="#d9f7ff" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700">Superpowers</text>
+    <rect x="1294" y="118" width="180" height="48" rx="18" fill="#2a180b" stroke="#ff9a3d" stroke-opacity="0.22"/>
+    <text x="1321" y="150" fill="#ffe5cf" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700">v6.0.3</text>
+  </g>
+
+  <g>
+    <text x="246" y="792" fill="#f6fbff" font-family="Inter, Arial, sans-serif" font-size="58" font-weight="800" letter-spacing="-0.02em">Changelog</text>
+    <text x="246" y="846" fill="#b9c7db" font-family="Inter, Arial, sans-serif" font-size="27" font-weight="500">.git protection, SDD workspace and recovery</text>
+  </g>
+</svg>
