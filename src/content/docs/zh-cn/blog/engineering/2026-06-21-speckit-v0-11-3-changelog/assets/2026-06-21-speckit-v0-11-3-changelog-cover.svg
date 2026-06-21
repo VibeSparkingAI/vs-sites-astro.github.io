@@ -1,0 +1,52 @@
+<svg width="900" height="383" viewBox="0 0 900 383" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="900" y2="383" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0B1020"/>
+      <stop offset="1" stop-color="#121A33"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="110" y1="50" x2="790" y2="330" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#57E6C2"/>
+      <stop offset="1" stop-color="#7AA7FF"/>
+    </linearGradient>
+    <linearGradient id="chip" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#1D294D" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#121A33" stop-opacity="0.95"/>
+    </linearGradient>
+    <filter id="glow" x="-40" y="-40" width="980" height="463" filterUnits="userSpaceOnUse">
+      <feGaussianBlur stdDeviation="14" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="1 0 0 0 0.18  0 1 0 0 0.44  0 0 1 0 0.95  0 0 0 0.36 0"/>
+    </filter>
+  </defs>
+
+  <rect width="900" height="383" rx="28" fill="url(#bg)"/>
+  <circle cx="740" cy="80" r="120" fill="#1B3D74" fill-opacity="0.35" filter="url(#glow)"/>
+  <circle cx="150" cy="310" r="110" fill="#2E8F74" fill-opacity="0.18" filter="url(#glow)"/>
+  <path d="M68 280C190 220 286 240 384 182C486 121 615 104 834 56" stroke="url(#accent)" stroke-width="6" stroke-linecap="round"/>
+  <path d="M68 289C194 232 293 253 390 196C489 139 618 123 834 76" stroke="#59E0C2" stroke-opacity="0.12" stroke-width="14" stroke-linecap="round"/>
+
+  <rect x="64" y="60" width="116" height="38" rx="19" fill="url(#chip)" stroke="#2D3A65"/>
+  <text x="122" y="84" text-anchor="middle" fill="#A7F3E2" font-family="Inter, system-ui, sans-serif" font-size="16" font-weight="700" letter-spacing="0.2em">RELEASE</text>
+
+  <text x="64" y="160" fill="#F4F7FF" font-family="Inter, system-ui, sans-serif" font-size="54" font-weight="800">Spec Kit v0.11.3</text>
+  <text x="64" y="214" fill="#D6DEFF" font-family="Inter, system-ui, sans-serif" font-size="28" font-weight="700">Changelog</text>
+  <text x="64" y="250" fill="#A8B7E8" font-family="Inter, system-ui, sans-serif" font-size="18" font-weight="500">扩展隔离 · 任务转 Issue · /analyze 子代理</text>
+
+  <g transform="translate(64 286)">
+    <rect width="150" height="34" rx="17" fill="#152040" stroke="#30426F"/>
+    <text x="75" y="22" text-anchor="middle" fill="#EAF2FF" font-family="Inter, system-ui, sans-serif" font-size="15" font-weight="600">Stable Release</text>
+    <rect x="164" width="132" height="34" rx="17" fill="#152040" stroke="#30426F"/>
+    <text x="230" y="22" text-anchor="middle" fill="#EAF2FF" font-family="Inter, system-ui, sans-serif" font-size="15" font-weight="600">GitHub CLI</text>
+    <rect x="308" width="140" height="34" rx="17" fill="#152040" stroke="#30426F"/>
+    <text x="378" y="22" text-anchor="middle" fill="#EAF2FF" font-family="Inter, system-ui, sans-serif" font-size="15" font-weight="600">Agent Safety</text>
+  </g>
+
+  <g opacity="0.9">
+    <rect x="682" y="118" width="154" height="106" rx="20" fill="#121A33" fill-opacity="0.88" stroke="#31508F"/>
+    <path d="M710 154H809" stroke="#57E6C2" stroke-width="3" stroke-linecap="round"/>
+    <path d="M710 176H781" stroke="#7AA7FF" stroke-width="3" stroke-linecap="round"/>
+    <path d="M710 198H766" stroke="#A7B7FF" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="734" cy="138" r="8" fill="#57E6C2"/>
+    <circle cx="756" cy="138" r="8" fill="#7AA7FF"/>
+    <circle cx="778" cy="138" r="8" fill="#F2D15D"/>
+  </g>
+</svg>
