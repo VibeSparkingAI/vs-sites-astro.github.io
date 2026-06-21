@@ -1,0 +1,22 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="900" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#08111F"/>
+      <stop offset="1" stop-color="#0F2A3A"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="260" y1="200" x2="1380" y2="720" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#56E39F"/>
+      <stop offset="1" stop-color="#8FD3FF"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="1320" cy="180" r="260" fill="#56E39F" fill-opacity="0.10"/>
+  <circle cx="240" cy="740" r="220" fill="#8FD3FF" fill-opacity="0.10"/>
+  <rect x="120" y="120" width="1360" height="660" rx="44" stroke="url(#accent)" stroke-width="2" stroke-opacity="0.36"/>
+  <text x="180" y="260" fill="#8FD3FF" font-family="Inter, ui-sans-serif, system-ui, -apple-system, sans-serif" font-size="34" letter-spacing="4">OPENSPEC</text>
+  <text x="180" y="395" fill="#F5FAFF" font-family="Inter, ui-sans-serif, system-ui, -apple-system, sans-serif" font-size="92" font-weight="700">v1.4.1</text>
+  <text x="180" y="480" fill="#F5FAFF" font-family="Inter, ui-sans-serif, system-ui, -apple-system, sans-serif" font-size="54" font-weight="600">Changelog</text>
+  <text x="180" y="565" fill="#C9D7E8" font-family="Inter, ui-sans-serif, system-ui, -apple-system, sans-serif" font-size="30">workspace.yaml hotfix and v1.4.0 ecosystem recap</text>
+  <rect x="180" y="640" width="240" height="8" rx="4" fill="url(#accent)"/>
+  <text x="180" y="710" fill="#8FD3FF" font-family="Inter, ui-sans-serif, system-ui, -apple-system, sans-serif" font-size="24" letter-spacing="2">VIBESPARKING / ENGINEERING</text>
+</svg>
