@@ -1,162 +1,189 @@
 ---
 date: 2026-06-18
 slug: en/blog/ai/2026-06-18-claude-code-2.1.181-changelog
-title: "Claude Code 2.1.181 Changelog Deep Analysis"
+title: "Claude Code 2.1.181 Changelog: Configuration, Apple Events, and a Calmer Subagent Panel"
 tags:
   - Claude Code
   - Changelog
+  - AI Agent
   - macOS
-  - Automation
   - Subagents
-  - Stability
-description: "2.1.181 adds /config, Apple Events opt-in, presence-file push suppression, and a broad set of stability fixes."
+  - Configuration
+description: "2.1.181 adds /config, Apple Events opt-in, a presence file, Bun 1.4, and fixes streaming and stability regressions."
 image: ./assets/2026-06-18-claude-code-2.1.181-changelog-cover.png
 source_url: https://www.vibesparking.com/en/blog/ai/2026-06-18-claude-code-2.1.181-changelog/
 author: AI 灵感闪现
-cover: /Users/blogbin/WorkSpaces/VibeSparking/vs-sites/vs-sites-astro/.openclaw/workspace/src/content/docs/en/blog/ai/2026-06-18-claude-code-2.1.181-changelog/assets/2026-06-18-claude-code-2.1.181-changelog-cover.png
+cover:
+  alt: "Claude Code 2.1.181 release highlights infographic"
+  image: ./assets/2026-06-18-claude-code-2.1.181-changelog-cover.png
 ---
 
 ![Claude Code 2.1.181 release highlights illustration](./assets/2026-06-18-claude-code-2.1.181-changelog-illustration.png)
 
-# Claude Code 2.1.181 Changelog Deep Analysis
+# Claude Code 2.1.181 Changelog: Configuration, Apple Events, and a Calmer Subagent Panel
 
-> Published from the source report detection time: 2026-06-18
-> Release under review: 2.1.181
-
----
+> Published: 2026-06-18  
+> Release under review: `2.1.181`  
+> Source: Claude Code official `CHANGELOG.md`
 
 ## 1. TL;DR
 
 The six most important things in this release:
 
-1. `/config key=value` is new, so any setting can now be changed directly from the prompt in interactive mode, `-p`, and Remote Control.
-2. macOS automation got a useful missing piece: `sandbox.allowAppleEvents` is now opt-in, and `open`, `osascript`, and browser auth flows no longer trip over Apple Events error `-600`.
-3. `CLAUDE_CLIENT_PRESENCE_FILE` lets you suppress mobile push notifications while you are already at the machine.
-4. The bundled Bun runtime is now 1.4, long paragraphs stream line by line, and the subagent panel is much quieter.
-5. A long list of stability issues was fixed: prompt caching, network-drive and cloud-synced writes, startup stalls, corrupted config, macOS TUI freezes, transcript cleanup, runaway nested subagents, AWS credential refresh, and MCP connection-state bugs.
-6. Interaction polish improved too: `/recap`, `/stats`, AskUserQuestion, copy/paste, retry indicators, and a few other rough edges are all a bit cleaner.
+1. New `/config key=value` syntax lets you change any setting directly in interactive sessions, `-p`, and Remote Control.
+2. New `sandbox.allowAppleEvents` opt-in fixes macOS Apple Events error -600 for `open`, `osascript`, and browser-based auth flows.
+3. New `CLAUDE_CLIENT_PRESENCE_FILE` lets you suppress mobile push notifications when you are already at the machine.
+4. The bundled Bun runtime is now 1.4, and long paragraphs stream line by line instead of waiting for the first line break.
+5. The subagent panel is quieter: idle subagents auto-hide after 30 seconds, the list caps at 5 rows, and scroll hints are shown.
+6. Stability fixes land across prompt caching, network-drive writes, startup hangs, corrupted config, long-session cleanup, MCP status, and AWS credential refreshes.
 
-One line: **2.1.181 is a maintenance release centered on local automation, long-session stability, and interaction cleanup.**
+One line: **2.1.181 is not a flashy feature release; it is a release that makes configuration, macOS automation, and long-session UX feel better all at once.**
 
 ## 2. What this release is really about
 
-Claude Code 2.1.181 is not trying to ship the flashiest headline feature. It keeps tightening the places that usually break in real workflows:
+If you compress 2.1.181 into one theme, it is this:
 
-- runtime config changes
+**make it easier to change things on the fly, and less likely for Claude Code to stumble on macOS or in long sessions.**
+
+There is no single headline feature here. Instead, the release touches a lot of high-frequency scenarios:
+
+- temporary config changes
 - macOS automation and browser auth
-- push-notification noise control
-- long-form streaming and subagent UI
-- network-drive writes and session recovery
+- notification noise across devices
+- long-paragraph streaming
+- subagent panel readability
+- network drives, cloud-synced folders, and long-session stability
 
-If you wire Claude Code into OpenClaw, remote Macs, automation scripts, or multi-session workflows, this release is more valuable than it may first appear.
+That kind of work is easy to overlook, but it changes how usable the tool feels every day.
 
 ## 3. The important changes
 
-### 3.1 `/config key=value` makes in-session tuning first-class
+### 3.1 `/config key=value`: temporary settings without leaving the session
 
-The most direct new capability here is `/config key=value`.
-
-In practice, you can now change any setting from an interactive session, `-p`, or Remote Control without jumping through a heavier config path. For example:
+The biggest new entry point is straightforward:
 
 ```text
 /config thinking=false
 ```
 
-That is a useful shift for temporary model tuning, sandbox changes, or team defaults. The important part is not just that the command exists, but that runtime config now feels like part of the prompt surface.
+It works in:
 
-### 3.2 macOS automation finally gets the Apple Events piece
+- interactive sessions
+- `-p`
+- Remote Control
 
-This release fills in a major macOS automation gap:
+This matters because temporary configuration used to require extra steps: editing files, changing wrapper commands, or restarting with a different flag set. Now you can make a quick adjustment in context.
 
-- `sandbox.allowAppleEvents` is now opt-in
-- `open` failures are fixed
-- `osascript` failures are fixed
-- browser auth flows no longer hit Apple Events error `-600`
+That is especially useful when you want to:
 
-If your workflow depends on the system browser, OAuth redirects, AppleScript, or local automation, this should mean far fewer mysterious failures. For heavy Mac users, this is a real reliability improvement.
+- turn off thinking for one task
+- tweak sandbox behavior temporarily
+- override a team convention for a single run
 
-### 3.3 Presence-based push suppression is now possible
+For power users, this is far more useful than another button in the UI.
 
-`CLAUDE_CLIENT_PRESENCE_FILE` is tiny, but it matters.
+### 3.2 `sandbox.allowAppleEvents`: macOS automation gets a real fix
 
-You can point Claude Code at a marker file and use it to suppress mobile push notifications while you are already sitting at the machine. That is especially useful for:
+This release adds the `sandbox.allowAppleEvents` opt-in setting.
 
-- desktop-heavy daily development
-- long-running agent / cron / heartbeat workflows
-- reducing notification noise when you do not need cross-device alerts
+The direct impact is that `open`, `osascript`, and browser auth flows on macOS are much less likely to hit Apple Events error -600.
 
-The feature is not about turning notifications on. It is about knowing when not to send them.
+If your workflows depend on:
 
-### 3.4 Runtime and interaction polish are noticeably better
+- launching the system browser for OAuth
+- AppleScript-based local automation
+- sandboxed commands talking to macOS apps
 
-The release also makes the tool feel smoother:
+then this is a meaningful fix.
 
-- bundled Bun is now 1.4
-- long paragraphs stream line by line instead of waiting for the first line break
-- the subagent panel auto-hides after 30 seconds of idleness
-- the list is capped at 5 rows and shows scroll hints
-- keyboard hints in the footer are clearer
+The important part is that it is still opt-in. Claude Code gets stronger automation capability, but the default sandbox boundary is not blown open.
 
-None of those are huge headline features on their own, but together they make the CLI feel less blocking and more like something you can keep open all day.
+### 3.3 `CLAUDE_CLIENT_PRESENCE_FILE`: tell the client you are already there
 
-### 3.5 A lot of long-tail stability bugs were fixed at once
+The new `CLAUDE_CLIENT_PRESENCE_FILE` environment variable is a small change with a very practical effect.
 
-The real value in this release is the fix list:
+Point it at a marker file, and the client can suppress mobile push notifications while you are already sitting at the machine.
 
-- prompt caching on custom `ANTHROPIC_BASE_URL` and Foundry
+That is a great fit for long-running agent users:
+
+- you do not want your phone buzzing when the desktop is already active
+- you want fewer duplicate alerts across devices
+- you care about “notify me when it matters”, not “notify me again”
+
+It is basically a lightweight presence signal.
+
+### 3.4 Bun 1.4, line-by-line streaming, and a calmer subagent panel
+
+Three quality-of-life improvements land together here:
+
+1. the bundled Bun runtime moves to 1.4
+2. long paragraphs stream line by line
+3. the subagent panel is quieter, auto-hiding after 30 seconds and capping the list at 5 rows
+
+None of those are flashy on their own, but they change the feel of the product quite a bit.
+
+The subagent panel change is especially sensible. If you run multiple subagents at once, the biggest problem is usually not lack of information, but too much noise. This makes the panel behave more like a temporary control surface and less like a permanent attention sink.
+
+### 3.5 Stability fixes: a round of common pain points
+
+The stability work in this release is worth calling out separately:
+
+- prompt caching on `ANTHROPIC_BASE_URL` and Foundry
 - 0-byte or truncated writes on network drives and cloud-synced folders
-- launch stalls and slow-network startup blocking
+- startup slowdowns and blank waits on degraded networks
 - startup crashes when `.claude.json` is corrupted
-- macOS TUI freezing when Spotlight is busy
-- 30-day transcript cleanup accidentally deleting long-lived history
-- runaway nested subagents launched from the foreground
-- model reuse issues after `/recap` or a model switch
-- subagent thinking duration, waiting state, and retry indicator cleanup
-- AWS `awsCredentialExport` refresh timing
-- `claude mcp get/list` status handling when `tools/list` fails
-- stale `connecting…` text in `/remote-control`
+- macOS TUI freezes when Spotlight is busy reindexing
+- idle long-running sessions losing history during transcript cleanup
+- unbounded nested chains from foreground subagents
+- too-frequent AWS credential refreshes
+- inaccurate `claude mcp get/list` connected state when tools/list fails
 
-These are not flashy features. They are the kind of bugs that decide whether a CLI feels production-grade once you use it for real.
+These are the kinds of fixes that do not get much attention in a product launch, but they matter a lot if you automate heavily or keep sessions alive for a long time.
 
-## 4. What this means for OpenClaw users
+## 4. What you will actually notice
 
-If you use Claude Code as the local execution engine, subagent orchestrator, or publishing tool inside OpenClaw, this release is especially relevant:
+### 4.1 Fullscreen URL opening behavior changed
 
-- `/config` makes mid-task tuning lighter
-- `CLAUDE_CLIENT_PRESENCE_FILE` reduces desktop notification noise
-- Apple Events and browser auth fixes improve success rates on macOS automation
-- network-drive and cloud-sync write fixes are safer for synced repos, vaults, and workspaces
-- subagent nesting, MCP state, and long-session history fixes reduce the chance of unattended jobs falling over
+In fullscreen mode, opening URLs now requires:
 
-In other words: this release is less about being flashier and more about running longer.
+- macOS: `Cmd + click`
+- other terminals: `Ctrl + click`
 
-## 5. Before and after upgrading
+That aligns with native terminal behavior. If you were used to direct clicking, this will take a tiny muscle-memory adjustment.
 
-Before upgrading, check whether you depend on:
+### 4.2 `Improved N memories` no longer lists individual files by default
 
-- older config-editing workflows
-- macOS automation that uses `open`, `osascript`, or browser OAuth
-- network drives, iCloud, Syncthing, or other sync targets
-- long transcript history, subagent panels, or MCP status output for automation
+This makes the normal transcript cleaner. But if you were parsing that line in automation, you will need verbose mode or a different source.
 
-After upgrading, it is worth smoke-testing:
+### 4.3 API drops mid-thinking now auto-retry
 
-- `/config thinking=false`
-- one browser auth flow
-- a minimal write into a synced directory
-- one `mcp get/list` path
-- one long-session recovery and one subagent path
+If the connection drops while Claude Code is thinking, it will retry instead of stopping at “Connection closed while thinking”.
+
+That is a better default for users, although it means troubleshooting network issues now requires paying attention to retry indicators.
+
+### 4.4 `claude mcp get/list` reports a more truthful status
+
+Earlier versions could show “connected” even when tools/list failed. Now the tool reports `tools fetch failed` more explicitly.
+
+That is the kind of detail that saves a lot of time when you are debugging MCP.
+
+## 5. Risks and suggestions
+
+1. `/config` makes temporary overrides easier, so teams should clarify which settings may be changed in-session, especially `sandbox`, `thinking`, and `model`.
+2. `sandbox.allowAppleEvents` is opt-in, but once enabled it expands what sandboxed commands can do on macOS, so use it minimally.
+3. `CLAUDE_CLIENT_PRESENCE_FILE` is great for reducing noise, but you should define what “present at the machine” means in your own workflow.
+4. If your scripts depend on old URL-click behavior, the `Improved N memories` line, or `claude mcp get/list` output, run a smoke test first.
 
 ## 6. Conclusion
 
-Claude Code 2.1.181 is not a flashy release, but it does a lot of the work that makes a tool feel trustworthy.
+Claude Code 2.1.181 feels like a release that makes everyday use smoother.
 
-It tightens the boundaries further:
+Its most important change is not a single huge feature. It strengthens three things at once:
 
-- config changes are direct
-- macOS automation is steadier
-- notification control is more precise
-- long output streams more smoothly
-- writes and recovery behave more reliably
+- temporary configuration is easier
+- macOS automation is more complete
+- long sessions and multiple subagents are quieter and more stable
 
-If Claude Code is already part of your day-to-day workflow, this is a good version to keep pace with.
+If you only care about headline features, this release may look modest.
+
+If you care about the amount of friction you hit every day, it is absolutely worth the upgrade.

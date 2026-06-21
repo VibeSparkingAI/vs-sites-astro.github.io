@@ -1,162 +1,185 @@
 ---
 date: 2026-06-18
 slug: zh-cn/blog/ai/2026-06-18-claude-code-2.1.181-changelog
-title: "Claude Code 2.1.181 Changelog 深度分析"
+title: "Claude Code 2.1.181：配置入口、macOS 自动化和子代理面板一起升级"
 tags:
   - Claude Code
   - Changelog
+  - AI Agent
   - macOS
-  - Automation
   - Subagents
-  - Stability
-description: "2.1.181 补齐 /config、Apple Events、在线状态控制和长会话稳定性，重点修复本机自动化与写入边界。"
+  - Configuration
+description: "2.1.181 新增 /config、Apple Events opt-in、presence file、Bun 1.4，并修复长段落流式输出与多处稳定性问题。"
 image: ./assets/2026-06-18-claude-code-2.1.181-changelog-cover.png
 source_url: https://www.vibesparking.com/zh-cn/blog/ai/2026-06-18-claude-code-2.1.181-changelog/
 author: AI 灵感闪现
-cover: /Users/blogbin/WorkSpaces/VibeSparking/vs-sites/vs-sites-astro/.openclaw/workspace/src/content/docs/zh-cn/blog/ai/2026-06-18-claude-code-2.1.181-changelog/assets/2026-06-18-claude-code-2.1.181-changelog-cover.png
+cover:
+  alt: "Claude Code 2.1.181 版本要点信息图"
+  image: ./assets/2026-06-18-claude-code-2.1.181-changelog-cover.png
 ---
 
-![Claude Code 2.1.181 版本要点信息图](./assets/2026-06-18-claude-code-2.1.181-changelog-illustration.png)
+![Claude Code 2.1.181 版本要点插图](./assets/2026-06-18-claude-code-2.1.181-changelog-illustration.png)
 
-# Claude Code 2.1.181 Changelog 深度分析
+# Claude Code 2.1.181：配置入口、macOS 自动化和子代理面板一起升级
 
-> 发布日期：2026-06-18（源报告检测时间）
-> 覆盖版本：2.1.181
-
----
+> 发布日期：2026-06-18  
+> 版本：`2.1.181`  
+> 来源：Claude Code 官方 `CHANGELOG.md`
 
 ## 一、TL;DR
 
-这版最值得看 6 件事：
+这版最值得看的 6 件事：
 
-1. 新增 `/config key=value`，可以直接在交互会话、`-p` 和 Remote Control 中改任意 setting，临时调模型、沙箱和团队约定更轻。
-2. macOS 自动化补齐了 `sandbox.allowAppleEvents` opt-in，同时修复 `open`、`osascript` 和浏览器认证流程里的 Apple Events error `-600`。
-3. 新增 `CLAUDE_CLIENT_PRESENCE_FILE`，可以在你人在电脑前时抑制移动端推送，减少多端通知噪音。
-4. 内置 Bun 升到 1.4，长段落会按行逐步流出，subagent 面板也更克制，空闲 30 秒后自动隐藏。
-5. 一串高频稳定性问题被集中修掉：prompt caching、网络盘/云同步写入、启动卡顿、损坏配置、macOS TUI 卡死、长会话清理、subagent 嵌套失控、AWS 凭证刷新和 MCP 连接状态。
-6. 交互细节也更顺手了：`/recap`、`/stats`、AskUserQuestion、复制粘贴、光标提示和 API retry 指示都更明确。
+1. 新增 `/config key=value`，可以在交互式会话、`-p` 和 Remote Control 里直接改任意 setting，临时调参更轻。
+2. 新增 `sandbox.allowAppleEvents` opt-in，修复 `open`、`osascript` 和浏览器认证流程里的 macOS Apple Events error -600。
+3. 新增 `CLAUDE_CLIENT_PRESENCE_FILE`，可以在你本人就在机器前时压制移动端推送，减少多端通知噪音。
+4. 内置 Bun 升到 1.4，长段落 streaming 改成逐行出现，体感上更像“边想边吐字”。
+5. subagent 面板更克制了：30 秒无操作自动隐藏，最多显示 5 行，并提供滚动提示。
+6. 一组稳定性修复集中补在 prompt caching、网络盘写文件、启动卡顿、配置损坏、长会话清理、MCP 状态和 AWS 凭证刷新上。
 
-一句话：**2.1.181 是一版非常偏“本机自动化 + 长会话稳定性 + 交互细节收口”的维护升级。**
+一句话：**2.1.181 不是功能爆炸版，而是把临时配置、本机自动化和长会话体验一起修顺的一版。**
 
-## 二、版本定位
+## 二、这版到底在修什么
 
-Claude Code 2.1.181 没有追求“发布时最显眼”的功能点，而是把真实工作流里最容易出问题的地方继续往前收紧：
+如果把 2.1.181 的 changelog 压缩成一个主题，那就是：**让 Claude Code 更容易“当场改”，也更少在 macOS 和长会话里翻车。**
 
-- 临时配置修改
+这版没有引入一个特别显眼的新主命令，但它碰到的都是高频真实场景：
+
+- 临时改配置
 - macOS 自动化和浏览器认证
-- 移动端通知控制
-- 长段落输出和 subagent 面板
-- 网络盘、云同步和长会话恢复
+- 多端通知噪音
+- 长段落输出体验
+- subagent 面板的可读性
+- 网络盘、云同步目录和长会话稳定性
 
-如果你把 Claude Code 接在 OpenClaw、远程机器、macOS 自动化脚本或者多会话工作流里，这版的价值会比表面看起来更高。
+这类更新通常不喧哗，但会直接影响你每天愿不愿意继续用。
 
-## 三、最重要的变化
+## 三、最重要的几处变化
 
-### 3.1 `/config key=value` 让会话内调参变成一等公民
+### 3.1 `/config key=value`：临时改 setting 终于不用绕远路
 
-这次最直接的新能力就是 `/config key=value`。
-
-以前很多调整都得靠改文件、重启会话或者走更重的配置入口；现在你可以直接在交互式会话、`-p` 甚至 Remote Control 里改任意 setting，比如：
+这次最直接的新入口就是：
 
 ```text
 /config thinking=false
 ```
 
-这对临时切换模型思考策略、沙箱参数、团队默认行为都很实用。它带来的变化不是“多了一个命令”，而是把运行时配置从旁路变成了前台能力。
+它可以在这些场景生效：
 
-### 3.2 macOS 自动化终于补上了 Apple Events 这块拼图
+- 交互式会话
+- `-p`
+- Remote Control
 
-这一版把 macOS 自动化链路补得很完整：
+这个变化的意义很大。以前你想临时改一个 setting，往往要去翻配置文件、改 wrapper、或者换一条启动命令。现在可以直接在会话里改，试验成本低很多。
 
-- 新增 `sandbox.allowAppleEvents` opt-in
-- 修复 `open` 调用失败
-- 修复 `osascript` 调用失败
-- 修复浏览器认证流程里的 Apple Events error `-600`
+更重要的是，它让一些临时决策更贴近上下文，例如：
 
-这意味着依赖系统浏览器、OAuth 跳转、AppleScript 或本地自动化的工作流，会比以前少很多莫名其妙的失败点。对重度 Mac 用户来说，这是实打实的可靠性提升。
+- 某个任务临时关掉 thinking
+- 某次执行临时调整 sandbox
+- 某个团队约定在会话里临时覆盖
 
-### 3.3 在线状态和通知噪音开始能被更精细地控制
+对重度用户来说，这会比“又加了一个按钮”更有用。
 
-`CLAUDE_CLIENT_PRESENCE_FILE` 是个很小但很实用的新增项。
+### 3.2 `sandbox.allowAppleEvents`：macOS 自动化终于补齐
 
-你可以通过一个 marker file 告诉 Claude Code：我现在就在机器前面，不需要把同一件事同步推到移动端。这个功能特别适合：
+这版新增了 `sandbox.allowAppleEvents` opt-in。
 
-- 桌面前高频切换的开发日常
-- 长时间运行的 agent / cron / heartbeat 场景
-- 不想被多端通知反复打断的时候
+它的直接收益是：`open`、`osascript` 和浏览器认证流程在 macOS 上不再轻易撞上 Apple Events error -600。
 
-它解决的不是“能不能通知”，而是“什么时候别通知”。
+如果你依赖这些工作流，典型场景会是：
 
-### 3.4 运行时和交互体验都更顺了
+- 打开系统浏览器做 OAuth
+- 用 AppleScript 做本机自动化
+- 让 sandboxed command 跟 macOS 应用交互
 
-这版还顺手做了几处明显能感知到的 UX 改进：
+这次修复说明 Claude Code 在 macOS 本机工作流上的支持继续补得更完整了，但它仍然保持了 opt-in 的边界。也就是说，能力变强了，但默认安全边界没有被粗暴打穿。
 
-- 内置 Bun 升级到 1.4
-- 长段落改成逐行 streaming，不再等到首个换行才显示
-- subagent 面板更克制，空闲 30 秒自动隐藏
-- 列表最多显示 5 行，并提供滚动提示
-- footer 里的键盘提示更清楚
+### 3.3 `CLAUDE_CLIENT_PRESENCE_FILE`：把“人在机器前”这件事告诉客户端
 
-这些改动单独看都不算“大功能”，但它们会直接改变你对 CLI 的体感：更安静、更少阻塞、更像真正可长时间盯着的工具。
+新环境变量 `CLAUDE_CLIENT_PRESENCE_FILE` 是一个很典型的“看起来小，实际很顺手”的改动。
 
-### 3.5 一批长期稳定性坑被一次性补上了
+你可以把它指向一个 marker file，用来在你本人已经坐在电脑前时，抑制移动端推送通知。
 
-这一版真正值得注意的，还是下面这批修复：
+这个设计很适合长时间跑 agent 的人：
 
-- prompt caching 在自定义 `ANTHROPIC_BASE_URL` 和 Foundry 场景下的异常
-- 网络盘、云同步文件夹里的 0-byte / 截断写入
-- 启动阶段的回归卡顿和慢网络阻塞
-- `.claude.json` 损坏后的启动崩溃
-- Spotlight 忙时的 macOS TUI 卡死
-- 30 天游程清理误删长会话历史
-- 前台 subagent 失控嵌套
-- `/recap` 和 model switch 后的前一个模型复用
-- `Thinking` 时长显示、等待态文案和 API retry 指示
-- AWS `awsCredentialExport` 刷新节奏
-- `claude mcp get/list` 对 `tools/list` 失败状态的呈现
-- `/remote-control` 残留的 connecting 文案
+- 桌面上已经在工作时，不想手机又来一轮提醒
+- 远程和本地双端同时登录时，想减少噪音
+- 希望通知更像“真的需要我”，而不是“又响了一次”
 
-这组修复的共同点是：它们大多不是“漂亮的新功能”，但都非常像真正把 CLI 当生产工具之后才会撞到的问题。
+它本质上是一个很实用的 presence signal。
 
-## 四、对 OpenClaw 用户的影响
+### 3.4 Bun 1.4、逐行 streaming 和 subagent 面板：体感优化集中落地
 
-如果你把 Claude Code 当作 OpenClaw 的本地执行引擎、子代理编排器或自动发布工具，这版尤其值得跟：
+这版还做了三件很影响日常手感的更新：
 
-- `/config` 让任务中途调整策略更轻量
-- `CLAUDE_CLIENT_PRESENCE_FILE` 适合桌面前工作时减少噪音
-- Apple Events 和浏览器认证修复会直接改善 macOS 上的自动化成功率
-- 网络盘/云同步写入修复对同步仓库、Vault 和 workspace 都更安全
-- subagent 嵌套修复、MCP 状态修复和长会话历史修复，都在降低无人值守任务的意外中断概率
+1. 内置 Bun 升级到 1.4
+2. 长段落输出改成逐行 streaming
+3. subagent 面板更克制，空闲 30 秒自动隐藏，列表最多 5 行并给滚动提示
 
-换句话说，这版不是“更炫”，而是“更能长期跑”。
+这三项看起来不算“新功能”，但它们会明显改变你对工具是否顺手的判断。
 
-## 五、升级建议
+特别是 subagent 面板这个改动很务实：如果你同时跑多个子代理，屏幕上最怕的不是信息少，而是信息太吵。现在面板会更安静，也更像一个临时控制台，而不是一直霸屏。
 
-升级前，最好先确认这几件事：
+### 3.5 稳定性修复：把常见坑位补了一轮
 
-- 你是否依赖旧的配置修改方式
-- 你的 macOS 自动化是否涉及 `open`、`osascript` 或浏览器 OAuth
-- 你是否在网络盘、iCloud、Syncthing 或其他同步目录里写文件
-- 你是否依赖长会话历史、subagent 面板或 MCP 状态输出做自动化
+这版的稳定性修复比较集中，值得单独记一下：
 
-升级后，建议实际跑一遍：
+- prompt caching 在 `ANTHROPIC_BASE_URL` 和 Foundry 场景下的读取问题
+- Write/Edit 在网络盘和云同步目录里写出 0-byte 或截断文件的问题
+- 启动卡顿和慢网络下的空白等待
+- `.claude.json` 损坏时的启动崩溃
+- Spotlight 忙时 macOS TUI 在 session start 冻住的问题
+- 长时间 idle session 被别的进程清理历史的问题
+- foreground subagent 的嵌套链失控问题
+- AWS 凭证过期刷新过频的问题
+- `claude mcp get/list` 对 tools/list 失败状态展示不准的问题
 
-- `/config thinking=false`
-- 一个浏览器认证流程
-- 一个写入同步目录的最小测试
-- 一次 `mcp get/list`
-- 一次长会话恢复和 subagent 路径
+这类修复对个人用户来说可能不显山露水，但对自动化、长会话和无人值守场景非常关键。
+
+## 四、你可能会实际感受到的变化
+
+### 4.1 全屏模式打开 URL 的手感变了
+
+现在全屏模式打开 URL 需要：
+
+- macOS：`Cmd + click`
+- 其他终端：`Ctrl + click`
+
+这更接近原生终端行为。习惯直接点链接的人需要改一下肌肉记忆。
+
+### 4.2 `Improved N memories` 默认不再列出单个文件
+
+这会让普通 transcript 更干净，但如果你之前依赖那一行做脚本解析，就要改成 verbose mode 或其他来源。
+
+### 4.3 API 断连中途会自动 retry
+
+如果连接在 thinking 过程中断了，Claude Code 不会直接停在 “Connection closed while thinking”，而是自动重试。
+
+好处是失败感少了，坏处是排查网络问题时要更注意 retry 指示。
+
+### 4.4 `claude mcp get/list` 的状态语义更诚实
+
+以前 tools/list 失败时，界面可能还写着连上了。现在会更明确地显示 `tools fetch failed`。
+
+这对排障很有帮助，因为“连上了但其实失败了”是最浪费时间的一类假象。
+
+## 五、风险与建议
+
+1. `/config` 让会话内临时改 setting 更容易了，团队最好明确哪些项可以覆盖，尤其是 `sandbox`、`thinking`、`model` 这类影响安全和成本的选项。
+2. `sandbox.allowAppleEvents` 是 opt-in，但一旦打开就会扩大沙箱命令的系统交互能力，建议按最小权限原则使用。
+3. `CLAUDE_CLIENT_PRESENCE_FILE` 很适合减少通知噪音，但也意味着你需要想清楚“人在机器前”和“远程离开”的边界。
+4. 如果你的自动化脚本依赖旧的 URL 点击、`Improved N memories` 文案或 `claude mcp get/list` 输出，要先做一次 smoke test。
 
 ## 六、结论
 
-Claude Code 2.1.181 不是那种一眼就很“炸”的版本，但它很像一版真正把机器前排队问题一个个拧紧的维护升级。
+Claude Code 2.1.181 更像一次“把日常使用磨顺”的升级。
 
-它把边界继续往前推了一步：
+它最重要的不是某个大功能，而是把三件事同时补强了：
 
-- 配置修改更直接
-- macOS 自动化更稳
-- 通知控制更细
-- 长输出更顺
-- 写入和恢复更可靠
+- 临时调参更直接
+- macOS 自动化更完整
+- 长会话和多 subagent 体验更安静、更稳定
 
-如果 Claude Code 已经是你日常工作流的一部分，这版值得尽快跟上。
+如果你关心的是“新增了多少功能”，这版看起来不算热闹。
+
+如果你关心的是“每天用起来会不会少踩坑”，这版很值得升级。
