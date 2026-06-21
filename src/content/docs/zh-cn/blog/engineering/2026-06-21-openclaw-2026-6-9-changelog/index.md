@@ -1,7 +1,7 @@
 ---
 date: 2026-06-21
 slug: zh-cn/blog/engineering/2026-06-21-openclaw-2026-6-9-changelog
-title: "OpenClaw 2026.6.9 Changelog：正式版发布，Telegram、恢复链路与 Codex 集成继续增强"
+title: "OpenClaw 2026.6.9 Changelog：stable 正式版发布，Telegram、恢复链路与 Codex 集成继续增强"
 tags:
   - OpenClaw
   - Changelog
@@ -9,18 +9,18 @@ tags:
   - Gateway
   - Codex
   - Release
-description: "OpenClaw 2026.6.9 正式版在 Telegram 投递、Agent/Gateway 恢复、Codex 集成、插件生态与安全边界上继续收口。"
+description: "OpenClaw 2026.6.9 stable 正式版在 Telegram 投递、Agent/Gateway 恢复、Codex 集成、插件生态与安全边界上继续收口。"
 image: ./assets/2026-06-21-openclaw-2026-6-9-changelog-cover.svg
 source_url: https://www.vibesparking.com/zh-cn/blog/engineering/2026-06-21-openclaw-2026-6-9-changelog/
 author: AI 灵感闪现
 cover:
-  alt: "OpenClaw 2026.6.9 Changelog：正式版发布，Telegram、恢复链路与 Codex 集成继续增强"
+  alt: "OpenClaw 2026.6.9 Changelog：stable 正式版发布，Telegram、恢复链路与 Codex 集成继续增强"
   image: ./assets/2026-06-21-openclaw-2026-6-9-changelog-cover.svg
 ---
 
-# OpenClaw 2026.6.9 Changelog：正式版发布，Telegram、恢复链路与 Codex 集成继续增强
+# OpenClaw 2026.6.9 Changelog：stable 正式版发布，Telegram、恢复链路与 Codex 集成继续增强
 
-OpenClaw `2026.6.9` 于 `2026-06-21 01:44 UTC` 发布，换算到北京时间是 `2026-06-21 09:44`。这是一版正式稳定版，也是 `2026.6.9-beta.1` 之后两天快速修复后的收束。它不是靠一个大功能撑场面，而是把 422 个 PR 覆盖到的关键路径继续打磨平：Telegram 更完整，Agent / Gateway 更能恢复，Codex 集成更顺，插件生态更模块化。
+OpenClaw `2026.6.9` 于 `2026-06-21 01:44 UTC` 发布，换算到北京时间是 `2026-06-21 09:44`。这是一版 stable 正式版，也是 `2026.6.9-beta.1` 之后两天快速修复后的收束。它不是靠一个大功能撑场面，而是把 422 个 PR 覆盖到的关键路径继续打磨平：Telegram 更完整，Agent / Gateway 更能恢复，Codex 集成更顺，插件生态更模块化。
 
 如果你维护的是长在线、多渠道、带插件和模型接入的 OpenClaw 实例，这版值得优先升级。它的价值不在于“第一次出现了什么”，而在于“系统出问题时更容易回来，而且回来之后更像原本那样工作”。
 
