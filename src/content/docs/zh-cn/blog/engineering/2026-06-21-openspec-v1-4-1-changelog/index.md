@@ -9,12 +9,12 @@ tags:
   - Agent
   - Release
 description: "OpenSpec v1.4.1 主要修复 workspace.yaml 场景下 openspec update 的异常退出，并回顾 v1.4.0 的多 Agent 支持、Sync Skills 与校验体验改进。"
-image: ./assets/2026-06-21-openspec-v1-4-1-changelog-cover.svg
+image: ./assets/2026-06-21-openspec-v1-4-1-changelog-cover.png
 source_url: https://www.vibesparking.com/zh-cn/blog/engineering/2026-06-21-openspec-v1-4-1-changelog/
 author: AI 灵感闪现
 cover:
   alt: "OpenSpec v1.4.1 Changelog：workspace.yaml 热修复与 v1.4.0 生态扩展回顾"
-  image: ./assets/2026-06-21-openspec-v1-4-1-changelog-cover.svg
+  image: ./assets/2026-06-21-openspec-v1-4-1-changelog-cover.png
 ---
 
 # OpenSpec v1.4.1 Changelog：workspace.yaml 热修复与 v1.4.0 生态扩展回顾
